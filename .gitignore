@@ -11,11 +11,11 @@
 *.nav
 *.snm
 *.toc
-data-raw/cy_data/*
-data-raw/from_erico/*
-data-raw/old/*
 dev/*
 framed.sty
 paper/cache/*
+paper/figures/old/
+paper/lit/
 slides/*mpsa*
-data/output*.rda
+data/gm*.rda
+data/ab*.rda
