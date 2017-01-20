@@ -9,12 +9,12 @@ gm <- read_csv("data/all_data_gm.csv")
 
 x <- gm %>% with_min_yrs(3)
 out1 <- dcpo(x, iter = 4000)
-save(out1, file = str_c("results/gm_", str_replace(Sys.time(), " ", "_"), ".rda"))
+save(out1, file = str_c("data/gm_", str_replace(Sys.time(), " ", "_"), ".rda"))
 
 
 ab <- dcpo_setup(vars = "data-raw/surveys_abortion.csv",
-                 file = "results/all_data_abortion.csv")
+                 file = "data/all_data_abortion.csv")
 
 x <- ab %>% with_min_yrs(3)
 out1 <- dcpo(x)
-save(out1, file = str_c("results/ab_", str_replace(Sys.time(), " ", "_"), ".rda"))
+save(out1, file = str_c("data/ab_", str_replace(Sys.time(), " ", "_"), ".rda"))
