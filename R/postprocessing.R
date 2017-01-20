@@ -1,8 +1,8 @@
 #Postprocessing
 library(stringr)
 
-x1 <- summary(out1)
-write_csv(as.data.frame(x1$summary), path="results/x1.csv")
+x1 <- rstan::summary(out1)
+write_csv(as.data.frame(x1$summary), path="data/x1.csv")
 x1_sum <- as.data.frame(x1$summary)
 x1_sum$parameter <- rownames(x1_sum)
 x1_sum$parameter_type <- gsub("([^[]*).*", "\\1", x1_sum$parameter)
