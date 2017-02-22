@@ -47,7 +47,7 @@
 		X Poland GSS 1992-2010	HOMOSEX
 		X US GSS 1972-2010	HOMOSEX
 		X German GSS 90, 00, 02	v528
-		Australia NSSS 84,87,93	HOMOSEX [ADA charges for $1k access]
+		Australia NSSS 84,87,93	HOMOSEX [ADA charges $1k for access]
 		X EB83_4 2015		QC16_2
 	
 	approve5
@@ -58,7 +58,7 @@
 *morally acceptable
 Next, I’m going to read some behaviors.  For each, please tell me whether you personally believe that it is morally acceptable, morally wrong, or is it not a moral issue? Homosexual behavior
 	approve3
-		X pewrel2009_afr		Q85I
+		X pewrel2009_afr	Q85I
 		X pewrel2014_latam	Q69h
 
 
@@ -80,7 +80,7 @@ Next, I’m going to read some behaviors.  For each, please tell me whether you 
 
 *gays and lesbians s/b free to live life as they wish
 	free5
-		X ESS1-5			freehms
+		X ESS1-5		freehms
 		X ESS6			freehms
 
 *public office
@@ -97,7 +97,7 @@ Next, I’m going to read some behaviors.  For each, please tell me whether you 
 		X EB83.4-15		qc16_2
 	marry5
 		X ISSP Family 1988	v36
-		AuSSA 2005		[ADA charges for $1k access]
+		AuSSA 2005		[ADA charges $1k for access]
 		X BSA 1989, 2007, 2012 	MARVIEW0, GMLMarry
 		X USGSS 88,04,06,08,10	MARHOMO
 	marry2
