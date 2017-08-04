@@ -1,5 +1,9 @@
 #Postprocessing
+library(tidyverse)
 library(stringr)
+library(DCPO)
+
+load("~/Documents/Projects/dcpo_gayrights/data/gm_2017-07-30_12:13:57.rda")
 
 x1 <- rstan::summary(out1)
 write_csv(as.data.frame(x1$summary), path="data/x1.csv")
@@ -15,8 +19,15 @@ ggplot(x1_sum) +
   ylab(expression(hat(italic(R))))
 ggsave(str_c("paper/figures/rhat_", iter, ".pdf"), width = 10, height = 7)
 
+x <- gm %>% 
+    with_min_yrs(3) %>% 
+    mutate(prob = y_r/n) %>% 
+    bind_cols(x1_sum %>% 
+                  filter(parameter_type=="pred_prob") %>% 
+                  transmute(pred_prob = mean, 
+                            pred_prob_se = sd))
 
-x <- gm %>% with_min_yrs(3)
+
 
 qcodes <- x %>% group_by(variable) %>%
   summarize(qcode = first(qcode),
@@ -52,7 +63,7 @@ a_res <- x1_sum %>% filter(parameter_type=="alpha") %>%
   mutate(rcode = as.numeric(str_extract(parameter, "\\d+"))) %>%
   left_join(rcodes, by="rcode")
 
-t_res <- summary(out1, pars="theta", probs=c(.1, .9)) %>%
+t_res <- rstan::summary(out1, pars="theta", probs=c(.1, .9)) %>%
   first() %>%
   as.data.frame() %>%
   rownames_to_column("parameter") %>%
@@ -61,7 +72,8 @@ t_res <- summary(out1, pars="theta", probs=c(.1, .9)) %>%
   left_join(ktcodes, by="ktcode") %>%
   arrange(ccode, tcode)
 
-gm_laws <- read_csv("data-raw/gm_laws.csv") %>% right_join(kcodes, by = "country")
+gm_laws <- read_csv("data-raw/gm_laws.csv", col_types = "ciiii") %>%
+    right_join(kcodes, by = "country")
 
 t_res1 <- t_res %>%
   left_join(gm_laws, by = c("ccode", "country", "firstyr", "lastyr")) %>%
