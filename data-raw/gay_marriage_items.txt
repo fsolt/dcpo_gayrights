@@ -58,6 +58,9 @@ Next, I’m going to read some behaviors.  For each, please tell me whether you 
 	approve3
 		X pewrel2009_afr	Q85I
 		X pewrel2014_latam	Q69h
+		X pewrel2015_ee		Q71h
+		X pewrel2016_us		moralissuecf2_w20
+		
 
 
 *people just like others
@@ -74,6 +77,8 @@ Next, I’m going to read some behaviors.  For each, please tell me whether you 
 		X pew2013			q27
 	
 		X uspew
+
+		X pewrel2015_ee			q64
 		
 
 *gays and lesbians s/b free to live life as they wish
@@ -106,6 +111,8 @@ Next, I’m going to read some behaviors.  For each, please tell me whether you 
 
 	marry10
 		X Americasbarometer	d6
+	marry3/marry7
+		ANES Panel 2008-2009	W11N13
 
 *civil union
 	civil2
