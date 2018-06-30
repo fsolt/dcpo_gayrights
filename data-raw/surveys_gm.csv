@@ -147,7 +147,8 @@ gallup_us197706,adopt2,q14,"c(2, 1)",3
 gallup_us198206,accept2,q09j,"c(2, 1)",3
 gallup_us198909,accept2,q03,"c(2, 1)",0
 gallup_us199206,accept2,q24,"c(2, 1)",3
-gallup_us199603,marry2,q43b,"c(2, 1)",3
+gallup_us199603,accept2,q43a,"c(2, 1)",3
+gallup_us199603,marry2,q44,"c(2, 1)",3
 gallup_us199902,marry2,q5a,"c(2, 1)","c(3, 4)"
 gallup_us199902,civil2,q5b,"c(2, 1)","c(3, 4)"
 gallup_us199902,adopt2,q5c,"c(2, 1)","c(3, 4)"
