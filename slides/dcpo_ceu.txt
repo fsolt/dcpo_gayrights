@@ -1,0 +1,135 @@
+Thanks for coming.  So after Levi and I scheduled this talk, he had a simple question
+
+to which I had this answer
+
+and eventually this answer
+
+How to Estimate 
+Cross-Nationally and Longitudinally
+Comparable Measures 
+of
+Public Opinion
+ from the 
+Mess of Survey Data
+You Found Online 
+
+you're here, so I guess it wasn't too bad
+
+Let's motivate this.  Why would you need
+to Estimate 
+Cross-Nationally and Longitudinally
+Comparable Measures 
+of
+Public Opinion
+ from the 
+Mess of Survey Data
+You Found Online 
+
+That's a mouthful.  I really call this Dynamic Comparative Public Opinion
+
+Or DCPO for short
+
+but, right, why would you need DCPO?  I have a few examples of when this would come in handy
+
+first, to study representation--When do governments respond to changes in public opinion by changing policy?
+
+or to study policy feedback--When do changes in policy build public support and create their own constituencies? when do they instead generate thermostatic effects and trigger  backlash? Like these tea partiers protesting Obamacare.  And beyond comparative politics--and maybe especially timely today, with the "fire and fury" and all
+
+to study diversionary war--when do governments see falling popular support and pursue military adventures in an effort to generate rally-around-the-flag effects?
+
+How do we currently study questions like these?
+
+Option A is to look at a single country--or maybe two or three--over time, the Degrees of Democracy approach.  This lets us see the dynamics, but it isn't really comparative, and so it's hard to discern antecedent conditions and the like
+
+Option B is to look at a cross-section of countries, but in only one--or maybe a handful--of years.  Of course then we lose the dynamics.
+
+Option C is what we really want: lots of countries over many years.  Occasionally work like this is possible--the Eurobarometer has asked a variety of questions about the EU in lots of countries for a long time, for example--but usually we run into data issues.  
+
+Different surveys examine the same topic with different questions, or even the same question but with different possible responses.  We know that question effects matter, so we can't just compare these apples and oranges--and bananas and kiwi fruit and so on
+
+And, worse, for many countries and years we probably don't have any survey data at all
+
+So Option C usually just isn't possible
+
+That's where Option D-CPO comes in.  The idea is to make it possible to take all of the available survey data on a topic across countries and years, all that different fruit, and 
+
+make it into a nice smoothie, consistent cross-nationally and over time.  So how are we going to do this?
+
+Uh, no
+
+DCPO starts with Stan, adds Stimson, and then adds Smooth Trends.  Yeah, okay, my alliteration broke down.  Stick with me.
+
+So Stan, the probabilistic programming language created by Andy Gelman and a lot of collaborators that all the cool kids are using this days.  It's fast--well, faster than the alternatives--and super-flexible, so it was the obvious choice for this application.  But what to write in it?
+
+How should we model public opinion over time, given the variety of survey data available?
+
+That's where Stimson comes in.  As Jim wrote like three decades ago now, we should consider public opinion to be a latent variable, and use all of the different questions we have as indicators
+
+A couple of years ago, Anthony McGann wrote an article in PA arguing that the best way to do this is 
+
+using two-parameter logistic item response theory--that is, to model the percentage of a country's population that provides a positive response to a question as a function of not only the extent of positive attitudes in the population, but also the difficulty and discrimination of the question.  Some questions are more difficult than others--think of a hypothetical, slightly xenophobic respondent: he *might* be willing to agree that immigrants contribute to the country's economy, but he still *definitely* doesn't want them as neighbors.  And some questions are noisier than others, not as good at discriminating between respondents with more and less positive attitudes.  This is great stuff, as far as it goes, but I made one improvement
+
+McGann, and Stimson before him, dichotomize responses--they look at the percentage of respondents that gave an answer above some cutpoint, typically the midpoint of whatever scale the survey employed.  I use all the cutpoints, allowing each to have its own difficulty and discrimination, but with the constraint that the difficulty of more favorable answers has to greater than the difficulty of less favorable answers to the same question--yielding a two-parameter *ordered* logistic IRT model.  And of course McGann and Stimson only deal with public opinion in a single country
+
+How do we handle sparse, cross-national time-series data?
+
+In other words, how do we get Smooth Trends?  Here I draw on the growing body of work that estimates other concepts as latent variables across countries and over time.  A lot of work has been done measuring democracy,
+
+but I draw specifically on Linzer and Staton's work on modeling judicial independence.
+
+Their innovation was to deal with sparse cross-national time-series by using a random-walk prior
+
+that is, that we should expect that the value of our parameter for this year in country k should be normally distributed around last year's value
+
+with a variance that is different for each country, estimated from the available observed data for that country.  In countries where the observed data indicate our parameter has changed rapidly over time, we should be particularly open to rapid changes in our parameter in the years we don't have any data for
+
+I adopted that approach wholesale to estimate Dynamic Comparative Public Opinion
+
+So DCPO: Stan, Stimson, and Smoothed Trends.  Should we see an application?  Yeah?  Okay.
+
+Attitudes toward homosexuality has been a favorite issue of public opinion scholars over the past decade because attitudes have changed so quickly in many countries
+
+I collected 181 survey datasets that ask about tolerance of gays and lesbians
+
+They cover 102 different countries, and provide data on
+
+998 country-years.  I really should find like two more, huh?
+
+unfortunately, these surveys use 23 different items, so we can't just pool them.  DCPO to the rescue!
+
+Let's study representation!  Have countries with more tolerant public opinion adopted more gay-friendly policies?
+
+Yep.  We can see that where public opinion is more favorable, countries are more likely to have marriage equality or at least recognize civil unions.  This is top quartile.  Malta.  Germany conscience vote--not effective until October, so still grey.
+
+Second quartile.  Taiwan's recent Constitutional Court ruling (May 2017); absent legislation, May 2019.  Hungary maybe a bit of an outlier; poorly estimated.  Only two countries--Estonia and Ecuador--bit below median and recognize civil unions.
+
+Let's study policy feedback!  Are there signs of backlash?
+
+Here are first dozen countries to recognize civil unions.  Dotted is civil union adoption, solid blue is marriage equality. Maybe dips in Denmark (with marriage equality) and Norway --but both short lived.  Mostly continued upward trends.
+
+So that's it: DCPO, Dynamic Comparative Public Opinion.  An early--and sadly still undocumented--beta of the R package is available on Github.
+
+Thanks for listening!  I look forward to your questions and comments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
