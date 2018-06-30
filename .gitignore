@@ -16,6 +16,8 @@ framed.sty
 paper/cache/*
 paper/figures/old/
 paper/lit/
+paper/cda/
 slides/*mpsa*
 data/gm*.rda
 data/ab*.rda
+data/all*.rda
