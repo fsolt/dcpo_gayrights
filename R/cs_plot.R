@@ -1,4 +1,5 @@
 # make this a function!
+library(forcats)
 
 p1_data <- t_res1 %>%
   group_by(country) %>%
@@ -21,7 +22,7 @@ p1a <- ggplot(p1_data_a, aes(x = estimate,
                     breaks=c("Marriage", "Civil Union", "None"),
                     name = "Legal Recognition") +
   geom_point(aes(fill = as.factor(law)), shape = 21, size = 1.1, na.rm = TRUE) +
-  theme_bw() + theme(legend.position=c(.22, .95),
+  theme_bw() + theme(legend.position=c(.237, .9485),
                      axis.text.x  = element_text(size=7),
                      axis.text.y  = element_text(size=7),
                      axis.title.x = element_text(face="bold", size=7),
@@ -110,65 +111,67 @@ p1_data_c$country[p1_data_c$country=="Bosnia and Herzegovina"] <- "Bosnia"
 
 p1a <- ggplot(p1_data_a, aes(x = estimate,
                              y = ranked)) +
-  geom_segment(aes(x = lb, xend = ub,
-                   y = ranked, yend = ranked),
-               na.rm = TRUE) +
-  scale_fill_manual(values = c("Marriage"="white",
-                               "Civil Union"="grey50",
-                               "None"="black"),
-                    breaks=c("Marriage", "Civil Union", "None"),
-                    name = "Legal Recognition") +
-  geom_point(aes(fill = as.factor(law)), shape = 21, size = 1.1, na.rm = TRUE) +
-  theme_bw() + theme(legend.position=c(.36, .9),
-                     axis.text.x  = element_text(size=7),
-                     axis.text.y  = element_text(size=7),
-                     axis.title.x = element_text(face="bold", size=7),
-                     legend.text = element_text(size = 7),
-                     legend.title = element_text(size=7, face = "bold"),
-                     legend.key.size = unit(.5, "line"),
-                     legend.background = element_rect(linetype = "solid",
-                                                      color = "grey80",
-                                                      size = .25),
-                     legend.key = element_rect(colour = "white")) +
-  scale_y_discrete(breaks = p1_data_a$ranked, labels=p1_data_a$country) +
-  coord_cartesian(xlim=c(0, 1)) +
-  labs(x = "Tolerance", y = NULL)
+    geom_segment(aes(x = lb, xend = ub,
+                     y = ranked, yend = as.factor(ranked)),
+                 na.rm = TRUE) +
+    scale_fill_manual(values = c("Marriage"="white",
+                                 "Civil Union"="gray75",
+                                 "None"="black"),
+                      breaks=c("Marriage", "Civil Union", "None"),
+                      name = "Legal Recognition") +
+    geom_point(aes(fill = as.factor(law)), shape = 21, size = 1.1, na.rm = TRUE) +
+    theme_bw() + theme(legend.position=c(.25, .905),
+                       axis.text.x  = element_text(size=7),
+                       axis.text.y  = element_text(size=7),
+                       axis.title.x = element_text(face="bold", size=7),
+                       legend.text = element_text(size = 7),
+                       legend.title = element_text(size=7, face = "bold"),
+                       legend.key.size = unit(.5, "line"),
+                       legend.background = element_rect(linetype = "solid",
+                                                        color = "grey80",
+                                                        size = .25),
+                       legend.key = element_rect(colour = "white")) +
+    scale_y_discrete(breaks = p1_data_a$ranked, labels=p1_data_a$country) +
+    coord_cartesian(xlim=c(-1, 1)) +
+    labs(x = "Tolerance", y = NULL)
+ggsave("paper/figures/cs4-1.pdf", height = 4, width = 3)
 
 p1b <- ggplot(p1_data_b, aes(x = estimate,
-                             y = ranked)) +
-  geom_segment(aes(x = lb, xend = ub,
-                   y = ranked, yend = ranked),
-               na.rm = TRUE) +
-  scale_fill_manual(values = c("Marriage"="white",
-                               "Civil Union"="grey50",
-                               "None"="black"),
-                    breaks=c("Marriage", "Civil Union", "None")) +
-  geom_point(aes(fill = as.factor(law)), shape = 21, size = 1.1, na.rm = TRUE) +
-  theme_bw() + theme(legend.position="none",
-                     axis.text.x  = element_text(size=7),
-                     axis.text.y  = element_text(size=7),
-                     axis.title.x = element_text(face="bold", size=7)) +
-  scale_y_discrete(breaks = p1_data_b$ranked, labels=p1_data_b$country) +
-  coord_cartesian(xlim=c(0, 1)) +
-  labs(x = "Tolerance", y = NULL)
+                             y = fct_reorder(as.factor(country), ranked))) +
+    geom_segment(aes(x = lb, xend = ub,
+                     y = fct_reorder(as.factor(country), ranked), yend = fct_reorder(as.factor(country), ranked)),
+                 na.rm = TRUE) +
+    scale_fill_manual(values = c("Marriage"="white",
+                                 "Civil Union"="grey50",
+                                 "None"="black"),
+                      breaks=c("Marriage", "Civil Union", "None")) +
+    geom_point(aes(fill = as.factor(law)), shape = 21, size = 1.1, na.rm = TRUE) +
+    theme_bw() + theme(legend.position="none",
+                       axis.text.x  = element_text(size=7),
+                       axis.text.y  = element_text(size=7),
+                       axis.title.x = element_text(face="bold", size=7)) +
+    coord_cartesian(xlim=c(-1, 1)) +
+    labs(x = "Tolerance", y = NULL)
+ggsave("paper/figures/cs4-2.pdf", height = 4, width = 3)
 
 p1c <- ggplot(p1_data_c, aes(x = estimate,
-                             y = ranked)) +
-  geom_segment(aes(x = lb, xend = ub,
-                   y = ranked, yend = ranked),
-               na.rm = TRUE) +
-  scale_fill_manual(values = c("Marriage"="white",
-                               "Civil Union"="grey50",
-                               "None"="black"),
-                    breaks=c("Marriage", "Civil Union", "None")) +
-  geom_point(aes(fill = as.factor(law)), shape = 21, size = 1.1, na.rm = TRUE) +
-  theme_bw() + theme(legend.position="none",
-                     axis.text.x  = element_text(size=7),
-                     axis.text.y  = element_text(size=7),
-                     axis.title.x = element_text(face="bold", size=7)) +
-  scale_y_discrete(breaks = p1_data_c$ranked, labels=p1_data_c$country) +
-  coord_cartesian(xlim=c(0, 1)) +
-  labs(x = "Tolerance", y = NULL)
+                             y = fct_reorder(as.factor(country), ranked))) +
+    geom_segment(aes(x = lb, xend = ub,
+                     y = fct_reorder(as.factor(country), ranked), yend = fct_reorder(as.factor(country), ranked)),
+                 na.rm = TRUE) +
+    scale_fill_manual(values = c("Marriage"="white",
+                                 "Civil Union"="grey50",
+                                 "None"="black"),
+                      breaks=c("Marriage", "Civil Union", "None")) +
+    geom_point(aes(fill = as.factor(law)), shape = 21, size = 1.1, na.rm = TRUE) +
+    theme_bw() + theme(legend.position="none",
+                       axis.text.x  = element_text(size=7),
+                       axis.text.y  = element_text(size=7),
+                       axis.title.x = element_text(face="bold", size=7)) +
+    coord_cartesian(xlim=c(-1, 1)) +
+    labs(x = "Tolerance", y = NULL)
+ggsave("paper/figures/cs4-3.pdf", height = 6, width = 3)
+
 
 p1d <- ggplot(p1_data_d, aes(x = estimate,
                              y = ranked)) +

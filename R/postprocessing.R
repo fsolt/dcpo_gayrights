@@ -1,33 +1,28 @@
 #Postprocessing
 library(tidyverse)
-library(stringr)
 library(DCPO)
 
-load("~/Documents/Projects/dcpo_gayrights/data/gm_2017-07-30_12:13:57.rda")
+load("~/Documents/Projects/dcpo_gayrights/data/gm_2018-06-25_13:00:53.rda")
+gm <- read_csv("data/all_data_gm.csv")
 
 x1 <- rstan::summary(out1)
 write_csv(as.data.frame(x1$summary), path="data/x1.csv")
-x1_sum <- as.data.frame(x1$summary)
+x1_sum <- as.data.frame(x1$summary)     # as.data.frame() preserves rownames
 x1_sum$parameter <- rownames(x1_sum)
 x1_sum$parameter_type <- gsub("([^[]*).*", "\\1", x1_sum$parameter)
 View(x1_sum)
-View(x1_sum[x1_sum$Rhat>1.1,])
 
-ggplot(x1_sum) +
-  aes(x = parameter_type, y = Rhat, color = parameter_type) +
-  geom_jitter(height = 0, width = .5, show.legend = FALSE, alpha = .2) +
-  ylab(expression(hat(italic(R))))
-ggsave(str_c("paper/figures/rhat_", iter, ".pdf"), width = 10, height = 7)
-
-x <- gm %>% 
-    with_min_yrs(3) %>% 
-    mutate(prob = y_r/n) %>% 
+x <- x %>% 
+    mutate(prob = y_r/n,
+           prob_se = sqrt(prob*(1-prob)/n)) %>% 
     bind_cols(x1_sum %>% 
                   filter(parameter_type=="pred_prob") %>% 
                   transmute(pred_prob = mean, 
-                            pred_prob_se = sd))
-
-
+                            pred_prob_se = sd)) %>% 
+    mutate(diff = prob - pred_prob,
+           diff_se = sqrt(prob_se^2+pred_prob_se^2),
+           diff_t = abs(diff/diff_se),
+           well_predicted = diff_t < 1.96)
 
 qcodes <- x %>% group_by(variable) %>%
   summarize(qcode = first(qcode),
@@ -84,8 +79,8 @@ t_res1 <- t_res %>%
             estimate = mean,
             lb = `10%`,
             ub = `90%`,
-            law = ifelse(!is.na(gm) & (year >= gm | year==lastyr), "Marriage",
-                         ifelse(!is.na(civ) & (year >= civ | year==lastyr), "Civil Union",
+            law = ifelse(!is.na(gm) & (year >= gm | year>=lastyr), "Marriage",
+                         ifelse(!is.na(civ) & (year >= civ | year>=lastyr), "Civil Union",
                                 "None"))) %>%
   arrange(kk, year)
 
