@@ -79,6 +79,10 @@ Next, I’m going to read some behaviors.  For each, please tell me whether you 
 		X uspew
 
 		X pewrel2015_ee			q64
+
+*Do you feel that homosexuality should be considered as an accepted alternative lifestyle or not?
+	accept2
+		gallup
 		
 
 *gays and lesbians s/b free to live life as they wish
