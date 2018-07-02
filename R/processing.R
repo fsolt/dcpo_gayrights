@@ -4,7 +4,7 @@ library(DCPO)
 gm <- dcpo_setup(vars = "data-raw/surveys_gm.csv",
                  file = "data/all_data_gm.csv")
 
-gm <- read_csv("data/all_data_gm.csv")
+gm <- read_csv("data/all_data_gm.csv", col_types = "cdciiiciiiciiiiiii")
 
 start <- proc.time()
 x <- gm %>% with_min_yrs(3)
