@@ -115,6 +115,7 @@ issp2008,a_poor4,v11,c(1:4),
 lb2002,just10,p52wvsd,c(1:10),"c(-4, -2)"
 lb2004,just10,p38stb,c(1:10),"c(-4, -2)"
 lb2007,just10,p95st_b,c(1:10),-2
+lb2015,just10,p70st,c(1:10),"c(-5, -2, -1)"
 npes_combo,free7,v44_5,c(1:7),"c(95, 96, 99)"
 pewrel2009_afr,moral3,q85h,"c(2,3,1)","c(4, 8, 9)"
 pewrel2014_latam,moral3,q69e,"c(2,3,1)","c(98, 99)"
