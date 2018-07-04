@@ -8,6 +8,28 @@ allbus,l_single2,v384,c(2:1),"c(0, 8, 9)"
 allbus,l_any2,v385,c(2:1),"c(0, 8, 9)"
 allbus,free7,v115,c(1:7),"c(0, 97, 98, 99)"
 amb_combo,a_health2,domw14a,c(2:1),
+amb_combo,just_health2,w14a,c(2:1),
+amb_argentina2016,just_health2,w14a,"c(2, 1)",
+amb_bolivia2016,just_health2,w14a,"c(2, 1)",
+amb_brazil2016,just_health2,w14a,"c(2, 1)",
+amb_chile2016,just_health2,w14a,"c(2, 1)",
+amb_colombia2016,just_health2,w14a,"c(2, 1)",
+amb_costarica2016,just_health2,w14a,"c(2, 1)",
+amb_dominicanrepublic2016,just_health2,w14a,"c(2, 1)",
+amb_dominicanrepublic2016,a_rape2,domw14b,"c(2, 1)",
+amb_ecuador2016,just_health2,w14a,"c(2, 1)",
+amb_elsalvador2016,just_health2,w14a,"c(2, 1)",
+amb_guatemala2016,just_health2,w14a,"c(2, 1)",
+amb_haiti2016,just_health2,w14a,"c(2, 1)",
+amb_honduras2016,just_health2,w14a,"c(2, 1)",
+amb_jamaica2016,just_health2,w14a,"c(2, 1)",
+amb_mexico2016,just_health2,w14a,"c(2, 1)",
+amb_nicaragua2016,just_health2,w14a,"c(2, 1)",
+amb_panama2016,just_health2,w14a,"c(2, 1)",
+amb_paraguay2016,just_health2,w14a,"c(2, 1)",
+amb_peru2016,just_health2,w14a,"c(2, 1)",
+amb_uruguay2016,just_health2,w14a,"c(2, 1)",
+amb_venezuela2016,just_health2,w14a,"c(2, 1)",
 anes_combo,l_ncca4,vcf0837 ,c(1:4),"c(0, 9)"
 anes_combo,l_ncca4,vcf0838 ,c(1:4),"c(0, 9)"
 asiab2004,just10,q45c,c(1:10),99
