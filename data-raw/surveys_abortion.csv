@@ -91,6 +91,9 @@ bsa2012,l_poor2,abort4,c(2:1),"c(-2, -1, 8, 9)"
 bsa2012,l_defect2,abort5,c(2:1),"c(-2, -1, 8, 9)"
 bsa2012,l_health2,abort6,c(2:1),"c(-2, -1, 8, 9)"
 bsa2012,l_rape2,abort7,c(2:1),"c(-2, -1, 8, 9)"
+bsa2016,l_any2,abort1,c(2:1),"c(-2, -1, 8, 9)"
+bsa2016,l_poor2,abort4,c(2:1),"c(-2, -1, 8, 9)"
+bsa2016,l_health2,abort6,c(2:1),"c(-2, -1, 8, 9)"
 cdcee,free4,v234,c(4:1),
 eb11,free4,v78,c(4:1),
 eb21,free5b,v133,c(1:5),
