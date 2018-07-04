@@ -109,9 +109,14 @@ Next, I’m going to read some behaviors.  For each, please tell me whether you 
 		X USGSS 88,04,06,08,10	MARHOMO
 	marry2
 		X EB39-93		v637
-	marry4a
+	marry4a "Do you strongly favor, favor, oppose, or strongly oppose allowing gays and lesbians to marry legally?"
 		X US Pew surveys
 		X pewrel2014_latam	Q15
+		prri
+		nbcwsj199906	"homosexual couples to be legally married"
+		abcwapo201402	
+	marry4b "Do you think it should be LEGAL or ILLEGAL for gay and lesbian couples to get married?"
+		abcwapo
 
 	marry10
 		X Americasbarometer	d6
