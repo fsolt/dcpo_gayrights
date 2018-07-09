@@ -7,7 +7,7 @@ lgbt_rights <- page %>%
     html_table(fill = TRUE) %>% # generates a list
     map_df(function(x) {
         if (ncol(x) == 8 & names(x)[1] == "LGBT rights in:") {
-            names(x) <- str_replace(names(x), ".*serve openly.*", "Allowed to serve openly in military")
+            names(x) <- str_replace(names(x), ".*serve openly.*", "serve_openly")
             if (any(str_detect(names(x), "Recognition of relationships"))) {
                 x <- x %>% 
                     mutate(`Recognition of same-sex unions` = if_else(!is.na(`Recognition of relationships`),
@@ -23,12 +23,32 @@ lgbt_rights <- page %>%
         return(x1)
     }) %>% 
     janitor::clean_names() %>% 
-    mutate(mm_legal = if_else(!str_detect(same_sex_sexual_activity,
-                                          "Illegal|(Male illegal)"),
-                              if_else(str_detect(same_sex_sexual_activity, "Legal (No laws against same-sex sexual activity have ever existed in the country)"),
-                                      1900,
-                                      as.numeric(str_extract(same_sex_sexual_activity,
-                                                             "(?<=Legal since )\\d{4}"))),
-                                      0)) %>% 
-    select(same_sex_sexual_activity, mm_legal, everything())
+    mutate(country = lgbt_rights_in %>% 
+               str_replace("[\\(\\[].*[\\)\\]]", "") %>% 
+               str_trim(),
+           mm_legal = if_else(!str_detect(same_sex_sexual_activity,
+                                          "Illegal(?! in practice in Chechnya)|Male illegal|[Dd]e facto illegal"),
+                              if_else(str_detect(same_sex_sexual_activity, "^Legal\\s*\\(No laws.*have|has ever existed|^Legal$|^Legal\\s*[\\[+]"),
+                                      1800,
+                                      str_extract(same_sex_sexual_activity,
+                                                  "(Male legal|Legal)( nationwide| in England and Wales| in East Germany| in some states since 1962,nationwide| in some states and territories since 1975, nationwide)? (after|since|from)( the)?\\s\\d{4}") %>% 
+                                          str_extract(., "\\d{4}") %>% 
+                                          as.numeric()),
+                              if_else(str_detect(same_sex_sexual_activity, "(Male )?[Ii]llegal((?!since).)*Penalty|Illegal\\s*\\(Decriminalization proposed\\)|Illegal under Article 534"),
+                                      -1800,
+                                      str_extract(same_sex_sexual_activity,
+                                                  "[Ii]llegal( under federal law)? since( the)? \\d{4}") %>% 
+                                          str_extract("\\d{4}") %>% 
+                                          as.numeric() * -1)),
+           ff_legal = if_else(str_detect(same_sex_sexual_activity, "[Ff]emale"),
+                              if_else(str_detect(same_sex_sexual_activity, "[Ff]emale( always)? legal(?! since)"),
+                                      1800,
+                                      if_else(str_detect(same_sex_sexual_activity, "[Ff]emale uncertain"),
+                                              mm_legal,
+                                              NA_real_)),
+                              mm_legal),
+           unions_recognized = str_replace_all(recognition_of_same_sex_unions, '(Marriage\\s([Ss]ince |[Ff]rom )\\d{4})|June |July 3, |(\\"Stable unions\\" legal in some states since)', "") %>% 
+               str_extract("(?<=[Ss]ince |[Ff]rom )\\d{4}") %>% 
+               as.numeric()) %>% 
+    select(recognition_of_same_sex_unions, unions_recognized, everything())
 
