@@ -49,6 +49,27 @@ lgbt_rights <- page %>%
                               mm_legal),
            unions_recognized = str_replace_all(recognition_of_same_sex_unions, '(Marriage\\s([Ss]ince |[Ff]rom )\\d{4})|June |July 3, |(\\"Stable unions\\" legal in some states since)', "") %>% 
                str_extract("(?<=[Ss]ince |[Ff]rom )\\d{4}") %>% 
+               as.numeric(),
+           marriage_legal = if_else(str_detect(same_sex_marriage, "Legal"),
+                                    if_else(str_detect(same_sex_marriage, "nationwide"),
+                                            if_else(str_detect(country, "Mexico"),
+                                                    "2015",
+                                                    str_extract(same_sex_marriage, "(?<=nationwide since )\\d{4}")),
+                                            str_extract(same_sex_marriage, "(?<=since )(May 24, )?\\d{4}")),
+                                    NA_character_) %>% 
+               str_extract("\\d{4}") %>% 
+               as.numeric(),
+           constitutional_ban = str_extract(same_sex_marriage, "(?<=ban(ned)? since )(a )?\\d{4}") %>% 
+               str_extract("\\d{4}") %>% 
+               as.numeric(),
+           adoption_by_couple = if_else(str_detect(adoption_by_same_sex_couples, "[Jj]oint adoption since"),
+                                        str_extract(adoption_by_same_sex_couples, "(?<=[Jj]oint adoption since )\\d{4}"),
+                                        if_else(str_detect(adoption_by_same_sex_couples, "Legal"),
+                                                if_else(str_detect(adoption_by_same_sex_couples, "nationwide"),
+                                                        str_extract(adoption_by_same_sex_couples, "(?<=nationwide since )\\d{4}"),
+                                                        str_extract(adoption_by_same_sex_couples, "(?<=since )\\d{4}")),
+                                                NA_character_)) %>% 
+               str_extract("\\d{4}") %>% 
                as.numeric()) %>% 
-    select(recognition_of_same_sex_unions, unions_recognized, everything())
+    select(starts_with("adoption"), everything())
 
