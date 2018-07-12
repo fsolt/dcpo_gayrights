@@ -27,8 +27,9 @@ cc_dcpo <- DCPO::cc_dcpo
 lgbt_rights <- page %>% 
     html_table(fill = TRUE) %>% # generates a list
     map_df(function(x) {
-        if (ncol(x) == 8 & names(x)[1] == "LGBT rights in:") {
+        if (ncol(x) == 8 & str_detect(names(x)[1], "LGBT rights in")) {
             names(x) <- str_replace(names(x), ".*serve openly.*", "military_openly")
+            names(x) <- str_replace(names(x), ":", "")
             if (any(str_detect(names(x), "Recognition of relationships"))) {
                 x <- x %>% 
                     mutate(`Recognition of same-sex unions` = if_else(!is.na(`Recognition of relationships`),
@@ -95,7 +96,7 @@ lgbt_rights <- page %>%
            serve = str_extract(military_openly, "\\d{4}")) %>% 
     select(country, ff_legal, mm_legal, civ_union, marry, con_ban, adopt, serve) %>% 
     filter(!is.na(country))
-    # problems with names still; plus SE Asia doesn't get imported 
+    # problems with names still: "Northern Ireland", "Antigua", "St Kitts and Nevis", "St Lucia", "St Vincent" 
 setdiff(gm$country, lgbt_rights$country)
 setdiff(lgbt_rights$country, gm$country)
 
