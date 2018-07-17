@@ -93,12 +93,19 @@ lgbt_rights <- page %>%
                                                         str_extract(adoption_by_same_sex_couples, "(?<=since )\\d{4}")),
                                                 NA_character_)) %>% 
                as.numeric(),
-           serve = str_extract(military_openly, "\\d{4}")) %>% 
+           serve = str_extract(military_openly, "\\d{4}") %>% 
+               as.numeric()) %>% 
     select(country, ff_legal, mm_legal, civ_union, marry, con_ban, adopt, serve) %>% 
-    filter(!is.na(country))
-    # problems with names still: "Northern Ireland", "Antigua", "St Kitts and Nevis", "St Lucia", "St Vincent" 
-setdiff(gm$country, lgbt_rights$country)
-setdiff(lgbt_rights$country, gm$country)
+    filter(!is.na(country)) %>% 
+    bind_rows(tibble(country = "Northern Ireland",
+                     ff_legal = 1800,
+                     mm_legal = 1982,
+                     civ_union = 2005,
+                     marry = NA_real_,
+                     con_ban = NA_real_,
+                     adopt = 2013,
+                     serve = 2000))
+
 
 gm <- read_csv("data/all_data_gm.csv", col_types = "cdciiiciiiciiiiiii") %>% 
     left_join(lgbt_rights, by = c("country")) %>%
