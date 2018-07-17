@@ -50,8 +50,8 @@ lgbt_rights <- page %>%
                str_trim() %>%
                countrycode("country.name", "dcpo.name", custom_dict = cc_dcpo),
            mm_legal = if_else(!str_detect(same_sex_sexual_activity,
-                                          "Illegal(?! in practice in Chechnya)|Male illegal|[Dd]e facto illegal"),
-                              if_else(str_detect(same_sex_sexual_activity, "^Legal\\s*\\(No laws.*have|has ever existed|^Legal$|^Legal\\s*[\\[+]"),
+                                          "Illegal(?! in practice in Chechnya| in the provinces)|Male illegal|[Dd]e facto illegal"),
+                              if_else(str_detect(same_sex_sexual_activity, "^Legal\\s*\\(No laws.*have|has ever existed|^Legal$|^Legal\\s*[\\[+]|^Legal nationwide, except;"),
                                       1800,
                                       str_extract(same_sex_sexual_activity,
                                                   "(Male legal|Legal)( nationwide| in England and Wales| in East Germany| in some states since 1962,nationwide| in some states and territories since 1975, nationwide)? (after|since|from)( the)?\\s\\d{4}") %>% 
@@ -66,10 +66,13 @@ lgbt_rights <- page %>%
            ff_legal = if_else(str_detect(same_sex_sexual_activity, "[Ff]emale"),
                               if_else(str_detect(same_sex_sexual_activity, "[Ff]emale( always)? legal(?! since)"),
                                       1800,
-                                      if_else(str_detect(same_sex_sexual_activity, "[Ff]emale uncertain"),
-                                              mm_legal,
-                                              NA_real_)),
-                              mm_legal),
+                                      if_else(str_detect(same_sex_sexual_activity, "[Ff]emale legal since\\s\\d{4}"),
+                                              str_extract(same_sex_sexual_activity, "(?<=[Ff]emale legal since\\s)\\d{4}") %>% 
+                                                  as.numeric(),     
+                                              if_else(str_detect(same_sex_sexual_activity, "[Ff]emale uncertain"),
+                                                      mm_legal,
+                                                      NA_real_))),
+                                      mm_legal),
            civ_union = str_replace_all(recognition_of_same_sex_unions, '(Marriage\\s([Ss]ince |[Ff]rom )\\d{4})|June |July 3, |(\\"Stable unions\\" legal in some states since)', "") %>% 
                str_extract("(?<=[Ss]ince |[Ff]rom )\\d{4}") %>% 
                as.numeric(),
@@ -107,8 +110,16 @@ lgbt_rights <- page %>%
                      serve = 2000))
 
 
-gm <- read_csv("data/all_data_gm.csv", col_types = "cdciiiciiiciiiiiii") %>% 
+gm1 <- read_csv("data/all_data_gm.csv", col_types = "cdciiiciiiciiiiiii") %>% 
     left_join(lgbt_rights, by = c("country")) %>%
+    group_by(country) %>% 
+    mutate(ff_legal = if_else(ff_legal > 0, as.numeric(year >= ff_legal), 1 - as.numeric(year >= -ff_legal)))
+           mm_legal = 1982,
+           civ_union = 2005,
+           marry = NA_real_,
+           con_ban = NA_real_,
+           adopt = 2013,
+           serve = 2000)))
     mutate(law = ifelse(!is.na(gm) & (year >= gm | year >= lastyr), "Marriage",
                            ifelse(!is.na(civ) & (year >= civ | year >= lastyr), "Civil Union",
                                   "None"))) 
