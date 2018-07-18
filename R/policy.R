@@ -109,17 +109,23 @@ lgbt_rights <- page %>%
                      adopt = 2013,
                      serve = 2000))
 
-
-gm1 <- read_csv("data/all_data_gm.csv", col_types = "cdciiiciiiciiiiiii") %>% 
+lgbt_rights1 <- crossing(country = unique(gm$country),      # all possible combinations of these two variables
+                         year = min(gm$year):max(gm$year)) %>% 
+    left_join(gm %>% 
+                  group_by(country) %>% 
+                  summarize(ccode = first(ccode)) %>% 
+                  ungroup(),
+              by = "country") %>% 
+    mutate(tcode = as.integer(year - min(year) + 1),
+           ktcode = as.integer((ccode-1)*max(tcode)+tcode)) %>% 
     left_join(lgbt_rights, by = c("country")) %>%
     group_by(country) %>% 
-    mutate(ff_legal = if_else(ff_legal > 0, as.numeric(year >= ff_legal), 1 - as.numeric(year >= -ff_legal)))
-           mm_legal = 1982,
-           civ_union = 2005,
-           marry = NA_real_,
-           con_ban = NA_real_,
-           adopt = 2013,
-           serve = 2000)))
-    mutate(law = ifelse(!is.na(gm) & (year >= gm | year >= lastyr), "Marriage",
-                           ifelse(!is.na(civ) & (year >= civ | year >= lastyr), "Civil Union",
-                                  "None"))) 
+    mutate(ff_legal = if_else(ff_legal > 0, as.numeric(year >= ff_legal), 1 - as.numeric(year >= -ff_legal)),
+           mm_legal = if_else(mm_legal > 0, as.numeric(year >= mm_legal), 1 - as.numeric(year >= -mm_legal)),
+           civ_union = if_else(!is.na(civ_union), as.numeric(year >= civ_union), 0),
+           marry = if_else(!is.na(marry), as.numeric(year >= marry), 0),
+           con_ban = if_else(!is.na(con_ban), as.numeric(year >= con_ban), 0),
+           adopt = if_else(!is.na(adopt), as.numeric(year >= adopt), 0),
+           serve = if_else(!is.na(serve), as.numeric(year >= serve), 0)) %>% 
+    ungroup() %>% 
+    arrange(ktcode)
