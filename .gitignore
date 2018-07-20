@@ -21,3 +21,5 @@ slides/*mpsa*
 data/gm*.rda
 data/ab*.rda
 data/all*.rda
+data/x1.csv
+
