@@ -76,6 +76,7 @@ bsa2013,approve5,homosex,c(1:5),"c(-2, 6, 8, 9)"
 bsa2014,marry5,gmlmarry,c(5:1),"c(-1, 8, 9)"
 bsa2015,approve5,homosex,c(1:5),"c(-1, 6, 8, 9)"
 bsa2016,approve5,homosex,c(1:5),"c(-1, 6, 8, 9)"
+cces2014,marry2,cc14_327 ,"c(2, 1)","c(8, 9)"
 cces2015,marry2,cc15_325 ,"c(2, 1)","c(8, 9)"
 cces2016,marry2,cc16_335 ,"c(2, 1)","c(8, 9)"
 cdcee,accept4,v233,c(4:1),
