@@ -6,6 +6,10 @@
 		X AsiaBarometer		
 		X Latinobarómetro
 
+	just3
+		Please tell me for each of the following statements whether you think it can always be justified, sometimes be justified, or never be justified.
+		X pewrel2006_10nat
+
 *don't like as neighbors
 	neigh2
 		X WVS			a124_09
