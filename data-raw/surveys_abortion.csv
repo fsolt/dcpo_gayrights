@@ -97,6 +97,10 @@ bsa2016,l_health2,abort6,"c(2, 1)","c(-2, -1, 8, 9)"
 cces2014,l_any2,cc15_323_1,"c(2, 1)","c(8, 9)"
 cces2015,l_any2,cc15_322a,"c(2, 1)","c(8, 9)"
 cces2016,l_any2,cc16_332a,"c(2, 1)","c(8, 9)"
+cbsnyt198905,l_defect2,q14a,"c(2, 1)","c(3, 9)"
+cbsnyt198905,l_single2,q14b,"c(2, 1)","c(3, 9)"
+cbsnyt198905,l_health2,q14c,"c(2, 1)","c(3, 9)"
+cbsnyt198905,l_poor2,q14d,"c(2, 1)","c(3, 9)"
 cdcee,free4,v234,c(4:1),
 eb11,free4,v78,c(4:1),
 eb21,free5b,v133,c(1:5),
@@ -106,6 +110,10 @@ evs_combo,a_health2,a046,c(0:1),
 evs_combo,a_defect2,a047,c(0:1),
 evs_combo,a_single2,a048,c(0:1),
 evs_combo,a_nomore2,a049,c(0:1),
+gallup_us196909,l_health2,q44a,"c(2, 1)",3
+gallup_us196909,l_defect2,q44b,"c(2, 1)",3
+gallup_us196909,l_poor2,q44c,"c(2, 1)",3
+gallup_us196909,l_nomore2,q44d,"c(2, 1)",3
 issp1991,a_defect4,v14,c(1:4),
 issp1991,a_poor4,v15,c(1:4),
 issp1991,l_defect4,v12,c(1:4),
@@ -122,9 +130,13 @@ lb2015,just10,p70st,c(1:10),"c(-5, -2, -1)"
 npes_combo,free7,v44_5,c(1:7),"c(95, 96, 99)"
 pew2013,moral3,q84c,"c(2, 3, 1)","c(4, 8, 9)"
 pew2014_india,moral3,q84c,"c(2, 3, 1)","c(4, 8, 9)"
+pewrel2006_10nat,just3,q29h,c(3:1),"c(8, 9)"
+pewrel2006_10nat,govint4,q36c,c(4:1),"c(8, 9)"
 pewrel2009_afr,moral3,q85h,"c(2, 3, 1)","c(4, 8, 9)"
 pewrel2014_latam,moral3,q69e,"c(2, 3, 1)","c(98, 99)"
 pewrel2014_latam,l_ncca4,q16,c(4:1),"c(98, 99)"
+pewrel2015_ee,l_ncca4,q11,c(4:1),"c(98, 99)"
+pewrel2015_ee,moral3,q71e,"c(2, 3, 1)","c(98, 99)"
 pgss,l_defect2,q102a,"c(2, 1)",8
 pgss,l_nomore2,q102b,"c(2, 1)",8
 pgss,l_health2,q102c,"c(2, 1)",8
@@ -132,6 +144,12 @@ pgss,l_poor2,q102d,"c(2, 1)",8
 pgss,l_rape2,q102e,"c(2, 1)",8
 pgss,l_single2,q102f,"c(2, 1)",8
 pgss,l_any2,q102g,"c(2, 1)",8
+prri2011_mra,l_defect2,q10c,"c(2, 1)","c(3, 9)"
+prri2011_mra,l_health2,q10a,"c(2, 1)","c(3, 9)"
+prri2011_mra,l_poor2,q10f,"c(2, 1)","c(3, 9)"
+prri2011_mra,l_rape2,q10d,"c(2, 1)","c(3, 9)"
+prri2011_mra,l_single2,q10e,"c(2, 1)","c(3, 9)"
+prri2011_mra,l_ncca4,q6,c(4:1),9
 usgss,l_defect2,abdefect,"c(2, 1)",
 usgss,l_nomore2,abnomore,"c(2, 1)",
 usgss,l_health2,abhlth,"c(2, 1)",
@@ -139,6 +157,9 @@ usgss,l_poor2,abpoor,"c(2, 1)",
 usgss,l_rape2,abrape,"c(2, 1)",
 usgss,l_single2,absingle,"c(2, 1)",
 usgss,l_any2,abany,"c(2, 1)",
+uspew2006_02nii,moral3,q47f2a,"c(2, 3, 1)","c(4, 9)"
+uspew2009_rel,moral3,q180a,"c(2, 3, 1)","c(4, 9)"
+uspew2012_02pol,moral3,q40c,"c(2, 3, 1)","c(4, 9)"
 wvs_combo,just10,f120,c(1:10),c(-5:-1)
 wvs_combo,a_health2,a046,c(0:1),c(-5:-1)
 wvs_combo,a_defect2,a047,c(0:1),c(-5:-1)
