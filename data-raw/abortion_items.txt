@@ -30,7 +30,7 @@
 
 
 *should abortion be permitted [U.S. and German GSS, Canada, Poland] 1 if yes.
-	l_defect if strong chance of severe defect
+	l_defect if strong chance of serious defect
 		X USGSS
 		X ALLBUS
 
@@ -67,6 +67,10 @@
 	l_nca
 		X USGSS
 
+*The government should not interfere with a woman’s ability to have an abortion
+	govint4
+		X pewrel2006_10nat
+
 
 *Do you think the government should be involved in trying to discourage abortions or do you think the government should leave these matters to the individual?
 	free2: % saying leave to individual
@@ -76,7 +80,6 @@
 *agree that abortion should be legal if the woman wants it, independent of health reasons (4 point)
 *If a woman doesn't want children, she should be able to have an abortion (4 point)
 	free4: average score (most pro-choice response=4)
-
 
 *it should be up to the individuals involved, not the law, to decide whether to have abortion (5 point)
 	free5: average score (most pro-choice response=5)
