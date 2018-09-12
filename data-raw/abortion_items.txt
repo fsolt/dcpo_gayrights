@@ -79,14 +79,14 @@
 *abortions should be available to all women who want them (4 point)
 *agree that abortion should be legal if the woman wants it, independent of health reasons (4 point)
 *If a woman doesn't want children, she should be able to have an abortion (4 point)
-	free4: average score (most pro-choice response=4)
+	free4
 
 *it should be up to the individuals involved, not the law, to decide whether to have abortion (5 point)
-	free5: average score (most pro-choice response=5)
+	free5
 		X EB38
 
 *A pregnant woman should be able to obtain a legal abortion for any reason whatsoever, if she chooses not to have the baby (5 point) [ISSP Family 1994]
-	free5a: average score (most pro-choice response=5)
+	free5a
 
 *LIBERALISATION OF ABORTION IS A GOOD THING.0 DK;NA1 DISAGREE COMPLETELY2 DISAGREE TO SOME EXTENT3 AGREE IF ANYTHING4 BROADLY AGREE5 COMPLETELY AGREE	free5b
 		X EB21	

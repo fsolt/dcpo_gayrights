@@ -131,7 +131,7 @@ Next, I’m going to read some behaviors.  For each, please tell me whether you 
 	civil2
 		X EB39-93		v638
 
-**** [not used (yet)]
+**** [not used]
  legal Do you think gay or lesbian relations between consenting adults should or should not be legal?
 	legal2	
 		gallup_us
