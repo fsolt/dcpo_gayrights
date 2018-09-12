@@ -150,6 +150,7 @@ pgss,l_poor2,q102d,"c(2, 1)",8
 pgss,l_rape2,q102e,"c(2, 1)",8
 pgss,l_single2,q102f,"c(2, 1)",8
 pgss,l_any2,q102g,"c(2, 1)",8
+pipa200711,free2,,,
 prri2011_mra,l_defect2,q10c,"c(2, 1)","c(3, 9)"
 prri2011_mra,l_health2,q10a,"c(2, 1)","c(3, 9)"
 prri2011_mra,l_poor2,q10f,"c(2, 1)","c(3, 9)"
