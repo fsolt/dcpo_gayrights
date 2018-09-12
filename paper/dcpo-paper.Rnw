@@ -28,8 +28,8 @@ library(knitr)
 opts_chunk$set(concordance=TRUE, cache=TRUE, warning=FALSE, message=FALSE, echo=FALSE, results='hide')
 @
 
-\title{Does Policy Change on Morality Issues Trigger Backlash or Confer Legitimacy?\\ Dynamic Comparative Public Opinion}
-%\title{Triggering Backlash or Conferring Legitimacy?\\ Policy Change and Dynamic Comparative Public Opinion}
+\title{Does Policy Change on Morality Issues Trigger Backlash or Confer Legitimacy?\\ Evidence from Dynamic Comparative Public Opinion}
+%\title{Triggering Backlash or Conferring Legitimacy?\\ Policy Change, Morality Issues, and Dynamic Comparative Public Opinion}
 %\title{Policy Change and Dynamic Comparative Public Opinion}
 \author{Frederick Solt\\
   Department of Political Science\\
