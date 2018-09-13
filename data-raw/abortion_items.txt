@@ -64,8 +64,12 @@
 
 *should be allowed: 0 never, 1 circumstances [health, health or hardship], 2 always
 *women should have the right to abortion and this should be protected by law (3 point)
-	l_nca
+	l_ncca4
 		X USGSS
+
+	l_n_an_a3
+		X lat200006
+		X arromer199111
 
 *The government should not interfere with a woman’s ability to have an abortion
 	govint4
