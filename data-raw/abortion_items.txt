@@ -74,6 +74,7 @@
 
 *Do you think the government should be involved in trying to discourage abortions or do you think the government should leave these matters to the individual?
 	free2: % saying leave to individual
+		X pipa201107
 
 *women should be free to decide for themselves in matters of abortion (4 point)
 *abortions should be available to all women who want them (4 point)
