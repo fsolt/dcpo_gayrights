@@ -9,7 +9,7 @@ allbus,l_any2,v385,"c(2, 1)","c(0, 8, 9)"
 allbus,free7,v115,c(1:7),"c(0, 97, 98, 99)"
 amb_combo,a_health2,domw14a,"c(2, 1)",
 amb_combo,just_health2,w14a,"c(2, 1)",
-amb_combo,a_rape2,domw14b,"c(2, 1)",
+amb_combo,just_rape2,domw14b,"c(2, 1)",
 amb_combo,just_rape2,w14b,"c(2, 1)",
 amb_argentina2016,just_health2,w14a,"c(2, 1)",
 amb_bolivia2016,just_health2,w14a,"c(2, 1)",
@@ -34,6 +34,7 @@ amb_uruguay2016,just_health2,w14a,"c(2, 1)",
 amb_venezuela2016,just_health2,w14a,"c(2, 1)",
 anes_combo,l_ncca4,vcf0837 ,c(1:4),"c(0, 9)"
 anes_combo,l_ncca4,vcf0838 ,c(1:4),"c(0, 9)"
+arromer199111,l_n_an_a3,p168,"c('01', '02', '03')","""00"""
 asiab2004,just10,q45c,c(1:10),99
 asiab2005,just10,q45c,c(1:10),
 asiab2006,just10,q50c,c(1:10),
@@ -125,6 +126,7 @@ issp1998,a_defect4,v10,c(1:4),
 issp1998,a_poor4,v11,c(1:4),
 issp2008,a_defect4,v10,c(1:4),
 issp2008,a_poor4,v11,c(1:4),
+lat200006,l_n_an_a3,a24,c(3:1),"c(4, 5)"
 lat200006,l_defect2,q30,"c(2, 1)","c(3, 4)"
 lat200006,l_health2,q31,"c(2, 1)","c(3, 4)"
 lat200006,l_poor2,q33,"c(2, 1)","c(3, 4)"
