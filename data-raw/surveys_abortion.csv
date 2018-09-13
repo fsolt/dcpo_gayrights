@@ -9,6 +9,8 @@ allbus,l_any2,v385,"c(2, 1)","c(0, 8, 9)"
 allbus,free7,v115,c(1:7),"c(0, 97, 98, 99)"
 amb_combo,a_health2,domw14a,"c(2, 1)",
 amb_combo,just_health2,w14a,"c(2, 1)",
+amb_combo,a_rape2,domw14b,"c(2, 1)",
+amb_combo,just_rape2,w14b,"c(2, 1)",
 amb_argentina2016,just_health2,w14a,"c(2, 1)",
 amb_bolivia2016,just_health2,w14a,"c(2, 1)",
 amb_brazil2016,just_health2,w14a,"c(2, 1)",
@@ -16,7 +18,7 @@ amb_chile2016,just_health2,w14a,"c(2, 1)",
 amb_colombia2016,just_health2,w14a,"c(2, 1)",
 amb_costarica2016,just_health2,w14a,"c(2, 1)",
 amb_dominicanrepublic2016,just_health2,w14a,"c(2, 1)",
-amb_dominicanrepublic2016,a_rape2,domw14b,"c(2, 1)",
+amb_dominicanrepublic2016,just_rape2,domw14b,"c(2, 1)",
 amb_ecuador2016,just_health2,w14a,"c(2, 1)",
 amb_elsalvador2016,just_health2,w14a,"c(2, 1)",
 amb_guatemala2016,just_health2,w14a,"c(2, 1)",
@@ -132,7 +134,7 @@ lb2004,just10,p38stb,c(1:10),"c(-4, -2)"
 lb2007,just10,p95st_b,c(1:10),-2
 lb2015,just10,p70st,c(1:10),"c(-5, -2, -1)"
 nbcwsj199306,govint4,q15f,c(4:1),5
-nbcwsj199406,govint4,q15f,c(4:1),5
+nbcwsj199406,govint4,q12a8,c(4:1),5
 npes_combo,free7,v44_5,c(1:7),"c(95, 96, 99)"
 pew2013,moral3,q84c,"c(2, 3, 1)","c(4, 8, 9)"
 pew2014_india,moral3,q84c,"c(2, 3, 1)","c(4, 8, 9)"
@@ -150,7 +152,7 @@ pgss,l_poor2,q102d,"c(2, 1)",8
 pgss,l_rape2,q102e,"c(2, 1)",8
 pgss,l_single2,q102f,"c(2, 1)",8
 pgss,l_any2,q102g,"c(2, 1)",8
-pipa200711,free2,,,
+pipa200711,free2,a1,"c(1, 2)",99
 prri2011_mra,l_defect2,q10c,"c(2, 1)","c(3, 9)"
 prri2011_mra,l_health2,q10a,"c(2, 1)","c(3, 9)"
 prri2011_mra,l_poor2,q10f,"c(2, 1)","c(3, 9)"
