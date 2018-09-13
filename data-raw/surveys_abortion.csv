@@ -35,6 +35,9 @@ amb_venezuela2016,just_health2,w14a,"c(2, 1)",
 anes_combo,l_ncca4,vcf0837 ,c(1:4),"c(0, 9)"
 anes_combo,l_ncca4,vcf0838 ,c(1:4),"c(0, 9)"
 arromer199111,l_n_an_a3,p168,"c('01', '02', '03')","""00"""
+arromer199408,a_defect2,p148,"c('02', '01')","""00"""
+arromer199408,a_health2,p149,"c('02', '01')","""00"""
+arromer199603,l_n_an_a3,p134,"c('01', '02', '03')","c(""00"", ""04"")"
 asiab2004,just10,q45c,c(1:10),99
 asiab2005,just10,q45c,c(1:10),
 asiab2006,just10,q50c,c(1:10),
