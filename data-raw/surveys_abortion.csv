@@ -214,6 +214,11 @@ prri2011_mra,l_poor2,q10f,"c(2, 1)","c(3, 9)"
 prri2011_mra,l_rape2,q10d,"c(2, 1)","c(3, 9)"
 prri2011_mra,l_single2,q10e,"c(2, 1)","c(3, 9)"
 prri2011_mra,l_ncca4,q6,c(4:1),9
+usap8901,l_doctor2,ai1,"c(2, 1)",3
+usap8901,l_n_an_a3,ai2,c(3:1),4
+usap8907,l_doctor2,ab1,"c(2, 1)",3
+usap9205,l_doctor2,ap1,"c(2, 1)","c(3, 8, 9)"
+usap9502,l_doctor2,ap5,"c(2, 1)","c(3, 8, 9)"
 usgss,l_defect2,abdefect,"c(2, 1)",
 usgss,l_nomore2,abnomore,"c(2, 1)",
 usgss,l_health2,abhlth,"c(2, 1)",
