@@ -106,12 +106,32 @@ bsa2016,l_health2,abort6,"c(2, 1)","c(-2, -1, 8, 9)"
 cces2014,l_any2,cc14_323_1,"c(2, 1)","c(8, 9)"
 cces2015,l_any2,cc15_322a,"c(2, 1)","c(8, 9)"
 cces2016,l_any2,cc16_332a,"c(2, 1)","c(8, 9)"
+cbsnyt197710,l_doctor2,q28b,"c(2, 1)",9
+cbsnyt197911,l_doctor2,q41,"c(2, 1)",9
 cbsnyt198008,l_doctor2,v81,"c(3, 1)","c(2, 9)"
 cbsnyt198105,l_doctor2,q40,"c(2, 1)","c(3, 9)"
+cbsnyt198106,l_doctor2,q25,"c(2, 1)","c(3, 9)"
+cbsnyt198901,l_doctor2,q22,"c(2, 1)","c(3, 9)"
+cbsnyt198905,l_doctor2,q7,"c(2, 1)","c(3, 9)"
+cbsnyt198905,l_n_an_a3,q8,c(3:1),9
 cbsnyt198905,l_defect2,q14a,"c(2, 1)","c(3, 9)"
 cbsnyt198905,l_single2,q14b,"c(2, 1)","c(3, 9)"
 cbsnyt198905,l_health2,q14c,"c(2, 1)","c(3, 9)"
 cbsnyt198905,l_poor2,q14d,"c(2, 1)","c(3, 9)"
+cbsnyt198909,l_n_an_a3,q15,c(3:1),9
+cbsnyt198909,l_doctor2,q16,"c(2, 1)","c(3, 9)"
+cbsnyt198909,l_defect2,q19e,"c(2, 1)","c(3, 9)"
+cbsnyt198909,l_single2,q19b,"c(2, 1)","c(3, 9)"
+cbsnyt198909,l_health2,q19a,"c(2, 1)","c(3, 9)"
+cbsnyt198909,l_poor2,q19c,"c(2, 1)","c(3, 9)"
+cbsnyt198909,l_rape2,q19g,"c(2, 1)","c(3, 9)"
+cbsnyt199801,l_doctor2,q22,"c(2, 1)","c(3, 9)"
+cbsnyt199801,l_defect2,q37,"c(2, 1)","c(3, 9)"
+cbsnyt199801,l_nomore2,q38,"c(2, 1)","c(3, 9)"
+cbsnyt199801,l_health2,q39,"c(2, 1)","c(3, 9)"
+cbsnyt199801,l_poor2,q40,"c(2, 1)","c(3, 9)"
+cbsnyt199801,l_rape2,q41,"c(2, 1)","c(3, 9)"
+cbsnyt199801,l_single2,q44,"c(2, 1)","c(3, 9)"
 cdcee,free4,v234,c(4:1),
 chcep199012,l_n_an_a3,p21,c(3:1),4
 chcep199109,l_n_an_a3,p25,c(3:1),4
@@ -180,12 +200,23 @@ lat200006,l_defect2,q30,"c(2, 1)","c(3, 4)"
 lat200006,l_health2,q31,"c(2, 1)","c(3, 4)"
 lat200006,l_poor2,q33,"c(2, 1)","c(3, 4)"
 lat200006,l_rape2,q34,"c(2, 1)","c(3, 4)"
+lat200301,l_ncca4,abortion,c(4:1),"c(5, 6)"
+lat200311,l_ncca4,abortion,c(4:1),"c(5, 6)"
+lat200501,l_ncca4,abortion,c(4:1),"c(5, 6)"
+lat200605,l_ncca4,abortion,c(4:1),"c(5, 6)"
+lat200710,l_ncca4,abortion,c(4:1),"c(5, 6)"
+lat200712,l_ncca4,abortion,c(4:1),"c(5, 6)"
 lb2002,just10,p52wvsd,c(1:10),"c(-4, -2)"
 lb2004,just10,p38stb,c(1:10),"c(-4, -2)"
 lb2007,just10,p95st_b,c(1:10),-2
 lb2015,just10,p70st,c(1:10),"c(-5, -2, -1)"
+nbc198507,l_doctor2,q8,"c(2, 1)",3
+nbcwsj199106,l_n_an_a3,q76,c(3:1),"c(4, 5)"
 nbcwsj199306,govint4,q15f,c(4:1),5
 nbcwsj199406,govint4,q12a8,c(4:1),5
+nbcwsj199406,l_ncca4,q23,c(4:1),5
+nbcwsj199512,l_n_an_a3,q13,c(3:1),4
+nbcwsj199603,l_n_an_a3,q17,c(3:1),4
 npes_combo,free7,v44_5,c(1:7),"c(95, 96, 99)"
 pew2013,moral3,q84c,"c(2, 3, 1)","c(4, 8, 9)"
 pew2014_india,moral3,q84c,"c(2, 3, 1)","c(4, 8, 9)"
@@ -215,11 +246,13 @@ prri2011_mra,l_poor2,q10f,"c(2, 1)","c(3, 9)"
 prri2011_mra,l_rape2,q10d,"c(2, 1)","c(3, 9)"
 prri2011_mra,l_single2,q10e,"c(2, 1)","c(3, 9)"
 prri2011_mra,l_ncca4,q6,c(4:1),9
-usap8901,l_doctor2,ai1,"c(2, 1)",3
-usap8901,l_n_an_a3,ai2,c(3:1),4
-usap8907,l_doctor2,ab1,"c(2, 1)",3
-usap9205,l_doctor2,ap1,"c(2, 1)","c(3, 8, 9)"
-usap9502,l_doctor2,ap5,"c(2, 1)","c(3, 8, 9)"
+usap198009,l_doctor2,q19,"c(2, 1)","c(0, 3)"
+usap198010,l_doctor2,q24,"c(2, 1)","c(0, 3)"
+usap198901,l_doctor2,ai1,"c(2, 1)",3
+usap198901,l_n_an_a3,ai2,c(3:1),4
+usap198907,l_doctor2,ab1,"c(2, 1)",3
+usap199205,l_doctor2,ap1,"c(2, 1)","c(3, 8, 9)"
+usap199502,l_doctor2,ap5,"c(2, 1)","c(3, 8, 9)"
 usgss,l_defect2,abdefect,"c(2, 1)",
 usgss,l_nomore2,abnomore,"c(2, 1)",
 usgss,l_health2,abhlth,"c(2, 1)",
