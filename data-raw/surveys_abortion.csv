@@ -129,7 +129,7 @@ evs_combo,a_single2,a048,c(0:1),
 evs_combo,a_nomore2,a049,c(0:1),
 frifop197211,l_nomore2,ql_3,"c(2, 1)","c(0, 3)"
 gallup_canada1965,l_health2,q10b,"c(2, 1)","c(3, 4)"
-gallup_canada1970,l_any2,q09,"c(2, 1)",3
+gallup_canada1970,l_any2,q9,"c(2, 1)",3
 gallup_canada1972,l_doctor2,q6a,"c(2, 1)",3
 gallup_canada197409,l_doctor2,q7a,"c(2, 1)","c(0, 3)"
 gallup_canada197507,l_n_an_a3,q10a,c(3:1),4
