@@ -131,7 +131,7 @@ frifop197211,l_nomore2,ql_3,"c(2, 1)","c(0, 3)"
 gallup_canada1965,l_health2,q10b,"c(2, 1)","c(3, 4)"
 gallup_canada1970,l_any2,q9,"c(2, 1)",3
 gallup_canada1972,l_doctor2,q6a,"c(2, 1)",3
-gallup_canada197409,l_doctor2,q7a,"c(2, 1)","c(0, 3)"
+gallup_canada197409,l_doctor2,q07a,"c(2, 1)","c(0, 3)"
 gallup_canada197507,l_n_an_a3,q10a,c(3:1),4
 gallup_canada197902,l_doctor2,q1a,"c(2, 1)","c(3, 4)"
 gallup_canada198307,l_n_an_a3,q13a,c(3:1),4
@@ -142,12 +142,11 @@ gallup_canada198908,l_n_an_a3,q6a,"c('3', '2', '1')","""-"""
 gallup_canada198912,l_n_an_a3,q3a,"c('3', '2', '1')","c(""X"", ""Y"")"
 gallup_canada199009,l_n_an_a3,q11a,"c('3', '2', '1')","""X"""
 gallup_canada199105,l_n_an_a3,q5a,"c('3', '2', '1')","""X"""
-gallup_canada199209,l_n_an_a3,q8c,c(3:1),"c(4, 5)"
+gallup_canada199209,l_n_an_a3,q8b,c(3:1),"c(4, 5)"
 gallup_canada199306,l_n_an_a3,q4a,c(3:1),"c(4, 5)"
 gallup_canada199508,l_n_an_a3,q9a,c(3:1),"c(4, 5)"
 gallup_canada199711,l_n_an_a3,q6a,c(3:1),"c(4, 5)"
 gallup_canada199811,l_n_an_a3,q5a,c(3:1),"c(4, 5)"
-gallup_canada199811,l_n_an_a3,q9a,c(3:1),"c(4, 5)"
 gallup_canada199911,l_n_an_a3,q4a,c(3:1),"c(4, 5)"
 gallup_canada200011,l_n_an_a3,q9a,c(3:1),"c(4, 5)"
 gallup_uk196910,l_n_an_a3,q25,c(3:1),
@@ -176,7 +175,7 @@ itdoxa199303,l_defect2,q03_2,"c(2, 1)",3
 itdoxa199303,l_rape2,q03_4,"c(2, 1)",3
 itdoxa199303,l_poor2,q03_5,"c(2, 1)",3
 itdoxa199303,l_any2,q03_6,"c(2, 1)",3
-lat200006,l_n_an_a3,a24,c(3:1),"c(4, 5)"
+lat200006,l_n_an_a3,q24,c(3:1),"c(4, 5)"
 lat200006,l_defect2,q30,"c(2, 1)","c(3, 4)"
 lat200006,l_health2,q31,"c(2, 1)","c(3, 4)"
 lat200006,l_poor2,q33,"c(2, 1)","c(3, 4)"
