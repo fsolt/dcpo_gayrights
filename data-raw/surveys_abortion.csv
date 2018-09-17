@@ -223,6 +223,11 @@ nbcwsj199608,l_n_an_a3,q15a,c(3:1),4
 nbcwsj199609,l_n_an_a3,q27,c(3:1),4
 nbcwsj199801,l_n_an_a3,q16d,c(3:1),4
 nbcwsj199802,l_ncca4,q16,c(4:1),5
+nbcwsj200001,l_n_an_a3,q22b,c(3:1),4
+nbcwsj200006,l_n_an_a3,q20,c(3:1),4
+nbcwsj200007,l_n_an_a3,q28,c(3:1),4
+nbcwsj200301,l_n_an_a3,q41b,c(3:1),4
+nbcwsj200311,l_n_an_a3,q37,c(3:1),4
 npes_combo,free7,v44_5,c(1:7),"c(95, 96, 99)"
 pew2013,moral3,q84c,"c(2, 3, 1)","c(4, 8, 9)"
 pew2014_india,moral3,q84c,"c(2, 3, 1)","c(4, 8, 9)"
