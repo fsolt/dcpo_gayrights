@@ -177,6 +177,12 @@ gallup_uk198202,l_defect2,q21b,"c(5, 4)",
 gallup_uk198202,l_single2,q21c,"c(8, 7)",
 gallup_uk198202,l_nomore2,q21d,"c('x', '0')",
 gallup_uk198202,l_doctor2,q23,"c(2, 1)",3
+gallup_us1962,l_health2,q21a,"c(2, 1)","c(0, 3)"
+gallup_us1962,l_defect2,q21b,"c(2, 1)","c(0, 3)"
+gallup_us1962,l_poor2,q21c,"c(2, 1)","c(0, 3)"
+gallup_us1965,l_health2,q25a,"c(2, 1)",3
+gallup_us1965,l_defect2,q25b,"c(2, 1)",3
+gallup_us1965,l_poor2,q25c,"c(2, 1)",3
 gallup_us196909,l_health2,q44a,"c(2, 1)",3
 gallup_us196909,l_defect2,q44b,"c(2, 1)",3
 gallup_us196909,l_poor2,q44c,"c(2, 1)",3
