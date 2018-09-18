@@ -183,6 +183,7 @@ lb2008,just10,p64wvsst,c(1:10),"c(-2, -1)"
 lb2009,just10,p63wvsst,c(1:10),"c(-2, -1)"
 lb2009,neigh2,p64st_a,"c(1, 0)",
 nbcwsj199906,marry4a,q22i,c(4:1),5
+nbcwsj200910,marry4a,q43,c(4:1),5
 pew2002,accept2,q40,"c(2, 1)",c(3:4)
 pew2007,accept2,q50,"c(2, 1)","c(8, 9)"
 pew2011,accept2,q18,"c(2, 1)","c(8, 9)"
