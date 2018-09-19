@@ -281,8 +281,31 @@ usgss,l_rape2,abrape,"c(2, 1)",
 usgss,l_single2,absingle,"c(2, 1)",
 usgss,l_any2,abany,"c(2, 1)",
 uspew2006_02nii,moral3,q47f2a,"c(2, 3, 1)","c(4, 9)"
+uspew2007_rls,l_ncca4,q7,c(4:1),9
+uspew2007_rel,l_ncca4,q5,c(4:1),9
+uspew2007_prim,l_ncca4,q37,c(4:1),9
+uspew2007_05st,l_ncca4,q47,c(4:1),9
+uspew2007_10pol,l_ncca4,q56,c(4:1),9
+uspew2008_vote,l_ncca4,q63,c(4:1),9
+uspew2008_rel,l_ncca4,q26,c(4:1),9
+uspew2008_10mid,l_ncca4,q34f2,c(4:1),9
+uspew2009_rel,l_ncca4,q125,c(4:1),9
 uspew2009_rel,moral3,q180a,"c(2, 3, 1)","c(4, 9)"
+uspew2009_val,l_ncca4,q12f2,c(4:1),9
+uspew2010_rel,l_ncca4,q13,c(4:1),9
+uspew2011_typo,l_ncca4,qa62,c(4:1),9
+uspew2011_09gen,l_ncca4,q70,c(4:1),9
+uspew2011_11pol,l_ncca4,q71,c(4:1),9
 uspew2012_02pol,moral3,q40c,"c(2, 3, 1)","c(4, 9)"
+uspew2012_05val,l_ncca4,q19fa,c(4:1),9
+uspew2012_07ial,l_ncca4,q5,c(4:1),9
+uspew2012_10late,l_ncca4,q46,c(4:1),9
+uspew2013_07pol,l_ncca4,q40,c(4:1),9
+uspew2014_9rel,l_ncca4,q18,c(4:1),9
+uspew2015_05mra,l_ncca4,q14,c(4:1),-1
+uspew2015_09pol,l_ncca4,q75,c(4:1),9
+uspew2016_3pol,l_ncca4,q75,c(4:1),9
+uspew2016_10pol,l_ncca4,q93f1,c(4:1),9
 wvs_combo,just10,f120,c(1:10),c(-5:-1)
 wvs_combo,a_health2,a046,c(0:1),c(-5:-1)
 wvs_combo,a_defect2,a047,c(0:1),c(-5:-1)
