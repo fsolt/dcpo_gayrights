@@ -265,6 +265,7 @@ uspew2008_pol,marry4a,q34,c(4:1),9
 uspew2008_rel,marry4a,q25c,c(4:1),9
 uspew2008_rel,adopt4a,q25e,c(4:1),9
 uspew2008_vote,marry4a,q62,c(4:1),9
+uspew2008_10mid,marry2,q33bf2,"c(2, 1)",9
 uspew2009_rel,marry4a,q146a,c(4:1),9
 uspew2009_rel,approve3,q180b,"c(2, 3, 1)","c(4, 9)"
 uspew2009_val,marry4a,qb19,c(4:1),9
@@ -276,6 +277,7 @@ uspew2012_10late,marry4a,q45,c(4:1),9
 uspew2012_comm,accept2,q17b,"c(2, 1)","c(3, 9)"
 uspew2012_rel,marry4a,q30a,c(4:1),9
 uspew2012_rel,adopt4a,q30b,c(4:1),9
+uspew2012_05val,marry4a,q21fb,c(4:1),9
 uspew2013_3pol,marry4a,q61,c(4:1),9
 uspew2013_3pol,accept2,q15c,"c(2, 1)","c(3, 9)"
 uspew2013_5pol,marry4a,q36a,c(4:1),9
