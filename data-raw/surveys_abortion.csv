@@ -19,6 +19,14 @@ abcwapo200009,l_ncca4,q18,c(4:1),8
 abcwapo200101,l_ncca4,q32,c(4:1),8
 abcwapo200301,l_ncca4,q29,c(4:1),8
 abcwapo200301,l_rape2,q32d,"c(2, 1)",8
+abcwapo200405,l_ncca4,q32,c(4:1),8
+abcwapo200412,l_ncca4,q23,c(4:1),8
+abcwapo200505,l_ncca4,q21,c(4:1),8
+abcwapo200512,l_ncca4,q35,c(4:1),8
+abcwapo200702,l_ncca4,q44,c(4:1),8
+abcwapo200707,l_ncca4,q49,c(4:1),8
+abcwapo200711,l_ncca4,q32,c(4:1),8
+abcwapo200712,l_ncca4,q34,c(4:1),8
 amb_combo,a_health2,domw14a,"c(2, 1)",
 amb_combo,just_health2,w14a,"c(2, 1)",
 amb_combo,just_rape2,domw14b,"c(2, 1)",
