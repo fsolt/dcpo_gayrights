@@ -7,6 +7,18 @@ allbus,l_rape2,v383,"c(2, 1)","c(0, 8, 9)"
 allbus,l_single2,v384,"c(2, 1)","c(0, 8, 9)"
 allbus,l_any2,v385,"c(2, 1)","c(0, 8, 9)"
 allbus,free7,v115,c(1:7),"c(0, 97, 98, 99)"
+abcwapo199507,l_ncca4,q51,c(4:1),"c(8, 9)"
+abcwapo199509,l_ncca4,q14,c(4:1),"c(8, 9)"
+abcwapo199510,l_ncca4,q30,c(4:1),"c(8, 9)"
+abcwapo199607,l_ncca4,q22,c(4:1),"c(8, 9)"
+abcwapo199608,l_ncca4,q44,c(4:1),"c(8, 9)"
+abcwapo199903,l_ncca4,q45,c(4:1),8
+abcwapo199908,l_ncca4,q42,c(4:1),8
+abcwapo200007,l_ncca4,q22,c(4:1),8
+abcwapo200009,l_ncca4,q18,c(4:1),8
+abcwapo200101,l_ncca4,q32,c(4:1),8
+abcwapo200301,l_ncca4,q29,c(4:1),8
+abcwapo200301,l_rape2,q32d,"c(2, 1)",8
 amb_combo,a_health2,domw14a,"c(2, 1)",
 amb_combo,just_health2,w14a,"c(2, 1)",
 amb_combo,just_rape2,domw14b,"c(2, 1)",
