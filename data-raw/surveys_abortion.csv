@@ -215,12 +215,12 @@ gallup_uk198202,l_defect2,q21b,"c(5, 4)",
 gallup_uk198202,l_single2,q21c,"c(8, 7)",
 gallup_uk198202,l_nomore2,q21d,"c('x', '0')",
 gallup_uk198202,l_doctor2,q23,"c(2, 1)",3
-gallup_us1962,l_health2,q21a,"c(2, 1)","c(0, 3)"
-gallup_us1962,l_defect2,q21b,"c(2, 1)","c(0, 3)"
-gallup_us1962,l_poor2,q21c,"c(2, 1)","c(0, 3)"
-gallup_us1965,l_health2,q25a,"c(2, 1)",3
-gallup_us1965,l_defect2,q25b,"c(2, 1)",3
-gallup_us1965,l_poor2,q25c,"c(2, 1)",3
+gallup_us196208,l_health2,q21a,"c(2, 1)","c(0, 3)"
+gallup_us196208,l_defect2,q21b,"c(2, 1)","c(0, 3)"
+gallup_us196208,l_poor2,q21c,"c(2, 1)","c(0, 3)"
+gallup_us196512,l_health2,q25a,"c(2, 1)",3
+gallup_us196512,l_defect2,q25b,"c(2, 1)",3
+gallup_us196512,l_poor2,q25c,"c(2, 1)",3
 gallup_us196909,l_health2,q44a,"c(2, 1)",3
 gallup_us196909,l_defect2,q44b,"c(2, 1)",3
 gallup_us196909,l_poor2,q44c,"c(2, 1)",3
@@ -258,7 +258,6 @@ nbc198507,l_doctor2,q8,"c(2, 1)",3
 nbcwsj199106,l_n_an_a3,q76,c(3:1),"c(4, 5)"
 nbcwsj199306,govint4,q15f,c(4:1),5
 nbcwsj199406,govint4,q12a8,c(4:1),5
-nbcwsj199406,l_ncca4,q23,c(4:1),5
 nbcwsj199512,l_n_an_a3,q13,c(3:1),4
 nbcwsj199603,l_n_an_a3,q17,c(3:1),4
 nbcwsj199605,l_n_an_a3,q20,c(3:1),4
@@ -342,7 +341,7 @@ uspew2012_10late,l_ncca4,q46,c(4:1),9
 uspew2013_07pol,l_ncca4,q40,c(4:1),9
 uspew2014_9rel,l_ncca4,q18,c(4:1),9
 uspew2015_05mra,l_ncca4,q14,c(4:1),-1
-uspew2015_09pol,l_ncca4,q75,c(4:1),9
+uspew2015_09pol,l_ncca4,q7,c(4:1),9
 uspew2016_3pol,l_ncca4,q75,c(4:1),9
 uspew2016_10pol,l_ncca4,q93f1,c(4:1),9
 usvcu2001,l_n_an_a3,abort,c(3:1),"c(8, 9)"
