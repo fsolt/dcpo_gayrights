@@ -146,7 +146,9 @@ cbsnyt198511,l_n_an_a3,q9,c(3:1),9
 cbsnyt198606,l_n_an_a3,q14,c(3:1),9
 cbsnyt198705,l_n_an_a3,q21,c(3:1),9
 cbsnyt198708,l_n_an_a3,q14,c(3:1),9
-cbsnyt198711,l_n_an_a3,q18,c(3:1),9
+cbsnyt198807,l_n_an_a3,q31,"c(2, 1)","c(3, 9)"
+cbsnyt198810,l_n_an_a3,q20,"c(2, 1)","c(3, 9)"
+cbsnyt198901,l_n_an_a3,q47,"c(2, 1)","c(3, 9)"
 cbsnyt198901,l_doctor2,q22,"c(2, 1)","c(3, 9)"
 cbsnyt198905,l_doctor2,q7,"c(2, 1)","c(3, 9)"
 cbsnyt198905,l_n_an_a3,q8,c(3:1),9
