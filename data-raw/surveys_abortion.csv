@@ -17,7 +17,10 @@ abcwapo199908,l_ncca4,q42,c(4:1),8
 abcwapo200007,l_ncca4,q22,c(4:1),8
 abcwapo200009,l_ncca4,q18,c(4:1),8
 abcwapo200101,l_ncca4,q32,c(4:1),8
+abcwapo200101,l_health2,q33b,"c(2, 1)",8
+abcwapo200101,l_rape2,q33c,"c(2, 1)",8
 abcwapo200301,l_ncca4,q29,c(4:1),8
+abcwapo200301,l_health2,q32b,"c(2, 1)",8
 abcwapo200301,l_rape2,q32d,"c(2, 1)",8
 abcwapo200405,l_ncca4,q32,c(4:1),8
 abcwapo200412,l_ncca4,q23,c(4:1),8
@@ -27,6 +30,13 @@ abcwapo200702,l_ncca4,q44,c(4:1),8
 abcwapo200707,l_ncca4,q49,c(4:1),8
 abcwapo200711,l_ncca4,q32,c(4:1),8
 abcwapo200712,l_ncca4,q34,c(4:1),8
+abcwapo200801,l_ncca4,q26,c(4:1),8
+abcwapo200806,l_ncca4,q30,c(4:1),8
+abcwapo200808,l_ncca4,q33,c(4:1),8
+abcwapo200906,l_ncca4,q38,c(4:1),8
+abcwapo201107,l_ncca4,q35,c(4:1),8
+abcwapo201203,l_ncca4,q39,c(4:1),"c(8, 9)"
+abcwapo201307,l_ncca4,q33,c(4:1),"c(8, 9)"
 amb_combo,a_health2,domw14a,"c(2, 1)",
 amb_combo,just_health2,w14a,"c(2, 1)",
 amb_combo,just_rape2,domw14b,"c(2, 1)",
@@ -131,6 +141,12 @@ cbsnyt197911,l_doctor2,q41,"c(2, 1)",9
 cbsnyt198008,l_doctor2,v81,"c(3, 1)","c(2, 9)"
 cbsnyt198105,l_doctor2,q40,"c(2, 1)","c(3, 9)"
 cbsnyt198106,l_doctor2,q25,"c(2, 1)","c(3, 9)"
+cbsnyt198501,l_n_an_a3,q42,c(3:1),9
+cbsnyt198511,l_n_an_a3,q9,c(3:1),9
+cbsnyt198606,l_n_an_a3,q14,c(3:1),9
+cbsnyt198705,l_n_an_a3,q21,c(3:1),9
+cbsnyt198708,l_n_an_a3,q14,c(3:1),9
+cbsnyt198711,l_n_an_a3,q18,c(3:1),9
 cbsnyt198901,l_doctor2,q22,"c(2, 1)","c(3, 9)"
 cbsnyt198905,l_doctor2,q7,"c(2, 1)","c(3, 9)"
 cbsnyt198905,l_n_an_a3,q8,c(3:1),9
@@ -300,6 +316,7 @@ usgss,l_poor2,abpoor,"c(2, 1)",
 usgss,l_rape2,abrape,"c(2, 1)",
 usgss,l_single2,absingle,"c(2, 1)",
 usgss,l_any2,abany,"c(2, 1)",
+usnwr198706,l_n_an_a3,q22,c(3:1),9
 uspew2006_02nii,moral3,q47f2a,"c(2, 3, 1)","c(4, 9)"
 uspew2007_rls,l_ncca4,q7,c(4:1),9
 uspew2007_rel,l_ncca4,q5,c(4:1),9
@@ -326,6 +343,15 @@ uspew2015_05mra,l_ncca4,q14,c(4:1),-1
 uspew2015_09pol,l_ncca4,q75,c(4:1),9
 uspew2016_3pol,l_ncca4,q75,c(4:1),9
 uspew2016_10pol,l_ncca4,q93f1,c(4:1),9
+usvcu2001,l_n_an_a3,abort,c(3:1),"c(8, 9)"
+usvcu2002,l_n_an_a3,abort,c(3:1),"c(8, 9)"
+usvcu2003,l_n_an_a3,abort,c(3:1),"c(8, 9)"
+usvcu2004,l_n_an_a3,abort,c(3:1),"c(8, 9)"
+usvcu2005,l_n_an_a3,abort,c(3:1),"c(8, 9)"
+usvcu2006,l_n_an_a3,abort,c(3:1),"c(8, 9)"
+usvcu2007,l_n_an_a3,abort,c(3:1),"c(8, 9)"
+usvcu2008,l_n_an_a3,abort,c(3:1),9
+usvcu2010,l_n_an_a3,abort,c(3:1),9
 wvs_combo,just10,f120,c(1:10),c(-5:-1)
 wvs_combo,a_health2,a046,c(0:1),c(-5:-1)
 wvs_combo,a_defect2,a047,c(0:1),c(-5:-1)
