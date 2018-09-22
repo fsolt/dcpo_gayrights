@@ -9,9 +9,9 @@ gm <- read_csv("data/all_data_gm.csv", col_types = "cdciiiciiiciiiiiii")
 start <- proc.time()
 x <- gm %>% with_min_yrs(3)
 out1 <- dcpo(x, iter = 8000)
-save(x, out1, file = str_c("data/gm_", str_replace(Sys.time(), " ", "_"), ".rda"))
 runtime <- proc.time() - start
 runtime
+save(x, out1, runtime, file = str_c("data/gm_", str_replace(Sys.time(), " ", "_"), ".rda"))
 
 x1 <- rstan::summary(out1)
 x1_sum <- as.data.frame(x1$summary)     # as.data.frame() preserves rownames
@@ -58,6 +58,11 @@ shinystan::launch_shinystan(out1)
 ab <- dcpo_setup(vars = "data-raw/surveys_abortion.csv",
                  file = "data/all_data_abortion.csv")
 
+ab <- read_csv("data/all_data_abortion.csv", col_types = "cdciiiciiiciiiiiii")
+
+start <- proc.time()
 x <- ab %>% with_min_yrs(3)
-out1 <- dcpo(x)
-save(out1, file = str_c("data/ab_", str_replace(Sys.time(), " ", "_"), ".rda"))
+out1 <- dcpo(x, iter = 8000)
+runtime <- proc.time() - start
+runtime
+save(x, out1, runtime, file = str_c("data/ab_", str_replace(Sys.time(), " ", "_"), ".rda"))
