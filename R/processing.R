@@ -66,3 +66,42 @@ out1 <- dcpo(x, iter = 8000)
 runtime <- proc.time() - start
 runtime
 save(x, out1, runtime, file = str_c("data/ab_", str_replace(Sys.time(), " ", "_"), ".rda"))
+
+x1 <- rstan::summary(out1)
+x1_sum <- as.data.frame(x1$summary)     # as.data.frame() preserves rownames
+x1_sum$parameter <- rownames(x1_sum)
+x1_sum$parameter_type <- gsub("([^[]*).*", "\\1", x1_sum$parameter)
+
+x2 <- x %>% 
+    mutate(prob = y_r/n,
+           prob_se = sqrt(prob*(1-prob)/n)) %>% 
+    bind_cols(x1_sum %>% 
+                  filter(parameter_type=="pred_prob") %>% 
+                  transmute(pred_prob = mean, 
+                            pred_prob_se = sd)) %>% 
+    group_by(variable_cp) %>% 
+    mutate(vcp_mean = mean(prob)) %>% 
+    ungroup() %>% 
+    mutate(diff = prob - pred_prob,
+           diff_se = sqrt(prob_se^2+pred_prob_se^2),
+           diff_t = abs(diff/diff_se),
+           well_predicted = diff_t < 1.96,
+           diff_vcp_mean = prob - vcp_mean)
+
+r2_by_item <- x2 %>% 
+    group_by(variable_cp) %>%
+    summarise(rmsr = sqrt(mean(diff^2)),
+              rmsr_item_means_only = mean(abs(diff_vcp_mean)),
+              r2_by_item = 1 - (sum(diff^2)/sum((prob - mean(prob))^2)),
+              prob = mean(prob), 
+              pred_prob = mean(pred_prob),
+              diff = mean(abs(diff)))
+
+overall_fit <- x2 %>% 
+    summarize(rmsr = sqrt(mean(diff^2)),
+              rmsr_item_means_only = mean(abs(diff_vcp_mean)),
+              by_item_r2 = 1 - (sum(diff^2)/sum(diff_vcp_mean^2)))
+
+p <- x$y_r/x$n # for shinystan
+
+save(x2, r2_by_item, overall_fit, file = "data/ab_fit.rda")
