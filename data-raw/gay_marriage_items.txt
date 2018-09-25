@@ -102,6 +102,9 @@ Next, I’m going to read some behaviors.  For each, please tell me whether you 
 		X EB712-09		X EB774-12
 		X EB834-15
 
+	And do you approve or disapprove of homosexuals holding responsible positions in public life? 4pt
+		AES 1998		g16
+
 *marriage
 	marry4 (throughout Europe)
 		X EB66.1-06		v324
@@ -137,3 +140,9 @@ Next, I’m going to read some behaviors.  For each, please tell me whether you 
 		gallup_us
 		cnn
 		cbsnyt	
+		aes1987
+
+	legal4
+Please say whether you strongly agree, agree, disagree or strongly disagree with each of these statements.
+There should be stricter laws against homosexuality
+		aes1990
