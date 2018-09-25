@@ -37,6 +37,17 @@ abcwapo200906,l_ncca4,q38,c(4:1),8
 abcwapo201107,l_ncca4,q35,c(4:1),8
 abcwapo201203,l_ncca4,q39,c(4:1),"c(8, 9)"
 abcwapo201307,l_ncca4,q33,c(4:1),"c(8, 9)"
+aes1987,l_n_an_a3,q39,c(3:1),0
+aes1990,l_n_an_a3,f3,c(3:1),"c(0, 4)"
+aes1993,l_n_an_a3,e3,c(3:1),4
+aes1996,l_n_an_a3,e3,c(3:1),4
+aes1998,l_n_an_a3,e5,c(3:1),4
+aes2001,l_n_an_a3,e3,c(3:1),4
+aes2004,l_n_an_a3,e3,c(3:1),4
+aes2007,l_n_an_a3,e3,c(3:1),4
+aes2010,l_n_an_a3,e3,c(3:1),4
+aes2013,l_n_an_a3,e3,c(3:1),4
+aes2016,l_n_an_a3,e3,c(3:1),998
 amb_combo,a_health2,domw14a,"c(2, 1)",
 amb_combo,just_health2,w14a,"c(2, 1)",
 amb_combo,just_rape2,domw14b,"c(2, 1)",

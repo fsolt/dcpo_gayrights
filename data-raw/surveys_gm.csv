@@ -13,6 +13,9 @@ abcwapo201203,marry4b,q40,c(4:1),"c(8, 9)"
 abcwapo201303,marry4b,q29,c(4:1),"c(8, 9)"
 abcwapo201402,marry4a,q15,c(4:1),"c(8, 9)"
 abcwapo201402,adopt2,q17,"c(2, 1)","c(8, 9)"
+aes2007,marry2,e4,"c(2, 1)",3
+aes2013,marry5,e6same,c(1:5),
+aes2016,marry4a,e4,c(4:1),
 allbus,approve4,v703,c(1:4),"c(0, 8, 9)"
 amb_combo,run10,d5,c(1:10),
 amb_combo,marry10,d6,c(1:10),
