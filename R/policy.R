@@ -112,6 +112,7 @@ lgbt_rights <- page %>%
 lgbt_rights1 <- crossing(country = unique(gm$country),      # all possible combinations of these two variables
                          year = min(gm$year):max(gm$year)) %>% 
     left_join(gm %>% 
+                  with_min_yrs(3) %>% 
                   group_by(country) %>% 
                   summarize(ccode = first(ccode)) %>% 
                   ungroup(),
@@ -129,3 +130,5 @@ lgbt_rights1 <- crossing(country = unique(gm$country),      # all possible combi
            serve = if_else(!is.na(serve), as.numeric(year >= serve), 0)) %>% 
     ungroup() %>% 
     arrange(ktcode)
+
+save(lgbt_rights1, file = "data/lgbt_rights1.rda")
