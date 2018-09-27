@@ -170,26 +170,26 @@ p1c <- ggplot(p1_data_c, aes(x = estimate,
                        axis.title.x = element_text(face="bold", size=7)) +
     coord_cartesian(xlim=c(-1, 1)) +
     labs(x = "Tolerance", y = NULL)
-ggsave("paper/figures/cs4-3.pdf", height = 6, width = 3)
+ggsave("paper/figures/cs4-3.pdf", height = 4, width = 3)
 
 
 p1d <- ggplot(p1_data_d, aes(x = estimate,
-                             y = ranked)) +
-  geom_segment(aes(x = lb, xend = ub,
-                   y = ranked, yend = ranked),
-               na.rm = TRUE) +
-  scale_fill_manual(values = c("Marriage"="white",
-                               "Civil Union"="grey50",
-                               "None"="black"),
-                    breaks=c("Marriage", "Civil Union", "None")) +
-  geom_point(aes(fill = as.factor(law)), shape = 21, size = 1.1, na.rm = TRUE) +
-  theme_bw() + theme(legend.position="none",
-                     axis.text.x  = element_text(size=7),
-                     axis.text.y  = element_text(size=7),
-                     axis.title.x = element_text(face="bold", size=7)) +
-  scale_y_discrete(breaks = p1_data_d$ranked, labels=p1_data_d$country) +
-  coord_cartesian(xlim=c(0, 1)) +
-  labs(x = "Tolerance", y = NULL)
+                             y = fct_reorder(as.factor(country), ranked))) +
+    geom_segment(aes(x = lb, xend = ub,
+                     y = fct_reorder(as.factor(country), ranked), yend = fct_reorder(as.factor(country), ranked)),
+                 na.rm = TRUE) +
+    scale_fill_manual(values = c("Marriage"="white",
+                                 "Civil Union"="grey50",
+                                 "None"="black"),
+                      breaks=c("Marriage", "Civil Union", "None")) +
+    geom_point(aes(fill = as.factor(law)), shape = 21, size = 1.1, na.rm = TRUE) +
+    theme_bw() + theme(legend.position="none",
+                       axis.text.x  = element_text(size=7),
+                       axis.text.y  = element_text(size=7),
+                       axis.title.x = element_text(face="bold", size=7)) +
+    coord_cartesian(xlim=c(-1, 1)) +
+    labs(x = "Tolerance", y = NULL)
+ggsave("paper/figures/cs4-4.pdf", height = 4, width = 3)
 
 pdf("paper/figures/cs_top.pdf", height = 3.5, width = 7)
 align_plots(p1a, p1b)
