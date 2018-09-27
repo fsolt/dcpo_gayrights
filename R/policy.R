@@ -129,6 +129,7 @@ lgbt_rights1 <- crossing(country = unique(x$country),      # all possible combin
            adopt = if_else(!is.na(adopt), as.numeric(year >= adopt), 0),
            serve = if_else(!is.na(serve), as.numeric(year >= serve), 0)) %>% 
     ungroup() %>% 
-    arrange(ktcode)
+    arrange(ktcode) %>% 
+    mutate(marry = if_else((country == "Mexico" & year >=2015), 1, marry))
 
 save(lgbt_rights1, file = "data/lgbt_rights1.rda")
