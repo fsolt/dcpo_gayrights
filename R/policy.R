@@ -107,12 +107,12 @@ lgbt_rights <- page %>%
                      marry = NA_real_,
                      con_ban = NA_real_,
                      adopt = 2013,
-                     serve = 2000))
+                     serve = 2000)) %>% 
+    distinct()
 
-lgbt_rights1 <- crossing(country = unique(gm$country),      # all possible combinations of these two variables
-                         year = min(gm$year):max(gm$year)) %>% 
-    left_join(gm %>% 
-                  with_min_yrs(3) %>% 
+lgbt_rights1 <- crossing(country = unique(x$country),      # all possible combinations of these two variables
+                         year = min(x$year):max(x$year)) %>% 
+    left_join(x %>% 
                   group_by(country) %>% 
                   summarize(ccode = first(ccode)) %>% 
                   ungroup(),
