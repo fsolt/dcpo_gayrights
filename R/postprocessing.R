@@ -2,7 +2,7 @@
 library(tidyverse)
 library(DCPO)
 
-load("~/Documents/Projects/dcpo_gayrights/data/gm_2018-06-25_13:00:53.rda")
+load("data/gm_2018-09-27_13:33:46.rda")
 gm <- read_csv("data/all_data_gm.csv")
 
 x1 <- rstan::summary(out1)
@@ -85,11 +85,10 @@ t_res <- rstan::summary(out1, pars="theta", probs=c(.1, .9)) %>%
   left_join(ktcodes, by="ktcode") %>%
   arrange(ccode, tcode)
 
-gm_laws <- read_csv("data-raw/gm_laws.csv", col_types = "ciiii") %>%
-    right_join(kcodes, by = "country")
+load("data/lgbt_rights1.rda")
 
 t_res1 <- t_res %>%
-  left_join(gm_laws, by = c("ccode", "country", "firstyr", "lastyr")) %>%
+  left_join(lgbt_rights1, by = c("ktcode", "ccode", "tcode", "country", "year")) %>%
   transmute(country = country,
             term = country,
             kk = ccode,
@@ -97,8 +96,8 @@ t_res1 <- t_res %>%
             estimate = mean,
             lb = `10%`,
             ub = `90%`,
-            law = ifelse(!is.na(gm) & (year >= gm | year>=lastyr), "Marriage",
-                         ifelse(!is.na(civ) & (year >= civ | year>=lastyr), "Civil Union",
+            law = ifelse(marry, "Marriage",
+                         ifelse(civ_union, "Civil Union",
                                 "None"))) %>%
   arrange(kk, year)
 
