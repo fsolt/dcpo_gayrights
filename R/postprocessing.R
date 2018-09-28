@@ -2,7 +2,7 @@
 library(tidyverse)
 library(DCPO)
 
-load("data/gm_2018-09-27_13:33:46.rda")
+load("data/gm_2018-09-27_21:09:02.rda")
 gm <- read_csv("data/all_data_gm.csv")
 
 x1 <- rstan::summary(out1)
@@ -100,6 +100,17 @@ t_res1 <- t_res %>%
                          ifelse(civ_union, "Civil Union",
                                 "None"))) %>%
   arrange(kk, year)
+
+# for ab
+t_res1 <- t_res %>%
+    transmute(country = country,
+              term = country,
+              kk = ccode,
+              year = year,
+              estimate = mean,
+              lb = `10%`,
+              ub = `90%`) %>%
+    arrange(kk, year)
 
 # Plots:
 #   1. tolerance by country, most recent available year: cs_plot
