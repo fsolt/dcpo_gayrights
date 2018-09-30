@@ -98,7 +98,10 @@ t_res1 <- t_res %>%
             ub = `90%`,
             law = ifelse(marry, "Marriage",
                          ifelse(civ_union, "Civil Union",
-                                "None"))) %>%
+                                "None")),
+            crim = ifelse(!ff_legal, "All Relations",
+                          ifelse(!mm_legal, "Male Relations",
+                                 "None"))) %>%
   arrange(kk, year)
 
 # for ab

@@ -191,11 +191,91 @@ p1d <- ggplot(p1_data_d, aes(x = estimate,
     labs(x = "Tolerance", y = NULL)
 ggsave("paper/figures/cs4-4.pdf", height = 4, width = 3)
 
-pdf("paper/figures/cs_top.pdf", height = 3.5, width = 7)
-align_plots(p1a, p1b)
-dev.off()
+p1c_crim <- ggplot(p1_data_c, aes(x = estimate,
+                             y = fct_reorder(as.factor(country), ranked))) +
+    geom_segment(aes(x = lb, xend = ub,
+                     y = fct_reorder(as.factor(country), ranked), yend = fct_reorder(as.factor(country), ranked)),
+                 na.rm = TRUE) +
+    scale_fill_manual(values = c("All Relations"="white",
+                                 "Male Relations"="gray75",
+                                 "None"="black"),
+                      breaks=c("All Relations", "Male Relations", "None"),
+                      name = "Criminalization") +
+    scale_shape_manual(values = c("All Relations" = 23,
+                                  "Male Relations" = 23,
+                                  "None" = 21),
+                       breaks=c("All Relations", "Male Relations", "None"),
+                       name = "Criminalization")  +
+    geom_point(aes(fill = as.factor(crim), shape = as.factor(crim)), size = 1.1, na.rm = TRUE) +
+    theme_bw() +  theme(legend.position=c(.73, .095),
+                        axis.text.x  = element_text(size=7),
+                        axis.text.y  = element_text(size=7),
+                        axis.title.x = element_text(face="bold", size=7),
+                        legend.text = element_text(size = 7),
+                        legend.title = element_text(size=7, face = "bold"),
+                        legend.key.size = unit(.5, "line"),
+                        legend.background = element_rect(linetype = "solid",
+                                                         color = "grey80",
+                                                         size = .25),
+                        legend.key = element_rect(colour = "white")) +
+    coord_cartesian(xlim=c(-1, 1)) +
+    labs(x = "Tolerance", y = NULL)
+ggsave("paper/figures/cs4-3_crim.pdf", height = 4, width = 3)
 
 
-pdf("paper/figures/cs_bottom.pdf", height = 3.5, width = 7)
-align_plots(p1c, p1d)
-dev.off()
+p1d_crim <- ggplot(p1_data_d, aes(x = estimate,
+                             y = fct_reorder(as.factor(country), ranked))) +
+    geom_segment(aes(x = lb, xend = ub,
+                     y = fct_reorder(as.factor(country), ranked), yend = fct_reorder(as.factor(country), ranked)),
+                 na.rm = TRUE) +
+    scale_fill_manual(values = c("All Relations"="white",
+                                 "Male Relations"="gray75",
+                                 "None"="black"),
+                      breaks=c("All Relations", "Male Relations", "None"),
+                      name = "Criminalization") +
+    scale_shape_manual(values = c("All Relations" = 23,
+                                  "Male Relations" = 23,
+                                  "None" = 21),
+                       breaks=c("All Relations", "Male Relations", "None"),
+                       name = "Criminalization") +
+    geom_point(aes(fill = as.factor(crim), shape = as.factor(crim)), size = 1.1, na.rm = TRUE) +
+    theme_bw() + theme(legend.position="none",
+                       axis.text.x  = element_text(size=7),
+                       axis.text.y  = element_text(size=7),
+                       axis.title.x = element_text(face="bold", size=7)) +
+    coord_cartesian(xlim=c(-1, 1)) +
+    labs(x = "Tolerance", y = NULL)
+ggsave("paper/figures/cs4-4_crim.pdf", height = 4, width = 3)
+
+
+
+p2_data <- t_res1 %>%
+    filter(!(law == "None")) %>% 
+    group_by(country) %>%
+    filter(year == min(year)) %>%
+    ungroup() %>%
+    arrange(-estimate) %>% 
+    mutate(ranked = as.factor(row_number(estimate)))
+
+
+ggplot(p2_data, aes(x = estimate,
+                                  y = fct_reorder(as.factor(country), ranked))) +
+    geom_segment(aes(x = lb, xend = ub,
+                     y = fct_reorder(as.factor(country), ranked), yend = fct_reorder(as.factor(country), ranked)),
+                 na.rm = TRUE) +
+    geom_point(shape = 21, size = 1.1, na.rm = TRUE) +
+    theme_bw() +
+    coord_cartesian(xlim=c(-1, 1)) +
+    labs(x = "Tolerance", y = NULL)
+
+ggplot(p2_data, aes(x = estimate,
+                    y = ranked)) +
+    geom_segment(aes(x = lb, xend = ub,
+                     y = ranked, yend = as.factor(ranked)),
+                 na.rm = TRUE) +
+    geom_point(fill = "black", shape = 21, size = 1.1, na.rm = TRUE) +
+    theme_bw() +
+    coord_cartesian(xlim=c(-1, 1)) +
+    labs(x = "Tolerance", y = NULL) +
+    scale_y_discrete(breaks = p2_data$ranked, labels=p2_data$country) 
+ggsave("paper/figures/cs_rep.pdf", height = 5, width = 4)
