@@ -84,6 +84,12 @@ Next, I’m going to read some behaviors.  For each, please tell me whether you 
 
 		X pewrel2015_ee			q64
 
+	accept4a
+	uspew1999_typo	accept4a	q38u	c(4:1)	c(5, 9)	uspew2000_typo	accept4a	q42u	c(4:1)	c(5, 9)	uspew2003_06nii	accept4a	q6h	c(4:1)	c(5, 9)
+	uspew2004_typo	accept4a	q20u	c(4:1)	c(5, 9)
+	uspew2011_typo	accept4a	q37u	c(4:1)	c(5, 9)
+	uspew2014_rls	accept4a	qb2a	c(4:1)	c(5, 9)
+
 *Do you feel that homosexuality should be considered as an accepted alternative lifestyle or not?
 	accept2
 		gallup
@@ -137,12 +143,12 @@ Next, I’m going to read some behaviors.  For each, please tell me whether you 
 **** [not used yet]
  legal Do you think gay or lesbian relations between consenting adults should or should not be legal?
 	legal2	
-		gallup_us 1977, 1982, 1986 ... 2012 (+ more recent not on RoperExpress yet)
-		cnn	1994, 1998
-		cbsnyt	1987, 1992, 1993, 1994, 2003
-		abcwapo	1981, 1994, 1998
-		aes1987
-		aes1979
+		X gallup_us 1977, 1982, 1986 ... 2012 (+ more recent not on RoperExpress yet)
+		X cnn		1994, 1998
+		cbsnyt	1987, 1992, X 1993, 1994, 2003
+		X abcwapo	1981, 1994, 1998
+		X aes1987
+		X aes1979
 
 	legal4
 Please say whether you strongly agree, agree, disagree or strongly disagree with each of these statements.
