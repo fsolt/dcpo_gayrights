@@ -482,7 +482,7 @@ United Kingdom,1981,a_single2,1,353,1092,evs_combo,227,1969,2016,a_single2_gt1,2
 United Kingdom,1981,a_nomore2,1,384,1098,evs_combo,227,1969,2016,a_nomore2_gt1,2,20,14,24,76,140,29
 United Kingdom,1982,l_defect2,1,855,1007,gallup_uk198202,227,1969,2016,l_defect2_gt1,2,21,1,1,77,140,29
 United Kingdom,1982,l_health2,1,948,1033,gallup_uk198202,227,1969,2016,l_health2_gt1,2,21,2,2,77,140,29
-United Kingdom,1982,l_nomore2,1,414,414,gallup_uk198202,227,1969,2016,l_nomore2_gt1,2,21,4,4,77,140,29
+United Kingdom,1982,l_nomore2,1,414,1008,gallup_uk198202,227,1969,2016,l_nomore2_gt1,2,21,4,4,77,140,29
 United Kingdom,1982,l_single2,1,403,966,gallup_uk198202,227,1969,2016,l_single2_gt1,2,21,6,6,77,140,29
 United Kingdom,1982,l_doctor2,1,835,988,gallup_uk198202,227,1969,2016,l_doctor2_gt1,2,21,9,11,77,140,29
 United Kingdom,1983,l_defect2,1,1347,1523,bsa_combo,227,1969,2016,l_defect2_gt1,2,22,1,1,78,140,29

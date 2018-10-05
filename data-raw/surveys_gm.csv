@@ -1,4 +1,6 @@
 survey,item,variable,values,to_na
+abcwapo198105,legal2,q45,"c(2, 1)","c(0, 9)"
+abcwapo199406,legal2,q051,"c(2, 1)","c(8, 9)"
 abcwapo199406,marry2,q055,"c(2, 1)","c(8, 9)"
 abcwapo199608,civil2,q30m,"c(2, 1)","c(8, 9)"
 abcwapo200401,marry2,q24,"c(2, 1)",8
@@ -13,6 +15,8 @@ abcwapo201203,marry4b,q40,c(4:1),"c(8, 9)"
 abcwapo201303,marry4b,q29,c(4:1),"c(8, 9)"
 abcwapo201402,marry4a,q15,c(4:1),"c(8, 9)"
 abcwapo201402,adopt2,q17,"c(2, 1)","c(8, 9)"
+aes1979,legal2,homosexl,"c(2, 1)","c(0, 3, 8)"
+aes1987,legal2,q49,"c(2, 1)","c(0, 3)"
 aes2007,marry2,e4,"c(2, 1)",3
 aes2013,marry5,e6same,c(1:5),
 aes2016,marry4a,e4,c(4:1),
@@ -61,7 +65,7 @@ bges1997,approve5,gaysex,c(1:5),"c(8, 9)"
 bsa_combo,approve5,homosex,c(1:5),"c(6, 8, 9)"
 bsa_combo,adopt2,gayadopt,"c(2, 1)","c(3, 4, 8, 9)"
 bsa_combo,marry5,marview0,c(5:1),"c(8, 9)"
-bsa1993,approve5,homosex,c(1:5),"c(8, 9)"
+bsa1993,approve5,homosex,c(1:5),"c(6, 8, 9)"
 bsa1996,approve5,gaysex,c(1:5),"c(8, 9)"
 bsa1997,approve5,gaysex,c(1:5),"c(-1, 9)"
 bsa1998,approve5,homosex,c(1:5),"c(-2, 6, 8, 9)"
@@ -80,6 +84,8 @@ bsa2013,approve5,homosex,c(1:5),"c(-2, 6, 8, 9)"
 bsa2014,marry5,gmlmarry,c(5:1),"c(-1, 8, 9)"
 bsa2015,approve5,homosex,c(1:5),"c(-1, 6, 8, 9)"
 bsa2016,approve5,homosex,c(1:5),"c(-1, 6, 8, 9)"
+cbsnyt199302,accept2,q45,"c(2, 1)",9
+cbsnyt199302,legal2,q46,"c(2, 1)",9
 cces2009,marry2,cc09_54,"c(2, 1)","c(8, 9)"
 cces2012,marry2,cc326,"c(2, 1)","c(8, 9)"
 cces2014,marry2,cc14_327 ,"c(2, 1)","c(8, 9)"
@@ -89,8 +95,10 @@ cdcee,accept4,v233,c(4:1),
 cnn199301,marry2,q24,"c(2, 1)",3
 cnn199406,marry2,q24,"c(2, 1)",3
 cnn199406,adopt2,q25,"c(2, 1)",3
+cnn199406,legal2,q29,"c(2, 1)",3
 cnn199810,adopt2,q28,"c(2, 1)",3
 cnn199810,marry2,q25,"c(2, 1)",3
+cnn199810,legal2,q29,"c(2, 1)",3
 cnn200001,marry2,q24,"c(2, 1)",3
 cnn200306,marry2,q21,"c(2, 1)","c(3, 4)"
 cnn200309,marry2,q27,"c(2, 1)",0
@@ -155,29 +163,41 @@ gallup_uk1986,adopt2,q30,"c(2, 1)",3
 gallup_uk1986,accept2a,q27,"c(2, 1)",3
 gallup_us197706,adopt2,q14,"c(2, 1)",3
 gallup_us197706,legal2,q12,"c(2, 1)",3
+gallup_us198206,legal2,q09h,"c(2, 1)",3
 gallup_us198206,accept2a,q09j,"c(2, 1)",3
+gallup_us198606,legal2,q10,"c(2, 1)",3
+gallup_us198703,legal2,q20,"c(2, 1)",3
+gallup_us198807,legal2,q5,"c(2, 1)",0
 gallup_us198909,accept2a,q03,"c(2, 1)",0
+gallup_us198910,legal2,q39,"c(2, 1)",0
+gallup_us199109,legal2,q7,"c(2, 1)","c(3, 4)"
 gallup_us199206,accept2a,q24,"c(2, 1)",3
+gallup_us199206,legal2,q25,"c(2, 1)",3
 gallup_us199603,accept2a,q43a,"c(2, 1)",3
 gallup_us199603,marry2,q44,"c(2, 1)",3
-gallup_us199902,marry2,q5a,"c(2, 1)","c(3, 4)"
-gallup_us199902,civil2,q5b,"c(2, 1)","c(3, 4)"
-gallup_us199902,adopt2,q5c,"c(2, 1)","c(3, 4)"
+gallup_us199611,legal2,q12,"c(2, 1)",3
+gallup_us199902,legal2,q35,"c(2, 1)",3
+gallup_us199902,accept2,q39a,"c(2, 1)",3
+gallup_us200305,legal2,q18,"c(2, 1)","c(3, 4)"
+gallup_us200401,legal2,q28,"c(2, 1)","c(3, 4)"
 gallup_us200402,marry2,q10,"c(2, 1)","c(3, 4)"
 gallup_us200508,marry2,q17,"c(2, 1)","c(3, 4)"
 gallup_us200709,adopt2,q25,"c(2, 1)","c(3, 4)"
 gallup_us200905,marry2,q15,"c(2, 1)","c(3, 4)"
 gallup_us200905,adopt2,q19a,"c(2, 1)","c(3, 4)"
+gallup_us201112,legal2,q22,"c(2, 1)","c(3, 4)"
+gallup_us201112,marry2,q23,"c(2, 1)","c(3, 4)"
 gallup_us201211,marry2,q7,"c(2, 1)","c(3, 4)"
 gallup_us201211,adopt2,q14a,"c(2, 1)","c(3, 4)"
+gallup_us201211,legal2,q5,"c(2, 1)","c(3, 4)"
 issp1988,marry5,v36,c(5:1),
 issp1991,approve4,v11,c(1:4),5
 issp1994,approve4,v48,c(1:4),5
 issp1998,approve4,v9,c(1:4),5
 issp2008,approve4,v9,c(1:4),5
 issp2008a,approve4,v9,c(1:4),5
-issp2012,ff5,v19,c(5:1),
-issp2012,mm5,v20,c(5:1),
+issp2012,ff5,v19,c(5:1),"c(0, 8, 9)"
+issp2012,mm5,v20,c(5:1),"c(0, 8, 9)"
 jgss,approve4,q4homsea,c(1:4),9
 lat200006,approve4,q54,c(1:4),"c(5, 6)"
 lat200006,marry4a,q57,c(4:1),"c(5, 6, 7)"
@@ -188,7 +208,7 @@ lb2008,just10,p64wvsst,c(1:10),"c(-2, -1)"
 lb2009,just10,p63wvsst,c(1:10),"c(-2, -1)"
 lb2009,neigh2,p64st_a,"c(1, 0)",
 nbcwsj199906,marry4a,q22i,c(4:1),5
-nbcwsj200910,marry4a,q43,c(4:1),5
+nbcwsj200910,marry4a,q43,c(4:1),"c(5, 6)"
 pew2002,accept2,q40,"c(2, 1)",c(3:4)
 pew2007,accept2,q50,"c(2, 1)","c(8, 9)"
 pew2011,accept2,q18,"c(2, 1)","c(8, 9)"
@@ -196,8 +216,8 @@ pew2013,accept2,q27,"c(2, 1)","c(8, 9)"
 pew2013,approve3,q84d,"c(2, 3, 1)","c(4, 8, 9)"
 pew2014_india,accept2,q27,"c(2, 1)","c(8, 9)"
 pew2014_india,approve3,q84d,"c(2, 3, 1)","c(4, 8, 9)"
-pewrel2009_afr,approve3,q85i,"c(2, 3, 1)","c(8, 9)"
-pewrel2014_latam,approve3,q69h,"c(2, 3, 1)","c(98, 99)"
+pewrel2009_afr,approve3,q85i,"c(2, 3, 1)","c(4, 8, 9)"
+pewrel2014_latam,approve3,q69h,"c(2, 3, 1)","c(4, 98, 99)"
 pewrel2014_latam,marry4a,q15,c(4:1),"c(98, 99)"
 pewrel2014_us,accept2,q5b,"c(2, 1)","c(3, 9)"
 pewrel2015_ee,approve3,q71h,"c(2, 3, 1)","c(4, 98, 99)"
@@ -239,22 +259,18 @@ psra2004,marry2,q14a,"c(2, 1)",9
 psra2004,adopt2,q14c,"c(2, 1)",9
 psra2008,marry2,q8b,"c(2, 1)",9
 psra2008,adopt2,q8c,"c(2, 1)",9
-ress2014,free5,freehms,c(5:1),
+ress2014,free5,freehms,c(5:1),8
 usgss,marry5,marhomo,c(5:1),"c(0, 8, 9)"
 usgss,approve4,homosex,c(1:4),"c(0, 5, 8, 9)"
 usnwr198509,accept2a,var68,"c(2, 1)",3
 uspew1993_nii,accept2,q17,"c(2, 1)",3
 uspew1996_media,accept2,q8e,"c(2, 1)","c(3, 4)"
 uspew1999_nii,adopt4a,q30b,c(4:1),9
-uspew1999_typo,accept2,q38u,"c(2, 1)","c(5, 9)"
-uspew2000_typo,accept2,q42u,"c(2, 1)","c(5, 9)"
-uspew2003_06nii,accept2,q6h,"c(2, 1)","c(5, 9)"
 uspew2003_10nii,marry4a,q17,c(4:1),9
 uspew2003_rel,marry4a,q2ef1,c(4:1),9
 uspew2004_3nii,marry4a,q37,c(4:1),9
 uspew2004_8nii,marry4a,q36,c(4:1),9
 uspew2004_ial,marry2,gm1,"c(2, 1)",9
-uspew2004_typo,accept2,q20u,"c(2, 1)","c(5, 9)"
 uspew2004_typo,marry4a,q36b,c(4:1),9
 uspew2005_news,marry4a,q50,c(4:1),9
 uspew2006_02nii,approve3,q47f2c,"c(2, 3, 1)","c(4, 9)"
@@ -277,7 +293,6 @@ uspew2009_val,marry4a,qb19,c(4:1),9
 uspew2010_rel,marry4a,q12b,c(4:1),9
 uspew2010_st,marry4a,q41,c(4:1),9
 uspew2011_typo,marry4a,qa61,c(4:1),9
-uspew2011_typo,accept2,q37u,"c(2, 1)","c(5, 9)"
 uspew2012_10late,marry4a,q45,c(4:1),9
 uspew2012_comm,accept2,q17b,"c(2, 1)","c(3, 9)"
 uspew2012_rel,marry4a,q30a,c(4:1),9
@@ -288,7 +303,6 @@ uspew2013_3pol,accept2,q15c,"c(2, 1)","c(3, 9)"
 uspew2013_5pol,marry4a,q36a,c(4:1),9
 uspew2014_9rel,marry4a,q19,c(4:1),9
 uspew2014_rls,marry4a,qb22,c(4:1),9
-uspew2014_rls,accept2,qb2a,"c(2, 1)","c(5, 9)"
 uspew2014_typo,marry4a,qb108,c(4:1),9
 uspew2014_typo,accept2,q50u,"c(2, 1)","c(5, 9)"
 uspew2015_5pol,marry4a,q40,c(4:1),9
@@ -297,6 +311,7 @@ uspew2015_7pol,marry4a,q50,c(4:1),9
 uspew2015_gov,accept2,q42m,"c(2, 1)","c(5, 9)"
 uspew2016_3pol,marry4a,q76,c(4:1),9
 uspew2016_fp,accept2,q64c,"c(2, 1)","c(5, 9)"
-uspew2017_6typo,marry4a,q50u,c(4:1),9
+uspew2017_6typo,accept2,q50u,"c(2, 1)","c(5, 9)"
+uswapo199808,legal2,q29,"c(2, 1)",8
 wvs_combo,just10,f118,c(1:10),c(-5:-1)
 wvs_combo,neigh2,a124_09,"c(1, 0)",c(-5:-4)

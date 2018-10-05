@@ -76,10 +76,10 @@ amb_venezuela2016,just_health2,w14a,"c(2, 1)",
 anes_combo,l_ncca4,vcf0837 ,c(1:4),"c(0, 9)"
 anes_combo,l_ncca4,vcf0838 ,c(1:4),"c(0, 9)"
 arkolsky198905,l_health2,p28,"c(2, 1)",9
-arromer199111,l_n_an_a3,p168,"c('01', '02', '03')","""00"""
-arromer199408,a_defect2,p148,"c('02', '01')","""00"""
-arromer199408,a_health2,p149,"c('02', '01')","""00"""
-arromer199603,l_n_an_a3,p134,"c('01', '02', '03')","c(""00"", ""04"")"
+arromer199111,l_n_an_a3,p168,c(1:3),0
+arromer199408,a_defect2,p148,"c(2, 1)",0
+arromer199408,a_health2,p149,"c(2, 1)",0
+arromer199603,l_n_an_a3,p134,c(1:3),"c(0, 4)"
 asiab2004,just10,q45c,c(1:10),99
 asiab2005,just10,q45c,c(1:10),
 asiab2006,just10,q50c,c(1:10),
@@ -220,12 +220,12 @@ gallup_canada199811,l_n_an_a3,q5a,c(3:1),"c(4, 5)"
 gallup_canada199911,l_n_an_a3,q4a,c(3:1),"c(4, 5)"
 gallup_canada200011,l_n_an_a3,q9a,c(3:1),"c(4, 5)"
 gallup_uk196910,l_n_an_a3,q25,c(3:1),
-gallup_uk197311,l_n_an_a3,q28,c(3:1),
-gallup_uk197501,l_n_an_a3,q31,c(3:1),
+gallup_uk197311,l_n_an_a3,q28,c(3:1),4
+gallup_uk197501,l_n_an_a3,q31,c(3:1),4
 gallup_uk198202,l_health2,q21a,"c(2, 1)",
 gallup_uk198202,l_defect2,q21b,"c(5, 4)",
 gallup_uk198202,l_single2,q21c,"c(8, 7)",
-gallup_uk198202,l_nomore2,q21d,"c('x', '0')",
+gallup_uk198202,l_nomore2,q21d_1,"c(1, 0)",
 gallup_uk198202,l_doctor2,q23,"c(2, 1)",3
 gallup_us196208,l_health2,q21a,"c(2, 1)","c(0, 3)"
 gallup_us196208,l_defect2,q21b,"c(2, 1)","c(0, 3)"
@@ -292,10 +292,10 @@ pew2014_india,moral3,q84c,"c(2, 3, 1)","c(4, 8, 9)"
 pewrel2006_10nat,just3,q29h,c(3:1),"c(8, 9)"
 pewrel2006_10nat,govint4,q36c,c(4:1),"c(8, 9)"
 pewrel2009_afr,moral3,q85h,"c(2, 3, 1)","c(4, 8, 9)"
-pewrel2014_latam,moral3,q69e,"c(2, 3, 1)","c(98, 99)"
+pewrel2014_latam,moral3,q69e,"c(2, 3, 1)","c(4, 98, 99)"
 pewrel2014_latam,l_ncca4,q16,c(4:1),"c(98, 99)"
 pewrel2015_ee,l_ncca4,q11,c(4:1),"c(98, 99)"
-pewrel2015_ee,moral3,q71e,"c(2, 3, 1)","c(98, 99)"
+pewrel2015_ee,moral3,q71e,"c(2, 3, 1)","c(4, 98, 99)"
 pgss,l_defect2,q102a,"c(2, 1)",8
 pgss,l_nomore2,q102b,"c(2, 1)",8
 pgss,l_health2,q102c,"c(2, 1)",8
@@ -322,14 +322,14 @@ usap198901,l_n_an_a3,ai2,c(3:1),4
 usap198907,l_doctor2,ab1,"c(2, 1)",3
 usap199205,l_doctor2,ap1,"c(2, 1)","c(3, 8, 9)"
 usap199502,l_doctor2,ap5,"c(2, 1)","c(3, 8, 9)"
-usgss,l_defect2,abdefect,"c(2, 1)",
-usgss,l_nomore2,abnomore,"c(2, 1)",
-usgss,l_health2,abhlth,"c(2, 1)",
-usgss,l_poor2,abpoor,"c(2, 1)",
-usgss,l_rape2,abrape,"c(2, 1)",
-usgss,l_single2,absingle,"c(2, 1)",
-usgss,l_any2,abany,"c(2, 1)",
-usnwr198706,l_n_an_a3,q22,c(3:1),9
+usgss,l_defect2,abdefect,"c(2, 1)","c(0, 8, 9)"
+usgss,l_nomore2,abnomore,"c(2, 1)","c(0, 8, 9)"
+usgss,l_health2,abhlth,"c(2, 1)","c(0, 8, 9)"
+usgss,l_poor2,abpoor,"c(2, 1)","c(0, 8, 9)"
+usgss,l_rape2,abrape,"c(2, 1)","c(0, 8, 9)"
+usgss,l_single2,absingle,"c(2, 1)","c(0, 8, 9)"
+usgss,l_any2,abany,"c(2, 1)","c(0, 8, 9)"
+usnwr198706,l_n_an_a3,q22,c(3:1),"c(0, 4)"
 uspew2006_02nii,moral3,q47f2a,"c(2, 3, 1)","c(4, 9)"
 uspew2007_rls,l_ncca4,q7,c(4:1),9
 uspew2007_rel,l_ncca4,q5,c(4:1),9
@@ -348,7 +348,7 @@ uspew2011_09gen,l_ncca4,q70,c(4:1),9
 uspew2011_11pol,l_ncca4,q71,c(4:1),9
 uspew2012_02pol,moral3,q40c,"c(2, 3, 1)","c(4, 9)"
 uspew2012_05val,l_ncca4,q19fa,c(4:1),9
-uspew2012_07ial,l_ncca4,q5,c(4:1),9
+uspew2012_07ial,l_ncca4,q5,c(4:1),"c(8, 9)"
 uspew2012_10late,l_ncca4,q46,c(4:1),9
 uspew2013_07pol,l_ncca4,q40,c(4:1),9
 uspew2014_9rel,l_ncca4,q18,c(4:1),9
