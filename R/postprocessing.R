@@ -2,7 +2,7 @@
 library(tidyverse)
 library(DCPO)
 
-load("data/gm_2018-09-27_21:09:02.rda")
+load("data/gm_2018-10-08_09:40:37.rda")
 gm <- read_csv("data/all_data_gm.csv")
 
 x1 <- rstan::summary(out1)
