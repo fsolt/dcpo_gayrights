@@ -85,10 +85,13 @@
 *agree that abortion should be legal if the woman wants it, independent of health reasons (4 point)
 *If a woman doesn't want children, she should be able to have an abortion (4 point)
 	free4
+		X EB11
+		X CDCEE
 
 *it should be up to the individuals involved, not the law, to decide whether to have abortion (5 point)
 	free5
 		X EB38
+		X ptev2008
 
 *A pregnant woman should be able to obtain a legal abortion for any reason whatsoever, if she chooses not to have the baby (5 point) [ISSP Family 1994]
 	free5a
@@ -136,3 +139,6 @@ state should generally make termination of pregnancy a punishable offence vs. It
 a woman - if she decides so - should have a free choice of abortion at any time vs. A woman - irrespectively of her social situation and health condition - should have no right to abortion (11 point)
 
 attitude toward right to abortion positive or negative (5 point)
+
+The couple (or woman) should never have the right to resort to abortion (4 point)
+	ptev2006
