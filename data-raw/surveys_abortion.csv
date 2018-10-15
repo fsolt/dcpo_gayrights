@@ -251,6 +251,7 @@ itdoxa199303,l_defect2,q03_2,"c(2, 1)",3
 itdoxa199303,l_rape2,q03_4,"c(2, 1)",3
 itdoxa199303,l_poor2,q03_5,"c(2, 1)",3
 itdoxa199303,l_any2,q03_6,"c(2, 1)",3
+kgss,free5a,abchoose,c(5:1),"c(-8, -1)"
 lat200006,l_n_an_a3,q24,c(3:1),"c(4, 5)"
 lat200006,l_defect2,q30,"c(2, 1)","c(3, 4)"
 lat200006,l_health2,q31,"c(2, 1)","c(3, 4)"
@@ -315,6 +316,8 @@ prri2011_mra,l_poor2,q10f,"c(2, 1)","c(3, 9)"
 prri2011_mra,l_rape2,q10d,"c(2, 1)","c(3, 9)"
 prri2011_mra,l_single2,q10e,"c(2, 1)","c(3, 9)"
 prri2011_mra,l_ncca4,q6,c(4:1),9
+ptvs2008,free5,ccs_g21_11,c(1:5),
+ptvs2012,free5,h.25.6,c(1:5),
 usap198009,l_doctor2,q19,"c(2, 1)","c(0, 3)"
 usap198010,l_doctor2,q24,"c(2, 1)","c(0, 3)"
 usap198901,l_doctor2,ai1,"c(2, 1)",3
