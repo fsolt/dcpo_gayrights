@@ -120,6 +120,7 @@ Next, I’m going to read some behaviors.  For each, please tell me whether you 
 		AuSSA 2005		[ADA charges $1k for access]
 		X BSA 1989, 2007, 2012 	MARVIEW0, GMLMarry
 		X USGSS 88,04,06,08,10	MARHOMO
+		X ptvs2008		CS_G21_4
 	marry2
 		X EB39-93		v637
 	marry4a "Do you strongly favor, favor, oppose, or strongly oppose allowing gays and lesbians to marry legally?"
