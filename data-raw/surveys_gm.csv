@@ -122,6 +122,8 @@ cnn201205,marry2,q22,"c(2, 1)",9
 cnn201303,marry2,q14,"c(2, 1)",9
 cnn201306,marry2,q10,"c(2, 1)",9
 cnn201412,marry2,q23,"c(2, 1)",9
+dkes2005,adopt5,v218,c(5:1),8
+dkes2007,adopt5,v251,c(5:1),"c(8, 9)"
 eb21,accept5,v128,c(1:5),"c(0, 9)"
 eb39,marry2,v637,"c(2, 1)",
 eb39,civil2,v638,"c(2, 1)",
@@ -190,6 +192,7 @@ gallup_us201112,marry2,q23,"c(2, 1)","c(3, 4)"
 gallup_us201211,marry2,q7,"c(2, 1)","c(3, 4)"
 gallup_us201211,adopt2,q14a,"c(2, 1)","c(3, 4)"
 gallup_us201211,legal2,q5,"c(2, 1)","c(3, 4)"
+icenes2007,adopt5,gayadopt,c(5:1),"c(7, 8, 9)"
 issp1988,marry5,v36,c(5:1),
 issp1991,approve4,v11,c(1:4),5
 issp1994,approve4,v48,c(1:4),5
@@ -199,6 +202,7 @@ issp2008a,approve4,v9,c(1:4),5
 issp2012,ff5,v19,c(5:1),"c(0, 8, 9)"
 issp2012,mm5,v20,c(5:1),"c(0, 8, 9)"
 jgss,approve4,q4homsea,c(1:4),9
+kgss,marry5,homomar,c(5:1),"c(-8, -1)"
 lat200006,approve4,q54,c(1:4),"c(5, 6)"
 lat200006,marry4a,q57,c(4:1),"c(5, 6, 7)"
 lb1998,neigh2,np63a,"c(1, 0)",
@@ -259,6 +263,10 @@ psra2004,marry2,q14a,"c(2, 1)",9
 psra2004,adopt2,q14c,"c(2, 1)",9
 psra2008,marry2,q8b,"c(2, 1)",9
 psra2008,adopt2,q8c,"c(2, 1)",9
+ptvs2008,adopt4,par_g20_11,c(1:4),
+ptvs2008,marry5,ccs_g21_4,c(5:1),
+ptvs2012,adopt4,h.24.11,c(1:4),
+ptvs2012,marry5,h.25.2,c(5:1),
 ress2014,free5,freehms,c(5:1),8
 usgss,marry5,marhomo,c(5:1),"c(0, 8, 9)"
 usgss,approve4,homosex,c(1:4),"c(0, 5, 8, 9)"
