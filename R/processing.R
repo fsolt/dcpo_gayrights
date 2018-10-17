@@ -8,7 +8,7 @@ gm <- read_csv("data/all_data_gm.csv", col_types = "cdciiiciiiciiiiiii")
 
 start <- proc.time()
 x <- gm %>% with_min_yrs(3)
-out1 <- dcpo(x, iter = 8000)
+out1 <- dcpo(x, scale_item = "marry2_gt1", iter = 8000)
 runtime <- proc.time() - start
 runtime
 save(x, out1, runtime, file = str_c("data/gm_", str_replace(Sys.time(), " ", "_"), ".rda"))
