@@ -194,9 +194,11 @@ gallup_us201211,adopt2,q14a,"c(2, 1)","c(3, 4)"
 gallup_us201211,legal2,q5,"c(2, 1)","c(3, 4)"
 icenes2007,adopt5,gayadopt,c(5:1),"c(7, 8, 9)"
 issp1988,marry5,v36,c(5:1),
+issp1988au,marry5,marokhom,c(5:1),"c(-1, 6)"
 issp1991,approve4,v11,c(1:4),5
 issp1994,approve4,v48,c(1:4),5
 issp1998,approve4,v9,c(1:4),5
+issp1998br,approve4,homosex1,c(1:4),9
 issp2008,approve4,v9,c(1:4),5
 issp2008a,approve4,v9,c(1:4),5
 issp2012,ff5,v19,c(5:1),"c(0, 8, 9)"
