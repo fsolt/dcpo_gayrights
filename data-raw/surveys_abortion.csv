@@ -244,8 +244,14 @@ issp1991,l_poor4,v13,c(1:4),
 issp1994,free5a,v44,c(5:1),
 issp1998,a_defect4,v10,c(1:4),
 issp1998,a_poor4,v11,c(1:4),
+issp1998br,a_defect4,abdefctw,c(1:4),9
+issp1998br,a_poor4,abpoorw,c(1:4),9
 issp2008,a_defect4,v10,c(1:4),
 issp2008,a_poor4,v11,c(1:4),
+issp2008a,a_defect4,v10,c(1:4),
+issp2008a,a_poor4,v11,c(1:4),
+issp2008ca,a_defect4,v10,c(1:4),"c(8, 9)"
+issp2008ca,a_poor4,v11,c(1:4),"c(8, 9)"
 itdoxa199303,l_health2,q03_3,"c(2, 1)",3
 itdoxa199303,l_defect2,q03_2,"c(2, 1)",3
 itdoxa199303,l_rape2,q03_4,"c(2, 1)",3
