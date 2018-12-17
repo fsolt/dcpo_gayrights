@@ -1,363 +1,367 @@
 country,year,variable,cutpoint,y_r,n,survey,cc_rank,firstyr,lastyr,variable_cp,ccode,tcode,qcode,rcode,ktcode,tq,year_obs
-United States,1973,approve4,1,364,1417,usgss,359,1973,2017,approve4_gt1,1,1,1,1,1,147,39
-United States,1973,approve4,2,269,1417,usgss,359,1973,2017,approve4_gt2,1,1,1,2,1,147,39
-United States,1973,approve4,3,159,1417,usgss,359,1973,2017,approve4_gt3,1,1,1,3,1,147,39
-United States,1974,approve4,1,366,1361,usgss,359,1973,2017,approve4_gt1,1,2,1,1,2,147,39
-United States,1974,approve4,2,295,1361,usgss,359,1973,2017,approve4_gt2,1,2,1,2,2,147,39
-United States,1974,approve4,3,183,1361,usgss,359,1973,2017,approve4_gt3,1,2,1,3,2,147,39
-United States,1976,approve4,1,427,1426,usgss,359,1973,2017,approve4_gt1,1,4,1,1,4,147,39
-United States,1976,approve4,2,339,1426,usgss,359,1973,2017,approve4_gt2,1,4,1,2,4,147,39
-United States,1976,approve4,3,227,1426,usgss,359,1973,2017,approve4_gt3,1,4,1,3,4,147,39
-United States,1977,approve4,1,409,1453,usgss,359,1973,2017,approve4_gt1,1,5,1,1,5,147,39
-United States,1977,approve4,2,325,1453,usgss,359,1973,2017,approve4_gt2,1,5,1,2,5,147,39
-United States,1977,approve4,3,216,1453,usgss,359,1973,2017,approve4_gt3,1,5,1,3,5,147,39
-United States,1977,legal2,1,653,1308,gallup_us197706,359,1973,2017,legal2_gt1,1,5,2,4,5,147,39
-United States,1977,adopt2,1,209,1364,gallup_us197706,359,1973,2017,adopt2_gt1,1,5,3,5,5,147,39
-United States,1980,approve4,1,373,1397,usgss,359,1973,2017,approve4_gt1,1,8,1,1,8,147,39
-United States,1980,approve4,2,289,1397,usgss,359,1973,2017,approve4_gt2,1,8,1,2,8,147,39
-United States,1980,approve4,3,204,1397,usgss,359,1973,2017,approve4_gt3,1,8,1,3,8,147,39
-United States,1981,legal2,1,454,1354,abcwapo198105,359,1973,2017,legal2_gt1,1,9,2,4,9,147,39
-United States,1982,approve4,1,447,1771,usgss,359,1973,2017,approve4_gt1,1,10,1,1,10,147,39
-United States,1982,approve4,2,354,1771,usgss,359,1973,2017,approve4_gt2,1,10,1,2,10,147,39
-United States,1982,approve4,3,238,1771,usgss,359,1973,2017,approve4_gt3,1,10,1,3,10,147,39
-United States,1982,legal2,1,688,1286,gallup_us198206,359,1973,2017,legal2_gt1,1,10,2,4,10,147,39
-United States,1982,just10,1,750,2229,evs_combo,359,1973,2017,just10_gt1,1,10,4,6,10,147,39
-United States,1982,just10,2,640,2229,evs_combo,359,1973,2017,just10_gt2,1,10,4,7,10,147,39
-United States,1982,just10,3,548,2229,evs_combo,359,1973,2017,just10_gt3,1,10,4,8,10,147,39
-United States,1982,just10,4,479,2229,evs_combo,359,1973,2017,just10_gt4,1,10,4,9,10,147,39
-United States,1982,just10,5,214,2229,evs_combo,359,1973,2017,just10_gt5,1,10,4,10,10,147,39
-United States,1982,just10,6,163,2229,evs_combo,359,1973,2017,just10_gt6,1,10,4,11,10,147,39
-United States,1982,just10,7,124,2229,evs_combo,359,1973,2017,just10_gt7,1,10,4,12,10,147,39
-United States,1982,just10,8,79,2229,evs_combo,359,1973,2017,just10_gt8,1,10,4,13,10,147,39
-United States,1982,just10,9,55,2229,evs_combo,359,1973,2017,just10_gt9,1,10,4,14,10,147,39
-United States,1982,accept2a,1,520,1314,gallup_us198206,359,1973,2017,accept2a_gt1,1,10,5,15,10,147,39
-United States,1984,approve4,1,377,1412,usgss,359,1973,2017,approve4_gt1,1,12,1,1,12,147,39
-United States,1984,approve4,2,307,1412,usgss,359,1973,2017,approve4_gt2,1,12,1,2,12,147,39
-United States,1984,approve4,3,202,1412,usgss,359,1973,2017,approve4_gt3,1,12,1,3,12,147,39
-United States,1985,approve4,1,366,1484,usgss,359,1973,2017,approve4_gt1,1,13,1,1,13,147,39
-United States,1985,approve4,2,307,1484,usgss,359,1973,2017,approve4_gt2,1,13,1,2,13,147,39
-United States,1985,approve4,3,203,1484,usgss,359,1973,2017,approve4_gt3,1,13,1,3,13,147,39
-United States,1985,accept2a,1,311,932,usnwr198509,359,1973,2017,accept2a_gt1,1,13,5,15,13,147,39
-United States,1986,legal2,1,496,1375,gallup_us198606,359,1973,2017,legal2_gt1,1,14,2,4,14,147,39
-United States,1987,approve4,1,382,1750,usgss,359,1973,2017,approve4_gt1,1,15,1,1,15,147,39
-United States,1987,approve4,2,310,1750,usgss,359,1973,2017,approve4_gt2,1,15,1,2,15,147,39
-United States,1987,approve4,3,208,1750,usgss,359,1973,2017,approve4_gt3,1,15,1,3,15,147,39
-United States,1987,legal2,1,337,896,gallup_us198703,359,1973,2017,legal2_gt1,1,15,2,4,15,147,39
-United States,1988,approve4,1,217,937,usgss,359,1973,2017,approve4_gt1,1,16,1,1,16,147,39
-United States,1988,approve4,2,173,937,usgss,359,1973,2017,approve4_gt2,1,16,1,2,16,147,39
-United States,1988,approve4,3,120,937,usgss,359,1973,2017,approve4_gt3,1,16,1,3,16,147,39
-United States,1988,legal2,1,350,908,gallup_us198807,359,1973,2017,legal2_gt1,1,16,2,4,16,147,39
-United States,1988,marry5,1,1388,2614,issp1988,359,1973,2017,marry5_gt1,1,16,6,16,16,147,39
-United States,1988,marry5,2,716,2614,issp1988,359,1973,2017,marry5_gt2,1,16,6,17,16,147,39
-United States,1988,marry5,3,324,2614,issp1988,359,1973,2017,marry5_gt3,1,16,6,18,16,147,39
-United States,1988,marry5,4,88,2614,issp1988,359,1973,2017,marry5_gt4,1,16,6,19,16,147,39
-United States,1989,approve4,1,253,980,usgss,359,1973,2017,approve4_gt1,1,17,1,1,17,147,39
-United States,1989,approve4,2,213,980,usgss,359,1973,2017,approve4_gt2,1,17,1,2,17,147,39
-United States,1989,approve4,3,154,980,usgss,359,1973,2017,approve4_gt3,1,17,1,3,17,147,39
-United States,1989,legal2,1,578,1019,gallup_us198910,359,1973,2017,legal2_gt1,1,17,2,4,17,147,39
-United States,1989,accept2a,1,212,537,gallup_us198909,359,1973,2017,accept2a_gt1,1,17,5,15,17,147,39
-United States,1990,approve4,1,207,872,usgss,359,1973,2017,approve4_gt1,1,18,1,1,18,147,39
-United States,1990,approve4,2,165,872,usgss,359,1973,2017,approve4_gt2,1,18,1,2,18,147,39
-United States,1990,approve4,3,112,872,usgss,359,1973,2017,approve4_gt3,1,18,1,3,18,147,39
-United States,1990,just10,1,817,1783,evs_combo,359,1973,2017,just10_gt1,1,18,4,6,18,147,39
-United States,1990,just10,2,742,1783,evs_combo,359,1973,2017,just10_gt2,1,18,4,7,18,147,39
-United States,1990,just10,3,646,1783,evs_combo,359,1973,2017,just10_gt3,1,18,4,8,18,147,39
-United States,1990,just10,4,565,1783,evs_combo,359,1973,2017,just10_gt4,1,18,4,9,18,147,39
-United States,1990,just10,5,329,1783,evs_combo,359,1973,2017,just10_gt5,1,18,4,10,18,147,39
-United States,1990,just10,6,232,1783,evs_combo,359,1973,2017,just10_gt6,1,18,4,11,18,147,39
-United States,1990,just10,7,175,1783,evs_combo,359,1973,2017,just10_gt7,1,18,4,12,18,147,39
-United States,1990,just10,8,115,1783,evs_combo,359,1973,2017,just10_gt8,1,18,4,13,18,147,39
-United States,1990,just10,9,74,1783,evs_combo,359,1973,2017,just10_gt9,1,18,4,14,18,147,39
-United States,1990,neigh2,1,1129,1839,evs_combo,359,1973,2017,neigh2_gt1,1,18,7,20,18,147,39
-United States,1991,approve4,1,531,2146,issp1991,359,1973,2017,approve4_gt1,1,19,1,1,19,147,39
-United States,1991,approve4,2,432,2146,issp1991,359,1973,2017,approve4_gt2,1,19,1,2,19,147,39
-United States,1991,approve4,3,323,2146,issp1991,359,1973,2017,approve4_gt3,1,19,1,3,19,147,39
-United States,1991,legal2,1,427,1091,gallup_us199109,359,1973,2017,legal2_gt1,1,19,2,4,19,147,39
-United States,1992,legal2,1,487,926,gallup_us199206,359,1973,2017,legal2_gt1,1,20,2,4,20,147,39
-United States,1992,adopt2,1,592,2143,anes_combo,359,1973,2017,adopt2_gt1,1,20,3,5,20,147,39
-United States,1992,accept2a,1,380,948,gallup_us199206,359,1973,2017,accept2a_gt1,1,20,5,15,20,147,39
-United States,1993,approve4,1,341,1012,usgss,359,1973,2017,approve4_gt1,1,21,1,1,21,147,39
-United States,1993,approve4,2,297,1012,usgss,359,1973,2017,approve4_gt2,1,21,1,2,21,147,39
-United States,1993,approve4,3,223,1012,usgss,359,1973,2017,approve4_gt3,1,21,1,3,21,147,39
-United States,1993,legal2,1,530,1025,cbsnyt199302,359,1973,2017,legal2_gt1,1,21,2,4,21,147,39
-United States,1993,marry2,1,489,1660,cnn199301,359,1973,2017,marry2_gt1,1,21,8,21,21,147,39
-United States,1993,accept2,1,912,2175,cbsnyt199302,359,1973,2017,accept2_gt1,1,21,9,22,21,147,39
-United States,1994,approve4,1,1002,3109,issp1994,359,1973,2017,approve4_gt1,1,22,1,1,22,147,39
-United States,1994,approve4,2,873,3109,issp1994,359,1973,2017,approve4_gt2,1,22,1,2,22,147,39
-United States,1994,approve4,3,673,3109,issp1994,359,1973,2017,approve4_gt3,1,22,1,3,22,147,39
-United States,1994,legal2,1,1226,2154,abcwapo199406,359,1973,2017,legal2_gt1,1,22,2,4,22,147,39
-United States,1994,adopt2,1,220,729,cnn199406,359,1973,2017,adopt2_gt1,1,22,3,5,22,147,39
-United States,1994,marry2,1,829,2167,abcwapo199406,359,1973,2017,marry2_gt1,1,22,8,21,22,147,39
-United States,1995,just10,1,781,1426,wvs_combo,359,1973,2017,just10_gt1,1,23,4,6,23,147,39
-United States,1995,just10,2,715,1426,wvs_combo,359,1973,2017,just10_gt2,1,23,4,7,23,147,39
-United States,1995,just10,3,652,1426,wvs_combo,359,1973,2017,just10_gt3,1,23,4,8,23,147,39
-United States,1995,just10,4,588,1426,wvs_combo,359,1973,2017,just10_gt4,1,23,4,9,23,147,39
-United States,1995,just10,5,339,1426,wvs_combo,359,1973,2017,just10_gt5,1,23,4,10,23,147,39
-United States,1995,just10,6,289,1426,wvs_combo,359,1973,2017,just10_gt6,1,23,4,11,23,147,39
-United States,1995,just10,7,233,1426,wvs_combo,359,1973,2017,just10_gt7,1,23,4,12,23,147,39
-United States,1995,just10,8,168,1426,wvs_combo,359,1973,2017,just10_gt8,1,23,4,13,23,147,39
-United States,1995,just10,9,151,1426,wvs_combo,359,1973,2017,just10_gt9,1,23,4,14,23,147,39
-United States,1995,neigh2,1,1088,1542,wvs_combo,359,1973,2017,neigh2_gt1,1,23,7,20,23,147,39
-United States,1996,approve4,1,706,1784,usgss,359,1973,2017,approve4_gt1,1,24,1,1,24,147,39
-United States,1996,approve4,2,613,1784,usgss,359,1973,2017,approve4_gt2,1,24,1,2,24,147,39
-United States,1996,approve4,3,503,1784,usgss,359,1973,2017,approve4_gt3,1,24,1,3,24,147,39
-United States,1996,legal2,1,445,920,gallup_us199611,359,1973,2017,legal2_gt1,1,24,2,4,24,147,39
-United States,1996,accept2a,1,205,442,gallup_us199603,359,1973,2017,accept2a_gt1,1,24,5,15,24,147,39
-United States,1996,marry2,1,581,1853,ap_us1996,359,1973,2017,marry2_gt1,1,24,8,21,24,147,39
-United States,1996,civil2,1,272,703,abcwapo199608,359,1973,2017,civil2_gt1,1,24,10,23,24,147,39
-United States,1998,approve4,1,1168,2902,issp1998,359,1973,2017,approve4_gt1,1,26,1,1,26,147,39
-United States,1998,approve4,2,1004,2902,issp1998,359,1973,2017,approve4_gt2,1,26,1,2,26,147,39
-United States,1998,approve4,3,798,2902,issp1998,359,1973,2017,approve4_gt3,1,26,1,3,26,147,39
-United States,1998,legal2,1,1209,1942,cnn199810,359,1973,2017,legal2_gt1,1,26,2,4,26,147,39
-United States,1998,adopt2,1,577,1500,cnn199810,359,1973,2017,adopt2_gt1,1,26,3,5,26,147,39
-United States,1998,marry2,1,501,1521,cnn199810,359,1973,2017,marry2_gt1,1,26,8,21,26,147,39
-United States,1999,legal2,1,528,981,gallup_us199902,359,1973,2017,legal2_gt1,1,27,2,4,27,147,39
-United States,1999,just10,1,806,1178,wvs_combo,359,1973,2017,just10_gt1,1,27,4,6,27,147,39
-United States,1999,just10,2,763,1178,wvs_combo,359,1973,2017,just10_gt2,1,27,4,7,27,147,39
-United States,1999,just10,3,714,1178,wvs_combo,359,1973,2017,just10_gt3,1,27,4,8,27,147,39
-United States,1999,just10,4,659,1178,wvs_combo,359,1973,2017,just10_gt4,1,27,4,9,27,147,39
-United States,1999,just10,5,469,1178,wvs_combo,359,1973,2017,just10_gt5,1,27,4,10,27,147,39
-United States,1999,just10,6,338,1178,wvs_combo,359,1973,2017,just10_gt6,1,27,4,11,27,147,39
-United States,1999,just10,7,284,1178,wvs_combo,359,1973,2017,just10_gt7,1,27,4,12,27,147,39
-United States,1999,just10,8,221,1178,wvs_combo,359,1973,2017,just10_gt8,1,27,4,13,27,147,39
-United States,1999,just10,9,166,1178,wvs_combo,359,1973,2017,just10_gt9,1,27,4,14,27,147,39
-United States,1999,neigh2,1,920,1200,wvs_combo,359,1973,2017,neigh2_gt1,1,27,7,20,27,147,39
-United States,1999,accept2,1,273,523,gallup_us199902,359,1973,2017,accept2_gt1,1,27,9,22,27,147,39
-United States,1999,marry4a,1,425,928,nbcwsj199906,359,1973,2017,marry4a_gt1,1,27,11,24,27,147,39
-United States,1999,marry4a,2,279,928,nbcwsj199906,359,1973,2017,marry4a_gt2,1,27,11,25,27,147,39
-United States,1999,marry4a,3,133,928,nbcwsj199906,359,1973,2017,marry4a_gt3,1,27,11,26,27,147,39
-United States,1999,adopt4a,1,793,1150,uspew1999_nii,359,1973,2017,adopt4a_gt1,1,27,12,27,27,147,39
-United States,1999,adopt4a,2,466,1150,uspew1999_nii,359,1973,2017,adopt4a_gt2,1,27,12,28,27,147,39
-United States,1999,adopt4a,3,124,1150,uspew1999_nii,359,1973,2017,adopt4a_gt3,1,27,12,29,27,147,39
-United States,2000,approve4,1,700,1697,usgss,359,1973,2017,approve4_gt1,1,28,1,1,28,147,39
-United States,2000,approve4,2,624,1697,usgss,359,1973,2017,approve4_gt2,1,28,1,2,28,147,39
-United States,2000,approve4,3,489,1697,usgss,359,1973,2017,approve4_gt3,1,28,1,3,28,147,39
-United States,2000,adopt2,1,731,1656,anes_combo,359,1973,2017,adopt2_gt1,1,28,3,5,28,147,39
-United States,2000,marry2,1,442,1215,cnn200001,359,1973,2017,marry2_gt1,1,28,8,21,28,147,39
-United States,2002,approve4,1,398,884,usgss,359,1973,2017,approve4_gt1,1,30,1,1,30,147,39
-United States,2002,approve4,2,355,884,usgss,359,1973,2017,approve4_gt2,1,30,1,2,30,147,39
-United States,2002,approve4,3,292,884,usgss,359,1973,2017,approve4_gt3,1,30,1,3,30,147,39
-United States,2002,adopt2,1,455,891,psra2002,359,1973,2017,adopt2_gt1,1,30,3,5,30,147,39
-United States,2002,marry2,1,348,915,psra2002,359,1973,2017,marry2_gt1,1,30,8,21,30,147,39
-United States,2002,accept2,1,760,1396,pew2002,359,1973,2017,accept2_gt1,1,30,9,22,30,147,39
-United States,2003,legal2,1,595,973,gallup_us200305,359,1973,2017,legal2_gt1,1,31,2,4,31,147,39
-United States,2003,marry2,1,1537,4285,cnn200306,359,1973,2017,marry2_gt1,1,31,8,21,31,147,39
-United States,2003,marry4a,1,1456,2300,uspew2003_10nii,359,1973,2017,marry4a_gt1,1,31,11,24,31,147,39
-United States,2003,marry4a,2,857,2300,uspew2003_10nii,359,1973,2017,marry4a_gt2,1,31,11,25,31,147,39
-United States,2003,marry4a,3,229,2300,uspew2003_10nii,359,1973,2017,marry4a_gt3,1,31,11,26,31,147,39
-United States,2004,approve4,1,369,868,usgss,359,1973,2017,approve4_gt1,1,32,1,1,32,147,39
-United States,2004,approve4,2,326,868,usgss,359,1973,2017,approve4_gt2,1,32,1,2,32,147,39
-United States,2004,approve4,3,267,868,usgss,359,1973,2017,approve4_gt3,1,32,1,3,32,147,39
-United States,2004,legal2,1,455,949,gallup_us200401,359,1973,2017,legal2_gt1,1,32,2,4,32,147,39
-United States,2004,adopt2,1,930,1928,anes_combo,359,1973,2017,adopt2_gt1,1,32,3,5,32,147,39
-United States,2004,marry5,1,777,1184,usgss,359,1973,2017,marry5_gt1,1,32,6,16,32,147,39
-United States,2004,marry5,2,534,1184,usgss,359,1973,2017,marry5_gt2,1,32,6,17,32,147,39
-United States,2004,marry5,3,369,1184,usgss,359,1973,2017,marry5_gt3,1,32,6,18,32,147,39
-United States,2004,marry5,4,144,1184,usgss,359,1973,2017,marry5_gt4,1,32,6,19,32,147,39
-United States,2004,marry2,1,1718,4792,abcwapo200401,359,1973,2017,marry2_gt1,1,32,8,21,32,147,39
-United States,2004,marry4a,1,2864,4754,uspew2004_3nii,359,1973,2017,marry4a_gt1,1,32,11,24,32,147,39
-United States,2004,marry4a,2,1625,4754,uspew2004_3nii,359,1973,2017,marry4a_gt2,1,32,11,25,32,147,39
-United States,2004,marry4a,3,585,4754,uspew2004_3nii,359,1973,2017,marry4a_gt3,1,32,11,26,32,147,39
-United States,2004,marry4b,1,575,1146,abcwapo200403,359,1973,2017,marry4b_gt1,1,32,13,30,32,147,39
-United States,2004,marry4b,2,449,1146,abcwapo200403,359,1973,2017,marry4b_gt2,1,32,13,31,32,147,39
-United States,2004,marry4b,3,279,1146,abcwapo200403,359,1973,2017,marry4b_gt3,1,32,13,32,32,147,39
-United States,2005,marry2,1,1074,2810,abcwapo200508,359,1973,2017,marry2_gt1,1,33,8,21,33,147,39
-United States,2005,marry4a,1,870,1323,uspew2005_news,359,1973,2017,marry4a_gt1,1,33,11,24,33,147,39
-United States,2005,marry4a,2,538,1323,uspew2005_news,359,1973,2017,marry4a_gt2,1,33,11,25,33,147,39
-United States,2005,marry4a,3,197,1323,uspew2005_news,359,1973,2017,marry4a_gt3,1,33,11,26,33,147,39
-United States,2006,approve4,1,849,1908,usgss,359,1973,2017,approve4_gt1,1,34,1,1,34,147,39
-United States,2006,approve4,2,756,1908,usgss,359,1973,2017,approve4_gt2,1,34,1,2,34,147,39
-United States,2006,approve4,3,626,1908,usgss,359,1973,2017,approve4_gt3,1,34,1,3,34,147,39
-United States,2006,just10,1,793,1175,wvs_combo,359,1973,2017,just10_gt1,1,34,4,6,34,147,39
-United States,2006,just10,2,746,1175,wvs_combo,359,1973,2017,just10_gt2,1,34,4,7,34,147,39
-United States,2006,just10,3,690,1175,wvs_combo,359,1973,2017,just10_gt3,1,34,4,8,34,147,39
-United States,2006,just10,4,649,1175,wvs_combo,359,1973,2017,just10_gt4,1,34,4,9,34,147,39
-United States,2006,just10,5,367,1175,wvs_combo,359,1973,2017,just10_gt5,1,34,4,10,34,147,39
-United States,2006,just10,6,313,1175,wvs_combo,359,1973,2017,just10_gt6,1,34,4,11,34,147,39
-United States,2006,just10,7,255,1175,wvs_combo,359,1973,2017,just10_gt7,1,34,4,12,34,147,39
-United States,2006,just10,8,211,1175,wvs_combo,359,1973,2017,just10_gt8,1,34,4,13,34,147,39
-United States,2006,just10,9,174,1175,wvs_combo,359,1973,2017,just10_gt9,1,34,4,14,34,147,39
-United States,2006,marry5,1,1289,1982,usgss,359,1973,2017,marry5_gt1,1,34,6,16,34,147,39
-United States,2006,marry5,2,978,1982,usgss,359,1973,2017,marry5_gt2,1,34,6,17,34,147,39
-United States,2006,marry5,3,710,1982,usgss,359,1973,2017,marry5_gt3,1,34,6,18,34,147,39
-United States,2006,marry5,4,305,1982,usgss,359,1973,2017,marry5_gt4,1,34,6,19,34,147,39
-United States,2006,neigh2,1,929,1240,wvs_combo,359,1973,2017,neigh2_gt1,1,34,7,20,34,147,39
-United States,2006,marry4a,1,2972,4502,uspew2006_elec,359,1973,2017,marry4a_gt1,1,34,11,24,34,147,39
-United States,2006,marry4a,2,1681,4502,uspew2006_elec,359,1973,2017,marry4a_gt2,1,34,11,25,34,147,39
-United States,2006,marry4a,3,541,4502,uspew2006_elec,359,1973,2017,marry4a_gt3,1,34,11,26,34,147,39
-United States,2006,adopt4a,1,1641,2235,uspew2006_nii,359,1973,2017,adopt4a_gt1,1,34,12,27,34,147,39
-United States,2006,adopt4a,2,1051,2235,uspew2006_nii,359,1973,2017,adopt4a_gt2,1,34,12,28,34,147,39
-United States,2006,adopt4a,3,305,2235,uspew2006_nii,359,1973,2017,adopt4a_gt3,1,34,12,29,34,147,39
-United States,2006,run10,1,507,596,amb_combo,359,1973,2017,run10_gt1,1,34,14,33,34,147,39
-United States,2006,run10,2,491,596,amb_combo,359,1973,2017,run10_gt2,1,34,14,34,34,147,39
-United States,2006,run10,3,477,596,amb_combo,359,1973,2017,run10_gt3,1,34,14,35,34,147,39
-United States,2006,run10,4,472,596,amb_combo,359,1973,2017,run10_gt4,1,34,14,36,34,147,39
-United States,2006,run10,5,422,596,amb_combo,359,1973,2017,run10_gt5,1,34,14,37,34,147,39
-United States,2006,run10,6,403,596,amb_combo,359,1973,2017,run10_gt6,1,34,14,38,34,147,39
-United States,2006,run10,7,366,596,amb_combo,359,1973,2017,run10_gt7,1,34,14,39,34,147,39
-United States,2006,run10,8,315,596,amb_combo,359,1973,2017,run10_gt8,1,34,14,40,34,147,39
-United States,2006,run10,9,287,596,amb_combo,359,1973,2017,run10_gt9,1,34,14,41,34,147,39
-United States,2006,approve3,1,332,705,uspew2006_02nii,359,1973,2017,approve3_gt1,1,34,15,42,34,147,39
-United States,2006,approve3,2,90,705,uspew2006_02nii,359,1973,2017,approve3_gt2,1,34,15,43,34,147,39
-United States,2007,adopt2,1,1072,1959,cnn200705,359,1973,2017,adopt2_gt1,1,35,3,5,35,147,39
-United States,2007,marry2,1,894,2170,cnn200708,359,1973,2017,marry2_gt1,1,35,8,21,35,147,39
-United States,2007,accept2,1,18228,32701,pew2007,359,1973,2017,accept2_gt1,1,35,9,22,35,147,39
-United States,2007,civil2,1,611,1079,abcwapo200711,359,1973,2017,civil2_gt1,1,35,10,23,35,147,39
-United States,2007,marry4a,1,2648,3986,uspew2007_prim,359,1973,2017,marry4a_gt1,1,35,11,24,35,147,39
-United States,2007,marry4a,2,1591,3986,uspew2007_prim,359,1973,2017,marry4a_gt2,1,35,11,25,35,147,39
-United States,2007,marry4a,3,552,3986,uspew2007_prim,359,1973,2017,marry4a_gt3,1,35,11,26,35,147,39
-United States,2008,approve4,1,1189,2578,issp2008,359,1973,2017,approve4_gt1,1,36,1,1,36,147,39
-United States,2008,approve4,2,1087,2578,issp2008,359,1973,2017,approve4_gt2,1,36,1,2,36,147,39
-United States,2008,approve4,3,921,2578,issp2008,359,1973,2017,approve4_gt3,1,36,1,3,36,147,39
-United States,2008,adopt2,1,1702,3160,anes_combo,359,1973,2017,adopt2_gt1,1,36,3,5,36,147,39
-United States,2008,marry5,1,910,1336,usgss,359,1973,2017,marry5_gt1,1,36,6,16,36,147,39
-United States,2008,marry5,2,704,1336,usgss,359,1973,2017,marry5_gt2,1,36,6,17,36,147,39
-United States,2008,marry5,3,527,1336,usgss,359,1973,2017,marry5_gt3,1,36,6,18,36,147,39
-United States,2008,marry5,4,208,1336,usgss,359,1973,2017,marry5_gt4,1,36,6,19,36,147,39
-United States,2008,marry2,1,1827,4065,cnn200806,359,1973,2017,marry2_gt1,1,36,8,21,36,147,39
-United States,2008,marry4a,1,3842,5766,uspew2008_pol,359,1973,2017,marry4a_gt1,1,36,11,24,36,147,39
-United States,2008,marry4a,2,2484,5766,uspew2008_pol,359,1973,2017,marry4a_gt2,1,36,11,25,36,147,39
-United States,2008,marry4a,3,898,5766,uspew2008_pol,359,1973,2017,marry4a_gt3,1,36,11,26,36,147,39
-United States,2008,adopt4a,1,1981,2711,uspew2008_rel,359,1973,2017,adopt4a_gt1,1,36,12,27,36,147,39
-United States,2008,adopt4a,2,1339,2711,uspew2008_rel,359,1973,2017,adopt4a_gt2,1,36,12,28,36,147,39
-United States,2008,adopt4a,3,462,2711,uspew2008_rel,359,1973,2017,adopt4a_gt3,1,36,12,29,36,147,39
-United States,2008,run10,1,1320,1499,amb_combo,359,1973,2017,run10_gt1,1,36,14,33,36,147,39
-United States,2008,run10,2,1281,1499,amb_combo,359,1973,2017,run10_gt2,1,36,14,34,36,147,39
-United States,2008,run10,3,1246,1499,amb_combo,359,1973,2017,run10_gt3,1,36,14,35,36,147,39
-United States,2008,run10,4,1199,1499,amb_combo,359,1973,2017,run10_gt4,1,36,14,36,36,147,39
-United States,2008,run10,5,1043,1499,amb_combo,359,1973,2017,run10_gt5,1,36,14,37,36,147,39
-United States,2008,run10,6,931,1499,amb_combo,359,1973,2017,run10_gt6,1,36,14,38,36,147,39
-United States,2008,run10,7,853,1499,amb_combo,359,1973,2017,run10_gt7,1,36,14,39,36,147,39
-United States,2008,run10,8,726,1499,amb_combo,359,1973,2017,run10_gt8,1,36,14,40,36,147,39
-United States,2008,run10,9,597,1499,amb_combo,359,1973,2017,run10_gt9,1,36,14,41,36,147,39
-United States,2009,adopt2,1,545,991,gallup_us200905,359,1973,2017,adopt2_gt1,1,37,3,5,37,147,39
-United States,2009,marry2,1,7191,15714,cces2009,359,1973,2017,marry2_gt1,1,37,8,21,37,147,39
-United States,2009,marry4a,1,2590,4093,nbcwsj200910,359,1973,2017,marry4a_gt1,1,37,11,24,37,147,39
-United States,2009,marry4a,2,1704,4093,nbcwsj200910,359,1973,2017,marry4a_gt2,1,37,11,25,37,147,39
-United States,2009,marry4a,3,752,4093,nbcwsj200910,359,1973,2017,marry4a_gt3,1,37,11,26,37,147,39
-United States,2009,marry4b,1,299,493,abcwapo200905,359,1973,2017,marry4b_gt1,1,37,13,30,37,147,39
-United States,2009,marry4b,2,266,493,abcwapo200905,359,1973,2017,marry4b_gt2,1,37,13,31,37,147,39
-United States,2009,marry4b,3,171,493,abcwapo200905,359,1973,2017,marry4b_gt3,1,37,13,32,37,147,39
-United States,2009,approve3,1,883,1864,uspew2009_rel,359,1973,2017,approve3_gt1,1,37,15,42,37,147,39
-United States,2009,approve3,2,180,1864,uspew2009_rel,359,1973,2017,approve3_gt2,1,37,15,43,37,147,39
-United States,2010,approve4,1,672,1223,usgss,359,1973,2017,approve4_gt1,1,38,1,1,38,147,39
-United States,2010,approve4,2,626,1223,usgss,359,1973,2017,approve4_gt2,1,38,1,2,38,147,39
-United States,2010,approve4,3,530,1223,usgss,359,1973,2017,approve4_gt3,1,38,1,3,38,147,39
-United States,2010,marry5,1,954,1262,usgss,359,1973,2017,marry5_gt1,1,38,6,16,38,147,39
-United States,2010,marry5,2,757,1262,usgss,359,1973,2017,marry5_gt2,1,38,6,17,38,147,39
-United States,2010,marry5,3,592,1262,usgss,359,1973,2017,marry5_gt3,1,38,6,18,38,147,39
-United States,2010,marry5,4,274,1262,usgss,359,1973,2017,marry5_gt4,1,38,6,19,38,147,39
-United States,2010,marry4a,1,3182,4459,uspew2010_rel,359,1973,2017,marry4a_gt1,1,38,11,24,38,147,39
-United States,2010,marry4a,2,1995,4459,uspew2010_rel,359,1973,2017,marry4a_gt2,1,38,11,25,38,147,39
-United States,2010,marry4a,3,793,4459,uspew2010_rel,359,1973,2017,marry4a_gt3,1,38,11,26,38,147,39
-United States,2010,marry4b,1,546,952,abcwapo201002,359,1973,2017,marry4b_gt1,1,38,13,30,38,147,39
-United States,2010,marry4b,2,462,952,abcwapo201002,359,1973,2017,marry4b_gt2,1,38,13,31,38,147,39
-United States,2010,marry4b,3,305,952,abcwapo201002,359,1973,2017,marry4b_gt3,1,38,13,32,38,147,39
-United States,2011,legal2,1,625,957,gallup_us201112,359,1973,2017,legal2_gt1,1,39,2,4,39,147,39
-United States,2011,just10,1,1622,2159,wvs_combo,359,1973,2017,just10_gt1,1,39,4,6,39,147,39
-United States,2011,just10,2,1550,2159,wvs_combo,359,1973,2017,just10_gt2,1,39,4,7,39,147,39
-United States,2011,just10,3,1467,2159,wvs_combo,359,1973,2017,just10_gt3,1,39,4,8,39,147,39
-United States,2011,just10,4,1402,2159,wvs_combo,359,1973,2017,just10_gt4,1,39,4,9,39,147,39
-United States,2011,just10,5,899,2159,wvs_combo,359,1973,2017,just10_gt5,1,39,4,10,39,147,39
-United States,2011,just10,6,798,2159,wvs_combo,359,1973,2017,just10_gt6,1,39,4,11,39,147,39
-United States,2011,just10,7,711,2159,wvs_combo,359,1973,2017,just10_gt7,1,39,4,12,39,147,39
-United States,2011,just10,8,587,2159,wvs_combo,359,1973,2017,just10_gt8,1,39,4,13,39,147,39
-United States,2011,just10,9,481,2159,wvs_combo,359,1973,2017,just10_gt9,1,39,4,14,39,147,39
-United States,2011,neigh2,1,1777,2232,wvs_combo,359,1973,2017,neigh2_gt1,1,39,7,20,39,147,39
-United States,2011,marry2,1,1460,2807,cnn201105,359,1973,2017,marry2_gt1,1,39,8,21,39,147,39
-United States,2011,accept2,1,606,933,pew2011,359,1973,2017,accept2_gt1,1,39,9,22,39,147,39
-United States,2011,marry4a,1,5740,7893,prri2011_avs,359,1973,2017,marry4a_gt1,1,39,11,24,39,147,39
-United States,2011,marry4a,2,3975,7893,prri2011_avs,359,1973,2017,marry4a_gt2,1,39,11,25,39,147,39
-United States,2011,marry4a,3,1652,7893,prri2011_avs,359,1973,2017,marry4a_gt3,1,39,11,26,39,147,39
-United States,2011,adopt4a,1,2254,2904,prri2011_mrgl,359,1973,2017,adopt4a_gt1,1,39,12,27,39,147,39
-United States,2011,adopt4a,2,1595,2904,prri2011_mrgl,359,1973,2017,adopt4a_gt2,1,39,12,28,39,147,39
-United States,2011,adopt4a,3,604,2904,prri2011_mrgl,359,1973,2017,adopt4a_gt3,1,39,12,29,39,147,39
-United States,2011,marry4b,1,1203,1906,abcwapo201103,359,1973,2017,marry4b_gt1,1,39,13,30,39,147,39
-United States,2011,marry4b,2,1027,1906,abcwapo201103,359,1973,2017,marry4b_gt2,1,39,13,31,39,147,39
-United States,2011,marry4b,3,667,1906,abcwapo201103,359,1973,2017,marry4b_gt3,1,39,13,32,39,147,39
-United States,2012,approve4,1,678,1239,usgss,359,1973,2017,approve4_gt1,1,40,1,1,40,147,39
-United States,2012,approve4,2,643,1239,usgss,359,1973,2017,approve4_gt2,1,40,1,2,40,147,39
-United States,2012,approve4,3,545,1239,usgss,359,1973,2017,approve4_gt3,1,40,1,3,40,147,39
-United States,2012,legal2,1,640,974,gallup_us201211,359,1973,2017,legal2_gt1,1,40,2,4,40,147,39
-United States,2012,adopt2,1,4405,6708,anes_combo,359,1973,2017,adopt2_gt1,1,40,3,5,40,147,39
-United States,2012,marry5,1,968,1287,usgss,359,1973,2017,marry5_gt1,1,40,6,16,40,147,39
-United States,2012,marry5,2,789,1287,usgss,359,1973,2017,marry5_gt2,1,40,6,17,40,147,39
-United States,2012,marry5,3,634,1287,usgss,359,1973,2017,marry5_gt3,1,40,6,18,40,147,39
-United States,2012,marry5,4,328,1287,usgss,359,1973,2017,marry5_gt4,1,40,6,19,40,147,39
-United States,2012,marry2,1,29690,55897,cces2012,359,1973,2017,marry2_gt1,1,40,8,21,40,147,39
-United States,2012,accept2,1,853,1337,uspew2012_comm,359,1973,2017,accept2_gt1,1,40,9,22,40,147,39
-United States,2012,marry4a,1,7437,10170,prri2012_3rns,359,1973,2017,marry4a_gt1,1,40,11,24,40,147,39
-United States,2012,marry4a,2,5365,10170,prri2012_3rns,359,1973,2017,marry4a_gt2,1,40,11,25,40,147,39
-United States,2012,marry4a,3,2535,10170,prri2012_3rns,359,1973,2017,marry4a_gt3,1,40,11,26,40,147,39
-United States,2012,adopt4a,1,737,950,prri2012_3rns,359,1973,2017,adopt4a_gt1,1,40,12,27,40,147,39
-United States,2012,adopt4a,2,546,950,prri2012_3rns,359,1973,2017,adopt4a_gt2,1,40,12,28,40,147,39
-United States,2012,adopt4a,3,234,950,prri2012_3rns,359,1973,2017,adopt4a_gt3,1,40,12,29,40,147,39
-United States,2012,marry4b,1,587,939,abcwapo201203,359,1973,2017,marry4b_gt1,1,40,13,30,40,147,39
-United States,2012,marry4b,2,517,939,abcwapo201203,359,1973,2017,marry4b_gt2,1,40,13,31,40,147,39
-United States,2012,marry4b,3,353,939,abcwapo201203,359,1973,2017,marry4b_gt3,1,40,13,32,40,147,39
-United States,2012,ff5,1,1041,1230,issp2012,359,1973,2017,ff5_gt1,1,40,16,44,40,147,39
-United States,2012,ff5,2,723,1230,issp2012,359,1973,2017,ff5_gt2,1,40,16,45,40,147,39
-United States,2012,ff5,3,583,1230,issp2012,359,1973,2017,ff5_gt3,1,40,16,46,40,147,39
-United States,2012,ff5,4,124,1230,issp2012,359,1973,2017,ff5_gt4,1,40,16,47,40,147,39
-United States,2012,mm5,1,1012,1228,issp2012,359,1973,2017,mm5_gt1,1,40,17,48,40,147,39
-United States,2012,mm5,2,681,1228,issp2012,359,1973,2017,mm5_gt2,1,40,17,49,40,147,39
-United States,2012,mm5,3,535,1228,issp2012,359,1973,2017,mm5_gt3,1,40,17,50,40,147,39
-United States,2012,mm5,4,117,1228,issp2012,359,1973,2017,mm5_gt4,1,40,17,51,40,147,39
-United States,2013,marry2,1,1093,1987,cnn201303,359,1973,2017,marry2_gt1,1,41,8,21,41,147,39
-United States,2013,accept2,1,1457,2317,pew2013,359,1973,2017,accept2_gt1,1,41,9,22,41,147,39
-United States,2013,marry4a,1,6754,8818,prri2013_3rap,359,1973,2017,marry4a_gt1,1,41,11,24,41,147,39
-United States,2013,marry4a,2,4857,8818,prri2013_3rap,359,1973,2017,marry4a_gt2,1,41,11,25,41,147,39
-United States,2013,marry4a,3,2225,8818,prri2013_3rap,359,1973,2017,marry4a_gt3,1,41,11,26,41,147,39
-United States,2013,adopt4a,1,750,945,prri2013_3rap,359,1973,2017,adopt4a_gt1,1,41,12,27,41,147,39
-United States,2013,adopt4a,2,569,945,prri2013_3rap,359,1973,2017,adopt4a_gt2,1,41,12,28,41,147,39
-United States,2013,adopt4a,3,244,945,prri2013_3rap,359,1973,2017,adopt4a_gt3,1,41,12,29,41,147,39
-United States,2013,marry4b,1,631,926,abcwapo201303,359,1973,2017,marry4b_gt1,1,41,13,30,41,147,39
-United States,2013,marry4b,2,572,926,abcwapo201303,359,1973,2017,marry4b_gt2,1,41,13,31,41,147,39
-United States,2013,marry4b,3,401,926,abcwapo201303,359,1973,2017,marry4b_gt3,1,41,13,32,41,147,39
-United States,2013,approve3,1,568,940,pew2013,359,1973,2017,approve3_gt1,1,41,15,42,41,147,39
-United States,2013,approve3,2,224,940,pew2013,359,1973,2017,approve3_gt2,1,41,15,43,41,147,39
-United States,2014,approve4,1,991,1651,usgss,359,1973,2017,approve4_gt1,1,42,1,1,42,147,39
-United States,2014,approve4,2,933,1651,usgss,359,1973,2017,approve4_gt2,1,42,1,2,42,147,39
-United States,2014,approve4,3,814,1651,usgss,359,1973,2017,approve4_gt3,1,42,1,3,42,147,39
-United States,2014,adopt2,1,607,942,abcwapo201402,359,1973,2017,adopt2_gt1,1,42,3,5,42,147,39
-United States,2014,marry5,1,1369,1690,usgss,359,1973,2017,marry5_gt1,1,42,6,16,42,147,39
-United States,2014,marry5,2,1150,1690,usgss,359,1973,2017,marry5_gt2,1,42,6,17,42,147,39
-United States,2014,marry5,3,959,1690,usgss,359,1973,2017,marry5_gt3,1,42,6,18,42,147,39
-United States,2014,marry5,4,536,1690,usgss,359,1973,2017,marry5_gt4,1,42,6,19,42,147,39
-United States,2014,marry2,1,31818,56652,cces2014,359,1973,2017,marry2_gt1,1,42,8,21,42,147,39
-United States,2014,accept2,1,23934,41081,pewrel2014_us,359,1973,2017,accept2_gt1,1,42,9,22,42,147,39
-United States,2014,marry4a,1,30553,38229,abcwapo201402,359,1973,2017,marry4a_gt1,1,42,11,24,42,147,39
-United States,2014,marry4a,2,22062,38229,abcwapo201402,359,1973,2017,marry4a_gt2,1,42,11,25,42,147,39
-United States,2014,marry4a,3,10251,38229,abcwapo201402,359,1973,2017,marry4a_gt3,1,42,11,26,42,147,39
-United States,2015,marry2,1,7961,14089,cces2015,359,1973,2017,marry2_gt1,1,43,8,21,43,147,39
-United States,2015,accept2,1,4883,7307,uspew2015_5pol,359,1973,2017,accept2_gt1,1,43,9,22,43,147,39
-United States,2015,marry4a,1,3692,4653,prri2015_rap,359,1973,2017,marry4a_gt1,1,43,11,24,43,147,39
-United States,2015,marry4a,2,2745,4653,prri2015_rap,359,1973,2017,marry4a_gt2,1,43,11,25,43,147,39
-United States,2015,marry4a,3,1382,4653,prri2015_rap,359,1973,2017,marry4a_gt3,1,43,11,26,43,147,39
-United States,2016,approve4,1,1092,1806,usgss,359,1973,2017,approve4_gt1,1,44,1,1,44,147,39
-United States,2016,approve4,2,1026,1806,usgss,359,1973,2017,approve4_gt2,1,44,1,2,44,147,39
-United States,2016,approve4,3,927,1806,usgss,359,1973,2017,approve4_gt3,1,44,1,3,44,147,39
-United States,2016,marry5,1,1554,1862,usgss,359,1973,2017,marry5_gt1,1,44,6,16,44,147,39
-United States,2016,marry5,2,1324,1862,usgss,359,1973,2017,marry5_gt2,1,44,6,17,44,147,39
-United States,2016,marry5,3,1106,1862,usgss,359,1973,2017,marry5_gt3,1,44,6,18,44,147,39
-United States,2016,marry5,4,640,1862,usgss,359,1973,2017,marry5_gt4,1,44,6,19,44,147,39
-United States,2016,marry2,1,39500,64125,cces2016,359,1973,2017,marry2_gt1,1,44,8,21,44,147,39
-United States,2016,accept2,1,1270,1828,uspew2016_fp,359,1973,2017,accept2_gt1,1,44,9,22,44,147,39
-United States,2016,marry4a,1,4045,4886,prriatlantic2016_wwc,359,1973,2017,marry4a_gt1,1,44,11,24,44,147,39
-United States,2016,marry4a,2,3044,4886,prriatlantic2016_wwc,359,1973,2017,marry4a_gt2,1,44,11,25,44,147,39
-United States,2016,marry4a,3,1516,4886,prriatlantic2016_wwc,359,1973,2017,marry4a_gt3,1,44,11,26,44,147,39
-United States,2016,approve3,1,1443,2249,pewrel2016_us,359,1973,2017,approve3_gt1,1,44,15,42,44,147,39
-United States,2016,approve3,2,395,2249,pewrel2016_us,359,1973,2017,approve3_gt2,1,44,15,43,44,147,39
-United States,2017,accept2,1,3471,4669,uspew2017_6typo,359,1973,2017,accept2_gt1,1,45,9,22,45,147,39
-United States,2017,run10,1,1354,1499,amb_us2016,359,1973,2017,run10_gt1,1,45,14,33,45,147,39
-United States,2017,run10,2,1337,1499,amb_us2016,359,1973,2017,run10_gt2,1,45,14,34,45,147,39
-United States,2017,run10,3,1287,1499,amb_us2016,359,1973,2017,run10_gt3,1,45,14,35,45,147,39
-United States,2017,run10,4,1229,1499,amb_us2016,359,1973,2017,run10_gt4,1,45,14,36,45,147,39
-United States,2017,run10,5,1101,1499,amb_us2016,359,1973,2017,run10_gt5,1,45,14,37,45,147,39
-United States,2017,run10,6,1034,1499,amb_us2016,359,1973,2017,run10_gt6,1,45,14,38,45,147,39
-United States,2017,run10,7,958,1499,amb_us2016,359,1973,2017,run10_gt7,1,45,14,39,45,147,39
-United States,2017,run10,8,834,1499,amb_us2016,359,1973,2017,run10_gt8,1,45,14,40,45,147,39
-United States,2017,run10,9,730,1499,amb_us2016,359,1973,2017,run10_gt9,1,45,14,41,45,147,39
+United States,1973,approve4,1,364,1417,usgss,363,1973,2017,approve4_gt1,1,1,1,1,1,149,39
+United States,1973,approve4,2,269,1417,usgss,363,1973,2017,approve4_gt2,1,1,1,2,1,149,39
+United States,1973,approve4,3,159,1417,usgss,363,1973,2017,approve4_gt3,1,1,1,3,1,149,39
+United States,1974,approve4,1,366,1361,usgss,363,1973,2017,approve4_gt1,1,2,1,1,2,149,39
+United States,1974,approve4,2,295,1361,usgss,363,1973,2017,approve4_gt2,1,2,1,2,2,149,39
+United States,1974,approve4,3,183,1361,usgss,363,1973,2017,approve4_gt3,1,2,1,3,2,149,39
+United States,1976,approve4,1,427,1426,usgss,363,1973,2017,approve4_gt1,1,4,1,1,4,149,39
+United States,1976,approve4,2,339,1426,usgss,363,1973,2017,approve4_gt2,1,4,1,2,4,149,39
+United States,1976,approve4,3,227,1426,usgss,363,1973,2017,approve4_gt3,1,4,1,3,4,149,39
+United States,1977,approve4,1,409,1453,usgss,363,1973,2017,approve4_gt1,1,5,1,1,5,149,39
+United States,1977,approve4,2,325,1453,usgss,363,1973,2017,approve4_gt2,1,5,1,2,5,149,39
+United States,1977,approve4,3,216,1453,usgss,363,1973,2017,approve4_gt3,1,5,1,3,5,149,39
+United States,1977,legal2,1,653,1308,gallup_us197706,363,1973,2017,legal2_gt1,1,5,2,4,5,149,39
+United States,1977,adopt2,1,209,1364,gallup_us197706,363,1973,2017,adopt2_gt1,1,5,3,5,5,149,39
+United States,1980,approve4,1,373,1397,usgss,363,1973,2017,approve4_gt1,1,8,1,1,8,149,39
+United States,1980,approve4,2,289,1397,usgss,363,1973,2017,approve4_gt2,1,8,1,2,8,149,39
+United States,1980,approve4,3,204,1397,usgss,363,1973,2017,approve4_gt3,1,8,1,3,8,149,39
+United States,1981,legal2,1,454,1354,abcwapo198105,363,1973,2017,legal2_gt1,1,9,2,4,9,149,39
+United States,1982,approve4,1,447,1771,usgss,363,1973,2017,approve4_gt1,1,10,1,1,10,149,39
+United States,1982,approve4,2,354,1771,usgss,363,1973,2017,approve4_gt2,1,10,1,2,10,149,39
+United States,1982,approve4,3,238,1771,usgss,363,1973,2017,approve4_gt3,1,10,1,3,10,149,39
+United States,1982,legal2,1,688,1286,gallup_us198206,363,1973,2017,legal2_gt1,1,10,2,4,10,149,39
+United States,1982,just10,1,750,2229,evs_combo,363,1973,2017,just10_gt1,1,10,4,6,10,149,39
+United States,1982,just10,2,640,2229,evs_combo,363,1973,2017,just10_gt2,1,10,4,7,10,149,39
+United States,1982,just10,3,548,2229,evs_combo,363,1973,2017,just10_gt3,1,10,4,8,10,149,39
+United States,1982,just10,4,479,2229,evs_combo,363,1973,2017,just10_gt4,1,10,4,9,10,149,39
+United States,1982,just10,5,214,2229,evs_combo,363,1973,2017,just10_gt5,1,10,4,10,10,149,39
+United States,1982,just10,6,163,2229,evs_combo,363,1973,2017,just10_gt6,1,10,4,11,10,149,39
+United States,1982,just10,7,124,2229,evs_combo,363,1973,2017,just10_gt7,1,10,4,12,10,149,39
+United States,1982,just10,8,79,2229,evs_combo,363,1973,2017,just10_gt8,1,10,4,13,10,149,39
+United States,1982,just10,9,55,2229,evs_combo,363,1973,2017,just10_gt9,1,10,4,14,10,149,39
+United States,1982,accept2a,1,520,1314,gallup_us198206,363,1973,2017,accept2a_gt1,1,10,5,15,10,149,39
+United States,1984,approve4,1,377,1412,usgss,363,1973,2017,approve4_gt1,1,12,1,1,12,149,39
+United States,1984,approve4,2,307,1412,usgss,363,1973,2017,approve4_gt2,1,12,1,2,12,149,39
+United States,1984,approve4,3,202,1412,usgss,363,1973,2017,approve4_gt3,1,12,1,3,12,149,39
+United States,1985,approve4,1,366,1484,usgss,363,1973,2017,approve4_gt1,1,13,1,1,13,149,39
+United States,1985,approve4,2,307,1484,usgss,363,1973,2017,approve4_gt2,1,13,1,2,13,149,39
+United States,1985,approve4,3,203,1484,usgss,363,1973,2017,approve4_gt3,1,13,1,3,13,149,39
+United States,1985,accept2a,1,311,932,usnwr198509,363,1973,2017,accept2a_gt1,1,13,5,15,13,149,39
+United States,1986,legal2,1,496,1375,gallup_us198606,363,1973,2017,legal2_gt1,1,14,2,4,14,149,39
+United States,1987,approve4,1,382,1750,usgss,363,1973,2017,approve4_gt1,1,15,1,1,15,149,39
+United States,1987,approve4,2,310,1750,usgss,363,1973,2017,approve4_gt2,1,15,1,2,15,149,39
+United States,1987,approve4,3,208,1750,usgss,363,1973,2017,approve4_gt3,1,15,1,3,15,149,39
+United States,1987,legal2,1,337,896,gallup_us198703,363,1973,2017,legal2_gt1,1,15,2,4,15,149,39
+United States,1988,approve4,1,217,937,usgss,363,1973,2017,approve4_gt1,1,16,1,1,16,149,39
+United States,1988,approve4,2,173,937,usgss,363,1973,2017,approve4_gt2,1,16,1,2,16,149,39
+United States,1988,approve4,3,120,937,usgss,363,1973,2017,approve4_gt3,1,16,1,3,16,149,39
+United States,1988,legal2,1,350,908,gallup_us198807,363,1973,2017,legal2_gt1,1,16,2,4,16,149,39
+United States,1988,marry5,1,1388,2614,issp1988,363,1973,2017,marry5_gt1,1,16,6,16,16,149,39
+United States,1988,marry5,2,716,2614,issp1988,363,1973,2017,marry5_gt2,1,16,6,17,16,149,39
+United States,1988,marry5,3,324,2614,issp1988,363,1973,2017,marry5_gt3,1,16,6,18,16,149,39
+United States,1988,marry5,4,88,2614,issp1988,363,1973,2017,marry5_gt4,1,16,6,19,16,149,39
+United States,1989,approve4,1,253,980,usgss,363,1973,2017,approve4_gt1,1,17,1,1,17,149,39
+United States,1989,approve4,2,213,980,usgss,363,1973,2017,approve4_gt2,1,17,1,2,17,149,39
+United States,1989,approve4,3,154,980,usgss,363,1973,2017,approve4_gt3,1,17,1,3,17,149,39
+United States,1989,legal2,1,578,1019,gallup_us198910,363,1973,2017,legal2_gt1,1,17,2,4,17,149,39
+United States,1989,accept2a,1,212,537,gallup_us198909,363,1973,2017,accept2a_gt1,1,17,5,15,17,149,39
+United States,1990,approve4,1,207,872,usgss,363,1973,2017,approve4_gt1,1,18,1,1,18,149,39
+United States,1990,approve4,2,165,872,usgss,363,1973,2017,approve4_gt2,1,18,1,2,18,149,39
+United States,1990,approve4,3,112,872,usgss,363,1973,2017,approve4_gt3,1,18,1,3,18,149,39
+United States,1990,just10,1,817,1783,evs_combo,363,1973,2017,just10_gt1,1,18,4,6,18,149,39
+United States,1990,just10,2,742,1783,evs_combo,363,1973,2017,just10_gt2,1,18,4,7,18,149,39
+United States,1990,just10,3,646,1783,evs_combo,363,1973,2017,just10_gt3,1,18,4,8,18,149,39
+United States,1990,just10,4,565,1783,evs_combo,363,1973,2017,just10_gt4,1,18,4,9,18,149,39
+United States,1990,just10,5,329,1783,evs_combo,363,1973,2017,just10_gt5,1,18,4,10,18,149,39
+United States,1990,just10,6,232,1783,evs_combo,363,1973,2017,just10_gt6,1,18,4,11,18,149,39
+United States,1990,just10,7,175,1783,evs_combo,363,1973,2017,just10_gt7,1,18,4,12,18,149,39
+United States,1990,just10,8,115,1783,evs_combo,363,1973,2017,just10_gt8,1,18,4,13,18,149,39
+United States,1990,just10,9,74,1783,evs_combo,363,1973,2017,just10_gt9,1,18,4,14,18,149,39
+United States,1990,neigh2,1,1129,1839,evs_combo,363,1973,2017,neigh2_gt1,1,18,7,20,18,149,39
+United States,1991,approve4,1,531,2146,issp1991,363,1973,2017,approve4_gt1,1,19,1,1,19,149,39
+United States,1991,approve4,2,432,2146,issp1991,363,1973,2017,approve4_gt2,1,19,1,2,19,149,39
+United States,1991,approve4,3,323,2146,issp1991,363,1973,2017,approve4_gt3,1,19,1,3,19,149,39
+United States,1991,legal2,1,427,1091,gallup_us199109,363,1973,2017,legal2_gt1,1,19,2,4,19,149,39
+United States,1992,legal2,1,487,926,gallup_us199206,363,1973,2017,legal2_gt1,1,20,2,4,20,149,39
+United States,1992,adopt2,1,592,2143,anes_combo,363,1973,2017,adopt2_gt1,1,20,3,5,20,149,39
+United States,1992,accept2a,1,380,948,gallup_us199206,363,1973,2017,accept2a_gt1,1,20,5,15,20,149,39
+United States,1993,approve4,1,341,1012,usgss,363,1973,2017,approve4_gt1,1,21,1,1,21,149,39
+United States,1993,approve4,2,297,1012,usgss,363,1973,2017,approve4_gt2,1,21,1,2,21,149,39
+United States,1993,approve4,3,223,1012,usgss,363,1973,2017,approve4_gt3,1,21,1,3,21,149,39
+United States,1993,legal2,1,530,1025,cbsnyt199302,363,1973,2017,legal2_gt1,1,21,2,4,21,149,39
+United States,1993,marry2,1,489,1660,cnn199301,363,1973,2017,marry2_gt1,1,21,8,21,21,149,39
+United States,1993,accept2,1,912,2175,cbsnyt199302,363,1973,2017,accept2_gt1,1,21,9,22,21,149,39
+United States,1994,approve4,1,1002,3109,issp1994,363,1973,2017,approve4_gt1,1,22,1,1,22,149,39
+United States,1994,approve4,2,873,3109,issp1994,363,1973,2017,approve4_gt2,1,22,1,2,22,149,39
+United States,1994,approve4,3,673,3109,issp1994,363,1973,2017,approve4_gt3,1,22,1,3,22,149,39
+United States,1994,legal2,1,1226,2154,abcwapo199406,363,1973,2017,legal2_gt1,1,22,2,4,22,149,39
+United States,1994,adopt2,1,220,729,cnn199406,363,1973,2017,adopt2_gt1,1,22,3,5,22,149,39
+United States,1994,marry2,1,829,2167,abcwapo199406,363,1973,2017,marry2_gt1,1,22,8,21,22,149,39
+United States,1995,just10,1,781,1426,wvs_combo,363,1973,2017,just10_gt1,1,23,4,6,23,149,39
+United States,1995,just10,2,715,1426,wvs_combo,363,1973,2017,just10_gt2,1,23,4,7,23,149,39
+United States,1995,just10,3,652,1426,wvs_combo,363,1973,2017,just10_gt3,1,23,4,8,23,149,39
+United States,1995,just10,4,588,1426,wvs_combo,363,1973,2017,just10_gt4,1,23,4,9,23,149,39
+United States,1995,just10,5,339,1426,wvs_combo,363,1973,2017,just10_gt5,1,23,4,10,23,149,39
+United States,1995,just10,6,289,1426,wvs_combo,363,1973,2017,just10_gt6,1,23,4,11,23,149,39
+United States,1995,just10,7,233,1426,wvs_combo,363,1973,2017,just10_gt7,1,23,4,12,23,149,39
+United States,1995,just10,8,168,1426,wvs_combo,363,1973,2017,just10_gt8,1,23,4,13,23,149,39
+United States,1995,just10,9,151,1426,wvs_combo,363,1973,2017,just10_gt9,1,23,4,14,23,149,39
+United States,1995,neigh2,1,1088,1542,wvs_combo,363,1973,2017,neigh2_gt1,1,23,7,20,23,149,39
+United States,1996,approve4,1,706,1784,usgss,363,1973,2017,approve4_gt1,1,24,1,1,24,149,39
+United States,1996,approve4,2,613,1784,usgss,363,1973,2017,approve4_gt2,1,24,1,2,24,149,39
+United States,1996,approve4,3,503,1784,usgss,363,1973,2017,approve4_gt3,1,24,1,3,24,149,39
+United States,1996,legal2,1,445,920,gallup_us199611,363,1973,2017,legal2_gt1,1,24,2,4,24,149,39
+United States,1996,accept2a,1,205,442,gallup_us199603,363,1973,2017,accept2a_gt1,1,24,5,15,24,149,39
+United States,1996,marry2,1,581,1853,ap_us1996,363,1973,2017,marry2_gt1,1,24,8,21,24,149,39
+United States,1996,civil2,1,272,703,abcwapo199608,363,1973,2017,civil2_gt1,1,24,10,23,24,149,39
+United States,1996,marry4a,1,1021,1829,uspew1996_05pol,363,1973,2017,marry4a_gt1,1,24,11,24,24,149,39
+United States,1996,marry4a,2,544,1829,uspew1996_05pol,363,1973,2017,marry4a_gt2,1,24,11,25,24,149,39
+United States,1996,marry4a,3,125,1829,uspew1996_05pol,363,1973,2017,marry4a_gt3,1,24,11,26,24,149,39
+United States,1998,approve4,1,1168,2902,issp1998,363,1973,2017,approve4_gt1,1,26,1,1,26,149,39
+United States,1998,approve4,2,1004,2902,issp1998,363,1973,2017,approve4_gt2,1,26,1,2,26,149,39
+United States,1998,approve4,3,798,2902,issp1998,363,1973,2017,approve4_gt3,1,26,1,3,26,149,39
+United States,1998,legal2,1,1209,1942,cnn199810,363,1973,2017,legal2_gt1,1,26,2,4,26,149,39
+United States,1998,adopt2,1,577,1500,cnn199810,363,1973,2017,adopt2_gt1,1,26,3,5,26,149,39
+United States,1998,marry2,1,501,1521,cnn199810,363,1973,2017,marry2_gt1,1,26,8,21,26,149,39
+United States,1999,legal2,1,528,981,gallup_us199902,363,1973,2017,legal2_gt1,1,27,2,4,27,149,39
+United States,1999,just10,1,806,1178,wvs_combo,363,1973,2017,just10_gt1,1,27,4,6,27,149,39
+United States,1999,just10,2,763,1178,wvs_combo,363,1973,2017,just10_gt2,1,27,4,7,27,149,39
+United States,1999,just10,3,714,1178,wvs_combo,363,1973,2017,just10_gt3,1,27,4,8,27,149,39
+United States,1999,just10,4,659,1178,wvs_combo,363,1973,2017,just10_gt4,1,27,4,9,27,149,39
+United States,1999,just10,5,469,1178,wvs_combo,363,1973,2017,just10_gt5,1,27,4,10,27,149,39
+United States,1999,just10,6,338,1178,wvs_combo,363,1973,2017,just10_gt6,1,27,4,11,27,149,39
+United States,1999,just10,7,284,1178,wvs_combo,363,1973,2017,just10_gt7,1,27,4,12,27,149,39
+United States,1999,just10,8,221,1178,wvs_combo,363,1973,2017,just10_gt8,1,27,4,13,27,149,39
+United States,1999,just10,9,166,1178,wvs_combo,363,1973,2017,just10_gt9,1,27,4,14,27,149,39
+United States,1999,neigh2,1,920,1200,wvs_combo,363,1973,2017,neigh2_gt1,1,27,7,20,27,149,39
+United States,1999,accept2,1,273,523,gallup_us199902,363,1973,2017,accept2_gt1,1,27,9,22,27,149,39
+United States,1999,marry4a,1,425,928,nbcwsj199906,363,1973,2017,marry4a_gt1,1,27,11,24,27,149,39
+United States,1999,marry4a,2,279,928,nbcwsj199906,363,1973,2017,marry4a_gt2,1,27,11,25,27,149,39
+United States,1999,marry4a,3,133,928,nbcwsj199906,363,1973,2017,marry4a_gt3,1,27,11,26,27,149,39
+United States,1999,adopt4a,1,793,1150,uspew1999_nii,363,1973,2017,adopt4a_gt1,1,27,12,27,27,149,39
+United States,1999,adopt4a,2,466,1150,uspew1999_nii,363,1973,2017,adopt4a_gt2,1,27,12,28,27,149,39
+United States,1999,adopt4a,3,124,1150,uspew1999_nii,363,1973,2017,adopt4a_gt3,1,27,12,29,27,149,39
+United States,2000,approve4,1,700,1697,usgss,363,1973,2017,approve4_gt1,1,28,1,1,28,149,39
+United States,2000,approve4,2,624,1697,usgss,363,1973,2017,approve4_gt2,1,28,1,2,28,149,39
+United States,2000,approve4,3,489,1697,usgss,363,1973,2017,approve4_gt3,1,28,1,3,28,149,39
+United States,2000,adopt2,1,731,1656,anes_combo,363,1973,2017,adopt2_gt1,1,28,3,5,28,149,39
+United States,2000,marry2,1,442,1215,cnn200001,363,1973,2017,marry2_gt1,1,28,8,21,28,149,39
+United States,2002,approve4,1,398,884,usgss,363,1973,2017,approve4_gt1,1,30,1,1,30,149,39
+United States,2002,approve4,2,355,884,usgss,363,1973,2017,approve4_gt2,1,30,1,2,30,149,39
+United States,2002,approve4,3,292,884,usgss,363,1973,2017,approve4_gt3,1,30,1,3,30,149,39
+United States,2002,adopt2,1,455,891,psra2002,363,1973,2017,adopt2_gt1,1,30,3,5,30,149,39
+United States,2002,marry2,1,348,915,psra2002,363,1973,2017,marry2_gt1,1,30,8,21,30,149,39
+United States,2002,accept2,1,760,1396,pew2002,363,1973,2017,accept2_gt1,1,30,9,22,30,149,39
+United States,2003,legal2,1,595,973,gallup_us200305,363,1973,2017,legal2_gt1,1,31,2,4,31,149,39
+United States,2003,marry2,1,1537,4285,cnn200306,363,1973,2017,marry2_gt1,1,31,8,21,31,149,39
+United States,2003,marry4a,1,1456,2300,uspew2003_10nii,363,1973,2017,marry4a_gt1,1,31,11,24,31,149,39
+United States,2003,marry4a,2,857,2300,uspew2003_10nii,363,1973,2017,marry4a_gt2,1,31,11,25,31,149,39
+United States,2003,marry4a,3,229,2300,uspew2003_10nii,363,1973,2017,marry4a_gt3,1,31,11,26,31,149,39
+United States,2004,approve4,1,369,868,usgss,363,1973,2017,approve4_gt1,1,32,1,1,32,149,39
+United States,2004,approve4,2,326,868,usgss,363,1973,2017,approve4_gt2,1,32,1,2,32,149,39
+United States,2004,approve4,3,267,868,usgss,363,1973,2017,approve4_gt3,1,32,1,3,32,149,39
+United States,2004,legal2,1,455,949,gallup_us200401,363,1973,2017,legal2_gt1,1,32,2,4,32,149,39
+United States,2004,adopt2,1,930,1928,anes_combo,363,1973,2017,adopt2_gt1,1,32,3,5,32,149,39
+United States,2004,marry5,1,777,1184,usgss,363,1973,2017,marry5_gt1,1,32,6,16,32,149,39
+United States,2004,marry5,2,534,1184,usgss,363,1973,2017,marry5_gt2,1,32,6,17,32,149,39
+United States,2004,marry5,3,369,1184,usgss,363,1973,2017,marry5_gt3,1,32,6,18,32,149,39
+United States,2004,marry5,4,144,1184,usgss,363,1973,2017,marry5_gt4,1,32,6,19,32,149,39
+United States,2004,marry2,1,1718,4792,abcwapo200401,363,1973,2017,marry2_gt1,1,32,8,21,32,149,39
+United States,2004,marry4a,1,2864,4754,uspew2004_3nii,363,1973,2017,marry4a_gt1,1,32,11,24,32,149,39
+United States,2004,marry4a,2,1625,4754,uspew2004_3nii,363,1973,2017,marry4a_gt2,1,32,11,25,32,149,39
+United States,2004,marry4a,3,585,4754,uspew2004_3nii,363,1973,2017,marry4a_gt3,1,32,11,26,32,149,39
+United States,2004,marry4b,1,575,1146,abcwapo200403,363,1973,2017,marry4b_gt1,1,32,13,30,32,149,39
+United States,2004,marry4b,2,449,1146,abcwapo200403,363,1973,2017,marry4b_gt2,1,32,13,31,32,149,39
+United States,2004,marry4b,3,279,1146,abcwapo200403,363,1973,2017,marry4b_gt3,1,32,13,32,32,149,39
+United States,2005,marry2,1,1074,2810,abcwapo200508,363,1973,2017,marry2_gt1,1,33,8,21,33,149,39
+United States,2005,marry4a,1,870,1323,uspew2005_news,363,1973,2017,marry4a_gt1,1,33,11,24,33,149,39
+United States,2005,marry4a,2,538,1323,uspew2005_news,363,1973,2017,marry4a_gt2,1,33,11,25,33,149,39
+United States,2005,marry4a,3,197,1323,uspew2005_news,363,1973,2017,marry4a_gt3,1,33,11,26,33,149,39
+United States,2006,approve4,1,849,1908,usgss,363,1973,2017,approve4_gt1,1,34,1,1,34,149,39
+United States,2006,approve4,2,756,1908,usgss,363,1973,2017,approve4_gt2,1,34,1,2,34,149,39
+United States,2006,approve4,3,626,1908,usgss,363,1973,2017,approve4_gt3,1,34,1,3,34,149,39
+United States,2006,just10,1,793,1175,wvs_combo,363,1973,2017,just10_gt1,1,34,4,6,34,149,39
+United States,2006,just10,2,746,1175,wvs_combo,363,1973,2017,just10_gt2,1,34,4,7,34,149,39
+United States,2006,just10,3,690,1175,wvs_combo,363,1973,2017,just10_gt3,1,34,4,8,34,149,39
+United States,2006,just10,4,649,1175,wvs_combo,363,1973,2017,just10_gt4,1,34,4,9,34,149,39
+United States,2006,just10,5,367,1175,wvs_combo,363,1973,2017,just10_gt5,1,34,4,10,34,149,39
+United States,2006,just10,6,313,1175,wvs_combo,363,1973,2017,just10_gt6,1,34,4,11,34,149,39
+United States,2006,just10,7,255,1175,wvs_combo,363,1973,2017,just10_gt7,1,34,4,12,34,149,39
+United States,2006,just10,8,211,1175,wvs_combo,363,1973,2017,just10_gt8,1,34,4,13,34,149,39
+United States,2006,just10,9,174,1175,wvs_combo,363,1973,2017,just10_gt9,1,34,4,14,34,149,39
+United States,2006,marry5,1,1289,1982,usgss,363,1973,2017,marry5_gt1,1,34,6,16,34,149,39
+United States,2006,marry5,2,978,1982,usgss,363,1973,2017,marry5_gt2,1,34,6,17,34,149,39
+United States,2006,marry5,3,710,1982,usgss,363,1973,2017,marry5_gt3,1,34,6,18,34,149,39
+United States,2006,marry5,4,305,1982,usgss,363,1973,2017,marry5_gt4,1,34,6,19,34,149,39
+United States,2006,neigh2,1,929,1240,wvs_combo,363,1973,2017,neigh2_gt1,1,34,7,20,34,149,39
+United States,2006,accept2,1,770,1344,uspew2006_09next,363,1973,2017,accept2_gt1,1,34,9,22,34,149,39
+United States,2006,marry4a,1,2972,4502,uspew2006_elec,363,1973,2017,marry4a_gt1,1,34,11,24,34,149,39
+United States,2006,marry4a,2,1681,4502,uspew2006_elec,363,1973,2017,marry4a_gt2,1,34,11,25,34,149,39
+United States,2006,marry4a,3,541,4502,uspew2006_elec,363,1973,2017,marry4a_gt3,1,34,11,26,34,149,39
+United States,2006,adopt4a,1,1641,2235,uspew2006_nii,363,1973,2017,adopt4a_gt1,1,34,12,27,34,149,39
+United States,2006,adopt4a,2,1051,2235,uspew2006_nii,363,1973,2017,adopt4a_gt2,1,34,12,28,34,149,39
+United States,2006,adopt4a,3,305,2235,uspew2006_nii,363,1973,2017,adopt4a_gt3,1,34,12,29,34,149,39
+United States,2006,run10,1,507,596,amb_combo,363,1973,2017,run10_gt1,1,34,14,33,34,149,39
+United States,2006,run10,2,491,596,amb_combo,363,1973,2017,run10_gt2,1,34,14,34,34,149,39
+United States,2006,run10,3,477,596,amb_combo,363,1973,2017,run10_gt3,1,34,14,35,34,149,39
+United States,2006,run10,4,472,596,amb_combo,363,1973,2017,run10_gt4,1,34,14,36,34,149,39
+United States,2006,run10,5,422,596,amb_combo,363,1973,2017,run10_gt5,1,34,14,37,34,149,39
+United States,2006,run10,6,403,596,amb_combo,363,1973,2017,run10_gt6,1,34,14,38,34,149,39
+United States,2006,run10,7,366,596,amb_combo,363,1973,2017,run10_gt7,1,34,14,39,34,149,39
+United States,2006,run10,8,315,596,amb_combo,363,1973,2017,run10_gt8,1,34,14,40,34,149,39
+United States,2006,run10,9,287,596,amb_combo,363,1973,2017,run10_gt9,1,34,14,41,34,149,39
+United States,2006,approve3,1,332,705,uspew2006_02nii,363,1973,2017,approve3_gt1,1,34,15,42,34,149,39
+United States,2006,approve3,2,90,705,uspew2006_02nii,363,1973,2017,approve3_gt2,1,34,15,43,34,149,39
+United States,2007,adopt2,1,1072,1959,cnn200705,363,1973,2017,adopt2_gt1,1,35,3,5,35,149,39
+United States,2007,marry2,1,894,2170,cnn200708,363,1973,2017,marry2_gt1,1,35,8,21,35,149,39
+United States,2007,accept2,1,18228,32701,pew2007,363,1973,2017,accept2_gt1,1,35,9,22,35,149,39
+United States,2007,civil2,1,611,1079,abcwapo200711,363,1973,2017,civil2_gt1,1,35,10,23,35,149,39
+United States,2007,marry4a,1,2648,3986,uspew2007_prim,363,1973,2017,marry4a_gt1,1,35,11,24,35,149,39
+United States,2007,marry4a,2,1591,3986,uspew2007_prim,363,1973,2017,marry4a_gt2,1,35,11,25,35,149,39
+United States,2007,marry4a,3,552,3986,uspew2007_prim,363,1973,2017,marry4a_gt3,1,35,11,26,35,149,39
+United States,2008,approve4,1,1189,2578,issp2008,363,1973,2017,approve4_gt1,1,36,1,1,36,149,39
+United States,2008,approve4,2,1087,2578,issp2008,363,1973,2017,approve4_gt2,1,36,1,2,36,149,39
+United States,2008,approve4,3,921,2578,issp2008,363,1973,2017,approve4_gt3,1,36,1,3,36,149,39
+United States,2008,adopt2,1,1702,3160,anes_combo,363,1973,2017,adopt2_gt1,1,36,3,5,36,149,39
+United States,2008,marry5,1,910,1336,usgss,363,1973,2017,marry5_gt1,1,36,6,16,36,149,39
+United States,2008,marry5,2,704,1336,usgss,363,1973,2017,marry5_gt2,1,36,6,17,36,149,39
+United States,2008,marry5,3,527,1336,usgss,363,1973,2017,marry5_gt3,1,36,6,18,36,149,39
+United States,2008,marry5,4,208,1336,usgss,363,1973,2017,marry5_gt4,1,36,6,19,36,149,39
+United States,2008,marry2,1,1827,4065,cnn200806,363,1973,2017,marry2_gt1,1,36,8,21,36,149,39
+United States,2008,marry4a,1,3842,5766,uspew2008_pol,363,1973,2017,marry4a_gt1,1,36,11,24,36,149,39
+United States,2008,marry4a,2,2484,5766,uspew2008_pol,363,1973,2017,marry4a_gt2,1,36,11,25,36,149,39
+United States,2008,marry4a,3,898,5766,uspew2008_pol,363,1973,2017,marry4a_gt3,1,36,11,26,36,149,39
+United States,2008,adopt4a,1,1981,2711,uspew2008_rel,363,1973,2017,adopt4a_gt1,1,36,12,27,36,149,39
+United States,2008,adopt4a,2,1339,2711,uspew2008_rel,363,1973,2017,adopt4a_gt2,1,36,12,28,36,149,39
+United States,2008,adopt4a,3,462,2711,uspew2008_rel,363,1973,2017,adopt4a_gt3,1,36,12,29,36,149,39
+United States,2008,run10,1,1320,1499,amb_combo,363,1973,2017,run10_gt1,1,36,14,33,36,149,39
+United States,2008,run10,2,1281,1499,amb_combo,363,1973,2017,run10_gt2,1,36,14,34,36,149,39
+United States,2008,run10,3,1246,1499,amb_combo,363,1973,2017,run10_gt3,1,36,14,35,36,149,39
+United States,2008,run10,4,1199,1499,amb_combo,363,1973,2017,run10_gt4,1,36,14,36,36,149,39
+United States,2008,run10,5,1043,1499,amb_combo,363,1973,2017,run10_gt5,1,36,14,37,36,149,39
+United States,2008,run10,6,931,1499,amb_combo,363,1973,2017,run10_gt6,1,36,14,38,36,149,39
+United States,2008,run10,7,853,1499,amb_combo,363,1973,2017,run10_gt7,1,36,14,39,36,149,39
+United States,2008,run10,8,726,1499,amb_combo,363,1973,2017,run10_gt8,1,36,14,40,36,149,39
+United States,2008,run10,9,597,1499,amb_combo,363,1973,2017,run10_gt9,1,36,14,41,36,149,39
+United States,2009,adopt2,1,545,991,gallup_us200905,363,1973,2017,adopt2_gt1,1,37,3,5,37,149,39
+United States,2009,marry2,1,7191,15714,cces2009,363,1973,2017,marry2_gt1,1,37,8,21,37,149,39
+United States,2009,marry4a,1,2590,4093,nbcwsj200910,363,1973,2017,marry4a_gt1,1,37,11,24,37,149,39
+United States,2009,marry4a,2,1704,4093,nbcwsj200910,363,1973,2017,marry4a_gt2,1,37,11,25,37,149,39
+United States,2009,marry4a,3,752,4093,nbcwsj200910,363,1973,2017,marry4a_gt3,1,37,11,26,37,149,39
+United States,2009,marry4b,1,299,493,abcwapo200905,363,1973,2017,marry4b_gt1,1,37,13,30,37,149,39
+United States,2009,marry4b,2,266,493,abcwapo200905,363,1973,2017,marry4b_gt2,1,37,13,31,37,149,39
+United States,2009,marry4b,3,171,493,abcwapo200905,363,1973,2017,marry4b_gt3,1,37,13,32,37,149,39
+United States,2009,approve3,1,883,1864,uspew2009_rel,363,1973,2017,approve3_gt1,1,37,15,42,37,149,39
+United States,2009,approve3,2,180,1864,uspew2009_rel,363,1973,2017,approve3_gt2,1,37,15,43,37,149,39
+United States,2010,approve4,1,672,1223,usgss,363,1973,2017,approve4_gt1,1,38,1,1,38,149,39
+United States,2010,approve4,2,626,1223,usgss,363,1973,2017,approve4_gt2,1,38,1,2,38,149,39
+United States,2010,approve4,3,530,1223,usgss,363,1973,2017,approve4_gt3,1,38,1,3,38,149,39
+United States,2010,marry5,1,954,1262,usgss,363,1973,2017,marry5_gt1,1,38,6,16,38,149,39
+United States,2010,marry5,2,757,1262,usgss,363,1973,2017,marry5_gt2,1,38,6,17,38,149,39
+United States,2010,marry5,3,592,1262,usgss,363,1973,2017,marry5_gt3,1,38,6,18,38,149,39
+United States,2010,marry5,4,274,1262,usgss,363,1973,2017,marry5_gt4,1,38,6,19,38,149,39
+United States,2010,marry4a,1,3182,4459,uspew2010_rel,363,1973,2017,marry4a_gt1,1,38,11,24,38,149,39
+United States,2010,marry4a,2,1995,4459,uspew2010_rel,363,1973,2017,marry4a_gt2,1,38,11,25,38,149,39
+United States,2010,marry4a,3,793,4459,uspew2010_rel,363,1973,2017,marry4a_gt3,1,38,11,26,38,149,39
+United States,2010,marry4b,1,546,952,abcwapo201002,363,1973,2017,marry4b_gt1,1,38,13,30,38,149,39
+United States,2010,marry4b,2,462,952,abcwapo201002,363,1973,2017,marry4b_gt2,1,38,13,31,38,149,39
+United States,2010,marry4b,3,305,952,abcwapo201002,363,1973,2017,marry4b_gt3,1,38,13,32,38,149,39
+United States,2011,legal2,1,625,957,gallup_us201112,363,1973,2017,legal2_gt1,1,39,2,4,39,149,39
+United States,2011,just10,1,1622,2159,wvs_combo,363,1973,2017,just10_gt1,1,39,4,6,39,149,39
+United States,2011,just10,2,1550,2159,wvs_combo,363,1973,2017,just10_gt2,1,39,4,7,39,149,39
+United States,2011,just10,3,1467,2159,wvs_combo,363,1973,2017,just10_gt3,1,39,4,8,39,149,39
+United States,2011,just10,4,1402,2159,wvs_combo,363,1973,2017,just10_gt4,1,39,4,9,39,149,39
+United States,2011,just10,5,899,2159,wvs_combo,363,1973,2017,just10_gt5,1,39,4,10,39,149,39
+United States,2011,just10,6,798,2159,wvs_combo,363,1973,2017,just10_gt6,1,39,4,11,39,149,39
+United States,2011,just10,7,711,2159,wvs_combo,363,1973,2017,just10_gt7,1,39,4,12,39,149,39
+United States,2011,just10,8,587,2159,wvs_combo,363,1973,2017,just10_gt8,1,39,4,13,39,149,39
+United States,2011,just10,9,481,2159,wvs_combo,363,1973,2017,just10_gt9,1,39,4,14,39,149,39
+United States,2011,neigh2,1,1777,2232,wvs_combo,363,1973,2017,neigh2_gt1,1,39,7,20,39,149,39
+United States,2011,marry2,1,1460,2807,cnn201105,363,1973,2017,marry2_gt1,1,39,8,21,39,149,39
+United States,2011,accept2,1,606,933,pew2011,363,1973,2017,accept2_gt1,1,39,9,22,39,149,39
+United States,2011,marry4a,1,5740,7893,prri2011_avs,363,1973,2017,marry4a_gt1,1,39,11,24,39,149,39
+United States,2011,marry4a,2,3975,7893,prri2011_avs,363,1973,2017,marry4a_gt2,1,39,11,25,39,149,39
+United States,2011,marry4a,3,1652,7893,prri2011_avs,363,1973,2017,marry4a_gt3,1,39,11,26,39,149,39
+United States,2011,adopt4a,1,2254,2904,prri2011_mrgl,363,1973,2017,adopt4a_gt1,1,39,12,27,39,149,39
+United States,2011,adopt4a,2,1595,2904,prri2011_mrgl,363,1973,2017,adopt4a_gt2,1,39,12,28,39,149,39
+United States,2011,adopt4a,3,604,2904,prri2011_mrgl,363,1973,2017,adopt4a_gt3,1,39,12,29,39,149,39
+United States,2011,marry4b,1,1203,1906,abcwapo201103,363,1973,2017,marry4b_gt1,1,39,13,30,39,149,39
+United States,2011,marry4b,2,1027,1906,abcwapo201103,363,1973,2017,marry4b_gt2,1,39,13,31,39,149,39
+United States,2011,marry4b,3,667,1906,abcwapo201103,363,1973,2017,marry4b_gt3,1,39,13,32,39,149,39
+United States,2012,approve4,1,678,1239,usgss,363,1973,2017,approve4_gt1,1,40,1,1,40,149,39
+United States,2012,approve4,2,643,1239,usgss,363,1973,2017,approve4_gt2,1,40,1,2,40,149,39
+United States,2012,approve4,3,545,1239,usgss,363,1973,2017,approve4_gt3,1,40,1,3,40,149,39
+United States,2012,legal2,1,640,974,gallup_us201211,363,1973,2017,legal2_gt1,1,40,2,4,40,149,39
+United States,2012,adopt2,1,4405,6708,anes_combo,363,1973,2017,adopt2_gt1,1,40,3,5,40,149,39
+United States,2012,marry5,1,968,1287,usgss,363,1973,2017,marry5_gt1,1,40,6,16,40,149,39
+United States,2012,marry5,2,789,1287,usgss,363,1973,2017,marry5_gt2,1,40,6,17,40,149,39
+United States,2012,marry5,3,634,1287,usgss,363,1973,2017,marry5_gt3,1,40,6,18,40,149,39
+United States,2012,marry5,4,328,1287,usgss,363,1973,2017,marry5_gt4,1,40,6,19,40,149,39
+United States,2012,marry2,1,29690,55897,cces2012,363,1973,2017,marry2_gt1,1,40,8,21,40,149,39
+United States,2012,accept2,1,853,1337,uspew2012_comm,363,1973,2017,accept2_gt1,1,40,9,22,40,149,39
+United States,2012,marry4a,1,7437,10170,prri2012_3rns,363,1973,2017,marry4a_gt1,1,40,11,24,40,149,39
+United States,2012,marry4a,2,5365,10170,prri2012_3rns,363,1973,2017,marry4a_gt2,1,40,11,25,40,149,39
+United States,2012,marry4a,3,2535,10170,prri2012_3rns,363,1973,2017,marry4a_gt3,1,40,11,26,40,149,39
+United States,2012,adopt4a,1,737,950,prri2012_3rns,363,1973,2017,adopt4a_gt1,1,40,12,27,40,149,39
+United States,2012,adopt4a,2,546,950,prri2012_3rns,363,1973,2017,adopt4a_gt2,1,40,12,28,40,149,39
+United States,2012,adopt4a,3,234,950,prri2012_3rns,363,1973,2017,adopt4a_gt3,1,40,12,29,40,149,39
+United States,2012,marry4b,1,587,939,abcwapo201203,363,1973,2017,marry4b_gt1,1,40,13,30,40,149,39
+United States,2012,marry4b,2,517,939,abcwapo201203,363,1973,2017,marry4b_gt2,1,40,13,31,40,149,39
+United States,2012,marry4b,3,353,939,abcwapo201203,363,1973,2017,marry4b_gt3,1,40,13,32,40,149,39
+United States,2012,ff5,1,1041,1230,issp2012,363,1973,2017,ff5_gt1,1,40,16,44,40,149,39
+United States,2012,ff5,2,723,1230,issp2012,363,1973,2017,ff5_gt2,1,40,16,45,40,149,39
+United States,2012,ff5,3,583,1230,issp2012,363,1973,2017,ff5_gt3,1,40,16,46,40,149,39
+United States,2012,ff5,4,124,1230,issp2012,363,1973,2017,ff5_gt4,1,40,16,47,40,149,39
+United States,2012,mm5,1,1012,1228,issp2012,363,1973,2017,mm5_gt1,1,40,17,48,40,149,39
+United States,2012,mm5,2,681,1228,issp2012,363,1973,2017,mm5_gt2,1,40,17,49,40,149,39
+United States,2012,mm5,3,535,1228,issp2012,363,1973,2017,mm5_gt3,1,40,17,50,40,149,39
+United States,2012,mm5,4,117,1228,issp2012,363,1973,2017,mm5_gt4,1,40,17,51,40,149,39
+United States,2013,marry2,1,1093,1987,cnn201303,363,1973,2017,marry2_gt1,1,41,8,21,41,149,39
+United States,2013,accept2,1,1457,2317,pew2013,363,1973,2017,accept2_gt1,1,41,9,22,41,149,39
+United States,2013,marry4a,1,6754,8818,prri2013_3rap,363,1973,2017,marry4a_gt1,1,41,11,24,41,149,39
+United States,2013,marry4a,2,4857,8818,prri2013_3rap,363,1973,2017,marry4a_gt2,1,41,11,25,41,149,39
+United States,2013,marry4a,3,2225,8818,prri2013_3rap,363,1973,2017,marry4a_gt3,1,41,11,26,41,149,39
+United States,2013,adopt4a,1,750,945,prri2013_3rap,363,1973,2017,adopt4a_gt1,1,41,12,27,41,149,39
+United States,2013,adopt4a,2,569,945,prri2013_3rap,363,1973,2017,adopt4a_gt2,1,41,12,28,41,149,39
+United States,2013,adopt4a,3,244,945,prri2013_3rap,363,1973,2017,adopt4a_gt3,1,41,12,29,41,149,39
+United States,2013,marry4b,1,631,926,abcwapo201303,363,1973,2017,marry4b_gt1,1,41,13,30,41,149,39
+United States,2013,marry4b,2,572,926,abcwapo201303,363,1973,2017,marry4b_gt2,1,41,13,31,41,149,39
+United States,2013,marry4b,3,401,926,abcwapo201303,363,1973,2017,marry4b_gt3,1,41,13,32,41,149,39
+United States,2013,approve3,1,568,940,pew2013,363,1973,2017,approve3_gt1,1,41,15,42,41,149,39
+United States,2013,approve3,2,224,940,pew2013,363,1973,2017,approve3_gt2,1,41,15,43,41,149,39
+United States,2014,approve4,1,991,1651,usgss,363,1973,2017,approve4_gt1,1,42,1,1,42,149,39
+United States,2014,approve4,2,933,1651,usgss,363,1973,2017,approve4_gt2,1,42,1,2,42,149,39
+United States,2014,approve4,3,814,1651,usgss,363,1973,2017,approve4_gt3,1,42,1,3,42,149,39
+United States,2014,adopt2,1,607,942,abcwapo201402,363,1973,2017,adopt2_gt1,1,42,3,5,42,149,39
+United States,2014,marry5,1,1369,1690,usgss,363,1973,2017,marry5_gt1,1,42,6,16,42,149,39
+United States,2014,marry5,2,1150,1690,usgss,363,1973,2017,marry5_gt2,1,42,6,17,42,149,39
+United States,2014,marry5,3,959,1690,usgss,363,1973,2017,marry5_gt3,1,42,6,18,42,149,39
+United States,2014,marry5,4,536,1690,usgss,363,1973,2017,marry5_gt4,1,42,6,19,42,149,39
+United States,2014,marry2,1,31818,56652,cces2014,363,1973,2017,marry2_gt1,1,42,8,21,42,149,39
+United States,2014,accept2,1,23934,41081,pewrel2014_us,363,1973,2017,accept2_gt1,1,42,9,22,42,149,39
+United States,2014,marry4a,1,30553,38229,abcwapo201402,363,1973,2017,marry4a_gt1,1,42,11,24,42,149,39
+United States,2014,marry4a,2,22062,38229,abcwapo201402,363,1973,2017,marry4a_gt2,1,42,11,25,42,149,39
+United States,2014,marry4a,3,10251,38229,abcwapo201402,363,1973,2017,marry4a_gt3,1,42,11,26,42,149,39
+United States,2015,marry2,1,7961,14089,cces2015,363,1973,2017,marry2_gt1,1,43,8,21,43,149,39
+United States,2015,accept2,1,4883,7307,uspew2015_5pol,363,1973,2017,accept2_gt1,1,43,9,22,43,149,39
+United States,2015,marry4a,1,3692,4653,prri2015_rap,363,1973,2017,marry4a_gt1,1,43,11,24,43,149,39
+United States,2015,marry4a,2,2745,4653,prri2015_rap,363,1973,2017,marry4a_gt2,1,43,11,25,43,149,39
+United States,2015,marry4a,3,1382,4653,prri2015_rap,363,1973,2017,marry4a_gt3,1,43,11,26,43,149,39
+United States,2016,approve4,1,1092,1806,usgss,363,1973,2017,approve4_gt1,1,44,1,1,44,149,39
+United States,2016,approve4,2,1026,1806,usgss,363,1973,2017,approve4_gt2,1,44,1,2,44,149,39
+United States,2016,approve4,3,927,1806,usgss,363,1973,2017,approve4_gt3,1,44,1,3,44,149,39
+United States,2016,marry5,1,1554,1862,usgss,363,1973,2017,marry5_gt1,1,44,6,16,44,149,39
+United States,2016,marry5,2,1324,1862,usgss,363,1973,2017,marry5_gt2,1,44,6,17,44,149,39
+United States,2016,marry5,3,1106,1862,usgss,363,1973,2017,marry5_gt3,1,44,6,18,44,149,39
+United States,2016,marry5,4,640,1862,usgss,363,1973,2017,marry5_gt4,1,44,6,19,44,149,39
+United States,2016,marry2,1,39500,64125,cces2016,363,1973,2017,marry2_gt1,1,44,8,21,44,149,39
+United States,2016,accept2,1,1270,1828,uspew2016_fp,363,1973,2017,accept2_gt1,1,44,9,22,44,149,39
+United States,2016,marry4a,1,4045,4886,prriatlantic2016_wwc,363,1973,2017,marry4a_gt1,1,44,11,24,44,149,39
+United States,2016,marry4a,2,3044,4886,prriatlantic2016_wwc,363,1973,2017,marry4a_gt2,1,44,11,25,44,149,39
+United States,2016,marry4a,3,1516,4886,prriatlantic2016_wwc,363,1973,2017,marry4a_gt3,1,44,11,26,44,149,39
+United States,2016,approve3,1,1443,2249,pewrel2016_us,363,1973,2017,approve3_gt1,1,44,15,42,44,149,39
+United States,2016,approve3,2,395,2249,pewrel2016_us,363,1973,2017,approve3_gt2,1,44,15,43,44,149,39
+United States,2017,accept2,1,3471,4669,uspew2017_6typo,363,1973,2017,accept2_gt1,1,45,9,22,45,149,39
+United States,2017,run10,1,1354,1499,amb_us2016,363,1973,2017,run10_gt1,1,45,14,33,45,149,39
+United States,2017,run10,2,1337,1499,amb_us2016,363,1973,2017,run10_gt2,1,45,14,34,45,149,39
+United States,2017,run10,3,1287,1499,amb_us2016,363,1973,2017,run10_gt3,1,45,14,35,45,149,39
+United States,2017,run10,4,1229,1499,amb_us2016,363,1973,2017,run10_gt4,1,45,14,36,45,149,39
+United States,2017,run10,5,1101,1499,amb_us2016,363,1973,2017,run10_gt5,1,45,14,37,45,149,39
+United States,2017,run10,6,1034,1499,amb_us2016,363,1973,2017,run10_gt6,1,45,14,38,45,149,39
+United States,2017,run10,7,958,1499,amb_us2016,363,1973,2017,run10_gt7,1,45,14,39,45,149,39
+United States,2017,run10,8,834,1499,amb_us2016,363,1973,2017,run10_gt8,1,45,14,40,45,149,39
+United States,2017,run10,9,730,1499,amb_us2016,363,1973,2017,run10_gt9,1,45,14,41,45,149,39
 United Kingdom,1977,adopt2,1,189,878,gallup_uk1977,277,1977,2016,adopt2_gt1,2,5,3,5,50,76,34
 United Kingdom,1981,adopt2,1,235,903,gallup_uk1981,277,1977,2016,adopt2_gt1,2,9,3,5,54,76,34
 United Kingdom,1981,just10,1,582,1108,evs_combo,277,1977,2016,just10_gt1,2,9,4,6,54,76,34
@@ -1207,7 +1211,6 @@ Spain,2009,marry5,1,932,967,ees2009,195,1981,2017,marry5_gt1,5,37,6,16,217,46,19
 Spain,2009,marry5,2,758,967,ees2009,195,1981,2017,marry5_gt2,5,37,6,17,217,46,19
 Spain,2009,marry5,3,615,967,ees2009,195,1981,2017,marry5_gt3,5,37,6,18,217,46,19
 Spain,2009,marry5,4,177,967,ees2009,195,1981,2017,marry5_gt4,5,37,6,19,217,46,19
-Spain,2009,neigh2,1,2486,2486,lb2009,195,1981,2017,neigh2_gt1,5,37,7,20,217,46,19
 Spain,2009,hioff10,1,942,979,eb712,195,1981,2017,hioff10_gt1,5,37,24,74,217,46,19
 Spain,2009,hioff10,2,925,979,eb712,195,1981,2017,hioff10_gt2,5,37,24,75,217,46,19
 Spain,2009,hioff10,3,886,979,eb712,195,1981,2017,hioff10_gt3,5,37,24,76,217,46,19
@@ -4966,7 +4969,6 @@ Lithuania,2012,hioff10,9,140,938,eb774,139,1990,2017,hioff10_gt9,28,40,24,82,125
 Lithuania,2013,ff5,1,594,1068,issp2012,139,1990,2017,ff5_gt1,28,41,16,44,1256,30,13
 Lithuania,2013,ff5,2,159,1068,issp2012,139,1990,2017,ff5_gt2,28,41,16,45,1256,30,13
 Lithuania,2013,ff5,3,44,1068,issp2012,139,1990,2017,ff5_gt3,28,41,16,46,1256,30,13
-Lithuania,2013,ff5,4,0,1068,issp2012,139,1990,2017,ff5_gt4,28,41,16,47,1256,30,13
 Lithuania,2013,mm5,1,543,1078,issp2012,139,1990,2017,mm5_gt1,28,41,17,48,1256,30,13
 Lithuania,2013,mm5,2,127,1078,issp2012,139,1990,2017,mm5_gt2,28,41,17,49,1256,30,13
 Lithuania,2013,mm5,3,26,1078,issp2012,139,1990,2017,mm5_gt3,28,41,17,50,1256,30,13
@@ -5165,8 +5167,6 @@ Dominican Republic,2004,run10,4,108,4460,amb_combo,137,1996,2016,run10_gt4,30,32
 Dominican Republic,2004,run10,5,108,4460,amb_combo,137,1996,2016,run10_gt5,30,32,14,37,1337,20,9
 Dominican Republic,2004,run10,6,108,4460,amb_combo,137,1996,2016,run10_gt6,30,32,14,38,1337,20,9
 Dominican Republic,2004,run10,7,108,4460,amb_combo,137,1996,2016,run10_gt7,30,32,14,39,1337,20,9
-Dominican Republic,2004,run10,8,0,4460,amb_combo,137,1996,2016,run10_gt8,30,32,14,40,1337,20,9
-Dominican Republic,2004,run10,9,0,4460,amb_combo,137,1996,2016,run10_gt9,30,32,14,41,1337,20,9
 Dominican Republic,2006,run10,1,565,1479,amb_combo,137,1996,2016,run10_gt1,30,34,14,33,1339,20,9
 Dominican Republic,2006,run10,2,498,1479,amb_combo,137,1996,2016,run10_gt2,30,34,14,34,1339,20,9
 Dominican Republic,2006,run10,3,447,1479,amb_combo,137,1996,2016,run10_gt3,30,34,14,35,1339,20,9
@@ -8146,7 +8146,6 @@ Haiti,2010,run10,5,23,1741,amb_combo,81,2006,2017,run10_gt5,57,38,14,37,2558,9,6
 Haiti,2010,run10,6,14,1741,amb_combo,81,2006,2017,run10_gt6,57,38,14,38,2558,9,6
 Haiti,2010,run10,7,5,1741,amb_combo,81,2006,2017,run10_gt7,57,38,14,39,2558,9,6
 Haiti,2010,run10,8,3,1741,amb_combo,81,2006,2017,run10_gt8,57,38,14,40,2558,9,6
-Haiti,2010,run10,9,0,1741,amb_combo,81,2006,2017,run10_gt9,57,38,14,41,2558,9,6
 Haiti,2010,marry10,1,466,1741,amb_combo,81,2006,2017,marry10_gt1,57,38,27,95,2558,9,6
 Haiti,2010,marry10,2,177,1741,amb_combo,81,2006,2017,marry10_gt2,57,38,27,96,2558,9,6
 Haiti,2010,marry10,3,87,1741,amb_combo,81,2006,2017,marry10_gt3,57,38,27,97,2558,9,6
@@ -8154,8 +8153,6 @@ Haiti,2010,marry10,4,32,1741,amb_combo,81,2006,2017,marry10_gt4,57,38,27,98,2558
 Haiti,2010,marry10,5,18,1741,amb_combo,81,2006,2017,marry10_gt5,57,38,27,99,2558,9,6
 Haiti,2010,marry10,6,7,1741,amb_combo,81,2006,2017,marry10_gt6,57,38,27,100,2558,9,6
 Haiti,2010,marry10,7,2,1741,amb_combo,81,2006,2017,marry10_gt7,57,38,27,101,2558,9,6
-Haiti,2010,marry10,8,0,1741,amb_combo,81,2006,2017,marry10_gt8,57,38,27,102,2558,9,6
-Haiti,2010,marry10,9,0,1741,amb_combo,81,2006,2017,marry10_gt9,57,38,27,103,2558,9,6
 Haiti,2012,run10,1,646,1744,amb_combo,81,2006,2017,run10_gt1,57,40,14,33,2560,9,6
 Haiti,2012,run10,2,306,1744,amb_combo,81,2006,2017,run10_gt2,57,40,14,34,2560,9,6
 Haiti,2012,run10,3,185,1744,amb_combo,81,2006,2017,run10_gt3,57,40,14,35,2560,9,6
@@ -8172,8 +8169,6 @@ Haiti,2012,marry10,4,33,892,amb_combo,81,2006,2017,marry10_gt4,57,40,27,98,2560,
 Haiti,2012,marry10,5,17,892,amb_combo,81,2006,2017,marry10_gt5,57,40,27,99,2560,9,6
 Haiti,2012,marry10,6,7,892,amb_combo,81,2006,2017,marry10_gt6,57,40,27,100,2560,9,6
 Haiti,2012,marry10,7,2,892,amb_combo,81,2006,2017,marry10_gt7,57,40,27,101,2560,9,6
-Haiti,2012,marry10,8,0,892,amb_combo,81,2006,2017,marry10_gt8,57,40,27,102,2560,9,6
-Haiti,2012,marry10,9,0,892,amb_combo,81,2006,2017,marry10_gt9,57,40,27,103,2560,9,6
 Haiti,2014,run10,1,612,1497,amb_combo,81,2006,2017,run10_gt1,57,42,14,33,2562,9,6
 Haiti,2014,run10,2,347,1497,amb_combo,81,2006,2017,run10_gt2,57,42,14,34,2562,9,6
 Haiti,2014,run10,3,210,1497,amb_combo,81,2006,2017,run10_gt3,57,42,14,35,2562,9,6
@@ -8989,9 +8984,6 @@ Georgia,2014,just10,3,31,1188,wvs_combo,47,1996,2015,just10_gt3,69,42,4,8,3102,1
 Georgia,2014,just10,4,15,1188,wvs_combo,47,1996,2015,just10_gt4,69,42,4,9,3102,11,5
 Georgia,2014,just10,5,2,1188,wvs_combo,47,1996,2015,just10_gt5,69,42,4,10,3102,11,5
 Georgia,2014,just10,6,1,1188,wvs_combo,47,1996,2015,just10_gt6,69,42,4,11,3102,11,5
-Georgia,2014,just10,7,0,1188,wvs_combo,47,1996,2015,just10_gt7,69,42,4,12,3102,11,5
-Georgia,2014,just10,8,0,1188,wvs_combo,47,1996,2015,just10_gt8,69,42,4,13,3102,11,5
-Georgia,2014,just10,9,0,1188,wvs_combo,47,1996,2015,just10_gt9,69,42,4,14,3102,11,5
 Georgia,2014,neigh2,1,161,1202,wvs_combo,47,1996,2015,neigh2_gt1,69,42,7,20,3102,11,5
 Georgia,2015,accept2,1,20,472,pewrel2015_ee,47,1996,2015,accept2_gt1,69,43,9,22,3103,11,5
 Georgia,2015,approve3,1,37,472,pewrel2015_ee,47,1996,2015,approve3_gt1,69,43,15,42,3103,11,5
@@ -9004,7 +8996,6 @@ Indonesia,2001,just10,5,6,999,wvs_combo,47,2001,2013,just10_gt5,70,29,4,10,3134,
 Indonesia,2001,just10,6,3,999,wvs_combo,47,2001,2013,just10_gt6,70,29,4,11,3134,12,8
 Indonesia,2001,just10,7,3,999,wvs_combo,47,2001,2013,just10_gt7,70,29,4,12,3134,12,8
 Indonesia,2001,just10,8,2,999,wvs_combo,47,2001,2013,just10_gt8,70,29,4,13,3134,12,8
-Indonesia,2001,just10,9,0,999,wvs_combo,47,2001,2013,just10_gt9,70,29,4,14,3134,12,8
 Indonesia,2001,neigh2,1,452,1000,wvs_combo,47,2001,2013,neigh2_gt1,70,29,7,20,3134,12,8
 Indonesia,2002,accept2,1,53,998,pew2002,47,2001,2013,accept2_gt1,70,30,9,22,3135,12,8
 Indonesia,2004,just10,1,291,821,asiab2004,47,2001,2013,just10_gt1,70,32,4,6,3137,12,8
@@ -9012,10 +9003,6 @@ Indonesia,2004,just10,2,167,821,asiab2004,47,2001,2013,just10_gt2,70,32,4,7,3137
 Indonesia,2004,just10,3,102,821,asiab2004,47,2001,2013,just10_gt3,70,32,4,8,3137,12,8
 Indonesia,2004,just10,4,57,821,asiab2004,47,2001,2013,just10_gt4,70,32,4,9,3137,12,8
 Indonesia,2004,just10,5,6,821,asiab2004,47,2001,2013,just10_gt5,70,32,4,10,3137,12,8
-Indonesia,2004,just10,6,0,821,asiab2004,47,2001,2013,just10_gt6,70,32,4,11,3137,12,8
-Indonesia,2004,just10,7,0,821,asiab2004,47,2001,2013,just10_gt7,70,32,4,12,3137,12,8
-Indonesia,2004,just10,8,0,821,asiab2004,47,2001,2013,just10_gt8,70,32,4,13,3137,12,8
-Indonesia,2004,just10,9,0,821,asiab2004,47,2001,2013,just10_gt9,70,32,4,14,3137,12,8
 Indonesia,2006,just10,1,210,1975,wvs_combo,47,2001,2013,just10_gt1,70,34,4,6,3139,12,8
 Indonesia,2006,just10,2,134,1975,wvs_combo,47,2001,2013,just10_gt2,70,34,4,7,3139,12,8
 Indonesia,2006,just10,3,100,1975,wvs_combo,47,2001,2013,just10_gt3,70,34,4,8,3139,12,8
@@ -9031,10 +9018,6 @@ Indonesia,2007,just10,2,127,993,asiab2007,47,2001,2013,just10_gt2,70,35,4,7,3140
 Indonesia,2007,just10,3,54,993,asiab2007,47,2001,2013,just10_gt3,70,35,4,8,3140,12,8
 Indonesia,2007,just10,4,31,993,asiab2007,47,2001,2013,just10_gt4,70,35,4,9,3140,12,8
 Indonesia,2007,just10,5,7,993,asiab2007,47,2001,2013,just10_gt5,70,35,4,10,3140,12,8
-Indonesia,2007,just10,6,0,993,asiab2007,47,2001,2013,just10_gt6,70,35,4,11,3140,12,8
-Indonesia,2007,just10,7,0,993,asiab2007,47,2001,2013,just10_gt7,70,35,4,12,3140,12,8
-Indonesia,2007,just10,8,0,993,asiab2007,47,2001,2013,just10_gt8,70,35,4,13,3140,12,8
-Indonesia,2007,just10,9,0,993,asiab2007,47,2001,2013,just10_gt9,70,35,4,14,3140,12,8
 Indonesia,2007,accept2,1,33,988,pew2007,47,2001,2013,accept2_gt1,70,35,9,22,3140,12,8
 Indonesia,2008,approve4,1,85,1991,issp2008a,47,2001,2013,approve4_gt1,70,36,1,1,3141,12,8
 Indonesia,2008,approve4,2,9,1991,issp2008a,47,2001,2013,approve4_gt2,70,36,1,2,3141,12,8
@@ -9603,13 +9586,6 @@ Montenegro,2008,adopt5,4,29,1460,evs_combo,34,1996,2008,adopt5_gt4,84,36,23,73,3
 Pakistan,2001,just10,1,73,2000,wvs_combo,34,2001,2013,just10_gt1,85,29,4,6,3809,9,6
 Pakistan,2001,just10,2,21,2000,wvs_combo,34,2001,2013,just10_gt2,85,29,4,7,3809,9,6
 Pakistan,2001,just10,3,9,2000,wvs_combo,34,2001,2013,just10_gt3,85,29,4,8,3809,9,6
-Pakistan,2001,just10,4,0,2000,wvs_combo,34,2001,2013,just10_gt4,85,29,4,9,3809,9,6
-Pakistan,2001,just10,5,0,2000,wvs_combo,34,2001,2013,just10_gt5,85,29,4,10,3809,9,6
-Pakistan,2001,just10,6,0,2000,wvs_combo,34,2001,2013,just10_gt6,85,29,4,11,3809,9,6
-Pakistan,2001,just10,7,0,2000,wvs_combo,34,2001,2013,just10_gt7,85,29,4,12,3809,9,6
-Pakistan,2001,just10,8,0,2000,wvs_combo,34,2001,2013,just10_gt8,85,29,4,13,3809,9,6
-Pakistan,2001,just10,9,0,2000,wvs_combo,34,2001,2013,just10_gt9,85,29,4,14,3809,9,6
-Pakistan,2001,neigh2,1,2000,2000,wvs_combo,34,2001,2013,neigh2_gt1,85,29,7,20,3809,9,6
 Pakistan,2002,accept2,1,197,1437,pew2002,34,2001,2013,accept2_gt1,85,30,9,22,3810,9,6
 Pakistan,2005,just10,1,217,1031,asiab2005,34,2001,2013,just10_gt1,85,33,4,6,3813,9,6
 Pakistan,2005,just10,2,170,1031,asiab2005,34,2001,2013,just10_gt2,85,33,4,7,3813,9,6
@@ -9628,8 +9604,6 @@ Pakistan,2012,just10,4,52,1200,wvs_combo,34,2001,2013,just10_gt4,85,40,4,9,3820,
 Pakistan,2012,just10,5,38,1200,wvs_combo,34,2001,2013,just10_gt5,85,40,4,10,3820,9,6
 Pakistan,2012,just10,6,12,1200,wvs_combo,34,2001,2013,just10_gt6,85,40,4,11,3820,9,6
 Pakistan,2012,just10,7,4,1200,wvs_combo,34,2001,2013,just10_gt7,85,40,4,12,3820,9,6
-Pakistan,2012,just10,8,0,1200,wvs_combo,34,2001,2013,just10_gt8,85,40,4,13,3820,9,6
-Pakistan,2012,just10,9,0,1200,wvs_combo,34,2001,2013,just10_gt9,85,40,4,14,3820,9,6
 Pakistan,2012,neigh2,1,492,1200,wvs_combo,34,2001,2013,neigh2_gt1,85,40,7,20,3820,9,6
 Pakistan,2013,accept2,1,23,1073,pew2013,34,2001,2013,accept2_gt1,85,41,9,22,3821,9,6
 Pakistan,2013,approve3,1,49,1089,pew2013,34,2001,2013,approve3_gt1,85,41,15,42,3821,9,6
@@ -9981,8 +9955,6 @@ Cambodia,2004,just10,4,32,801,asiab2004,18,2004,2007,just10_gt4,101,32,4,9,4532,
 Cambodia,2004,just10,5,3,801,asiab2004,18,2004,2007,just10_gt5,101,32,4,10,4532,2,2
 Cambodia,2004,just10,6,3,801,asiab2004,18,2004,2007,just10_gt6,101,32,4,11,4532,2,2
 Cambodia,2004,just10,7,3,801,asiab2004,18,2004,2007,just10_gt7,101,32,4,12,4532,2,2
-Cambodia,2004,just10,8,0,801,asiab2004,18,2004,2007,just10_gt8,101,32,4,13,4532,2,2
-Cambodia,2004,just10,9,0,801,asiab2004,18,2004,2007,just10_gt9,101,32,4,14,4532,2,2
 Cambodia,2007,just10,1,162,1012,asiab2007,18,2004,2007,just10_gt1,101,35,4,6,4535,2,2
 Cambodia,2007,just10,2,76,1012,asiab2007,18,2004,2007,just10_gt2,101,35,4,7,4535,2,2
 Cambodia,2007,just10,3,46,1012,asiab2007,18,2004,2007,just10_gt3,101,35,4,8,4535,2,2
@@ -10081,11 +10053,6 @@ Egypt,2001,just10,1,4,3000,wvs_combo,15,2001,2013,just10_gt1,107,29,4,6,4799,6,4
 Egypt,2001,just10,2,4,3000,wvs_combo,15,2001,2013,just10_gt2,107,29,4,7,4799,6,4
 Egypt,2001,just10,3,4,3000,wvs_combo,15,2001,2013,just10_gt3,107,29,4,8,4799,6,4
 Egypt,2001,just10,4,4,3000,wvs_combo,15,2001,2013,just10_gt4,107,29,4,9,4799,6,4
-Egypt,2001,just10,5,0,3000,wvs_combo,15,2001,2013,just10_gt5,107,29,4,10,4799,6,4
-Egypt,2001,just10,6,0,3000,wvs_combo,15,2001,2013,just10_gt6,107,29,4,11,4799,6,4
-Egypt,2001,just10,7,0,3000,wvs_combo,15,2001,2013,just10_gt7,107,29,4,12,4799,6,4
-Egypt,2001,just10,8,0,3000,wvs_combo,15,2001,2013,just10_gt8,107,29,4,13,4799,6,4
-Egypt,2001,just10,9,0,3000,wvs_combo,15,2001,2013,just10_gt9,107,29,4,14,4799,6,4
 Egypt,2001,neigh2,1,12,3000,wvs_combo,15,2001,2013,neigh2_gt1,107,29,7,20,4799,6,4
 Egypt,2007,accept2,1,5,953,pew2007,15,2001,2013,accept2_gt1,107,35,9,22,4805,6,4
 Egypt,2011,accept2,1,35,928,pew2011,15,2001,2013,accept2_gt1,107,39,9,22,4809,6,4
@@ -10238,7 +10205,6 @@ Bahrain,2014,just10,5,81,1199,wvs_combo,10,2014,2014,just10_gt5,119,42,4,10,5352
 Bahrain,2014,just10,6,40,1199,wvs_combo,10,2014,2014,just10_gt6,119,42,4,11,5352,2,1
 Bahrain,2014,just10,7,12,1199,wvs_combo,10,2014,2014,just10_gt7,119,42,4,12,5352,2,1
 Bahrain,2014,just10,8,3,1199,wvs_combo,10,2014,2014,just10_gt8,119,42,4,13,5352,2,1
-Bahrain,2014,just10,9,0,1199,wvs_combo,10,2014,2014,just10_gt9,119,42,4,14,5352,2,1
 Bahrain,2014,neigh2,1,988,1200,wvs_combo,10,2014,2014,neigh2_gt1,119,42,7,20,5352,2,1
 Burkina Faso,2007,just10,1,294,1422,wvs_combo,10,2007,2007,just10_gt1,120,35,4,6,5390,2,1
 Burkina Faso,2007,just10,2,196,1422,wvs_combo,10,2007,2007,just10_gt2,120,35,4,7,5390,2,1
@@ -10258,7 +10224,6 @@ Iraq,2012,just10,5,43,1152,wvs_combo,10,2012,2012,just10_gt5,121,40,4,10,5440,2,
 Iraq,2012,just10,6,26,1152,wvs_combo,10,2012,2012,just10_gt6,121,40,4,11,5440,2,1
 Iraq,2012,just10,7,15,1152,wvs_combo,10,2012,2012,just10_gt7,121,40,4,12,5440,2,1
 Iraq,2012,just10,8,4,1152,wvs_combo,10,2012,2012,just10_gt8,121,40,4,13,5440,2,1
-Iraq,2012,just10,9,0,1152,wvs_combo,10,2012,2012,just10_gt9,121,40,4,14,5440,2,1
 Iraq,2012,neigh2,1,236,1200,wvs_combo,10,2012,2012,neigh2_gt1,121,40,7,20,5440,2,1
 Libya,2014,just10,1,425,1950,wvs_combo,10,2014,2014,just10_gt1,122,42,4,6,5487,2,1
 Libya,2014,just10,2,354,1950,wvs_combo,10,2014,2014,just10_gt2,122,42,4,7,5487,2,1
@@ -10355,13 +10320,6 @@ Laos,2007,just10,8,11,995,asiab2007,9,2007,2007,just10_gt8,131,35,4,13,5885,1,1
 Laos,2007,just10,9,9,995,asiab2007,9,2007,2007,just10_gt9,131,35,4,14,5885,1,1
 Maldives,2005,just10,1,331,821,asiab2005,9,2005,2005,just10_gt1,132,33,4,6,5928,1,1
 Maldives,2005,just10,2,95,821,asiab2005,9,2005,2005,just10_gt2,132,33,4,7,5928,1,1
-Maldives,2005,just10,3,0,821,asiab2005,9,2005,2005,just10_gt3,132,33,4,8,5928,1,1
-Maldives,2005,just10,4,0,821,asiab2005,9,2005,2005,just10_gt4,132,33,4,9,5928,1,1
-Maldives,2005,just10,5,0,821,asiab2005,9,2005,2005,just10_gt5,132,33,4,10,5928,1,1
-Maldives,2005,just10,6,0,821,asiab2005,9,2005,2005,just10_gt6,132,33,4,11,5928,1,1
-Maldives,2005,just10,7,0,821,asiab2005,9,2005,2005,just10_gt7,132,33,4,12,5928,1,1
-Maldives,2005,just10,8,0,821,asiab2005,9,2005,2005,just10_gt8,132,33,4,13,5928,1,1
-Maldives,2005,just10,9,0,821,asiab2005,9,2005,2005,just10_gt9,132,33,4,14,5928,1,1
 Mongolia,2005,just10,1,114,724,asiab2005,9,2005,2005,just10_gt1,133,33,4,6,5973,1,1
 Mongolia,2005,just10,2,94,724,asiab2005,9,2005,2005,just10_gt2,133,33,4,7,5973,1,1
 Mongolia,2005,just10,3,86,724,asiab2005,9,2005,2005,just10_gt3,133,33,4,8,5973,1,1
@@ -10430,10 +10388,6 @@ Turkmenistan,2005,just10,2,1,648,asiab2005,9,2005,2005,just10_gt2,140,33,4,7,628
 Turkmenistan,2005,just10,3,1,648,asiab2005,9,2005,2005,just10_gt3,140,33,4,8,6288,1,1
 Turkmenistan,2005,just10,4,1,648,asiab2005,9,2005,2005,just10_gt4,140,33,4,9,6288,1,1
 Turkmenistan,2005,just10,5,1,648,asiab2005,9,2005,2005,just10_gt5,140,33,4,10,6288,1,1
-Turkmenistan,2005,just10,6,0,648,asiab2005,9,2005,2005,just10_gt6,140,33,4,11,6288,1,1
-Turkmenistan,2005,just10,7,0,648,asiab2005,9,2005,2005,just10_gt7,140,33,4,12,6288,1,1
-Turkmenistan,2005,just10,8,0,648,asiab2005,9,2005,2005,just10_gt8,140,33,4,13,6288,1,1
-Turkmenistan,2005,just10,9,0,648,asiab2005,9,2005,2005,just10_gt9,140,33,4,14,6288,1,1
 Senegal,2002,accept2,1,16,710,pew2002,7,2002,2013,accept2_gt1,141,30,9,22,6330,5,4
 Senegal,2007,accept2,1,18,700,pew2007,7,2002,2013,accept2_gt1,141,35,9,22,6335,5,4
 Senegal,2009,approve3,1,111,998,pewrel2009_afr,7,2002,2013,approve3_gt1,141,37,15,42,6337,5,4
