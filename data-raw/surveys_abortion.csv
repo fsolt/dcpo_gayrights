@@ -339,6 +339,7 @@ usgss,l_rape2,abrape,"c(2, 1)","c(0, 8, 9)"
 usgss,l_single2,absingle,"c(2, 1)","c(0, 8, 9)"
 usgss,l_any2,abany,"c(2, 1)","c(0, 8, 9)"
 usnwr198706,l_n_an_a3,q22,c(3:1),"c(0, 4)"
+uspew1996_05pol,l_ncca4,q14,c(4:1),5
 uspew2006_02nii,moral3,q47f2a,"c(2, 3, 1)","c(4, 9)"
 uspew2007_rls,l_ncca4,q7,c(4:1),9
 uspew2007_rel,l_ncca4,q5,c(4:1),9
