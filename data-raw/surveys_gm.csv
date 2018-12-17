@@ -275,6 +275,7 @@ usgss,approve4,homosex,c(1:4),"c(0, 5, 8, 9)"
 usnwr198509,accept2a,var68,"c(2, 1)",3
 uspew1993_nii,accept2,q17,"c(2, 1)",3
 uspew1996_media,accept2,q8e,"c(2, 1)","c(3, 4)"
+uspew1996_05pol,marry4a,q13d,c(4:1),5
 uspew1999_nii,adopt4a,q30b,c(4:1),9
 uspew2003_10nii,marry4a,q17,c(4:1),9
 uspew2003_rel,marry4a,q2ef1,c(4:1),9
@@ -289,6 +290,7 @@ uspew2006_nii,marry4a,q25gf1,c(4:1),9
 uspew2006_nii,adopt4a,q25f,c(4:1),9
 uspew2006_rel,marry4a,q8,c(4:1),9
 uspew2006_rel,adopt4a,q12f1,c(4:1),9
+uspew2006_09next,accept2,q59d,"c(2, 1)","c(3, 9)"
 uspew2007_prim,marry4a,q35,c(4:1),9
 uspew2007_rel,marry4a,q3c,c(4:1),9
 uspew2007_rls,accept2,q5b,"c(2, 1)","c(3, 9)"
