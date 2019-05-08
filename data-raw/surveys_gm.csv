@@ -222,6 +222,7 @@ pew2013,accept2,q27,"c(2, 1)"
 pew2013,approve3,q84d,"c(2, 3, 1)"
 pew2014_india,accept2,q27,"c(2, 1)"
 pew2014_india,approve3,q84d,"c(2, 3, 1)"
+pew2017,marry4a,favgaymarriage,c(4:1)
 pewrel2009_afr,approve3,q85i,"c(2, 3, 1)"
 pewrel2014_latam,approve3,q69h,"c(2, 3, 1)"
 pewrel2014_latam,marry4a,q15,c(4:1)
@@ -229,6 +230,7 @@ pewrel2014_us,accept2,q5b,"c(2, 1)"
 pewrel2015_ee,approve3,q71h,"c(2, 3, 1)"
 pewrel2015_ee,accept2,q64,"c(2, 1)"
 pewrel2016_us,approve3,moralissuecf2_w20,"c(2, 3, 1)"
+pewrel2017_we,marry4a,q5,c(4:1)
 pgss,approve4,q106,c(1:4)
 politbarometer_east2000,civil2,v217,"c(2, 1)"
 politbarometer_east2001,civil2,v185,"c(2, 1)"

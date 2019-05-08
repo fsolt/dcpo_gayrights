@@ -126,6 +126,8 @@ Next, I’m going to read some behaviors.  For each, please tell me whether you 
 	marry4a "Do you strongly favor, favor, oppose, or strongly oppose allowing gays and lesbians to marry legally?"
 		X US Pew surveys
 		X pewrel2014_latam	Q15
+		X pewrel2017_we		Q5
+		X pew2017 (Italy only)	favgaymarriage
 		prri
 		nbcwsj199906	"homosexual couples to be legally married"
 		abcwapo201402	
