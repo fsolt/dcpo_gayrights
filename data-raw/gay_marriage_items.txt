@@ -73,7 +73,9 @@ Next, I’m going to read some behaviors.  For each, please tell me whether you 
 	accept4
 		X CEE			v233
 
-*homosexuality is a way of life that should be accepted by society
+*And which one of these comes closer to your opinion, number 1 or number 2? \
+1 Number 1 – Homosexuality is a way of life that should be accepted by society
+2 Number 2 – Homosexuality is a way of life that should not be accepted by society
 	accept2
 		X pew2002			q40
 		X pew2007			q50
@@ -91,9 +93,14 @@ Next, I’m going to read some behaviors.  For each, please tell me whether you 
 	uspew2014_rls	accept4a	qb2a	c(4:1)	c(5, 9)
 
 *Do you feel that homosexuality should be considered as an accepted alternative lifestyle or not?
-	accept2
+
+	accept2a
 		gallup
 		
+*Do you feel that homosexuality should be considered as an acceptable alternative life-style or not?
+	accept2a
+		gallup1982_06
+
 
 *gays and lesbians s/b free to live life as they wish
 	free5
