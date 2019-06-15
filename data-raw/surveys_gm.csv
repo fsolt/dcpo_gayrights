@@ -15,7 +15,7 @@ abcwapo201203,marry4b,q40,c(4:1)
 abcwapo201303,marry4b,q29,c(4:1)
 abcwapo201402,marry4a,q15,c(4:1)
 abcwapo201402,adopt2,q17,"c(2, 1)"
-aes1979,legal2,homosexl,"c(2, 1)"
+anpas1979,legal2,homosexl,"c(2, 1)"
 aes1987,legal2,q49,"c(2, 1)"
 aes2007,marry2,e4,"c(2, 1)"
 aes2013,marry5,e6same,c(1:5)
@@ -328,4 +328,4 @@ uspew2016_fp,accept2,q64c,"c(2, 1)"
 uspew2017_6typo,accept2,q50u,"c(2, 1)"
 uswapo199808,legal2,q29,"c(2, 1)"
 wvs_combo,just10,f118,c(1:10)
-wvs_combo,neigh2,a124_09,"c(1, 0)"
+wvs_combo,neigh2,"if_else(s025==502002|s025==4101990|s025==5862001, 1 - a124_09, a124_09)","c(1, 0)"
