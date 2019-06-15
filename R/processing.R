@@ -4,11 +4,11 @@ library(DCPO)
 gm <- dcpo_setup(vars = "data-raw/surveys_gm.csv",
                  file = "data/all_data_gm.csv")
 
-gm <- read_csv("data/all_data_gm.csv", col_types = "cdciiiciiiciiiiiii")
+gm <- read_csv("data/all_data_gm.csv", col_types = "cdcddcd")
 
 start <- proc.time()
 x <- gm %>% with_min_yrs(3)
-out1 <- dcpo(x, scale_item = "marry2_gt1", iter = 8000)
+out1 <- dcpo(x, scale_item = "marry4a_3", iter = 2000)
 runtime <- proc.time() - start
 runtime
 save(x, out1, runtime, file = str_c("data/gm_", str_replace(Sys.time(), " ", "_"), ".rda"))
