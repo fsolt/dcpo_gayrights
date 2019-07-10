@@ -6,21 +6,22 @@ cols <- 5
 npages <- 3
 #a_res <- df
 
-t_res <- rstan::summary(out1, pars="bar_theta", probs=c(.1, .9)) %>%
+t_res <- rstan::summary(out1, pars="theta", probs=c(.1, .9)) %>%
   first() %>%
   as.data.frame() %>%
   rownames_to_column("parameter") %>%
   as_tibble() %>%
   mutate(year = str_extract(parameter, "\\d+(?=,)") %>% 
            as.numeric() %>% 
-           factor(labels = attr(dcpo_data$N, "dimnames")[[1]]) %>% 
+           factor(labels = min(gm_data$data$year):max(gm_data$data$year)) %>% 
            as.character() %>% 
            as.numeric(),
          country = str_extract(parameter, "(?<=,)\\d+") %>% 
            as.numeric() %>% 
-           factor(labels = attr(dcpo_data$N, "dimnames")[[2]]) %>% 
-           as.character()) %>% 
-  arrange(country, year)
+           factor(labels = sort(unique(gm_data$data$kk))) %>% 
+           as.character(),
+         kk = as.numeric(str_extract(parameter, "(?<=,)\\d+"))) %>% 
+  arrange(kk, year)
 
 pages <- c("1:35", "36:70", "71:105")
 t_res1 <- t_res %>%
