@@ -15,7 +15,6 @@ abcwapo201203,marry4b,q40,c(4:1)
 abcwapo201303,marry4b,q29,c(4:1)
 abcwapo201402,marry4a,q15,c(4:1)
 abcwapo201402,adopt2,q17,"c(2, 1)"
-anpas1979,legal2,homosexl,"c(2, 1)"
 aes1987,legal2,q49,"c(2, 1)"
 aes2007,marry2,e4,"c(2, 1)"
 aes2013,marry5,e6same,c(1:5)
@@ -54,7 +53,9 @@ amb_uruguay2016,run10,d5,c(1:10)
 amb_us2016,run10,d5,c(1:10)
 amb_venezuela2016,run10,d5,c(1:10)
 anes_combo,adopt2,vcf0878 ,"c(5, 1)"
+anes2016,adopt2,v161230,"c(2, 1)"
 angus_reid1995,adopt2,a11,"c(2, 1)"
+anpas1979,legal2,homosexl,"c(2, 1)"
 ap_us1996,marry2,ap2,"c(2, 1)"
 asiab2004,just10,q45b,c(1:10)
 asiab2005,just10,q45b,c(1:10)
@@ -84,6 +85,7 @@ bsa2013,approve5,homosex,c(1:5)
 bsa2014,marry5,gmlmarry,c(5:1)
 bsa2015,approve5,homosex,c(1:5)
 bsa2016,approve5,homosex,c(1:5)
+bsa2017,approve5,homosex,c(1:5)
 cbsnyt199302,accept2,q45,"c(2, 1)"
 cbsnyt199302,legal2,q46,"c(2, 1)"
 cces2009,marry2,cc09_54,"c(2, 1)"
