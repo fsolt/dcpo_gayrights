@@ -38,6 +38,10 @@
 	mm2
 		BSA2007			MGayAdopt2
 
+*homosexual couples - as good parents as other couples
+	parent5
+		evs2017	 		v82
+
 
 *sex between two adults of same sex wrong
 	approve4
