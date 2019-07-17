@@ -198,6 +198,7 @@ evs_combo,a_health2,a046,c(0:1)
 evs_combo,a_defect2,a047,c(0:1)
 evs_combo,a_single2,a048,c(0:1)
 evs_combo,a_nomore2,a049,c(0:1)
+evs2017,just10,v154,c(1:10)
 frifop197211,l_nomore2,ql_3,"c(2, 1)"
 gallup_canada1965,l_health2,q10b,"c(2, 1)"
 gallup_canada1970,l_any2,q9,"c(2, 1)"
