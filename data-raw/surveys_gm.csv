@@ -151,9 +151,9 @@ ess8,free5,freehms,c(5:1)
 evs_combo,just10,f118,c(1:10)
 evs_combo,neigh2,a124_09,"c(1, 0)"
 evs_combo,adopt5,d026_01,c(5:1)
-evs_combo,just10,v153,c(1:10)
-evs_combo,neigh2,v26,"c(1, 0)"
-evs_combo,parent5,v82,c(5:1)
+evs2017,just10,v153,c(1:10)
+evs2017,neigh2,v26,"c(1, 0)"
+evs2017,parent5,v82,c(5:1)
 gallup_canada1996,marry2,q12,"c(2, 1)"
 gallup_canada1996,civil2,q13,"c(2, 1)"
 gallup_canada1996,adopt2,q14,"c(2, 1)"
