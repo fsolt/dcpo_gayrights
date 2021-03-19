@@ -41,6 +41,7 @@
 *homosexual couples - as good parents as other couples
 	parent5
 		evs2017	 		v82
+		wvs7            q36
 
 
 *sex between two adults of same sex wrong
@@ -53,7 +54,7 @@
 		X Poland GSS 1992-2010	HOMOSEX
 		X US GSS 1972-2010	HOMOSEX
 		X German GSS 90, 00, 02	v528
-		Australia NSSS 84,87,93	HOMOSEX [ADA charges $1k for access]
+		Australia NSSS 84,87, X 93	HOMOSEX
 		X EB83_4 2015		QC16_2
 	
 	approve5
@@ -91,7 +92,9 @@ Next, I’m going to read some behaviors.  For each, please tell me whether you 
 		X pewrel2015_ee			q64
 
 	accept4a
-	uspew1999_typo	accept4a	q38u	c(4:1)	c(5, 9)	uspew2000_typo	accept4a	q42u	c(4:1)	c(5, 9)	uspew2003_06nii	accept4a	q6h	c(4:1)	c(5, 9)
+	uspew1999_typo	accept4a	q38u	c(4:1)	c(5, 9)
+	uspew2000_typo	accept4a	q42u	c(4:1)	c(5, 9)
+	uspew2003_06nii	accept4a	q6h	c(4:1)	c(5, 9)
 	uspew2004_typo	accept4a	q20u	c(4:1)	c(5, 9)
 	uspew2011_typo	accept4a	q37u	c(4:1)	c(5, 9)
 	uspew2014_rls	accept4a	qb2a	c(4:1)	c(5, 9)
@@ -116,7 +119,8 @@ Next, I’m going to read some behaviors.  For each, please tell me whether you 
 		X AmB			d5
 	highest10 
 		X EB691-08
-		X EB712-09		X EB774-12
+		X EB712-09
+		X EB774-12
 		X EB834-15
 
 	And do you approve or disapprove of homosexuals holding responsible positions in public life? 4pt

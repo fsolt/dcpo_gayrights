@@ -19,7 +19,7 @@ aes1987,legal2,q49,"c(2, 1)"
 aes2007,marry2,e4,"c(2, 1)"
 aes2013,marry5,e6same,c(1:5)
 aes2016,marry4a,e4,c(4:1)
-allbus,approve4,v703,c(1:4)
+allbus,approve4,ca13,c(1:4)
 amb_combo,run10,d5,c(1:10)
 amb_combo,marry10,d6,c(1:10)
 amb_combo,neigh2,dis35a,"c(1, 0)"
@@ -61,6 +61,8 @@ asiab2004,just10,q45b,c(1:10)
 asiab2005,just10,q45b,c(1:10)
 asiab2006,just10,q50b,c(1:10)
 asiab2007,just10,q50b,c(1:10)
+aussa2003,marry5,v109,c(5:1)
+aussa2005,marry5,v141,c(5:1)
 bges1992,approve5,v205d,c(1:5)
 bges1997,approve5,gaysex,c(1:5)
 bsa_combo,approve5,homosex,c(1:5)
@@ -94,6 +96,7 @@ cces2014,marry2,cc14_327 ,"c(2, 1)"
 cces2015,marry2,cc15_325 ,"c(2, 1)"
 cces2016,marry2,cc16_335 ,"c(2, 1)"
 cdcee,accept4,v233,c(4:1)
+chcep201810,marry5,rel_47,c(5:1)
 cnn199301,marry2,q24,"c(2, 1)"
 cnn199406,marry2,q24,"c(2, 1)"
 cnn199406,adopt2,q25,"c(2, 1)"
@@ -220,6 +223,8 @@ lb2009,just10,p63wvsst,c(1:10)
 lb2009,neigh2,p64st_a,"c(1, 0)"
 nbcwsj199906,marry4a,q22i,c(4:1)
 nbcwsj200910,marry4a,q43,c(4:1)
+nsss1989,marry5,marokhom,c(5:1)
+nsss1993,approve4,homosex3,c(1:4)
 pew2002,accept2,q40,"c(2, 1)"
 pew2007,accept2,q50,"c(2, 1)"
 pew2011,accept2,q18,"c(2, 1)"
@@ -228,6 +233,7 @@ pew2013,approve3,q84d,"c(2, 3, 1)"
 pew2014_india,accept2,q27,"c(2, 1)"
 pew2014_india,approve3,q84d,"c(2, 3, 1)"
 pew2017,marry4a,favgaymarriage,c(4:1)
+pew2019,accept2,homosexuality,"c(2, 1)"
 pewrel2009_afr,approve3,q85i,"c(2, 3, 1)"
 pewrel2014_latam,approve3,q69h,"c(2, 3, 1)"
 pewrel2014_latam,marry4a,q15,c(4:1)
@@ -333,4 +339,9 @@ uspew2016_fp,accept2,q64c,"c(2, 1)"
 uspew2017_6typo,accept2,q50u,"c(2, 1)"
 uswapo199808,legal2,q29,"c(2, 1)"
 wvs_combo,just10,f118,c(1:10)
-wvs_combo,neigh2,"if_else(s025==502002|s025==4101990|s025==5862001, 1 - a124_09, a124_09)","c(1, 0)"
+wvs_combo,neigh2,"if_else(s025==502002|s025==4101990|s025==5862001, 1 - as.numeric(a124_09), as.numeric(a124_09))","c(1, 0)"
+wvs4_swe,just10,v208,c(1:10)
+wvs4_swe,neigh2,v76,"c(2, 1)"
+wvs7,just10,q182,c(1:10)
+wvs7,neigh2,q22,"c(2, 1)"
+wvs7,parent5,q36,c(5:1)
