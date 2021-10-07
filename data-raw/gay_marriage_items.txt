@@ -56,6 +56,7 @@
 		X German GSS 90, 00, 02	v528
 		Australia NSSS 84,87, X 93	HOMOSEX
 		X EB83_4 2015		QC16_2
+		isshr2006		
 	
 	approve5
 		X British Soc Attitudes	HOMOSEX
@@ -132,7 +133,7 @@ Next, I’m going to read some behaviors.  For each, please tell me whether you 
 		X EB83.4-15		qc16_2
 	marry5
 		X ISSP Family 1988	v36
-		AuSSA 2005		[ADA charges $1k for access]
+		X AuSSA 2005		
 		X BSA 1989, 2007, 2012 	MARVIEW0, GMLMarry
 		X USGSS 88,04,06,08,10	MARHOMO
 		X ptvs2008		CS_G21_4

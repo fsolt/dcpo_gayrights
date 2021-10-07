@@ -1,17 +1,35 @@
 library(tidyverse)
-library(DCPO)
+library(DCPOtools)
+library(rstan)
 
 gm <- dcpo_setup(vars = "data-raw/surveys_gm.csv",
                  file = "data/all_data_gm.csv")
 
-gm <- read_csv("data/all_data_gm.csv", col_types = "cdcddcd")
+gm0 <- read_csv("data/all_data_gm.csv", col_types = "cdcddcd")
+
+gm_data <- format_dcpo(gm %>% with_min_yrs(3),
+                       scale_q = "marry4a",
+                       scale_cp = 2)
 
 start <- proc.time()
-x <- gm %>% with_min_yrs(3)
-out1 <- dcpo(x, scale_item = "marry4a_3", iter = 2000)
+out3 <- rstan::stan(file = '../DCPO/inst/stan/dcpo.stan',
+                 data = gm_data,
+                 iter = 100,
+                 chains= 3,
+                 cores = 3,
+                 # pars = c("sd_delta","sd_theta_evolve","sd_sigma_evolve","sigma","phi","beta","alpha","delta","theta","y_r_pred","log_lik"),
+                 control = list(adapt_delta = 0.99, stepsize = 0.002, max_treedepth = 14))
 runtime <- proc.time() - start
 runtime
-save(x, out1, runtime, file = str_c("data/gm_", str_replace(Sys.time(), " ", "_"), ".rda"))
+beepr::beep()
+save(gm_data, out1, runtime, file = str_c("data/gm_", str_replace(Sys.time(), " ", "_"), ".rda"))
+
+
+start <- proc.time()
+out1 <- dcpo(gm_data, iter = 100)
+runtime <- proc.time() - start
+runtime
+save(x, out1, runtime, file = str_c("data/marry4a_2k", str_replace(Sys.time(), " ", "_"), ".rda"))
 
 x1 <- rstan::summary(out1)
 x1_sum <- as.data.frame(x1$summary)     # as.data.frame() preserves rownames
