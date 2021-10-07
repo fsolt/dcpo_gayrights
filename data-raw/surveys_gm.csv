@@ -201,6 +201,8 @@ gallup_us201211,marry2,q7,"c(2, 1)"
 gallup_us201211,adopt2,q14a,"c(2, 1)"
 gallup_us201211,legal2,q5,"c(2, 1)"
 icenes2007,adopt5,gayadopt,c(5:1)
+ispas2001,just11,a4_1,c(0:10)
+isshr2006,approve4,c2c,c(4:1)
 issp1988,marry5,v36,c(5:1)
 issp1988au,marry5,marokhom,c(5:1)
 issp1991,approve4,v11,c(1:4)
@@ -282,6 +284,7 @@ ptvs2008,adopt4,par_g20_11,c(1:4)
 ptvs2008,marry5,ccs_g21_4,c(5:1)
 ptvs2012,adopt4,h.24.11,c(1:4)
 ptvs2012,marry5,h.25.2,c(5:1)
+ptvs2016,adopt5,par_h23_11,c(1:5)
 ress2014,free5,freehms,c(5:1)
 usgss,marry5,marhomo,c(5:1)
 usgss,approve4,homosex,c(1:4)
