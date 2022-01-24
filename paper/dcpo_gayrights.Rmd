@@ -253,12 +253,10 @@ countries_cbyp <- dcpo_input_raw1 %>%
   pull(country)
 
 adding <- setdiff(countries_cbyp, countries_cp) %>% 
-  paste(collapse = ", ") %>% 
-  str_replace(", (\\w*)$", ", and \\1")
+  knitr::combine_words()
 
 dropping <- setdiff(countries_cp, countries_cbyp) %>% 
-  paste(collapse = ", ") %>% 
-  str_replace(", (\\w*)$", ", and \\1")
+  knitr::combine_words()
 
 y_peak_year <- dcpo_input_raw1 %>%
   distinct(country, year) %>%
@@ -278,8 +276,7 @@ data_poorest <- dcpo_input_raw1 %>%
   arrange(n) %>%
   filter(n == 2) %>%
   pull(country) %>% 
-  paste(collapse = ", ") %>% 
-  str_replace(", (\\w+)$", ", and \\1")
+  knitr::combine_words()
 
 wordify_numeral <- function(x) setNames(c("one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", " seventeen", "eighteen", "nineteen"), 1:19)[x]
 
@@ -303,6 +300,33 @@ The upper right panel shows the twelve countries with the most years observed; t
 The bottom panel counts the countries observed in each year and reveals just how few relevant survey items were asked before 1990.
 Country coverage reached its peak in `r y_peak_year`, when surveys in `r y_peak_nn` countries included items on homosexuality.
 In the next section, we describe how we are able to make use of all of this sparse and incomparable survey data to generate estimates of public opinion that are comparable across countries and years using a latent variable model.
+
+```{r obs_by_cy, fig.height = 9, fig.width = 6.5, fig.cap = "Source Data Observations by Country and Year \\label{obs_by_cy}"}
+dcpo_input_raw1 %>% 
+  mutate(country = str_replace(country, "’", "'")) %>% 
+  distinct(country, year, item, cc_rank) %>% 
+  group_by(country, year) %>% 
+  summarize(n = n(),
+            cc_rank = cc_rank) %>% 
+  ungroup() %>% 
+  distinct() %>% 
+  ggplot(aes(x = year, 
+             y = forcats::fct_reorder(country, cc_rank),
+             fill = n)) + 
+  geom_tile() +
+  scale_fill_stepsn(colors = rev(hcl.colors(7, "inferno")),
+                    n.breaks = 7,
+                    show.limits = TRUE,
+                    right = FALSE,
+                    name = "Observations") +
+  labs(x = NULL, y = NULL) +
+  scale_x_continuous(breaks=seq(1972, 2020, 4)) +
+  scale_y_discrete(position = "right") +
+  theme(legend.justification=c(0, 0), 
+        legend.position=c(0.01, 0.01),
+        axis.text.y  = element_text(size = 7)) 
+```
+
 
 ```{r dcpo_input_public, eval=FALSE}
 dcpo_input_public <- DCPOtools::format_dcpo(dcpo_input_raw1,
