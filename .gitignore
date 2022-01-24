@@ -18,6 +18,9 @@ paper/figures/old/
 paper/lit/
 paper/cda/
 slides/*mpsa*
+slides/*slamm*
+slides/*key
+slides/*2018*
 data/gm*.rda
 data/ab*.rda
 data/all*.rda
