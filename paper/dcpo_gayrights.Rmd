@@ -314,10 +314,11 @@ dcpo_input_raw1 %>%
              y = forcats::fct_reorder(country, cc_rank),
              fill = n)) + 
   geom_tile() +
-  scale_fill_viridis_b(direction = -1,
-                    show.limits = TRUE,
-                    n.breaks = 7,
-                    name = "Observations") +
+  scale_fill_viridis_b(option = "B",
+                       direction = -1,
+                       show.limits = TRUE,
+                       n.breaks = 7,
+                       name = "Observations") +
   labs(x = NULL, y = NULL) +
   scale_x_continuous(breaks=seq(1972, 2020, 4)) +
   scale_y_discrete(position = "right") +
