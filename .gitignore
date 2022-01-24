@@ -13,7 +13,7 @@
 *.toc
 dev/*
 framed.sty
-paper/cache/*
+paper/*cache/*
 paper/figures/old/
 paper/lit/
 paper/cda/
