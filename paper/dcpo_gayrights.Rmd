@@ -40,7 +40,7 @@ header-includes:
 ```{r setup, include=FALSE}
 options(tinytex.verbose = TRUE)
 
-knitr::opts_chunk$set(cache = TRUE, echo = FALSE, message = FALSE, warning = FALSE,
+knitr::opts_chunk$set(cache = FALSE, echo = FALSE, message = FALSE, warning = FALSE,
                       fig.width=7, fig.height=2.5)
 
 # If `DCPOtools` is not yet installed:
@@ -56,7 +56,7 @@ library(rsdmx)
 set.seed(324)
 ```
 
-```{r dcpo_input_raw, include=FALSE}
+```{r dcpo_input_raw, include=FALSE, cache = TRUE, cache.extra = tools::md5sum(here::here("data-raw", "surveys_gm.csv"))}
 surveys_gm <- read_csv(here::here("data-raw", "surveys_gm.csv"),
                         col_types = "cccc")
 
@@ -314,10 +314,9 @@ dcpo_input_raw1 %>%
              y = forcats::fct_reorder(country, cc_rank),
              fill = n)) + 
   geom_tile() +
-  scale_fill_stepsn(colors = rev(hcl.colors(7, "inferno")),
-                    n.breaks = 7,
+  scale_fill_viridis_b(direction = -1,
                     show.limits = TRUE,
-                    right = FALSE,
+                    n.breaks = 7,
                     name = "Observations") +
   labs(x = NULL, y = NULL) +
   scale_x_continuous(breaks=seq(1972, 2020, 4)) +
