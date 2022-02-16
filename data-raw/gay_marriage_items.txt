@@ -52,7 +52,8 @@
 		X ISSP Religion 2008	v9
 		X ISSP Religion 2018	v4
 		X ISSP Religion 2018ext	v4
-		X ISSP Religion 2018tx	v4
+		X ISSP Religion 2018tn	v4
+		X ISSP Religion 2018ve	v4
 		X Japan GSS 2000-2003	Q4HOMSEA
 		X Poland GSS 1992-2010	HOMOSEX
 		X US GSS 1972-2010	HOMOSEX
