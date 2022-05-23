@@ -1,558 +1,571 @@
 country,year,item,r,n,survey,cc_rank
-United States,1973,approve4,1,1052.98925267077,usgss,554
-United States,1973,approve4,2,94.99903039289947,usgss,554
-United States,1973,approve4,3,109.99887729704149,usgss,554
-United States,1973,approve4,4,158.99837718390543,usgss,554
-United States,1974,approve4,1,994.9898446414207,usgss,554
-United States,1974,approve4,2,70.99927534627223,usgss,554
-United States,1974,approve4,3,111.99885688426042,usgss,554
-United States,1974,approve4,4,182.99813223053266,usgss,554
-United States,1976,approve4,1,998.9898038158586,usgss,554
-United States,1976,approve4,2,87.99910183763319,usgss,554
-United States,1976,approve4,3,111.99885688426042,usgss,554
-United States,1976,approve4,4,226.99768314934926,usgss,554
-United States,1977,adopt2,1,1167.0754716981128,gallup_us197706,554
-United States,1977,adopt2,2,211.02515723270432,gallup_us197706,554
-United States,1977,approve4,1,1043.9893445282846,usgss,554
-United States,1977,approve4,2,83.99914266319531,usgss,554
-United States,1977,approve4,3,108.99888750343202,usgss,554
-United States,1977,approve4,4,215.9977954196451,usgss,554
-United States,1977,legal2,1,656.0251572327041,gallup_us197706,554
-United States,1977,legal2,2,653.2264150943395,gallup_us197706,554
-United States,1980,approve4,1,1023.9895486560953,usgss,554
-United States,1980,approve4,2,83.99914266319531,usgss,554
-United States,1980,approve4,3,84.99913245680479,usgss,554
-United States,1980,approve4,4,203.99791789633147,usgss,554
-United States,1981,legal2,1,909.0855642617944,abcwapo198105,554
-United States,1981,legal2,2,458.3631953701596,abcwapo198105,554
-United States,1982,accept2a,1,785.8483713964808,gallup_us198206,554
-United States,1982,accept2a,2,515.3010108573569,gallup_us198206,554
-United States,1982,approve4,1,1323.9864867389356,usgss,554
-United States,1982,approve4,2,92.99905080568053,usgss,554
-United States,1982,approve4,3,115.9988160586983,usgss,554
-United States,1982,approve4,4,237.9975708790534,usgss,554
-United States,1982,just10,1,2930.1926854200415,"evs_combo, wvs_combo",554
-United States,1982,just10,2,225.7500477055972,"evs_combo, wvs_combo",554
-United States,1982,just10,3,197.26795013006938,"evs_combo, wvs_combo",554
-United States,1982,just10,4,137.64609722260064,"evs_combo, wvs_combo",554
-United States,1982,just10,5,543.5357779723433,"evs_combo, wvs_combo",554
-United States,1982,just10,6,98.93521941040552,"evs_combo, wvs_combo",554
-United States,1982,just10,7,75.85612003614813,"evs_combo, wvs_combo",554
-United States,1982,just10,8,98.95616400106539,"evs_combo, wvs_combo",554
-United States,1982,just10,9,47.199687405955615,"evs_combo, wvs_combo",554
-United States,1982,just10,10,110.55681484372045,"evs_combo, wvs_combo",554
-United States,1982,legal2,1,598.9872706851368,gallup_us198206,554
-United States,1982,legal2,2,688.4054661175591,gallup_us198206,554
-United States,1984,approve4,1,1034.9894363857995,usgss,554
-United States,1984,approve4,2,69.99928555266277,usgss,554
-United States,1984,approve4,3,104.99892832899414,usgss,554
-United States,1984,approve4,4,201.99793830911256,usgss,554
-United States,1985,accept2a,1,620.3834170188036,usnwr198509,554
-United States,1985,accept2a,2,311.29103204769723,usnwr198509,554
-United States,1985,approve4,1,1117.9885892553852,usgss,554
-United States,1985,approve4,2,58.99939782295861,usgss,554
-United States,1985,approve4,3,103.99893853538468,usgss,554
-United States,1985,approve4,4,202.997928102722,usgss,554
-United States,1986,legal2,1,875.0135138143687,gallup_us198606,554
-United States,1986,legal2,2,494.39508426653606,gallup_us198606,554
-United States,1987,approve4,1,1367.9860376577524,usgss,554
-United States,1987,approve4,2,71.9992651398817,usgss,554
-United States,1987,approve4,3,101.99895894816574,usgss,554
-United States,1987,approve4,4,207.99787707076936,usgss,554
-United States,1987,legal2,1,560.9961632070465,gallup_us198703,554
-United States,1987,legal2,2,337.96598124912316,gallup_us198703,554
-United States,1988,approve4,1,719.992651398817,usgss,554
-United States,1988,approve4,2,43.999550918816595,usgss,554
-United States,1988,approve4,3,52.999459061301806,usgss,554
-United States,1988,approve4,4,119.99877523313617,usgss,554
-United States,1988,legal2,1,559.0031792124565,gallup_us198807,554
-United States,1988,legal2,2,349.9386687360753,gallup_us198807,554
-United States,1988,marry5,1,1226.2699340294307,"issp1988, usgss",554
-United States,1988,marry5,2,672.1479573146635,"issp1988, usgss",554
-United States,1988,marry5,3,392.08630843355377,"issp1988, usgss",554
-United States,1988,marry5,4,236.05196119979257,"issp1988, usgss",554
-United States,1988,marry5,5,88.01937536263452,"issp1988, usgss",554
-United States,1989,accept2a,1,322.6204029621583,gallup_us198909,554
-United States,1989,accept2a,2,209.93513750639747,gallup_us198909,554
-United States,1989,approve4,1,726.9925799540832,usgss,554
-United States,1989,approve4,2,39.99959174437872,usgss,554
-United States,1989,approve4,3,58.99939782295861,usgss,554
-United States,1989,approve4,4,153.99842821585807,usgss,554
-United States,1989,legal2,1,440.67810576560726,gallup_us198910,554
-United States,1989,legal2,2,578.4362517271699,gallup_us198910,554
-United States,1990,approve4,1,664.9932127502963,usgss,554
-United States,1990,approve4,2,41.99957133159766,usgss,554
-United States,1990,approve4,3,52.999459061301806,usgss,554
-United States,1990,approve4,4,111.99885688426042,usgss,554
-United States,1990,just10,1,1937.6143348397193,"evs_combo, wvs_combo",554
-United States,1990,just10,2,151.66766732336703,"evs_combo, wvs_combo",554
-United States,1990,just10,3,191.56768819591088,"evs_combo, wvs_combo",554
-United States,1990,just10,4,163.1134877839181,"evs_combo, wvs_combo",554
-United States,1990,just10,5,473.948296440027,"evs_combo, wvs_combo",554
-United States,1990,just10,6,194.15418233203292,"evs_combo, wvs_combo",554
-United States,1990,just10,7,114.48096150829437,"evs_combo, wvs_combo",554
-United States,1990,just10,8,120.72830490261592,"evs_combo, wvs_combo",554
-United States,1990,just10,9,81.06128681900387,"evs_combo, wvs_combo",554
-United States,1990,just10,10,149.0990663398626,"evs_combo, wvs_combo",554
-United States,1990,neigh2,1,1421.607017777429,"evs_combo, wvs_combo",554
-United States,1990,neigh2,2,2261.5409215023283,"evs_combo, wvs_combo",554
-United States,1991,approve4,1,1632.0366650897563,"issp1991, usgss",554
-United States,1991,approve4,2,100.13462499641854,"issp1991, usgss",554
-United States,1991,approve4,3,110.26484175224384,"issp1991, usgss",554
-United States,1991,approve4,4,326.25467382912393,"issp1991, usgss",554
-United States,1991,legal2,1,660.8408775114862,gallup_us199109,554
-United States,1991,legal2,2,425.72394697607433,gallup_us199109,554
-United States,1992,accept2a,1,570.0066773008866,gallup_us199206,554
-United States,1992,accept2a,2,381.34258263159853,gallup_us199206,554
-United States,1992,adopt2,1,1484.4430195068662,anes_combo,554
-United States,1992,adopt2,2,567.071347484537,anes_combo,554
-United States,1992,legal2,1,437.9343769707312,gallup_us199206,554
-United States,1992,legal2,2,486.4849946210632,gallup_us199206,554
-United States,1993,accept2,1,1257.5711369813348,"cbsnyt199302, uspew1993_nii",554
-United States,1993,accept2,2,909.5083360462431,"cbsnyt199302, uspew1993_nii",554
-United States,1993,approve4,1,670.9931515119531,usgss,554
-United States,1993,approve4,2,43.999550918816595,usgss,554
-United States,1993,approve4,3,73.99924472710063,usgss,554
-United States,1993,approve4,4,222.99772397491137,usgss,554
-United States,1993,legal2,1,499.80717228829536,cbsnyt199302,554
-United States,1993,legal2,2,534.6594172569919,cbsnyt199302,554
-United States,1993,marry2,1,1170.2216097317707,cnn199301,554
-United States,1993,marry2,2,489.04418836604566,cnn199301,554
-United States,1994,adopt2,1,984.8437200479483,"cnn199406, psra199402",554
-United States,1994,adopt2,2,457.1117926310758,"cnn199406, psra199402",554
-United States,1994,approve4,1,2050.7169669915165,"issp1994, usgss",554
-United States,1994,approve4,2,125.50704287022029,"issp1994, usgss",554
-United States,1994,approve4,3,194.46403792088057,"issp1994, usgss",554
-United States,1994,approve4,4,657.5772088677785,"issp1994, usgss",554
-United States,1994,legal2,1,925.5498556747127,"abcwapo199406, cnn199406",554
-United States,1994,legal2,2,1223.1454764383225,"abcwapo199406, cnn199406",554
-United States,1994,marry2,1,1797.9778374367725,"abcwapo199406, cnn199406, psra199402",554
-United States,1994,marry2,2,1058.9884398792944,"abcwapo199406, cnn199406, psra199402",554
-United States,1995,just10,1,647.0056879387653,wvs_combo,554
-United States,1995,just10,2,65.62766595132778,wvs_combo,554
-United States,1995,just10,3,63.36498822363898,wvs_combo,554
-United States,1995,just10,4,64.12588869843698,wvs_combo,554
-United States,1995,just10,5,249.77058677662092,wvs_combo,554
-United States,1995,just10,6,50.634923043301335,wvs_combo,554
-United States,1995,just10,7,56.15645740976316,wvs_combo,554
-United States,1995,just10,8,64.47129746660188,wvs_combo,554
-United States,1995,just10,9,16.975088881842296,wvs_combo,554
-United States,1995,just10,10,151.72455585955714,wvs_combo,554
-United States,1995,neigh2,1,454.7681877203908,wvs_combo,554
-United States,1995,neigh2,2,1088.403052184252,wvs_combo,554
-United States,1996,accept2,1,840,uspew1996_media,554
-United States,1996,accept2,2,803,uspew1996_media,554
-United States,1996,accept2a,1,237.13,gallup_us199603,554
-United States,1996,accept2a,2,205.32,gallup_us199603,554
-United States,1996,adopt2,1,826,"psra199605, psra199610",554
-United States,1996,adopt2,2,630,"psra199605, psra199610",554
-United States,1996,approve4,1,1077.9889975110066,usgss,554
-United States,1996,approve4,2,92.99905080568053,usgss,554
-United States,1996,approve4,3,109.99887729704149,usgss,554
-United States,1996,approve4,4,502.99486618556244,usgss,554
-United States,1996,civil2,1,436.31359826980264,abcwapo199608,554
-United States,1996,civil2,2,275.3769126791025,abcwapo199608,554
-United States,1996,legal2,1,472.89916418982267,gallup_us199611,554
-United States,1996,legal2,2,442.7477409187928,gallup_us199611,554
-United States,1996,marry2,1,1712.2965028555996,"ap_us1996, gallup_us199603, psra199605",554
-United States,1996,marry2,2,845.3281956715683,"ap_us1996, gallup_us199603, psra199605",554
-United States,1996,marry4a,1,805.553678395841,uspew1996_05pol,554
-United States,1996,marry4a,2,475.0228987322697,uspew1996_05pol,554
-United States,1996,marry4a,3,418.4370114152241,uspew1996_05pol,554
-United States,1996,marry4a,4,124.32804876900182,uspew1996_05pol,554
-United States,1997,adopt2,1,376,psra199706,554
-United States,1997,adopt2,2,303,psra199706,554
-United States,1997,marry2,1,434,psra199706,554
-United States,1997,marry2,2,262,psra199706,554
-United States,1998,adopt2,1,925.1012971650682,"cnn199810, psra199808",554
-United States,1998,adopt2,2,579.1334333100502,"cnn199810, psra199808",554
-United States,1998,approve4,1,1733.8333050574342,"issp1998, usgss",554
-United States,1998,approve4,2,163.98502655372607,"issp1998, usgss",554
-United States,1998,approve4,3,205.9802339546556,"issp1998, usgss",554
-United States,1998,approve4,4,797.9330461394469,"issp1998, usgss",554
-United States,1998,legal2,1,742.9262501250689,"cnn199810, uswapo199808",554
-United States,1998,legal2,2,1224.0109693408256,"cnn199810, uswapo199808",554
-United States,1998,marry2,1,1023.9649480820149,"cnn199810, psra199808",554
-United States,1998,marry2,2,503.99484171915276,"cnn199810, psra199808",554
-United States,1999,accept2,1,245.23301993301897,gallup_us199902,554
-United States,1999,accept2,2,267.2423934802615,gallup_us199902,554
-United States,1999,adopt4a,1,356.57155160465123,uspew1999_nii,554
-United States,1999,adopt4a,2,327.2059261547561,uspew1999_nii,554
-United States,1999,adopt4a,3,342.1820711580236,uspew1999_nii,554
-United States,1999,adopt4a,4,123.456984120376,uspew1999_nii,554
-United States,1999,just10,1,371.8456212085127,wvs_combo,554
-United States,1999,just10,2,42.864920584894854,wvs_combo,554
-United States,1999,just10,3,48.719633005933716,wvs_combo,554
-United States,1999,just10,4,55.904760647790376,wvs_combo,554
-United States,1999,just10,5,189.55735811907192,wvs_combo,554
-United States,1999,just10,6,131.03169691272691,wvs_combo,554
-United States,1999,just10,7,54.20939200672772,wvs_combo,554
-United States,1999,just10,8,62.31575016238643,wvs_combo,554
-United States,1999,just10,9,55.24205574239069,wvs_combo,554
-United States,1999,just10,10,166.0083834853621,wvs_combo,554
-United States,1999,legal2,1,451.5071487528818,gallup_us199902,554
-United States,1999,legal2,2,526.3050197812206,gallup_us199902,554
-United States,1999,marry4a,1,502.5651535783708,nbcwsj199906,554
-United States,1999,marry4a,2,145.69299798850818,nbcwsj199906,554
-United States,1999,marry4a,3,145.9611378585846,nbcwsj199906,554
-United States,1999,marry4a,4,132.35604101791537,nbcwsj199906,554
-United States,1999,neigh2,1,279.95687129000686,wvs_combo,554
-United States,1999,neigh2,2,920.9682223024096,wvs_combo,554
-United States,2000,adopt2,1,889.8092613808446,anes_combo,554
-United States,2000,adopt2,2,702.6125387821173,anes_combo,554
-United States,2000,approve4,1,1972.9898242286397,"lat200006, usgss",554
-United States,2000,approve4,2,172.99922431431958,"lat200006, usgss",554
-United States,2000,approve4,3,311.9986221372782,"lat200006, usgss",554
-United States,2000,approve4,4,1109.9950090750299,"lat200006, usgss",554
-United States,2000,marry2,1,776.0683306757394,"cnn200001, psra200003",554
-United States,2000,marry2,2,444.10819338595434,"cnn200001, psra200003",554
-United States,2000,marry4a,1,980,lat200006,554
-United States,2000,marry4a,2,191,lat200006,554
-United States,2000,marry4a,3,289,lat200006,554
-United States,2000,marry4a,4,453,lat200006,554
-United States,2002,accept2,1,636.1247503384732,pew2002,554
-United States,2002,accept2,2,760.2172523664278,pew2002,554
-United States,2002,adopt2,1,437.6841046484179,psra2002,554
-United States,2002,adopt2,2,457.5751044328807,psra2002,554
-United States,2002,approve4,1,485.99503969420147,usgss,554
-United States,2002,approve4,2,42.99956112520712,usgss,554
-United States,2002,approve4,3,62.99935699739649,usgss,554
-United States,2002,approve4,4,291.9970197339647,usgss,554
-United States,2002,marry2,1,571.2452915396536,psra2002,554
-United States,2002,marry2,2,350.1657583315371,psra2002,554
-United States,2003,legal2,1,379.3782255597548,gallup_us200305,554
-United States,2003,legal2,2,595.9785275165533,gallup_us200305,554
-United States,2003,marry2,1,2742.5776922331484,"cnn200306, cnn200309, cnn200310, cnn200312",554
-United States,2003,marry2,2,1532.3243241634038,"cnn200306, cnn200309, cnn200310, cnn200312",554
-United States,2003,marry4a,1,838.6286804198086,"uspew2003_10nii, uspew2003_rel",554
-United States,2003,marry4a,2,596.6929831226191,"uspew2003_10nii, uspew2003_rel",554
-United States,2003,marry4a,3,623.6505005191545,"uspew2003_10nii, uspew2003_rel",554
-United States,2003,marry4a,4,227.85628392433804,"uspew2003_10nii, uspew2003_rel",554
-United States,2004,adopt2,1,974.583244747733,"anes_combo, psra2004",554
-United States,2004,adopt2,2,908.0948520063623,"anes_combo, psra2004",554
-United States,2004,approve4,1,484.5050549017233,usgss,554
-United States,2004,approve4,2,41.369577761623695,usgss,554
-United States,2004,approve4,3,57.64941160158583,usgss,554
-United States,2004,approve4,4,259.38735256435996,usgss,554
-United States,2004,legal2,1,495.5392868538608,gallup_us200401,554
-United States,2004,legal2,2,457.3647196075303,gallup_us200401,554
-United States,2004,marry2,1,3685.9992369752586,"abcwapo200401, cnn200402, cnn200403, cnn200405, cnn200407, gallup_us200402, psra2004, uspew2004_ial",554
-United States,2004,marry2,2,2046.6834427952244,"abcwapo200401, cnn200402, cnn200403, cnn200405, cnn200407, gallup_us200402, psra2004, uspew2004_ial",554
-United States,2004,marry4a,1,1894.0874017724705,"uspew2004_3nii, uspew2004_8nii, uspew2004_typo",554
-United States,2004,marry4a,2,1242.2268186282301,"uspew2004_3nii, uspew2004_8nii, uspew2004_typo",554
-United States,2004,marry4a,3,1042.303225977774,"uspew2004_3nii, uspew2004_8nii, uspew2004_typo",554
-United States,2004,marry4a,4,585.1300740147965,"uspew2004_3nii, uspew2004_8nii, uspew2004_typo",554
-United States,2004,marry4b,1,574.2488270066261,abcwapo200403,554
-United States,2004,marry4b,2,125.85273203172488,abcwapo200403,554
-United States,2004,marry4b,3,171.5159445402377,abcwapo200403,554
-United States,2004,marry4b,4,280.13222283804254,abcwapo200403,554
-United States,2004,marry5,1,407.84583732362154,usgss,554
-United States,2004,marry5,2,243.93751025309362,usgss,554
-United States,2004,marry5,3,164.50832094669357,usgss,554
-United States,2004,marry5,4,226.1376919268451,usgss,554
-United States,2004,marry5,5,143.94853079008294,usgss,554
-United States,2005,marry2,1,1733.2519874665825,"abcwapo200508, cnn200503, cnn200505, gallup_us200508",554
-United States,2005,marry2,2,1072.272873778042,"abcwapo200508, cnn200503, cnn200505, gallup_us200508",554
-United States,2005,marry4a,1,456.889608630969,uspew2005_news,554
-United States,2005,marry4a,2,335.1708868038629,uspew2005_news,554
-United States,2005,marry4a,3,344.45456535369385,uspew2005_news,554
-United States,2005,marry4a,4,198.61276763089845,uspew2005_news,554
-United States,2006,accept2,1,569.083819413399,uspew2006_09next,554
-United States,2006,accept2,2,764.4564370103523,uspew2006_09next,554
-United States,2006,adopt4a,1,597.9323961458524,"uspew2006_nii, uspew2006_rel",554
-United States,2006,adopt4a,2,594.6551645803528,"uspew2006_nii, uspew2006_rel",554
-United States,2006,adopt4a,3,749.8779902762833,"uspew2006_nii, uspew2006_rel",554
-United States,2006,adopt4a,4,307.2529186136339,"uspew2006_nii, uspew2006_rel",554
-United States,2006,approve3,1,374.5153753277711,uspew2006_02nii,554
-United States,2006,approve3,2,243.09091907759014,uspew2006_02nii,554
-United States,2006,approve3,3,90.43096989648137,uspew2006_02nii,554
-United States,2006,approve4,1,1053.0692518542587,usgss,554
-United States,2006,approve4,2,92.8790520304474,usgss,554
-United States,2006,approve4,3,128.40868939739178,usgss,554
-United States,2006,approve4,4,622.9336420310821,usgss,554
-United States,2006,just10,1,378.00714260397694,wvs_combo,554
-United States,2006,just10,2,47.079499028544774,wvs_combo,554
-United States,2006,just10,3,55.34643486986662,wvs_combo,554
-United States,2006,just10,4,40.193721959744,wvs_combo,554
-United States,2006,just10,5,279.78473540454274,wvs_combo,554
-United States,2006,just10,6,53.154595948257075,wvs_combo,554
-United States,2006,just10,7,57.248030281308694,wvs_combo,554
-United States,2006,just10,8,43.63661049414439,wvs_combo,554
-United States,2006,just10,9,37.27127006426461,wvs_combo,554
-United States,2006,just10,10,172.0543511478982,wvs_combo,554
-United States,2006,marry4a,1,1484.36112210677,"uspew2006_elec, uspew2006_nii, uspew2006_rel",554
-United States,2006,marry4a,2,1250.2832349005503,"uspew2006_elec, uspew2006_nii, uspew2006_rel",554
-United States,2006,marry4a,3,1110.6848605853897,"uspew2006_elec, uspew2006_nii, uspew2006_rel",554
-United States,2006,marry4a,4,526.926917923504,"uspew2006_elec, uspew2006_nii, uspew2006_rel",554
-United States,2006,marry5,1,692.4429325848761,usgss,554
-United States,2006,marry5,2,309.7868381622771,usgss,554
-United States,2006,marry5,3,267.9772648914652,usgss,554
-United States,2006,marry5,4,404.8458679427932,usgss,554
-United States,2006,marry5,5,304.24689470568063,usgss,554
-United States,2006,neigh2,1,311.72152991986724,wvs_combo,554
-United States,2006,neigh2,2,930.8409622977966,wvs_combo,554
-United States,2006,run10,1,88.99949212149818,amb_combo,554
-United States,2006,run10,2,15.999908695999673,amb_combo,554
-United States,2006,run10,3,13.999920108999714,amb_combo,554
-United States,2006,run10,4,4.999971467499898,amb_combo,554
-United States,2006,run10,5,49.99971467499898,amb_combo,554
-United States,2006,run10,6,18.99989157649961,amb_combo,554
-United States,2006,run10,7,36.99978885949925,amb_combo,554
-United States,2006,run10,8,50.99970896849896,amb_combo,554
-United States,2006,run10,9,27.999840217999427,amb_combo,554
-United States,2006,run10,10,286.99836223449415,amb_combo,554
-United States,2007,accept2,1,14470.542554316764,"pew2007, uspew2007_rls",554
-United States,2007,accept2,2,18225.46084785196,"pew2007, uspew2007_rls",554
-United States,2007,adopt2,1,890.5647645059171,"cnn200705, gallup_us200709",554
-United States,2007,adopt2,2,1076.5432193235742,"cnn200705, gallup_us200709",554
-United States,2007,civil2,1,470.74381675617735,abcwapo200711,554
-United States,2007,civil2,2,613.5892914961464,abcwapo200711,554
-United States,2007,marry2,1,1273.95458944054,"cnn200708, cnn200710",554
-United States,2007,marry2,2,892.9999399923263,"cnn200708, cnn200710",554
-United States,2007,marry4a,1,1339.0519189299935,"uspew2007_prim, uspew2007_rel",554
-United States,2007,marry4a,2,1058.4406791277577,"uspew2007_prim, uspew2007_rel",554
-United States,2007,marry4a,3,1041.6370839791311,"uspew2007_prim, uspew2007_rel",554
-United States,2007,marry4a,4,551.8666320489817,"uspew2007_prim, uspew2007_rel",554
-United States,2008,adopt2,1,1421.4627192005225,"anes_combo, psra2008",554
-United States,2008,adopt2,2,1663.1938737864257,"anes_combo, psra2008",554
-United States,2008,adopt4a,1,733.2997282473074,uspew2008_rel,554
-United States,2008,adopt4a,2,645.8731987133486,uspew2008_rel,554
-United States,2008,adopt4a,3,880.8808057235012,uspew2008_rel,554
-United States,2008,adopt4a,4,464.2896377720756,uspew2008_rel,554
-United States,2008,approve4,1,1385.4418049983024,"issp2008, usgss",554
-United States,2008,approve4,2,102.67695133148345,"issp2008, usgss",554
-United States,2008,approve4,3,164.8329738355741,"issp2008, usgss",554
-United States,2008,approve4,4,920.0471915400736,"issp2008, usgss",554
-United States,2008,marry2,1,2209.4754508723368,"cnn200806, cnn200812, psra2008, uspew2008_10mid",554
-United States,2008,marry2,2,1799.7520760131358,"cnn200806, cnn200812, psra2008, uspew2008_10mid",554
-United States,2008,marry4a,1,1929.724076737547,"uspew2008_pol, uspew2008_rel, uspew2008_vote",554
-United States,2008,marry4a,2,1363.2003377441602,"uspew2008_pol, uspew2008_rel, uspew2008_vote",554
-United States,2008,marry4a,3,1590.495925438111,"uspew2008_pol, uspew2008_rel, uspew2008_vote",554
-United States,2008,marry4a,4,900.8247800856178,"uspew2008_pol, uspew2008_rel, uspew2008_vote",554
-United States,2008,marry5,1,430.6788339193891,usgss,554
-United States,2008,marry5,2,207.88991226936943,usgss,554
-United States,2008,marry5,3,178.55376552100364,usgss,554
-United States,2008,marry5,4,322.5909973853125,usgss,554
-United States,2008,marry5,5,210.09129529275393,usgss,554
-United States,2008,run10,1,178.95097555410598,amb_combo,554
-United States,2008,run10,2,38.82576595733514,amb_combo,554
-United States,2008,run10,3,35.37348156287871,amb_combo,554
-United States,2008,run10,4,46.56528951834226,amb_combo,554
-United States,2008,run10,5,156.61934985552824,amb_combo,554
-United States,2008,run10,6,112.02697486088861,amb_combo,554
-United States,2008,run10,7,77.66430693508626,amb_combo,554
-United States,2008,run10,8,126.49083717473916,amb_combo,554
-United States,2008,run10,9,129.07077546708786,amb_combo,554
-United States,2008,run10,10,597.1236246255356,amb_combo,554
-United States,2009,adopt2,1,446.33873049973886,gallup_us200905,554
-United States,2009,adopt2,2,546.0252480955525,gallup_us200905,554
-United States,2009,approve3,1,976.8968515121348,uspew2009_rel,554
-United States,2009,approve3,2,699.8729459791473,uspew2009_rel,554
-United States,2009,approve3,3,178.95842372343083,uspew2009_rel,554
-United States,2009,marry2,1,8525.079717314828,"cces2009, cnn200905, gallup_us200905",554
-United States,2009,marry2,2,7193.5136302540395,"cces2009, cnn200905, gallup_us200905",554
-United States,2009,marry4a,1,1529.9622082302237,"nbcwsj200910, uspew2009_rel, uspew2009_val",554
-United States,2009,marry4a,2,907.5678753406162,"nbcwsj200910, uspew2009_rel, uspew2009_val",554
-United States,2009,marry4a,3,969.846551777259,"nbcwsj200910, uspew2009_rel, uspew2009_val",554
-United States,2009,marry4a,4,764.5780197227537,"nbcwsj200910, uspew2009_rel, uspew2009_val",554
-United States,2009,marry4b,1,192.29282245250744,abcwapo200905,554
-United States,2009,marry4b,2,32.634073520726744,abcwapo200905,554
-United States,2009,marry4b,3,93.67809810182759,abcwapo200905,554
-United States,2009,marry4b,4,168.91379814239684,abcwapo200905,554
-United States,2010,approve4,1,546.8511598619962,usgss,554
-United States,2010,approve4,2,45.0919230564075,usgss,554
-United States,2010,approve4,3,96.14673528200012,usgss,554
-United States,2010,approve4,4,525.5233632214781,usgss,554
-United States,2010,marry4a,1,1284.6701924179442,"uspew2010_rel, uspew2010_st",554
-United States,2010,marry4a,2,1194.8894757363437,"uspew2010_rel, uspew2010_st",554
-United States,2010,marry4a,3,1209.3398667737733,"uspew2010_rel, uspew2010_st",554
-United States,2010,marry4a,4,796.8609979050177,"uspew2010_rel, uspew2010_st",554
-United States,2010,marry4b,1,411.1380952499525,abcwapo201002,554
-United States,2010,marry4b,2,84.50585791540941,abcwapo201002,554
-United States,2010,marry4b,3,158.66572098320668,abcwapo201002,554
-United States,2010,marry4b,4,308.9852461228854,abcwapo201002,554
-United States,2010,marry5,1,307.74188495392804,usgss,554
-United States,2010,marry5,2,196.302729266402,usgss,554
-United States,2010,marry5,3,164.46058875698344,usgss,554
-United States,2010,marry5,4,317.41990447376475,usgss,554
-United States,2010,marry5,5,273.3458506733169,usgss,554
-United States,2011,accept2,1,325.5755702141031,pew2011,554
-United States,2011,accept2,2,603.0770163962859,pew2011,554
-United States,2011,adopt4a,1,652.1095995779322,prri2011_mrgl,554
-United States,2011,adopt4a,2,660.5706791051767,prri2011_mrgl,554
-United States,2011,adopt4a,3,993.6295368594406,prri2011_mrgl,554
-United States,2011,adopt4a,4,605.4553254014821,prri2011_mrgl,554
-United States,2011,just10,1,537.0776325029991,wvs_combo,554
-United States,2011,just10,2,72.39494649461858,wvs_combo,554
-United States,2011,just10,3,83.14310415776765,wvs_combo,554
-United States,2011,just10,4,64.62905231714775,wvs_combo,554
-United States,2011,just10,5,503.53217208691365,wvs_combo,554
-United States,2011,just10,6,100.8965787335837,wvs_combo,554
-United States,2011,just10,7,86.68579299645924,wvs_combo,554
-United States,2011,just10,8,124.00411694979525,wvs_combo,554
-United States,2011,just10,9,106.77103734463445,wvs_combo,554
-United States,2011,just10,10,480.7548845251564,wvs_combo,554
-United States,2011,legal2,1,335.2003944695758,gallup_us201112,554
-United States,2011,legal2,2,630.5143117879677,gallup_us201112,554
-United States,2011,marry2,1,1351.8378883777218,"cnn201105, cnn201109, gallup_us201112",554
-United States,2011,marry2,2,1464.3201217787978,"cnn201105, cnn201109, gallup_us201112",554
-United States,2011,marry4a,1,2141.823381978433,"prri2011_avs, prri2011_mrgl, prri2011_pici, uspew2011_typo",554
-United States,2011,marry4a,2,1755.5570181408573,"prri2011_avs, prri2011_mrgl, prri2011_pici, uspew2011_typo",554
-United States,2011,marry4a,3,2309.72123870875,"prri2011_avs, prri2011_mrgl, prri2011_pici, uspew2011_typo",554
-United States,2011,marry4a,4,1643.7973217626363,"prri2011_avs, prri2011_mrgl, prri2011_pici, uspew2011_typo",554
-United States,2011,marry4b,1,706.3858665357355,"abcwapo201103, abcwapo201107",554
-United States,2011,marry4b,2,176.05480591925092,"abcwapo201103, abcwapo201107",554
-United States,2011,marry4b,3,362.41056261310524,"abcwapo201103, abcwapo201107",554
-United States,2011,marry4b,4,669.8229279140169,"abcwapo201103, abcwapo201107",554
-United States,2011,neigh2,1,455.2955613454067,wvs_combo,554
-United States,2011,neigh2,2,1778.4698274055368,wvs_combo,554
-United States,2012,accept2,1,482.1089630205149,uspew2012_comm,554
-United States,2012,accept2,2,850.8559916023347,uspew2012_comm,554
-United States,2012,adopt2,1,2396.308685448407,"anes_combo, gallup_us201211",554
-United States,2012,adopt2,2,4075.0009028845216,"anes_combo, gallup_us201211",554
-United States,2012,adopt4a,1,912.5555404274296,"prri2012_3rns, uspew2012_rel",554
-United States,2012,adopt4a,2,834.5707341869509,"prri2012_3rns, uspew2012_rel",554
-United States,2012,adopt4a,3,1320.2084236480425,"prri2012_3rns, uspew2012_rel",554
-United States,2012,adopt4a,4,1146.72188076357,"prri2012_3rns, uspew2012_rel",554
-United States,2012,approve4,1,551.5520931225457,usgss,554
-United States,2012,approve4,2,34.79423500228972,usgss,554
-United States,2012,approve4,3,95.4337122371754,usgss,554
-United States,2012,approve4,4,536.2685524122074,usgss,554
-United States,2012,ff5,1,192.07085577706425,issp2012,554
-United States,2012,ff5,2,322.84820056440486,issp2012,554
-United States,2012,ff5,3,142.32316715450713,issp2012,554
-United States,2012,ff5,4,465.82270777754985,issp2012,554
-United States,2012,ff5,5,125.62044074778159,issp2012,554
-United States,2012,legal2,1,337.0729856512141,gallup_us201211,554
-United States,2012,legal2,2,646.2282698675497,gallup_us201211,554
-United States,2012,marry2,1,26257.71002265086,"cces2012, cnn201205, gallup_us201211",554
-United States,2012,marry2,2,29747.749372515256,"cces2012, cnn201205, gallup_us201211",554
-United States,2012,marry4a,1,3474.184882051371,"prri2012_3rns, prri2012_6rns, prri2012_avs, prri2012_rcc, uspew2012_10late, uspew2012_rel, uspew2012_05val",554
-United States,2012,marry4a,2,2737.7943030025667,"prri2012_3rns, prri2012_6rns, prri2012_avs, prri2012_rcc, uspew2012_10late, uspew2012_rel, uspew2012_05val",554
-United States,2012,marry4a,3,3722.8352486195317,"prri2012_3rns, prri2012_6rns, prri2012_avs, prri2012_rcc, uspew2012_10late, uspew2012_rel, uspew2012_05val",554
-United States,2012,marry4a,4,3438.2149411221358,"prri2012_3rns, prri2012_6rns, prri2012_avs, prri2012_rcc, uspew2012_10late, uspew2012_rel, uspew2012_05val",554
-United States,2012,marry4b,1,355.3632188381108,abcwapo201203,554
-United States,2012,marry4b,2,70.74920991577663,abcwapo201203,554
-United States,2012,marry4b,3,165.64683399572743,abcwapo201203,554
-United States,2012,marry4b,4,356.29837494584035,abcwapo201203,554
-United States,2012,marry5,1,316.3094816511471,usgss,554
-United States,2012,marry5,2,177.91168512404332,usgss,554
-United States,2012,marry5,3,154.32516594356088,usgss,554
-United States,2012,marry5,4,303.55085750978435,usgss,554
-United States,2012,marry5,5,326.0464197353873,usgss,554
-United States,2012,mm5,1,219.7412636081714,issp2012,554
-United States,2012,mm5,2,335.50946566331896,issp2012,554
-United States,2012,mm5,3,149.13744369076582,issp2012,554
-United States,2012,mm5,4,423.78746571346403,issp2012,554
-United States,2012,mm5,5,119.26982828737071,issp2012,554
-United States,2013,accept2,1,861.5348753936578,"pew2013, uspew2013_3pol",554
-United States,2013,accept2,2,1460.142785249912,"pew2013, uspew2013_3pol",554
-United States,2013,adopt4a,1,195.5984619458245,prri2013_3rap,554
-United States,2013,adopt4a,2,180.43966489500684,prri2013_3rap,554
-United States,2013,adopt4a,3,326.1519365463158,prri2013_3rap,554
-United States,2013,adopt4a,4,243.95625253769404,prri2013_3rap,554
-United States,2013,approve3,1,375.26773994006356,pew2013,554
-United States,2013,approve3,2,346.39159857164793,pew2013,554
-United States,2013,approve3,3,225.5961262933433,pew2013,554
-United States,2013,marry2,1,891.2539224889933,"cnn201303, cnn201306",554
-United States,2013,marry2,2,1089.4937598686543,"cnn201303, cnn201306",554
-United States,2013,marry4a,1,2056.779011960745,"prri2013_3rap, prri2013_5rap, prri2013_rvi, uspew2013_3pol, uspew2013_5pol",554
-United States,2013,marry4a,2,1892.3260030624438,"prri2013_3rap, prri2013_5rap, prri2013_rvi, uspew2013_3pol, uspew2013_5pol",554
-United States,2013,marry4a,3,2624.8173130631403,"prri2013_3rap, prri2013_5rap, prri2013_rvi, uspew2013_3pol, uspew2013_5pol",554
-United States,2013,marry4a,4,2219.109580678614,"prri2013_3rap, prri2013_5rap, prri2013_rvi, uspew2013_3pol, uspew2013_5pol",554
-United States,2013,marry4b,1,297.3459479331948,abcwapo201303,554
-United States,2013,marry4b,2,60.08590451870734,abcwapo201303,554
-United States,2013,marry4b,3,171.84147762673805,abcwapo201303,554
-United States,2013,marry4b,4,404.4372963936507,abcwapo201303,554
-United States,2014,accept2,1,17147.906065123225,"pewrel2014_us, uspew2014_typo",554
-United States,2014,accept2,2,23941.40581094521,"pewrel2014_us, uspew2014_typo",554
-United States,2014,adopt2,1,334.6318420223226,abcwapo201402,554
-United States,2014,adopt2,2,607.6222567668941,abcwapo201402,554
-United States,2014,approve4,1,663.8549195260408,usgss,554
-United States,2014,approve4,2,57.792867589959826,usgss,554
-United States,2014,approve4,3,119.89309717791404,usgss,554
-United States,2014,approve4,4,818.32418294122715,usgss,554
-United States,2014,marry2,1,24818.29658079929,"cces2014, cnn201412",554
-United States,2014,marry2,2,31799.2175396607,"cces2014, cnn201412",554
-United States,2014,marry4a,1,7676.807192951617,"abcwapo201402, uspew2014_9rel, uspew2014_rls, uspew2014_typo",554
-United States,2014,marry4a,2,8492.482084935735,"abcwapo201402, uspew2014_9rel, uspew2014_rls, uspew2014_typo",554
-United States,2014,marry4a,3,11814.323902725417,"abcwapo201402, uspew2014_9rel, uspew2014_rls, uspew2014_typo",554
-United States,2014,marry4a,4,10252.713743449458,"abcwapo201402, uspew2014_9rel, uspew2014_rls, uspew2014_typo",554
-United States,2014,marry5,1,322.0587951919283,usgss,554
-United States,2014,marry5,2,219.43071522678682,usgss,554
-United States,2014,marry5,3,192.00830900102224,usgss,554
-United States,2014,marry5,4,423.7989064218501,usgss,554
-United States,2014,marry5,5,537.9073999452755,usgss,554
-United States,2015,accept2,1,2426.674229135071,"uspew2015_5pol, uspew2015_gov",554
-United States,2015,accept2,2,4888.0669436264125,"uspew2015_5pol, uspew2015_gov",554
-United States,2015,marry2,1,6132.559642258798,cces2015,554
-United States,2015,marry2,2,7967.949760740714,cces2015,554
-United States,2015,marry4a,1,966.7811878117227,"prri2015_rap, uspew2015_5pol, uspew2015_7pol",554
-United States,2015,marry4a,2,953.2754313536897,"prri2015_rap, uspew2015_5pol, uspew2015_7pol",554
-United States,2015,marry4a,3,1371.310740119688,"prri2015_rap, uspew2015_5pol, uspew2015_7pol",554
-United States,2015,marry4a,4,1391.2381160259397,"prri2015_rap, uspew2015_5pol, uspew2015_7pol",554
-United States,2016,accept2,1,554.4179295429777,uspew2016_fp,554
-United States,2016,accept2,2,1261.5952795302885,uspew2016_fp,554
-United States,2016,adopt2,1,2171.5018321717916,"anes_combo, anes2016",554
-United States,2016,adopt2,2,5971.98326501279,"anes_combo, anes2016",554
-United States,2016,approve3,1,788.4320280029281,pewrel2016_us,554
-United States,2016,approve3,2,1025.4967323502874,pewrel2016_us,554
-United States,2016,approve3,3,386.120960479056,pewrel2016_us,554
-United States,2016,approve4,1,720.7752094787407,usgss,554
-United States,2016,approve4,2,66.03459935399312,usgss,554
-United States,2016,approve4,3,99.6362855980827,usgss,554
-United States,2016,approve4,4,935.6548441284938,usgss,554
-United States,2016,marry2,1,24632.452685411346,cces2016,554
-United States,2016,marry2,2,39511.315515761366,cces2016,554
-United States,2016,marry4a,1,840.8271264713323,"prriatlantic2016_wwc, uspew2016_3pol",554
-United States,2016,marry4a,2,1000.6568115596956,"prriatlantic2016_wwc, uspew2016_3pol",554
-United States,2016,marry4a,3,1527.6424348768787,"prriatlantic2016_wwc, uspew2016_3pol",554
-United States,2016,marry4a,4,1515.0365006437396,"prriatlantic2016_wwc, uspew2016_3pol",554
-United States,2016,marry5,1,310.05895523487874,usgss,554
-United States,2016,marry5,2,231.8520135721712,usgss,554
-United States,2016,marry5,3,219.24391843470312,usgss,554
-United States,2016,marry5,4,469.493672497561,usgss,554
-United States,2016,marry5,5,644.738518347307,usgss,554
-United States,2017,accept2,1,1201.0346540927678,uspew2017_6typo,554
-United States,2017,accept2,2,3481.473600163256,uspew2017_6typo,554
-United States,2017,just10,1,985.2453310646742,"wvs_combo, wvs7",554
-United States,2017,just10,2,154.8503720767806,"wvs_combo, wvs7",554
-United States,2017,just10,3,166.09981628636257,"wvs_combo, wvs7",554
-United States,2017,just10,4,153.20757452942024,"wvs_combo, wvs7",554
-United States,2017,just10,5,907.4907850948861,"wvs_combo, wvs7",554
-United States,2017,just10,6,266.3847039403835,"wvs_combo, wvs7",554
-United States,2017,just10,7,207.06445809249203,"wvs_combo, wvs7",554
-United States,2017,just10,8,380.02008026189696,"wvs_combo, wvs7",554
-United States,2017,just10,9,294.17391145891645,"wvs_combo, wvs7",554
-United States,2017,just10,10,1589.9594904272285,"wvs_combo, wvs7",554
-United States,2017,neigh2,1,2436.5325364501764,"wvs_combo, wvs7",554
-United States,2017,neigh2,2,2437.3909827364782,"wvs_combo, wvs7",554
-United States,2017,parent5,1,173.70680748249552,wvs7,554
-United States,2017,parent5,2,257.97683112563885,wvs7,554
-United States,2017,parent5,3,770.3894474982712,wvs7,554
-United States,2017,parent5,4,680.7980673323744,wvs7,554
-United States,2017,parent5,5,689.6487033717913,wvs7,554
-United States,2017,run10,1,145.01498644948265,amb_us2016,554
-United States,2017,run10,2,17.081101401225563,amb_us2016,554
-United States,2017,run10,3,49.662455981548646,amb_us2016,554
-United States,2017,run10,4,58.54650647803663,amb_us2016,554
-United States,2017,run10,5,128.11052937638183,amb_us2016,554
-United States,2017,run10,6,66.4859113333173,amb_us2016,554
-United States,2017,run10,7,76.20288848629576,amb_us2016,554
-United States,2017,run10,8,124.02483550067907,amb_us2016,554
-United States,2017,run10,9,103.78971989259051,amb_us2016,554
-United States,2017,run10,10,730.1655805503444,amb_us2016,554
-United States,2018,approve4,1,478.8601365368871,usgss,554
-United States,2018,approve4,2,54.97554381727861,usgss,554
-United States,2018,approve4,3,89.35975381319008,usgss,554
-United States,2018,approve4,4,883.6779947150565,usgss,554
-United States,2018,marry5,1,196.95059893912347,usgss,554
-United States,2018,marry5,2,144.24405633562054,usgss,554
-United States,2018,marry5,3,148.5604841205469,usgss,554
-United States,2018,marry5,4,403.1256454144957,usgss,554
-United States,2018,marry5,5,662.4542164661758,usgss,554
-United States,2019,accept2,1,319.1041016783488,pew2019,554
-United States,2019,accept2,2,1082.4007796994151,pew2019,554
+United States,1973,approve4,1,1052.98925267077,usgss,567
+United States,1973,approve4,2,94.99903039289947,usgss,567
+United States,1973,approve4,3,109.99887729704149,usgss,567
+United States,1973,approve4,4,158.99837718390543,usgss,567
+United States,1974,approve4,1,994.9898446414207,usgss,567
+United States,1974,approve4,2,70.99927534627223,usgss,567
+United States,1974,approve4,3,111.99885688426042,usgss,567
+United States,1974,approve4,4,182.99813223053266,usgss,567
+United States,1976,approve4,1,998.9898038158586,usgss,567
+United States,1976,approve4,2,87.99910183763319,usgss,567
+United States,1976,approve4,3,111.99885688426042,usgss,567
+United States,1976,approve4,4,226.99768314934926,usgss,567
+United States,1977,adopt2,1,1167.0754716981128,gallup_us197706,567
+United States,1977,adopt2,2,211.02515723270432,gallup_us197706,567
+United States,1977,approve4,1,1043.9893445282846,usgss,567
+United States,1977,approve4,2,83.99914266319531,usgss,567
+United States,1977,approve4,3,108.99888750343202,usgss,567
+United States,1977,approve4,4,215.9977954196451,usgss,567
+United States,1977,legal2,1,656.0251572327041,gallup_us197706,567
+United States,1977,legal2,2,653.2264150943395,gallup_us197706,567
+United States,1980,approve4,1,1023.9895486560953,usgss,567
+United States,1980,approve4,2,83.99914266319531,usgss,567
+United States,1980,approve4,3,84.99913245680479,usgss,567
+United States,1980,approve4,4,203.99791789633147,usgss,567
+United States,1981,legal2,1,909.0855642617944,abcwapo198105,567
+United States,1981,legal2,2,458.3631953701596,abcwapo198105,567
+United States,1982,accept2a,1,785.8483713964808,gallup_us198206,567
+United States,1982,accept2a,2,515.3010108573569,gallup_us198206,567
+United States,1982,approve4,1,1323.9864867389356,usgss,567
+United States,1982,approve4,2,92.99905080568053,usgss,567
+United States,1982,approve4,3,115.9988160586983,usgss,567
+United States,1982,approve4,4,237.9975708790534,usgss,567
+United States,1982,just10,1,2930.1926854200415,"evs_combo, wvs_combo",567
+United States,1982,just10,2,225.7500477055972,"evs_combo, wvs_combo",567
+United States,1982,just10,3,197.26795013006938,"evs_combo, wvs_combo",567
+United States,1982,just10,4,137.64609722260064,"evs_combo, wvs_combo",567
+United States,1982,just10,5,543.5357779723433,"evs_combo, wvs_combo",567
+United States,1982,just10,6,98.93521941040552,"evs_combo, wvs_combo",567
+United States,1982,just10,7,75.85612003614813,"evs_combo, wvs_combo",567
+United States,1982,just10,8,98.95616400106539,"evs_combo, wvs_combo",567
+United States,1982,just10,9,47.199687405955615,"evs_combo, wvs_combo",567
+United States,1982,just10,10,110.55681484372045,"evs_combo, wvs_combo",567
+United States,1982,legal2,1,598.9872706851368,gallup_us198206,567
+United States,1982,legal2,2,688.4054661175591,gallup_us198206,567
+United States,1984,approve4,1,1034.9894363857995,usgss,567
+United States,1984,approve4,2,69.99928555266277,usgss,567
+United States,1984,approve4,3,104.99892832899414,usgss,567
+United States,1984,approve4,4,201.99793830911256,usgss,567
+United States,1985,accept2a,1,620.3834170188036,usnwr198509,567
+United States,1985,accept2a,2,311.29103204769723,usnwr198509,567
+United States,1985,approve4,1,1117.9885892553852,usgss,567
+United States,1985,approve4,2,58.99939782295861,usgss,567
+United States,1985,approve4,3,103.99893853538468,usgss,567
+United States,1985,approve4,4,202.997928102722,usgss,567
+United States,1986,legal2,1,875.0135138143687,gallup_us198606,567
+United States,1986,legal2,2,494.39508426653606,gallup_us198606,567
+United States,1987,approve4,1,1367.9860376577524,usgss,567
+United States,1987,approve4,2,71.9992651398817,usgss,567
+United States,1987,approve4,3,101.99895894816574,usgss,567
+United States,1987,approve4,4,207.99787707076936,usgss,567
+United States,1987,legal2,1,560.9961632070465,gallup_us198703,567
+United States,1987,legal2,2,337.96598124912316,gallup_us198703,567
+United States,1988,approve4,1,719.992651398817,usgss,567
+United States,1988,approve4,2,43.999550918816595,usgss,567
+United States,1988,approve4,3,52.999459061301806,usgss,567
+United States,1988,approve4,4,119.99877523313617,usgss,567
+United States,1988,legal2,1,559.0031792124565,gallup_us198807,567
+United States,1988,legal2,2,349.9386687360753,gallup_us198807,567
+United States,1988,marry5,1,1226.2699340294307,"issp1988, usgss",567
+United States,1988,marry5,2,672.1479573146635,"issp1988, usgss",567
+United States,1988,marry5,3,392.08630843355377,"issp1988, usgss",567
+United States,1988,marry5,4,236.05196119979257,"issp1988, usgss",567
+United States,1988,marry5,5,88.01937536263452,"issp1988, usgss",567
+United States,1989,accept2a,1,322.6204029621583,gallup_us198909,567
+United States,1989,accept2a,2,209.93513750639747,gallup_us198909,567
+United States,1989,approve4,1,726.9925799540832,usgss,567
+United States,1989,approve4,2,39.99959174437872,usgss,567
+United States,1989,approve4,3,58.99939782295861,usgss,567
+United States,1989,approve4,4,153.99842821585807,usgss,567
+United States,1989,legal2,1,440.67810576560726,gallup_us198910,567
+United States,1989,legal2,2,578.4362517271699,gallup_us198910,567
+United States,1990,approve4,1,664.9932127502963,usgss,567
+United States,1990,approve4,2,41.99957133159766,usgss,567
+United States,1990,approve4,3,52.999459061301806,usgss,567
+United States,1990,approve4,4,111.99885688426042,usgss,567
+United States,1990,just10,1,1937.6143348397193,"evs_combo, wvs_combo",567
+United States,1990,just10,2,151.66766732336703,"evs_combo, wvs_combo",567
+United States,1990,just10,3,191.56768819591088,"evs_combo, wvs_combo",567
+United States,1990,just10,4,163.1134877839181,"evs_combo, wvs_combo",567
+United States,1990,just10,5,473.948296440027,"evs_combo, wvs_combo",567
+United States,1990,just10,6,194.15418233203292,"evs_combo, wvs_combo",567
+United States,1990,just10,7,114.48096150829437,"evs_combo, wvs_combo",567
+United States,1990,just10,8,120.72830490261592,"evs_combo, wvs_combo",567
+United States,1990,just10,9,81.06128681900387,"evs_combo, wvs_combo",567
+United States,1990,just10,10,149.0990663398626,"evs_combo, wvs_combo",567
+United States,1990,neigh2,1,1421.607017777429,"evs_combo, wvs_combo",567
+United States,1990,neigh2,2,2261.5409215023283,"evs_combo, wvs_combo",567
+United States,1991,approve4,1,1632.0366650897563,"issp1991, usgss",567
+United States,1991,approve4,2,100.13462499641854,"issp1991, usgss",567
+United States,1991,approve4,3,110.26484175224384,"issp1991, usgss",567
+United States,1991,approve4,4,326.25467382912393,"issp1991, usgss",567
+United States,1991,legal2,1,660.8408775114862,gallup_us199109,567
+United States,1991,legal2,2,425.72394697607433,gallup_us199109,567
+United States,1992,accept2a,1,570.0066773008866,gallup_us199206,567
+United States,1992,accept2a,2,381.34258263159853,gallup_us199206,567
+United States,1992,adopt2,1,1484.4430195068662,anes_combo,567
+United States,1992,adopt2,2,567.071347484537,anes_combo,567
+United States,1992,legal2,1,437.9343769707312,gallup_us199206,567
+United States,1992,legal2,2,486.4849946210632,gallup_us199206,567
+United States,1993,accept2,1,1257.5711369813348,"cbsnyt199302, uspew1993_nii",567
+United States,1993,accept2,2,909.5083360462431,"cbsnyt199302, uspew1993_nii",567
+United States,1993,approve4,1,670.9931515119531,usgss,567
+United States,1993,approve4,2,43.999550918816595,usgss,567
+United States,1993,approve4,3,73.99924472710063,usgss,567
+United States,1993,approve4,4,222.99772397491137,usgss,567
+United States,1993,legal2,1,499.80717228829536,cbsnyt199302,567
+United States,1993,legal2,2,534.6594172569919,cbsnyt199302,567
+United States,1993,marry2,1,1170.2216097317707,cnn199301,567
+United States,1993,marry2,2,489.04418836604566,cnn199301,567
+United States,1994,adopt2,1,984.8437200479483,"cnn199406, psra199402",567
+United States,1994,adopt2,2,457.1117926310758,"cnn199406, psra199402",567
+United States,1994,approve4,1,2050.7169669915165,"issp1994, usgss",567
+United States,1994,approve4,2,125.50704287022029,"issp1994, usgss",567
+United States,1994,approve4,3,194.46403792088057,"issp1994, usgss",567
+United States,1994,approve4,4,657.5772088677785,"issp1994, usgss",567
+United States,1994,legal2,1,925.5498556747127,"abcwapo199406, cnn199406",567
+United States,1994,legal2,2,1223.1454764383225,"abcwapo199406, cnn199406",567
+United States,1994,marry2,1,1797.9778374367725,"abcwapo199406, cnn199406, psra199402",567
+United States,1994,marry2,2,1058.9884398792944,"abcwapo199406, cnn199406, psra199402",567
+United States,1995,just10,1,647.0056879387653,wvs_combo,567
+United States,1995,just10,2,65.62766595132778,wvs_combo,567
+United States,1995,just10,3,63.36498822363898,wvs_combo,567
+United States,1995,just10,4,64.12588869843698,wvs_combo,567
+United States,1995,just10,5,249.77058677662092,wvs_combo,567
+United States,1995,just10,6,50.634923043301335,wvs_combo,567
+United States,1995,just10,7,56.15645740976316,wvs_combo,567
+United States,1995,just10,8,64.47129746660188,wvs_combo,567
+United States,1995,just10,9,16.975088881842296,wvs_combo,567
+United States,1995,just10,10,151.72455585955714,wvs_combo,567
+United States,1995,neigh2,1,454.7681877203908,wvs_combo,567
+United States,1995,neigh2,2,1088.403052184252,wvs_combo,567
+United States,1996,accept2,1,840,uspew1996_media,567
+United States,1996,accept2,2,803,uspew1996_media,567
+United States,1996,accept2a,1,237.13,gallup_us199603,567
+United States,1996,accept2a,2,205.32,gallup_us199603,567
+United States,1996,adopt2,1,826,"psra199605, psra199610",567
+United States,1996,adopt2,2,630,"psra199605, psra199610",567
+United States,1996,approve4,1,1077.9889975110066,usgss,567
+United States,1996,approve4,2,92.99905080568053,usgss,567
+United States,1996,approve4,3,109.99887729704149,usgss,567
+United States,1996,approve4,4,502.99486618556244,usgss,567
+United States,1996,civil2,1,436.31359826980264,abcwapo199608,567
+United States,1996,civil2,2,275.3769126791025,abcwapo199608,567
+United States,1996,legal2,1,472.89916418982267,gallup_us199611,567
+United States,1996,legal2,2,442.7477409187928,gallup_us199611,567
+United States,1996,marry2,1,1712.2965028555996,"ap_us1996, gallup_us199603, psra199605",567
+United States,1996,marry2,2,845.3281956715683,"ap_us1996, gallup_us199603, psra199605",567
+United States,1996,marry4a,1,805.553678395841,uspew1996_05pol,567
+United States,1996,marry4a,2,475.0228987322697,uspew1996_05pol,567
+United States,1996,marry4a,3,418.4370114152241,uspew1996_05pol,567
+United States,1996,marry4a,4,124.32804876900182,uspew1996_05pol,567
+United States,1997,adopt2,1,376,psra199706,567
+United States,1997,adopt2,2,303,psra199706,567
+United States,1997,marry2,1,434,psra199706,567
+United States,1997,marry2,2,262,psra199706,567
+United States,1998,adopt2,1,925.1012971650682,"cnn199810, psra199808",567
+United States,1998,adopt2,2,579.1334333100502,"cnn199810, psra199808",567
+United States,1998,approve4,1,1733.8333050574342,"issp1998, usgss",567
+United States,1998,approve4,2,163.98502655372607,"issp1998, usgss",567
+United States,1998,approve4,3,205.9802339546556,"issp1998, usgss",567
+United States,1998,approve4,4,797.9330461394469,"issp1998, usgss",567
+United States,1998,legal2,1,742.9262501250689,"cnn199810, uswapo199808",567
+United States,1998,legal2,2,1224.0109693408256,"cnn199810, uswapo199808",567
+United States,1998,marry2,1,1023.9649480820149,"cnn199810, psra199808",567
+United States,1998,marry2,2,503.99484171915276,"cnn199810, psra199808",567
+United States,1999,accept2,1,245.23301993301897,gallup_us199902,567
+United States,1999,accept2,2,267.2423934802615,gallup_us199902,567
+United States,1999,adopt4a,1,356.57155160465123,uspew1999_nii,567
+United States,1999,adopt4a,2,327.2059261547561,uspew1999_nii,567
+United States,1999,adopt4a,3,342.1820711580236,uspew1999_nii,567
+United States,1999,adopt4a,4,123.456984120376,uspew1999_nii,567
+United States,1999,just10,1,371.8456212085127,wvs_combo,567
+United States,1999,just10,2,42.864920584894854,wvs_combo,567
+United States,1999,just10,3,48.719633005933716,wvs_combo,567
+United States,1999,just10,4,55.904760647790376,wvs_combo,567
+United States,1999,just10,5,189.55735811907192,wvs_combo,567
+United States,1999,just10,6,131.03169691272691,wvs_combo,567
+United States,1999,just10,7,54.20939200672772,wvs_combo,567
+United States,1999,just10,8,62.31575016238643,wvs_combo,567
+United States,1999,just10,9,55.24205574239069,wvs_combo,567
+United States,1999,just10,10,166.0083834853621,wvs_combo,567
+United States,1999,legal2,1,451.5071487528818,gallup_us199902,567
+United States,1999,legal2,2,526.3050197812206,gallup_us199902,567
+United States,1999,marry4a,1,502.5651535783708,nbcwsj199906,567
+United States,1999,marry4a,2,145.69299798850818,nbcwsj199906,567
+United States,1999,marry4a,3,145.9611378585846,nbcwsj199906,567
+United States,1999,marry4a,4,132.35604101791537,nbcwsj199906,567
+United States,1999,neigh2,1,279.95687129000686,wvs_combo,567
+United States,1999,neigh2,2,920.9682223024096,wvs_combo,567
+United States,2000,adopt2,1,889.8092613808446,anes_combo,567
+United States,2000,adopt2,2,702.6125387821173,anes_combo,567
+United States,2000,approve4,1,1972.9898242286397,"lat200006, usgss",567
+United States,2000,approve4,2,172.99922431431958,"lat200006, usgss",567
+United States,2000,approve4,3,311.9986221372782,"lat200006, usgss",567
+United States,2000,approve4,4,1109.9950090750299,"lat200006, usgss",567
+United States,2000,marry2,1,776.0683306757394,"cnn200001, psra200003",567
+United States,2000,marry2,2,444.10819338595434,"cnn200001, psra200003",567
+United States,2000,marry4a,1,980,lat200006,567
+United States,2000,marry4a,2,191,lat200006,567
+United States,2000,marry4a,3,289,lat200006,567
+United States,2000,marry4a,4,453,lat200006,567
+United States,2002,accept2,1,636.1247503384732,pew2002,567
+United States,2002,accept2,2,760.2172523664278,pew2002,567
+United States,2002,adopt2,1,437.6841046484179,psra2002,567
+United States,2002,adopt2,2,457.5751044328807,psra2002,567
+United States,2002,approve4,1,485.99503969420147,usgss,567
+United States,2002,approve4,2,42.99956112520712,usgss,567
+United States,2002,approve4,3,62.99935699739649,usgss,567
+United States,2002,approve4,4,291.9970197339647,usgss,567
+United States,2002,marry2,1,571.2452915396536,psra2002,567
+United States,2002,marry2,2,350.1657583315371,psra2002,567
+United States,2003,legal2,1,379.3782255597548,gallup_us200305,567
+United States,2003,legal2,2,595.9785275165533,gallup_us200305,567
+United States,2003,marry2,1,2742.5776922331484,"cnn200306, cnn200309, cnn200310, cnn200312",567
+United States,2003,marry2,2,1532.3243241634038,"cnn200306, cnn200309, cnn200310, cnn200312",567
+United States,2003,marry4a,1,838.6286804198086,"uspew2003_10nii, uspew2003_rel",567
+United States,2003,marry4a,2,596.6929831226191,"uspew2003_10nii, uspew2003_rel",567
+United States,2003,marry4a,3,623.6505005191545,"uspew2003_10nii, uspew2003_rel",567
+United States,2003,marry4a,4,227.85628392433804,"uspew2003_10nii, uspew2003_rel",567
+United States,2004,adopt2,1,974.583244747733,"anes_combo, psra2004",567
+United States,2004,adopt2,2,908.0948520063623,"anes_combo, psra2004",567
+United States,2004,approve4,1,484.5050549017233,usgss,567
+United States,2004,approve4,2,41.369577761623695,usgss,567
+United States,2004,approve4,3,57.64941160158583,usgss,567
+United States,2004,approve4,4,259.38735256435996,usgss,567
+United States,2004,legal2,1,495.5392868538608,gallup_us200401,567
+United States,2004,legal2,2,457.3647196075303,gallup_us200401,567
+United States,2004,marry2,1,3685.9992369752586,"abcwapo200401, cnn200402, cnn200403, cnn200405, cnn200407, gallup_us200402, psra2004, uspew2004_ial",567
+United States,2004,marry2,2,2046.6834427952244,"abcwapo200401, cnn200402, cnn200403, cnn200405, cnn200407, gallup_us200402, psra2004, uspew2004_ial",567
+United States,2004,marry4a,1,1894.0874017724705,"uspew2004_3nii, uspew2004_8nii, uspew2004_typo",567
+United States,2004,marry4a,2,1242.2268186282301,"uspew2004_3nii, uspew2004_8nii, uspew2004_typo",567
+United States,2004,marry4a,3,1042.303225977774,"uspew2004_3nii, uspew2004_8nii, uspew2004_typo",567
+United States,2004,marry4a,4,585.1300740147965,"uspew2004_3nii, uspew2004_8nii, uspew2004_typo",567
+United States,2004,marry4b,1,574.2488270066261,abcwapo200403,567
+United States,2004,marry4b,2,125.85273203172488,abcwapo200403,567
+United States,2004,marry4b,3,171.5159445402377,abcwapo200403,567
+United States,2004,marry4b,4,280.13222283804254,abcwapo200403,567
+United States,2004,marry5,1,407.84583732362154,usgss,567
+United States,2004,marry5,2,243.93751025309362,usgss,567
+United States,2004,marry5,3,164.50832094669357,usgss,567
+United States,2004,marry5,4,226.1376919268451,usgss,567
+United States,2004,marry5,5,143.94853079008294,usgss,567
+United States,2005,marry2,1,1733.2519874665825,"abcwapo200508, cnn200503, cnn200505, gallup_us200508",567
+United States,2005,marry2,2,1072.272873778042,"abcwapo200508, cnn200503, cnn200505, gallup_us200508",567
+United States,2005,marry4a,1,456.889608630969,uspew2005_news,567
+United States,2005,marry4a,2,335.1708868038629,uspew2005_news,567
+United States,2005,marry4a,3,344.45456535369385,uspew2005_news,567
+United States,2005,marry4a,4,198.61276763089845,uspew2005_news,567
+United States,2006,accept2,1,569.083819413399,uspew2006_09next,567
+United States,2006,accept2,2,764.4564370103523,uspew2006_09next,567
+United States,2006,adopt4a,1,597.9323961458524,"uspew2006_nii, uspew2006_rel",567
+United States,2006,adopt4a,2,594.6551645803528,"uspew2006_nii, uspew2006_rel",567
+United States,2006,adopt4a,3,749.8779902762833,"uspew2006_nii, uspew2006_rel",567
+United States,2006,adopt4a,4,307.2529186136339,"uspew2006_nii, uspew2006_rel",567
+United States,2006,approve3,1,374.5153753277711,uspew2006_02nii,567
+United States,2006,approve3,2,243.09091907759014,uspew2006_02nii,567
+United States,2006,approve3,3,90.43096989648137,uspew2006_02nii,567
+United States,2006,approve4,1,1053.0692518542587,usgss,567
+United States,2006,approve4,2,92.8790520304474,usgss,567
+United States,2006,approve4,3,128.40868939739178,usgss,567
+United States,2006,approve4,4,622.9336420310821,usgss,567
+United States,2006,just10,1,378.00714260397694,wvs_combo,567
+United States,2006,just10,2,47.079499028544774,wvs_combo,567
+United States,2006,just10,3,55.34643486986662,wvs_combo,567
+United States,2006,just10,4,40.193721959744,wvs_combo,567
+United States,2006,just10,5,279.78473540454274,wvs_combo,567
+United States,2006,just10,6,53.154595948257075,wvs_combo,567
+United States,2006,just10,7,57.248030281308694,wvs_combo,567
+United States,2006,just10,8,43.63661049414439,wvs_combo,567
+United States,2006,just10,9,37.27127006426461,wvs_combo,567
+United States,2006,just10,10,172.0543511478982,wvs_combo,567
+United States,2006,marry4a,1,1484.36112210677,"uspew2006_elec, uspew2006_nii, uspew2006_rel",567
+United States,2006,marry4a,2,1250.2832349005503,"uspew2006_elec, uspew2006_nii, uspew2006_rel",567
+United States,2006,marry4a,3,1110.6848605853897,"uspew2006_elec, uspew2006_nii, uspew2006_rel",567
+United States,2006,marry4a,4,526.926917923504,"uspew2006_elec, uspew2006_nii, uspew2006_rel",567
+United States,2006,marry5,1,692.4429325848761,usgss,567
+United States,2006,marry5,2,309.7868381622771,usgss,567
+United States,2006,marry5,3,267.9772648914652,usgss,567
+United States,2006,marry5,4,404.8458679427932,usgss,567
+United States,2006,marry5,5,304.24689470568063,usgss,567
+United States,2006,neigh2,1,311.72152991986724,wvs_combo,567
+United States,2006,neigh2,2,930.8409622977966,wvs_combo,567
+United States,2006,run10,1,88.99949212149818,amb_combo,567
+United States,2006,run10,2,15.999908695999673,amb_combo,567
+United States,2006,run10,3,13.999920108999714,amb_combo,567
+United States,2006,run10,4,4.999971467499898,amb_combo,567
+United States,2006,run10,5,49.99971467499898,amb_combo,567
+United States,2006,run10,6,18.99989157649961,amb_combo,567
+United States,2006,run10,7,36.99978885949925,amb_combo,567
+United States,2006,run10,8,50.99970896849896,amb_combo,567
+United States,2006,run10,9,27.999840217999427,amb_combo,567
+United States,2006,run10,10,286.99836223449415,amb_combo,567
+United States,2007,accept2,1,14470.542554316764,"pew2007, uspew2007_rls",567
+United States,2007,accept2,2,18225.46084785196,"pew2007, uspew2007_rls",567
+United States,2007,adopt2,1,890.5647645059171,"cnn200705, gallup_us200709",567
+United States,2007,adopt2,2,1076.5432193235742,"cnn200705, gallup_us200709",567
+United States,2007,civil2,1,470.74381675617735,abcwapo200711,567
+United States,2007,civil2,2,613.5892914961464,abcwapo200711,567
+United States,2007,marry2,1,1273.95458944054,"cnn200708, cnn200710",567
+United States,2007,marry2,2,892.9999399923263,"cnn200708, cnn200710",567
+United States,2007,marry4a,1,1339.0519189299935,"uspew2007_prim, uspew2007_rel",567
+United States,2007,marry4a,2,1058.4406791277577,"uspew2007_prim, uspew2007_rel",567
+United States,2007,marry4a,3,1041.6370839791311,"uspew2007_prim, uspew2007_rel",567
+United States,2007,marry4a,4,551.8666320489817,"uspew2007_prim, uspew2007_rel",567
+United States,2008,adopt2,1,1421.4627192005225,"anes_combo, psra2008",567
+United States,2008,adopt2,2,1663.1938737864257,"anes_combo, psra2008",567
+United States,2008,adopt4a,1,733.2997282473074,uspew2008_rel,567
+United States,2008,adopt4a,2,645.8731987133486,uspew2008_rel,567
+United States,2008,adopt4a,3,880.8808057235012,uspew2008_rel,567
+United States,2008,adopt4a,4,464.2896377720756,uspew2008_rel,567
+United States,2008,approve4,1,1385.4418049983024,"issp2008, usgss",567
+United States,2008,approve4,2,102.67695133148345,"issp2008, usgss",567
+United States,2008,approve4,3,164.8329738355741,"issp2008, usgss",567
+United States,2008,approve4,4,920.0471915400736,"issp2008, usgss",567
+United States,2008,marry2,1,2209.4754508723368,"cnn200806, cnn200812, psra2008, uspew2008_10mid",567
+United States,2008,marry2,2,1799.7520760131358,"cnn200806, cnn200812, psra2008, uspew2008_10mid",567
+United States,2008,marry4a,1,1929.724076737547,"uspew2008_pol, uspew2008_rel, uspew2008_vote",567
+United States,2008,marry4a,2,1363.2003377441602,"uspew2008_pol, uspew2008_rel, uspew2008_vote",567
+United States,2008,marry4a,3,1590.495925438111,"uspew2008_pol, uspew2008_rel, uspew2008_vote",567
+United States,2008,marry4a,4,900.8247800856178,"uspew2008_pol, uspew2008_rel, uspew2008_vote",567
+United States,2008,marry5,1,430.6788339193891,usgss,567
+United States,2008,marry5,2,207.88991226936943,usgss,567
+United States,2008,marry5,3,178.55376552100364,usgss,567
+United States,2008,marry5,4,322.5909973853125,usgss,567
+United States,2008,marry5,5,210.09129529275393,usgss,567
+United States,2008,run10,1,178.95097555410598,amb_combo,567
+United States,2008,run10,2,38.82576595733514,amb_combo,567
+United States,2008,run10,3,35.37348156287871,amb_combo,567
+United States,2008,run10,4,46.56528951834226,amb_combo,567
+United States,2008,run10,5,156.61934985552824,amb_combo,567
+United States,2008,run10,6,112.02697486088861,amb_combo,567
+United States,2008,run10,7,77.66430693508626,amb_combo,567
+United States,2008,run10,8,126.49083717473916,amb_combo,567
+United States,2008,run10,9,129.07077546708786,amb_combo,567
+United States,2008,run10,10,597.1236246255356,amb_combo,567
+United States,2009,adopt2,1,446.33873049973886,gallup_us200905,567
+United States,2009,adopt2,2,546.0252480955525,gallup_us200905,567
+United States,2009,approve3,1,976.8968515121348,uspew2009_rel,567
+United States,2009,approve3,2,699.8729459791473,uspew2009_rel,567
+United States,2009,approve3,3,178.95842372343083,uspew2009_rel,567
+United States,2009,marry2,1,8525.079717314828,"cces2009, cnn200905, gallup_us200905",567
+United States,2009,marry2,2,7193.5136302540395,"cces2009, cnn200905, gallup_us200905",567
+United States,2009,marry4a,1,1529.9622082302237,"nbcwsj200910, uspew2009_rel, uspew2009_val",567
+United States,2009,marry4a,2,907.5678753406162,"nbcwsj200910, uspew2009_rel, uspew2009_val",567
+United States,2009,marry4a,3,969.846551777259,"nbcwsj200910, uspew2009_rel, uspew2009_val",567
+United States,2009,marry4a,4,764.5780197227537,"nbcwsj200910, uspew2009_rel, uspew2009_val",567
+United States,2009,marry4b,1,192.29282245250744,abcwapo200905,567
+United States,2009,marry4b,2,32.634073520726744,abcwapo200905,567
+United States,2009,marry4b,3,93.67809810182759,abcwapo200905,567
+United States,2009,marry4b,4,168.91379814239684,abcwapo200905,567
+United States,2010,approve4,1,546.8511598619962,usgss,567
+United States,2010,approve4,2,45.0919230564075,usgss,567
+United States,2010,approve4,3,96.14673528200012,usgss,567
+United States,2010,approve4,4,525.5233632214781,usgss,567
+United States,2010,marry4a,1,1284.6701924179442,"uspew2010_rel, uspew2010_st",567
+United States,2010,marry4a,2,1194.8894757363437,"uspew2010_rel, uspew2010_st",567
+United States,2010,marry4a,3,1209.3398667737733,"uspew2010_rel, uspew2010_st",567
+United States,2010,marry4a,4,796.8609979050177,"uspew2010_rel, uspew2010_st",567
+United States,2010,marry4b,1,411.1380952499525,abcwapo201002,567
+United States,2010,marry4b,2,84.50585791540941,abcwapo201002,567
+United States,2010,marry4b,3,158.66572098320668,abcwapo201002,567
+United States,2010,marry4b,4,308.9852461228854,abcwapo201002,567
+United States,2010,marry5,1,307.74188495392804,usgss,567
+United States,2010,marry5,2,196.302729266402,usgss,567
+United States,2010,marry5,3,164.46058875698344,usgss,567
+United States,2010,marry5,4,317.41990447376475,usgss,567
+United States,2010,marry5,5,273.3458506733169,usgss,567
+United States,2011,accept2,1,325.5755702141031,pew2011,567
+United States,2011,accept2,2,603.0770163962859,pew2011,567
+United States,2011,adopt4a,1,652.1095995779322,prri2011_mrgl,567
+United States,2011,adopt4a,2,660.5706791051767,prri2011_mrgl,567
+United States,2011,adopt4a,3,993.6295368594406,prri2011_mrgl,567
+United States,2011,adopt4a,4,605.4553254014821,prri2011_mrgl,567
+United States,2011,just10,1,537.0776325029991,wvs_combo,567
+United States,2011,just10,2,72.39494649461858,wvs_combo,567
+United States,2011,just10,3,83.14310415776765,wvs_combo,567
+United States,2011,just10,4,64.62905231714775,wvs_combo,567
+United States,2011,just10,5,503.53217208691365,wvs_combo,567
+United States,2011,just10,6,100.8965787335837,wvs_combo,567
+United States,2011,just10,7,86.68579299645924,wvs_combo,567
+United States,2011,just10,8,124.00411694979525,wvs_combo,567
+United States,2011,just10,9,106.77103734463445,wvs_combo,567
+United States,2011,just10,10,480.7548845251564,wvs_combo,567
+United States,2011,legal2,1,335.2003944695758,gallup_us201112,567
+United States,2011,legal2,2,630.5143117879677,gallup_us201112,567
+United States,2011,marry2,1,1351.8378883777218,"cnn201105, cnn201109, gallup_us201112",567
+United States,2011,marry2,2,1464.3201217787978,"cnn201105, cnn201109, gallup_us201112",567
+United States,2011,marry4a,1,2141.823381978433,"prri2011_avs, prri2011_mrgl, prri2011_pici, uspew2011_typo",567
+United States,2011,marry4a,2,1755.5570181408573,"prri2011_avs, prri2011_mrgl, prri2011_pici, uspew2011_typo",567
+United States,2011,marry4a,3,2309.72123870875,"prri2011_avs, prri2011_mrgl, prri2011_pici, uspew2011_typo",567
+United States,2011,marry4a,4,1643.7973217626363,"prri2011_avs, prri2011_mrgl, prri2011_pici, uspew2011_typo",567
+United States,2011,marry4b,1,706.3858665357355,"abcwapo201103, abcwapo201107",567
+United States,2011,marry4b,2,176.05480591925092,"abcwapo201103, abcwapo201107",567
+United States,2011,marry4b,3,362.41056261310524,"abcwapo201103, abcwapo201107",567
+United States,2011,marry4b,4,669.8229279140169,"abcwapo201103, abcwapo201107",567
+United States,2011,neigh2,1,455.2955613454067,wvs_combo,567
+United States,2011,neigh2,2,1778.4698274055368,wvs_combo,567
+United States,2012,accept2,1,482.1089630205149,uspew2012_comm,567
+United States,2012,accept2,2,850.8559916023347,uspew2012_comm,567
+United States,2012,adopt2,1,2396.308685448407,"anes_combo, gallup_us201211",567
+United States,2012,adopt2,2,4075.0009028845216,"anes_combo, gallup_us201211",567
+United States,2012,adopt4a,1,912.5555404274296,"prri2012_3rns, uspew2012_rel",567
+United States,2012,adopt4a,2,834.5707341869509,"prri2012_3rns, uspew2012_rel",567
+United States,2012,adopt4a,3,1320.2084236480425,"prri2012_3rns, uspew2012_rel",567
+United States,2012,adopt4a,4,1146.72188076357,"prri2012_3rns, uspew2012_rel",567
+United States,2012,approve4,1,551.5520931225457,usgss,567
+United States,2012,approve4,2,34.79423500228972,usgss,567
+United States,2012,approve4,3,95.4337122371754,usgss,567
+United States,2012,approve4,4,536.2685524122074,usgss,567
+United States,2012,ff5,1,192.07085577706425,issp2012,567
+United States,2012,ff5,2,322.84820056440486,issp2012,567
+United States,2012,ff5,3,142.32316715450713,issp2012,567
+United States,2012,ff5,4,465.82270777754985,issp2012,567
+United States,2012,ff5,5,125.62044074778159,issp2012,567
+United States,2012,legal2,1,337.0729856512141,gallup_us201211,567
+United States,2012,legal2,2,646.2282698675497,gallup_us201211,567
+United States,2012,marry2,1,26257.71002265086,"cces2012, cnn201205, gallup_us201211",567
+United States,2012,marry2,2,29747.749372515256,"cces2012, cnn201205, gallup_us201211",567
+United States,2012,marry4a,1,3474.184882051371,"prri2012_3rns, prri2012_6rns, prri2012_avs, prri2012_rcc, uspew2012_10late, uspew2012_rel, uspew2012_05val",567
+United States,2012,marry4a,2,2737.7943030025667,"prri2012_3rns, prri2012_6rns, prri2012_avs, prri2012_rcc, uspew2012_10late, uspew2012_rel, uspew2012_05val",567
+United States,2012,marry4a,3,3722.8352486195317,"prri2012_3rns, prri2012_6rns, prri2012_avs, prri2012_rcc, uspew2012_10late, uspew2012_rel, uspew2012_05val",567
+United States,2012,marry4a,4,3438.2149411221358,"prri2012_3rns, prri2012_6rns, prri2012_avs, prri2012_rcc, uspew2012_10late, uspew2012_rel, uspew2012_05val",567
+United States,2012,marry4b,1,355.3632188381108,abcwapo201203,567
+United States,2012,marry4b,2,70.74920991577663,abcwapo201203,567
+United States,2012,marry4b,3,165.64683399572743,abcwapo201203,567
+United States,2012,marry4b,4,356.29837494584035,abcwapo201203,567
+United States,2012,marry5,1,316.3094816511471,usgss,567
+United States,2012,marry5,2,177.91168512404332,usgss,567
+United States,2012,marry5,3,154.32516594356088,usgss,567
+United States,2012,marry5,4,303.55085750978435,usgss,567
+United States,2012,marry5,5,326.0464197353873,usgss,567
+United States,2012,mm5,1,219.7412636081714,issp2012,567
+United States,2012,mm5,2,335.50946566331896,issp2012,567
+United States,2012,mm5,3,149.13744369076582,issp2012,567
+United States,2012,mm5,4,423.78746571346403,issp2012,567
+United States,2012,mm5,5,119.26982828737071,issp2012,567
+United States,2013,accept2,1,861.5348753936578,"pew2013, uspew2013_3pol",567
+United States,2013,accept2,2,1460.142785249912,"pew2013, uspew2013_3pol",567
+United States,2013,adopt4a,1,195.5984619458245,prri2013_3rap,567
+United States,2013,adopt4a,2,180.43966489500684,prri2013_3rap,567
+United States,2013,adopt4a,3,326.1519365463158,prri2013_3rap,567
+United States,2013,adopt4a,4,243.95625253769404,prri2013_3rap,567
+United States,2013,approve3,1,375.26773994006356,pew2013,567
+United States,2013,approve3,2,346.39159857164793,pew2013,567
+United States,2013,approve3,3,225.5961262933433,pew2013,567
+United States,2013,marry2,1,891.2539224889933,"cnn201303, cnn201306",567
+United States,2013,marry2,2,1089.4937598686543,"cnn201303, cnn201306",567
+United States,2013,marry4a,1,2056.779011960745,"prri2013_3rap, prri2013_5rap, prri2013_rvi, uspew2013_3pol, uspew2013_5pol",567
+United States,2013,marry4a,2,1892.3260030624438,"prri2013_3rap, prri2013_5rap, prri2013_rvi, uspew2013_3pol, uspew2013_5pol",567
+United States,2013,marry4a,3,2624.8173130631403,"prri2013_3rap, prri2013_5rap, prri2013_rvi, uspew2013_3pol, uspew2013_5pol",567
+United States,2013,marry4a,4,2219.109580678614,"prri2013_3rap, prri2013_5rap, prri2013_rvi, uspew2013_3pol, uspew2013_5pol",567
+United States,2013,marry4b,1,297.3459479331948,abcwapo201303,567
+United States,2013,marry4b,2,60.08590451870734,abcwapo201303,567
+United States,2013,marry4b,3,171.84147762673805,abcwapo201303,567
+United States,2013,marry4b,4,404.4372963936507,abcwapo201303,567
+United States,2014,accept2,1,17147.906065123225,"pewrel2014_us, uspew2014_typo",567
+United States,2014,accept2,2,23941.40581094521,"pewrel2014_us, uspew2014_typo",567
+United States,2014,adopt2,1,334.6318420223226,abcwapo201402,567
+United States,2014,adopt2,2,607.6222567668941,abcwapo201402,567
+United States,2014,approve4,1,663.8549195260408,usgss,567
+United States,2014,approve4,2,57.792867589959826,usgss,567
+United States,2014,approve4,3,119.89309717791404,usgss,567
+United States,2014,approve4,4,818.32418294122715,usgss,567
+United States,2014,marry2,1,24818.29658079929,"cces2014, cnn201412",567
+United States,2014,marry2,2,31799.2175396607,"cces2014, cnn201412",567
+United States,2014,marry4a,1,7676.807192951617,"abcwapo201402, uspew2014_9rel, uspew2014_rls, uspew2014_typo",567
+United States,2014,marry4a,2,8492.482084935735,"abcwapo201402, uspew2014_9rel, uspew2014_rls, uspew2014_typo",567
+United States,2014,marry4a,3,11814.323902725417,"abcwapo201402, uspew2014_9rel, uspew2014_rls, uspew2014_typo",567
+United States,2014,marry4a,4,10252.713743449458,"abcwapo201402, uspew2014_9rel, uspew2014_rls, uspew2014_typo",567
+United States,2014,marry5,1,322.0587951919283,usgss,567
+United States,2014,marry5,2,219.43071522678682,usgss,567
+United States,2014,marry5,3,192.00830900102224,usgss,567
+United States,2014,marry5,4,423.7989064218501,usgss,567
+United States,2014,marry5,5,537.9073999452755,usgss,567
+United States,2015,accept2,1,2426.674229135071,"uspew2015_5pol, uspew2015_gov",567
+United States,2015,accept2,2,4888.0669436264125,"uspew2015_5pol, uspew2015_gov",567
+United States,2015,marry2,1,6132.559642258798,cces2015,567
+United States,2015,marry2,2,7967.949760740714,cces2015,567
+United States,2015,marry4a,1,966.7811878117227,"prri2015_rap, uspew2015_5pol, uspew2015_7pol",567
+United States,2015,marry4a,2,953.2754313536897,"prri2015_rap, uspew2015_5pol, uspew2015_7pol",567
+United States,2015,marry4a,3,1371.310740119688,"prri2015_rap, uspew2015_5pol, uspew2015_7pol",567
+United States,2015,marry4a,4,1391.2381160259397,"prri2015_rap, uspew2015_5pol, uspew2015_7pol",567
+United States,2016,accept2,1,554.4179295429777,uspew2016_fp,567
+United States,2016,accept2,2,1261.5952795302885,uspew2016_fp,567
+United States,2016,adopt2,1,2171.5018321717916,"anes_combo, anes2016",567
+United States,2016,adopt2,2,5971.98326501279,"anes_combo, anes2016",567
+United States,2016,approve3,1,788.4320280029281,pewrel2016_us,567
+United States,2016,approve3,2,1025.4967323502874,pewrel2016_us,567
+United States,2016,approve3,3,386.120960479056,pewrel2016_us,567
+United States,2016,approve4,1,720.7752094787407,usgss,567
+United States,2016,approve4,2,66.03459935399312,usgss,567
+United States,2016,approve4,3,99.6362855980827,usgss,567
+United States,2016,approve4,4,935.6548441284938,usgss,567
+United States,2016,marry2,1,24632.452685411346,cces2016,567
+United States,2016,marry2,2,39511.315515761366,cces2016,567
+United States,2016,marry4a,1,840.8271264713323,"prriatlantic2016_wwc, uspew2016_3pol",567
+United States,2016,marry4a,2,1000.6568115596956,"prriatlantic2016_wwc, uspew2016_3pol",567
+United States,2016,marry4a,3,1527.6424348768787,"prriatlantic2016_wwc, uspew2016_3pol",567
+United States,2016,marry4a,4,1515.0365006437396,"prriatlantic2016_wwc, uspew2016_3pol",567
+United States,2016,marry5,1,310.05895523487874,usgss,567
+United States,2016,marry5,2,231.8520135721712,usgss,567
+United States,2016,marry5,3,219.24391843470312,usgss,567
+United States,2016,marry5,4,469.493672497561,usgss,567
+United States,2016,marry5,5,644.738518347307,usgss,567
+United States,2017,accept2,1,1201.0346540927678,uspew2017_6typo,567
+United States,2017,accept2,2,3481.473600163256,uspew2017_6typo,567
+United States,2017,just10,1,985.2453310646742,"wvs_combo, wvs7",567
+United States,2017,just10,2,154.8503720767806,"wvs_combo, wvs7",567
+United States,2017,just10,3,166.09981628636257,"wvs_combo, wvs7",567
+United States,2017,just10,4,153.20757452942024,"wvs_combo, wvs7",567
+United States,2017,just10,5,907.4907850948861,"wvs_combo, wvs7",567
+United States,2017,just10,6,266.3847039403835,"wvs_combo, wvs7",567
+United States,2017,just10,7,207.06445809249203,"wvs_combo, wvs7",567
+United States,2017,just10,8,380.02008026189696,"wvs_combo, wvs7",567
+United States,2017,just10,9,294.17391145891645,"wvs_combo, wvs7",567
+United States,2017,just10,10,1589.9594904272285,"wvs_combo, wvs7",567
+United States,2017,neigh2,1,2436.5325364501764,"wvs_combo, wvs7",567
+United States,2017,neigh2,2,2437.3909827364782,"wvs_combo, wvs7",567
+United States,2017,parent5,1,173.70680748249552,wvs7,567
+United States,2017,parent5,2,257.97683112563885,wvs7,567
+United States,2017,parent5,3,770.3894474982712,wvs7,567
+United States,2017,parent5,4,680.7980673323744,wvs7,567
+United States,2017,parent5,5,689.6487033717913,wvs7,567
+United States,2017,run10,1,145.01498644948265,amb_us2016,567
+United States,2017,run10,2,17.081101401225563,amb_us2016,567
+United States,2017,run10,3,49.662455981548646,amb_us2016,567
+United States,2017,run10,4,58.54650647803663,amb_us2016,567
+United States,2017,run10,5,128.11052937638183,amb_us2016,567
+United States,2017,run10,6,66.4859113333173,amb_us2016,567
+United States,2017,run10,7,76.20288848629576,amb_us2016,567
+United States,2017,run10,8,124.02483550067907,amb_us2016,567
+United States,2017,run10,9,103.78971989259051,amb_us2016,567
+United States,2017,run10,10,730.1655805503444,amb_us2016,567
+United States,2018,approve4,1,478.8601365368871,usgss,567
+United States,2018,approve4,2,54.97554381727861,usgss,567
+United States,2018,approve4,3,89.35975381319008,usgss,567
+United States,2018,approve4,4,883.6779947150565,usgss,567
+United States,2018,marry5,1,196.95059893912347,usgss,567
+United States,2018,marry5,2,144.24405633562054,usgss,567
+United States,2018,marry5,3,148.5604841205469,usgss,567
+United States,2018,marry5,4,403.1256454144957,usgss,567
+United States,2018,marry5,5,662.4542164661758,usgss,567
+United States,2019,accept2,1,319.1041016783488,pew2019,567
+United States,2019,accept2,2,1082.4007796994151,pew2019,567
+United States,2019,marry4a,1,179.41599209869233,uspew2019_03pol,567
+United States,2019,marry4a,2,287.1363058311904,uspew2019_03pol,567
+United States,2019,marry4a,3,457.4172594141,uspew2019_03pol,567
+United States,2019,marry4a,4,461.38434015921433,uspew2019_03pol,567
+United States,2021,approve4,1,693,usgss,567
+United States,2021,approve4,2,112,usgss,567
+United States,2021,approve4,3,185,usgss,567
+United States,2021,approve4,4,1621,usgss,567
+United States,2021,marry5,1,295,usgss,567
+United States,2021,marry5,2,179,usgss,567
+United States,2021,marry5,3,419,usgss,567
+United States,2021,marry5,4,500,usgss,567
+United States,2021,marry5,5,1265,usgss,567
 United Kingdom,1977,adopt2,1,689,gallup_uk1977,410
 United Kingdom,1977,adopt2,2,189,gallup_uk1977,410
 United Kingdom,1981,adopt2,1,668,gallup_uk1981,410
@@ -1578,305 +1591,310 @@ Mexico,2019,run10,7,134.99922962249724,amb_combo,305
 Mexico,2019,run10,8,172.99901277549648,amb_combo,305
 Mexico,2019,run10,9,149.99914402499695,amb_combo,305
 Mexico,2019,run10,10,348.9980084314929,amb_combo,305
-Sweden,1982,just10,1,651.6969427762668,"evs_combo, wvs_combo",299
-Sweden,1982,just10,2,72.14485524756839,"evs_combo, wvs_combo",299
-Sweden,1982,just10,3,116.68502922712324,"evs_combo, wvs_combo",299
-Sweden,1982,just10,4,67.05689647912669,"evs_combo, wvs_combo",299
-Sweden,1982,just10,5,221.02925349155805,"evs_combo, wvs_combo",299
-Sweden,1982,just10,6,55.32354159720019,"evs_combo, wvs_combo",299
-Sweden,1982,just10,7,56.53844175872407,"evs_combo, wvs_combo",299
-Sweden,1982,just10,8,92.61086938250827,"evs_combo, wvs_combo",299
-Sweden,1982,just10,9,52.66538315180626,"evs_combo, wvs_combo",299
-Sweden,1982,just10,10,315.34829405517905,"evs_combo, wvs_combo",299
-Sweden,1990,just10,1,373.7425376913955,evs_combo,299
-Sweden,1990,just10,2,44.087591577537275,evs_combo,299
-Sweden,1990,just10,3,60.1194430602781,evs_combo,299
-Sweden,1990,just10,4,47.093563730551175,evs_combo,299
-Sweden,1990,just10,5,128.2548118619266,evs_combo,299
-Sweden,1990,just10,6,32.06370296548165,evs_combo,299
-Sweden,1990,just10,7,37.07365655383816,evs_combo,299
-Sweden,1990,just10,8,63.125415213292,evs_combo,299
-Sweden,1990,just10,9,43.08560085986597,evs_combo,299
-Sweden,1990,just10,10,171.34041272179257,evs_combo,299
-Sweden,1990,neigh2,1,185.3682827691908,evs_combo,299
-Sweden,1990,neigh2,2,863.715998632662,evs_combo,299
-Sweden,1994,approve4,1,613.8969500931689,issp1994,299
-Sweden,1994,approve4,2,65.2382273197001,issp1994,299
-Sweden,1994,approve4,3,63.81838044790824,issp1994,299
-Sweden,1994,approve4,4,353.69132864162725,issp1994,299
-Sweden,1996,just10,1,115.08734927952912,wvs_combo,299
-Sweden,1996,just10,2,17.012912502191263,wvs_combo,299
-Sweden,1996,just10,3,44.0334205939068,wvs_combo,299
-Sweden,1996,just10,4,32.02430588647767,wvs_combo,299
-Sweden,1996,just10,5,36.02734412228738,wvs_combo,299
-Sweden,1996,just10,6,145.11013604810194,wvs_combo,299
-Sweden,1996,just10,7,37.028103681239806,wvs_combo,299
-Sweden,1996,just10,8,81.0615242751466,wvs_combo,299
-Sweden,1996,just10,9,84.06380295200388,wvs_combo,299
-Sweden,1996,just10,10,349.26508607439706,wvs_combo,299
-Sweden,1996,neigh2,1,113.08583016162427,wvs_combo,299
-Sweden,1996,neigh2,2,896.6805648213748,wvs_combo,299
-Sweden,1998,approve4,1,364.9204253963193,issp1998,299
-Sweden,1998,approve4,2,72.98408507926385,issp1998,299
-Sweden,1998,approve4,3,78.9827770035869,issp1998,299
-Sweden,1998,approve4,4,516.88728747917,issp1998,299
-Sweden,1999,adopt5,1,865,som_combo,299
-Sweden,1999,adopt5,2,247,som_combo,299
-Sweden,1999,adopt5,3,331,som_combo,299
-Sweden,1999,adopt5,4,123,som_combo,299
-Sweden,1999,adopt5,5,75,som_combo,299
-Sweden,1999,just10,1,255.57402113687112,"evs_combo, wvs_combo, wvs4_swe",299
-Sweden,1999,just10,2,82.96840818651505,"evs_combo, wvs_combo, wvs4_swe",299
-Sweden,1999,just10,3,82.38025868291578,"evs_combo, wvs_combo, wvs4_swe",299
-Sweden,1999,just10,4,70.32980531245516,"evs_combo, wvs_combo, wvs4_swe",299
-Sweden,1999,just10,5,294.3579337317723,"evs_combo, wvs_combo, wvs4_swe",299
-Sweden,1999,just10,6,97.01190052482607,"evs_combo, wvs_combo, wvs4_swe",299
-Sweden,1999,just10,7,127.26734853399768,"evs_combo, wvs_combo, wvs4_swe",299
-Sweden,1999,just10,8,245.23604912896826,"evs_combo, wvs_combo, wvs4_swe",299
-Sweden,1999,just10,9,193.96973167629386,"evs_combo, wvs_combo, wvs4_swe",299
-Sweden,1999,just10,10,1484.555033007369,"evs_combo, wvs_combo, wvs4_swe",299
-Sweden,1999,neigh2,1,1076.8738696577657,"evs_combo, wvs_combo, wvs4_swe",299
-Sweden,1999,neigh2,2,1968.7310583633016,"evs_combo, wvs_combo, wvs4_swe",299
-Sweden,2000,adopt5,1,713,som_combo,299
-Sweden,2000,adopt5,2,330,som_combo,299
-Sweden,2000,adopt5,3,379,som_combo,299
-Sweden,2000,adopt5,4,179,som_combo,299
-Sweden,2000,adopt5,5,148,som_combo,299
-Sweden,2001,adopt5,1,1349,som_combo,299
-Sweden,2001,adopt5,2,550,som_combo,299
-Sweden,2001,adopt5,3,626,som_combo,299
-Sweden,2001,adopt5,4,403,som_combo,299
-Sweden,2001,adopt5,5,275,som_combo,299
-Sweden,2002,adopt5,1,609,som_combo,299
-Sweden,2002,adopt5,2,262,som_combo,299
-Sweden,2002,adopt5,3,333,som_combo,299
-Sweden,2002,adopt5,4,209,som_combo,299
-Sweden,2002,adopt5,5,154,som_combo,299
-Sweden,2002,free5,1,49.001001559695744,ess1,299
-Sweden,2002,free5,2,85.0017373994722,ess1,299
-Sweden,2002,free5,3,223.0045581186153,ess1,299
-Sweden,2002,free5,4,1061.0216868334119,ess1,299
-Sweden,2002,free5,5,537.0109762766656,ess1,299
-Sweden,2004,free5,1,28.000146146770216,ess2,299
-Sweden,2004,free5,2,85.00044365983815,ess2,299
-Sweden,2004,free5,3,203.00105956408407,ess2,299
-Sweden,2004,free5,4,955.0049846487699,ess2,299
-Sweden,2004,free5,5,662.0034553272102,ess2,299
-Sweden,2006,adopt4,1,256.8463039291422,eb661,299
-Sweden,2006,adopt4,2,174.16556704581063,eb661,299
-Sweden,2006,adopt4,3,232.74532232730508,eb661,299
-Sweden,2006,adopt4,4,280.93708553876576,eb661,299
-Sweden,2006,adopt5,1,463,som_combo,299
-Sweden,2006,adopt5,2,238,som_combo,299
-Sweden,2006,adopt5,3,305,som_combo,299
-Sweden,2006,adopt5,4,252,som_combo,299
-Sweden,2006,adopt5,5,197,som_combo,299
-Sweden,2006,free5,1,23.000437864149657,ess3,299
-Sweden,2006,free5,2,73.00138974273587,ess3,299
-Sweden,2006,free5,3,163.00310312419103,ess3,299
-Sweden,2006,free5,4,923.0175716787014,ess3,299
-Sweden,2006,free5,5,719.0136880140697,ess3,299
-Sweden,2006,just10,1,41.5248705807484,wvs_combo,299
-Sweden,2006,just10,2,11.58377449117408,wvs_combo,299
-Sweden,2006,just10,3,17.274223386037505,wvs_combo,299
-Sweden,2006,just10,4,15.935573799133385,wvs_combo,299
-Sweden,2006,just10,5,85.77436833105504,wvs_combo,299
-Sweden,2006,just10,6,26.385555655718775,wvs_combo,299
-Sweden,2006,just10,7,29.938125713272015,wvs_combo,299
-Sweden,2006,just10,8,78.59071126902438,wvs_combo,299
-Sweden,2006,just10,9,75.82390475597344,wvs_combo,299
-Sweden,2006,just10,10,595.7309482113109,wvs_combo,299
-Sweden,2006,marry4,1,120.22710822125184,eb661,299
-Sweden,2006,marry4,2,119.93770844217332,eb661,299
-Sweden,2006,marry4,3,199.7797474925048,eb661,299
-Sweden,2006,marry4,4,519.3556035352772,eb661,299
-Sweden,2006,neigh2,1,35.81491621483319,wvs_combo,299
-Sweden,2006,neigh2,2,967.9469214144547,wvs_combo,299
-Sweden,2007,accept2,1,45.01268190837868,pew2007,299
-Sweden,2007,accept2,2,432.48145892857576,pew2007,299
-Sweden,2007,adopt5,1,417,som_combo,299
-Sweden,2007,adopt5,2,226,som_combo,299
-Sweden,2007,adopt5,3,314,som_combo,299
-Sweden,2007,adopt5,4,294,som_combo,299
-Sweden,2007,adopt5,5,231,som_combo,299
-Sweden,2008,approve4,1,312.5264485624841,issp2008,299
-Sweden,2008,approve4,2,75.12655013521253,issp2008,299
-Sweden,2008,approve4,3,76.1282374703487,issp2008,299
-Sweden,2008,approve4,4,632.0647084709213,issp2008,299
-Sweden,2008,free5,1,17.00005607574178,ess4,299
-Sweden,2008,free5,2,69.00022760154017,ess4,299
-Sweden,2008,free5,3,153.00050468167603,ess4,299
-Sweden,2008,free5,4,807.0026619484481,ess4,299
-Sweden,2008,free5,5,770.0025399012454,ess4,299
-Sweden,2008,hioff10,1,14.09791527441071,eb691,299
-Sweden,2008,hioff10,2,13.392214509817997,eb691,299
-Sweden,2008,hioff10,3,14.50961572046827,eb691,299
-Sweden,2008,hioff10,4,12.730913793330588,eb691,299
-Sweden,2008,hioff10,5,28.084430428124765,eb691,299
-Sweden,2008,hioff10,6,29.313631759905075,eb691,299
-Sweden,2008,hioff10,7,28.457430832252697,eb691,299
-Sweden,2008,hioff10,8,54.95585954202116,eb691,299
-Sweden,2008,hioff10,9,54.84715942424983,eb691,299
-Sweden,2008,hioff10,10,747.9593103778096,eb691,299
-Sweden,2008,neigh10,1,5.945906442102628,eb691,299
-Sweden,2008,neigh10,2,6.535507080906461,eb691,299
-Sweden,2008,neigh10,3,7.314807925241309,eb691,299
-Sweden,2008,neigh10,4,7.390008006716968,eb691,299
-Sweden,2008,neigh10,5,17.95751945610554,eb691,299
-Sweden,2008,neigh10,6,18.207419726860422,eb691,299
-Sweden,2008,neigh10,7,18.565320114628218,eb691,299
-Sweden,2008,neigh10,8,33.87073669730831,eb691,299
-Sweden,2008,neigh10,9,56.97756173243789,eb691,299
-Sweden,2008,neigh10,10,825.2079940730298,eb691,299
-Sweden,2009,adopt5,1,197.78397719886763,evs_combo,299
-Sweden,2009,adopt5,2,152.99834308998803,evs_combo,299
-Sweden,2009,adopt5,3,158.66619377159213,evs_combo,299
-Sweden,2009,adopt5,4,296.13014034285703,evs_combo,299
-Sweden,2009,adopt5,5,252.73241695620715,evs_combo,299
-Sweden,2009,hioff10,1,30.20979999188127,eb712,299
-Sweden,2009,hioff10,2,11.441099996925262,eb712,299
-Sweden,2009,hioff10,3,21.65149999418127,eb712,299
-Sweden,2009,hioff10,4,11.72389999684926,eb712,299
-Sweden,2009,hioff10,5,42.91989998846549,eb712,299
-Sweden,2009,hioff10,6,30.64039999176555,eb712,299
-Sweden,2009,hioff10,7,47.453999987246974,eb712,299
-Sweden,2009,hioff10,8,66.63849998209123,eb712,299
-Sweden,2009,hioff10,9,41.09459998895603,eb712,299
-Sweden,2009,hioff10,10,675.0284998185895,eb712,299
-Sweden,2009,just10,1,125.25315469299316,evs_combo,299
-Sweden,2009,just10,2,14.497466831285898,evs_combo,299
-Sweden,2009,just10,3,26.99829293475884,evs_combo,299
-Sweden,2009,just10,4,17.57811927558945,evs_combo,299
-Sweden,2009,just10,5,50.07794713867449,evs_combo,299
-Sweden,2009,just10,6,48.79121358478426,evs_combo,299
-Sweden,2009,just10,7,36.93403326271867,evs_combo,299
-Sweden,2009,just10,8,69.38756690384477,evs_combo,299
-Sweden,2009,just10,9,74.30009946874578,evs_combo,299
-Sweden,2009,just10,10,588.2021607614222,evs_combo,299
-Sweden,2009,marry5,1,69.99880899189088,ees2009,299
-Sweden,2009,marry5,2,53.59634458984357,ees2009,299
-Sweden,2009,marry5,3,84.11578116131311,ees2009,299
-Sweden,2009,marry5,4,196.91050636007716,ees2009,299
-Sweden,2009,marry5,5,564.9214485702552,ees2009,299
-Sweden,2009,neigh2,1,79.01580887387526,evs_combo,299
-Sweden,2009,neigh2,2,1097.3212936722327,evs_combo,299
-Sweden,2010,free5,1,10.999648676239863,ess5,299
-Sweden,2010,free5,2,32.99894602871959,ess5,299
-Sweden,2010,free5,3,101.99674227058782,ess5,299
-Sweden,2010,free5,4,609.9805175005743,ess5,299
-Sweden,2010,free5,5,728.97671681626,ess5,299
-Sweden,2011,just10,1,89.95195105527631,wvs_combo,299
-Sweden,2011,just10,2,13.997072557221001,wvs_combo,299
-Sweden,2011,just10,3,25.31443879602083,wvs_combo,299
-Sweden,2011,just10,4,20.720452381609192,wvs_combo,299
-Sweden,2011,just10,5,85.27796586716555,wvs_combo,299
-Sweden,2011,just10,6,30.945758269032503,wvs_combo,299
-Sweden,2011,just10,7,39.16650720568482,wvs_combo,299
-Sweden,2011,just10,8,64.48303413797915,wvs_combo,299
-Sweden,2011,just10,9,55.858573612192416,wvs_combo,299
-Sweden,2011,just10,10,715.1492453448818,wvs_combo,299
-Sweden,2011,neigh2,1,50.65144667889186,wvs_combo,299
-Sweden,2011,neigh2,2,1156.2645814177354,wvs_combo,299
-Sweden,2011,strength5,1,292,"som_combo, som_combo",299
-Sweden,2011,strength5,2,232,"som_combo, som_combo",299
-Sweden,2011,strength5,3,1147,"som_combo, som_combo",299
-Sweden,2011,strength5,4,730,"som_combo, som_combo",299
-Sweden,2011,strength5,5,615,"som_combo, som_combo",299
-Sweden,2012,ff5,1,71.24193478286925,issp2012,299
-Sweden,2012,ff5,2,126.42934905128908,issp2012,299
-Sweden,2012,ff5,3,160.54520514449408,issp2012,299
-Sweden,2012,ff5,4,357.2130814464993,issp2012,299
-Sweden,2012,ff5,5,277.9438864064054,issp2012,299
-Sweden,2012,free5,1,10.000000000000002,ess6,299
-Sweden,2012,free5,2,58.000000000000014,ess6,299
-Sweden,2012,free5,3,148.00000000000003,ess6,299
-Sweden,2012,free5,4,679.0000000000001,ess6,299
-Sweden,2012,free5,5,945.0000000000002,ess6,299
-Sweden,2012,hioff10,1,17.827899048401903,eb774,299
-Sweden,2012,hioff10,2,10.37939944597977,eb774,299
-Sweden,2012,hioff10,3,15.859199153485013,eb774,299
-Sweden,2012,hioff10,4,16.931299096259636,eb774,299
-Sweden,2012,hioff10,5,48.29319742225853,eb774,299
-Sweden,2012,hioff10,6,29.704898414444422,eb774,299
-Sweden,2012,hioff10,7,48.1255974312045,eb774,299
-Sweden,2012,hioff10,8,83.57649553894524,eb774,299
-Sweden,2012,hioff10,9,73.95379605257517,eb774,299
-Sweden,2012,hioff10,10,674.7092639861069,eb774,299
-Sweden,2012,mm5,1,92.3134929580841,issp2012,299
-Sweden,2012,mm5,2,132.44979424420762,issp2012,299
-Sweden,2012,mm5,3,165.56224280525953,issp2012,299
-Sweden,2012,mm5,4,338.14833833559067,issp2012,299
-Sweden,2012,mm5,5,261.88936589195595,issp2012,299
-Sweden,2013,strength5,1,132,som_combo,299
-Sweden,2013,strength5,2,83,som_combo,299
-Sweden,2013,strength5,3,365,som_combo,299
-Sweden,2013,strength5,4,385,som_combo,299
-Sweden,2013,strength5,5,448,som_combo,299
-Sweden,2014,free5,1,12.000000000000004,ess7,299
-Sweden,2014,free5,2,32.00000000000001,ess7,299
-Sweden,2014,free5,3,100.00000000000003,ess7,299
-Sweden,2014,free5,4,562.0000000000001,ess7,299
-Sweden,2014,free5,5,1068.0000000000002,ess7,299
-Sweden,2014,strength5,1,101,som_combo,299
-Sweden,2014,strength5,2,102,som_combo,299
-Sweden,2014,strength5,3,488,som_combo,299
-Sweden,2014,strength5,4,367,som_combo,299
-Sweden,2014,strength5,5,449,som_combo,299
-Sweden,2015,approve4,1,29.73880060297301,eb834,299
-Sweden,2015,approve4,2,28.62700058043056,eb834,299
-Sweden,2015,approve4,3,88.12520178679426,eb834,299
-Sweden,2015,approve4,4,909.9277184493607,eb834,299
-Sweden,2015,hioff10,1,21.623100438422053,eb834,299
-Sweden,2015,hioff10,2,2.377900048213429,eb834,299
-Sweden,2015,hioff10,3,11.162700226330815,eb834,299
-Sweden,2015,hioff10,4,8.098500164202218,eb834,299
-Sweden,2015,hioff10,5,27.028900548028073,eb834,299
-Sweden,2015,hioff10,6,14.926500302644246,eb834,299
-Sweden,2015,hioff10,7,31.427700637216528,eb834,299
-Sweden,2015,hioff10,8,57.640301168693604,eb834,299
-Sweden,2015,hioff10,9,35.365700717061976,eb834,299
-Sweden,2015,hioff10,10,806.2565163473614,eb834,299
-Sweden,2015,marry4,1,38.909400788912734,eb834,299
-Sweden,2015,marry4,2,36.86720074750584,eb834,299
-Sweden,2015,marry4,3,77.91530157978208,eb834,299
-Sweden,2015,marry4,4,885.3546179511255,eb834,299
-Sweden,2015,strength5,1,119,som_combo,299
-Sweden,2015,strength5,2,82,som_combo,299
-Sweden,2015,strength5,3,441,som_combo,299
-Sweden,2015,strength5,4,356,som_combo,299
-Sweden,2015,strength5,5,436,som_combo,299
-Sweden,2016,free5,1,15.004443016040812,ess8,299
-Sweden,2016,free5,2,17.001576218793996,ess8,299
-Sweden,2016,free5,3,69.00510310020995,ess8,299
-Sweden,2016,free5,4,451.99856288691973,ess8,299
-Sweden,2016,free5,5,984.9886653449286,ess8,299
-Sweden,2016,strength5,1,116,som_combo,299
-Sweden,2016,strength5,2,90,som_combo,299
-Sweden,2016,strength5,3,489,som_combo,299
-Sweden,2016,strength5,4,356,som_combo,299
-Sweden,2016,strength5,5,467,som_combo,299
-Sweden,2017,just10,1,72.65811217626147,evs2017,299
-Sweden,2017,just10,2,6.781673135787524,evs2017,299
-Sweden,2017,just10,3,15.61419955844883,evs2017,299
-Sweden,2017,just10,4,8.783077782110686,evs2017,299
-Sweden,2017,just10,5,77.04429658295417,evs2017,299
-Sweden,2017,just10,6,12.709741807802674,evs2017,299
-Sweden,2017,just10,7,18.242817241686772,evs2017,299
-Sweden,2017,just10,8,54.261253677797306,evs2017,299
-Sweden,2017,just10,9,56.208872442658155,evs2017,299
-Sweden,2017,just10,10,841.258483795799,evs2017,299
-Sweden,2017,marry4a,1,29.893941777377744,pewrel2017_we,299
-Sweden,2017,marry4a,2,74.81765255200759,pewrel2017_we,299
-Sweden,2017,marry4a,3,597.7838408755357,pewrel2017_we,299
-Sweden,2017,marry4a,4,720.1135727571993,pewrel2017_we,299
-Sweden,2017,neigh2,1,28.382658397871666,evs2017,299
-Sweden,2017,parent5,1,33.67028446406449,evs2017,299
-Sweden,2017,parent5,2,84.02511647652948,evs2017,299
-Sweden,2017,parent5,3,154.02296507772007,evs2017,299
-Sweden,2017,parent5,4,298.64964678120083,evs2017,299
-Sweden,2017,parent5,5,590.6207776047138,evs2017,299
-Sweden,2019,accept2,1,45.957804956659764,pew2019,299
-Sweden,2019,accept2,2,951.3953116378648,pew2019,299
+Sweden,1982,just10,1,651.6969427762668,"evs_combo, wvs_combo",304
+Sweden,1982,just10,2,72.14485524756839,"evs_combo, wvs_combo",304
+Sweden,1982,just10,3,116.68502922712324,"evs_combo, wvs_combo",304
+Sweden,1982,just10,4,67.05689647912669,"evs_combo, wvs_combo",304
+Sweden,1982,just10,5,221.02925349155805,"evs_combo, wvs_combo",304
+Sweden,1982,just10,6,55.32354159720019,"evs_combo, wvs_combo",304
+Sweden,1982,just10,7,56.53844175872407,"evs_combo, wvs_combo",304
+Sweden,1982,just10,8,92.61086938250827,"evs_combo, wvs_combo",304
+Sweden,1982,just10,9,52.66538315180626,"evs_combo, wvs_combo",304
+Sweden,1982,just10,10,315.34829405517905,"evs_combo, wvs_combo",304
+Sweden,1990,just10,1,373.7425376913955,evs_combo,304
+Sweden,1990,just10,2,44.087591577537275,evs_combo,304
+Sweden,1990,just10,3,60.1194430602781,evs_combo,304
+Sweden,1990,just10,4,47.093563730551175,evs_combo,304
+Sweden,1990,just10,5,128.2548118619266,evs_combo,304
+Sweden,1990,just10,6,32.06370296548165,evs_combo,304
+Sweden,1990,just10,7,37.07365655383816,evs_combo,304
+Sweden,1990,just10,8,63.125415213292,evs_combo,304
+Sweden,1990,just10,9,43.08560085986597,evs_combo,304
+Sweden,1990,just10,10,171.34041272179257,evs_combo,304
+Sweden,1990,neigh2,1,185.3682827691908,evs_combo,304
+Sweden,1990,neigh2,2,863.715998632662,evs_combo,304
+Sweden,1994,approve4,1,613.8969500931689,issp1994,304
+Sweden,1994,approve4,2,65.2382273197001,issp1994,304
+Sweden,1994,approve4,3,63.81838044790824,issp1994,304
+Sweden,1994,approve4,4,353.69132864162725,issp1994,304
+Sweden,1996,just10,1,115.08734927952912,wvs_combo,304
+Sweden,1996,just10,2,17.012912502191263,wvs_combo,304
+Sweden,1996,just10,3,44.0334205939068,wvs_combo,304
+Sweden,1996,just10,4,32.02430588647767,wvs_combo,304
+Sweden,1996,just10,5,36.02734412228738,wvs_combo,304
+Sweden,1996,just10,6,145.11013604810194,wvs_combo,304
+Sweden,1996,just10,7,37.028103681239806,wvs_combo,304
+Sweden,1996,just10,8,81.0615242751466,wvs_combo,304
+Sweden,1996,just10,9,84.06380295200388,wvs_combo,304
+Sweden,1996,just10,10,349.26508607439706,wvs_combo,304
+Sweden,1996,neigh2,1,113.08583016162427,wvs_combo,304
+Sweden,1996,neigh2,2,896.6805648213748,wvs_combo,304
+Sweden,1998,approve4,1,364.9204253963193,issp1998,304
+Sweden,1998,approve4,2,72.98408507926385,issp1998,304
+Sweden,1998,approve4,3,78.9827770035869,issp1998,304
+Sweden,1998,approve4,4,516.88728747917,issp1998,304
+Sweden,1999,adopt5,1,865,som_combo,304
+Sweden,1999,adopt5,2,247,som_combo,304
+Sweden,1999,adopt5,3,331,som_combo,304
+Sweden,1999,adopt5,4,123,som_combo,304
+Sweden,1999,adopt5,5,75,som_combo,304
+Sweden,1999,just10,1,255.57402113687112,"evs_combo, wvs_combo, wvs4_swe",304
+Sweden,1999,just10,2,82.96840818651505,"evs_combo, wvs_combo, wvs4_swe",304
+Sweden,1999,just10,3,82.38025868291578,"evs_combo, wvs_combo, wvs4_swe",304
+Sweden,1999,just10,4,70.32980531245516,"evs_combo, wvs_combo, wvs4_swe",304
+Sweden,1999,just10,5,294.3579337317723,"evs_combo, wvs_combo, wvs4_swe",304
+Sweden,1999,just10,6,97.01190052482607,"evs_combo, wvs_combo, wvs4_swe",304
+Sweden,1999,just10,7,127.26734853399768,"evs_combo, wvs_combo, wvs4_swe",304
+Sweden,1999,just10,8,245.23604912896826,"evs_combo, wvs_combo, wvs4_swe",304
+Sweden,1999,just10,9,193.96973167629386,"evs_combo, wvs_combo, wvs4_swe",304
+Sweden,1999,just10,10,1484.555033007369,"evs_combo, wvs_combo, wvs4_swe",304
+Sweden,1999,neigh2,1,1076.8738696577657,"evs_combo, wvs_combo, wvs4_swe",304
+Sweden,1999,neigh2,2,1968.7310583633016,"evs_combo, wvs_combo, wvs4_swe",304
+Sweden,2000,adopt5,1,713,som_combo,304
+Sweden,2000,adopt5,2,330,som_combo,304
+Sweden,2000,adopt5,3,379,som_combo,304
+Sweden,2000,adopt5,4,179,som_combo,304
+Sweden,2000,adopt5,5,148,som_combo,304
+Sweden,2001,adopt5,1,1349,som_combo,304
+Sweden,2001,adopt5,2,550,som_combo,304
+Sweden,2001,adopt5,3,626,som_combo,304
+Sweden,2001,adopt5,4,403,som_combo,304
+Sweden,2001,adopt5,5,275,som_combo,304
+Sweden,2002,adopt5,1,609,som_combo,304
+Sweden,2002,adopt5,2,262,som_combo,304
+Sweden,2002,adopt5,3,333,som_combo,304
+Sweden,2002,adopt5,4,209,som_combo,304
+Sweden,2002,adopt5,5,154,som_combo,304
+Sweden,2002,free5,1,49.001001559695744,ess1,304
+Sweden,2002,free5,2,85.0017373994722,ess1,304
+Sweden,2002,free5,3,223.0045581186153,ess1,304
+Sweden,2002,free5,4,1061.0216868334119,ess1,304
+Sweden,2002,free5,5,537.0109762766656,ess1,304
+Sweden,2004,free5,1,28.000146146770216,ess2,304
+Sweden,2004,free5,2,85.00044365983815,ess2,304
+Sweden,2004,free5,3,203.00105956408407,ess2,304
+Sweden,2004,free5,4,955.0049846487699,ess2,304
+Sweden,2004,free5,5,662.0034553272102,ess2,304
+Sweden,2006,adopt4,1,256.8463039291422,eb661,304
+Sweden,2006,adopt4,2,174.16556704581063,eb661,304
+Sweden,2006,adopt4,3,232.74532232730508,eb661,304
+Sweden,2006,adopt4,4,280.93708553876576,eb661,304
+Sweden,2006,adopt5,1,463,som_combo,304
+Sweden,2006,adopt5,2,238,som_combo,304
+Sweden,2006,adopt5,3,305,som_combo,304
+Sweden,2006,adopt5,4,252,som_combo,304
+Sweden,2006,adopt5,5,197,som_combo,304
+Sweden,2006,free5,1,23.000437864149657,ess3,304
+Sweden,2006,free5,2,73.00138974273587,ess3,304
+Sweden,2006,free5,3,163.00310312419103,ess3,304
+Sweden,2006,free5,4,923.0175716787014,ess3,304
+Sweden,2006,free5,5,719.0136880140697,ess3,304
+Sweden,2006,just10,1,41.5248705807484,wvs_combo,304
+Sweden,2006,just10,2,11.58377449117408,wvs_combo,304
+Sweden,2006,just10,3,17.274223386037505,wvs_combo,304
+Sweden,2006,just10,4,15.935573799133385,wvs_combo,304
+Sweden,2006,just10,5,85.77436833105504,wvs_combo,304
+Sweden,2006,just10,6,26.385555655718775,wvs_combo,304
+Sweden,2006,just10,7,29.938125713272015,wvs_combo,304
+Sweden,2006,just10,8,78.59071126902438,wvs_combo,304
+Sweden,2006,just10,9,75.82390475597344,wvs_combo,304
+Sweden,2006,just10,10,595.7309482113109,wvs_combo,304
+Sweden,2006,marry4,1,120.22710822125184,eb661,304
+Sweden,2006,marry4,2,119.93770844217332,eb661,304
+Sweden,2006,marry4,3,199.7797474925048,eb661,304
+Sweden,2006,marry4,4,519.3556035352772,eb661,304
+Sweden,2006,neigh2,1,35.81491621483319,wvs_combo,304
+Sweden,2006,neigh2,2,967.9469214144547,wvs_combo,304
+Sweden,2007,accept2,1,45.01268190837868,pew2007,304
+Sweden,2007,accept2,2,432.48145892857576,pew2007,304
+Sweden,2007,adopt5,1,417,som_combo,304
+Sweden,2007,adopt5,2,226,som_combo,304
+Sweden,2007,adopt5,3,314,som_combo,304
+Sweden,2007,adopt5,4,294,som_combo,304
+Sweden,2007,adopt5,5,231,som_combo,304
+Sweden,2008,approve4,1,312.5264485624841,issp2008,304
+Sweden,2008,approve4,2,75.12655013521253,issp2008,304
+Sweden,2008,approve4,3,76.1282374703487,issp2008,304
+Sweden,2008,approve4,4,632.0647084709213,issp2008,304
+Sweden,2008,free5,1,17.00005607574178,ess4,304
+Sweden,2008,free5,2,69.00022760154017,ess4,304
+Sweden,2008,free5,3,153.00050468167603,ess4,304
+Sweden,2008,free5,4,807.0026619484481,ess4,304
+Sweden,2008,free5,5,770.0025399012454,ess4,304
+Sweden,2008,hioff10,1,14.09791527441071,eb691,304
+Sweden,2008,hioff10,2,13.392214509817997,eb691,304
+Sweden,2008,hioff10,3,14.50961572046827,eb691,304
+Sweden,2008,hioff10,4,12.730913793330588,eb691,304
+Sweden,2008,hioff10,5,28.084430428124765,eb691,304
+Sweden,2008,hioff10,6,29.313631759905075,eb691,304
+Sweden,2008,hioff10,7,28.457430832252697,eb691,304
+Sweden,2008,hioff10,8,54.95585954202116,eb691,304
+Sweden,2008,hioff10,9,54.84715942424983,eb691,304
+Sweden,2008,hioff10,10,747.9593103778096,eb691,304
+Sweden,2008,neigh10,1,5.945906442102628,eb691,304
+Sweden,2008,neigh10,2,6.535507080906461,eb691,304
+Sweden,2008,neigh10,3,7.314807925241309,eb691,304
+Sweden,2008,neigh10,4,7.390008006716968,eb691,304
+Sweden,2008,neigh10,5,17.95751945610554,eb691,304
+Sweden,2008,neigh10,6,18.207419726860422,eb691,304
+Sweden,2008,neigh10,7,18.565320114628218,eb691,304
+Sweden,2008,neigh10,8,33.87073669730831,eb691,304
+Sweden,2008,neigh10,9,56.97756173243789,eb691,304
+Sweden,2008,neigh10,10,825.2079940730298,eb691,304
+Sweden,2009,adopt5,1,197.78397719886763,evs_combo,304
+Sweden,2009,adopt5,2,152.99834308998803,evs_combo,304
+Sweden,2009,adopt5,3,158.66619377159213,evs_combo,304
+Sweden,2009,adopt5,4,296.13014034285703,evs_combo,304
+Sweden,2009,adopt5,5,252.73241695620715,evs_combo,304
+Sweden,2009,hioff10,1,30.20979999188127,eb712,304
+Sweden,2009,hioff10,2,11.441099996925262,eb712,304
+Sweden,2009,hioff10,3,21.65149999418127,eb712,304
+Sweden,2009,hioff10,4,11.72389999684926,eb712,304
+Sweden,2009,hioff10,5,42.91989998846549,eb712,304
+Sweden,2009,hioff10,6,30.64039999176555,eb712,304
+Sweden,2009,hioff10,7,47.453999987246974,eb712,304
+Sweden,2009,hioff10,8,66.63849998209123,eb712,304
+Sweden,2009,hioff10,9,41.09459998895603,eb712,304
+Sweden,2009,hioff10,10,675.0284998185895,eb712,304
+Sweden,2009,just10,1,125.25315469299316,evs_combo,304
+Sweden,2009,just10,2,14.497466831285898,evs_combo,304
+Sweden,2009,just10,3,26.99829293475884,evs_combo,304
+Sweden,2009,just10,4,17.57811927558945,evs_combo,304
+Sweden,2009,just10,5,50.07794713867449,evs_combo,304
+Sweden,2009,just10,6,48.79121358478426,evs_combo,304
+Sweden,2009,just10,7,36.93403326271867,evs_combo,304
+Sweden,2009,just10,8,69.38756690384477,evs_combo,304
+Sweden,2009,just10,9,74.30009946874578,evs_combo,304
+Sweden,2009,just10,10,588.2021607614222,evs_combo,304
+Sweden,2009,marry5,1,69.99880899189088,ees2009,304
+Sweden,2009,marry5,2,53.59634458984357,ees2009,304
+Sweden,2009,marry5,3,84.11578116131311,ees2009,304
+Sweden,2009,marry5,4,196.91050636007716,ees2009,304
+Sweden,2009,marry5,5,564.9214485702552,ees2009,304
+Sweden,2009,neigh2,1,79.01580887387526,evs_combo,304
+Sweden,2009,neigh2,2,1097.3212936722327,evs_combo,304
+Sweden,2010,free5,1,10.999648676239863,ess5,304
+Sweden,2010,free5,2,32.99894602871959,ess5,304
+Sweden,2010,free5,3,101.99674227058782,ess5,304
+Sweden,2010,free5,4,609.9805175005743,ess5,304
+Sweden,2010,free5,5,728.97671681626,ess5,304
+Sweden,2011,just10,1,89.95195105527631,wvs_combo,304
+Sweden,2011,just10,2,13.997072557221001,wvs_combo,304
+Sweden,2011,just10,3,25.31443879602083,wvs_combo,304
+Sweden,2011,just10,4,20.720452381609192,wvs_combo,304
+Sweden,2011,just10,5,85.27796586716555,wvs_combo,304
+Sweden,2011,just10,6,30.945758269032503,wvs_combo,304
+Sweden,2011,just10,7,39.16650720568482,wvs_combo,304
+Sweden,2011,just10,8,64.48303413797915,wvs_combo,304
+Sweden,2011,just10,9,55.858573612192416,wvs_combo,304
+Sweden,2011,just10,10,715.1492453448818,wvs_combo,304
+Sweden,2011,neigh2,1,50.65144667889186,wvs_combo,304
+Sweden,2011,neigh2,2,1156.2645814177354,wvs_combo,304
+Sweden,2011,strength5,1,292,"som_combo, som_combo",304
+Sweden,2011,strength5,2,232,"som_combo, som_combo",304
+Sweden,2011,strength5,3,1147,"som_combo, som_combo",304
+Sweden,2011,strength5,4,730,"som_combo, som_combo",304
+Sweden,2011,strength5,5,615,"som_combo, som_combo",304
+Sweden,2012,ff5,1,71.24193478286925,issp2012,304
+Sweden,2012,ff5,2,126.42934905128908,issp2012,304
+Sweden,2012,ff5,3,160.54520514449408,issp2012,304
+Sweden,2012,ff5,4,357.2130814464993,issp2012,304
+Sweden,2012,ff5,5,277.9438864064054,issp2012,304
+Sweden,2012,free5,1,10.000000000000002,ess6,304
+Sweden,2012,free5,2,58.000000000000014,ess6,304
+Sweden,2012,free5,3,148.00000000000003,ess6,304
+Sweden,2012,free5,4,679.0000000000001,ess6,304
+Sweden,2012,free5,5,945.0000000000002,ess6,304
+Sweden,2012,hioff10,1,17.827899048401903,eb774,304
+Sweden,2012,hioff10,2,10.37939944597977,eb774,304
+Sweden,2012,hioff10,3,15.859199153485013,eb774,304
+Sweden,2012,hioff10,4,16.931299096259636,eb774,304
+Sweden,2012,hioff10,5,48.29319742225853,eb774,304
+Sweden,2012,hioff10,6,29.704898414444422,eb774,304
+Sweden,2012,hioff10,7,48.1255974312045,eb774,304
+Sweden,2012,hioff10,8,83.57649553894524,eb774,304
+Sweden,2012,hioff10,9,73.95379605257517,eb774,304
+Sweden,2012,hioff10,10,674.7092639861069,eb774,304
+Sweden,2012,mm5,1,92.3134929580841,issp2012,304
+Sweden,2012,mm5,2,132.44979424420762,issp2012,304
+Sweden,2012,mm5,3,165.56224280525953,issp2012,304
+Sweden,2012,mm5,4,338.14833833559067,issp2012,304
+Sweden,2012,mm5,5,261.88936589195595,issp2012,304
+Sweden,2013,strength5,1,132,som_combo,304
+Sweden,2013,strength5,2,83,som_combo,304
+Sweden,2013,strength5,3,365,som_combo,304
+Sweden,2013,strength5,4,385,som_combo,304
+Sweden,2013,strength5,5,448,som_combo,304
+Sweden,2014,free5,1,12.000000000000004,ess7,304
+Sweden,2014,free5,2,32.00000000000001,ess7,304
+Sweden,2014,free5,3,100.00000000000003,ess7,304
+Sweden,2014,free5,4,562.0000000000001,ess7,304
+Sweden,2014,free5,5,1068.0000000000002,ess7,304
+Sweden,2014,strength5,1,101,som_combo,304
+Sweden,2014,strength5,2,102,som_combo,304
+Sweden,2014,strength5,3,488,som_combo,304
+Sweden,2014,strength5,4,367,som_combo,304
+Sweden,2014,strength5,5,449,som_combo,304
+Sweden,2015,approve4,1,29.73880060297301,eb834,304
+Sweden,2015,approve4,2,28.62700058043056,eb834,304
+Sweden,2015,approve4,3,88.12520178679426,eb834,304
+Sweden,2015,approve4,4,909.9277184493607,eb834,304
+Sweden,2015,hioff10,1,21.623100438422053,eb834,304
+Sweden,2015,hioff10,2,2.377900048213429,eb834,304
+Sweden,2015,hioff10,3,11.162700226330815,eb834,304
+Sweden,2015,hioff10,4,8.098500164202218,eb834,304
+Sweden,2015,hioff10,5,27.028900548028073,eb834,304
+Sweden,2015,hioff10,6,14.926500302644246,eb834,304
+Sweden,2015,hioff10,7,31.427700637216528,eb834,304
+Sweden,2015,hioff10,8,57.640301168693604,eb834,304
+Sweden,2015,hioff10,9,35.365700717061976,eb834,304
+Sweden,2015,hioff10,10,806.2565163473614,eb834,304
+Sweden,2015,marry4,1,38.909400788912734,eb834,304
+Sweden,2015,marry4,2,36.86720074750584,eb834,304
+Sweden,2015,marry4,3,77.91530157978208,eb834,304
+Sweden,2015,marry4,4,885.3546179511255,eb834,304
+Sweden,2015,strength5,1,119,som_combo,304
+Sweden,2015,strength5,2,82,som_combo,304
+Sweden,2015,strength5,3,441,som_combo,304
+Sweden,2015,strength5,4,356,som_combo,304
+Sweden,2015,strength5,5,436,som_combo,304
+Sweden,2016,free5,1,15.004443016040812,ess8,304
+Sweden,2016,free5,2,17.001576218793996,ess8,304
+Sweden,2016,free5,3,69.00510310020995,ess8,304
+Sweden,2016,free5,4,451.99856288691973,ess8,304
+Sweden,2016,free5,5,984.9886653449286,ess8,304
+Sweden,2016,strength5,1,116,som_combo,304
+Sweden,2016,strength5,2,90,som_combo,304
+Sweden,2016,strength5,3,489,som_combo,304
+Sweden,2016,strength5,4,356,som_combo,304
+Sweden,2016,strength5,5,467,som_combo,304
+Sweden,2017,just10,1,72.65811217626147,evs2017,304
+Sweden,2017,just10,2,6.781673135787524,evs2017,304
+Sweden,2017,just10,3,15.61419955844883,evs2017,304
+Sweden,2017,just10,4,8.783077782110686,evs2017,304
+Sweden,2017,just10,5,77.04429658295417,evs2017,304
+Sweden,2017,just10,6,12.709741807802674,evs2017,304
+Sweden,2017,just10,7,18.242817241686772,evs2017,304
+Sweden,2017,just10,8,54.261253677797306,evs2017,304
+Sweden,2017,just10,9,56.208872442658155,evs2017,304
+Sweden,2017,just10,10,841.258483795799,evs2017,304
+Sweden,2017,marry4a,1,29.893941777377744,pewrel2017_we,304
+Sweden,2017,marry4a,2,74.81765255200759,pewrel2017_we,304
+Sweden,2017,marry4a,3,597.7838408755357,pewrel2017_we,304
+Sweden,2017,marry4a,4,720.1135727571993,pewrel2017_we,304
+Sweden,2017,neigh2,1,28.382658397871666,evs2017,304
+Sweden,2017,parent5,1,33.67028446406449,evs2017,304
+Sweden,2017,parent5,2,84.02511647652948,evs2017,304
+Sweden,2017,parent5,3,154.02296507772007,evs2017,304
+Sweden,2017,parent5,4,298.64964678120083,evs2017,304
+Sweden,2017,parent5,5,590.6207776047138,evs2017,304
+Sweden,2017,strength5,1,127,som_combo,304
+Sweden,2017,strength5,2,95,som_combo,304
+Sweden,2017,strength5,3,445,som_combo,304
+Sweden,2017,strength5,4,413,som_combo,304
+Sweden,2017,strength5,5,559,som_combo,304
+Sweden,2019,accept2,1,45.957804956659764,pew2019,304
+Sweden,2019,accept2,2,951.3953116378648,pew2019,304
 Poland,1989,just10,1,710.5392868562233,wvs_combo,294
 Poland,1989,just10,2,44.0334205939068,wvs_combo,294
 Poland,1989,just10,3,37.028103681239806,wvs_combo,294

@@ -66,6 +66,7 @@
 *morally acceptable
 Next, I’m going to read some behaviors.  For each, please tell me whether you personally believe that it is morally acceptable, morally wrong, or is it not a moral issue? Homosexual behavior
 	approve3
+		cmlic1980val		iv29
 		X pewrel2009_afr	Q85I
 		X pewrel2014_latam	Q69h
 		X pewrel2015_ee		Q71h
