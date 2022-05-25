@@ -178,95 +178,95 @@ gallup_us198206,accept2a,q09j,"c(2, 1)",,,
 gallup_us198606,legal2,q10,"c(2, 1)",,,
 gallup_us198703,legal2,q20,"c(2, 1)",,,
 gallup_us198807,legal2,q5,"c(2, 1)",Do you think gay or lesbian relations between consenting adults should or should not be legal?,1 should be legal / 2 should not be legal,1
-gallup_us198909,accept2a,q03,"c(2, 1)",,,
-gallup_us198910,legal2,q39,"c(2, 1)",,,
-gallup_us199109,legal2,q7,"c(2, 1)",,,
-gallup_us199206,accept2a,q24,"c(2, 1)",,,
-gallup_us199206,legal2,q25,"c(2, 1)",,,
-gallup_us199603,accept2a,q43a,"c(2, 1)",,,
-gallup_us199603,marry2,q44,"c(2, 1)",,,
-gallup_us199611,legal2,q12,"c(2, 1)",,,
-gallup_us199902,legal2,q35,"c(2, 1)",,,
-gallup_us199902,accept2,q39a,"c(2, 1)",,,
-gallup_us200305,legal2,q18,"c(2, 1)",,,
-gallup_us200401,legal2,q28,"c(2, 1)",,,
-gallup_us200402,marry2,q10,"c(2, 1)",,,
-gallup_us200508,marry2,q17,"c(2, 1)",,,
-gallup_us200709,adopt2,q25,"c(2, 1)",,,
-gallup_us200905,marry2,q15,"c(2, 1)",,,
-gallup_us200905,adopt2,q19a,"c(2, 1)",,,
-gallup_us201112,legal2,q22,"c(2, 1)",,,
-gallup_us201112,marry2,q23,"c(2, 1)",,,
-gallup_us201211,marry2,q7,"c(2, 1)",,,
-gallup_us201211,adopt2,q14a,"c(2, 1)",,,
-gallup_us201211,legal2,q5,"c(2, 1)",,,
+gallup_us198909,accept2a,q03,"c(2, 1)",Do you feel that homosexuality should be considered as an acceptable alternative life-style or not?,1 acceptable / 2 not acceptable,1
+gallup_us198910,legal2,q39,"c(2, 1)",Do you think gay or lesbian relations between consenting adults should or should not be legal?,1 should be legal / 2 should not be legal,1
+gallup_us199109,legal2,q7,"c(2, 1)",Do you think gay or lesbian relations between consenting adults should or should not be legal?,1 should be legal / 2 should not be legal,1
+gallup_us199206,accept2a,q24,"c(2, 1)",Do you feel that homosexuality should be considered as an acceptable alternative life-style or not?,1 acceptable / 2 not acceptable,1
+gallup_us199206,legal2,q25,"c(2, 1)",Do you think gay or lesbian relations between consenting adults should or should not be legal?,1 should be legal / 2 should not be legal,1
+gallup_us199603,accept2a,q43a,"c(2, 1)",Do you feel that homosexuality should be considered as an acceptable alternative life-style or not?,1 acceptable / 2 not acceptable,1
+gallup_us199603,marry2,q44,"c(2, 1)",Do you think same-sex marriages should be recognized by the law as valide?, 1 yes / 2 no, 1
+gallup_us199611,legal2,q12,"c(2, 1)",Do you think gay or lesbian relations between consenting adults should or should not be legal?,1 should be legal / 2 should not be legal,1
+gallup_us199902,legal2,q35,"c(2, 1)",Do you think gay or lesbian relations between consenting adults should or should not be legal?,1 should be legal / 2 should not be legal,1
+gallup_us199902,accept2,q39a,"c(2, 1)",And which one of these comes closer to your opinion, number 1 or number 2?, 1 homosexuality is a way of life that should be accepted by society / 2 homosexuality is a way of lieft that should not be accepted by society, 1
+gallup_us200305,legal2,q18,"c(2, 1)",Do you think gay or lesbian relations between consenting adults should or should not be legal?,1 should be legal / 2 should not be legal,1
+gallup_us200401,legal2,q28,"c(2, 1)",Do you think gay or lesbian relations between consenting adults should or should not be legal?,1 should be legal / 2 should not be legal,1
+gallup_us200402,marry2,q10,"c(2, 1)",Do you think same-sex marriages should be recognized by the law as valide?, 1 yes / 2 no, 1
+gallup_us200508,marry2,q17,"c(2, 1)",Do you think same-sex marriages should be recognized by the law as valide?, 1 yes / 2 no, 1
+gallup_us200709,adopt2,q25,"c(2, 1)",Do you think same-sex couples should have the legal right to adopt a child?,1 yes / 2 no,1
+gallup_us200905,marry2,q15,"c(2, 1)",Do you think same-sex marriages should be recognized by the law as valide?, 1 yes / 2 no, 1
+gallup_us200905,adopt2,q19a,"c(2, 1)",Do you think same-sex couples should have the legal right to adopt a child?,1 yes / 2 no,1
+gallup_us201112,legal2,q22,"c(2, 1)",Do you think gay or lesbian relations between consenting adults should or should not be legal?,1 should be legal / 2 should not be legal,1
+gallup_us201112,marry2,q23,"c(2, 1)",Do you think same-sex marriages should be recognized by the law as valide?, 1 yes / 2 no, 1
+gallup_us201211,marry2,q7,"c(2, 1)",Do you think same-sex marriages should be recognized by the law as valide?, 1 yes / 2 no, 1
+gallup_us201211,adopt2,q14a,"c(2, 1)",Do you think same-sex couples should have the legal right to adopt a child?,1 yes / 2 no,1
+gallup_us201211,legal2,q5,"c(2, 1)",Do you think gay or lesbian relations between consenting adults should or should not be legal?,1 should be legal / 2 should not be legal,1
 icenes2007,adopt5,gayadopt,c(5:1),,,
 ispas2001,just11,a4_1,c(0:10),,,
-isshr2006,approve4,c2c,c(4:1),,,
-issp1988,marry5,v36,c(5:1),,,
-issp1988au,marry5,marokhom,c(5:1),,,
-issp1991,approve4,v11,c(1:4),,,
-issp1994,approve4,v48,c(1:4),,,
-issp1998,approve4,v9,c(1:4),,,
-issp1998br,approve4,homosex1,c(1:4),,,
-issp2008,approve4,v9,c(1:4),,,
-issp2008a,approve4,v9,c(1:4),,,
-issp2012,ff5,v19,c(5:1),,,
-issp2012,mm5,v20,c(5:1),,,
-issp2018,approve4,v4,c(1:4),,,
-issp2018ext,approve4,v4,c(1:4),,,
-issp2018tn,approve4,v4,c(1:4),,,
-issp2018ve,approve4,v4,c(1:4),,,
-jgss,approve4,q4homsea,c(1:4),,,
-kgss,marry5,homomar,c(5:1),,,
-lat200006,approve4,q54,c(1:4),,,
-lat200006,marry4a,q57,c(4:1),,,
+isshr2006,approve4,c2c,c(4:1),what about sexual relations of the same sex is it,1 always wrong / 2 almost always wrong / 3 wrong only sometimes / 4 not wrong at all,1
+issp1988,marry5,v36,c(5:1),Homosexual couples should have the right to marry one another, 1 strongly agree / 2 agree / 3 neighter agree nor disagree / 4 disagree / 5 strongly disagree, 1
+issp1988au,marry5,marokhom,c(5:1),Homosexual couples should have the right to marry one another, 1 strongly agree / 2 agree / 3 neighter agree nor disagree / 4 disagree / 5 strongly disagree, 1
+issp1991,approve4,v11,c(1:4),what about sexual relations of the same sex is it,1 always wrong / 2 almost always wrong / 3 wrong only sometimes / 4 not wrong at all,0
+issp1994,approve4,v48,c(1:4),what about sexual relations of the same sex is it,1 always wrong / 2 almost always wrong / 3 wrong only sometimes / 4 not wrong at all,0
+issp1998,approve4,v9,c(1:4),what about sexual relations of the same sex is it,1 always wrong / 2 almost always wrong / 3 wrong only sometimes / 4 not wrong at all,0
+issp1998br,approve4,homosex1,c(1:4),what about sexual relations of the same sex is it,1 always wrong / 2 almost always wrong / 3 wrong only sometimes / 4 not wrong at all,0
+issp2008,approve4,v9,c(1:4),what about sexual relations of the same sex is it,1 always wrong / 2 almost always wrong / 3 wrong only sometimes / 4 not wrong at all,0
+issp2008a,approve4,v9,c(1:4),what about sexual relations of the same sex is it,1 always wrong / 2 almost always wrong / 3 wrong only sometimes / 4 not wrong at all,0
+issp2012,ff5,v19,c(5:1),same sex female couple can bring up a child as well as a male-female couple, 1 strongly agree / 2 agree / 3 neighter agree nor disagree / 4 disagree / 5 strongly disagree, 1
+issp2012,mm5,v20,c(5:1),same sex male couple can bring up a child as well as a male-female couple, 1 strongly agree / 2 agree / 3 neighter agree nor disagree / 4 disagree / 5 strongly disagree, 1
+issp2018,approve4,v4,c(1:4),what about sexual relations of the same sex is it,1 always wrong / 2 almost always wrong / 3 wrong only sometimes / 4 not wrong at all,0
+issp2018ext,approve4,v4,c(1:4),what about sexual relations of the same sex is it,1 always wrong / 2 almost always wrong / 3 wrong only sometimes / 4 not wrong at all,0
+issp2018tn,approve4,v4,c(1:4),what about sexual relations of the same sex is it,1 always wrong / 2 almost always wrong / 3 wrong only sometimes / 4 not wrong at all,0
+issp2018ve,approve4,v4,c(1:4),what about sexual relations of the same sex is it,1 always wrong / 2 almost always wrong / 3 wrong only sometimes / 4 not wrong at all,0
+jgss,approve4,q4homsea,c(1:4),what about sexual relations of the same sex is it,1 always wrong / 2 almost always wrong / 3 wrong only sometimes / 4 not wrong at all,0
+kgss,marry5,homomar,c(5:1),Homosexual couples should have the right to marry one another, 1 strongly agree / 2 agree / 3 neighter agree nor disagree / 4 disagree / 5 strongly disagree, 1
+lat200006,approve4,q54,c(1:4),what about sexual relations of the same sex is it,1 always wrong / 2 almost always wrong / 3 wrong only sometimes / 4 not wrong at all,0
+lat200006,marry4a,q57,c(4:1),Do you strongly favor, favor, oppose, or strongly oppose allowing gays and lesbians to marry legally?, 1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1
 lb1998,neigh2,np63a,"c(1, 0)",,,
 lb2002,just10,p52wvsc,c(1:10),,,
 lb2004,just10,p38sta,c(1:10),,,
 lb2008,just10,p64wvsst,c(1:10),,,
 lb2009,just10,p63wvsst,c(1:10),,,
 lb2009,neigh2,p64st_a,"c(1, 0)",,,
-nbcwsj199906,marry4a,q22i,c(4:1),,,
-nbcwsj200910,marry4a,q43,c(4:1),,,
-nsss1989,marry5,marokhom,c(5:1),,,
-nsss1993,approve4,homosex3,c(1:4),,,
-pew2002,accept2,q40,"c(2, 1)",,,
-pew2007,accept2,q50,"c(2, 1)",,,
-pew2011,accept2,q18,"c(2, 1)",,,
-pew2013,accept2,q27,"c(2, 1)",,,
+nbcwsj199906,marry4a,q22i,c(4:1),Do you strongly favor, favor, oppose, or strongly oppose allowing gays and lesbians to marry legally?, 1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1
+nbcwsj200910,marry4a,q43,c(4:1),Do you strongly favor, favor, oppose, or strongly oppose allowing gays and lesbians to marry legally?, 1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1
+nsss1989,marry5,marokhom,c(5:1),Homosexual couples should have the right to marry one another, 1 strongly agree / 2 agree / 3 neighter agree nor disagree / 4 disagree / 5 strongly disagree, 1
+nsss1993,approve4,homosex3,c(1:4),what about sexual relations of the same sex is it,1 always wrong / 2 almost always wrong / 3 wrong only sometimes / 4 not wrong at all,0
+pew2002,accept2,q40,"c(2, 1)",And which one of these comes closer to your opinion, number 1 or number 2?,1 homosexuality is a way of life that should be accepted by society / 2 homosexuality is a way of lieft that should not be accepted by society, 1
+pew2007,accept2,q50,"c(2, 1)",And which one of these comes closer to your opinion, number 1 or number 2?,1 homosexuality is a way of life that should be accepted by society / 2 homosexuality is a way of lieft that should not be accepted by society, 1
+pew2011,accept2,q18,"c(2, 1)",And which one of these comes closer to your opinion, number 1 or number 2?,1 homosexuality is a way of life that should be accepted by society / 2 homosexuality is a way of lieft that should not be accepted by society, 1
+pew2013,accept2,q27,"c(2, 1)",And which one of these comes closer to your opinion, number 1 or number 2?,1 homosexuality is a way of life that should be accepted by society / 2 homosexuality is a way of lieft that should not be accepted by society, 1
 pew2013,approve3,q84d,"c(2, 3, 1)",,,
-pew2014_india,accept2,q27,"c(2, 1)",,,
+pew2014_india,accept2,q27,"c(2, 1)",And which one of these comes closer to your opinion, number 1 or number 2?,1 homosexuality is a way of life that should be accepted by society / 2 homosexuality is a way of lieft that should not be accepted by society, 1
 pew2014_india,approve3,q84d,"c(2, 3, 1)",,,
-pew2017,marry4a,favgaymarriage,c(4:1),,,
-pew2019,accept2,homosexuality,"c(2, 1)",,,
+pew2017,marry4a,favgaymarriage,c(4:1),Do you strongly favor, favor, oppose, or strongly oppose allowing gays and lesbians to marry legally?, 1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1
+pew2019,accept2,homosexuality,"c(2, 1)",And which one of these comes closer to your opinion, number 1 or number 2?,1 homosexuality is a way of life that should be accepted by society / 2 homosexuality is a way of lieft that should not be accepted by society, 1
 pewrel2009_afr,approve3,q85i,"c(2, 3, 1)",,,
 pewrel2014_latam,approve3,q69h,"c(2, 3, 1)",,,
-pewrel2014_latam,marry4a,q15,c(4:1),,,
-pewrel2014_us,accept2,q5b,"c(2, 1)",,,
+pewrel2014_latam,marry4a,q15,c(4:1),Do you strongly favor, favor, oppose, or strongly oppose allowing gays and lesbians to marry legally?, 1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1
+pewrel2014_us,accept2,q5b,"c(2, 1)",And which one of these comes closer to your opinion, number 1 or number 2?,1 homosexuality is a way of life that should be accepted by society / 2 homosexuality is a way of lieft that should not be accepted by society, 1
 pewrel2015_ee,approve3,q71h,"c(2, 3, 1)",,,
-pewrel2015_ee,accept2,q64,"c(2, 1)",,,
+pewrel2015_ee,accept2,q64,"c(2, 1)",And which one of these comes closer to your opinion, number 1 or number 2?,1 homosexuality is a way of life that should be accepted by society / 2 homosexuality is a way of lieft that should not be accepted by society, 1
 pewrel2016_us,approve3,moralissuecf2_w20,"c(2, 3, 1)",,,
-pewrel2017_we,marry4a,q5,c(4:1),,,
-pgss,approve4,q106,c(1:4),,,
+pewrel2017_we,marry4a,q5,c(4:1),Do you strongly favor, favor, oppose, or strongly oppose allowing gays and lesbians to marry legally?, 1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1
+pgss,approve4,q106,c(1:4),what about sexual relations of the same sex is it,1 always wrong / 2 almost always wrong / 3 wrong only sometimes / 4 not wrong at all,0
 politbarometer_east2000,civil2,v217,"c(2, 1)",,,
 politbarometer_east2001,civil2,v185,"c(2, 1)",,,
 politbarometer_west2000,civil2,v217,"c(2, 1)",,,
 politbarometer_west2001,civil2,v185,"c(2, 1)",,,
-prri2011_avs,marry4a,q8b,c(4:1),,,
+prri2011_avs,marry4a,q8b,c(4:1),Do you strongly favor, favor, oppose, or strongly oppose allowing gays and lesbians to marry legally?, 1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1
 prri2011_mrgl,adopt4a,q8c,c(4:1),,,
-prri2011_mrgl,marry4a,q5a,c(4:1),,,
-prri2011_pici,marry4a,q5b,c(4:1),,,
+prri2011_mrgl,marry4a,q5a,c(4:1),Do you strongly favor, favor, oppose, or strongly oppose allowing gays and lesbians to marry legally?, 1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1
+prri2011_pici,marry4a,q5b,c(4:1),Do you strongly favor, favor, oppose, or strongly oppose allowing gays and lesbians to marry legally?, 1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1
 prri2012_3rns,adopt4a,q5c,c(4:1),,,
-prri2012_3rns,marry4a,q5a,c(4:1),,,
-prri2012_6rns,marry4a,q1a,c(4:1),,,
-prri2012_avs,marry4a,q12a,c(4:1),,,
-prri2012_rcc,marry4a,q12a,c(4:1),,,
+prri2012_3rns,marry4a,q5a,c(4:1),Do you strongly favor, favor, oppose, or strongly oppose allowing gays and lesbians to marry legally?, 1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1
+prri2012_6rns,marry4a,q1a,c(4:1),Do you strongly favor, favor, oppose, or strongly oppose allowing gays and lesbians to marry legally?, 1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1
+prri2012_avs,marry4a,q12a,c(4:1),Do you strongly favor, favor, oppose, or strongly oppose allowing gays and lesbians to marry legally?, 1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1
+prri2012_rcc,marry4a,q12a,c(4:1),Do you strongly favor, favor, oppose, or strongly oppose allowing gays and lesbians to marry legally?, 1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1
 prri2013_3rap,adopt4a,q1c,c(4:1),,,
-prri2013_3rap,marry4a,q1a,c(4:1),,,
-prri2013_5rap,marry4a,q7a,c(4:1),,,
-prri2013_rvi,marry4a,q4a,c(4:1),,,
-prri2015_rap,marry4a,q3a,c(4:1),,,
+prri2013_3rap,marry4a,q1a,c(4:1),Do you strongly favor, favor, oppose, or strongly oppose allowing gays and lesbians to marry legally?, 1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1
+prri2013_5rap,marry4a,q7a,c(4:1),Do you strongly favor, favor, oppose, or strongly oppose allowing gays and lesbians to marry legally?, 1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1
+prri2013_rvi,marry4a,q4a,c(4:1),Do you strongly favor, favor, oppose, or strongly oppose allowing gays and lesbians to marry legally?, 1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1
+prri2015_rap,marry4a,q3a,c(4:1),Do you strongly favor, favor, oppose, or strongly oppose allowing gays and lesbians to marry legally?, 1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1
 prriatlantic2016_wwc,marry4a,q15a,c(4:1),,,
 psra199402,adopt2,q10d,"c(2, 1)",,,
 psra199402,marry2,q10c,"c(2, 1)",,,
