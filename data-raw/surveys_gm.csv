@@ -227,46 +227,46 @@ lb2004,just10,p38sta,c(1:10),,,
 lb2008,just10,p64wvsst,c(1:10),,,
 lb2009,just10,p63wvsst,c(1:10),,,
 lb2009,neigh2,p64st_a,"c(1, 0)",,,
-nbcwsj199906,marry4a,q22i,c(4:1),Do you strongly favor favor oppose or strongly oppose allowing gays and lesbians to marry legally?, 1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1
-nbcwsj200910,marry4a,q43,c(4:1),Do you strongly favor favor oppose or strongly oppose allowing gays and lesbians to marry legally?, 1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1
-nsss1989,marry5,marokhom,c(5:1),Homosexual couples should have the right to marry one another, 1 strongly agree / 2 agree / 3 neighter agree nor disagree / 4 disagree / 5 strongly disagree, 1
-nsss1993,approve4,homosex3,c(1:4),what about sexual relations of the same sex is it,1 always wrong / 2 almost always wrong / 3 wrong only sometimes / 4 not wrong at all,0
-pew2002,accept2,q40,"c(2, 1)",And which one of these comes closer to your opinion, number 1 or number 2?,1 homosexuality is a way of life that should be accepted by society / 2 homosexuality is a way of lieft that should not be accepted by society, 1
-pew2007,accept2,q50,"c(2, 1)",And which one of these comes closer to your opinion, number 1 or number 2?,1 homosexuality is a way of life that should be accepted by society / 2 homosexuality is a way of lieft that should not be accepted by society, 1
-pew2011,accept2,q18,"c(2, 1)",And which one of these comes closer to your opinion, number 1 or number 2?,1 homosexuality is a way of life that should be accepted by society / 2 homosexuality is a way of lieft that should not be accepted by society, 1
-pew2013,accept2,q27,"c(2, 1)",And which one of these comes closer to your opinion, number 1 or number 2?,1 homosexuality is a way of life that should be accepted by society / 2 homosexuality is a way of lieft that should not be accepted by society, 1
+nbcwsj199906,marry4a,q22i,c(4:1),,,
+nbcwsj200910,marry4a,q43,c(4:1),,,
+nsss1989,marry5,marokhom,c(5:1),,,
+nsss1993,approve4,homosex3,c(1:4),,,
+pew2002,accept2,q40,"c(2, 1)",,,
+pew2007,accept2,q50,"c(2, 1)",,,
+pew2011,accept2,q18,"c(2, 1)",,,
+pew2013,accept2,q27,"c(2, 1)",,,
 pew2013,approve3,q84d,"c(2, 3, 1)",,,
-pew2014_india,accept2,q27,"c(2, 1)",And which one of these comes closer to your opinion?,1 homosexuality is a way of life that should be accepted by society / 2 homosexuality is a way of lieft that should not be accepted by society, 1
+pew2014_india,accept2,q27,"c(2, 1)",,,
 pew2014_india,approve3,q84d,"c(2, 3, 1)",,,
-pew2017,marry4a,favgaymarriage,c(4:1),Do you strongly favor favor oppose or strongly oppose allowing gays and lesbians to marry legally?, 1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1
-pew2019,accept2,homosexuality,"c(2, 1)",And which one of these comes closer to your opinion?,1 homosexuality is a way of life that should be accepted by society / 2 homosexuality is a way of lieft that should not be accepted by society, 1
+pew2017,marry4a,favgaymarriage,c(4:1),,,
+pew2019,accept2,homosexuality,"c(2, 1)",,,
 pewrel2009_afr,approve3,q85i,"c(2, 3, 1)",,,
 pewrel2014_latam,approve3,q69h,"c(2, 3, 1)",,,
-pewrel2014_latam,marry4a,q15,c(4:1),Do you strongly favor favor oppose or strongly oppose allowing gays and lesbians to marry legally?, 1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1
-pewrel2014_us,accept2,q5b,"c(2, 1)",And which one of these comes closer to your opinion?,1 homosexuality is a way of life that should be accepted by society / 2 homosexuality is a way of lieft that should not be accepted by society, 1
+pewrel2014_latam,marry4a,q15,c(4:1),,,
+pewrel2014_us,accept2,q5b,"c(2, 1)",,,
 pewrel2015_ee,approve3,q71h,"c(2, 3, 1)",,,
-pewrel2015_ee,accept2,q64,"c(2, 1)",And which one of these comes closer to your opinion?,1 homosexuality is a way of life that should be accepted by society / 2 homosexuality is a way of lieft that should not be accepted by society, 1
+pewrel2015_ee,accept2,q64,"c(2, 1)",,,
 pewrel2016_us,approve3,moralissuecf2_w20,"c(2, 3, 1)",,,
-pewrel2017_we,marry4a,q5,c(4:1),Do you strongly favor favor oppose or strongly oppose allowing gays and lesbians to marry legally?, 1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1
-pgss,approve4,q106,c(1:4),what about sexual relations of the same sex is it,1 always wrong / 2 almost always wrong / 3 wrong only sometimes / 4 not wrong at all,0
+pewrel2017_we,marry4a,q5,c(4:1),,,
+pgss,approve4,q106,c(1:4),,,
 politbarometer_east2000,civil2,v217,"c(2, 1)",,,
 politbarometer_east2001,civil2,v185,"c(2, 1)",,,
 politbarometer_west2000,civil2,v217,"c(2, 1)",,,
 politbarometer_west2001,civil2,v185,"c(2, 1)",,,
-prri2011_avs,marry4a,q8b,c(4:1),Do you strongly favor favor oppose or strongly oppose allowing gays and lesbians to marry legally?, 1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1
+prri2011_avs,marry4a,q8b,c(4:1),,,
 prri2011_mrgl,adopt4a,q8c,c(4:1),,,
-prri2011_mrgl,marry4a,q5a,c(4:1),Do you strongly favor favor oppose or strongly oppose allowing gays and lesbians to marry legally?, 1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1
-prri2011_pici,marry4a,q5b,c(4:1),Do you strongly favor favor oppose or strongly oppose allowing gays and lesbians to marry legally?, 1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1
+prri2011_mrgl,marry4a,q5a,c(4:1),,,
+prri2011_pici,marry4a,q5b,c(4:1),,,
 prri2012_3rns,adopt4a,q5c,c(4:1),,,
-prri2012_3rns,marry4a,q5a,c(4:1),Do you strongly favor favor oppose or strongly oppose allowing gays and lesbians to marry legally?, 1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1
-prri2012_6rns,marry4a,q1a,c(4:1),Do you strongly favor favor oppose or strongly oppose allowing gays and lesbians to marry legally?, 1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1
-prri2012_avs,marry4a,q12a,c(4:1),Do you strongly favor favor oppose or strongly oppose allowing gays and lesbians to marry legally?, 1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1
-prri2012_rcc,marry4a,q12a,c(4:1),Do you strongly favor favor oppose or strongly oppose allowing gays and lesbians to marry legally?, 1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1
+prri2012_3rns,marry4a,q5a,c(4:1),,,
+prri2012_6rns,marry4a,q1a,c(4:1),,,
+prri2012_avs,marry4a,q12a,c(4:1),,,
+prri2012_rcc,marry4a,q12a,c(4:1),,,
 prri2013_3rap,adopt4a,q1c,c(4:1),,,
-prri2013_3rap,marry4a,q1a,c(4:1),Do you strongly favor favor oppose or strongly oppose allowing gays and lesbians to marry legally?, 1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1
-prri2013_5rap,marry4a,q7a,c(4:1),Do you strongly favor favor oppose or strongly oppose allowing gays and lesbians to marry legally?, 1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1
-prri2013_rvi,marry4a,q4a,c(4:1),Do you strongly favor favor oppose or strongly oppose allowing gays and lesbians to marry legally?, 1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1
-prri2015_rap,marry4a,q3a,c(4:1),Do you strongly favor favor oppose or strongly oppose allowing gays and lesbians to marry legally?, 1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1
+prri2013_3rap,marry4a,q1a,c(4:1),,,
+prri2013_5rap,marry4a,q7a,c(4:1),,,
+prri2013_rvi,marry4a,q4a,c(4:1),,,
+prri2015_rap,marry4a,q3a,c(4:1),,,
 prriatlantic2016_wwc,marry4a,q15a,c(4:1),,,
 psra199402,adopt2,q10d,"c(2, 1)",,,
 psra199402,marry2,q10c,"c(2, 1)",,,
