@@ -187,7 +187,7 @@ gallup_us199603,accept2a,q43a,"c(2, 1)",Do you feel that homosexuality should be
 gallup_us199603,marry2,q44,"c(2, 1)",Do you think same-sex marriages should be recognized by the law as valide?, 1 yes / 2 no, 1
 gallup_us199611,legal2,q12,"c(2, 1)",Do you think gay or lesbian relations between consenting adults should or should not be legal?,1 should be legal / 2 should not be legal,1
 gallup_us199902,legal2,q35,"c(2, 1)",Do you think gay or lesbian relations between consenting adults should or should not be legal?,1 should be legal / 2 should not be legal,1
-gallup_us199902,accept2,q39a,"c(2, 1)",,,
+gallup_us199902,accept2,q39a,"c(2, 1)",And which one of these comes closer to your opinion?, 1 homosexuality is a way of life that should be accepted by society / 2 homosexuality is a way of lieft that should not be accepted by society, 1
 gallup_us200305,legal2,q18,"c(2, 1)",,,
 gallup_us200401,legal2,q28,"c(2, 1)",,,
 gallup_us200402,marry2,q10,"c(2, 1)",,,
