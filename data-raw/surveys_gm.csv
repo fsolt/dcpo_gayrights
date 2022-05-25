@@ -249,10 +249,10 @@ pewrel2015_ee,accept2,q64,"c(2, 1)",And which one of these comes closer to your 
 pewrel2016_us,approve3,moralissuecf2_w20,"c(2, 3, 1)",pless tell me whether you personally believe that it is morally accetable, 1 morally acceptable / 2 morally wrong / not a moral issue, 1
 pewrel2017_we,marry4a,q5,c(4:1),Do you strongly favor favor oppose or strongly oppose allowing gays and lesbians to marry legally?, 1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1
 pgss,approve4,q106,c(1:4),what about sexual relations of the same sex is it,1 always wrong / 2 almost always wrong / 3 wrong only sometimes / 4 not wrong at all,0
-politbarometer_east2000,civil2,v217,"c(2, 1)",,,
-politbarometer_east2001,civil2,v185,"c(2, 1)",,,
-politbarometer_west2000,civil2,v217,"c(2, 1)",,,
-politbarometer_west2001,civil2,v185,"c(2, 1)",,,
+politbarometer_east2000,civil2,v217,"c(2, 1)",same sex marriage should be given the same legal status as different sex marriage, 1 yes / 2 no, 1
+politbarometer_east2001,civil2,v185,"c(2, 1)",same sex marriage should be given the same legal status as different sex marriage, 1 yes / 2 no, 1
+politbarometer_west2000,civil2,v217,"c(2, 1)",same sex marriage should be given the same legal status as different sex marriage, 1 yes / 2 no, 1
+politbarometer_west2001,civil2,v185,"c(2, 1)",same sex marriage should be given the same legal status as different sex marriage, 1 yes / 2 no, 1
 prri2011_avs,marry4a,q8b,c(4:1),Do you strongly favor favor oppose or strongly oppose allowing gays and lesbians to marry legally?, 1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1
 prri2011_mrgl,adopt4a,q8c,c(4:1),,,
 prri2011_mrgl,marry4a,q5a,c(4:1),Do you strongly favor favor oppose or strongly oppose allowing gays and lesbians to marry legally?, 1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1
