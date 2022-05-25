@@ -200,8 +200,8 @@ gallup_us201112,marry2,q23,"c(2, 1)",Do you think same-sex marriages should be r
 gallup_us201211,marry2,q7,"c(2, 1)",Do you think same-sex marriages should be recognized by the law as valide?, 1 yes / 2 no, 1
 gallup_us201211,adopt2,q14a,"c(2, 1)",Do you think same-sex couples should have the legal right to adopt a child?,1 yes / 2 no,1
 gallup_us201211,legal2,q5,"c(2, 1)",Do you think gay or lesbian relations between consenting adults should or should not be legal?,1 should be legal / 2 should not be legal,1
-icenes2007,adopt5,gayadopt,c(5:1),,,
-ispas2001,just11,a4_1,c(0:10),,,
+icenes2007,adopt5,gayadopt,c(5:1),homosexual couples - adopt children, 5 strongly disagree / 1 agree, 1
+ispas2001,just11,a4_1,c(0:10),is homosexuality justifiable?, 0 never justified / 10 always justified, 1
 isshr2006,approve4,c2c,c(4:1),what about sexual relations of the same sex is it,1 always wrong / 2 almost always wrong / 3 wrong only sometimes / 4 not wrong at all,1
 issp1988,marry5,v36,c(5:1),Homosexual couples should have the right to marry one another, 1 strongly agree / 2 agree / 3 neighter agree nor disagree / 4 disagree / 5 strongly disagree, 1
 issp1988au,marry5,marokhom,c(5:1),Homosexual couples should have the right to marry one another, 1 strongly agree / 2 agree / 3 neighter agree nor disagree / 4 disagree / 5 strongly disagree, 1
