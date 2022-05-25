@@ -221,12 +221,12 @@ jgss,approve4,q4homsea,c(1:4),what about sexual relations of the same sex is it,
 kgss,marry5,homomar,c(5:1),Homosexual couples should have the right to marry one another, 1 strongly agree / 2 agree / 3 neighter agree nor disagree / 4 disagree / 5 strongly disagree, 1
 lat200006,approve4,q54,c(1:4),what about sexual relations of the same sex is it,1 always wrong / 2 almost always wrong / 3 wrong only sometimes / 4 not wrong at all,0
 lat200006,marry4a,q57,c(4:1),Do you strongly favor favor oppose or strongly oppose allowing gays and lesbians to marry legally?, 1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1
-lb1998,neigh2,np63a,"c(1, 0)",,,
-lb2002,just10,p52wvsc,c(1:10),,,
-lb2004,just10,p38sta,c(1:10),,,
-lb2008,just10,p64wvsst,c(1:10),,,
-lb2009,just10,p63wvsst,c(1:10),,,
-lb2009,neigh2,p64st_a,"c(1, 0)",,,
+lb1998,neigh2,np63a,"c(1, 0)",could you select any that you would not like to have as neighbors?, 1 mentioned / 0 not mentioned, 1
+lb2002,just10,p52wvsc,c(1:10),please teel me for each of the following statement - homosexuality, 1 never be justified / 10 always be justified, 1
+lb2004,just10,p38sta,c(1:10),please teel me for each of the following statement - homosexuality, 1 never be justified / 10 always be justified, 1
+lb2008,just10,p64wvsst,c(1:10),please teel me for each of the following statement - homosexuality, 1 never be justified / 10 always be justified, 1
+lb2009,just10,p63wvsst,c(1:10),please teel me for each of the following statement - homosexuality, 1 never be justified / 10 always be justified, 1
+lb2009,neigh2,p64st_a,"c(1, 0)",could you select any that you would not like to have as neighbors?, 1 mentioned / 0 not mentioned, 1
 nbcwsj199906,marry4a,q22i,c(4:1),Do you strongly favor favor oppose or strongly oppose allowing gays and lesbians to marry legally?, 1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1
 nbcwsj200910,marry4a,q43,c(4:1),Do you strongly favor favor oppose or strongly oppose allowing gays and lesbians to marry legally?, 1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1
 nsss1989,marry5,marokhom,c(5:1),Homosexual couples should have the right to marry one another, 1 strongly agree / 2 agree / 3 neighter agree nor disagree / 4 disagree / 5 strongly disagree, 1
