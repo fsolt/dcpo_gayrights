@@ -40,8 +40,12 @@ header-includes:
 ```{r setup, include=FALSE}
 options(tinytex.verbose = TRUE)
 
-knitr::opts_chunk$set(cache = FALSE, echo = FALSE, message = FALSE, warning = FALSE,
-                      fig.width=7, fig.height=2.5)
+knitr::opts_chunk$set(cache = FALSE,
+                      echo = FALSE, 
+                      message = FALSE, 
+                      warning = FALSE,
+                      fig.width=7, 
+                      fig.height=2.5)
 
 # If `DCPOtools` is not yet installed:
 # remotes::install_github("fsolt/DCPOtools")
@@ -335,6 +339,132 @@ dcpo_input_public <- DCPOtools::format_dcpo(dcpo_input_raw1,
 save(dcpo_input_public, file = here::here("data", "dcpo_input_public.rda"))
 ```
 
-x
+```{r dcpo_chunk_options}
+evaluate <- TRUE
+```
+
+
+```{r dcpo, eval=evaluate, cache=evaluate, include=FALSE, results=FALSE}
+ iter <- 1000
+ 
+ dcpo <- cmdstan_model("~/Documents/Projects/DCPO/inst/stan/dcpo.stan")
+ dcpo_output <- dcpo$sample(
+   data = dcpo_input[1:13], 
+   max_treedepth = 14,
+   adapt_delta = 0.99,
+   step_size = 0.005,
+   seed = 324, 
+   chains = 4, 
+   parallel_chains = 4,
+   iter_warmup = iter/2,
+   iter_sampling = iter/2,
+   refresh = iter/50
+ )
+ results_path <- here::here(file.path("data", 
+                                      iter, 
+                                      {str_replace_all(Sys.time(), "[- :]", "") %>%
+                                          str_replace("\\d{2}$", "")}))
+ dir.create(results_path, 
+            showWarnings = FALSE, 
+            recursive = TRUE)
+ dcpo_output$save_data_file(dir = results_path,
+                            random = FALSE)
+ dcpo_output$save_output_files(dir = results_path,
+                               random = FALSE)
+```
+
+```{r dcpo_results, cache=TRUE}
+ if (!exists(results_path)) {
+   latest <- "202203210942"
+   results_path <- here::here("data", "1000", latest)
+   
+   # Define OSF_PAT in .Renviron: https://docs.ropensci.org/osfr/articles/auth
+   if (!file.exists(file.path(results_path, paste0("dcpo-", latest, "-1.csv")))) {
+     dir.create(results_path, showWarnings = FALSE, recursive = TRUE)
+     osf_retrieve_node("82w36") %>% 
+       osf_ls_files() %>% 
+       filter(name == latest) %>% 
+       osf_download(path = here::here("data", "1000"))
+   }
+}
+ 
+ dcpo_output <- as_cmdstan_fit(here::here(results_path,
+                                          list.files(results_path, pattern = "csv$")))
+ 
+
+```
+
+```{r dcpo_results_summary, cache=TRUE}
+load(file = here::here("data", "dcpo_input.rda"))
+dcpo_output <- readRDS(here::here("data", "dcpo_out.rds"))
+theta_results <- DCPOtools::summarize_dcpo_results(dcpo_input,
+                                                   dcpo_output,
+                                                   "theta")
+
+res_cy <- nrow(theta_results) %>% 
+  scales::comma()
+
+res_c <- theta_results %>% 
+  pull(country) %>% 
+  unique() %>% 
+  length()
+
+save(theta_results, file = here::here("data","theta_results.rda"))
+```
+
+
+```{r cs_plot, fig.cap="TCS Scores, Most Recent Available Year \\label{cs_mry}", fig.height=10, fig.width=8}
+
+n_panes <- 2
+axis_text_size <- 10
+
+p1_data <- theta_results %>%
+  group_by(country) %>%
+  top_n(1, year) %>%
+  ungroup() %>%
+  arrange(mean) %>%
+  transmute(country_year = paste0(country, " (", year, ")") %>% 
+              str_replace("’", "'"),
+            estimate = mean,
+            conf.high = q90,
+            conf.low = q10,
+            pane = n_panes - (ntile(mean, n_panes) - 1),
+            ranked = as.factor(ceiling(row_number())))
+
+p_theta <- ggplot(p1_data,
+                  aes(x = estimate, y = ranked)) +
+  geom_segment(aes(x = conf.low, xend = conf.high,
+                   y = ranked, yend = ranked),
+               na.rm = TRUE,
+               alpha = .4) +
+  geom_point(fill = "black", shape = 21, size = .5, na.rm = TRUE) +
+  theme_bw() + theme(legend.position="none",
+                     axis.text.x  = element_text(size = axis_text_size,
+                                                 angle = 90,
+                                                 vjust = .45,
+                                                 hjust = .95),
+                     axis.text.y  = element_text(size = axis_text_size),
+                     axis.title = element_blank(),
+                     strip.background = element_blank(), 
+                     strip.text = element_blank(),
+                     panel.grid.major = element_line(size = .3),
+                     panel.grid.minor = element_line(size = .15)) +
+  scale_y_discrete(breaks = p1_data$ranked, labels=p1_data$country_year) +
+  coord_cartesian(xlim=c(0, 1)) +
+  facet_wrap(vars(pane), scales = "free", nrow = 1)
+
+
+p_theta +
+  plot_annotation(caption = "Note: Gray whiskers represent 80% credible intervals.")
+
+bottom5 <- p1_data %>% 
+  arrange(ranked) %>% 
+  slice(1:5) %>% 
+  pull(country_year) %>% 
+  str_replace(" \\(.*", "") %>% 
+  knitr::combine_words()
+
+```
+
 
 \pagebreak
