@@ -475,7 +475,7 @@ uspew2019_09amtr,accept2,acceptlg,"c(2, 1)",Tell whether the FIRST statement or 
 uspew2020_faba,accept2,acceptlg,"c(2, 1)",Tell whether the FIRST statement or the SECOND statement comes closer to your own views,1 homosexuality should be accepted by society / 2 homosexuality should be discouraged by society,,,
 uswapo199808,legal2,q29,"c(2, 1)",Do you think homosexual relations between consenting adults should be legal or illegal?,1 legal / 2 illegal,1,,
 wvs_combo,just10,f118,c(1:10),Justifiable: Homosexuality,1 never justifiable / 10 always justifiable,1,,
-wvs_combo,neigh2,http://cssr.surveybank.aau.dk/webview/pdf?&mode=ddiToPDF&executepdf=true&study=http://172.18.36.233:80/obj/fStudy/ElectionStudy-2011&file=/nesstar/temp/download6927678728671535041.tmp/ElectionStudy-2011.zip&server=http://cssr.surveybank.aau.dk:80,"c(1, 0)",,,,,
+wvs_combo,neigh2,"if_else(s025==502002|s025==4101990|s025==5862001, 1 - as.numeric(a124_09), as.numeric(a124_09))","c(1, 0)",,,,,
 wvs7,just10,q182,c(1:10),Justifiable: Homosexuality,1 never justifiable / 10 always justifiable,1,,
 wvs7,neigh2,q22,"c(1, 2)",On this list are various groups of people. Could you please mention any that you would not like to have as neighbors?: Homosexuals,1 mentioned / 2 not mentioned,0,"1 is negative answer, changed to c(1,2)",
 wvs7,parent5,q36,c(5:1),Homosexual couples are as good parents as other couples,1 strongly agree / 2 agree / 3 neither agree nor disagree / 4 disagree / 5 strongly disagree,1,,
