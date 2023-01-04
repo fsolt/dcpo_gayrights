@@ -390,7 +390,7 @@ dcpo_output$save_output_files(dir = results_path,
 
 ```{r dcpo_results, cache=FALSE}
 if (!exists("results_path")) {
-  latest <- "202212180007"
+  latest <- "202212252116"
   results_path <- here::here("data", "1000", latest)
   
   # Define OSF_PAT in .Renviron: https://docs.ropensci.org/osfr/articles/auth
@@ -479,6 +479,35 @@ bottom5 <- p1_data %>%
   knitr::combine_words()
 
 ```
+
+
+```{r ts_plots, fig.cap="DSD Over Time Within Selected Countries \\label{ts}", fig.height=3.5}
+countries <- c("Iceland", "Norway", "Sweden", "Netherlands",
+               "France", "Denmark", "Luxembourg", "United Kingdom", 
+               "Switzerland", "Finland", "Spain", "Australia", 
+               "Ireland", "United States", "Canada", "Germany")
+
+c_res <- theta_results %>% 
+  filter(country %in% countries) %>% 
+  mutate(country = factor(country, levels = countries))
+
+ggplot(data = c_res, aes(x = year, y = mean)) +
+  theme_bw() +
+  theme(legend.position = "none") +
+  coord_cartesian(xlim = c(1985, 2020), ylim = c(0, 1)) +
+  labs(x = NULL, y = "DSD Scores") +
+  geom_ribbon(data = c_res, aes(ymin = q10, ymax = q90, linetype=NA), alpha = .25) +
+  geom_line(data = c_res) +
+  facet_wrap(~as_factor(country), nrow = 2) +
+  theme(axis.text.x  = element_text(size=7,
+                                    angle = 90,
+                                    vjust = .45,
+                                    hjust = .95),
+        strip.background = element_rect(fill = "white", colour = "white")) +
+  plot_annotation(caption = "Note: Countries are ordered by their DSD scores in their most recent\navailable year; gray shading represents 80% credible intervals.")
+```
+
+
 
 
 \pagebreak
