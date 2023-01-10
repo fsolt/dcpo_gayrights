@@ -72,10 +72,7 @@ abcwapo201402,adopt2,q17,"c(2, 1)",Do you favor or oppose allowing gay or lesbia
 2 Oppose
 8 DK/No opinion
 9 NA/Refused",1,
-abcwapo201402,marry4a,q15,c(4:1),"Do you or does anyone in your house own a gun, or not?","1 Yes
-2 No
-8 DK/No opinion
-9 NA/Refused",0,"The initial response_categories was(2,1)being different from the codebook"
+abcwapo201402,marry4a,q15,c(4:1),"Overall, do you support or oppose allowing gays and lesbians to marry legally?", 1 Support strongly 2 Support somewhat 3 Oppose somewhat 4 Oppose strongly,,
 aes1987,legal2,q49,"c(2, 1)",Do you think that homosexual acts between consenting adults should be legal or should they be prohibited by law?,"0 NO RESPONSE 
 1 LEGAL 
 2 PROHIBITED 
