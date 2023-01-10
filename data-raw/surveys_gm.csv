@@ -73,14 +73,9 @@ abcwapo201402,adopt2,q17,"c(2, 1)",Do you favor or oppose allowing gay or lesbia
 8 DK/No opinion
 9 NA/Refused",1,
 abcwapo201402,marry4a,q15,c(4:1),"Overall, do you support or oppose allowing gays and lesbians to marry legally?", 1 Support strongly 2 Support somewhat 3 Oppose somewhat 4 Oppose strongly,,
-aes1987,legal2,q49,"c(2, 1)",Do you think that homosexual acts between consenting adults should be legal or should they be prohibited by law?,"0 NO RESPONSE 
-1 LEGAL 
-2 PROHIBITED 
-3 IT DEPENDS",0,"The initial response_categories was(3,1)being different from the codebook"
+aes1987,legal2,q49,"c(2, 1)",Do you think that homosexual acts between consenting adults should be legal or should they be prohibited by law?,1 Legal 2 Prohibited,1,
 aes2007,marry2,e4,"c(2, 1)","Do you think marriages between
-same-sex couples should or should not be recognised by the law as valid, with the same rights as traditional marriages?","1 Should be recognised by law 
-2 Should not be recognised by law 
-3 Don't know",0,"The initial response_categories was(3,1)being different from the codebook"
+same-sex couples should or should not be recognised by the law as valid, with the same rights as traditional marriages?",1 Should be recognised by law 2 Should not be recognised by law,1,
 aes2013,marry5,e6same,c(1:5),"Here are some statements about general social concerns. Please say whether you strongly agree, agree, disagree or strongly
 disagree with each of these statements.","1 Strongly agree 709 675.8 17.7%
 2 Agree 449 410.9 10.7%
@@ -697,9 +692,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos p煤blicos
 10 Strongly Approve",1,
 anes_combo,adopt2,vcf0878,"c(5, 1)","Do you think gay or lesbian couples, in other words, homosexual
 couples, should be legally permitted to adopt children?
-","1. Yes
-5. No
-8. DK",0,"The initial response_categories was(3,1)being different from the codebook"
+",1 Yes 5 No,1,
 anes2016,adopt2,v161230,"c(2, 1)","Do you think gay or lesbian couples should be legally permitted to adopt
 children?","1. Yes 
 2. No
@@ -708,11 +701,7 @@ children?","1. Yes
 angus_reid199301,marry2,a10,"c(2, 1)",Do you think homosexual couples who wish to marry should or should not qualify for legal recognition of the marriage?,1 should 2 should not,1,
 angus_reid1995,adopt2,a11,"c(2, 1)",Do you think homosexual couples who wish to marry should or should not qualify for legal recognition of the marriage?,1 should 2 should not,1,
 anpas1979,legal2,homosexl,"c(2, 1)","There has been a lot of discussion in the last few years about homosexuality. Do you think that homosexual acts between
-consenting adults should be legal or should they be prohibited by law?","0 NA
-1 SHOULD BE LEGAL
-2 SHOULD BE PROHIBITED0
-3 IT DEPENDS
-8 DK, NO OPINION",0,"The initial response_categories was(3,1)being different from the codebook"
+consenting adults should be legal or should they be prohibited by law?",1 Should be legal 2 Should be prohibited,1,
 ap_us1996,marry2,ap2,"c(2, 1)","Would you,personally,support or oppose giving homosexuals a legal right to marry a parter of the same sex?","1 support right to marry 2 Oppose right to marry
 8 DK/No opinion 9 NA/Refused",1,
 asiab2004,just10,q45b,c(1:10),"Please tell me for each of the following statements whether you think it can always be justified,
