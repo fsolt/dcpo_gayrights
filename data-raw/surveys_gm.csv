@@ -381,7 +381,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_combo,neigh2,dis35a,"c(1, 0)",,,,
+amb_combo,neigh2,dis35a,"c(1, 0)","Can you tell me if there are some groups of people that you wouldn't like to have as neighbors: Gays",1 Do not want them as neighbors / 0 Does not mind having them as neighbors,,
 amb_combo,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
 aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
 2
