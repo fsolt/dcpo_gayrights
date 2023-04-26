@@ -740,7 +740,7 @@ be able to  marry like heterosexual couples","1 Strongly agree
 belgiumes2007,adopt5,q96_3,c(5:1),How acceptable or unacceptable do you consider the following issues? That homosexual and lesbian couples have the right to adopt children,1 completely unacceptable 2 unacceptable 3 neither acceptable nor unacceptable 4 acceptable 5 completely acceptable,,
 bsa_combo,adopt2,gayadopt,"c(2, 1)",,,,
 bsa_combo,approve5,homosex,c(1:5),What about sexual relations between two adults of the same sex?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
-bsa_combo,marry5,marview0,c(5:1),,,,
+bsa_combo,marry5,marview0,c(5:1),Homosexual couple should have right to marry,1 Strongly agree 2 Agree 3 Neighter 4 Disagree 5 Strongly disagree,,
 bsa1993,approve5,homosex,c(1:5),What about sexual relations between two adults of the same sex?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
 bsa1995,approve5,homosex,c(1:5),What about sexual relations between two adults of the same sex?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
 bsa1996,approve5,gaysex,c(1:5),Homosexual relations are always wrong,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
