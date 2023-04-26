@@ -1113,7 +1113,7 @@ uspew2004_8nii,marry4a,q36,c(4:1),"Do you strongly favor, favor, oppose, or stro
 uspew2004_ial,marry2,gm1,"c(2, 1)",Do you favor or oppose allowing gay and lesbian couples to marry legally?,1 favor / 2 oppose,1,
 uspew2004_typo,accept2,q20u,"c(2, 1)",Homosexuality is a way of life that should be accepted by society,1 accepted / 2 discouraged,0,added
 uspew2004_typo,marry4a,q36b,c(4:1),"Do you strongly favor, favor, oppose, or strongly oppose allowing gays and lesbians to marry legally?",1 strongly favor / 2 favor / 3 oppose / 4 strongly oppose,1,
-uspew2005_news,marry4a,q50,c(4:1),,,,can't figure out specific data: https://www.pewresearch.org/politics/datasets/?_yr=2005
+uspew2005_news,marry4a,q50,c(4:1),"Do you strongly favor, favor, oppose, or strongly oppose allowing gays and lesbians to marry legally?",1 strongly favor / 2 favor / 3 oppose / 4 strongly oppose,1,
 uspew2006_02nii,approve3,q47f2c,"c(2, 3, 1)","Is homosexual behavior morally acceptable, morally wrong, or is it not a moral issue?",1 morally acceptable / 2 morally wrong / 3 not a moral issue,1,
 uspew2006_03nii,adopt4b,q25f,c(4:1),"Do you strongly favor, favor, oppose, or strongly oppose allowing gays and lesbians to adopt children?",1 strongly favor / 2 favor / 3 oppose / 4 strongly oppose,0,change dataset name; https://www.pewresearch.org/politics/dataset/march-2006-news-interest-index/
 uspew2006_03nii,marry4a,q25gf1,c(4:1),"Do you strongly favor, favor, oppose, or strongly oppose allowing gays and lesbians to marry legally?",1 strongly favor / 2 favor / 3 oppose / 4 strongly oppose,0,change dataset name; https://www.pewresearch.org/politics/dataset/march-2006-news-interest-index/
