@@ -738,7 +738,7 @@ be able to  marry like heterosexual couples","1 Strongly agree
 5 Strongly disagree 
 9 Can't choose",1,
 belgiumes2007,adopt5,q96_3,c(5:1),How acceptable or unacceptable do you consider the following issues? That homosexual and lesbian couples have the right to adopt children,1 completely unacceptable 2 unacceptable 3 neither acceptable nor unacceptable 4 acceptable 5 completely acceptable,,
-bsa_combo,adopt2,gayadopt,"c(2, 1)",,,,
+bsa_combo,adopt2,gayadopt,"c(2, 1)",Do you think that homosexual couples should be legally permitted to adopt children,1 should 2 should not,,
 bsa_combo,approve5,homosex,c(1:5),What about sexual relations between two adults of the same sex?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
 bsa_combo,marry5,marview0,c(5:1),Homosexual couple should have right to marry,1 Strongly agree 2 Agree 3 Neighter 4 Disagree 5 Strongly disagree,,
 bsa1993,approve5,homosex,c(1:5),What about sexual relations between two adults of the same sex?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
@@ -756,7 +756,7 @@ bsa2007,marry5,gmlmarry,c(5:1),Gay and lesbian couples’ right to marriage,1 St
 bsa2008,approve4,sexhomo,c(1:4),What about sexual relations between two adults of the same sex?,1 always wrong / 2 almost always wrong / 3 wrong only sometimes / 4 not wrong at all,,
 bsa2008,adopt5,gaychld,c(5:1),And do you approve or disapprove of allowing same-sex couples to adopt children?,1 strongly approve / 2 approve / 3 neither approve nor disapprove / 4 disapprove / 5 strongly disapprove,,
 bsa2010,approve5,homosex,c(1:5),What about sexual relations between two adults of the same sex?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
-bsa2012,adopt2,gayadopt,"c(2, 1)",,,,
+bsa2012,adopt2,gayadopt,"c(2, 1)",Do you think that homosexual couples should be legally permitted to adopt children,1 should 2 should not,,
 bsa2012,approve5,homosex,c(1:5),What about sexual relations between two adults of the same sex?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
 bsa2012,marry5,gmlmarry,c(5:1),Gay and lesbian couples’ right to marriage,1 Strongly agree 2 Agree 3 Neither agree nor disagree 4 Disagree 5 Strongly disagree,,
 bsa2013,approve5,homosex,c(1:5),What about sexual relations between two adults of the same sex?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
