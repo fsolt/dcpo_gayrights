@@ -381,7 +381,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_combo,neigh2,dis35a,"c(1, 0)","Can you tell me if there are some groups of people that you wouldn't like to have as neighbors: Gays",1 Do not want them as neighbors / 0 Does not mind having them as neighbors,,
+amb_combo,neigh2,dis35a,"c(1, 0)",Can you tell me if there are some groups of people that you wouldn't like to have as neighbors: Gays,1 Do not want them as neighbors / 0 Does not mind having them as neighbors,,
 amb_combo,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
 aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
 2
@@ -696,7 +696,7 @@ couples, should be legally permitted to adopt children?
 anes2016,adopt2,v161230,"c(2, 1)","Do you think gay or lesbian couples should be legally permitted to adopt
 children?","1. Yes 
 2. No
--8. Donéˆ¥æª› know (FTF only) 49 0 49
+-8. Don't know 
 -9. Refused",1,
 angus_reid199301,marry2,a10,"c(2, 1)",Do you think homosexual couples who wish to marry should or should not qualify for legal recognition of the marriage?,1 should 2 should not,1,
 angus_reid1995,adopt2,a11,"c(2, 1)",Do you think homosexual couples who wish to marry should or should not qualify for legal recognition of the marriage?,1 should 2 should not,1,
@@ -743,8 +743,8 @@ bsa_combo,approve5,homosex,c(1:5),What about sexual relations between two adults
 bsa_combo,marry5,marview0,c(5:1),Homosexual couple should have right to marry,1 Strongly agree 2 Agree 3 Neighter 4 Disagree 5 Strongly disagree,,
 bsa1993,approve5,homosex,c(1:5),What about sexual relations between two adults of the same sex?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
 bsa1995,approve5,homosex,c(1:5),What about sexual relations between two adults of the same sex?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
-bsa1996,approve5,gaysex,c(1:5),Homosexual relations are always wrong,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
-bsa1997,approve5,gaysex,c(1:5),Homosexual relations are always wrong,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
+bsa1996,approve5,gaysex,c(1:5),Homosexual relations are always wrong,1 stongly agree 5 stronly disagree,,
+bsa1997,approve5,gaysex,c(1:5),Homosexual relations are always wrong,1 stongly agree 5 stronly disagree,,
 bsa1998,approve5,homosex,c(1:5),What about sexual relations between two adults of the same sex?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
 bsa1999,approve5,homosex,c(1:5),What about sexual relations between two adults of the same sex?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
 bsa2000,approve5,homosex,c(1:5),What about sexual relations between two adults of the same sex?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
@@ -787,9 +787,9 @@ cces2015,marry2,cc15_325,"c(2, 1)",Do you favor or oppose allowing gays and lesb
 cces2016,marry2,cc16_335,"c(2, 1)",Do you favor or oppose allowing gays and lesbians to marry legally?,favor 1  oppose 2,1,
 cdcee,accept4,v233,c(4:1),Homosexuals are people who should be accepted like anybody else,Agree completely    1  Disagree completely  4,1,
 cgeis2015,marry3,q17,c(3:1),What is your view on same-sex marriage?,"1 Favour same-sex marriage / 2 Oppose same-sex marriage, but would accept civil unions / 3 Oppose entirely same-sex marriage",,
-chcep201810,marry5,rel_47,c(5:1),"é”Ÿçµˆué”Ÿ?tan de acuerdo o en desacuerdo esté”Ÿ?Ud. con que se
-permita en Chile el matrimonio de dos personas del mismo sexo? How much do you agree or disagree with
+chcep201810,marry5,rel_47,c(5:1),"How much do you agree or disagree with
 allow in Chile the marriage of two people of the same sex?",Strongly agree 1 Stronly disagree 5,1,
+chcep201810,approve4,rel_4,c(1:4),"Y, �qu� piensa Ud. sobre las relaciones sexuales entre dos adultos del mismo sex. And what do you think about sexual relations between two adults of the same sex?",always wrong 1 not wrong at all 4,,
 cid_combo,neigh2,v224,"c(1, 2)",Are there any of these groups you would not like as a neighbor? Homosexuals,1 mentioned / 2 not mentioned,,
 cnes1993,marry4a,cpsg7b,"c(7,5,3,1)",Homosexual couples should be allowed to be legally married,1 strongly agree / 3 somewhat agree / 5 somewhat disagree / 7 strongly disagree,,
 cnes1997,marry4a,mbsg3,c(4:1),Homosexual couples should be allowed to be legally married,1 strongly agree / 2 agree / 3 disagree / 4 strongly disagree,,
@@ -826,7 +826,7 @@ cnn201306,marry2,q10,"c(2, 1)","Do you think marriages between gay or lesbian co
 cnn201412,marry2,q23,"c(2, 1)","Do you think marriages between gay or lesbian couples should or should not be recognized by the law as valid, with the same rights as traditional marriages?",Should 1 Should not 2,1,
 dkes2005,adopt5,v218,c(5:1),Homosexual couples should have the same rights as others to adopt children,,,
 dkes2007,adopt5,v251,c(5:1),Homosexual couples should have the same rights as others to adopt children,,,
-eb21,accept5,v128,c(1:5),"WILL YOU PLEASE, FOR EACH ITEM, SELECT ON THIS LIST â€¦ THE ANSWER WHICH BEST DESCRIBES YOUR OWN OPINION. HOMOSEXUALS ARE PEOPLE JUST LIKE OTHERS.",Disagree completely 1 COMPLETELY AGREE,1,
+eb21,accept5,v128,c(1:5),"WILL YOU PLEASE, FOR EACH ITEM, SELECT ON THIS LIST. THE ANSWER WHICH BEST DESCRIBES YOUR OWN OPINION. HOMOSEXUALS ARE PEOPLE JUST LIKE OTHERS.",Disagree completely 1 COMPLETELY AGREE 5,1,
 eb39,adopt2,v639,"c(2, 1)","Do you think that homosexual couples should, or should not, have the right to Adopt children",Should 1 Should not 2,1,
 eb39,civil2,v638,"c(2, 1)","Do you think that homosexual couples should, or should not, have the right to Live together, without being married, but with the same advantages as married couples",Should 1 Should not 2,1,
 eb39,marry2,v637,"c(2, 1)","Do you think that homosexual couples should, or should not, have the right to Marry each other",Should 1 Should not 2,1,
@@ -975,7 +975,7 @@ issp2018ext,approve4,v4,c(1:4),what about sexual relations of the same sex is it
 issp2018tn,approve4,v4,c(1:4),what about sexual relations of the same sex is it,1 always wrong / 2 almost always wrong / 3 wrong only sometimes / 4 not wrong at all,0,
 issp2018ve,approve4,v4,c(1:4),what about sexual relations of the same sex is it,1 always wrong / 2 almost always wrong / 3 wrong only sometimes / 4 not wrong at all,0,
 itanes2001,rights4,c10_6,c(4:1),Homosexuals should be ensured the same rights by law,1 agree completely 2 agree fairly 3 agree a little 4 disagree completely,,
-itanes2006prepost,accept10,a11_1,c(1:10),"Please, tell me if, according to you,é”Ÿçµ±ou consider each of these behaviours never acceptable or always acceptable or if their acceptability depends of circumstances. In that case please choose a intermediate position between 1 andé”Ÿ?10: having homosexual intercourse",1 always acceptable 2/9 10 never acceptable,,
+itanes2006prepost,accept10,a11_1,c(1:10),"Please, tell me if, according to you, you consider each of these behaviours never acceptable or always acceptable or if their acceptability depends of circumstances. In that case please choose a intermediate position between 1 and 10: having homosexual intercourse",1 never acceptable 10 always acceptable ,,
 jgss,approve4,q4homsea,c(1:4),What is your opinion about sexual relations between two adults of the same sex?,1 always wrong / 2 almost always wrong / 3 wrong only sometimes / 4 not wrong at all,0,
 kgss,marry5,homomar,c(5:1),Homosexual couples should have the right to marry one another,1 strongly agree / 2 agree / 3 neighter agree nor disagree / 4 disagree / 5 strongly disagree,1,
 lat200006,approve4,q54,c(1:4),what about sexual relations of the same sex is it,1 always wrong / 2 almost always wrong / 3 wrong only sometimes / 4 not wrong at all,0,
@@ -1160,15 +1160,15 @@ uspew2019_09amtr,accept2,acceptlg,"c(2, 1)",Tell whether the FIRST statement or 
 uspew2020_faba,accept2,acceptlg,"c(2, 1)",Tell whether the FIRST statement or the SECOND statement comes closer to your own views,1 homosexuality should be accepted by society / 2 homosexuality should be discouraged by society,,
 uswapo199808,legal2,q29,"c(2, 1)",Do you think homosexual relations between consenting adults should be legal or illegal?,1 legal / 2 illegal,1,
 wvs_combo,just10,f118,c(1:10),Justifiable: Homosexuality,1 never justifiable / 10 always justifiable,1,
-wvs_combo,neigh2,"A124_09","c(1, 0)",On this list are various groups of people. Could you identify any that you would not like to have as neighbours?,1 mentioned 0 not mentioned,,
+wvs_combo,neigh2,A124_09,"c(1, 0)",On this list are various groups of people. Could you identify any that you would not like to have as neighbours?,1 mentioned 0 not mentioned,,
 wvs7,just10,q182,c(1:10),Justifiable: Homosexuality,1 never justifiable / 10 always justifiable,1,
 wvs7,neigh2,q22,"c(1, 2)",On this list are various groups of people. Could you please mention any that you would not like to have as neighbors?: Homosexuals,1 mentioned / 2 not mentioned,0,"1 is negative answer, changed to c(1,2)"
 wvs7,parent5,q36,c(5:1),Homosexual couples are as good parents as other couples,1 strongly agree / 2 agree / 3 neither agree nor disagree / 4 disagree / 5 strongly disagree,1,
-cgss2017,approve5,a40,c(1:5),"Do you think same-sex sex is wrong?",1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
-cgss2018,approve5,a40,c(1:5),"Do you think same-sex sex is wrong?",1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
-cgss2015_14,approve5,a40,c(1:5),"Do you think same-sex sex is wrong?",1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
+cgss2017,approve5,a40,c(1:5),Do you think same-sex sex is wrong?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
+cgss2018,approve5,a40,c(1:5),Do you think same-sex sex is wrong?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
+cgss2015_14,approve5,a40,c(1:5),Do you think same-sex sex is wrong?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
 cgss2015_14,approve5,b112,c(1:5),"Homosexuality is a personal behavior, others should not blame",1 Strongly disagree 2 disagree 3 Neighter 4 Agree 5 Strongly Agree,,
-cgss2013_14,approve5,a40,c(1:5),"Do you think same-sex sex is wrong?",1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
-cgss2012_14,approve5,a40,c(1:5),"Do you think same-sex sex is wrong?",1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
-cgss2010_14,approve5,a40,c(1:5),"Do you think same-sex sex is wrong?",1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
+cgss2013_14,approve5,a40,c(1:5),Do you think same-sex sex is wrong?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
+cgss2012_14,approve5,a40,c(1:5),Do you think same-sex sex is wrong?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
+cgss2010_14,approve5,a40,c(1:5),Do you think same-sex sex is wrong?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
 cgss2005_14,approve5,qe15b,c(1:5),"Homosexuality is a personal behavior, others should not blame",1 Strongly disagree 2 disagree 3 Neighter 4 Agree 5 Strongly Agree,,
