@@ -756,11 +756,11 @@ bsa2007,marry5,gmlmarry,c(5:1),Gay and lesbian couples’ right to marriage,1 St
 bsa2008,approve4,sexhomo,c(1:4),What about sexual relations between two adults of the same sex?,1 always wrong / 2 almost always wrong / 3 wrong only sometimes / 4 not wrong at all,,
 bsa2008,adopt5,gaychld,c(5:1),And do you approve or disapprove of allowing same-sex couples to adopt children?,1 strongly approve / 2 approve / 3 neither approve nor disapprove / 4 disapprove / 5 strongly disapprove,,
 bsa2010,approve5,homosex,c(1:5),What about sexual relations between two adults of the same sex?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
-bsa2012,adopt2,gayadopt,"c(2, 1)",Do you think that homosexual couples should be legally permitted to adopt children,1 should 2 should not,,
+bsa2012,adopt2,gayadopt,c(2:1),And do you think homosexual couples should be allowed to adopt a the same conditions as other couples?,1 yes 2 no,,
 bsa2012,approve5,homosex,c(1:5),What about sexual relations between two adults of the same sex?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
 bsa2012,marry5,gmlmarry,c(5:1),Gay and lesbian couples’ right to marriage,1 Strongly agree 2 Agree 3 Neither agree nor disagree 4 Disagree 5 Strongly disagree,,
 bsa2013,approve5,homosex,c(1:5),What about sexual relations between two adults of the same sex?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
-bsa2014,marry5,gmlmarry,c(5:1),Gay and lesbian couples’ right to marriage,1 Strongly agree 2 Agree 3 Neither agree nor disagree 4 Disagree 5 Strongly disagree,,
+bsa2014,marry5,gmlmarry,c(5:1),Gay or lesbian couples should have the right to marry one another if they want to,1 Strongly agree 2 Agree 3 Neither agree nor disagree 4 Disagree 5 Strongly disagree,,
 bsa2015,approve5,homosex,c(1:5),What about sexual relations between two adults of the same sex?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
 bsa2016,approve5,homosex,c(1:5),What about sexual relations between two adults of the same sex?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
 bsa2017,approve5,homosex,c(1:5),What about sexual relations between two adults of the same sex?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,0,
@@ -1133,7 +1133,7 @@ uspew2008_vote,marry4a,q62,c(4:1),"Do you strongly favor, favor, oppose, or stro
 uspew2009_rel,approve3,q180b,"c(2, 3, 1)","Do you personally believe that homosexual behavior is morally acceptable, morally wrong, or is it not a moral issue?",1 morally acceptable / 2 morally wrong / 3 not a moral issue,1,https://www.pewresearch.org/politics/dataset/august-2009-religion-survey/
 uspew2009_rel,marry4a,q146a,c(4:1),"Do you strongly favor, favor, oppose, or strongly oppose allowing gay and lesbian couples to marry legally?",1 strongly favor / 2 favor / 3 oppose / 4 strongly oppose,1,https://www.pewresearch.org/politics/dataset/august-2009-religion-survey/
 uspew2009_val,marry4a,qb19,c(4:1),"Do you strongly favor, favor, oppose, or strongly oppose allowing gay and lesbian couples to marry legally?",1 strongly favor / 2 favor / 3 oppose / 4 strongly oppose,1,
-uspew2010_rel,marry4a,q12b,c(4:1),"Do you strongly favor, favor, oppose, or strongly oppose allowing gay and lesbian couples to marry legally?",1 strongly favor / 2 favor / 3 oppose / 4 strongly oppose,1,
+uspew2010_ind,marry4a,q40,c(4:1),"Do you strongly favor, favor, oppose, or strongly oppose allowing gay and lesbian couples to marry legally?",1 strongly favor / 2 favor / 3 oppose / 4 strongly oppose,1,
 uspew2010_st,marry4a,q41,c(4:1),"Do you strongly favor, favor, oppose, or strongly oppose allowing gay and lesbian couples to marry legally?",1 strongly favor / 2 favor / 3 oppose / 4 strongly oppose,1,
 uspew2011_typo,marry4a,qa61,c(4:1),"Do you strongly favor, favor, oppose, or strongly oppose allowing gay and lesbian couples to marry legally?",1 strongly favor / 2 favor / 3 oppose / 4 strongly oppose,1,
 uspew2012_05val,marry4a,q21fb,c(4:1),"Do you strongly favor, favor, oppose, or strongly oppose allowing gay and lesbian couples to marry legally?",1 strongly favor / 2 favor / 3 oppose / 4 strongly oppose,1,
