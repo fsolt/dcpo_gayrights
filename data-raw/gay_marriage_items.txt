@@ -133,17 +133,9 @@ Next, I’m going to read some behaviors.  For each, please tell me whether you 
 		AES 1998		g16
 
 *marriage
-	marry4 (throughout Europe)
+	marry4e (throughout Europe)
 		X EB66.1-06		v324
 		X EB83.4-15		qc16_2
-	marry5
-		X ISSP Family 1988	v36
-		X AuSSA 2005		
-		X BSA 1989, 2007, 2012 	MARVIEW0, GMLMarry
-		X USGSS 88,04,06,08,10	MARHOMO
-		X ptvs2008		CS_G21_4
-	marry2
-		X EB39-93		v637
 	marry4a "Do you strongly favor, favor, oppose, or strongly oppose allowing gays and lesbians to marry legally?"
 		X US Pew surveys
 		X pewrel2014_latam	Q15
@@ -154,6 +146,17 @@ Next, I’m going to read some behaviors.  For each, please tell me whether you 
 		abcwapo201402	
 	marry4b "Do you think it should be LEGAL or ILLEGAL for gay and lesbian couples to get married?"
 		abcwapo
+	marry4c "Same-sex marriage is or could be harmful to society"
+		ipsos_ga
+	marry5
+		X ISSP Family 1988	v36
+		X AuSSA 2005		
+		X BSA 1989, 2007, 2012 	MARVIEW0, GMLMarry
+		X USGSS 88,04,06,08,10	MARHOMO
+		X ptvs2008		CS_G21_4
+
+	marry2
+		X EB39-93		v637
 
 	marry10
 		X Americasbarometer	d6
