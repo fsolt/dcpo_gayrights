@@ -1,6 +1,5 @@
 survey,item,variable,values,question_text,response_categories,agreed,notes
-abcwapo198105,legal2,q45,"c(2, 1)",Do you think homosexuals should or should not have equal rights to marry one another?,"1 Should have equal rights to marry
-2 Should not have equal rights to marry 8 DK/No opinion 9 NA/Refused",1,
+abcwapo198105,legal2,q45,"c(2, 1)",Do you think homosexual relations between consenting adults should or should not be legal,1 should be legal / 2 should not be legal,1,
 abcwapo199406,legal2,q051,"c(2, 1)","On another issue in the news, do you think homosexual relations between consenting adults should or should not be legal?","1 Should be legal
 2 Should not be legal   8 DK/No opinion 9 NA/Refused",1,
 abcwapo199406,marry2,q055,"c(2, 1)",Do you think homosexuals should or should not have equal rights to marry one another?,"1 Should have equal rights to marry
@@ -20,9 +19,7 @@ abcwapo200508,marry2,q45,"c(2, 1)","Do you think it should be LEGAL or ILLEGAL f
 get married?","1 Legal
 2 Illegal
 8 DK/No opinion",1,
-abcwapo200711,civil2,q31,"c(2, 1)","Do you think homosexual couples should or should not be allowed to form
-legally recognized civil unions, giving them the legal rights of married
-ouples in areas such as health insurance, inheritance and pension coverage?","1 Should
+abcwapo200711,civil2,q31,"c(2, 1)","Do you think homosexual couples should or should not be allowed to form legally recognized civil unions, giving them the legal rights of married ouples in areas such as health insurance, inheritance and pension coverage?","1 Should
 2 Should not
 8 DK/No opinion",1,
 abcwapo200905,marry4b,q38b,c(4:1),"On another subject, do you think it should be LEGAL or ILLEGAL for gay and lesbian couples to get married?","1 Legal, STRONGLY
@@ -68,15 +65,8 @@ abcwapo201402,adopt2,q17,"c(2, 1)",Do you favor or oppose allowing gay or lesbia
 9 NA/Refused",1,
 abcwapo201402,marry4a,q15,c(4:1),"Overall, do you support or oppose allowing gays and lesbians to marry legally?", 1 Support strongly 2 Support somewhat 3 Oppose somewhat 4 Oppose strongly,1,
 aes1987,legal2,q49,"c(2, 1)",Do you think that homosexual acts between consenting adults should be legal or should they be prohibited by law?,1 Legal 2 Prohibited,1,
-aes2007,marry2,e4,"c(2, 1)","Do you think marriages between
-same-sex couples should or should not be recognised by the law as valid, with the same rights as traditional marriages?",1 Should be recognised by law 2 Should not be recognised by law,1,
-aes2013,marry5,e6same,c(1:5),"Here are some statements about general social concerns. Please say whether you strongly agree, agree, disagree or strongly
-disagree with each of these statements.","1 Strongly agree 709 675.8 17.7%
-2 Agree 449 410.9 10.7%
-3 Neither agree nor disagree 810 791.0 20.7%
-4 Disagree 744 727.6 19.0%
-5 Strongly disagree 1115 1220.5 31.9%
--1 Missing 128 129.2",1,
+aes2007,marry2,e4,"c(2, 1)","Do you think marriages between same-sex couples should or should not be recognised by the law as valid, with the same rights as traditional marriages?",1 Should be recognised by law 2 Should not be recognised by law,1,
+aes2013,marry5a,e6same,c(1:5),"Here are some statements about general social concerns. Please say whether you strongly agree, agree, disagree or strongly disagree with each of these statements. Same-sex marriages should be prohibited by law",1 Strongly agree / 2 Agree / 3 Neither agree nor disagree / 4 Disagree / 5 Strongly disagree,1,
 aes2016,marry4a,e4,c(4:1),"Do you personally favour or oppose same sex couples being given the same rights to marry as couples consisting
 of a man and a woman?","1 Strongly favour 951 1152.8 43.0%
 2 Favour 808 738.2 27.6%
@@ -85,12 +75,8 @@ of a man and a woman?","1 Strongly favour 951 1152.8 43.0%
 999 Item skipped 137 32.6",1,
 aes2019,marry4a,e4,c(4:1),Do you personally favor or oppose same sex couples being given the same rights to marry as couples consisting of a man and a woman?,1 strongly favor / 2 favor / 3 oppose / 4 strongly oppose,1,
 afrob6,neigh5,q89c,c(1:5),"For each of the following types of people, please tell me whether you would like having people from this group as neighbors, dislike it, or not care: Homosexuals",1 strongly dislike / 2 somewhat dislike / 3 would not care / 4 somewhat like / 5 strongly like,1,
-allbus,approve4,ca13,c(1:4),A man has a homosexual relationship with another man,"1 Very bad
-2 Fairly bad
-3 Not so bad
-4 Definitely not bad",1,
-amb_antigua2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve 
-or disapprove of homosexuals being permitted to run for public office?","1 Strongly Disapprove
+allbus,approve4,ca13,c(1:4),A sexual relationship between two adults of the same sex,1 Very bad 2 Fairly bad 3 Not so bad 4 Definitely not bad,1,
+amb_antigua2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -100,8 +86,7 @@ or disapprove of homosexuals being permitted to run for public office?","1 Stron
 8
 9
 10 Strongly Approve",1,
-amb_argentina2010,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_argentina2010,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -111,8 +96,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_argentina2012,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_argentina2012,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -122,8 +106,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_argentina2014,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_argentina2014,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -133,8 +116,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_argentina2016,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_argentina2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -144,8 +126,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_argentina2018,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_argentina2018,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -155,8 +136,8 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_bolivia2010,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_argentina2018,marry10,d6,c(1:10),How strongly do you approve or disapprove of same-sex couples having the right to marry? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_bolivia2010,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -166,8 +147,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_bolivia2012,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_bolivia2012,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -177,8 +157,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_bolivia2014,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_bolivia2014,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -188,8 +167,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_bolivia2016,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_bolivia2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -199,8 +177,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_bolivia2018,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_bolivia2018,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -210,8 +187,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_brazil2016,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_brazil2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -221,8 +197,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_brazil2018,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_brazil2018,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -232,8 +207,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_canada2012,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_canada2012,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -243,8 +217,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_canada2014,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_canada2014,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -254,8 +227,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_canada2016,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_canada2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -265,8 +237,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_chile2010,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_chile2010,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -276,8 +247,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_chile2012,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_chile2012,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -287,8 +257,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_chile2014,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_chile2014,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -298,8 +267,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_chile2016,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_chile2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -309,8 +277,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_chile2018,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_chile2018,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -320,8 +287,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_colombia2009,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_colombia2009,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -331,8 +297,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_colombia2011,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_colombia2011,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -342,8 +307,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_colombia2016,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_colombia2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -353,8 +317,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_colombia2018,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_colombia2018,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -364,20 +327,9 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_combo,marry10,d6,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
+amb_combo,marry10,d6,c(1:10),How strongly do you approve or disapprove of same-sex couples having the right to marry? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
 amb_combo,neigh2,dis35a,"c(1, 0)",Homosexuals. Would you mind having them as neighbors? , 0 Do not have a problem with having them as neighbors / 1 Do not want them as neighbors,1,
-amb_combo,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_combo,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -387,8 +339,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_costarica2016,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_costarica2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -398,8 +349,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_costarica2018,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_costarica2018,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -409,8 +359,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_dominica2016,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_dominica2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -420,8 +369,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_ecuador2014,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_ecuador2014,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -431,8 +379,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_ecuador2018,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_ecuador2018,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -442,8 +389,8 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_grenada2016,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_ecuador2018,marry10,d6,c(1:10),How strongly do you approve or disapprove of same-sex couples having the right to marry? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_grenada2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -453,8 +400,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_guyana2016,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_guyana2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -464,8 +410,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_panama2016,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_panama2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -475,8 +420,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_panama2018,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_panama2018,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -486,8 +430,8 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_stkittsnevis2016,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_panama2018,marry10,d6,c(1:10),How strongly do you approve or disapprove of same-sex couples having the right to marry? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_stkittsnevis2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -497,8 +441,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_stlucia2016,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_stlucia2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -508,8 +451,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_stvincent2016,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_stvincent2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -519,8 +461,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_suriname2010,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_suriname2010,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -530,8 +471,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_suriname2012,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_suriname2012,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -541,8 +481,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_trinidad2010,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_trinidad2010,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -552,8 +491,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_trinidad2012,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_trinidad2012,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -563,8 +501,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_uruguay2016,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_uruguay2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -574,8 +511,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_uruguay2018,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_uruguay2018,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -585,8 +521,8 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_us2010,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_uruguay2018,marry10,d6,c(1:10),How strongly do you approve or disapprove of same-sex couples having the right to marry? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_us2010,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -596,8 +532,8 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_us2012,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_us2010,marry10,d6,c(1:10),How strongly do you approve or disapprove of same-sex couples having the right to marry? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_us2012,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -607,8 +543,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_us2014,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_us2014,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -618,8 +553,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_us2016,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. ÃˆÂ©Â¥Con quÃ‹Ã¥Ã– firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pÃÃ–Â§blicos?","1 Strongly Disapprove
+amb_us2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -629,8 +563,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pÃÃ–
 8
 9
 10 Strongly Approve",1,
-amb_us2018,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_us2018,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -640,8 +573,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_venezuela2010,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_venezuela2010,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -651,8 +583,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_venezuela2012,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_venezuela2012,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -662,8 +593,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_venezuela2014,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_venezuela2014,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -673,8 +603,7 @@ aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤bl
 8
 9
 10 Strongly Approve",1,
-amb_venezuela2016,run10,d5,c(1:10),"Y ahora, cambiando el tema, y pensando en los homosexuales. é©´Con quèŒ… firmeza 
-aprueba o desaprueba que estas personas puedan postularse para cargos pç…¤blicos?","1 Strongly Disapprove
+amb_venezuela2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
 2
 3
 4
@@ -712,27 +641,16 @@ asiab2008,just10,q54b,c(1:10),"Please tell me for each of the following statemen
 or something in between, using this card. READ OUT STATESMENTS. COME ONE
 ANSWEWR FOR EACH[Homosexuality]","[1-10]1 Never Justifiable  10 Always
 justifiable",1,
-aussa2003,marry5,v109,c(5:1),Agree: The law should recognise same-sex relationships,"1 Strongly agree 
-2 Agree 
-3 Neither agree nor disagree 
-4 Disagree
-5 Strongly disagree 
-9 Can't choose",1,
-aussa2005,marry5,v141,c(5:1),"Here are some statements about gays and lesbians. How much do you agree or disagree that a gay or lesbian couple should
-be able to  marry like heterosexual couples","1 Strongly agree 
-2 Agree 
-3 Neither agree nor disagree 
-4 Disagree
-5 Strongly disagree 
-9 Can't choose",1,
+aussa2003,marry5,v109,c(5:1),Agree: The law should recognise same-sex relationships,1 Strongly agree / 2 Agree / 3 Neither agree nor disagree / 4 Disagree / 5 Strongly disagree,1,
+aussa2005,marry5,v141,c(5:1),Here are some statements about gays and lesbians. How much do you agree or disagree that a gay or lesbian couple should be able to marry like heterosexual couples,1 Strongly agree / 2 Agree / 3 Neither agree nor disagree / 4 Disagree / 5 Strongly disagree,1,
 belgiumes2007,adopt5,q96_3,c(1:5),How acceptable or unacceptable do you consider the following issues? That homosexual and lesbian couples have the right to adopt children,1 completely unacceptable 2 unacceptable 3 neither acceptable nor unacceptable 4 acceptable 5 completely acceptable,1,
 bsa_combo,adopt2,gayadopt,"c(2, 1)",Do you think that homosexual couples should be legally permitted to adopt children,1 should 2 should not,1,
 bsa_combo,approve5,homosex,c(1:5),What about sexual relations between two adults of the same sex?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,1,
-bsa_combo,marry5,marview0,c(5:1),Homosexual couple should have right to marry,1 Strongly agree 2 Agree 3 Neighter 4 Disagree 5 Strongly disagree,1,
+bsa_combo,marry5,marview0,c(5:1),Homosexual couples should have right to marry,1 Strongly agree / 2 Agree / 3 Neither agree nor disagree / 4 Disagree / 5 Strongly disagree,1,
 bsa1993,approve5,homosex,c(1:5),What about sexual relations between two adults of the same sex?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
 bsa1995,approve5,homosex,c(1:5),What about sexual relations between two adults of the same sex?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
-bsa1996,approve5,gaysex,c(1:5),Homosexual relations are always wrong,1 stongly agree / 5 strongly disagree,,
-bsa1997,approve5,gaysex,c(1:5),Homosexual relations are always wrong,1 stongly agree / 5 strongly disagree,,
+bsa1996,approve5a,gaysex,c(1:5),Homosexual relations are always wrong,1 strongly agree / 2 agree to some extent / 3 hard to say / 4 disagree to some extent / 5 strongly disagree,,
+bsa1997,approve5a,gaysex,c(1:5),Homosexual relations are always wrong,1 strongly agree / 2 agree to some extent / 3 hard to say / 4 disagree to some extent / 5 strongly disagree,,
 bsa1998,approve5,homosex,c(1:5),What about sexual relations between two adults of the same sex?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
 bsa1999,approve5,homosex,c(1:5),What about sexual relations between two adults of the same sex?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
 bsa2000,approve5,homosex,c(1:5),What about sexual relations between two adults of the same sex?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
@@ -740,15 +658,15 @@ bsa2003,approve5,homosex,c(1:5),What about sexual relations between two adults o
 bsa2005,approve5,homosex,c(1:5),What about sexual relations between two adults of the same sex?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
 bsa2006,approve5,homosex,c(1:5),What about sexual relations between two adults of the same sex?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
 bsa2007,approve5,homosex,c(1:5),What about sexual relations between two adults of the same sex?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
-bsa2007,marry5,gmlmarry,c(5:1),Gay and lesbian couples’ right to marriage,1 Strongly agree 2 Agree 3 Neither agree nor disagree 4 Disagree 5 Strongly disagree,,
+bsa2007,marry5,gmlmarry,c(5:1),Homosexual couples should have right to marry,1 Strongly agree / 2 Agree / 3 Neither agree nor disagree / 4 Disagree / 5 Strongly disagree,,
 bsa2008,approve4,sexhomo,c(1:4),What about sexual relations between two adults of the same sex?,1 always wrong / 2 almost always wrong / 3 wrong only sometimes / 4 not wrong at all,,
 bsa2008,adopt5,gaychld,c(5:1),And do you approve or disapprove of allowing same-sex couples to adopt children?,1 strongly approve / 2 approve / 3 neither approve nor disapprove / 4 disapprove / 5 strongly disapprove,,
 bsa2010,approve5,homosex,c(1:5),What about sexual relations between two adults of the same sex?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
 bsa2012,adopt2,gayadopt,c(2:1),And do you think homosexual couples should be allowed to adopt a the same conditions as other couples?,1 yes 2 no,,
 bsa2012,approve5,homosex,c(1:5),What about sexual relations between two adults of the same sex?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
-bsa2012,marry5,gmlmarry,c(5:1),Gay and lesbian couples’ right to marriage,1 Strongly agree 2 Agree 3 Neither agree nor disagree 4 Disagree 5 Strongly disagree,,
+bsa2012,marry5,gmlmarry,c(5:1),Homosexual couples should have right to marry,1 Strongly agree / 2 Agree / 3 Neither agree nor disagree / 4 Disagree / 5 Strongly disagree,,
 bsa2013,approve5,homosex,c(1:5),What about sexual relations between two adults of the same sex?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
-bsa2014,marry5,gmlmarry,c(5:1),Gay or lesbian couples should have the right to marry one another if they want to,1 Strongly agree 2 Agree 3 Neither agree nor disagree 4 Disagree 5 Strongly disagree,,
+bsa2014,marry5,gmlmarry,c(5:1),Gay or lesbian couples should have the right to marry one another if they want to,1 Strongly agree / 2 Agree / 3 Neither agree nor disagree / 4 Disagree / 5 Strongly disagree,,
 bsa2015,approve5,homosex,c(1:5),What about sexual relations between two adults of the same sex?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
 bsa2016,approve5,homosex,c(1:5),What about sexual relations between two adults of the same sex?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
 bsa2017,approve5,homosex,c(1:5),What about sexual relations between two adults of the same sex?,1 Always wrong / 2 Mostly wrong / 3 Sometimes wrong / 4 Rarely wrong / 5 Not wrong at all,1,
@@ -756,13 +674,13 @@ bsa2018,approve4,sexhomo,c(1:4),"And what about sexual relations between two adu
 bsa2018,approve5,homosex,c(1:5),What about sexual relations between two adults of the same sex?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
 bsa2019,approve5,homosex,c(1:5),What about sexual relations between two adults of the same sex?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
 canadianes2004,marry3a,ces04_cps_i1_3,"c(3,8,1)","Do you favour or oppose same-sex marriage, or do you have no opinion on this? ",1 favor / 3 oppose / 8 no opinion,1,
-canadianes2004,marry4a,ces04_pes_g12_3,"c(7,5,3,1)",Gays and lesbians should be allowed to get married,1 strongly agree / 3 somewhat agree / 5 somewhat disagree / 7 strongly disagree,1,
+canadianes2004,marry4d,ces04_pes_g12_3,"c(7,5,3,1)",Gays and lesbians should be allowed to get married,1 strongly agree / 3 somewhat agree / 5 somewhat disagree / 7 strongly disagree,1,
 canadianes2006,marry3a,ces06_cps_i9,"c(3,8,1)","Do you favour or oppose same-sex marriage, or do you have no opinion on this? ",1 favor / 3 oppose / 8 no opinion,1,
-canadianes2006,marry4a,ces06_pes_g7,"c(7,5,3,1)",Gays and lesbians should be allowed to get married,1 strongly agree / 3 somewhat agree / 5 somewhat disagree / 7 strongly disagree,1,
+canadianes2006,marry4d,ces06_pes_g7,"c(7,5,3,1)",Gays and lesbians should be allowed to get married,1 strongly agree / 3 somewhat agree / 5 somewhat disagree / 7 strongly disagree,1,
 canadianes2008,marry3a,ces08_pes_p7,"c(3,8,1)","Do you favour or oppose same-sex marriage, or do you have no opinion on this? ",1 favor / 3 oppose / 8 no opinion,,
-canadianes2008,marry4a,ces08_pes_g5,"c(7,5,3,1)",Gays and lesbians should be allowed to get married,1 strongly agree / 3 somewhat agree / 5 somewhat disagree / 7 strongly disagree,,
-canadianes2011,marry3a,pes11_29,"c(5,8,1)","Do you favour or oppose same-sex marriage, or do you have no opinion on this? ",1 favor 5 oppose 8 no opinion,,
-canadianes2015,marry3a,p_ssm,"c(5,8,1)","Do you favour or oppose same-sex marriage, or do you have no opinion on this? ",1 favor 5 oppose 8 no opinion,,
+canadianes2008,marry4d,ces08_pes_g5,"c(7,5,3,1)",Gays and lesbians should be allowed to get married,1 strongly agree / 3 somewhat agree / 5 somewhat disagree / 7 strongly disagree,,
+canadianes2011,marry3a,pes11_29,"c(5,8,1)","Do you favour or oppose same-sex marriage, or do you have no opinion on this? ",1 favor / 5 oppose / 8 no opinion,,
+canadianes2015,marry3a,p_ssm,"c(5,8,1)","Do you favour or oppose same-sex marriage, or do you have no opinion on this? ",1 favor / 5 oppose / 8 no opinion,,
 caucasusb2011,just10,jushomo,c(1:10),"Using this CARD, where '1' means 'Can never be justified' and '10' means can always be justified,' please tell me for each of the following actions whether you think it can be justified or not?",1 never be justified / 23456789 / 10 always be justified,,
 caucasusb2019,business2,businga,"c(0, 1)",Can you please tell me whether you approve or disapprove of people like you doing business with a homosexual?,0 disapprove / 1 approve,,
 caucasusb2021,business2,businga,"c(0, 1)",Can you please tell me whether you approve or disapprove of people like you doing business with a homosexual?,0 disapprove / 1 approve,,
@@ -775,13 +693,21 @@ cces2015,marry2,cc15_325,"c(2, 1)",Do you favor or oppose allowing gays and lesb
 cces2016,marry2,cc16_335,"c(2, 1)",Do you favor or oppose allowing gays and lesbians to marry legally?,favor 1  oppose 2,1,
 cdcee,accept4,v233,c(4:1),Homosexuals are people who should be accepted like anybody else,Agree completely    1  Disagree completely  4,1,
 cgeis2015,marry3,q17,c(3:1),What is your view on same-sex marriage?,"1 Favour same-sex marriage / 2 Oppose same-sex marriage, but would accept civil unions / 3 Oppose entirely same-sex marriage",,
-chcep201810,marry5,rel_47,c(5:1),"How much do you agree or disagree with
-allow in Chile the marriage of two people of the same sex?",Strongly agree 1 Stronly disagree 5,1,
+cgss2005,free5,qe15b,c(1:5),"Homosexuality is a personal behavior, others should not blame",1 Strongly disagree / 2 disagree / 3 Neither / 4 Agree / 5 Strongly Agree,,
+cgss2010,approve5,a40,c(1:5),Do you think same-sex sex is wrong?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
+cgss2012,approve5,a40,c(1:5),Do you think same-sex sex is wrong?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
+cgss2013,approve5,a40,c(1:5),Do you think same-sex sex is wrong?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
+cgss2015,approve5,a40,c(1:5),Do you think same-sex sex is wrong?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
+cgss2015,free5,b112,c(1:5),"Homosexuality is a personal behavior, others should not blame",1 Strongly disagree / 2 disagree / 3 Neither / 4 Agree / 5 Strongly Agree,,
+cgss2017,approve5,a40,c(1:5),Do you think same-sex sex is wrong?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
+cgss2018,approve5,a40,c(1:5),Do you think same-sex sex is wrong?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
+cgss2021,approve5,a40,c(1:5),Do you think same-sex sex is wrong?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
+chcep201810,marry5,rel_47,c(5:1),How much do you agree or disagree with allowing in Chile the marriage of two people of the same sex?,1 Strongly agree / 2 Agree / 3 Neither agree nor disagree / 4 Disagree / 5 Strongly disagree,1,
 chcep201810,approve4,rel_4,c(1:4),And what do you think about sexual relations between two adults of the same sex?,1 always wrong / 2 almost always wrong / 3 wrong only sometimes / 4 not wrong at all,,
 cid_combo,neigh2,v224,"c(1, 2)",Are there any of these groups you would not like as a neighbor? Homosexuals,1 mentioned / 2 not mentioned,,
-cnes1993,marry4a,cpsg7b,"c(7,5,3,1)",Homosexual couples should be allowed to be legally married,1 strongly agree / 3 somewhat agree / 5 somewhat disagree / 7 strongly disagree,,
-cnes1997,marry4a,mbsg3,c(4:1),Homosexual couples should be allowed to be legally married,1 strongly agree / 2 agree / 3 disagree / 4 strongly disagree,,
-cnes2000,marry4a,cpsf18,"c(7,5,3,1)",Gays and lesbians should be allowed to get married,1 strongly agree / 3 somewhat agree / 5 somewhat disagree / 7 strongly disagree,,
+cnes1993,marry4d,cpsg7b,"c(7,5,3,1)",Homosexual couples should be allowed to be legally married,1 strongly agree / 3 somewhat agree / 5 somewhat disagree / 7 strongly disagree,,
+cnes1997,marry4d,mbsg3,c(4:1),Homosexual couples should be allowed to be legally married,1 strongly agree / 2 agree / 3 disagree / 4 strongly disagree,,
+cnes2000,marry4d,cpsf18,"c(7,5,3,1)",Gays and lesbians should be allowed to get married,1 strongly agree / 3 somewhat agree / 5 somewhat disagree / 7 strongly disagree,,
 cnn199301,marry2,q24,"c(2, 1)",Do you think marriages between homosexual men or between homosexual women should be recognized as legal by the law?,1 yes / 2 no,1,
 cnn199406,adopt2,q25,"c(2, 1)",Do you think that homosexual couples should be legally permitted to adopt children?,1 yes / 2 no,1,
 cnn199406,legal2,q29,"c(2, 1)",Do you think that homosexual relations between consenting adults should be legal or illegal?,1 Legal / 2 Illegal,1,
@@ -814,10 +740,10 @@ cnn201306,marry2,q10,"c(2, 1)","Do you think marriages between gay or lesbian co
 cnn201412,marry2,q23,"c(2, 1)","Do you think marriages between gay or lesbian couples should or should not be recognized by the law as valid, with the same rights as traditional marriages?",Should 1 Should not 2,1,
 dkes2005,adopt5,v218,c(5:1),Homosexual couples should have the same rights as others to adopt children,,,
 dkes2007,adopt5,v251,c(5:1),Homosexual couples should have the same rights as others to adopt children,,,
-eb21,accept5,v128,c(1:5),"WILL YOU PLEASE, FOR EACH ITEM, SELECT ON THIS LIST. THE ANSWER WHICH BEST DESCRIBES YOUR OWN OPINION. HOMOSEXUALS ARE PEOPLE JUST LIKE OTHERS.",Disagree completely 1 COMPLETELY AGREE 5,1,
+eb21,accept5,v128,c(1:5),Homosexuals are people just like others,1 Disagree completely / 2 Disagree / 3 Neither agree nor disagree / 4 Agree / 5 Completely agree,1,
 eb39,adopt2,v639,"c(2, 1)","Do you think that homosexual couples should, or should not, have the right to Adopt children",Should 1 Should not 2,1,
 eb39,civil2,v638,"c(2, 1)","Do you think that homosexual couples should, or should not, have the right to Live together, without being married, but with the same advantages as married couples",Should 1 Should not 2,1,
-eb39,marry2,v637,"c(2, 1)","Do you think that homosexual couples should, or should not, have the right to Marry each other",Should 1 Should not 2,1,
+eb39,marry2,v637,"c(2, 1)","Do you think that homosexual couples should, or should not, have the right to: Marry each other",Should 1 Should not 2,1,
 eb561,pension4,v397,c(4:1),Couples of the same sex should be entitled to a widow's/widower's pension as if they had lived with a partner of the opposite sex,1 strongly agree / 2 agree / 3 disagree / 4 strongly disagree,1,
 eb661,adopt4,v325,c(4:1),"For each of the following propositions, tell me if you Adoption of children should be authorised for homosexual couples throughout Europe",Totally agree 1 totally disagree 4,1,
 eb661,marry4e,v324,c(4:1),"For each of the following propositions, tell me if you Homosexual marriages should be allowed throughout Europe?",Totally agree 1 totally disagree 4,1,
@@ -825,59 +751,59 @@ eb691,hioff10,v129,c(1:10),"Using a scale from 1 to 10, please tell me how you w
 eb691,neigh10,v106,c(1:10),Having a homosexual (gay man or lesbian woman) as a neighbour,1 Not at all comfortable / 23456789 / 10 Totally comfortable,1,
 eb712,hioff10,v293,c(1:10),"Using a scale from 1 to 10, please tell me how you would feel about having a person from each of the following groups in the highest elected political position in (OUR COUNTRY). '1' means that you would feel """"not at all comfortable"""" and '10' that you would feel """"totally comfortable"""": A gay, lesbian or bisexual person",1 Not at all comfortable / 23456789 / 10 Totally comfortable,1,
 eb774,hioff10,qc5_2,c(1:10),"Using a scale from 1 to 10, please tell me how you would feel about having a person from each of the following groups in the highest elected political position in (OUR COUNTRY). '1' means that you would feel """"not at all comfortable"""" and '10' that you would feel """"totally comfortable"""": A gay, lesbian or bisexual person",1 Not at all comfortable / 23456789 / 10 Totally comfortable,1,
-eb834,approve4,qc16_2,c(4:1),To what extent do you agree or disagree with each of the following statements?There is nothing wrong in a sexual relationship between two persons of the same sex,Totally agree 1 totally disagree 4,1,
+eb834,approve4a,qc16_2,c(4:1),To what extent do you agree or disagree with each of the following statements?There is nothing wrong in a sexual relationship between two persons of the same sex,Totally agree 1 totally disagree 4,1,
 eb834,hioff10,qc4_2,c(1:10),"Using a scale from 1 to 10, please tell me how you would feel about having a person from each of the following groups in the highest elected political position in (OUR COUNTRY). '1' means that you would feel """"not at all comfortable"""" and '10' that you would feel """"totally comfortable"""": A gay, lesbian or bisexual person",Very uncomfortable 1  Totally comfortable 10 Indifferent (SPONT.) 11,1,
 eb834,marry4e,qc16_3,c(4:1),To what extent do you agree or disagree with each of the following statements? Same sex marriages should be allowed throughout Europe,Totally agree 1 totally disagree 4,1,
 eb834,rights4,qc16_1,c(4:1),"To what extent do you agree or disagree with each of the following statements? Gay, lesbian and bisexual people should have the same rights as heterosexual people",Totally agree 1 totally disagree 4,1,
-eb914,approve4,qc15_2,c(4:1),To what extent do you agree or disagree with each of the following statements?There is nothing wrong in a sexual relationship between two persons of the same sex,Totally agree 1 totally disagree 4,1,
+eb914,approve4a,qc15_2,c(4:1),To what extent do you agree or disagree with each of the following statements?There is nothing wrong in a sexual relationship between two persons of the same sex,Totally agree 1 totally disagree 4,1,
 eb914,hioff10,qc6_2,c(1:10),"Using a scale from 1 to 10, please tell me how you would feel about having a person from each of the following groups in the highest elected political position in (OUR COUNTRY). '1' means that you would feel """"not at all comfortable"""" and '10' that you would feel """"totally comfortable"""": A gay, lesbian or bisexual person",Very uncomfortable 1  Totally comfortable 10 Indifferent (SPONT.) 11,1,
 eb914,marry4e,qc15_3,c(4:1),To what extent do you agree or disagree with each of the following statements? Same sex marriages should be allowed throughout Europe,Totally agree 1 totally disagree 4,1,
 eb914,rights4,qc15_1,c(4:1),"To what extent do you agree or disagree with each of the following statements? Gay, lesbian and bisexual people should have the same rights as heterosexual people",Totally agree 1 totally disagree 4,1,
-ees2009,marry5,q58,c(1:5),Same-sex marriages should be prohibited by law.,strongly agree 1  strongly disagree 5,1,
-ees2019,marry11,q14_3,c(10:0),I would like you to tell me your views on various issues: same-sex marriage,fully in favour of same sex marriage 0 fully opposed to same sex marriage 10,1,
-ess1,free5,freehms,c(5:1),Gay men and lesbians should be free to live their own life as they wish,Agree strongly 1  Disagree strongly 5,1,
-ess2,free5,freehms,c(5:1),Gay men and lesbians should be free to live their own life as they wish,Agree strongly 1  Disagree strongly 5,1,
-ess2_it,free5,freehms,c(5:1),Gay men and lesbians should be free to live their own life as they wish,Agree strongly 1  Disagree strongly 5,1,
-ess3,free5,freehms,c(5:1),Gay men and lesbians should be free to live their own life as they wish,Agree strongly 1  Disagree strongly 5,1,
-ess3_lv,free5,freehms,c(5:1),Gay men and lesbians should be free to live their own life as they wish,Agree strongly 1  Disagree strongly 5,1,
-ess3_ro,free5,freehms,c(5:1),Gay men and lesbians should be free to live their own life as they wish,Agree strongly 1  Disagree strongly 5,1,
-ess4,free5,freehms,c(5:1),Gay men and lesbians should be free to live their own life as they wish,Agree strongly 1  Disagree strongly 5,1,
-ess4_at,free5,freehms,c(5:1),Gay men and lesbians should be free to live their own life as they wish,Agree strongly 1  Disagree strongly 5,1,
-ess4_lt,free5,freehms,c(5:1),Gay men and lesbians should be free to live their own life as they wish,Agree strongly 1  Disagree strongly 5,1,
-ess5,free5,freehms,c(5:1),Gay men and lesbians should be free to live their own life as they wish,Agree strongly 1  Disagree strongly 5,1,
-ess5_at,free5,freehms,c(5:1),Gay men and lesbians should be free to live their own life as they wish,Agree strongly 1  Disagree strongly 5,1,
-ess6,free5,freehms,c(5:1),Gay men and lesbians should be free to live their own life as they wish,Agree strongly 1  Disagree strongly 5,1,
-ess7,free5,freehms,c(5:1),Gay men and lesbians should be free to live their own life as they wish,Agree strongly 1  Disagree strongly 5,1,
+ees2009,marry5a,q58,c(1:5),Same-sex marriages should be prohibited by law.,1 Strongly agree / 2 Agree / 3 Neither agree nor disagree / 4 Disagree / 5 Strongly disagree,1,
+ees2019,marry11,q14_3,c(10:0),I would like you to tell me your views on various issues: same-sex marriage,0 fully in favour of same sex marriage / 123456789 / 10 fully opposed to same sex marriage,1,
+ess1,free5,freehms,c(5:1),Gay men and lesbians should be free to live their own life as they wish,1 agree strongly / 2 agree / 3 neither agree nor disagree / 4 disagree / 5 disagree strongly,1,
+ess2,free5,freehms,c(5:1),Gay men and lesbians should be free to live their own life as they wish,1 agree strongly / 2 agree / 3 neither agree nor disagree / 4 disagree / 5 disagree strongly,1,
+ess2_it,free5,freehms,c(5:1),Gay men and lesbians should be free to live their own life as they wish,1 agree strongly / 2 agree / 3 neither agree nor disagree / 4 disagree / 5 disagree strongly,1,
+ess3,free5,freehms,c(5:1),Gay men and lesbians should be free to live their own life as they wish,1 agree strongly / 2 agree / 3 neither agree nor disagree / 4 disagree / 5 disagree strongly,1,
+ess3_lv,free5,freehms,c(5:1),Gay men and lesbians should be free to live their own life as they wish,1 agree strongly / 2 agree / 3 neither agree nor disagree / 4 disagree / 5 disagree strongly,1,
+ess3_ro,free5,freehms,c(5:1),Gay men and lesbians should be free to live their own life as they wish,1 agree strongly / 2 agree / 3 neither agree nor disagree / 4 disagree / 5 disagree strongly,1,
+ess4,free5,freehms,c(5:1),Gay men and lesbians should be free to live their own life as they wish,1 agree strongly / 2 agree / 3 neither agree nor disagree / 4 disagree / 5 disagree strongly,1,
+ess4_at,free5,freehms,c(5:1),Gay men and lesbians should be free to live their own life as they wish,1 agree strongly / 2 agree / 3 neither agree nor disagree / 4 disagree / 5 disagree strongly,1,
+ess4_lt,free5,freehms,c(5:1),Gay men and lesbians should be free to live their own life as they wish,1 agree strongly / 2 agree / 3 neither agree nor disagree / 4 disagree / 5 disagree strongly,1,
+ess5,free5,freehms,c(5:1),Gay men and lesbians should be free to live their own life as they wish,1 agree strongly / 2 agree / 3 neither agree nor disagree / 4 disagree / 5 disagree strongly,1,
+ess5_at,free5,freehms,c(5:1),Gay men and lesbians should be free to live their own life as they wish,1 agree strongly / 2 agree / 3 neither agree nor disagree / 4 disagree / 5 disagree strongly,1,
+ess6,free5,freehms,c(5:1),Gay men and lesbians should be free to live their own life as they wish,1 agree strongly / 2 agree / 3 neither agree nor disagree / 4 disagree / 5 disagree strongly,1,
+ess7,free5,freehms,c(5:1),Gay men and lesbians should be free to live their own life as they wish,1 agree strongly / 2 agree / 3 neither agree nor disagree / 4 disagree / 5 disagree strongly,1,
 ess8,adopt5,hmsacld,c(5:1),Gay male and lesbian couples should have the same rights to adopt children as straight couples.,Agree strongly 1  Disagree strongly 5,1,
 ess8,ashamed5,hmsfmlsh,c(1:5),"If a close family member was a gay man or a lesbian, I would feel ashamed.",Agree strongly 1  Disagree strongly 5,1,
-ess8,free5,freehms,c(5:1),Gay men and lesbians should be free to live their own life as they wish,Agree strongly 1  Disagree strongly 5,1,
+ess8,free5,freehms,c(5:1),Gay men and lesbians should be free to live their own life as they wish,1 agree strongly / 2 agree / 3 neither agree nor disagree / 4 disagree / 5 disagree strongly,1,
 ess9,adopt5,hmsacld,c(5:1),Gay male and lesbian couples should have the same rights to adopt children as straight couples.,Agree strongly 1  Disagree strongly 5,1,
 ess9,ashamed5,hmsfmlsh,c(1:5),"If a close family member was a gay man or a lesbian, I would feel ashamed.",Agree strongly 1  Disagree strongly 5,1,
-ess9,free5,freehms,c(5:1),Gay men and lesbians should be free to live their own life as they wish,Agree strongly 1  Disagree strongly 5,1,
+ess9,free5,freehms,c(5:1),Gay men and lesbians should be free to live their own life as they wish,1 agree strongly / 2 agree / 3 neither agree nor disagree / 4 disagree / 5 disagree strongly,1,
 ess9_ro,adopt5,hmsacld,c(5:1),Gay male and lesbian couples should have the same rights to adopt children as straight couples.,Agree strongly 1  Disagree strongly 5,1,
 ess9_ro,ashamed5,hmsfmlsh,c(1:5),"If a close family member was a gay man or a lesbian, I would feel ashamed.",Agree strongly 1  Disagree strongly 5,1,
-ess9_ro,free5,freehms,c(5:1),Gay men and lesbians should be free to live their own life as they wish,Agree strongly 1  Disagree strongly 5,1,
+ess9_ro,free5,freehms,c(5:1),Gay men and lesbians should be free to live their own life as they wish,1 agree strongly / 2 agree / 3 neither agree nor disagree / 4 disagree / 5 disagree strongly,1,
 ess10,adopt5,hmsacld,c(5:1),Gay male and lesbian couples should have the same rights to adopt children as straight couples.,Agree strongly 1  Disagree strongly 5,1,
 ess10,ashamed5,hmsfmlsh,c(1:5),"If a close family member was a gay man or a lesbian, I would feel ashamed.",Agree strongly 1  Disagree strongly 5,1,
-ess10,free5,freehms,c(5:1),Gay men and lesbians should be free to live their own life as they wish,Agree strongly 1  Disagree strongly 5,1,
-evs_combo,adopt5,d026_01,c(5:1),How would you feel about the following statement? Do you agree or disagree with them? Homosexual couples should be able to adopt children,Agree strongly1 strongly disagree 5,1,
-evs_combo,just10,f118,c(1:10),"please tell me for each of the following statement - homosexuality, wether you think it can always be justified, never be justifed, or something between",Never 1 Always 10,1,
+ess10,free5,freehms,c(5:1),Gay men and lesbians should be free to live their own life as they wish,1 agree strongly / 2 agree / 3 neither agree nor disagree / 4 disagree / 5 disagree strongly,1,
+evs_combo,adopt5a,d026_01,c(5:1),How would you feel about the following statement? Do you agree or disagree with them? Homosexual couples should be able to adopt children,Agree strongly1 strongly disagree 5,1,
+evs_combo,just10,f118,c(1:10),"Please tell me for each of the following statements whether you think it can always be justified, never be justifed, or something between: Homosexuality",1 Never / 23456789 / 10 Always,1,
 evs_combo,neigh2,a124_09,"c(1, 0)",On this list are various groups of people. Could you please sort out any that you whoul dnot like to have as neigbours. Homosexuals,Not mention 0 Mention 1,1,
-evs2017,just10,v153,c(1:10),"Please indicate for each of the following whether you think it can always be justified, never be justified, or something in between.Can this always be justified, never be justified, or something in between? Homosexuality",Never 1 Always 10,1,
+evs2017,just10,v153,c(1:10),"Please indicate for each of the following whether you think it can always be justified, never be justified, or something in between. Homosexuality",1 Never / 23456789 / 10 Always,1,
 evs2017,neigh2,v26,c(1:2),On this list are various groups of people. Could you identify any that you would not like to have as neighbours? Homosexuals,1 mentioned / 2 not mentioned,1,
 evs2017,parent5,v82,c(5:1),How much do you agree or disagree with this statement? Homosexual couples are as good parents as other couples,Agree strongly1 strongly disagree 5,1,
-evs2017ukr,just10,v153,c(1:10),"Please indicate for each of the following whether you think it can always be justified, never be justified, or something in between.Can this always be justified, never be justified, or something in between? Homosexuality",Never 1 Always 10,1,
+evs2017ukr,just10,v153,c(1:10),"Please indicate for each of the following whether you think it can always be justified, never be justified, or something in between. Homosexuality",1 Never / 23456789 / 10 Always,1,
 evs2017ukr,neigh2,v26,c(1:2),On this list are various groups of people. Could you identify any that you would not like to have as neighbours?,1 mentioned / 2 not mentioned,1,
 evs2017ukr,parent5,v82,c(5:1),How much do you agree or disagree with this statement? Homosexual couples are as good parents as other couples,Agree strongly1 strongly disagree 5,1,
-evs_greece2017,just10,v153,c(1:10),"Please indicate for each of the following whether you think it can always be justified, never be justified, or something in between.Can this always be justified, never be justified, or something in between? Homosexuality",Never 1 Always 10,1,
+evs_greece2017,just10,v153,c(1:10),"Please indicate for each of the following whether you think it can always be justified, never be justified, or something in between. Homosexuality",1 Never / 23456789 / 10 Always,1,
 evs_greece2017,neigh2,v26,c(1:2),On this list are various groups of people. Could you identify any that you would not like to have as neighbours?,1 mentioned / 2 not mentioned,1,
 evs_greece2017,parent5,v82,c(5:1),How much do you agree or disagree with this statement? Homosexual couples are as good parents as other couples,Agree strongly1 strongly disagree 5,1,
 fsdelection_combo,adopt4a,fnes1024,c(4:1),Same-sex couples' right to adopt is a good thing,1 strongly agree / 2 somewhat agree / 3 somewhat disagree / 4 strongly disagree,1,
 fsdelection_combo,adopt4a,fnes462,c(4:1),Same-sex couples in registered partnerships should have the right to adopt children,1 agree strongly / 2 agree / 3 disagree / 4 disagree strongly,1,
-fsdelection_combo,marry4a,fnes1023,c(4:1),Same-sex couples' right to marry is a good thing,1 strongly agree / 2 somewhat agree / 3 somewhat disagree / 4 strongly disagree,1,
-fsdelection2011,marry4a,k6i,c(4:1),Finland should allow same-sex marriage,1 strongly agree / 2 agree / 3 disagree / 4 strongly disagree,1,
+fsdelection_combo,marry4d,fnes1023,c(4:1),Same-sex couples' right to marry is a good thing,1 strongly agree / 2 somewhat agree / 3 somewhat disagree / 4 strongly disagree,1,
+fsdelection2011,marry4d,k6i,c(4:1),Finland should allow same-sex marriage,1 strongly agree / 2 agree / 3 disagree / 4 strongly disagree,1,
 fsdelection2019,adopt4a,p4_14,c(4:1),Same-sex couples in registered partnerships should have the right to adopt children,1 strongly agree / 2 agree to some extent / 3 disagree to some extent / 4 strongly disagree,1,
-fsdelection2019,marry4a,p4_13,c(4:1),Same-sex couples' right to marry is a good thing,1 strongly agree / 2 agree to some extent / 3 disagree to some extent / 4 strongly disagree,1,
+fsdelection2019,marry4d,p4_13,c(4:1),Same-sex couples' right to marry is a good thing,1 strongly agree / 2 agree to some extent / 3 disagree to some extent / 4 strongly disagree,1,
 fsdimm1996,accept5,q30_23,c(5:1),Homosexuals are as good people as everyone else,1 strongly agree / 2 agree / 3 can't say / 4 disagree / 5 disagree strongly,1,
 fsdlife1997,adopt7,k4_1,c(1:7),Same-sex couples should have the same right to adopt children as other couples,1 strongly disagree / 23456 / 7 strongly agree,1,
 fsdreligion2008,neigh2,q30l,"c(2, 1)",people you do not want to have as neighbors? Homosexuals,1 not mentioned / 2 mentioned,1,
@@ -909,36 +835,36 @@ gallup_uk1986,accept2a,q27,"c(2, 1)",Do you feel that homosexuality should be co
 gallup_uk1986,adopt2,q30,"c(2, 1)",Do you think homosexuals should or should not be allowed to adopt children or not?,"1 yes, should / 2 no, should not",1,
 gallup_us197706,adopt2,q14,"c(2, 1)",Do you think homosexuals should or should not be allowed to adopt children?,"Yes, should 1. No. should not 2.",1,
 gallup_us197706,legal2,q12,"c(2, 1)",Do you think homosexual relations between consenting adults should or should not be legal?,"Yes, should 1. No. should not 2.",1,
-gallup_us198206,accept2a,q09j,"c(2, 1)",Do you feel that homosexuality should be considered  as an acceptable alternative life-style or not?,"Yes, 1. No, 2",1,
+gallup_us198206,accept2a,q09j,"c(2, 1)",Do you feel that homosexuality should be considered  as an acceptable alternative life-style or not?,1 acceptable / 2 not acceptable,1,
 gallup_us198206,legal2,q09h,"c(2, 1)",Do you think homosexual relations between consenting adults should or should not be legal?,"Yes, should 1. No. should not 2.",1,
 gallup_us198606,legal2,q10,"c(2, 1)",Do you think homosexual relations between consenting adults should or should not be legal?,"Yes, should 1. No. should not 2.",1,
 gallup_us198703,legal2,q20,"c(2, 1)",Do you think homosexual relations between consenting adults should or should not be legal?,"Yes, should 1. No. should not 2.",1,
 gallup_us198807,legal2,q5,"c(2, 1)",Do you think homosexual relations between consenting adults should or should not be legal?,1 should / 2 should not,1,
 gallup_us198909,accept2a,q03,"c(2, 1)",Do you feel that homosexuality should be considered as an acceptable alternative life-style or not?,1 acceptable / 2 not acceptable,1,
-gallup_us198910,legal2,q39,"c(2, 1)",Do you think gay or lesbian relations between consenting adults should or should not be legal?,1 should be legal / 2 should not be legal,1,
-gallup_us199109,legal2,q7,"c(2, 1)",Do you think gay or lesbian relations between consenting adults should or should not be legal?,1 should be legal / 2 should not be legal,1,
+gallup_us198910,legal2a,q39,"c(2, 1)",Do you think gay or lesbian relations between consenting adults should or should not be legal?,1 should be legal / 2 should not be legal,1,
+gallup_us199109,legal2a,q7,"c(2, 1)",Do you think gay or lesbian relations between consenting adults should or should not be legal?,1 should be legal / 2 should not be legal,1,
 gallup_us199206,accept2a,q24,"c(2, 1)",Do you feel that homosexuality should be considered as an acceptable alternative life-style or not?,1 acceptable / 2 not acceptable,1,
-gallup_us199206,legal2,q25,"c(2, 1)",Do you think gay or lesbian relations between consenting adults should or should not be legal?,1 should be legal / 2 should not be legal,1,
+gallup_us199206,legal2a,q25,"c(2, 1)",Do you think gay or lesbian relations between consenting adults should or should not be legal?,1 should be legal / 2 should not be legal,1,
 gallup_us199603,accept2a,q43a,"c(2, 1)",Do you feel that homosexuality should be considered as an acceptable alternative life-style or not?,1 acceptable / 2 not acceptable,1,
 gallup_us199603,marry2,q44,"c(2, 1)",Do you think same-sex marriages should be recognized by the law as valid?,1 yes / 2 no,1,
-gallup_us199611,legal2,q12,"c(2, 1)",Do you think gay or lesbian relations between consenting adults should or should not be legal?,1 should be legal / 2 should not be legal,1,
+gallup_us199611,legal2a,q12,"c(2, 1)",Do you think gay or lesbian relations between consenting adults should or should not be legal?,1 should be legal / 2 should not be legal,1,
 gallup_us199902,accept2,q39a,"c(2, 1)",And which one of these comes closer to your opinion?,1 homosexuality is a way of life that should be accepted by society / 2 homosexuality is a way of life that should not be accepted by society,1,
-gallup_us199902,legal2,q35,"c(2, 1)",Do you think gay or lesbian relations between consenting adults should or should not be legal?,1 should be legal / 2 should not be legal,1,
-gallup_us200305,legal2,q18,"c(2, 1)",Do you think gay or lesbian relations between consenting adults should or should not be legal?,1 should be legal / 2 should not be legal,1,
-gallup_us200401,legal2,q28,"c(2, 1)",Do you think gay or lesbian relations between consenting adults should or should not be legal?,1 should be legal / 2 should not be legal,1,
+gallup_us199902,legal2a,q35,"c(2, 1)",Do you think gay or lesbian relations between consenting adults should or should not be legal?,1 should be legal / 2 should not be legal,1,
+gallup_us200305,legal2a,q18,"c(2, 1)",Do you think gay or lesbian relations between consenting adults should or should not be legal?,1 should be legal / 2 should not be legal,1,
+gallup_us200401,legal2a,q28,"c(2, 1)",Do you think gay or lesbian relations between consenting adults should or should not be legal?,1 should be legal / 2 should not be legal,1,
 gallup_us200402,marry2,q10,"c(2, 1)",Do you think same-sex marriages should be recognized by the law as valid?,1 yes / 2 no,1,
 gallup_us200508,marry2,q17,"c(2, 1)",Do you think same-sex marriages should be recognized by the law as valid?,1 yes / 2 no,1,
 gallup_us200709,adopt2,q25,"c(2, 1)",Do you think same-sex couples should have the legal right to adopt a child?,1 yes / 2 no,1,
 gallup_us200905,adopt2,q19a,"c(2, 1)",Do you think same-sex couples should have the legal right to adopt a child?,1 yes / 2 no,1,
 gallup_us200905,marry2,q15,"c(2, 1)",Do you think same-sex marriages should be recognized by the law as valid?,1 yes / 2 no,1,
-gallup_us201112,legal2,q22,"c(2, 1)",Do you think gay or lesbian relations between consenting adults should or should not be legal?,1 should be legal / 2 should not be legal,1,
+gallup_us201112,legal2a,q22,"c(2, 1)",Do you think gay or lesbian relations between consenting adults should or should not be legal?,1 should be legal / 2 should not be legal,1,
 gallup_us201112,marry2,q23,"c(2, 1)",Do you think same-sex marriages should be recognized by the law as valid?,1 yes / 2 no,1,
 gallup_us201211,adopt2,q14a,"c(2, 1)",Do you think same-sex couples should have the legal right to adopt a child?,1 yes / 2 no,1,
-gallup_us201211,legal2,q5,"c(2, 1)",Do you think gay or lesbian relations between consenting adults should or should not be legal?,1 should be legal / 2 should not be legal,1,
+gallup_us201211,legal2a,q5,"c(2, 1)",Do you think gay or lesbian relations between consenting adults should or should not be legal?,1 should be legal / 2 should not be legal,1,
 gallup_us201211,marry2,q7,"c(2, 1)",Do you think same-sex marriages should be recognized by the law as valid?,1 yes / 2 no,1,
 icenes2007,adopt5,gayadopt,c(5:1),Do you agree or disagree that homosexuals should have the same right as others to adopt children?,5 strongly disagree / 1 agree,1,
 ines_long,just11,v0262,c(0:10),Homosexuality is never justified,0 never justified / 123456789 / 10 always justified,,
-ines_long,marry5,v0264,c(5:1),Same sex marriages should be prohibited by law,1 Strongly disagree / 2 Disagree / 3 Neither Agree Nor Disagree / 4 Agree / 5 Strongly Agree,,
+ines_long,marry5a,v0264,c(5:1),Same sex marriages should be prohibited by law,1 Strongly disagree / 2 Disagree / 3 Neither Agree Nor Disagree / 4 Agree / 5 Strongly Agree,,
 ipsos_ga201305,marry3,hf1,c(2:4),"When you think about the rights of same-sex couples, which of the following comes closest to your personal opinion? ","2 Same-sex couples should not be allowed to marry or obtain any kind of legal recognition / 3 Same-sex couples should be allowed to obtain some kind of legal recognition, but not to marry / 4 Same-sex couples should be allowed to marry legally",,
 ipsos_ga201305,marry4c,hf2_3,c(4:1),Same-sex marriage is or could be harmful to society,1 strongly disagree / 2 somewhat disagree / 3 somewhat agree / 4 strongly agree,,
 ipsos_ga201305,adopt4a,hf2_4,c(1:4),Same-sex couples should have the same rights to adopt children as heterosexual couples,1 strongly disagree / 2 somewhat disagree / 3 somewhat agree / 4 strongly agree,,
@@ -948,8 +874,8 @@ ipsos_ga201404,adopt4a,hf2_4_hf2cat,c(4:1),Same-sex couples should have the same
 ipsos_ga201504,marry3,hf2_q1,c(3:1),"When you think about the rights of same-sex couples, which of the following comes closest to your personal opinion? ","1 Same-sex couples should be allowed to marry legally / 2 Same-sex couples should be allowed to obtain some kind of legal recognition, but not to marry / 3 Same-sex couples should not be allowed to marry or obtain any kind of legal recognition",,
 ispas2001,just11,a4_1,c(0:10),is homosexuality justifiable?,0 never justified / 10 always justified,1,
 isshr2006,approve4,c2c,c(4:1),what about sexual relations of the same sex is it,1 always wrong / 2 almost always wrong / 3 wrong only sometimes / 4 not wrong at all,1,
-issp1988,marry5,v36,c(5:1),Homosexual couples should have the right to marry one another,1 strongly agree / 2 agree / 3 neighter agree nor disagree / 4 disagree / 5 strongly disagree,1,
-issp1988au,marry5,marokhom,c(5:1),Homosexual couples should have the right to marry one another,1 strongly agree / 2 agree / 3 neighter agree nor disagree / 4 disagree / 5 strongly disagree,1,
+issp1988,marry5,v36,c(5:1),Homosexual couples should have the right to marry one another,1 Strongly agree / 2 Agree / 3 Neither agree nor disagree / 4 Disagree / 5 Strongly disagree,1,
+issp1988au,marry5,marokhom,c(5:1),Homosexual couples should have the right to marry one another,1 Strongly agree / 2 Agree / 3 Neither agree nor disagree / 4 Disagree / 5 Strongly disagree,1,
 issp1991,approve4,v11,c(1:4),"And what about sexual relations between two adults of the same sex, is it?",1 always wrong / 2 almost always wrong / 3 wrong only sometimes / 4 not wrong at all,1,
 issp1994,approve4,v48,c(1:4),"And what about sexual relations between two adults of the same sex, is it?",1 always wrong / 2 almost always wrong / 3 wrong only sometimes / 4 not wrong at all,1,
 issp1998,approve4,v9,c(1:4),"And what about sexual relations between two adults of the same sex, is it?",1 always wrong / 2 almost always wrong / 3 wrong only sometimes / 4 not wrong at all,1,
@@ -967,14 +893,14 @@ itanes2001,rights4,c10_6,c(4:1),Homosexuals should be ensured the same rights by
 itanes2006prepost,accept10,a11_1,c(1:10),"Please, tell me if, according to you, you consider each of these behaviours never acceptable or always acceptable or if their acceptability depends of circumstances. In that case please choose a intermediate position between 1 and 10: having homosexual intercourse",1 never acceptable 10 always acceptable ,,
 jgss,approve4,q4homsea,c(1:4),What is your opinion about sexual relations between two adults of the same sex?,1 always wrong / 2 almost always wrong / 3 wrong only sometimes / 4 not wrong at all,1,
 jgss2008,approve4,q4homsea,c(1:4),What is your opinion about sexual relations between two adults of the same sex?,1 always wrong / 2 almost always wrong / 3 wrong only sometimes / 4 not wrong at all,1,
-kgss,marry5,homomar,c(5:1),Homosexual couples should have the right to marry one another,1 strongly agree / 2 agree / 3 neighter agree nor disagree / 4 disagree / 5 strongly disagree,1,
+kgss,marry5,homomar,c(5:1),Homosexual couples should have the right to marry one another,1 Strongly agree / 2 Agree / 3 Neither agree nor disagree / 4 Disagree / 5 Strongly disagree,1,
 lat200006,approve4,q54,c(1:4),What do you think about sexual relations between two adults of the same gender?,1 always wrong / 2 almost always wrong / 3 wrong only sometimes / 4 not wrong at all,1,
 lat200006,marry4a,q57,c(4:1),Do you strongly favor favor oppose or strongly oppose allowing gays and lesbians to marry legally?,1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1,
 lb1998,neigh2,np63a,"c(1, 0)",could you select any that you would not like to have as neighbors?,1 mentioned / 0 not mentioned,1,
-lb2002,just10,p52wvsc,c(1:10),please teel me for each of the following statement - homosexuality,1 never be justified / 10 always be justified,1,
-lb2004,just10,p38sta,c(1:10),please teel me for each of the following statement - homosexuality,1 never be justified / 10 always be justified,1,
-lb2008,just10,p64wvsst,c(1:10),please teel me for each of the following statement - homosexuality,1 never be justified / 10 always be justified,1,
-lb2009,just10,p63wvsst,c(1:10),please teel me for each of the following statement - homosexuality,1 never be justified / 10 always be justified,1,
+lb2002,just10,p52wvsc,c(1:10),"Please tell me for each of the following statements whether you think it can always be justified, never be justifed, or something between: Homosexuality",1 never be justified / 23456789 / 10 always be justified,1,
+lb2004,just10,p38sta,c(1:10),"Please tell me for each of the following statements whether you think it can always be justified, never be justifed, or something between: Homosexuality",1 never be justified / 23456789 / 10 always be justified,1,
+lb2008,just10,p64wvsst,c(1:10),"Please tell me for each of the following statements whether you think it can always be justified, never be justifed, or something between: Homosexuality",1 never be justified / 23456789 / 10 always be justified,1,
+lb2009,just10,p63wvsst,c(1:10),"Please tell me for each of the following statements whether you think it can always be justified, never be justifed, or something between: Homosexuality",1 never be justified / 23456789 / 10 always be justified,1,
 lb2009,neigh2,p64st_a,"c(1, 0)",could you select any that you would not like to have as neighbors?,1 mentioned / 0 not mentioned,1,
 lb2010,marry4a,p14n_g,c(4:1),"Do you strongly agree, agree, disagree or strongly disagree with each of the following statements? Homosexual marriage",1 strongly agree / 2 agree / 3 disagree / 4 strongly disagree,,
 lb2015,marry4a,p69st_c,c(4:1),"Do you strongly agree, agree, disagree or strongly disagree with each of the following statements? Homosexual marriage",1 strongly agree / 2 agree / 3 disagree / 4 strongly disagree,,
@@ -984,7 +910,7 @@ nbcwsj199906,marry4a,q22i,c(4:1),Do you strongly favor favor oppose or strongly 
 nbcwsj200910,marry4a,q43,c(4:1),Do you strongly favor favor oppose or strongly oppose allowing gays and lesbians to marry legally?,1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1,
 nsss1984,approve4,homosex,c(1:4),what about sexual relations between two adults of the same sex is it:,1 always wrong / 2 almost always wrong / 3 wrong only sometimes / 4 not wrong at all,,
 nsss1987,approve4,homosex,c(1:4),what about sexual relations between two adults of the same sex is it:,1 always wrong / 2 almost always wrong / 3 wrong only sometimes / 4 not wrong at all,,
-nsss1989,marry5,marokhom,c(5:1),Homosexual couples should have the right to marry one another,1 strongly agree / 2 agree / 3 neighter agree nor disagree / 4 disagree / 5 strongly disagree,1,
+nsss1989,marry5,marokhom,c(5:1),Homosexual couples should have the right to marry one another,1 Strongly agree / 2 Agree / 3 Neither agree nor disagree / 4 Disagree / 5 Strongly disagree,1,
 nsss1993,approve4,homosex3,c(1:4),"And what about sexual relations between two adults of the same sex, is it?",1 always wrong / 2 almost always wrong / 3 wrong only sometimes / 4 not wrong at all,1,
 nores_combo1,civil5,polspm94,c(5:1),Homosexuals living together should have approximately the same rights as married couples,1 strongly agree / 2 agree / 3 either or / 4 disagree / 5 strongly disagree,,
 nores_combo2,adopt5,polspm128,c(5:1),Gay male and lesbian couples should have the same rights to adopt children as straight couples,1 strongly agree / 2 agree / 3 either or / 4 disagree / 5 strongly disagree,,
@@ -998,35 +924,32 @@ norcs2017_8,rights7,r8parlikhet,c(7:1),Heterosexual and homosexual coouples shou
 norcs2017_9,rights7,r8parlikhet,c(7:1),Heterosexual and homosexual coouples should have the same rights,1 strongly agree / 2 agree / 3 somewhat agree / 4 Neither agree nor disagree / 5 somewhat disagree / 6 disagree 7 strongly disagree,,
 norcs2017_10,rights7,r8parlikhet,c(7:1),Heterosexual and homosexual coouples should have the same rights,1 strongly agree / 2 agree / 3 somewhat agree / 4 Neither agree nor disagree / 5 somewhat disagree / 6 disagree 7 strongly disagree,,
 norcs2020_19,parent7,r19meme7_1,c(1:7),It is not good for children to grow up with gay/lesbian parents,1 strongly agree / 2 agree / 3 somewhat agree / 4 Neither agree nor disagree / 5 somewhat disagree / 6 disagree 7 strongly disagree,,
-nzes1993,approve5,homo,c(1:5),How far do you agree or disagree that homosexual relationships are always wrong?,1 strongly agree / 2 agree / 3 neutral / 4 disagree / 5 disagree strongly,,
-nzes1996,approve5,phomo,c(1:5),"Do you strongly agree, agree, disagree, or strongly disagree with the following? Homosexual relationships are always wrong",1 strongly agree / 2 agree / 3 neutral / 4 disagree / 5 disagree strongly,,
-nzes2005,approve5,yhomo,c(1:5),"Do you strongly agree, agree, disagree, or strongly disagree with the following? Homosexual relationships are always wrong",1 strongly agree / 2 agree / 3 neutral / 4 disagree / 5 disagree strongly,,
-nzes2008,approve5,zhomo,c(1:5),"Do you strongly agree, agree, disagree, or strongly disagree with the following? Homosexual relationships are always wrong",1 strongly agree / 2 agree / 3 neutral / 4 disagree / 5 disagree strongly,,
+nzes1993,approve5a,homo,c(1:5),How far do you agree or disagree that homosexual relationships are always wrong?,1 strongly agree / 2 agree / 3 neutral / 4 disagree / 5 disagree strongly,,
+nzes1996,approve5a,phomo,c(1:5),Homosexual relationships are always wrong,1 strongly agree / 2 agree / 3 neutral / 4 disagree / 5 disagree strongly,,
+nzes2005,approve5a,yhomo,c(1:5),Homosexual relationships are always wrong,1 strongly agree / 2 agree / 3 neutral / 4 disagree / 5 disagree strongly,,
+nzes2008,approve5a,zhomo,c(1:5),Homosexual relationships are always wrong,1 strongly agree / 2 agree / 3 neutral / 4 disagree / 5 disagree strongly,,
 pew2002,accept2,q40,"c(2, 1)",And which one of these comes closer to your opinion?,1 homosexuality is a way of life that should be accepted by society / 2 homosexuality is a way of life that should not be accepted by society,1,
 pew2007,accept2,q50,"c(2, 1)",And which one of these comes closer to your opinion?,1 homosexuality is a way of life that should be accepted by society / 2 homosexuality is a way of life that should not be accepted by society,1,
 pew2011,accept2,q18,"c(2, 1)",And which one of these comes closer to your opinion?,1 homosexuality is a way of life that should be accepted by society / 2 homosexuality is a way of life that should not be accepted by society,1,
 pew2013,accept2,q27,"c(2, 1)",And which one of these comes closer to your opinion?,1 homosexuality is a way of life that should be accepted by society / 2 homosexuality is a way of life that should not be accepted by society,1,
-pew2013,approve3,q84d,"c(2, 3, 1)",pless tell me whether you personally believe that it is morally acceptable,1 morally acceptable / 2 morally wrong / 3 not a moral issue,1,
+pew2013,approve3,q84d,"c(2, 3, 1)","Is homosexual behavior morally acceptable, morally wrong, or is it not a moral issue?",1 morally acceptable / 2 morally wrong / 3 not a moral issue,1,
 pew2014_india,accept2,q27,"c(2, 1)",And which one of these comes closer to your opinion?,1 homosexuality is a way of life that should be accepted by society / 2 homosexuality is a way of life that should not be accepted by society,1,
-pew2014_india,approve3,q84d,"c(2, 3, 1)",pless tell me whether you personally believe that it is morally acceptable,1 morally acceptable / 2 morally wrong / 3 not a moral issue,1,
+pew2014_india,approve3,q84d,"c(2, 3, 1)","Is homosexual behavior morally acceptable, morally wrong, or is it not a moral issue?",1 morally acceptable / 2 morally wrong / 3 not a moral issue,1,
 pew2017,marry4a,favgaymarriage,c(4:1),Do you strongly favor favor oppose or strongly oppose allowing gays and lesbians to marry legally?,1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1,
 pew2017_mpwe,adopt2,q32a,"c(2, 1)",Gays and lesbians should be able to adopt children OR gays and lesbians should not be able to adopt children?,1 gays and lesbians should be able to adopt children / 2 gays and lesbians should not be able to adopt children,,
 pew2019,accept2,homosexuality,"c(2, 1)",And which one of these comes closer to your opinion?,1 homosexuality is a way of life that should be accepted by society / 2 homosexuality is a way of life that should not be accepted by society,1,
-pewrel2009_afr,approve3,q85i,"c(2, 3, 1)",pless tell me whether you personally believe that it is morally acceptable,1 morally acceptable / 2 morally wrong / 3 not a moral issue,1,
-pewrel2014_latam,approve3,q69h,"c(2, 3, 1)",pless tell me whether you personally believe that it is morally acceptable,1 morally acceptable / 2 morally wrong / 3 not a moral issue,1,
+pewrel2009_afr,approve3,q85i,"c(2, 3, 1)","Is homosexual behavior morally acceptable, morally wrong, or is it not a moral issue?",1 morally acceptable / 2 morally wrong / 3 not a moral issue,1,
+pewrel2014_latam,approve3,q69h,"c(2, 3, 1)","Is homosexual behavior morally acceptable, morally wrong, or is it not a moral issue?",1 morally acceptable / 2 morally wrong / 3 not a moral issue,1,
 pewrel2014_latam,marry4a,q15,c(4:1),Do you strongly favor favor oppose or strongly oppose allowing gays and lesbians to marry legally?,1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1,
 pewrel2014_us,accept2,q5b,"c(2, 1)",And which one of these comes closer to your opinion?,1 homosexuality is a way of life that should be accepted by society / 2 homosexuality is a way of life that should not be accepted by society,1,
 pewrel2015_ee,accept2,q64,"c(2, 1)",And which one of these comes closer to your opinion?,1 homosexuality is a way of life that should be accepted by society / 2 homosexuality is a way of life that should not be accepted by society,1,
-pewrel2015_ee,approve3,q71h,"c(2, 3, 1)",pless tell me whether you personally believe that it is morally acceptable,1 morally acceptable / 2 morally wrong / 3 not a moral issue,1,
-pewrel2016_us,approve3,moralissuecf2_w20,"c(2, 3, 1)",pless tell me whether you personally believe that it is morally acceptable,1 morally acceptable / 2 morally wrong / 3 not a moral issue,1,
+pewrel2015_ee,approve3,q71h,"c(2, 3, 1)","Is homosexual behavior morally acceptable, morally wrong, or is it not a moral issue?",1 morally acceptable / 2 morally wrong / 3 not a moral issue,1,
+pewrel2016_us,approve3,moralissuecf2_w20,"c(2, 3, 1)","Is homosexual behavior morally acceptable, morally wrong, or is it not a moral issue?",1 morally acceptable / 2 morally wrong / 3 not a moral issue,1,
 pewrel2017_we,marry4a,q5,c(4:1),Do you strongly favor favor oppose or strongly oppose allowing gays and lesbians to marry legally?,1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1,
 pgss,approve4,q106,c(1:4),"And what about sexual relations between two adults of the same sex, is it?",1 always wrong / 2 almost always wrong / 3 wrong only sometimes / 4 not wrong at all,1,
-poc_ca2002,marry4a,q306_02,c(4:1),Gays and lesbians should be allowed to get married,1 strongly agree / 2 agree / 3 disagree / 4 strongly disagree,,
-poc_ca2003,marry4a,q4a,c(4:1),Gays and lesbians should be allowed to get married,1 strongly agree / 2 agree / 3 disagree / 4 strongly disagree,,
-politbarometer_east2000,civil2,v217,"c(2, 1)",The legislature has largely put same-sex partnerships legally on an equal footing with marriages,1 Do you like that / 2 Don't you think that's good?,1,
-politbarometer_east2001,civil2,v185,"c(2, 1)",The legislature has largely put same-sex partnerships legally on an equal footing with marriages,1 Do you like that / 2 Don't you think that's good?,1,
-politbarometer_west2000,civil2,v217,"c(2, 1)",The legislature has largely put same-sex partnerships legally on an equal footing with marriages,1 Do you like that / 2 Don't you think that's good?,1,
-politbarometer_west2001,civil2,v185,"c(2, 1)",The legislature has largely put same-sex partnerships legally on an equal footing with marriages,1 Do you like that / 2 Don't you think that's good?,1,
+poc_ca2002,marry4d,q306_02,c(4:1),Gays and lesbians should be allowed to get married,1 strongly agree / 2 agree / 3 disagree / 4 strongly disagree,,
+poc_ca2003,marry4d,q4a,c(4:1),Gays and lesbians should be allowed to get married,1 strongly agree / 2 agree / 3 disagree / 4 strongly disagree,,
+politbarometer_combo,civil2,vu8,"c(2, 1)",The legislature has largely put same-sex partnerships legally on an equal footing with marriages. Do you think that's good or not good?,1 good / 2 not good,1,
 prri2011_avs,marry4a,q8b,c(4:1),Do you strongly favor favor oppose or strongly oppose allowing gays and lesbians to marry legally?,1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1,
 prri2011_mrgl,adopt4a,q8c,c(4:1),allowing gay and lesbian couples to adopt children,1 strongly favor / 2 favor / 3 oppose / 4 strongly oppose,1,
 prri2011_mrgl,marry4a,q5a,c(4:1),Do you strongly favor favor oppose or strongly oppose allowing gays and lesbians to marry legally?,1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1,
@@ -1060,32 +983,29 @@ psra2004,marry2,q14a,"c(2, 1)",Do you think there should or should not be legall
 psra2008,adopt2,q8c,"c(2, 1)",Do you think there should or should not be adoption rights for gays and lesbians so they can legally adopt children?,1 should / 2 should not,1,
 psra2008,marry2,q8b,"c(2, 1)",Do you think there should or should not be legally-sanctioned gay marriages?,1 should / 2 should not,1,
 ptvs2008,adopt4a,par_g20_11,c(1:4),Homosexual couples should be able to adopt children,1 completely disagree / 2 do not agree / 3 agree / 4 completely agree,1,
-ptvs2008,marry5,ccs_g21_4,c(5:1),"Same-sex marriages should be
-prohibited by law","1 completely disagree / 2 do not agree / 3 neither agree, nor disagree / 4 agree / 5 completely agree",1,
+ptvs2008,marry5a,ccs_g21_4,c(5:1),Same-sex marriages should be prohibited by law,"1 completely disagree / 2 do not agree / 3 neither agree, nor disagree / 4 agree / 5 completely agree",1,
 ptvs2012,adopt4a,h.24.11,c(1:4),Homosexual couples should be able to adopt children,1 completely disagree / 2 do not agree / 3 agree / 4 completely agree,1,
-ptvs2012,marry5,h.25.2,c(5:1),"Same-sex marriages should be prohibited
+ptvs2012,marry5a,h.25.2,c(5:1),"Same-sex marriages should be prohibited
 by law","1 completely disagree / 2 do not agree / 3 neither agree, nor disagree / 4 agree / 5 completely agree",1,
-ptvs2016,adopt5,par_h23_11,c(1:5),"Homosexual couples should be able to
-adopt children",1 completely disagree / 2 do not agree / 3 agree / 4 completely agree,1,
-ptvs2016,marry5,ccs_c2d,c(5:1),"Same-sex marriages should be
-prohibited by law","1 completely disagree / 2 do not agree / 3 neither agree, nor disagree / 4 agree / 5 completely agree",1,
+ptvs2016,adopt5a,par_h23_11,c(1:5),Homosexual couples should be able to adopt children,1 completely disagree / 2 do not agree / 3 agree / 4 completely agree,1,
+ptvs2016,marry5a,ccs_c2d,c(5:1),Same-sex marriages should be prohibited by law,"1 completely disagree / 2 do not agree / 3 neither agree, nor disagree / 4 agree / 5 completely agree",1,
 ress2014,free5,freehms,c(5:1),Gay men and lesbians should be free to live their own life as they wish,1 agree strongly / 2 agree / 3 neither agree nor disagree / 4 disagree / 5 disagree strongly,1,
 seessp2004,free5,v019,c(5:1),Gay men and lesbians should be free to live their own life as they wish,1 agree strongly / 2 agree / 3 neither agree nor disagree / 4 disagree / 5 disagree strongly,,
 seessp2004,legal5,v073,c(1:5),Homosexuals are no better than criminals and should be punished in the extreme,1 agree strongly / 2 agree / 3 neither agree nor disagree / 4 disagree / 5 disagree strongly,,
 seessp2004,approve4,v162,c(1:4),"And what about sexual relations between two adults of the same sex, is it:",1 always wrong / 2 almost always wrong / 3 almost always right / 4 always right,,
-snes2002,adopt5,v163,c(5:1),Allow gay couples to adopt children,1 very good proposal 2 pretty good proposal 3 neither good nor bad proposal 4 pretty bad proposal 5 very bad proposal,,
-snes2006,adopt5,v574,c(5:1),Allow gay couples to adopt children,1 very good proposal 2 pretty good proposal 3 neither good nor bad proposal 4 pretty bad proposal 5 very bad proposal,,
+snes2002,adopt5a,v163,c(5:1),Allow gay couples to adopt children,1 very good proposal 2 pretty good proposal 3 neither good nor bad proposal 4 pretty bad proposal 5 very bad proposal,,
+snes2006,adopt5a,v574,c(5:1),Allow gay couples to adopt children,1 very good proposal 2 pretty good proposal 3 neither good nor bad proposal 4 pretty bad proposal 5 very bad proposal,,
 snes2006,strength11,v569,c(0:10),"What do you think of the proposal to invest in a society where the rights of gay, bi and transsexuals are strengthened?",0 very bad proposal / 1234 / 5 neither good nor bad suggestion / 6789 / 10 very good suggestion,,
 snes2010,strength11,vu10_v862,c(0:10),"What do you think of the proposal to invest in a society where the rights of gay, bi and transsexuals are strengthened?",0 very bad proposal / 1234 / 5 neither good nor bad suggestion / 6789 / 10 very good suggestion,,
 snes2014,strength11,f42k,c(0:10),"What do you think of the proposal to invest in a society where the rights of gay, bi and transsexuals are strengthened?",0 very bad proposal / 1234 / 5 neither good nor bad suggestion / 6789 / 10 very good suggestion,,
 snes2018,strength11,q332c,c(0:10),"What do you think of the proposal to invest in a society where the rights of homo-, bi- and transsexuals are strengthened?",0 very bad proposal / 1234 / 5 neither good nor bad suggestion / 6789 / 10 very good suggestion,,
 som_class2008,marry5,f52d,c(5:1),Homosexual rights to marriage,1 very good suggestion 2 pretty good suggestion 3 neither good nor bad suggestion 4 pretty bad suggestion 5 very bad suggestion,,
-som_combo,adopt5,bb900b,c(5:1),Allow gay couples to adopt children,1 very good suggestion 2 pretty good suggestion 3 neither good nor bad suggestion 4 pretty bad suggestion 5 very bad suggestion,1,
-som_combo,adopt5,bb901b,c(5:1),Allow gay couples to adopt children,1 very good suggestion 2 pretty good suggestion 3 neither good nor bad suggestion 4 pretty bad suggestion 5 very bad suggestion,1,
+som_combo,adopt5a,bb900b,c(5:1),Allow gay couples to adopt children,1 very good suggestion 2 pretty good suggestion 3 neither good nor bad suggestion 4 pretty bad suggestion 5 very bad suggestion,1,
+som_combo,adopt5a,bb901b,c(5:1),Allow gay couples to adopt children,1 very good suggestion 2 pretty good suggestion 3 neither good nor bad suggestion 4 pretty bad suggestion 5 very bad suggestion,1,
 som_combo,strength5,bb900f,c(5:1),"Strengthen the position of homosexuals, bisexuals and transsexuals in society",1 very good suggestion 2 pretty good suggestion 3 neither good nor bad suggestion 4 pretty bad suggestion 5 very bad suggestion,1,
 som_combo,strength5,bb901j,c(5:1),"Strengthen the position of homosexuals, bisexuals and transsexuals in society",1 very good suggestion 2 pretty good suggestion 3 neither good nor bad suggestion 4 pretty bad suggestion 5 very bad suggestion,1,
 tcmeg2004,neigh2,m904i,"c(1, 0)",Do you mind having the following groups as neighbors? Homosexuals,0 I do not mind having them as neighbors 1 I mind having them as neighbors,,
-twscs2015,marry4a,v63,c(4:1),Homosexual couples should have the right to get married,1 strongly agree / 2 agree / 3 disagree / 4 strongly disagree,,
+twscs2015,marry4d,v63,c(4:1),Homosexual couples should have the right to get married,1 strongly agree / 2 agree / 3 disagree / 4 strongly disagree,,
 twscs2018_rel,approve4,v83,c(1:4),Sexual relations between two adults of the same sex,1 always wrong / 2 almost always wrong / 3 wrong only sometimes / 4 not wrong at all,,
 usgss,approve4,homosex,c(1:4),"What about sexual relations between two adults of the same sex--do you think it is always wrong, almost always wrong, wrong only sometimes, or not wrong at all?",1 always wrong / 2 almost always wrong / 3 wrong only sometimes / 4 not wrong at all,1,
 usgss,marry5,marhomo1,c(5:1),Homosexual couples have the right to marry one another,1 strongly agree / 2 agree / 3 neither agree nor disagree / 4 disagree / 5 strongly disagree,1,
@@ -1093,7 +1013,7 @@ usgss,marry5,marhomo,c(5:1),Homosexual couples should have the right to marry on
 usnwr198509,accept2a,var68,"c(2, 1)","Do you think that homosexuality should be considered an acceptable lifestyle, or is it basically wrong?",1 acceptable / 2 basically wrong,1,
 uspew_valcombo,teacher4,q16e,c(1:4),School boards ought to have the right to fire teachers who are known homosexuals,1 completely agree / 2 mostly agree / 3 mostly disagree / 4 completely disagree,,
 uspew1993_nii,accept2,q17,"c(2, 1)","Some people feel that homosexuality is a lifestyle that should be accepted by society. Other feel that homosexuality is a lifestyle that should be discouraged by society. Which comes closer to your viewpoint, the first position or the second?",1 accepted / 2 discouraged,1,
-uspew1996_05pol,marry4a,q13d,c(4:1),Allowing gays and lesbians to marry legally,1 strongly favor / 2 favor / 3 oppose / 4 strongly oppose,1,
+uspew1996_05pol,marry4d,q13d,c(4:1),Allowing gays and lesbians to marry legally,1 strongly favor / 2 favor / 3 oppose / 4 strongly oppose,1,
 uspew1996_media,accept2,q8e,"c(2, 1)",Homosexuality is a way of life that should be accepted by society,1 accepted / 2 discouraged,1,
 uspew1999_nii,adopt4b,q30b,c(4:1),Allowing gays and lesbians to adopt children,1 strongly favor / 2 favor / 3 oppose / 4 strongly oppose,1,https://www.pewresearch.org/wp-content/uploads/sites/4/legacy-pdf/54.pdf
 uspew2003_10nii,marry4a,q17,c(4:1),"Do you strongly favor, favor, oppose, or strongly oppose allowing gays and lesbians to marry legally?",1 strongly favor / 2 favor / 3 oppose / 4 strongly oppose,1,https://www.pewresearch.org/politics/dataset/october-2003-news-interest-index/
@@ -1120,7 +1040,7 @@ uspew2008_pol,marry4a,q34,c(4:1),"Do you strongly favor, favor, oppose, or stron
 uspew2008_rel,adopt4b,q25e,c(4:1),"Do you strongly favor, favor, oppose, or strongly oppose allowing gays and lesbians to adopt children?",1 strongly favor / 2 favor / 3 oppose / 4 strongly oppose,1,
 uspew2008_rel,marry4a,q25c,c(4:1),"Do you strongly favor, favor, oppose, or strongly oppose allowing gay and lesbian couples to marry legally?",1 strongly favor / 2 favor / 3 oppose / 4 strongly oppose,1,
 uspew2008_vote,marry4a,q62,c(4:1),"Do you strongly favor, favor, oppose, or strongly oppose allowing gay and lesbian couples to marry legally?",1 strongly favor / 2 favor / 3 oppose / 4 strongly oppose,1,
-uspew2009_rel,approve3,q180b,"c(2, 3, 1)","Do you personally believe that homosexual behavior is morally acceptable, morally wrong, or is it not a moral issue?",1 morally acceptable / 2 morally wrong / 3 not a moral issue,1,https://www.pewresearch.org/politics/dataset/august-2009-religion-survey/
+uspew2009_rel,approve3,q180b,"c(2, 3, 1)","Is homosexual behavior morally acceptable, morally wrong, or is it not a moral issue?",1 morally acceptable / 2 morally wrong / 3 not a moral issue,1,https://www.pewresearch.org/politics/dataset/august-2009-religion-survey/
 uspew2009_rel,marry4a,q146a,c(4:1),"Do you strongly favor, favor, oppose, or strongly oppose allowing gay and lesbian couples to marry legally?",1 strongly favor / 2 favor / 3 oppose / 4 strongly oppose,1,https://www.pewresearch.org/politics/dataset/august-2009-religion-survey/
 uspew2009_val,marry4a,qb19,c(4:1),"Do you strongly favor, favor, oppose, or strongly oppose allowing gay and lesbian couples to marry legally?",1 strongly favor / 2 favor / 3 oppose / 4 strongly oppose,1,
 uspew2010_09pi,marry4a,q40,c(4:1),"Do you strongly favor, favor, oppose, or strongly oppose allowing gay and lesbian couples to marry legally?",1 strongly favor / 2 favor / 3 oppose / 4 strongly oppose,1,
@@ -1149,17 +1069,8 @@ uspew2019_03pol,marry4a,q58,c(4:1),"Do you strongly favor, favor, oppose, or str
 uspew2019_09amtr,accept2,acceptlg,"c(2, 1)",Tell whether the FIRST statement or the SECOND statement comes closer to your own views,1 homosexuality should be accepted by society / 2 homosexuality should be discouraged by society,,
 uspew2020_faba,accept2,acceptlg,"c(2, 1)",Tell whether the FIRST statement or the SECOND statement comes closer to your own views,1 homosexuality should be accepted by society / 2 homosexuality should be discouraged by society,,
 uswapo199808,legal2,q29,"c(2, 1)",Do you think homosexual relations between consenting adults should be legal or illegal?,1 legal / 2 illegal,1,
-wvs_combo,just10,f118,c(1:10),Justifiable: Homosexuality,1 never justifiable / 10 always justifiable,1,
+wvs_combo,just10,f118,c(1:10),Justifiable: Homosexuality,1 never justifiable / 23456789 / 10 always justifiable,1,
 wvs_combo,neigh2,"if_else(s025==502002|s025==5862001, 1 - as.numeric(a124_09), as.numeric(a124_09))","c(1, 0)",On this list are various groups of people. Could you identify any that you would not like to have as neighbours?,1 mentioned 0 not mentioned,,
-wvs7,just10,q182,c(1:10),Justifiable: Homosexuality,1 never justifiable / 10 always justifiable,1,
+wvs7,just10,q182,c(1:10),Justifiable: Homosexuality,1 never justifiable / 23456789 / 10 always justifiable,1,
 wvs7,neigh2,q22,c(1:2),On this list are various groups of people. Could you please mention any that you would not like to have as neighbors?: Homosexuals,1 mentioned / 2 not mentioned,1,
 wvs7,parent5,q36,c(5:1),Homosexual couples are as good parents as other couples,1 strongly agree / 2 agree / 3 neither agree nor disagree / 4 disagree / 5 strongly disagree,1,
-cgss2005,approve5,qe15b,c(1:5),"Homosexuality is a personal behavior, others should not blame",1 Strongly disagree 2 disagree 3 Neighter 4 Agree 5 Strongly Agree,,
-cgss2010,approve5,a40,c(1:5),Do you think same-sex sex is wrong?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
-cgss2012,approve5,a40,c(1:5),Do you think same-sex sex is wrong?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
-cgss2013,approve5,a40,c(1:5),Do you think same-sex sex is wrong?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
-cgss2015,approve5,a40,c(1:5),Do you think same-sex sex is wrong?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
-cgss2015,approve5,b112,c(1:5),"Homosexuality is a personal behavior, others should not blame",1 Strongly disagree 2 disagree 3 Neighter 4 Agree 5 Strongly Agree,,
-cgss2017,approve5,a40,c(1:5),Do you think same-sex sex is wrong?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
-cgss2018,approve5,a40,c(1:5),Do you think same-sex sex is wrong?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
-cgss2021,approve5,a40,c(1:5),Do you think same-sex sex is wrong?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
