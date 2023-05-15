@@ -45,28 +45,243 @@ header-includes:
       - \usepackage{wrapfig}
 ---
 
+\pagenumbering{gobble}
+
+# Authors {.unnumbered}
+-   Byung-Deuk Woo, ORCID: <https://orcid.org/0000-0001-6902-7576>, Postdoctoral Researcher, Institute of Social Data Science, Pohang University of Science and Technology, [byungdeukwoo\@gmail.com](mailto:byungdeukwoo@gmail.com){.email}
+-   Hyein Ko, ORCID: <https://orcid.org/0000-0002-9497-9656>, Doctoral Candidate, Department of Political Science, University of Iowa, [hyein-ko\@uiowa.edu](mailto:hyein-ko@uiowa.edu){.email}
+-   Yuehong Cassandra Tai, ORCID: <https://orcid.org/0000-0001-7303-7443>, Postdoctoral Fellow, Center for Social Data Analytics, Pennsylvania State University, [yhcasstai\@psu.edu](mailto:yhcasstai@psu.edu){.email}
+-   Yue Hu, ORCID: <https://orcid.org/0000-0002-2829-3971>, Associate Professor, Department of Political Science, Tsinghua University, [yuehu\@tsinghua.edu.cn](mailto:yuehu@tsinghua.edu.cn){.email}
+-   Frederick Solt, ORCID: <https://orcid.org/0000-0002-3154-6132>, Associate Professor, Department of Political Science, University of Iowa, [frederick-solt\@uiowa.edu](mailto:frederick-solt@uiowa.edu){.email}
+
+\pagebreak
+
+```{=tex}
+\renewcommand{\baselinestretch}{1}
+\selectfont
+\maketitle
+\renewcommand{\baselinestretch}{1.5}
+\selectfont
+```
+
+```{=tex}
+\begin{abstract}
+Lorem ipsum blah blah blah
+\end{abstract}
+```
+\pagebreak
+
 ```{r setup, include=FALSE}
 options(tinytex.verbose = TRUE)
 
-knitr::opts_chunk$set(cache = FALSE,
-                      echo = FALSE, 
-                      message = FALSE, 
-                      warning = FALSE,
-                      fig.width=7, 
-                      fig.height=2.5)
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE,
+  cache = TRUE,
+  dpi = 600,
+  fig.width = 7,
+  fig.height = 4,
+  plot = function(x, options)  {
+    hook_plot_tex(x, options)
+  }
+)
 
 # If `DCPOtools` is not yet installed:
 # remotes::install_github("fsolt/DCPOtools")
 
-library(DCPOtools)
-library(cmdstanr)
-library(tidyverse)
-library(countrycode)
-library(patchwork)
-library(rsdmx)
+if (!require(pacman)) install.packages("pacman")
+library(pacman)
+# load all the packages you will use below 
+p_load(
+  DCPOtools,
+  cmdstanr,
+  tidyverse,
+  here,
+  countrycode,
+  patchwork,
+  ggthemes,
+  ggdist,
+  imputeTS,
+  rsdmx,
+  osfr,
+  tabulizer,
+  brms,
+  tidybayes,
+  repmis,
+  rvest,
+  vroom,
+  modelsummary,
+  kableExtra
+) 
+```
+
+```{r define_funs}
+# define functions
+validation_plot <- function(v_data_raw,
+                            lab_x = .38, lab_y = 92,
+                            theta_summary, theta_results) {
+    
+    # defaults per https://stackoverflow.com/a/49167744/2620381
+    if ("theta_summary" %in% ls(envir = .GlobalEnv) & missing(theta_summary))
+        theta_summary <- get("theta_summary", envir = .GlobalEnv)
+    if ("theta_results" %in% ls(envir = .GlobalEnv) & missing(theta_results))
+        theta_results <- get("theta_results", envir = .GlobalEnv)
+
+    median_val <- Vectorize(function(x) median(1:x),
+                            vectorize.args = "x")
+    
+    v_vars <- v_data_raw %>% 
+      select(item0 = item) %>% 
+      unique() %>% 
+      mutate(v_val = str_extract(item0, "\\d+") %>% 
+               as.numeric() %>% 
+               median_val(.) %>%
+               `+`(if_else(str_detect(item0, "disc3"), .1, .6)) %>% 
+               round())
+    
+    validation_summarized <- v_data_raw %>% 
+      DCPOtools::format_dcpo(scale_q = v_vars$item0[[1]], # these arguments are required
+                             scale_cp = 1) %>% # but they don't matter
+      pluck("data") %>% 
+      mutate(item0 = str_remove(item, " \\d or higher"),
+             title = factor(title, 
+                            levels = v_data_raw %>%
+                              pull(title) %>%
+                              unique())) %>% 
+      right_join(v_vars, by = "item0") %>%
+      arrange(title) %>% 
+      filter(str_detect(item, paste(v_val, "or higher"))) %>%
+      mutate(iso2c = countrycode::countrycode(country,
+                                              origin = "country.name",
+                                              destination = "iso2c"),
+             prop = if_else(neg, 1-y_r/n_r, y_r/n_r),
+             se = sqrt((prop*(1-prop))/n),
+             prop_90 = prop + qnorm(.9)*se,
+             prop_10 = prop - qnorm(.9)*se) %>%
+      inner_join(theta_summary %>% select(-kk, -tt), by = c("country", "year"))
+    
+    validation_cor <- theta_results %>%
+      inner_join(validation_summarized %>%
+                   select(country, year, title, prop, se),
+                 by = c("country", "year")) %>% 
+      rowwise() %>% 
+      mutate(sim = rnorm(1, mean = prop, sd = se)) %>% 
+      ungroup() %>% 
+      select(title, theta, sim, draw) %>% 
+      nest(data = c(theta, sim)) %>% 
+      mutate(r = lapply(data, function(df) cor(df)[2,1]) %>% 
+               unlist()) %>%
+      select(-data) %>% 
+      group_by(title) %>% 
+      summarize(r = paste("R =", round(mean(r), 2)))
+
+    if ({validation_summarized %>%
+        pull(country) %>%
+        unique() %>% 
+        length()} > 1) {
+      val_plot <- validation_summarized %>%
+        ggplot(aes(x = mean,
+                   y = prop * 100)) +
+        geom_segment(aes(x = q10, xend = q90,
+                         y = prop * 100, yend = prop * 100),
+                     na.rm = TRUE,
+                     alpha = .2) +
+        geom_segment(aes(x = mean, xend = mean,
+                         y = prop_90 * 100, yend = prop_10 * 100),
+                     na.rm = TRUE,
+                     alpha = .2) +
+        geom_smooth(method = 'lm', formula = 'y ~ x', se = FALSE) +
+        facet_wrap(~ title, ncol = 4) +
+        geom_label(data = validation_cor, aes(x = lab_x,
+                                              y = lab_y,
+                                              label = r),
+                   size = 2)
+    } else {
+      val_plot <- validation_summarized %>%
+        ggplot(aes(x = year,
+                   y = mean)) +
+        geom_line() +
+        geom_ribbon(aes(ymin = q10,
+                        ymax = q90,
+                        linetype = NA),
+                    alpha = .2) +
+        geom_point(aes(y = prop),
+                   fill = "black",
+                   shape = 21,
+                   size = .5,
+                   na.rm = TRUE) +
+        geom_path(aes(y = prop),
+                  linetype = 3,
+                  na.rm = TRUE,
+                  alpha = .7) +
+        geom_segment(aes(x = year, xend = year,
+                         y = prop_90, yend = prop_10),
+                     na.rm = TRUE,
+                     alpha = .2) +
+        facet_wrap(~ title, ncol = 4) +
+        geom_label(data = validation_cor, aes(x = lab_x,
+                                              y = lab_y,
+                                              label = r),
+                   size = 2)
+    }
+    
+    return(val_plot)
+}
+
+covered_share_of_spanned <- function(dcpo_input_raw) {
+  n_cy <- dcpo_input_raw %>%
+    distinct(country, year) %>% 
+    nrow()
+  
+  spanned_cy <- dcpo_input_raw %>% 
+    group_by(country) %>% 
+    summarize(years = max(year) - min(year) + 1) %>% 
+    summarize(n = sum(years)) %>% 
+    pull(n)
+  
+  {(n_cy/spanned_cy) * 100}
+}
+
+get_coef <- function(iv, results_df = coef_data, type = "both", width = .95) {
+  result_var <- results_df %>% 
+    filter(.width == width) %>% 
+    pull(.variable) %>% 
+    str_subset(iv)
+  
+  if (!type=="both") {
+    res <- results_df %>% 
+      filter(.variable == result_var & .width == width) %>% 
+      pull({{type}})
+  } else {
+    sc <- results_df %>% 
+      filter(.variable == result_var & .width == width) %>% 
+      pull(std_coef)
+    
+    ci <- results_df %>% 
+      filter(.variable == result_var & .width == width) %>% 
+      pull(ci)
+    
+    res <- paste0(sc, " (95% c.i.: ", ci, ")")
+  }
+  
+  return(res)
+}
+
+by2sd <- function(var) {
+  dich <- stats::na.omit(unique(var)) %>% 
+    sort() %>% identical(c(0, 1))
+  if (dich) 
+    sd <- 1
+  else 
+    sd <- 2 * stats::sd(var, na.rm = TRUE)
+  
+  return(sd)
+}
 
 set.seed(324)
 ```
+
 
 ```{r dcpo_input_raw, include=FALSE, cache = TRUE, cache.extra = tools::md5sum(here::here("data-raw", "surveys_gm.csv"))}
 surveys_gm <- read_csv(here::here("data-raw", "surveys_gm.csv"),
@@ -349,39 +564,42 @@ dcpo_input_raw1 %>%
 
 ```{r dcpo_input}
 dcpo_input <- DCPOtools::format_dcpo(dcpo_input_raw1,
-                                     scale_q = "just10",
-                                     scale_cp = 5)
+                                     scale_q = "approve4",
+                                     scale_cp = 2)
 save(dcpo_input, file = here::here("data", "dcpo_input.rda"))
 ```
 
-```{r dcpo_chunk_options}
-evaluate <- FALSE
-```
 
-
-```{r dcpo, eval=evaluate, cache=evaluate, include=FALSE, results=FALSE}
-iter <- 1000
-
+```{r dcpo, eval=FALSE, include=FALSE, results=FALSE}
+iter <- 1500
+ 
 dcpo <- cmdstan_model("~/Documents/Projects/DCPO/inst/stan/dcpo.stan")
+
 dcpo_output <- dcpo$sample(
-  data = dcpo_input[1:13], 
-  max_treedepth = 14,
-  adapt_delta = 0.99,
-  step_size = 0.005,
-  seed = 324, 
-  chains = 4, 
-  parallel_chains = 4,
-  iter_warmup = iter/2,
-  iter_sampling = iter/2,
-  refresh = iter/50
-)
+   data = dcpo_input[1:13], 
+   max_treedepth = 14,
+   adapt_delta = 0.99,
+   step_size = 0.005,
+   seed = 324, 
+   chains = 4, 
+   parallel_chains = 4,
+   iter_warmup = iter/2,
+   iter_sampling = iter/2,
+   refresh = iter/50
+ )
+
 results_path <- here::here(file.path("data", 
                                      iter, 
-                                     {str_replace_all(Sys.time(), "[- :]", "") %>%
-                                         str_replace("\\d{2}$", "")}))
+                                  {str_replace_all(Sys.time(),
+                                                      "[- :]",
+                                                   "") %>%
+                                         str_replace("\\d{2}$",
+                                                     "")}))
+
 dir.create(results_path, 
            showWarnings = FALSE, 
            recursive = TRUE)
+
 dcpo_output$save_data_file(dir = results_path,
                            random = FALSE)
 dcpo_output$save_output_files(dir = results_path,
@@ -396,7 +614,7 @@ if (!exists("results_path")) {
   # Define OSF_PAT in .Renviron: https://docs.ropensci.org/osfr/articles/auth
   if (!file.exists(file.path(results_path, paste0("dcpo-", latest, "-1.csv")))) {
     dir.create(results_path, showWarnings = FALSE, recursive = TRUE)
-    osf_retrieve_node("82w36") %>% 
+    osf_retrieve_node("XXXXX") %>% 
       osf_ls_files() %>% 
       filter(name == latest) %>% 
       osf_download(path = here::here("data", "1000"))
@@ -481,14 +699,14 @@ bottom5 <- p1_data %>%
 ```
 
 
-```{r ts_plots, fig.cap="DSD Over Time Within Selected Countries \\label{ts}", fig.height=3.5}
-countries <- c("Iceland", "Norway", "Sweden", "Netherlands",
-               "France", "Denmark", "Luxembourg", "United Kingdom", 
-               "Switzerland", "Finland", "Spain", "Australia", 
-               "Ireland", "United States", "Canada", "Germany")
+```{r ts_plots, fig.cap="Tolerance Over Time Within Selected Countries \\label{ts}", fig.height=3.5}
+countries <- c("Netherlands", "Sweden", "Ireland", "United States",
+               "Argentina", "Mexico", "Taiwan", "Poland", 
+               "China", "Ukraine", "Indonesia", "Russia", 
+               "Nigeria", "Jamaica", "Armenia", "Uganda")
 
 c_res <- theta_results %>% 
-  filter(country %in% countries) %>% 
+  filter(country %in% countries) %>%
   mutate(country = factor(country, levels = countries))
 
 ggplot(data = c_res, aes(x = year, y = mean)) +
@@ -508,7 +726,91 @@ ggplot(data = c_res, aes(x = year, y = mean)) +
 ```
 
 
+# Appendix A: Survey Items Used to Estimate Macrointerest
+National and cross-national surveys have often included questions tapping interest in politics over the past four decades, but the resulting data are both sparse, that is, unavailable for many countries and years, and incomparable, generated by many different survey items.
+In all, I identified `r n_items` such survey items that were asked in no fewer than five country-years in countries surveyed at least twice; these items were drawn from `r n_surveys` different survey datasets.
+These items are listed in the table below, along with the dispersion ($\alpha$) and difficulty ($\beta$) scores estimated for each from the DCPO model.
+Lower values of dispersion indicate questions that better identify publics with a higher level of trust from those with lower.
+Items have one less difficulty score than the number of response categories.
+Survey dataset codes correspond to those used in the `DCPOtools` R package [@Solt2019]; they appear in decreasing order of country-years contributed.
 
+Together, the survey items in the source data were asked in `r n_countries` different countries in at least two time points over `r n_years` years, `r year_range`, yielding a total of `r n_cyi` country-year-item observations.
+The number of items observed in the source data for each country-year is plotted in Figure\nobreakspace{}\ref{obs_by_cy} below.
+The estimates of tolerance in country-years with more observed items are more precise.
+In country-years with fewer observed items, the estimates rely more heavily on the random-walk prior and are therefore more uncertain, and when there are no observed items, the estimates rely _entirely_ on the random-walk prior and so uncertainty increases still further.
 
 \pagebreak
->>>>>>> a8627e6dd106538ed23ca85bd7dd973385aa0857
+
+\noindent Table A1: Indicators Used in the Latent Variable Model of Macrointerest
+
+```{r dcpo_items}
+alpha_results <- summarize_dcpo_results(dcpo_input,
+                                        dcpo_output = dcpo_output,
+                                        pars = "alpha") %>% 
+  transmute(item = question,
+            dispersion = mean)
+
+beta_results <- summarize_dcpo_results(dcpo_input,
+                                       dcpo_output,
+                                       "beta") %>% 
+  group_by(question) %>% 
+  summarize(difficulties0 = paste0(sprintf("%.2f", round(mean, 2)),
+                                   collapse = ", ")) %>% 
+  mutate(item = question,
+         cp = if_else(str_detect(item, "threestate"),
+                      2, 
+                      as.numeric(str_extract(item, "\\d+")) - 1),
+         term = str_glue("(( ?-?[0-9].[0-9][0-9]?,?){{{cp}}})"),
+         difficulties = str_extract(difficulties0, 
+                                    term) %>%
+           str_replace(",$", "") %>% 
+           str_trim()) %>% 
+  transmute(item, difficulties)
+                                    
+items_summary <- dcpo_input_raw1 %>%
+  dplyr::select(country, year, item, survey) %>%
+  distinct() %>%
+  separate(survey, c("surv1", "surv2", "surv3"), sep=", ", fill = "left") %>%
+  pivot_longer(cols = starts_with("surv"), values_to = "survey") %>%
+  filter(!is.na(survey)) %>% 
+  group_by(item) %>% 
+  mutate(survey = str_extract(survey, "^[a-z]*"),
+         all_surveys = paste0(unique(survey), collapse = ", ")) %>% 
+  ungroup() %>% 
+  distinct(country, year, item, .keep_all = TRUE) %>% 
+  group_by(item) %>% 
+  mutate(n_cy = n()) %>% 
+  ungroup() %>%
+  distinct(item, n_cy, all_surveys) %>% 
+  left_join(surveys_gm %>%
+              select(item, question_text, response_categories) %>%
+              distinct(item, .keep_all = TRUE),
+            by = "item") %>% 
+  left_join(alpha_results, by = "item") %>% 
+  left_join(beta_results, by = "item") %>% 
+  arrange(-n_cy)
+```
+
+```{r dcpo_items_table}  
+items_summary %>% 
+  transmute(`Survey\nItem\nCode` = item,
+            `Country-Years` = as.character(n_cy),
+            `Question Text` = str_replace(question_text, "([^(]*)\\(.*", "\\1"),
+            `Response Categories` = response_categories,
+            `Dispersion` = dispersion,
+            `Difficulties`= difficulties,
+            `Survey Dataset Codes` = all_surveys) %>% 
+  modelsummary::datasummary_df(output = "kableExtra",
+                               longtable = TRUE) %>% 
+  kableExtra::column_spec(1, width = "7em") %>%
+  kableExtra::column_spec(2, width = "4em") %>%
+  kableExtra::column_spec(3, width = "13em") %>%
+  kableExtra::column_spec(4, width = "16em") %>%
+  kableExtra::column_spec(5, width = "4em") %>%
+  kableExtra::column_spec(c(6, 7), width = "8em") %>% 
+  kableExtra::kable_styling(font_size = 7) %>%
+  kableExtra::kable_styling(latex_options = c("repeat_header")) %>%
+  kableExtra::kable_styling(latex_options = "striped")
+```
+
+\pagebreak
