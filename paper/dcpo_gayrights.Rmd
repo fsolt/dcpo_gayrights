@@ -1,32 +1,30 @@
 ---
 output: 
-  pdf_document:
-    citation_package: natbib
-    keep_tex: true
-    fig_caption: true
-    latex_engine: pdflatex
-    template: svm-latex-ms2.tex
-title: "Measuring the Acceptance of Homosexuality Across Countries and Over Time"
-thanks: "Corresponding author: [frederick-solt@uiowa.edu](mailto:frederick-solt@uiowa.edu).  Current version: `r format(Sys.time(), '%B %d, %Y')`."
-author:
-- name: Byung-Deuk Woo
-  affiliation: Pohang University of Science and Technology
-- name: Hyein Ko
-  affiliation: University of Iowa
-- name: Yuehong Cassandra Tai
-  affiliation: Pennsylvania State University
-- name: Yue Hu
-  affiliation: Tsinghua University
-- name: Frederick Solt
-  affiliation: University of Iowa
-anonymous: false
-abstract: " [0/150 words]"
-keywords: ""
+  bookdown::pdf_document2:
+    fig_caption: yes
+    keep_tex: yes
+    toc: no
+    number_sections: no
+    latex_engine: xelatex
+    pandoc_args: --lua-filter=multibib.lua
+    
+title: |
+  | Measuring Public Attitudes Toward Homosexuality
+  | Across Countries and Over Time
+
 date: "`r format(Sys.time(), '%B %d, %Y')`"
-fontsize: 11pt
-spacing: double
-bibliography: \dummy{`r file.path(getwd(), list.files(getwd(), ".bib$", recursive = TRUE))`}
-# csl: https://raw.githubusercontent.com/citation-style-language/styles/master/american-political-science-association.csl
+editor_options: 
+  markdown: 
+    wrap: sentence
+tables: true # enable longtable and booktabs
+citation_package: natbib
+citeproc: false
+fontsize: 12pt
+indent: true
+linestretch: 1.5 # double spacing using linestretch 1.5
+bibliography:
+  text: dcpo-gayrights.bib
+  app: dcpo-gayrights-app.bib
 biblio-style: apsr
 citecolor: black
 linkcolor: black
@@ -43,6 +41,21 @@ header-includes:
       - \usepackage{tabularx}
       - \usepackage{threeparttable}
       - \usepackage{wrapfig}
+      - \usepackage{fullpage}
+      - \usepackage{lscape} #\usepackage{lscape} better for printing, page displayed vertically, content in landscape mode, \usepackage{pdflscape} better for screen, page displayed horizontally, content in landscape mode
+      - \newcommand{\blandscape}{\begin{landscape}}
+      - \newcommand{\elandscape}{\end{landscape}}
+      - \usepackage{titlesec}
+      - \titleformat*{\section}{\normalsize\bfseries}
+      - \titleformat*{\subsection}{\normalsize\itshape}
+      - \usepackage{titling} #use \maketitle repeatedly  
+      - \renewcommand{\topfraction}{.85} # Adjust LaTeX placement rules per 
+      - \renewcommand{\bottomfraction}{.7} # https://bookdown.org/yihui/rmarkdown-cookbook/figure-placement.html
+      - \renewcommand{\textfraction}{.15}
+      - \renewcommand{\floatpagefraction}{.66}
+      - \setcounter{topnumber}{3}
+      - \setcounter{bottomnumber}{3}
+      - \setcounter{totalnumber}{4}
 ---
 
 \pagenumbering{gobble}
@@ -367,9 +380,8 @@ The complete list of survey items is included in the Appendix.]
 Together, these items were asked in `r n_countries` different countries in at least two time points over the `r n_years` years `r year_range`, yielding a total of `r n_cyi` country-year-item observations.
 Observations for every year in each country surveyed would total `r total_cy`, and a complete set of country-year-items would include `r {n_countries * n_years * n_items} %>% scales::comma()` observations.
 Viewed from this complete-data perspective, the available data can be seen to be very, very sparse.
-More optimistically, we do have in the source data `r n_cy` country-years for which we have at least _some_ information about the extent of the acceptance of homosexuality in the population, that is, some `r round(covered_share_of_spanned)`% of the `r spanned_cy` country-years spanned by the data we collected.
-Still, the many different survey items employed renders these data incomparable and makes them difficult to use together.
-
+On the other hand, we do have in the source data `r n_cy` country-years for which we have at least _some_ information about the extent of the acceptance of homosexuality in the population, that is, some `r round(covered_share_of_spanned)`% of the `r spanned_cy` country-years spanned by the data we collected.
+Still, the many different survey items employed render these data incomparable and make them difficult to use together.
 
 <!-- This should be reworded -->
 
@@ -378,7 +390,7 @@ Viewed from this complete-data perspective, the available data can be seen to be
 More optimistically, we do have in the source data `r n_cy` country-years for which we have at least _some_ information about the extent of the acceptance of homosexuality in the population, that is, some `r round(covered_share_of_spanned)`% of the `r spanned_cy` country-years spanned by the data we collected.
 But there can be no denying that the many different survey items employed renders these data incomparable and difficult to use together.
 
-```{r item_and_country_plots, fig.height = 3.5, fig.cap = "Countries and Years with the Most Observations in the Gay Rights Source Data \\label{item_country_plots}"}
+```{r itemcountry, fig.cap="Countries and Years with the Most Observations in the Source Data \\label{item_country_plots}", fig.height=3.5, fig.pos='h', cache=FALSE}
 items_plot <- dcpo_input_raw1 %>%
   distinct(country, year, item) %>%
   count(item) %>%
@@ -527,40 +539,13 @@ Consider the most frequently asked item in the data we collected, which asks res
 Employed by the Asia Barometer, the European Values Survey, the Latinobarómetro, and the World Values Survey, this question was asked in a total of `r just10_cy` different country-years.
 That this constitutes only `r {just10_cy*100/(spanned_cy %>% str_replace(",", "") %>% as.numeric())} %>% round()`% of the country-years spanned by our data---and remember, this is the _most common_ survey item---again underscores just how sparse and incomparable the available public opinion data is on this topic.
 
-The upper left panel of Figure&nbsp;\ref{item_country_plots} shows the dozen countries with the highest count of country-year-item observations.
+The upper left panel of Figure\nobreakspace{}\ref{item_country_plots} shows the dozen countries with the highest count of country-year-item observations.
 The United States, with `r us_obs` observations, is far and away the best represented country in the source data, followed by `r others`.
 At the other end of the spectrum, `r n_data_poorest` countries---`r data_poorest`---have only the minimum two observations required to be included in the source dataset at all.
 The upper right panel shows the twelve countries with the most years observed; this group is similar, but with `r adding` joining the list and `r dropping` dropping off.
 The bottom panel counts the countries observed in each year and reveals just how few relevant survey items were asked before 1990.
 Country coverage reached its peak in `r y_peak_year`, when surveys in `r y_peak_nn` countries included items on homosexuality.
 In the next section, we describe how we are able to make use of all of this sparse and incomparable survey data to generate estimates of public opinion that are comparable across countries and years using a latent variable model.
-
-```{r obs_by_cy, fig.height = 9, fig.width = 6.5, fig.cap = "Source Data Observations by Country and Year \\label{obs_by_cy}"}
-dcpo_input_raw1 %>% 
-  mutate(country = str_replace(country, "’", "'")) %>% 
-  distinct(country, year, item, cc_rank) %>% 
-  group_by(country, year) %>% 
-  summarize(n = n(),
-            cc_rank = cc_rank) %>% 
-  ungroup() %>% 
-  distinct() %>% 
-  ggplot(aes(x = year, 
-             y = forcats::fct_reorder(country, cc_rank),
-             fill = n)) + 
-  geom_tile() +
-  scale_fill_viridis_b(option = "B",
-                       direction = -1,
-                       show.limits = TRUE,
-                       n.breaks = 7,
-                       name = "Observations") +
-  labs(x = NULL, y = NULL) +
-  scale_x_continuous(breaks=seq(1972, 2020, 4)) +
-  scale_y_discrete(position = "right") +
-  theme(legend.justification=c(0, 0), 
-        legend.position=c(0.01, 0.01),
-        axis.text.y  = element_text(size = 7)) 
-```
-
 
 ```{r dcpo_input}
 dcpo_input <- DCPOtools::format_dcpo(dcpo_input_raw1,
@@ -645,7 +630,7 @@ save(theta_results, file = here::here("data","theta_results.rda"))
 ```
 
 
-```{r cs_plot, fig.cap="TCS Scores, Most Recent Available Year \\label{cs_mry}", fig.height=10, fig.width=8}
+```{r csplot, fig.cap="TCS Scores, Most Recent Available Year \\label{cs}", fig.height=10, fig.width=8}
 
 n_panes <- 2
 axis_text_size <- 10
@@ -699,7 +684,7 @@ bottom5 <- p1_data %>%
 ```
 
 
-```{r ts_plots, fig.cap="Tolerance Over Time Within Selected Countries \\label{ts}", fig.height=3.5}
+```{r tsplots, fig.cap="Tolerance Over Time Within Selected Countries \\label{ts}", fig.height=3.5}
 countries <- c("Netherlands", "Sweden", "Ireland", "United States",
                "Argentina", "Mexico", "Taiwan", "Poland", 
                "China", "Ukraine", "Indonesia", "Russia", 
@@ -744,13 +729,13 @@ In country-years with fewer observed items, the estimates rely more heavily on t
 \noindent Table A1: Indicators Used in the Latent Variable Model of Macrointerest
 
 ```{r dcpo_items}
-alpha_results <- summarize_dcpo_results(dcpo_input,
-                                        dcpo_output = dcpo_output,
+alpha_results <- DCPOtools::summarize_dcpo_results(dcpo_input,
+                                        dcpo_output,
                                         pars = "alpha") %>% 
   transmute(item = question,
             dispersion = mean)
 
-beta_results <- summarize_dcpo_results(dcpo_input,
+beta_results <- DCPOtools::summarize_dcpo_results(dcpo_input,
                                        dcpo_output,
                                        "beta") %>% 
   group_by(question) %>% 
@@ -769,10 +754,8 @@ beta_results <- summarize_dcpo_results(dcpo_input,
                                     
 items_summary <- dcpo_input_raw1 %>%
   dplyr::select(country, year, item, survey) %>%
+  separate_rows(survey, sep=",\\s+") %>% 
   distinct() %>%
-  separate(survey, c("surv1", "surv2", "surv3"), sep=", ", fill = "left") %>%
-  pivot_longer(cols = starts_with("surv"), values_to = "survey") %>%
-  filter(!is.na(survey)) %>% 
   group_by(item) %>% 
   mutate(survey = str_extract(survey, "^[a-z]*"),
          all_surveys = paste0(unique(survey), collapse = ", ")) %>% 
@@ -811,6 +794,32 @@ items_summary %>%
   kableExtra::kable_styling(font_size = 7) %>%
   kableExtra::kable_styling(latex_options = c("repeat_header")) %>%
   kableExtra::kable_styling(latex_options = "striped")
+```
+
+```{r obs, fig.height = 9, fig.width = 6.5, fig.cap = "Source Data Observations by Country and Year \\label{obs_by_cy}"}
+dcpo_input_raw1 %>% 
+  mutate(country = str_replace(country, "’", "'")) %>% 
+  distinct(country, year, item, cc_rank) %>% 
+  group_by(country, year) %>% 
+  summarize(n = n(),
+            cc_rank = mean(cc_rank)) %>% 
+  ungroup() %>% 
+  distinct() %>% 
+  ggplot(aes(x = year, 
+             y = forcats::fct_reorder(country, cc_rank),
+             fill = n)) + 
+  geom_tile() +
+  scale_fill_viridis_b(option = "B",
+                       direction = -1,
+                       show.limits = TRUE,
+                       n.breaks = 7,
+                       name = "Observations") +
+  labs(x = NULL, y = NULL) +
+  scale_x_continuous(breaks=seq(1972, 2024, 4)) +
+  scale_y_discrete(position = "right") +
+  theme(legend.justification=c(0, 0), 
+        legend.position=c(0.01, 0.01),
+        axis.text.y  = element_text(size = 7)) 
 ```
 
 \pagebreak
