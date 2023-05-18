@@ -1000,7 +1000,7 @@ Figure\nobreakspace{}\ref{ext_val1} moves on, then, to construct validation.
 Construct validation refers to demonstrating, for some _other_ concept believed causally related to the concept a measure seeks to represent, that the measure being tested is empirically associated with measures of that other concept [@Adcock2001, 542].
 More traditional attitudes toward gender roles are often argued to yield more intolerance of homosexuals [see, e.g., @Brown2008].
 The left panel compares traditional attitudes, measured as the percentage of those agreeing or strongly agreeing with the statement, "A husband's job is to earn money; a wife's job is to look after the home and family," in eight ISSP surveys (Family and Changing Gender Roles in 1988, 1994, 2002, and 2012; and Religion in 1991, 1998, 2008, and 2018), with the AoH scores.
-As a result of policy responsiveness, that is, the influence of public opinion on policy [see, e.g., @Lax2009], and policy feedback, the influence of policy on public opinion [see, e.g., @Abou-Chadi2019], public acceptance of homosexuality is expected to be closely related to policies recognizing same-sex relationships.
+As a result of policy responsiveness, that is, the influence of public opinion on policy [see, e.g., @Lax2009], and policy feedback, the influence of policy on public opinion [see, e.g., @Abou-Chadi2019; @Earle2021], public acceptance of homosexuality is expected to be closely related to policies recognizing same-sex relationships.
 The figure's center panel presents violin plots of the distribution of AoH scores in the most recent available year across three groups of countries: those that currently have no or minimal legal recognition of same-sex relationships, those that recognize civil unions, and those with marriage equality.
 The gray-shaded 'violins' depict (mirrored) kernal density plots of the observations in each group; their areas are proportional to the number of observations.
 The violins are inset with box-and-whisker plots showing the 25th percentile, median, and 75th percentile as horizontal lines in a box; the dashed vertical whiskers then extend to the farthest observation within 1.5 times the interquartile range, that is, the height of the box; and all observations beyond that distance are shown individually as white circles [see @Tukey1977].
@@ -1009,7 +1009,7 @@ The right panel plots the V-Dem Liberal Democracy Index against the AoH scores.
 In each of these three cases, the relationship is in the expected direction and strong to very strong.
 Together, the evidence of convergent and construct validation in Figures\nobreakspace{}\ref{ext_val1}\nobreakspace{}and\nobreakspace{}\ref{internal_val} demonstrate the validity of the AoH scores as measures of public acceptance of homosexuality.
 
-# Testing Theories of Macrointerest Cross-Nationally
+# Testing Theories of Acceptance of Homosexuality Cross-Nationally and Cross-Regionally
 
 Macrointerest varies greatly around the world.
 Figure\nobreakspace{}\ref{ts_plots} examines levels and trends in macrointerest in advanced democratic countries by displaying the changes of the public's expressed interest in politics over time in the thirty-seven democracies of the OECD.
