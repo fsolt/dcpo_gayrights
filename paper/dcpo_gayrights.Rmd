@@ -133,7 +133,8 @@ p_load(
 # define functions
 validation_plot <- function(v_data_raw,
                             lab_x = .38, lab_y = 92,
-                            theta_summary, theta_results) {
+                            theta_summary, theta_results,
+                            survey = TRUE) {
     
     # defaults per https://stackoverflow.com/a/49167744/2620381
     if ("theta_summary" %in% ls(envir = .GlobalEnv) & missing(theta_summary))
@@ -143,36 +144,49 @@ validation_plot <- function(v_data_raw,
 
     median_val <- Vectorize(function(x) median(1:x),
                             vectorize.args = "x")
+    if (survey) {    
+      v_vars <- v_data_raw %>% 
+        select(item0 = item) %>% 
+        unique() %>% 
+        mutate(v_val = str_extract(item0, "\\d+") %>% 
+                 as.numeric() %>% 
+                 median_val(.) %>%
+                 `+`(.6) %>% 
+                 round())
     
-    v_vars <- v_data_raw %>% 
-      select(item0 = item) %>% 
-      unique() %>% 
-      mutate(v_val = str_extract(item0, "\\d+") %>% 
-               as.numeric() %>% 
-               median_val(.) %>%
-               `+`(if_else(str_detect(item0, "disc3"), .1, .6)) %>% 
-               round())
-    
-    validation_summarized <- v_data_raw %>% 
-      DCPOtools::format_dcpo(scale_q = v_vars$item0[[1]], # these arguments are required
-                             scale_cp = 1) %>% # but they don't matter
-      pluck("data") %>% 
-      mutate(item0 = str_remove(item, " \\d or higher"),
-             title = factor(title, 
-                            levels = v_data_raw %>%
-                              pull(title) %>%
-                              unique())) %>% 
-      right_join(v_vars, by = "item0") %>%
-      arrange(title) %>% 
-      filter(str_detect(item, paste(v_val, "or higher"))) %>%
-      mutate(iso2c = countrycode::countrycode(country,
-                                              origin = "country.name",
-                                              destination = "iso2c"),
-             prop = if_else(neg, 1-y_r/n_r, y_r/n_r),
-             se = sqrt((prop*(1-prop))/n),
-             prop_90 = prop + qnorm(.9)*se,
-             prop_10 = prop - qnorm(.9)*se) %>%
-      inner_join(theta_summary %>% select(-kk, -tt), by = c("country", "year"))
+      validation_summarized <- v_data_raw %>% 
+        DCPOtools::format_dcpo(scale_q = v_vars$item0[[1]], # these arguments are required
+                               scale_cp = 1) %>% # but they don't matter
+        pluck("data") %>% 
+        mutate(item0 = str_remove(item, " \\d or higher"),
+               title = factor(title, 
+                              levels = v_data_raw %>%
+                                pull(title) %>%
+                                unique())) %>% 
+        right_join(v_vars, by = "item0") %>%
+        arrange(title) %>% 
+        filter(str_detect(item, paste(v_val, "or higher"))) %>%
+        mutate(iso2c = countrycode::countrycode(country,
+                                                origin = "country.name",
+                                                destination = "iso2c",
+                                                warn = FALSE),
+               prop = if_else(neg, 1-y_r/n_r, y_r/n_r),
+               se = sqrt((prop*(1-prop))/n),
+               prop_90 = prop + qnorm(.9)*se,
+               prop_10 = prop - qnorm(.9)*se) %>%
+        inner_join(theta_summary %>% select(-kk, -tt), by = c("country", "year"))
+    } else {
+      validation_summarized <- v_data_raw %>% 
+        mutate(iso2c = countrycode::countrycode(country,
+                                                origin = "country.name",
+                                                destination = "iso2c",
+                                                warn = FALSE),
+               prop = prop,
+               se = se,
+               prop_90 = prop + qnorm(.9)*se,
+               prop_10 = prop - qnorm(.9)*se) %>%
+        inner_join(theta_summary %>% select(-kk, -tt), by = c("country", "year"))
+    }
     
     validation_cor <- theta_results %>%
       inner_join(validation_summarized %>%
@@ -187,7 +201,7 @@ validation_plot <- function(v_data_raw,
                unlist()) %>%
       select(-data) %>% 
       group_by(title) %>% 
-      summarize(r = paste("R =", round(mean(r), 2)))
+      summarize(r = paste("R =", sprintf("%.2f", round(mean(r), 2))))
 
     if ({validation_summarized %>%
         pull(country) %>%
@@ -612,30 +626,37 @@ dcpo_output <- as_cmdstan_fit(here::here(results_path,
 
 ```
 
-```{r dcpo_results_summary, cache=TRUE}
+```{r dcpo_summary}
 load(file = here::here("data", "dcpo_input.rda"))
-theta_results <- DCPOtools::summarize_dcpo_results(dcpo_input,
+theta_summary <- DCPOtools::summarize_dcpo_results(dcpo_input,
                                                    dcpo_output,
                                                    "theta")
 
-res_cy <- nrow(theta_results) %>% 
+res_cy <- nrow(theta_summary) %>% 
   scales::comma()
 
-res_c <- theta_results %>% 
+res_c <- theta_summary %>% 
   pull(country) %>% 
   unique() %>% 
   length()
 
-save(theta_results, file = here::here("data","theta_results.rda"))
+save(theta_summary, file = here::here("data",
+                                      "theta_summary.rda"))
+```
+
+```{r theta_results}
+theta_results <- extract_dcpo_results(dcpo_input,
+                                      dcpo_output,
+                                      par = "theta")
 ```
 
 
-```{r csplot, fig.cap="TCS Scores, Most Recent Available Year \\label{cs}", fig.height=10, fig.width=8}
 
+```{r csplot, fig.cap="AoH Scores, Most Recent Available Year \\label{cs_mry}", fig.height=10, fig.width=8}
 n_panes <- 2
 axis_text_size <- 10
 
-p1_data <- theta_results %>%
+p1_data <- theta_summary %>%
   group_by(country) %>%
   top_n(1, year) %>%
   ungroup() %>%
@@ -680,25 +701,31 @@ bottom5 <- p1_data %>%
   pull(country_year) %>% 
   str_replace(" \\(.*", "") %>% 
   knitr::combine_words()
-
 ```
 
+Figure\nobreakspace{}\ref{cs_mry} displays the most recent available AOH score for each of the `r res_c` countries and territories in the dataset.
+Iceland, the Netherlands, Belgium, and the Scandinavian countries are the places where the public is most accepting of homosexuality.
+The latest scores for `r bottom5` indicate there is very little acceptance in those countries.
 
-```{r tsplots, fig.cap="Tolerance Over Time Within Selected Countries \\label{ts}", fig.height=3.5}
+```{r tsplots, fig.cap="Acceptance Over Time Within Selected Countries \\label{ts}", fig.height=3.5}
 countries <- c("Netherlands", "Sweden", "Ireland", "United States",
                "Argentina", "Mexico", "Taiwan", "Poland", 
                "China", "Ukraine", "Indonesia", "Russia", 
                "Nigeria", "Jamaica", "Armenia", "Uganda")
 
-c_res <- theta_results %>% 
+countries2 <- countries %>% 
+  str_replace("United States", "U.S.")
+
+c_res <- theta_summary %>% 
   filter(country %in% countries) %>%
-  mutate(country = factor(country, levels = countries))
+  mutate(country = factor(str_replace(country, "United States", "U.S.") %>% 
+           factor(levels = countries2)))
 
 ggplot(data = c_res, aes(x = year, y = mean)) +
   theme_bw() +
   theme(legend.position = "none") +
   coord_cartesian(xlim = c(1985, 2020), ylim = c(0, 1)) +
-  labs(x = NULL, y = "DSD Scores") +
+  labs(x = NULL, y = "AoH Scores") +
   geom_ribbon(data = c_res, aes(ymin = q10, ymax = q90, linetype=NA), alpha = .25) +
   geom_line(data = c_res) +
   facet_wrap(~as_factor(country), nrow = 2) +
@@ -707,11 +734,736 @@ ggplot(data = c_res, aes(x = year, y = mean)) +
                                     vjust = .45,
                                     hjust = .95),
         strip.background = element_rect(fill = "white", colour = "white")) +
-  plot_annotation(caption = "Note: Countries are ordered by their DSD scores in their most recent\navailable year; gray shading represents 80% credible intervals.")
+  plot_annotation(caption = "Note: Countries are ordered by their AoH scores in their most recent\navailable year; gray shading represents 80% credible intervals.")
 ```
 
+Figure\nobreakspace{}\ref{ts} displays how AoH scores have changed over time in sixteen countries.
+It further underscores what is evident in Figure\nobreakspace{}\ref{cs_mry}: the cross-regional scope of the AoH dataset allows comparison of countries too often neglected in political science analyses [see @Wilson2021].
+The figure also shows that while public opinion toward homosexuality has grown rapidly more accepting in some countries, such as Sweden and the United States, attitudes have changed much more gradually over time in others, like Poland and China. 
+Acceptance has advanced and retreated somewhat as in Taiwan and more completely as in Russia.
+And in countries such as Nigeria and Uganda, the extent of acceptance of homosexuality in the public has been steadily scant.
+The breadth of these differences stand as a challenge to our explanations for the causes and consequences of public acceptance of homosexuality.
 
-# Appendix A: Survey Items Used to Estimate Macrointerest
+
+# Validating Acceptance of Homosexuality
+
+```{r internal_val_dat, include=FALSE}
+internal_tscs_dat <- dcpo_input_raw1 %>% 
+  filter(item == "just10") %>%  
+  mutate(title = "All Country-Years",
+         neg = FALSE)
+
+internal_cs_dat <- dcpo_input_raw1 %>% 
+  filter(survey == "issp2008") %>%  
+  mutate(title = "ISSP 2008: Religion III",
+         neg = FALSE)
+
+internal_ts_dat <- dcpo_input_raw1 %>% 
+  filter(survey == "usgss" & item == "approve4") %>%  
+  mutate(title = "United States",
+         neg = FALSE)
+```
+
+```{r internalval, fig.height = 4, fig.cap = "Convergent Validation: Correlations Between AoH Scores and Individual Source-Data Survey Items \\label{internal_val}"}
+internal_tscs_plot <- validation_plot(internal_tscs_dat,
+                                lab_x = .1,
+                                lab_y = 95) +
+  theme_bw() +
+  theme(legend.position="none",
+        axis.text  = element_text(size=8),
+        axis.title = element_text(size=9),
+        plot.title = element_text(hjust = 0.5, size = 9),
+        strip.background = element_blank()) +
+  coord_cartesian(xlim = c(0,1), ylim = c(0,100)) +
+  labs(x = "AoH Score",
+       y = "% Responding Homosexuality Can,\nMore Often Than Not, Be Justified (6+ on 1-10 Scale)")
+
+internal_cs_plot <- validation_plot(internal_cs_dat,
+                                lab_x = .1,
+                                lab_y = 95) +
+  theme_bw() +
+  theme(legend.position="none",
+        axis.text  = element_text(size=8),
+        axis.title = element_text(size=9),
+        plot.title = element_text(hjust = 0.5, size = 9),
+        # strip.text.x = element_text(size=5),
+        strip.background = element_blank()) +
+  coord_cartesian(xlim = c(0,1), ylim = c(0,100)) +
+  labs(x = "AoH Score",
+       y = "% Considering Same-Sex Sexual Relations\nWrong Only Sometimes or Not at All")
+
+internal_ts_plot <- validation_plot(internal_ts_dat,
+                                    lab_x = 1977,
+                                    lab_y = .95) +
+  theme_bw() +
+  theme(legend.position="none",
+        axis.text  = element_text(size=8),
+        axis.title = element_text(size=9),
+        plot.title = element_text(hjust = 0.5, size = 9),
+        strip.background = element_blank()) +
+  coord_cartesian(ylim = c(0,1)) +
+  labs(x = "Year",
+       y = "Score") +
+  annotate("text", x = 2016, y = .49, size = 2,
+           label = 'U.S. GSS') + # approve4
+  annotate("text", x = 2020, y = .84, size = 2,
+           label = "AoH Score")
+
+internal_tscs_plot + internal_cs_plot + internal_ts_plot  +
+  patchwork::plot_annotation(caption = "Note: Gray whiskers and shading represent 80% credible intervals.")
+```
+
+Before these estimates can be used, however, they must be validated: the mere fact that we can generate estimates for acceptance of homosexuality does not automatically mean that they are suitable for analysis. 
+Just as with any other new measure, validation tests of cross-national latent variables are crucially important [see, e.g., @Hu2023].
+Figure\nobreakspace{}\ref{internal_val} and Figure\nobreakspace{}\ref{external_val} provide evidence of this measure's validity with tests of convergent validation and construct validation.
+Convergent validation refers to tests of whether a measure is empirically associated with alternative indicators of the same concept [@Adcock2001, 540].
+In Figure\nobreakspace{}\ref{internal_val}, the AoH scores are compared to responses to individual source-data survey items that were used to generate them; this provides an 'internal' convergent validation test [see, e.g., @Caughey2019, 689; @Solt2020c, 10].
+The left panel is a scatterplot of country-years in which the AoH scores are plotted against the percentage of respondents who gave an accepting response to the most commonly asked item in the source data: whether homosexuality can always be justified, scored ten, never be justified, scored zero, or something in between.
+For this plot, responses six or greater are considered as indicating that whether respondents consider homosexuality justified more often than not.
+The middle panel shows responses to the question with the most data-rich cross-section, "And what about sexual relations between two adults of the same sex, is it always wrong, almost always wrong, wrong only sometimes, or not wrong at all?" in the International Social Survey Program's 2008 module on Religion, plotting the latent variable of acceptance against the percentage who responded "wrong only sometimes" or "not at all."
+Finally, in the right panel, the U.S. General Social Survey's series on this same item---the longest of any item in any single country in the source data---was used to evaluate how well the AoH scores capture change over time.
+The correlations, estimated taking into account the uncertainty in the measures, are very strong in all three cases.
+
+```{r ext_val1_dat, include=FALSE}
+ext_dat1 <- read_csv(here("data-raw",
+                         "surveys_extval.csv"),
+                     col_types = "cccccc")
+
+ext_issp_tradroles_dat <- ext_dat1 %>%
+  filter(str_detect(survey, "issp")) %>%
+  DCPOtools::dcpo_setup(datapath = here("..",
+                                        "data",
+                                        "dcpo_surveys")) %>%  
+  mutate(title = "International Social Survey Program (8 Surveys)",
+         neg = FALSE)
+
+gm_laws_bd <- read_csv("data-raw/gm_laws.csv",
+                    col_types = "cddddddc") %>% 
+  mutate(country = countrycode::countrycode(country,
+                                            "country.name",
+                                            "country.name",
+                                            warn = FALSE)) %>% 
+  inner_join(theta_summary %>%
+  group_by(country) %>%
+  top_n(1, year) %>%
+  ungroup(),
+  by = "country") %>% 
+  mutate(equality = case_when(!is.na(gm) ~ "marriage",
+                              !is.na(civ) & is.na(gm) ~ "civil unions",
+                              TRUE ~ "none") %>% 
+           factor(levels = c("none", "civil unions", "marriage")))
+
+gm_laws0 <- "https://en.wikipedia.org/wiki/Same-sex_marriage" %>% 
+  read_html() %>% 
+  html_table() %>% 
+  first() %>% 
+  select(X1)
+
+gm_laws_dat <- gm_laws0 %>% 
+  filter(str_detect(X1, "^Marriage")) %>% 
+  mutate(X1 = str_replace_all(X1, "(Costa|New|South|United) ", "\\1") %>% 
+           str_replace_all("\\d", "")) %>% 
+  separate_rows(X1, sep="\\s+") %>% 
+  mutate(country = str_replace(X1, "SouthAfrica", "South Africa") %>%
+           countrycode::countrycode(
+             "country.name", 
+             "country.name",
+             warn = FALSE),
+         gm = 1) %>% 
+  filter(!is.na(country)) %>% 
+  select(country, gm) %>%
+  bind_rows(tibble(country = c("Puerto Rico", "Northern Ireland"), gm = 1)) %>% 
+  bind_rows(gm_laws0 %>% 
+              filter(str_detect(X1, "^Civil")) %>% 
+              mutate(X1 = str_replace_all(X1, "(Czech|San|Cayman) ", "\\1") %>% 
+                       str_replace_all("\\d|[*]", "")) %>% 
+              separate_rows(X1, sep="\\s+") %>% 
+              filter(!str_detect(X1, ":|•")) %>% 
+              mutate(country = countrycode::countrycode(X1,
+                                                        "country.name", 
+                                                        "country.name",
+                                                        warn = FALSE),
+                     civ = 1) %>% 
+              filter(!is.na(country)) %>% 
+              select(country, civ)) %>% 
+  right_join(theta_summary %>%
+                 group_by(country) %>%
+                 top_n(1, year) %>%
+                 ungroup(),
+               by = "country") %>% 
+  mutate(equality = case_when(!is.na(gm) ~ "marriage",
+                              !is.na(civ) ~ "civil unions",
+                              TRUE ~ "minimal/none") %>% 
+           factor(levels = c("minimal/none", "civil unions", "marriage")),
+         title = "Legal Recognition of Same-Sex Couples")
+
+gm_laws_cor <- theta_results %>%
+      inner_join(gm_laws_dat %>%
+                   transmute(country,
+                             year,
+                             equality = as.numeric(equality)),
+                 by = c("country", "year")) %>% 
+      select(theta, equality, draw) %>% 
+      nest(data = c(theta, equality)) %>% 
+      mutate(r = lapply(data, function(df) cor(df)[2,1]) %>% 
+               unlist()) %>%
+      select(-data) %>% 
+      summarize(r = paste("R =", sprintf("%.2f", round(mean(r), 2)))) %>% 
+  mutate(equality = "minimal/none" %>% 
+           factor(levels = c("minimal/none", "civil unions", "marriage")),
+         title = "Legal Recognition of Same-Sex Couples")
+
+ext_libdem_dat <- vdemdata::vdem %>%
+  transmute(country = countrycode::countrycode(country_name,
+                                            "country.name",
+                                            "country.name"),
+            year = year, 
+            prop = v2x_libdem,
+            se = v2x_libdem_sd, 
+            title = "V-Dem",
+            neg = FALSE) %>% 
+  distinct(country, year, .keep_all = TRUE) %>% 
+  right_join(theta_summary %>%
+                 group_by(country) %>%
+                 top_n(1, year) %>%
+                 ungroup() %>% 
+               select(country, year),
+               by = c("country", "year")) %>% 
+  filter(!is.na(prop))
+```
+
+```{r extval1, fig.cap="Construct Validation: Correlations Between TCS Scores and Trust in Institutions Survey Items \\label{ext_val1}", fig.height=4}
+ext_issp_tradroles_plot <- validation_plot(ext_issp_tradroles_dat,
+                                    lab_x = .1,
+                                    lab_y = 95) +
+  theme_bw() +
+  theme(legend.position="none",
+        axis.text  = element_text(size=8),
+        axis.title = element_text(size=9),
+        plot.title = element_text(hjust = 0.5, size = 9),
+        strip.background = element_blank()) +
+  coord_cartesian(xlim = c(0,1), ylim = c(0,100)) +
+  labs(x = "AoH Score",
+       y = "% Agreeing 'A husband's job is to earn money;\na wife's job is to look after the home and family'")
+
+ext_gm_laws_plot <- ggplot(gm_laws_dat, aes(x = equality,
+                                        y = mean)) +
+  geom_violin(trim = TRUE, 
+              scale = "count",
+              aes(fill = equality)) +
+  geom_boxplot(width = 0.05, 
+               outlier.shape = 21,
+               outlier.fill = "white",
+               fill = "white",
+               linetype = "dashed") + 
+  geom_boxplot(width = 0.05, 
+               outlier.shape = 21,
+               outlier.fill = "white",
+               fill = "white",
+               aes(xmin = after_stat(lower), 
+                   xmax = after_stat(upper))) +
+  theme_bw() +
+  theme(legend.position = "none",
+        axis.text  = element_text(size = 10),
+        axis.title = element_text(size = 11),
+        plot.title = element_text(hjust = 0.3, size = 9),
+        strip.background = element_blank()) +
+  coord_cartesian(ylim = c(0, 1)) +
+  scale_fill_grey(start = .65, end = .45) +
+  labs(x = "",
+       y = "AoH Score, Most Recent Available Year") +
+  geom_label(data = gm_laws_cor, aes(x = equality,
+                                     y = .95,
+                                     label = r),
+             size = 2) +
+  facet_wrap(~ title, ncol = 4)
+
+ext_libdem_plot <- validation_plot(ext_libdem_dat,
+                                   lab_x = .1,
+                                   lab_y = 95,
+                                   survey = FALSE) + 
+  theme_bw() +
+  theme(legend.position="none",
+        axis.text  = element_text(size=8),
+        axis.title = element_text(size=9),
+        plot.title = element_text(hjust = 0.5, size = 9),
+        strip.background = element_blank()) +
+  coord_cartesian(xlim = c(0,1), ylim = c(0,100)) +
+  labs(x = "AoH Score, Most Recent Available Year",
+       y = "Liberal Democracy Index")
+
+ext_issp_tradroles_plot + ext_gm_laws_plot + ext_libdem_plot +
+  plot_annotation(caption = "Note: Gray whiskers represent 80% credible intervals.")
+```
+
+Figure\nobreakspace{}\ref{ext_val1} moves on, then, to construct validation.
+Construct validation refers to demonstrating, for some _other_ concept believed causally related to the concept a measure seeks to represent, that the measure being tested is empirically associated with measures of that other concept [@Adcock2001, 542].
+More traditional attitudes toward gender roles are often argued to yield more intolerance of homosexuals [see, e.g., @Brown2008].
+The left panel compares traditional attitudes, measured as the percentage of those agreeing or strongly agreeing with the statement, "A husband's job is to earn money; a wife's job is to look after the home and family," in eight ISSP surveys (Family and Changing Gender Roles in 1988, 1994, 2002, and 2012; and Religion in 1991, 1998, 2008, and 2018), with the AoH scores.
+As a result of policy responsiveness, that is, the influence of public opinion on policy [see, e.g., @Lax2009], and policy feedback, the influence of policy on public opinion [see, e.g., @Abou-Chadi2019], public acceptance of homosexuality is expected to be closely related to policies recognizing same-sex relationships.
+The figure's center panel presents violin plots of the distribution of AoH scores in the most recent available year across three groups of countries: those that currently have no or minimal legal recognition of same-sex relationships, those that recognize civil unions, and those with marriage equality.
+The gray-shaded 'violins' depict (mirrored) kernal density plots of the observations in each group; their areas are proportional to the number of observations.
+The violins are inset with box-and-whisker plots showing the 25th percentile, median, and 75th percentile as horizontal lines in a box; the dashed vertical whiskers then extend to the farthest observation within 1.5 times the interquartile range, that is, the height of the box; and all observations beyond that distance are shown individually as white circles [see @Tukey1977].
+A third oft-theorized relationship is that liberal democracies promote tolerant attitudes that lead to greater acceptance of homosexuality [see, e.g., @Adamczyk2019a].
+The right panel plots the V-Dem Liberal Democracy Index against the AoH scores.
+In each of these three cases, the relationship is in the expected direction and strong to very strong.
+Together, the evidence of convergent and construct validation in Figures\nobreakspace{}\ref{ext_val1}\nobreakspace{}and\nobreakspace{}\ref{internal_val} demonstrate the validity of the AoH scores as measures of public acceptance of homosexuality.
+
+# Testing Theories of Macrointerest Cross-Nationally
+
+Macrointerest varies greatly around the world.
+Figure\nobreakspace{}\ref{ts_plots} examines levels and trends in macrointerest in advanced democratic countries by displaying the changes of the public's expressed interest in politics over time in the thirty-seven democracies of the OECD.
+While macrointerest scores approach and often exceed .6 in countries such as Denmark and Canada, in Chile they scarcely cross .25.
+And although the public's political interest has held fairly steady over decades in many countries, in Czechia it dropped nearly half of the variable's entire theoretical range over the 1990s and 2000s before rebounding slightly since 2010, and increases of roughly a quarter of that range can be seen in, among others, Germany. 
+There are considerable differences in the extent to which the public professes interest in politics both across countries and over time.
+
+```{r ts, fig.cap="Macrointerest Scores Over Time Within OECD Democracies \\label{ts_plots}", fig.height=9}
+
+oecd_countries <- rvest::session("https://en.wikipedia.org/wiki/OECD") %>% 
+  rvest::html_table() %>% 
+  nth(6) %>% 
+  mutate(country = countrycode::countrycode(Country,
+                                            "country.name",
+                                            "country.name")) %>% 
+  pull(country) %>% 
+  setdiff("Turkey")
+
+c_res <- theta_summary %>% 
+  filter(country %in% oecd_countries) %>%
+  mutate(country = fct_reorder(country, mean, .desc = TRUE))
+
+ggplot(data = c_res, aes(x = year, y = mean)) +
+  theme_bw() +
+  theme(legend.position = "none") +
+  coord_cartesian(xlim = c(1982, 2022), ylim = c(0, 1)) +
+  labs(x = NULL, y = "Macrointerest") +
+  geom_ribbon(data = c_res, aes(ymin = q10, ymax = q90, linetype=NA), alpha = .25) +
+  geom_line(data = c_res) +
+  facet_wrap(~country, ncol = 5) +
+  theme(axis.text.x  = element_text(size=7,
+                                    angle = 90,
+                                    vjust = .45,
+                                    hjust = .95),
+        strip.background = element_rect(fill = "white", colour = "white")) +
+  plot_annotation(caption = "Note: Countries are ordered by their median macrointerest score; gray shading represents 80% credible intervals.")
+```
+
+What explains these differences?
+One straightforward explanation is that publics grow more interested in politics at election time.
+Campaigns and elections attract media coverage and increase the information available to the public on the issues being contested, leading to increased interest in politics [see, e.g., @Beach2018; @Larsen2022].
+Macrointerest within each country should be expected to be higher, therefore, in years in which national elections take place than in years without elections.
+
+A second argument is that political institutions that share power, rather than concentrate it, yield politics that are more interesting and engaging.
+Building on @Lijphart1999 and @Powell2000, @Kittilson2010 [, 992] argues that power-sharing institutions---parliamentarism, federalism, and proportional electoral rules---"send signals of inclusiveness to citizens, generating greater political engagement" while power-concentrating institutions "may generate perceptions of exclusion and deter involvement."
+Macrointerest should be higher in countries with parliamentary and federal systems than in those without those features, and it should decline as the disproportionality between votes cast and seats won increases.
+
+A third claim deals with the public's demand for accountability.
+@Peterson2022 [, 203] advances this argument: "when there is information that something has gone wrong \ldots then voters should be more likely to attend to the actions of elected officials," but when "there is evidence of success \ldots voters should not waste their energies focusing on the activities of their representatives."
+If democracy is a principal-agent problem with elected officials acting as self-interested agents and the public as their lazy but vengeful principal, then macrointerest should rise when times are bad and decline as conditions improve.
+
+A final set of theories---each well established---contradicts the third.
+Modernization theory holds that the public's interest in politics will increase as the national economy grows and household incomes expand [see, e.g., @Inglehart2005].
+Unemployment has long been argued to not to motivate but rather to depress political interest; @Rosenstone1982 [, 26], for example, argued that "it causes a preoccupation with personal economic well-being, and as a result, the citizen withdraws from such external matters as politics."
+And the relative power theory holds that greater income inequality, by increasingly concentrating political power in the hands of the wealthy, allows them greater power to shape the political agenda in ways that discourage the broader public from taking interest [see, e.g., @Solt2008].
+In each of these circumstances, macrointerest is argued to grow in _good_ times and wither as the context worsens [see also @Stimson2015; @Peterson2022, 206].
+
+Data to test these hypotheses regarding the causes of macrointerest are drawn from several sources.
+The Democratic Electoral Systems (DES) dataset updated in @Bormann2022 provides information about the timing of elections, yielding a dichotomous variable coded one in election years and zero when no election was held.
+The three institutional variables are measured as in @Kittilson2010.
+Data on parliamentarism, a dichotomous variable coded one in pure parliamentary systems and zero otherwise, is also sourced from the DES.
+Federalism is a third dichotomous variable, coded one in countries with strong federal systems [see @Lijphart1999] and zero in all others.
+The proportionality of the electoral system is measured using the Gallagher least-squares index of disproportionality, which measures the disparity between parties' vote shares and their seat shares [@Gallagher1991, 40-41].
+The context of good times and bad was measured with data on GDP per capita, national GDP growth, and unemployment from OECD.Stat [@OECD2023] and on the Gini index of disposable income inequality from the Standardized World Income Inequality Database [@Solt2020].
+
+```{r des_download}
+if (!exists(here("data-raw", "es_data-v41", "es_data-v4_1.csv"))) {
+  dir.create(here("data-raw", "es_data-v41"))
+  download.file("http://mattgolder.com/files/research/es_v4_codebook.pdf",
+                here("data-raw", "es_data-v41", "es_v4_codebook.pdf"))
+  download.file("http://mattgolder.com/files/research/es_data-v41.zip",
+                here("data-raw", "es_data-v41", "es_data-v41.zip"))
+  unzip(here("data-raw", "es_data-v41", "es_data-v41.zip"),
+        exdir = here("data-raw", "es_data-v41"))
+}
+```
+
+```{r des}
+des_data <- vroom::vroom(here("data-raw",
+                              "es_data-v41",
+                              "es_data-v4_1.csv"),
+                         guess_max = 5000,
+                         show_col_types = FALSE) %>% 
+  mutate(country = countrycode(country,
+                               origin = "country.name",
+                               destination = "country.name",
+                               custom_match = c("Serbia & Montenegro" =
+                                                  "Serbia",
+                                                "The Co-operative Republic of Guyana" = "Guyana"))) %>% 
+  filter(country %in% oecd_countries &
+           country!="Turkey" &
+           year > 1976) %>% 
+  arrange(country, year) %>% 
+  fill() %>% 
+  group_by(country, year) %>% 
+  summarize(regime = first(regime))
+
+# enpp1 = if_else(max(enpp1, na.rm = TRUE)!=-Inf,
+#                 max(enpp1, na.rm = TRUE),
+#                 NA_real_) %>% 
+#  mutate(enpp1 = if_else(!is.na(enpp1), enpp1, lag(enpp1)))
+```
+
+```{r disp}
+if (!file.exists(here("data-raw", "ElectionIndices.pdf"))) {
+  download.file("https://www.tcd.ie/Political_Science/people/michael_gallagher/ElSystems/Docts/ElectionIndices.pdf", 
+                here("data-raw", "ElectionIndices.pdf"))
+}
+
+gallegher_uk <- extract_text(here("data-raw", "ElectionIndices.pdf"),
+                               pages = 46,
+                               area = list(c(69,
+                                        86, 
+                                        111, 
+                                        424)))[[1]] %>% 
+  as_tibble() %>% 
+  separate_longer_delim(value, " \n") %>% 
+  separate(value, into = c("year", "lsq", "n_v", "n_s", "seats"), sep = "\\s") %>% 
+  mutate(country = "United Kingdom",
+         year = as.numeric(year),
+         lsq = as.numeric(lsq),
+         n_v = as.numeric(n_v), 
+         n_s = as.numeric(n_s),
+         seats = as.numeric(seats)) %>% 
+  filter(!is.na(year))
+
+disp_add <- repmis::source_data(url = "https://raw.githubusercontent.com/christophergandrud/Disproportionality_Data/master/Disproportionality.csv") %>% 
+  filter((country == "Korea, Republic of" & year < 2004) | (country == "Colombia")) %>% 
+  select(country, year, lsq = disproportionality) %>% 
+  mutate(country = countrycode(country, "country.name", "country.name"))
+
+gallegher0 <- map_df(5:48, ~ extract_tables(here("data-raw", "ElectionIndices.pdf"),
+                                           pages = c(.x))[[1]] %>% 
+    as_tibble())
+
+gallegher <- gallegher0 %>% 
+  mutate(V1 = case_when(V1 == "Republic" ~ "Dominican Rep",
+                        V1 == "Ireland LSq" ~ "Northern Ireland",
+                        V1 == "Kingdom" ~ "United Kingdom",
+                        V1 == "(House)" ~ "United States",
+                        V1 == "Scotland" ~ "Scotland",
+                        TRUE ~ V1),
+         country = countrycode(V1, "country.name", "country.name"),
+         country = case_when(V1 == "elections" ~ "Ireland EP",
+                             V1 == "college)" ~ "U.S. Electoral College",
+                             V1 == "Ireland LSq" ~ "Northern Ireland",
+                             V1 == "Wales" ~ "Wales",
+                             V1 == "Principe" ~ "Principe",
+                              TRUE ~ country),
+         country2 = country) %>% 
+  fill(country) %>% 
+  filter(is.na(country2) & !V1 == "See Notes.") %>% 
+  separate_wider_delim(V1, 
+                       delim = " ", 
+                       names = c("year", "info"),
+                       too_few = "align_start",
+                       too_many = "merge") %>% 
+  mutate(lsq = str_replace_all(info, "[^\\d.]", ""),
+         V2 = if_else(V2 == "", lsq, V2),
+         month = str_extract(info, "[A-Z][a-z]{2}\\b") %>% 
+           match(month.abb)) %>% 
+  filter((is.na(info) | !str_detect(info, "PR|list|SMD|SMP")) ) %>% 
+  transmute(country = country,
+            year = as.numeric(year),
+            lsq = as.numeric(V2),
+            info = info,
+            month = month) %>% 
+  filter(!is.na(lsq)) %>% 
+  bind_rows(gallegher_uk, disp_add) %>% 
+  group_by(country, year) %>% 
+  arrange(country, -year, -month) %>% 
+  distinct(country, year, .keep_all = TRUE) %>% 
+  arrange(country, year) %>% 
+  select(country, year, lsq)
+    
+```
+
+```{r oecd}
+if (!file.exists(here::here("data-raw", "oecd_data.rda"))) {
+  
+  oecd_growth_link <- "https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/SNA_TABLE1/AUS+AUT+BEL+CAN+CHL+COL+CRI+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LVA+LTU+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA.B1_GE.G/all?startTime=1980&endTime=2022"
+  
+  oecd_growth <- oecd_growth_link %>% 
+    readSDMX() %>% 
+    as_tibble() %>% 
+    transmute(country = countrycode(LOCATION, "iso3c", "country.name"),
+              year = as.numeric(obsTime),
+              growth = obsValue)
+  
+  oecd_unemployment_link <- "https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/LFS_SEXAGE_I_R/AUS+AUT+BEL+CAN+CHL+COL+CRI+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LVA+LTU+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA.MW.1564.UR.A/all?startTime=1980&endTime=2022"
+  
+  oecd_unemp <- oecd_unemployment_link %>% 
+    readSDMX() %>% 
+    as_tibble() %>% 
+    transmute(country = countrycode(COUNTRY, "iso3c", "country.name"),
+              year = as.numeric(obsTime),
+              unemployment = obsValue)
+  
+  oecd_inflation_link <- "https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/PRICES_CPI/AUS+AUT+BEL+CAN+CHL+COL+CRI+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LVA+LTU+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA.CPALTT01.GY.A/all?startTime=1980&endTime=2023"
+  
+  oecd_inf <- oecd_inflation_link %>% 
+    readSDMX() %>% 
+    as_tibble() %>% 
+    transmute(country = countrycode(LOCATION, "iso3c", "country.name"),
+              year = as.numeric(obsTime),
+              inflation = obsValue)
+  
+  oecd_gdppc_link <- "https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/SNA_TABLE1/AUS+AUT+BEL+CAN+CHL+COL+CRI+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LVA+LTU+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA.B1_GE.HVPVOB/all?startTime=1980&endTime=2022"
+  
+  oecd_gdppc <- oecd_gdppc_link %>% 
+    readSDMX() %>% 
+    as_tibble() %>% 
+    transmute(country = countrycode(LOCATION, "iso3c", "country.name"),
+              year = as.numeric(obsTime),
+              gdppc = obsValue)
+  
+  oecd <- oecd_gdppc %>% 
+    left_join(oecd_growth, by = c("country", "year")) %>% 
+    left_join(oecd_unemp, by = c("country", "year")) %>% 
+    left_join(oecd_inf, by = c("country", "year")) %>% 
+    group_by(country) %>% 
+    mutate(across(gdppc:inflation,
+                  ~ imputeTS::na_interpolation(.x)))
+  
+  rio::export(oecd, here::here("data-raw", "oecd_data.rda"))
+} else {
+  oecd <- rio::import(here::here("data-raw", "oecd_data.rda"))
+}
+
+```
+
+```{r swiid_data}
+if (!file.exists(here("data-raw",
+                      "swiid9_4",
+                      "swiid9_4_summary.csv"))) {
+download.file("https://dataverse.harvard.edu/api/access/datafile/6716676", "data-raw/swiid9_4.zip")
+unzip(here("data-raw", "swiid9_4.zip"), exdir = here("data-raw"))
+file.remove("data-raw", "swiid9_4.zip")
+}
+
+swiid_summary <- read_csv(here("data-raw",
+                               "swiid9_4",
+                               "swiid9_4_summary.csv")) %>% 
+  mutate(country = countrycode::countrycode(country,
+                                            "country.name",
+                                            "country.name")) %>% 
+  select(country, year, gini_disp, gini_disp_se)
+```
+
+```{r analysis, include=FALSE}
+if (!file.exists(here::here("data", "results.rda"))) {
+  data_combo <- theta_summary %>% 
+    filter(country %in% oecd_countries &
+             country!="Turkey") %>% 
+    group_by(country) %>% 
+    group_modify(~ add_row(.x, year = 0:4, .before = 0)) %>%
+    mutate(year = case_when(year == 0 ~ lead(year, 5) - 5,
+                            year == 1 ~ lead(year, 4) - 4,
+                            year == 2 ~ lead(year, 3) - 3,
+                            year == 3 ~ lead(year, 2) - 2,
+                            year == 4 ~ lead(year, 1) - 1,
+                            TRUE ~ year)) %>% 
+    left_join(des_data, by = c("country", "year")) %>%
+    mutate(parl = if_else(regime == 0, 1, 0),
+           election = as.numeric(!is.na(regime))) %>% 
+    select(-regime) %>% 
+    fill(parl) %>% 
+    left_join(oecd,
+              by = c("country", "year")) %>% 
+    left_join(swiid_summary,
+              by = c("country", "year")) %>% 
+    left_join(gallegher,
+              by = c("country", "year")) %>% 
+    fill(lsq) %>% 
+    drop_na(mean:lsq) %>% 
+    mutate(federal = as.numeric(country %in% c("Australia", # decentralized = strong
+                                               "Belgium",
+                                               "Canada",
+                                               "Germany",
+                                               "Mexico",
+                                               "Switzerland",
+                                               "United States")),
+           lsq_mean = mean(lsq),
+           lsq_diff = lsq - lsq_mean,
+           gini_mean = mean(gini_disp),
+           gini_mean_se = sqrt(sum(gini_disp_se^2))/
+             length(gini_disp),
+           gini_diff = (gini_disp - gini_mean),
+           gini_diff_se = sqrt(gini_disp_se^2 + gini_mean_se^2)/2,
+           gdppc_mean = mean(gdppc/1000),
+           gdppc_diff = gdppc/1000 - gdppc_mean,
+           growth_mean = mean(growth),
+           growth_diff = growth - growth_mean,
+           recession = if_else(growth >= 0, 0, 1),
+           unemploy_mean = mean(unemployment),
+           unemploy_diff = unemployment - unemploy_mean,
+           inflation_mean = mean(inflation),
+           inflation_diff = inflation - inflation_mean) %>% 
+    ungroup()
+  
+  
+  m1 <- brm(formula = bf(mean*100 | mi(sd*100) ~ election +
+                           parl +
+                           federal +
+                           lsq_mean + lsq_diff +
+                           gdppc_mean + gdppc_diff +
+                           growth_mean + growth_diff +
+                           unemploy_mean + unemploy_diff +
+                           me(gini_mean, gini_mean_se) +
+                           me(gini_diff, gini_diff_se) +
+                           (1 | country) + (1 | year)),  
+            data = data_combo,
+            backend = "cmdstanr",
+            warmup = 1000, 
+            iter = 2000, 
+            chains = 4, 
+            cores = 4,
+            seed = 324)
+  
+  doubled_sd <- m1$data %>% 
+    select(-`mean * 100`, -mean, -sd,
+           -country, -year, -ends_with("_se")) %>% 
+    summarize(across(everything(), by2sd)) %>% 
+    pivot_longer(everything()) %>% 
+    transmute(`.variable` = case_when(name == "gini_mean" ~ 
+                                        "bsp_megini_meangini_mean_se",
+                                      name == "gini_diff" ~
+                                        "bsp_megini_diffgini_diff_se",
+                                      TRUE ~ paste0("b_", name)),
+              var_names = c("Election Year",
+                            "Parliamentarism",
+                            "Federalism",
+                            "Disproportionality, Mean",
+                            "Disproportionality, Difference",
+                            "GDPpc, Mean",
+                            "GDPpc, Difference",
+                            "GDP Growth, Mean",
+                            "GDP Growth, Difference",
+                            "Unemployment, Mean",
+                            "Unemployment, Difference",
+                            "Income Inequality, Mean",
+                            "Income Inequality, Difference"),
+              sd2 = value)
+  
+  coef_data0 <- m1 %>% 
+    tidybayes::gather_draws(`bs?p?_.*`, regex = TRUE) %>% 
+    filter(!`.variable`=="b_Intercept") %>% 
+    left_join(doubled_sd, by = join_by(.variable))
+  
+  cy_summary <- m1$data %>%
+    count(country) %>%
+    pull(n) %>%
+    summary()
+  
+  save(doubled_sd, coef_data0, cy_summary, file = here::here("data", "results.rda"))
+} else {
+  load(file = here::here("data", "results.rda"))
+}
+```
+
+The resulting dataset comprises the thirty-seven OECD democracies, each observed in twenty-one (Mexico) to forty (Ireland, Italy, the United Kingdom, and the United States) consecutive years (mean: `r cy_summary %>% nth(4) %>% round(1)` years, median: `r cy_summary %>% nth(3)` years).
+@Shor2007 demonstrates that such pooled time series are best analyzed using a Bayesian multilevel model including varying intercepts for each country and each year. 
+The former help account for heteroskedasticity across space due to, e.g., omitted variable bias, while permitting the inclusion of time-invariant predictors such as, in this dataset, parliamentarism and federalism.
+The latter take into account 'time shocks' that operate on all countries simultaneously [@Shor2007, 171-172].
+Further, the 'within-between random effects' specification is employed, meaning each of the time-varying predictors is decomposed into its time-invariant country mean and the difference between each country-year value and this country mean; this specification has been shown superior to fixed effects and other commonly used TSCS specifications for addressing omitted variable bias and endogeneity [see @Bell2015].
+The time-varying difference variables capture the short-term effects of the predictors, while the time-invariant country-mean variables reflect their---often different---long-run, "historical" effects [@Bell2015, 137].
+The measurement uncertainty in the data for both macrointerest and income inequality was incorporated into the analysis as well [see @Tai2022].
+The model was estimated using the `brms` R package [@Burkner2017].
+
+```{r resplot, fig.cap="Predicting Macrointerest in OECD Democracies \\label{model}", fig.height = 5.5, fig.width = 7.5}
+
+ordered <- doubled_sd %>%
+  pull(var_names) %>% 
+  rev()
+
+coef_data <- coef_data0 %>% 
+  mutate(std_coef = round(.value * sd2, 1),
+         term = factor(var_names, levels = ordered)) %>%
+  ggdist::median_qi(std_coef, .width = c(.8, .9, .95)) %>%
+  mutate(ci = paste0(round(.lower, 1), " to ", round(.upper, 1))) %>%
+  left_join(doubled_sd, ., by = join_by(.variable))
+
+coef_data0 %>% 
+  mutate(std_coef = .value * sd2,
+         term = factor(var_names, levels = ordered)) %>% 
+  ggplot(aes(y = term, x = std_coef)) +
+  stat_halfeye(.width = c(.8, .9, .95)) +
+  geom_vline(xintercept = 0, linetype = "dashed") +
+  coord_cartesian(xlim = c(-15, 15)) +
+  theme_light() +
+  xlab(NULL) +
+  ylab(NULL) +
+  plot_annotation(caption = "Notes: Dots indicate posterior means; whiskers, from thickest to thinnest, describe 80%,\n90%, and 95% credible intervals; shading depicts the posterior probability density function.")
+```
+
+Figure\nobreakspace{}\ref{model} displays the results.
+Consistent with the argument that campaigns bring attention-grabbing information to the public, macrointerest in election years is found to be `r get_coef("election", type = "std_coef")` points higher (95% credible interval: `r get_coef("election", type = "ci")` points) than in years without elections.
+This is in line with previous research finding small but well-estimated increases in political interest in election years [see, e.g., @Larsen2022].
+
+The hypothesis that power-sharing institutions yield more public interest in politics is also supported.
+Macrointerest is estimated to be `r get_coef("parl")` points higher in countries with parliamentary systems.
+The difference between countries with and without federalism is estimated to be even larger, `r get_coef("federal", type = "std_coef")` points, though only its 90% credible interval (`r get_coef("federal", type = "ci", width = "0.9")`) is bounded away from zero.
+And although disproportionality is not estimated to have long-run effects that consistently distinguish countries with more or less proportional electoral results, _changes_ in disproportionality appear to have an immediate negative effect: a two-standard-deviation increase in the Gallagher index yields a `r get_coef("lsq_diff")` point posterior mean.
+
+On the debate on whether macrointerest is invigorated or instead discouraged by bad times, the evidence from this cross-national analysis falls heavily on the side of the latter.
+Supporting modernization theory, increases in per capita GDP have a well estimated positive short-term effect on aggregate political interest, with a two-standard-deviation increase associated with `r get_coef("gdppc_diff")` points more macrointerest.
+The long-term, historical effect as evidenced by differences in mean levels across countries is found to be larger, `r get_coef("gdppc_mean", type = "std_coef")` points, but only its 80% credible interval (`r get_coef("federal", type = "ci", width = "0.8")` points) excludes zero.
+The posterior means for growth in the national economy are positive as well, but the posterior distributions do not suggest relationships that are statistically defensible.
+The findings with regard to unemployment are similar.
+As predicted by relative power theory, the long-term effects of income inequality are strongly negative, with a two-standard-deviation difference across countries associated with `r abs(get_coef("gini_mean", type = "std_coef"))` points less macrointerest (95% c.i.: `r get_coef("gini_mean", type = "ci")` points).
+Year-to-year changes in income inequality are found to make little difference---the influence of the wealthy over the political agenda, it would seem, does not change on such a short time scale, from one perspective, and there is no evidence that the public reacts to worsening conditions in the distribution of income with greater interest in its agents' actions, from the other.
+Taken as a whole, this evidence indicates that it is good times, not bad ones, that yield higher macrointerest.
+
+# Conclusions
+Macrointerest, despite its theoretical importance, has as yet drawn only limited empirical attention.
+This oversight largely reflects the paucity of available data to measure this important concept.
+The cross-national macrointerest dataset presented here addresses this issue, providing annual time series across more than a hundred countries and allowing more and better tests of the wide range of theories that implicate the public's interest in politics.
+For example, while the cross-sectional analysis in @Kittilson2010 [, 997-999] found that, among the three inclusive institutions it considered, only the disproportionality of electoral results influenced political interest and engagement, the pooled time-series analysis presented here indicates parliamentarism, federalism, and proportionality all yield greater macrointerest as @Kittilson2010 theorized.
+And although the single-country study in @Peterson2022 [, 219] concludes that bad times prompt increased macrointerest, this evidence shows just the opposite, that it is _good_ times that lead the public to take interest in politics.
+By drawing on information about _both_ differences across countries _and_ change over time, it appears these data on cross-national macrointerest provide a firmer basis for drawing sound conclusions.
+The cross-national macrointerest dataset is available on the Harvard Dataverse for use in the further investigation of these and other theories on the causes and consequences of aggregate political interest.
+
+\pagebreak
+# References {.unnumbered}
+
+::: {#refs-text}
+:::
+
+\pagebreak
+
+```{=tex}
+\renewcommand{\baselinestretch}{1}
+\selectfont
+\maketitle
+\selectfont
+```
+```{=tex}
+\pagenumbering{arabic}
+\renewcommand*{\thepage}{A\arabic{page}}
+```
+```{=tex}
+\setcounter{figure}{0}
+\renewcommand*{\thefigure}{A\arabic{figure}}
+```
+```{=tex}
+\vspace{-.5in}
+\begin{center}
+\begin{Large}
+Appendices
+\end{Large}
+\end{center}
+```
+
+# Appendix A: Survey Items Used to Estimate Acceptance of Homosexuality
 National and cross-national surveys have often included questions tapping interest in politics over the past four decades, but the resulting data are both sparse, that is, unavailable for many countries and years, and incomparable, generated by many different survey items.
 In all, I identified `r n_items` such survey items that were asked in no fewer than five country-years in countries surveyed at least twice; these items were drawn from `r n_surveys` different survey datasets.
 These items are listed in the table below, along with the dispersion ($\alpha$) and difficulty ($\beta$) scores estimated for each from the DCPO model.
@@ -726,7 +1478,7 @@ In country-years with fewer observed items, the estimates rely more heavily on t
 
 \pagebreak
 
-\noindent Table A1: Indicators Used in the Latent Variable Model of Macrointerest
+\noindent Table A1: Indicators Used in the Acceptance of Homosexuality Latent Variable Model
 
 ```{r dcpo_items}
 alpha_results <- DCPOtools::summarize_dcpo_results(dcpo_input,
