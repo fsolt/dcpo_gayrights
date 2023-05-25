@@ -765,7 +765,7 @@ internal_ts_dat <- dcpo_input_raw1 %>%
          neg = FALSE)
 ```
 
-```{r internalval, fig.height = 4, fig.cap = "Convergent Validation: Correlations Between AoH Scores and Individual Source-Data Survey Items \\label{internal_val}"}
+```{r internalval, fig.height=4, fig.width=7.5, fig.cap = "Convergent Validation: Correlations Between AoH Scores and Individual Source-Data Survey Items \\label{internal_val}"}
 internal_tscs_plot <- validation_plot(internal_tscs_dat,
                                 lab_x = .1,
                                 lab_y = 95) +
@@ -777,7 +777,7 @@ internal_tscs_plot <- validation_plot(internal_tscs_dat,
         strip.background = element_blank()) +
   coord_cartesian(xlim = c(0,1), ylim = c(0,100)) +
   labs(x = "AoH Score",
-       y = "% Responding Homosexuality Can,\nMore Often Than Not, Be Justified (6+ on 1-10 Scale)")
+       y = "% Responding Homosexuality Can Be Justified\nMore Often Than Not (6+ on 1-10 Scale)")
 
 internal_cs_plot <- validation_plot(internal_cs_dat,
                                 lab_x = .1,
@@ -816,12 +816,12 @@ internal_tscs_plot + internal_cs_plot + internal_ts_plot  +
 
 Before these estimates can be used, however, they must be validated: the mere fact that we can generate estimates for acceptance of homosexuality does not automatically mean that they are suitable for analysis. 
 Just as with any other new measure, validation tests of cross-national latent variables are crucially important [see, e.g., @Hu2023].
-Figure\nobreakspace{}\ref{internal_val} and Figure\nobreakspace{}\ref{external_val} provide evidence of this measure's validity with tests of convergent validation and construct validation.
+Figure\nobreakspace{}\ref{internal_val} and Figure\nobreakspace{}\ref{ext_val1} provide evidence of this measure's validity with tests of convergent validation and construct validation.
 Convergent validation refers to tests of whether a measure is empirically associated with alternative indicators of the same concept [@Adcock2001, 540].
 In Figure\nobreakspace{}\ref{internal_val}, the AoH scores are compared to responses to individual source-data survey items that were used to generate them; this provides an 'internal' convergent validation test [see, e.g., @Caughey2019, 689; @Solt2020c, 10].
 The left panel is a scatterplot of country-years in which the AoH scores are plotted against the percentage of respondents who gave an accepting response to the most commonly asked item in the source data: whether homosexuality can always be justified, scored ten, never be justified, scored zero, or something in between.
 For this plot, responses six or greater are considered as indicating that whether respondents consider homosexuality justified more often than not.
-The middle panel shows responses to the question with the most data-rich cross-section, "And what about sexual relations between two adults of the same sex, is it always wrong, almost always wrong, wrong only sometimes, or not wrong at all?" in the International Social Survey Program's 2008 module on Religion, plotting the latent variable of acceptance against the percentage who responded "wrong only sometimes" or "not at all."
+The middle panel shows responses to the question with the most data-rich cross-section, "And what about sexual relations between two adults of the same sex, is it always wrong, almost always wrong, wrong only sometimes, or not wrong at all?" in the International Social Survey Program's 2008 module on Religion, plotting our latent variable of acceptance against the percentage who responded "wrong only sometimes" or "not at all."
 Finally, in the right panel, the U.S. General Social Survey's series on this same item---the longest of any item in any single country in the source data---was used to evaluate how well the AoH scores capture change over time.
 The correlations, estimated taking into account the uncertainty in the measures, are very strong in all three cases.
 
@@ -835,24 +835,8 @@ ext_issp_tradroles_dat <- ext_dat1 %>%
   DCPOtools::dcpo_setup(datapath = here("..",
                                         "data",
                                         "dcpo_surveys")) %>%  
-  mutate(title = "International Social Survey Program (8 Surveys)",
+  mutate(title = "ISSP, 8 Surveys",
          neg = FALSE)
-
-gm_laws_bd <- read_csv(here::here("data-raw", "gm_laws.csv"),
-                    col_types = "cddddddc") %>% 
-  mutate(country = countrycode::countrycode(country,
-                                            "country.name",
-                                            "country.name",
-                                            warn = FALSE)) %>% 
-  inner_join(theta_summary %>%
-  group_by(country) %>%
-  top_n(1, year) %>%
-  ungroup(),
-  by = "country") %>% 
-  mutate(equality = case_when(!is.na(gm) ~ "marriage",
-                              !is.na(civ) & is.na(gm) ~ "civil unions",
-                              TRUE ~ "none") %>% 
-           factor(levels = c("none", "civil unions", "marriage")))
 
 gm_laws0 <- "https://en.wikipedia.org/wiki/Same-sex_marriage" %>% 
   read_html() %>% 
@@ -887,16 +871,20 @@ gm_laws_dat <- gm_laws0 %>%
                      civ = 1) %>% 
               filter(!is.na(country)) %>% 
               select(country, civ)) %>% 
+  distinct(country, .keep_all = TRUE) %>% # only most recent law
   right_join(theta_summary %>%
-                 group_by(country) %>%
-                 top_n(1, year) %>%
-                 ungroup(),
+               group_by(country) %>%
+               top_n(1, year) %>%
+               ungroup() %>% 
+               select(country, year, mean),
                by = "country") %>% 
-  mutate(equality = case_when(!is.na(gm) ~ "marriage",
-                              !is.na(civ) ~ "civil unions",
-                              TRUE ~ "minimal/none") %>% 
-           factor(levels = c("minimal/none", "civil unions", "marriage")),
-         title = "Legal Recognition of Same-Sex Couples")
+  mutate(equality = case_when(!is.na(gm) ~ "marriage\nequality",
+                              !is.na(civ) ~ "civil\nunions",
+                              TRUE ~ "minimal/\nnone") %>% 
+           factor(levels = c("minimal/\nnone",
+                             "civil\nunions",
+                             "marriage\nequality")),
+         title = "Legal Recognition of\nSame-Sex Couples")
 
 gm_laws_cor <- theta_results %>%
       inner_join(gm_laws_dat %>%
@@ -910,9 +898,9 @@ gm_laws_cor <- theta_results %>%
                unlist()) %>%
       select(-data) %>% 
       summarize(r = paste("R =", sprintf("%.2f", round(mean(r), 2)))) %>% 
-  mutate(equality = "minimal/none" %>% 
-           factor(levels = c("minimal/none", "civil unions", "marriage")),
-         title = "Legal Recognition of Same-Sex Couples")
+  mutate(equality = "minimal/\nnone" %>% 
+           factor(levels = c("minimal/\nnone", "civil\nunions", "marriage\nequality")),
+         title = "Legal Recognition of\nSame-Sex Couples")
 
 ext_libdem_dat <- vdemdata::vdem %>%
   transmute(country = countrycode::countrycode(country_name,
@@ -933,7 +921,7 @@ ext_libdem_dat <- vdemdata::vdem %>%
   filter(!is.na(prop))
 ```
 
-```{r extval1, fig.cap="Construct Validation: Correlations Between AoH Scores and Acceptance of Homosexuality Survey Items \\label{ext_val1}", fig.height=4}
+```{r extval1, fig.cap="Construct Validation: Correlations Between AoH Scores and Acceptance of Homosexuality Survey Items \\label{ext_val1}", fig.height=4, fig.width=7.5}
 ext_issp_tradroles_plot <- validation_plot(ext_issp_tradroles_dat,
                                     lab_x = .1,
                                     lab_y = 95) +
@@ -990,7 +978,7 @@ ext_libdem_plot <- validation_plot(ext_libdem_dat,
         plot.title = element_text(hjust = 0.5, size = 9),
         strip.background = element_blank()) +
   coord_cartesian(xlim = c(0,1), ylim = c(0,100)) +
-  labs(x = "AoH Score, Most Recent Available Year",
+  labs(x = "AoH Score,\nMost Recent Available Year",
        y = "Liberal Democracy Index")
 
 ext_issp_tradroles_plot + ext_gm_laws_plot + ext_libdem_plot +
@@ -1008,45 +996,27 @@ The violins are inset with box-and-whisker plots showing the 25th percentile, me
 A third oft-theorized relationship is that liberal democracies promote tolerant attitudes that lead to greater acceptance of homosexuality [see, e.g., @Adamczyk2019a].
 The right panel plots the V-Dem Liberal Democracy Index against the AoH scores.
 In each of these three cases, the relationship is in the expected direction and strong to very strong.
-Together, the evidence of convergent and construct validation in Figures\nobreakspace{}\ref{ext_val1}\nobreakspace{}and\nobreakspace{}\ref{internal_val} demonstrate the validity of the AoH scores as measures of public acceptance of homosexuality.
+The evidence of convergent validation in Figure\nobreakspace{}\ref{ext_val1}, together with the evidence of construct validation in Figureand\nobreakspace{}\ref{internal_val}, demonstrate the validity of the AoH scores as measures of public acceptance of homosexuality.
 
 # Testing Theories of Acceptance of Homosexuality: Revisiting 'Economic Inequality and Intolerance'
 
-Macrointerest varies greatly around the world.
-Figure\nobreakspace{}\ref{ts_plots} examines levels and trends in macrointerest in advanced democratic countries by displaying the changes of the public's expressed interest in politics over time in the thirty-seven democracies of the OECD.
-While macrointerest scores approach and often exceed .6 in countries such as Denmark and Canada, in Chile they scarcely cross .25.
-And although the public's political interest has held fairly steady over decades in many countries, in Czechia it dropped nearly half of the variable's entire theoretical range over the 1990s and 2000s before rebounding slightly since 2010, and increases of roughly a quarter of that range can be seen in, among others, Germany. 
-There are considerable differences in the extent to which the public professes interest in politics both across countries and over time.
+@Andersen2008 [35 countries, 63 country-years]
 
-What explains these differences?
-One straightforward explanation is that publics grow more interested in politics at election time.
-Campaigns and elections attract media coverage and increase the information available to the public on the issues being contested, leading to increased interest in politics [see, e.g., @Beach2018; @Larsen2022].
-Macrointerest within each country should be expected to be higher, therefore, in years in which national elections take place than in years without elections.
+@Zhang2019 [88 countries, 214 country-years]
 
-A second argument is that political institutions that share power, rather than concentrate it, yield politics that are more interesting and engaging.
-Building on @Lijphart1999 and @Powell2000, @Kittilson2010 [, 992] argues that power-sharing institutions---parliamentarism, federalism, and proportional electoral rules---"send signals of inclusiveness to citizens, generating greater political engagement" while power-concentrating institutions "may generate perceptions of exclusion and deter involvement."
-Macrointerest should be higher in countries with parliamentary and federal systems than in those without those features, and it should decline as the disproportionality between votes cast and seats won increases.
+us: 
 
-A third claim deals with the public's demand for accountability.
-@Peterson2022 [, 203] advances this argument: "when there is information that something has gone wrong \ldots then voters should be more likely to attend to the actions of elected officials," but when "there is evidence of success \ldots voters should not waste their energies focusing on the activities of their representatives."
-If democracy is a principal-agent problem with elected officials acting as self-interested agents and the public as their lazy but vengeful principal, then macrointerest should rise when times are bad and decline as conditions improve.
 
-A final set of theories---each well established---contradicts the third.
-Modernization theory holds that the public's interest in politics will increase as the national economy grows and household incomes expand [see, e.g., @Inglehart2005].
-Unemployment has long been argued to not to motivate but rather to depress political interest; @Rosenstone1982 [, 26], for example, argued that "it causes a preoccupation with personal economic well-being, and as a result, the citizen withdraws from such external matters as politics."
-And the relative power theory holds that greater income inequality, by increasingly concentrating political power in the hands of the wealthy, allows them greater power to shape the political agenda in ways that discourage the broader public from taking interest [see, e.g., @Solt2008].
-In each of these circumstances, macrointerest is argued to grow in _good_ times and wither as the context worsens [see also @Stimson2015; @Peterson2022, 206].
+To test these hypotheses, we use the following data.
+Economic inequality is measured using the Gini index of disposable income inequality from the Standardized World Income Inequality Database [@Solt2020].
+Data on GDP per capita (in thousands of constant 2015 U.S. dollars) are provided by the World Bank's World Development Indicators [@WB2023].
+Marriage equality is measured dichotomously, coded one in country-years where same-sex marriage was legal and zero otherwise.
+A series of country-level variables to identify a country's religious heritage are also dichotomous: countries are coded as having alternately a Catholic, Orthodox, Eastern, or Islamic heritage.
+(Countries with a Protestant heritage are treated as the reference category.)
 
-Data to test these hypotheses regarding the causes of macrointerest are drawn from several sources.
-The Democratic Electoral Systems (DES) dataset updated in @Bormann2022 provides information about the timing of elections, yielding a dichotomous variable coded one in election years and zero when no election was held.
-The three institutional variables are measured as in @Kittilson2010.
-Data on parliamentarism, a dichotomous variable coded one in pure parliamentary systems and zero otherwise, is also sourced from the DES.
-Federalism is a third dichotomous variable, coded one in countries with strong federal systems [see @Lijphart1999] and zero in all others.
-The proportionality of the electoral system is measured using the Gallagher least-squares index of disproportionality, which measures the disparity between parties' vote shares and their seat shares [@Gallagher1991, 40-41].
-The context of good times and bad was measured with data on GDP per capita, national GDP growth, and unemployment from OECD.Stat [@OECD2023] and on the Gini index of disposable income inequality from the Standardized World Income Inequality Database [@Solt2020].
-
-```{r wdi}
-wdi <- WDI::WDI(indicator = "NY.GDP.PCAP.KD") %>% 
+```{r data_combo}
+if (!file.exists(here::here("data", "data_combo.rda"))) {
+  wdi <- WDI::WDI(indicator = "NY.GDP.PCAP.KD") %>% 
     transmute(country = countrycode(iso3c, 
                                     "iso3c",
                                     "country.name",
@@ -1054,88 +1024,86 @@ wdi <- WDI::WDI(indicator = "NY.GDP.PCAP.KD") %>%
               year,
               gdppc = NY.GDP.PCAP.KD) %>% 
     filter(!is.na(country) & !is.na(gdppc))
-```
-
-```{r swiid_data}
-if (!file.exists(here("data-raw",
-                      "swiid9_4",
-                      "swiid9_4_summary.csv"))) {
-download.file("https://dataverse.harvard.edu/api/access/datafile/6716676", "data-raw/swiid9_4.zip")
-unzip(here("data-raw", "swiid9_4.zip"), exdir = here("data-raw"))
-file.remove("data-raw", "swiid9_4.zip")
+  
+  if (!file.exists(here("data-raw",
+                        "swiid9_4",
+                        "swiid9_4_summary.csv"))) {
+    download.file("https://dataverse.harvard.edu/api/access/datafile/6716676", "data-raw/swiid9_4.zip")
+    unzip(here("data-raw", "swiid9_4.zip"), exdir = here("data-raw"))
+    file.remove("data-raw", "swiid9_4.zip")
+  }
+  
+  swiid_summary <- read_csv(here("data-raw",
+                                 "swiid9_4",
+                                 "swiid9_4_summary.csv"),
+                            col_types = "cddddddddd") %>% 
+    mutate(country = countrycode::countrycode(country,
+                                              "country.name",
+                                              "country.name",
+                                              warn = FALSE)) %>% 
+    select(country, year, gini_disp, gini_disp_se)
+  
+  gm_laws <- "https://en.wikipedia.org/wiki/Same-sex_marriage" %>% 
+    read_html() %>% 
+    html_table() %>% 
+    nth(7) %>% 
+    separate_longer_delim(X2, ")") %>% 
+    mutate(place = str_replace(X2, " \\(.*", "") %>% 
+             str_trim(side = "both") %>% 
+             str_replace(" \\[.*", "")) %>% 
+    filter(!str_detect(place,
+                       "(New (Mexi|Bruns|Jers))|Indian|Distr|County|State of")) %>% 
+    mutate(country = if_else(place == "Guerrero", # last Mexican state to recognize
+                             "Mexico",
+                             countrycode(place,
+                                         "country.name",
+                                         "country.name",
+                                         warn = FALSE))) %>% 
+    filter(!is.na(country)) %>% 
+    transmute(year = X1,
+              country,
+              gm = 1)
+  
+  culture <- read_csv(file = here("data-raw", "culture.csv"),
+                      col_types = "cdddddd") %>% 
+    bind_rows(tibble(country = "Côte d’Ivoire",
+                     catholic = 0,
+                     eastern = 0,
+                     orthodox = 0,
+                     protestant = 0,
+                     islamic = 1,
+                     ex_com = 0))
+  
+  data_combo <- theta_summary %>% 
+    left_join(wdi,
+              by = c("country", "year")) %>% 
+    left_join(swiid_summary,
+              by = c("country", "year")) %>% 
+    left_join(culture,
+              by = "country") %>% 
+    drop_na(mean:gini_disp_se) %>% 
+    left_join(gm_laws,
+              by = c("country", "year")) %>% 
+    group_by(country) %>% 
+    fill(gm) %>% 
+    mutate(gm = if_else(is.na(gm), 0, gm), 
+           gm_mean = mean(gm),
+           gm_diff = gm - gm_mean,
+           gini_mean = mean(gini_disp),
+           gini_mean_se = sqrt(sum(gini_disp_se^2))/
+             length(gini_disp),
+           gini_diff = (gini_disp - gini_mean),
+           gini_diff_se = sqrt(gini_disp_se^2 + gini_mean_se^2)/2,
+           gdppc_mean = mean(gdppc/1000),
+           gdppc_diff = gdppc/1000 - gdppc_mean
+    ) %>% 
+    ungroup()
+  
+  save(data_combo, 
+       file = here::here("data", "data_combo.rda"))
+} else {
+  load(file = here::here("data", "data_combo.rda"))
 }
-
-swiid_summary <- read_csv(here("data-raw",
-                               "swiid9_4",
-                               "swiid9_4_summary.csv"),
-                          col_types = "cddddddddd") %>% 
-  mutate(country = countrycode::countrycode(country,
-                                            "country.name",
-                                            "country.name",
-                                            warn = FALSE)) %>% 
-  select(country, year, gini_disp, gini_disp_se)
-```
-
-```{r gm_laws}
-gm_laws <- "https://en.wikipedia.org/wiki/Same-sex_marriage" %>% 
-  read_html() %>% 
-  html_table() %>% 
-  nth(7) %>% 
-  separate_longer_delim(X2, ")") %>% 
-  mutate(place = str_replace(X2, " \\(.*", "") %>% 
-           str_trim(side = "both") %>% 
-           str_replace(" \\[.*", "")) %>% 
-  filter(!str_detect(place,
-                     "(New (Mexi|Bruns|Jers))|Indian|Distr|County|State of")) %>% 
-  mutate(country = if_else(place == "Guerrero", # last Mexican state to recognize
-                           "Mexico",
-                           countrycode(place,
-                                       "country.name",
-                                       "country.name",
-                                       warn = FALSE))) %>% 
-  filter(!is.na(country)) %>% 
-  transmute(year = X1,
-            country,
-            gm = 1)
-```
-
-```{r culture}
-culture <- read_csv(file = here("data-raw", "culture.csv"),
-                    col_types = "cdddddd") %>% 
-  bind_rows(tibble(country = "Côte d’Ivoire", 
-                   catholic = 0,
-                   eastern = 0,
-                   orthodox = 0,
-                   protestant = 0,
-                   islamic = 1,
-                   ex_com = 0))
-```
-
-```{r data_combo}
-data_combo <- theta_summary %>% 
-  left_join(wdi,
-            by = c("country", "year")) %>% 
-  left_join(swiid_summary,
-            by = c("country", "year")) %>% 
-  left_join(culture,
-            by = "country") %>% 
-  drop_na(mean:gini_disp_se) %>% 
-  left_join(gm_laws,
-            by = c("country", "year")) %>% 
-  group_by(country) %>% 
-  fill(gm) %>% 
-  mutate(gm = if_else(is.na(gm), 0, gm), 
-         gm_mean = mean(gm),
-         gm_diff = gm - gm_mean,
-         gini_mean = mean(gini_disp),
-         gini_mean_se = sqrt(sum(gini_disp_se^2))/
-           length(gini_disp),
-         gini_diff = (gini_disp - gini_mean),
-         gini_diff_se = sqrt(gini_disp_se^2 + gini_mean_se^2)/2,
-         gdppc_mean = mean(gdppc/1000),
-         gdppc_diff = gdppc/1000 - gdppc_mean
-  ) %>% 
-  ungroup()
 ```
 
 ```{r m1_results, include=FALSE}
@@ -1200,6 +1168,10 @@ if (!file.exists(here::here("data", "m1_results.rda"))) {
     filter(!`.variable`=="b_Intercept") %>% 
     left_join(doubled_sd, by = join_by(.variable)) %>% 
     arrange(order)
+  
+  c_summary <- m1$data %>%
+    count(country) %>%
+    
   
   cy_summary <- m1$data %>%
     count(country) %>%
@@ -1273,11 +1245,11 @@ Varying intercepts for each country help account for heteroskedasticity across s
 Varying intercepts for each year take into account 'time shocks' that operate on all countries simultaneously [@Shor2007, 171-172].
 We further employ the 'within-between random effects' specification, meaning each of the time-varying predictors is decomposed into its time-invariant country mean and the difference between each country-year value and this country mean.
 The time-varying difference variables capture the short-term effects of the predictors, while the time-invariant country-mean variables reflect their---often different---long-run, "historical" effects [@Bell2015, 137].
-This specification has been shown superior to fixed effects and other commonly used TSCS specifications for addressing omitted variable bias and endogeneity [see @Bell2015].
+This specification has been shown superior for addressing omitted variable bias and endogeneity to fixed effects and other commonly used specifications for time-series cross-sectional data like these [see @Bell2015].
 The measurement uncertainty in the data for both acceptance of homosexuality and income inequality was incorporated into the analysis as well [see @Tai2022].
 The model was estimated using the `brms` R package [@Burkner2017].
 
-```{r resplot, fig.cap="Predicting Acceptance of Homosexuality \\label{model}", fig.height = 5.5, fig.width = 7.5}
+```{r resplot, fig.cap="Predicting Acceptance of Homosexuality \\label{model}", fig.height=6, fig.width=7.5}
 ordered <- doubled_sd_all %>%
   pull(var_name) %>% 
   rev()
@@ -1333,6 +1305,7 @@ coef_data0 %>%
   plot_annotation(caption = "Notes: Dots indicate posterior means; whiskers, from thickest to thinnest, describe 80%,\n90%, and 95% credible intervals; shading depicts the posterior probability density function.")
 ```
 
+results
 
 \pagebreak
 # References {.unnumbered}
@@ -1371,7 +1344,7 @@ In all, I identified `r n_items` such survey items that were asked in no fewer t
 These items are listed in the table below, along with the dispersion ($\alpha$) and difficulty ($\beta$) scores estimated for each from the DCPO model.
 Lower values of dispersion indicate questions that better identify publics with a higher level of trust from those with lower.
 Items have one less difficulty score than the number of response categories.
-Survey dataset codes correspond to those used in the `DCPOtools` R package [@Solt2019]; they appear in decreasing order of country-years contributed.
+Survey dataset codes correspond to those used in the `DCPOtools` R package [@Solt2019b]; they appear in decreasing order of country-years contributed.
 
 Together, the survey items in the source data were asked in `r n_countries` different countries in at least two time points over `r n_years` years, `r year_range`, yielding a total of `r n_cyi` country-year-item observations.
 The number of items observed in the source data for each country-year is plotted in Figure\nobreakspace{}\ref{obs_by_cy} below.
