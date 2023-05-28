@@ -653,7 +653,7 @@ theta_results <- extract_dcpo_results(dcpo_input,
 
 
 
-```{r csplot, fig.cap="AoH Scores, Most Recent Available Year \\label{cs_mry}", fig.height=10, fig.width=8}
+```{r csplot, fig.cap="TOLH Scores, Most Recent Available Year \\label{cs_mry}", fig.height=10, fig.width=8}
 n_panes <- 2
 axis_text_size <- 10
 
@@ -704,7 +704,7 @@ bottom5 <- p1_data %>%
   knitr::combine_words()
 ```
 
-Figure\nobreakspace{}\ref{cs_mry} displays the most recent available AOH score for each of the `r res_c` countries and territories in the dataset.
+Figure\nobreakspace{}\ref{cs_mry} displays the most recent available TOLH score for each of the `r res_c` countries and territories in the dataset.
 Iceland, the Netherlands, Belgium, and the Scandinavian countries are the places where the public is most accepting of homosexuality.
 The latest scores for `r bottom5` indicate there is very little acceptance in those countries.
 
@@ -726,7 +726,7 @@ ggplot(data = c_res, aes(x = year, y = mean)) +
   theme_bw() +
   theme(legend.position = "none") +
   coord_cartesian(xlim = c(1985, 2020), ylim = c(0, 1)) +
-  labs(x = NULL, y = "AoH Scores") +
+  labs(x = NULL, y = "TOLH Scores") +
   geom_ribbon(data = c_res, aes(ymin = q10, ymax = q90, linetype=NA), alpha = .25) +
   geom_line(data = c_res) +
   facet_wrap(~as_factor(country), nrow = 2) +
@@ -735,11 +735,11 @@ ggplot(data = c_res, aes(x = year, y = mean)) +
                                     vjust = .45,
                                     hjust = .95),
         strip.background = element_rect(fill = "white", colour = "white")) +
-  plot_annotation(caption = "Note: Countries are ordered by their AoH scores in their most recent\navailable year; gray shading represents 80% credible intervals.")
+  plot_annotation(caption = "Note: Countries are ordered by their TOLH scores in their most recent\navailable year; gray shading represents 80% credible intervals.")
 ```
 
-Figure\nobreakspace{}\ref{ts} displays how AoH scores have changed over time in sixteen countries.
-It further underscores what is evident in Figure\nobreakspace{}\ref{cs_mry}: the cross-regional scope of the AoH dataset allows comparison of countries too often neglected in political science analyses [see @Wilson2021].
+Figure\nobreakspace{}\ref{ts} displays how TOLH scores have changed over time in sixteen countries.
+It further underscores what is already evident in Figure\nobreakspace{}\ref{cs_mry}: the cross-regional scope of the TOLH dataset allows comparison of countries too often neglected in political science analyses [see @Wilson2021].
 The figure also shows that while public opinion toward homosexuality has grown rapidly more accepting in some countries, such as Sweden and the United States, attitudes have changed much more gradually over time in others, like Poland and China. 
 Acceptance has advanced and retreated somewhat as in Taiwan and more completely as in Russia.
 And in countries such as Nigeria and Uganda, the extent of acceptance of homosexuality in the public has been steadily scant.
@@ -765,7 +765,7 @@ internal_ts_dat <- dcpo_input_raw1 %>%
          neg = FALSE)
 ```
 
-```{r internalval, fig.height=4, fig.width=7.5, fig.cap = "Convergent Validation: Correlations Between AoH Scores and Individual Source-Data Survey Items \\label{internal_val}"}
+```{r internalval, fig.height=4, fig.width=7.5, fig.cap = "Convergent Validation: Correlations Between TOLH Scores and Individual Source-Data Survey Items \\label{internal_val}"}
 internal_tscs_plot <- validation_plot(internal_tscs_dat,
                                 lab_x = .1,
                                 lab_y = 95) +
@@ -776,7 +776,7 @@ internal_tscs_plot <- validation_plot(internal_tscs_dat,
         plot.title = element_text(hjust = 0.5, size = 9),
         strip.background = element_blank()) +
   coord_cartesian(xlim = c(0,1), ylim = c(0,100)) +
-  labs(x = "AoH Score",
+  labs(x = "TOLH Score",
        y = "% Responding Homosexuality Can Be Justified\nMore Often Than Not (6+ on 1-10 Scale)")
 
 internal_cs_plot <- validation_plot(internal_cs_dat,
@@ -790,7 +790,7 @@ internal_cs_plot <- validation_plot(internal_cs_dat,
         # strip.text.x = element_text(size=5),
         strip.background = element_blank()) +
   coord_cartesian(xlim = c(0,1), ylim = c(0,100)) +
-  labs(x = "AoH Score",
+  labs(x = "TOLH Score",
        y = "% Considering Same-Sex Sexual Relations\nWrong Only Sometimes or Not at All")
 
 internal_ts_plot <- validation_plot(internal_ts_dat,
@@ -808,7 +808,7 @@ internal_ts_plot <- validation_plot(internal_ts_dat,
   annotate("text", x = 2016, y = .49, size = 2,
            label = 'U.S. GSS') + # approve4
   annotate("text", x = 2020, y = .84, size = 2,
-           label = "AoH Score")
+           label = "TOLH Score")
 
 internal_tscs_plot + internal_cs_plot + internal_ts_plot  +
   patchwork::plot_annotation(caption = "Note: Gray whiskers and shading represent 80% credible intervals.")
@@ -818,11 +818,11 @@ Before these estimates can be used, however, they must be validated: the mere fa
 Just as with any other new measure, validation tests of cross-national latent variables are crucially important [see, e.g., @Hu2023].
 Figure\nobreakspace{}\ref{internal_val} and Figure\nobreakspace{}\ref{ext_val1} provide evidence of this measure's validity with tests of convergent validation and construct validation.
 Convergent validation refers to tests of whether a measure is empirically associated with alternative indicators of the same concept [@Adcock2001, 540].
-In Figure\nobreakspace{}\ref{internal_val}, the AoH scores are compared to responses to individual source-data survey items that were used to generate them; this provides an 'internal' convergent validation test [see, e.g., @Caughey2019, 689; @Solt2020c, 10].
-The left panel is a scatterplot of country-years in which the AoH scores are plotted against the percentage of respondents who gave an accepting response to the most commonly asked item in the source data: whether homosexuality can always be justified, scored ten, never be justified, scored zero, or something in between.
+In Figure\nobreakspace{}\ref{internal_val}, the TOLH scores are compared to responses to individual source-data survey items that were used to generate them; this provides an 'internal' convergent validation test [see, e.g., @Caughey2019, 689; @Solt2020c, 10].
+The left panel is a scatterplot of country-years in which the TOLH scores are plotted against the percentage of respondents who gave an accepting response to the most commonly asked item in the source data: whether homosexuality can always be justified, scored ten, never be justified, scored zero, or something in between.
 For this plot, responses six or greater are considered as indicating that whether respondents consider homosexuality justified more often than not.
 The middle panel shows responses to the question with the most data-rich cross-section, "And what about sexual relations between two adults of the same sex, is it always wrong, almost always wrong, wrong only sometimes, or not wrong at all?" in the International Social Survey Program's 2008 module on Religion, plotting our latent variable of acceptance against the percentage who responded "wrong only sometimes" or "not at all."
-Finally, in the right panel, the U.S. General Social Survey's series on this same item---the longest of any item in any single country in the source data---was used to evaluate how well the AoH scores capture change over time.
+Finally, in the right panel, the U.S. General Social Survey's series on this same item---the longest of any item in any single country in the source data---was used to evaluate how well the TOLH scores capture change over time.
 The correlations, estimated taking into account the uncertainty in the measures, are very strong in all three cases.
 
 ```{r ext_val1_dat, include=FALSE}
@@ -921,7 +921,7 @@ ext_libdem_dat <- vdemdata::vdem %>%
   filter(!is.na(prop))
 ```
 
-```{r extval1, fig.cap="Construct Validation: Correlations Between AoH Scores and Acceptance of Homosexuality Survey Items \\label{ext_val1}", fig.height=4, fig.width=7.5}
+```{r extval1, fig.cap="Construct Validation: Correlations Between TOLH Scores and Acceptance of Homosexuality Survey Items \\label{ext_val1}", fig.height=4, fig.width=7.5}
 ext_issp_tradroles_plot <- validation_plot(ext_issp_tradroles_dat,
                                     lab_x = .1,
                                     lab_y = 95) +
@@ -932,7 +932,7 @@ ext_issp_tradroles_plot <- validation_plot(ext_issp_tradroles_dat,
         plot.title = element_text(hjust = 0.5, size = 9),
         strip.background = element_blank()) +
   coord_cartesian(xlim = c(0,1), ylim = c(0,100)) +
-  labs(x = "AoH Score",
+  labs(x = "TOLH Score",
        y = "% Agreeing 'A husband's job is to earn money;\na wife's job is to look after the home and family'")
 
 ext_gm_laws_plot <- ggplot(gm_laws_dat, aes(x = equality,
@@ -960,7 +960,7 @@ ext_gm_laws_plot <- ggplot(gm_laws_dat, aes(x = equality,
   coord_cartesian(ylim = c(0, 1)) +
   scale_fill_grey(start = .65, end = .45) +
   labs(x = "",
-       y = "AoH Score, Most Recent Available Year") +
+       y = "TOLH Score, Most Recent Available Year") +
   geom_label(data = gm_laws_cor, aes(x = equality,
                                      y = .95,
                                      label = r),
@@ -978,7 +978,7 @@ ext_libdem_plot <- validation_plot(ext_libdem_dat,
         plot.title = element_text(hjust = 0.5, size = 9),
         strip.background = element_blank()) +
   coord_cartesian(xlim = c(0,1), ylim = c(0,100)) +
-  labs(x = "AoH Score,\nMost Recent Available Year",
+  labs(x = "TOLH Score,\nMost Recent Available Year",
        y = "Liberal Democracy Index")
 
 ext_issp_tradroles_plot + ext_gm_laws_plot + ext_libdem_plot +
@@ -988,23 +988,35 @@ ext_issp_tradroles_plot + ext_gm_laws_plot + ext_libdem_plot +
 Figure\nobreakspace{}\ref{ext_val1} moves on, then, to construct validation.
 Construct validation refers to demonstrating, for some _other_ concept believed causally related to the concept a measure seeks to represent, that the measure being tested is empirically associated with measures of that other concept [@Adcock2001, 542].
 More traditional attitudes toward gender roles are often argued to yield more intolerance of homosexuals [see, e.g., @Brown2008].
-The left panel compares traditional attitudes, measured as the percentage of those agreeing or strongly agreeing with the statement, "A husband's job is to earn money; a wife's job is to look after the home and family," in eight ISSP surveys (Family and Changing Gender Roles in 1988, 1994, 2002, and 2012; and Religion in 1991, 1998, 2008, and 2018), with the AoH scores.
+The left panel compares traditional gender attitudes, measured as the percentage of those agreeing or strongly agreeing with the statement, "A husband's job is to earn money; a wife's job is to look after the home and family," in eight ISSP surveys (Family and Changing Gender Roles in 1988, 1994, 2002, and 2012; and Religion in 1991, 1998, 2008, and 2018), with the TOLH scores.
 As a result of policy responsiveness, that is, the influence of public opinion on policy [see, e.g., @Lax2009], and policy feedback, the influence of policy on public opinion [see, e.g., @Abou-Chadi2019; @Earle2021], public acceptance of homosexuality is expected to be closely related to policies recognizing same-sex relationships.
-The figure's center panel presents violin plots of the distribution of AoH scores in the most recent available year across three groups of countries: those that currently have no or minimal legal recognition of same-sex relationships, those that recognize civil unions, and those with marriage equality.
+The figure's center panel presents violin plots of the distribution of TOLH scores in the most recent available year across three groups of countries: those that currently have no or minimal legal recognition of same-sex relationships, those that recognize civil unions, and those with marriage equality.
 The gray-shaded 'violins' depict (mirrored) kernal density plots of the observations in each group; their areas are proportional to the number of observations.
 The violins are inset with box-and-whisker plots showing the 25th percentile, median, and 75th percentile as horizontal lines in a box; the dashed vertical whiskers then extend to the farthest observation within 1.5 times the interquartile range, that is, the height of the box; and all observations beyond that distance are shown individually as white circles [see @Tukey1977].
 A third oft-theorized relationship is that liberal democracies promote tolerant attitudes that lead to greater acceptance of homosexuality [see, e.g., @Adamczyk2019a].
-The right panel plots the V-Dem Liberal Democracy Index against the AoH scores.
+The right panel plots the V-Dem Liberal Democracy Index against the TOLH scores.
 In each of these three cases, the relationship is in the expected direction and strong to very strong.
-The evidence of convergent validation in Figure\nobreakspace{}\ref{ext_val1}, together with the evidence of construct validation in Figureand\nobreakspace{}\ref{internal_val}, demonstrate the validity of the AoH scores as measures of public acceptance of homosexuality.
+The evidence of convergent validation in Figure\nobreakspace{}\ref{ext_val1}, together with the evidence of construct validation in Figureand\nobreakspace{}\ref{internal_val}, demonstrates the validity of the TOLH scores as measures of the public's acceptance of homosexuality.
 
 # Testing Theories of Acceptance of Homosexuality: Revisiting 'Economic Inequality and Intolerance'
 
-@Andersen2008 [35 countries, 63 country-years]
+As an example of the utility of the TOLH data, we revisit Andersen and Fetner's [-@Andersen2008] foundational work.
+The piece argues that postmaterialist theory [see, e.g., @Inglehart2005] implies that greater inequality should be expected to yield greater intolerance of homosexuality: if economic development is what allows societies to leave such biases behind, then when a society's prosperity is not broadly shared, more accepting attitudes will not be broadly shared either.
+Supporting this view, its analysis found that more economic inequality leads to more intolerance of homosexuality.
+Despite this article's influence, this conclusion was flagged by 
+@Adamczyk2019 [, 415] in a recent review of the literature as one for which "more research is needed to replicate and confirm these findings."
+Indeed, recent work found no support at all for this relationship between inequality and attitudes toward homosexuality [@Zhang2019, 515].
 
-@Zhang2019 [88 countries, 214 country-years]
+One difference between these two works, potentially important to their diverging conclusions, is the sample employed.
+Although both works draw on World Values Survey data, the groups of countries they examine differ in kind and in size.
+Noting the particular importance to democracies of tolerance of social and political difference, @Andersen2008 examined only democratic countries.
+Its analyses included 35 countries, observed in just one to four years each, for a total of 63 country-years, that is, a mean of 1.8 years observed per country.
+The sample analyzed in @Zhang2019, on the other hand, incorporated a wider range of cases including non-democracies.
+This broader scope---along with the additional WVS survey waves conducted in the time between the two pieces were written---yielded 88 countries and 214 country-year observations, yielding an increased mean number of years observed of 2.4 per country.
 
-us: 
+The TOLH data allows us to revisit this hypothesis with much, much more data
+
+us: 199 countries, 
 
 
 To test these hypotheses, we use the following data.
@@ -1239,7 +1251,8 @@ if (!file.exists(here::here("data", "m2_results.rda"))) {
 ```
 
 
-The resulting dataset comprises the thirty-six OECD democracies, each observed in twenty-one (Costa Rica) to forty-nine (the United States) consecutive years (mean: `r cy_summary %>% nth(4) %>% round(1)` years, median: `r cy_summary %>% nth(3)` years).
+
+
 @Shor2007 shows that the best way to analyze such pooled time series is by using a Bayesian multilevel model that includes varying intercepts for each country and for each year. 
 Varying intercepts for each country help account for heteroskedasticity across space due to, e.g., omitted variable bias, while permitting the inclusion of time-invariant predictors such as religious heritage and communist past.
 Varying intercepts for each year take into account 'time shocks' that operate on all countries simultaneously [@Shor2007, 171-172].
