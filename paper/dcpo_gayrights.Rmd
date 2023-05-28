@@ -311,7 +311,7 @@ set.seed(324)
 ```
 
 
-```{r dcpo_input_raw, include=FALSE, cache = TRUE, cache.extra = tools::md5sum(here::here("data-raw", "surveys_gm.csv"))}
+```{r dcpo_input_raw, include=FALSE}
 surveys_gm <- read_csv(here::here("data-raw", "surveys_gm.csv"),
                         col_types = "cccc")
 
@@ -998,33 +998,23 @@ The right panel plots the V-Dem Liberal Democracy Index against the TOLH scores.
 In each of these three cases, the relationship is in the expected direction and strong to very strong.
 The evidence of convergent validation in Figure\nobreakspace{}\ref{ext_val1}, together with the evidence of construct validation in Figureand\nobreakspace{}\ref{internal_val}, demonstrates the validity of the TOLH scores as measures of the public's acceptance of homosexuality.
 
+
 # Testing Theories of Acceptance of Homosexuality: Revisiting 'Economic Inequality and Intolerance'
 
-As an example of the utility of the TOLH data, we revisit Andersen and Fetner's [-@Andersen2008] foundational work.
-The piece argues that postmaterialist theory [see, e.g., @Inglehart2005] implies that greater inequality should be expected to yield greater intolerance of homosexuality: if economic development is what allows societies to leave such biases behind, then when a society's prosperity is not broadly shared, more accepting attitudes will not be broadly shared either.
+As an example of the utility of the TOLH data, we revisit Andersen and Fetner's [-@Andersen2008] foundational work on economic inequality and intolerance.
+The piece argues that postmaterialist theory [see, e.g., @Inglehart2005] implies that greater inequality should be expected to yield greater intolerance of homosexuality: if economic prosperity is what allows societies to leave such biases behind, then when a society's prosperity is not broadly shared, more tolerant attitudes will not be broadly shared either.^[
+An alternate argument would be that greater inequality gives wealthier individuals both greater means and motive to promote religiosity among their fellow citizens [see, e.g., @Solt2011a; @Solt2014a], and more religiosity in turn works to decrease tolerance [see, e.g., @Adamczyk2009].  We leave distinguishing between these arguments to future research.]
 Supporting this view, its analysis found that more economic inequality leads to more intolerance of homosexuality.
-Despite this article's influence, this conclusion was flagged by 
-@Adamczyk2019 [, 415] in a recent review of the literature as one for which "more research is needed to replicate and confirm these findings."
-Indeed, recent work found no support at all for this relationship between inequality and attitudes toward homosexuality [@Zhang2019, 515].
+Despite this article's influence, its conclusion was flagged by @Adamczyk2019 [, 415] in a recent review of the literature as one for which "more research is needed to replicate and confirm these findings."
+Indeed, one recent work has found no support at all for the hypothesized relationship between inequality and attitudes toward homosexuality [@Zhang2019, 515].
 
-One difference between these two works, potentially important to their diverging conclusions, is the sample employed.
-Although both works draw on World Values Survey data, the groups of countries they examine differ in kind and in size.
+One difference between these two works that is potentially important to their diverging conclusions is the sample employed.
+Both works draw on World Values Survey data, but the group of countries each examines differs in size and in kind.
 Noting the particular importance to democracies of tolerance of social and political difference, @Andersen2008 examined only democratic countries.
 Its analyses included 35 countries, observed in just one to four years each, for a total of 63 country-years, that is, a mean of 1.8 years observed per country.
 The sample analyzed in @Zhang2019, on the other hand, incorporated a wider range of cases including non-democracies.
 This broader scope---along with the additional WVS survey waves conducted in the time between the two pieces were written---yielded 88 countries and 214 country-year observations, yielding an increased mean number of years observed of 2.4 per country.
-
-The TOLH data allows us to revisit this hypothesis with much, much more data
-
-us: 199 countries, 
-
-
-To test these hypotheses, we use the following data.
-Economic inequality is measured using the Gini index of disposable income inequality from the Standardized World Income Inequality Database [@Solt2020].
-Data on GDP per capita (in thousands of constant 2015 U.S. dollars) are provided by the World Bank's World Development Indicators [@WB2023].
-Marriage equality is measured dichotomously, coded one in country-years where same-sex marriage was legal and zero otherwise.
-A series of country-level variables to identify a country's religious heritage are also dichotomous: countries are coded as having alternately a Catholic, Orthodox, Eastern, or Islamic heritage.
-(Countries with a Protestant heritage are treated as the reference category.)
+So although the different conclusion reached by @Zhang2019 may reflect the larger number of countries that study included [see @Zhang2019, 517], it may also result from the inclusion of non-democratic countries. 
 
 ```{r data_combo}
 if (!file.exists(here::here("data", "data_combo.rda"))) {
@@ -1250,7 +1240,17 @@ if (!file.exists(here::here("data", "m2_results.rda"))) {
 
 ```
 
+The TOLH data allows us to revisit this hypothesis with many, many more observations from a broader sample of countries than either of these two previous works and also to assess whether tolerance in democratic countries is distinctively sensitive to income inequality.
+Our democratic sample includes the 36 democracies of the OECD,^[
+That is, this sample excludes the OECD's two members with competitive authoritarian regimes, Hungary and Turkey.] each observed in 21 (Costa Rica) to 49 (the United States) consecutive years (mean: `r cy_summary %>% nth(4) %>% round(1)` years, median: `r cy_summary %>% nth(3)` years), a total of `r data_combo %>% filter(country %in% oecd_democracies) %>% nrow()` country-year observations.
+The broader sample of all countries includes `r data_combo %>% distinct(country) %>% nrow()` countries, observed in `r cy_summary_all %>% first()` to `r cy_summary_all %>% last()` consecutive years each, for a total of `r data_combo %>% nrow()` country-year observations.
+That is, the TOLH provides a number of country-years observations for our sample of democracies that is some `r {data_combo %>% filter(country %in% oecd_democracies) %>% nrow()/63} %>% round()` times greater than that considered in @Andersen2008, and it gives us a number of country-years in our sample of all countries that is about `r {data_combo %>% nrow()/214} %>% round()` times greater than that in the sample employed in @Zhang2019.
+This much larger evidentiary base provides us with a much firmer basis for drawing conclusions [see, e.g., @King2021, 23].
 
+Economic inequality is measured using the Gini index of disposable income inequality from the Standardized World Income Inequality Database [@Solt2020].
+Data on GDP per capita (in thousands of constant 2015 U.S. dollars) are provided by the World Bank's World Development Indicators [@WB2023].
+Marriage equality is measured dichotomously, coded one in country-years where same-sex marriage was legal and zero otherwise.
+A series of country-level variables to identify a country's religious heritage are also dichotomous: countries are coded as having alternately a Catholic, Orthodox, Eastern, or Islamic heritage, with those with a Protestant heritage treated as the reference category.
 
 
 @Shor2007 shows that the best way to analyze such pooled time series is by using a Bayesian multilevel model that includes varying intercepts for each country and for each year. 
