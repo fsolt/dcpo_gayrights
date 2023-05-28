@@ -311,7 +311,8 @@ set.seed(324)
 ```
 
 
-```{r dcpo_input_raw, include=FALSE}
+```{r dcpo_input_raw, eval=FALSE, include=FALSE}
+# set eval to TRUE to run; running time is <5 minutes
 surveys_gm <- read_csv(here::here("data-raw", "surveys_gm.csv"),
                         col_types = "cccc")
 
@@ -323,6 +324,9 @@ dcpo_input_raw <- DCPOtools::dcpo_setup(vars = surveys_gm,
 ```
 
 ```{r gm_summary_stats}
+surveys_gm <- read_csv(here::here("data-raw", "surveys_gm.csv"),
+                        col_types = "cccc")
+
 dcpo_input_raw <- read_csv(here::here("data", "dcpo_input_raw.csv"),
                                   col_types = "cdcddcd")
 
@@ -571,6 +575,7 @@ save(dcpo_input, file = here::here("data", "dcpo_input.rda"))
 
 
 ```{r dcpo, eval=FALSE, include=FALSE, results=FALSE}
+# set eval to TRUE to run; running time is >2 hours
 iter <- 1500
  
 dcpo <- cmdstan_model("~/Documents/Projects/DCPO/inst/stan/dcpo.stan")
@@ -1002,8 +1007,8 @@ The evidence of convergent validation in Figure\nobreakspace{}\ref{ext_val1}, to
 # Testing Theories of Acceptance of Homosexuality: Revisiting 'Economic Inequality and Intolerance'
 
 As an example of the utility of the TOLH data, we revisit Andersen and Fetner's [-@Andersen2008] foundational work on economic inequality and intolerance.
-The piece argues that postmaterialist theory [see, e.g., @Inglehart2005] implies that greater inequality should be expected to yield greater intolerance of homosexuality: if economic prosperity is what allows societies to leave such biases behind, then when a society's prosperity is not broadly shared, more tolerant attitudes will not be broadly shared either.^[
-An alternate argument would be that greater inequality gives wealthier individuals both greater means and motive to promote religiosity among their fellow citizens [see, e.g., @Solt2011a; @Solt2014a], and more religiosity in turn works to decrease tolerance [see, e.g., @Adamczyk2009].  We leave distinguishing between these arguments to future research.]
+The piece argues that postmaterialist theory [see, e.g., @Inglehart2005] implies that greater inequality should be expected to yield greater intolerance of homosexuality: if economic prosperity is what allows societies to leave such traditional biases behind, then when a society's prosperity is not broadly shared, more tolerant attitudes will not be broadly shared either.^[
+An alternate theory would be that greater inequality gives wealthier individuals both greater means and motive to promote religiosity among their fellow citizens [see, e.g., @Solt2011a; @Solt2014a], and more religiosity in turn works to decrease tolerance [see, e.g., @Adamczyk2009].  We leave distinguishing between these two theories to future research.]
 Supporting this view, its analysis found that more economic inequality leads to more intolerance of homosexuality.
 Despite this article's influence, its conclusion was flagged by @Adamczyk2019 [, 415] in a recent review of the literature as one for which "more research is needed to replicate and confirm these findings."
 Indeed, one recent work has found no support at all for the hypothesized relationship between inequality and attitudes toward homosexuality [@Zhang2019, 515].
@@ -1237,12 +1242,10 @@ if (!file.exists(here::here("data", "m2_results.rda"))) {
 } else {
   load(file = here::here("data", "m2_results.rda"))
 }  
-
 ```
 
 The TOLH data allows us to revisit this hypothesis with many, many more observations from a broader sample of countries than either of these two previous works and also to assess whether tolerance in democratic countries is distinctively sensitive to income inequality.
-Our democratic sample includes the 36 democracies of the OECD,^[
-That is, this sample excludes the OECD's two members with competitive authoritarian regimes, Hungary and Turkey.] each observed in 21 (Costa Rica) to 49 (the United States) consecutive years (mean: `r cy_summary %>% nth(4) %>% round(1)` years, median: `r cy_summary %>% nth(3)` years), a total of `r data_combo %>% filter(country %in% oecd_democracies) %>% nrow()` country-year observations.
+Our democratic sample includes the 36 democratic countries of the OECD, each observed in 21 (Costa Rica) to 49 (the United States) consecutive years (mean: `r cy_summary %>% nth(4) %>% round(1)` years, median: `r cy_summary %>% nth(3)` years), a total of `r data_combo %>% filter(country %in% oecd_democracies) %>% nrow()` country-year observations.
 The broader sample of all countries includes `r data_combo %>% distinct(country) %>% nrow()` countries, observed in `r cy_summary_all %>% first()` to `r cy_summary_all %>% last()` consecutive years each, for a total of `r data_combo %>% nrow()` country-year observations.
 That is, the TOLH provides a number of country-years observations for our sample of democracies that is some `r {data_combo %>% filter(country %in% oecd_democracies) %>% nrow()/63} %>% round()` times greater than that considered in @Andersen2008, and it gives us a number of country-years in our sample of all countries that is about `r {data_combo %>% nrow()/214} %>% round()` times greater than that in the sample employed in @Zhang2019.
 This much larger evidentiary base provides us with a much firmer basis for drawing conclusions [see, e.g., @King2021, 23].
