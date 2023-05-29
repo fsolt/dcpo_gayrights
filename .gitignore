@@ -21,8 +21,8 @@ slides/*mpsa*
 slides/*slamm*
 slides/*key
 slides/*2018*
-data/gm*.rda
-data/ab*.rda
+data/2000/*
 data/all*.rda
 data/x1.csv
-
+data-raw/swiid9_4*
+data-raw/oecd_data.rda
