@@ -26,3 +26,4 @@ data/all*.rda
 data/x1.csv
 data-raw/swiid9_4*
 data-raw/oecd_data.rda
+paper/dcpo_gayrights_files/*
