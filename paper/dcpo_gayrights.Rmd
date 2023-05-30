@@ -1009,7 +1009,7 @@ Noting the particular importance to democracies of tolerance of social and polit
 Its analyses included 35 countries, observed in just one to four years each, for a total of 63 country-years, that is, a mean of 1.8 years observed per country.
 The sample analyzed in @Zhang2019, on the other hand, incorporated a wider range of cases including non-democracies.
 This broader scope---along with the additional WVS survey waves conducted in the time between the two pieces' writing---yielded 88 countries and 214 country-year observations for an increased mean number of years observed of 2.4 per country.
-So although the different conclusion reached by @Zhang2019 may reflect the larger number of countries that study included [see @Zhang2019, 517], it may also result from the inclusion of non-democratic countries. 
+So although the different conclusion reached by @Zhang2019 may reflect the larger number of countries that study included [see @Zhang2019, 517], it may have also resulted from the inclusion of non-democratic countries. 
 
 ```{r data_combo}
 if (!file.exists(here::here("data", "data_combo.rda"))) {
@@ -1230,17 +1230,20 @@ if (!file.exists(here::here("data", "m2_results.rda"))) {
 }  
 ```
 
-The TOLH data allow us to revisit this hypothesis with many, many more observations from a broader sample of countries than either of these two previous works and also to assess whether tolerance in democratic countries is distinctively sensitive to income inequality.
+The TOLH data allow us to revisit the @Andersen2008 hypothesis with many, many more observations of economic inequality and tolerance from a broader sample of countries than either of these two previous works and also to assess whether tolerance in democratic countries is distinctively sensitive to income inequality.
 Our sample of democracies includes the 36 democratic countries of the OECD, each observed in 21 (Costa Rica) to 49 (the United States) consecutive years (mean: `r cy_summary %>% nth(4) %>% round(1)` years, median: `r cy_summary %>% nth(3)` years), a total of `r data_combo %>% filter(country %in% oecd_democracies) %>% nrow()` country-year observations.
 The broader sample of all countries includes `r data_combo %>% distinct(country) %>% nrow()` countries, observed in `r cy_summary_all %>% first()` to `r cy_summary_all %>% last()` consecutive years each, for a total of `r data_combo %>% nrow()` country-year observations.
 That is, the TOLH dataset provides a number of country-years observations for our sample of democracies that is some `r {data_combo %>% filter(country %in% oecd_democracies) %>% nrow()/63} %>% round()` times greater than that considered in @Andersen2008, and it gives us a number of country-years in our sample of all countries that is about `r {data_combo %>% nrow()/214} %>% round()` times greater than that in the sample employed in @Zhang2019.
 This much larger evidentiary base provides us with a much firmer basis for drawing conclusions [see, e.g., @King2021, 23].
 
-Economic inequality is measured using the Gini index of disposable income inequality from the Standardized World Income Inequality Database [@Solt2020].
-Data on GDP per capita (in thousands of constant 2015 U.S. dollars) are provided by the World Bank's World Development Indicators [@World-Bank2023].
-Marriage equality is measured dichotomously, coded one in country-years where same-sex marriage was legal and zero otherwise.
-A series of country-level variables to identify a country's religious heritage are also dichotomous: countries are coded as having alternately a Catholic, Orthodox, Eastern, or Islamic heritage, with those with a Protestant heritage treated as the reference category.
+The independent variable, economic inequality, is measured using the Gini index of disposable income inequality.
+The Gini index ranges from 0, indicating perfect equality in the distribution, in this case, of income after taxes and government transfers, to 100, indicating a perfectly unequal distribution in which a single household receives all such income.
+The data are drawn from the Standardized World Income Inequality Database [@Solt2020].
 
+We also include the country-year- and country-level control variables included in the analysis in @Andersen2008.
+Data on GDP per capita (in thousands of constant 2015 U.S. dollars) are provided by the World Bank's World Development Indicators [@World-Bank2023].
+A series of dichotomous country-level variables identify a country's religious heritage---countries are coded as having alternately a Catholic, Orthodox, Eastern, or Islamic heritage, with those with a Protestant heritage treated as the reference category---and countries with a Communist history are also identified with such a variable [see @Inglehart2005].
+Finally, although its presence does not impact the results, we add a dichotomously-coded variable for the presence of marriage equality, which takes on a value one in country-years where same-sex marriage was legal and zero otherwise (at the time of publication of @Andersen2008, only five countries had legalized same-sex marriage, and the data analyzed in that piece ended before any of those policy adoptions).
 
 @Shor2007 shows that the best way to analyze such pooled time series is by using a Bayesian multilevel model that includes varying intercepts for each country and for each year. 
 Varying intercepts for each country help account for heteroskedasticity across space due to, e.g., omitted variable bias, while permitting the inclusion of time-invariant predictors such as religious heritage and communist past.
@@ -1307,6 +1310,12 @@ coef_data0 %>%
   plot_annotation(caption = "Notes: Dots indicate posterior means; whiskers, from thickest to thinnest, describe 80%,\n90%, and 95% credible intervals; shading depicts the posterior probability density function.")
 ```
 
+The results are presented in Figure\nobreakspace{}\ref{model}.
+Greater income inequality is associated with less tolerance of homosexuality, both in the long run and in the short term, in both samples of countries.
+Looking at the 'historical,' long-run effect of income inequality, we see that in the democratic sample, a two-standard deviation increase in a country's mean inequality is associated with `r get_coef("gini_mean", type = "std_coef") %>% str_remove("-")` points less tolerance (95% credible interval: `r get_coef("gini_mean", type = "ci")` points), while across all countries this estimated difference was `r get_coef("gini_mean", results_df = coef_data_all)` points.
+In the short run, a two-standard-deviation year-to-year change was found to decrease tolerance `r get_coef("gini_diff", type = "std_coef") %>% str_remove("-")` points (95% c.i.:`r get_coef("gini_diff", type = "ci")`) among democracies.
+If anything, the estimated decline in tolerance was even larger when all countries are considered: `r get_coef("gini_diff", results_df = coef_data_all) %>% str_remove("-")` points.
+Having much more data provides strong evidence that income inequality decreases tolerance of homosexuality and that democracies are not particularly sensitive to this effect.
 
 
 \pagebreak
