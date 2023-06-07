@@ -2,6 +2,7 @@
 title: "gayrights-lit"
 output: html_document
 date: "2023-05-31"
+bibliography: dcpo-gayrights.bib
 ---
 
 ```{r setup, include=FALSE}
