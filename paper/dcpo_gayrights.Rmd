@@ -310,9 +310,12 @@ by2sd <- function(var) {
 set.seed(324)
 ```
 
-#On Examining Attitudes toward Homosexuality 
+Public attitudes toward homosexuality have been rapidly changing toward greater tolerance in many countries over the past several decades, and these shifts have attracted sustained interest from researchers.
 
-Both rights and attitudes toward homosexuality has increased overtime, and this trend has been noticed by many polls and researchers.
+
+# Existing Research on Attitudes Toward Homosexuality 
+
+Both rights and attitudes toward homosexuality has increased over time, and this trend has been noticed by many polls and researchers.
 As such, studies in this field have examined what are the determinants that shape the opinion toward homosexuality.
 Many of previous studies, however, have focused on a single country due to the sparsity and incomparability of survey data with relevant questions.
 While a few cross-national studies help bring comparative perspective as well as identify important factors at the country-level, a scarcity of cross-national studies leave a room for necessity of confirmation of these findings [@Adamczyk2019].
