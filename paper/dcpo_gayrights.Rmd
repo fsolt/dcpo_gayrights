@@ -350,14 +350,14 @@ That said, single-country-focused studies are less interested in country-level f
 In comparison to single-country studies, a relatively small portion of studies examine cross-national over time.
 These studies have used regional (e.g., Eurobarometer, European Values Study, Latinobarometer) or global surveys (e.g., International Social Survey Programme, Pew Global Attitudes Project, or World Values Survey) as primary data sources and are more engaged with finding country-level characteristics that shape opinions toward homosexuality.
 Both poll data and studies have found that public opinion have been changed toward more liberal direction across the world [@corrales2017understanding; @hadler2012influence], although some conservative shifts have been found [@strand2011kill].
-In addition, previous studies have illustrated that features such as economic development [@hooghe2013same], historical legacy [@asal2013original], political context [@zhang2019tolerance], and religious context [@van2013disapproval] have shape opinion toward homosexuality.^[
+In addition, previous studies have illustrated that features such as economic development [@hooghe2013same], historical legacy [@asal2013original], political context [@Zhang2019], and religious context [@van2013disapproval] have shape opinion toward homosexuality.^[
 We would like to note that studies on attitudes toward homosexuality also have examined individual-level features. Previous studies have found that individual contexts---such as age [@finke2008cross], education [@kozloski2010homosexual; @lambert2006college], gender [@dodge2016attitudes; @rye2010self], direct or indirect linkage [@becker2012determinants; @brewer2007value; @lee2019changing], and religion [@hooghe2013same; @sherkat2010race]---have an impact on shaping attitudes. However, these are not actively discussed in the main text because the current study’s focus is at the country-level with comparative perspectives.] 
 
 The issue, however, is that some of the previous findings conflict with each other.^[
 Conflicting conclusions are also found from the studies that focused on individual-level factors.]
 For example, many cross-national studies as well as a few single-country studies have examined the postmaterialist thesis that more developed societies will have higher levels of social tolerance [@inglehart1990culture; @inglehart2000modernization].
-Using the same data source (WVS) with differences in spatial and temporal coverage, @Anderson2008 and @Zhang2019 reach different conclusions.
-Focusing on 35 democracies between 1990 and 2002, @Anderson2008 found that national economic context is important factor of shaping public opinion toward homosexuality.
+Using the same data source (WVS) with differences in spatial and temporal coverage, @Andersen2008 and @Zhang2019 reach different conclusions.
+Focusing on 35 democracies between 1990 and 2002, @Andersen2008 found that national economic context is important factor of shaping public opinion toward homosexuality.
 Increasing both geographical and temporal coverage (88 countries between 1981 and 2014), however, @Zhang2019 showed that economic development is not as substantial as previous studies found.
 Moreover, they found that economic inequality does not affect attitudes on homosexuality.
 
@@ -370,7 +370,7 @@ On top of conflicting findings, two limitations further stand out from previous 
 First, from our knowledge, there is no comprehensive cross-national longitudinal data available to researchers.
 As discussed earlier, a few countries are rich on single country over time data, but most countries do not have that benefits.
 Obtaining cross-country over time data is much harder, and therefore, many cross-country studies have examined a handful of countries with a small time span.
-More recent studies take the advantage of survey data across the world [e.g., @zhang2019tolerance], although these are exceptional cases. 
+More recent studies take the advantage of survey data across the world [e.g., @Zhang2019], although these are exceptional cases. 
 
 In addition, most of available cross-national survey data have a regional focus.
 This leads to researchers focusing more on data-rich regions such as North America and Europe.
