@@ -318,25 +318,21 @@ set.seed(324)
 Public attitudes toward homosexuality have been changing toward greater tolerance in many countries over the past several decades, and these often-rapid shifts have attracted sustained interest from researchers.
 The resulting scholarship has been hampered, however, by the limited available data on these trends in public opinion.
 Mirroring the coverage of the survey projects on which they were based, these works have either investigated the causes or consequences of dynamics in public opinion over time in only one country or region [see, e.g., @Abou-Chadi2019; @Dotti-Sani2022], on the one hand, or differences in public opinion across a broad cross-regional sample of countries but in just a small number of years, on the other [see, e.g., @Ayoub2017; @Adamczyk2019a].
-Indeed, given the severe contraint of data availability on this topic, it is not at all surprising that there are also important contributions, even recently, that have been limited in *both* space *and* time [see, e.g., @Lax2009; @Zhou2020; @Winkler2021; @Paradela-Lopez2023].
+Indeed, given the severe contraint of data availability on this topic, it is not at all surprising that there are also important contributions, even recently, that have been limited in _both_ space _and_ time [see, e.g., @Lax2009; @Zhou2020; @Winkler2021; @Paradela-Lopez2023].
+The paucity of comparable data that has shaped this literature undermines our confidence in our understanding not only because the data are scant in general but also because they are biased geographically.
+Naturally, the narrower the evidentiary base upon which conclusions are built, the more susceptible these conclusions will be to collapse [see @King2021, 23].
+However, this is especially true where, as here, what suitable data exist are geographically concentrated.
+There is much more data, and hence research, on public opinion regarding homosexuality in the countries of Europe and North America than elsewhere [@Adamczyk2019, 406]; this geographic bias makes scope conditions difficult to discern and so potentially leaves even theories that find empirical support less generally applicable than perhaps often assumed [see @Wilson2022, 1037].
 
-The paucity of data that has shaped this literature undermines our confidence in our understanding not only because the data are scant in general but also because they are biased geographically.
-Naturally, the narrower the evidentiary base upon which we build our conclusions, the more susceptible these conclusions will be to collapse [see @King2021, 23].
-However, this is especially true where, as here, the data we have is geographically concentrated.
-There is much more data, and hence research, on public opinion regarding homosexuality in the countries of Europe and North America than elsewhere [@Adamczyk2019, 406]; this geographic bias makes scope conditions difficult to discern and so potentially leaves our theories less generally applicable than perhaps typically assumed [see @Wilson2022, 1037].
+This article presents the Tolerance of Homosexuality (TOL-H) dataset.
+The TOL-H dataset combines a comprehensive collection of responses to national and cross-national surveys with recent developments in latent-variable modeling of public opinion to provide estimates of public attitudes toward homosexuality that are comparable across countries and over time.
+These latent-variable estimates perform well in validation tests: they are very strongly correlated with single survey items tapping views of homosexuality, and they also relate strongly to other concepts thought causally connected to public opinion on homosexuality.
+The TOL-H dataset provides a much firmer basis for testing the implications of theories by providing many more observations across a wider scope of countries and time than previously available sources.
+We demonstrate its potential in this regard by replicating the foundational but recently questioned finding of @Andersen2008 that greater income inequality yields less tolerance.
+The TOL-H data will, we expect, become an invaluable source for broadly cross-national and longitudinal research on the sources and consequences of tolerance of homosexuality.
 
 
-
-# Existing Research on Attitudes Toward Homosexuality
-
-Both rights and attitudes toward homosexuality has increased over time, and this trend has been noticed by many polls and researchers.
-As such, studies in this field have examined what are the determinants that shape the opinion toward homosexuality.
-Many of these previous studies, however, have focused on a single country due to the sparsity and incomparability of survey data with relevant questions.
-While a few cross-national studies help bring comparative perspective as well as identify important factors at the country-level, a scarcity of cross-national studies leave a room for necessity of confirmation of these findings [see @Adamczyk2019, XX-XX].
-In an ideal world, we would like to have the full time series of every country and every year with different dimensions of homosexuality rights.
-We are, unfortunately, not living in that universe.
-As a possible next best option, we propose TOL-H data which is a comprehensive dataset on the attitudes toward homosexuality based on available survey data across the world.
-Before introducing TOL-H, this section will provide a brief overview of studies of attitudes toward homosexuality.
+# Reviewing Existing Research on Attitudes Toward Homosexuality
 
 Changes in attitudes over time and determinants of opinion shifts are key questions in public opinion studies.
 To assess these questions, it is important to have longitudinal data.
@@ -345,11 +341,11 @@ Based upon data availability, many initial studies have examined United States t
 
 For example, @lee2019changing evaluated changes of attitudes toward same-sex marriage between 2008 and 2016 by using three waves of national online panel survey.
 Thy found that increase in level of education and interpersonal contact with LGBTQ+ community as well as decrease in religiosity increase the support for same-sex marriage.
-Daniels [-@daniels2019evolution] also examined the same rights but using data from the Pew Research Center and the National Opinion Research Center with temporal range between 1998 and 2014.
+@daniels2019evolution also examined the same rights but using data from the Pew Research Center and the National Opinion Research Center with temporal range between 1998 and 2014.
 This study found that ideology, partisanship, personnel connection, religion, and generation have impacts on forming attitudes toward homosexuality.
 Looking at different LGBTQ+ rights (namely, conversion therapy and denials of service based on religious beliefs), @flores2020public illustrated that some of individual features---such as age, race, party affiliation, education level, and interpersonal contact---could be occasionally inconsistent with previous findings.
 
-More recent studies opinion towards homosexuality in different countries such as Chile [@paradela2023much], Japan [@naka2022gendered], South Korea [@rich2020proximity], and Taiwan [@cheng2016changing].
+More recent studies opinion towards homosexuality in different countries such as Chile [@Paradela-Lopez2023], Japan [@naka2022gendered], South Korea [@rich2020proximity], and Taiwan [@cheng2016changing].
 Overall, these studies echo with the previous studies especially from US, which emphasizes the importance of socioeconomic features in forming tolerance toward homosexuality; these studies, however, also presented contextual differences between Western and non-Western countries in terms of opinion toward homosexuality.
 
 Collectively, studies focused on single country over time contribute our understanding in attitudes toward homosexuality in two ways.
@@ -360,25 +356,28 @@ That said, single-country-focused studies are less interested in country-level f
 In comparison to single-country studies, a relatively small portion of studies examine cross-national over time.
 These studies have used regional (e.g., Eurobarometer, European Values Study, Latinobarometer) or global surveys (e.g., International Social Survey Programme, Pew Global Attitudes Project, or World Values Survey) as primary data sources and are more engaged with finding country-level characteristics that shape opinions toward homosexuality.
 Both poll data and studies have found that public opinion have been changed toward more liberal direction across the world [@corrales2017understanding; @hadler2012influence], although some conservative shifts have been found [@strand2011kill].
-In addition, previous studies have illustrated that features such as economic development [@hooghe2013same], historical legacy [@asal2013original], political context [@Zhang2019], and religious context [@van2013disapproval] have shape opinion toward homosexuality.[^1]
+In addition, previous studies have illustrated that features such as economic development [@hooghe2013same], historical legacy [@asal2013original], political context [@Zhang2019], and religious context [@van2013disapproval] have shape opinion toward homosexuality.
+<!-- ^[ -->
+<!-- We would like to note that studies on attitudes toward homosexuality also have examined individual-level features. -->
+<!--     Previous studies have found that individual contexts---such as age [@finke2008cross], education [@kozloski2010homosexual; @lambert2006college], gender [@dodge2016attitudes; @rye2010self], direct or indirect linkage [@becker2012determinants; @brewer2007value; @lee2019changing], and religion [@hooghe2013same; @sherkat2010race]---have an impact on shaping attitudes. -->
+<!--     However, these are not actively discussed in the main text because the current study's focus is at the country-level with comparative perspectives. -->
+<!-- ] -->
 
-[^1]: We would like to note that studies on attitudes toward homosexuality also have examined individual-level features.
-    Previous studies have found that individual contexts---such as age [@finke2008cross], education [@kozloski2010homosexual; @lambert2006college], gender [@dodge2016attitudes; @rye2010self], direct or indirect linkage [@becker2012determinants; @brewer2007value; @lee2019changing], and religion [@hooghe2013same; @sherkat2010race]---have an impact on shaping attitudes.
-    However, these are not actively discussed in the main text because the current study's focus is at the country-level with comparative perspectives.
 
-The issue, however, is that some of the previous findings conflict with each other.[^2]
+The issue, however, is that some of the previous findings conflict with each other.
+<!-- ^[ -->
+<!-- Conflicting conclusions are also found from the studies that focused on individual-level factors. -->
+
+<!-- Less intense but still important discrepancies are found with different country-level factors. -->
+<!-- For instance, many of previous studies have highlighted the importance of religion as an important feature that shapes attitudes toward homosexuality both at the individual level [@adamczyk2017cross; @adamczyk2016place; @finke2008cross; @sherkat2010race; @van2013disapproval] and the country level [@adamczyk2017cross; @asal2013original; @finke2008cross]. -->
+<!-- Specifically, studies have shown that a country's dominant religion or overall level of religiosity can have important impacts [@adamczyk2009shaping; @finke2008cross; @van2013disapproval]. -->
+<!-- Some studies, however, have noticed the declining role of the religion [see @lee2019changing] and the importance of considering cultural differences (e.g., impact of cultural taboos or cultural orientation) with religious impact [@adamczyk2009shaping]. -->
+<!-- ] -->
 For example, many cross-national studies as well as a few single-country studies have examined the postmaterialist thesis that more developed societies will have higher levels of social tolerance [@inglehart1990culture; @inglehart2000modernization].
 Using the same data source (WVS) with differences in spatial and temporal coverage, @Andersen2008 and @Zhang2019 reach different conclusions.
 Focusing on 35 democracies between 1990 and 2002, @Andersen2008 found that national economic context is important factor of shaping public opinion toward homosexuality.
 Increasing both geographical and temporal coverage (88 countries between 1981 and 2014), however, @Zhang2019 showed that economic development is not as substantial as previous studies found.
 Moreover, they found that economic inequality does not affect attitudes on homosexuality.
-
-[^2]: Conflicting conclusions are also found from the studies that focused on individual-level factors.
-
-Less intense but still important discrepancies are found with different country-level factors.
-For instance, many of previous studies have highlighted the importance of religion as an important feature that shapes attitudes toward homosexuality both at the individual level [@adamczyk2017cross; @adamczyk2016place; @finke2008cross; @sherkat2010race; @van2013disapproval] and the country level [@adamczyk2017cross; @asal2013original; @finke2008cross].
-Specifically, studies have shown that a country's dominant religion or overall level of religiosity can have important impacts [@adamczyk2009shaping; @finke2008cross; @van2013disapproval].
-Some studies, however, have noticed the declining role of the religion [see @lee2019changing] and the importance of considering cultural differences (e.g., impact of cultural taboos or cultural orientation) with religious impact [@adamczyk2009shaping].
 
 On top of conflicting findings, two limitations further stand out from previous studies.
 First, from our knowledge, there is no comprehensive cross-national longitudinal data available to researchers.
