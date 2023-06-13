@@ -363,7 +363,6 @@ In addition, previous studies have illustrated that features such as economic de
 <!--     However, these are not actively discussed in the main text because the current study's focus is at the country-level with comparative perspectives. -->
 <!-- ] -->
 
-
 The issue, however, is that some of the previous findings conflict with each other.
 <!-- ^[ -->
 <!-- Conflicting conclusions are also found from the studies that focused on individual-level factors. -->
@@ -1594,3 +1593,55 @@ dcpo_input_raw1 %>%
 ```
 
 \pagebreak
+# Appendix B: The DCPO Model
+
+Research on latent variable models of public opinion based on cross-national survey data has enjoyed explosive growth in recent years [see @Claassen2019; @Caughey2019; @McGann2019; @Kolczynska2020].
+To estimate tolerance of homosexuality across countries and over time, we draw on the latest of these methods that is appropriate for data that is not only incomparable but also sparse, the Dynamic Comparative Public Opinion (DCPO) model presented in @Solt2020c.^[
+@Solt2020c demonstrates that the DCPO model provides a better fit to survey data than the models put forward by @Claassen2019 or @Caughey2019.
+The @McGann2019 model depends on dense survey data unlike the sparse data on public gender egalitarianism described in the preceding section.
+@Kolczynska2020 is the very most recent of the five works and builds on each of the others, but the MRP approach developed in that piece is suitable not only when the available survey data are dense but also when ancillary data on population characteristics are available, so it is similarly inappropriate to this application.]
+The DCPO model is a population-level two-parameter ordinal logistic item response theory (IRT) model with country-specific item-bias terms.
+
+DCPO models the total number of survey responses expressing at least as much tolerance of homosexuality as response category $r$ to each question $q$ in country $k$ at time $t$, $y_{ktqr}$, out of the total number of respondents surveyed, $n_{ktqr}$, using the beta-binomial distribution:
+
+\begin{equation}
+a_{ktqr} = \phi\eta_{ktqr} \label{eq:bb_a}
+\end{equation}
+\begin{equation}
+b_{ktqr} = \phi(1 - \eta_{ktqr}) \label{eq:bb_b}
+\end{equation}
+\begin{equation}
+y_{ktqr} \sim \textrm{BetaBinomial}(n_{ktqr}, a_{ktqr}, b_{ktqr}) \label{eq:betabinomial}
+\end{equation}
+
+where $\phi$ represents an overall dispersion parameter to account for additional sources of survey error beyond sampling error and $\eta_{ktqr}$ is the expected probability that a random person in country $k$ at time $t$ answers question $q$ with a response at least as positive as response $r$.^[
+The ordinal responses to question $q$ are coded to range from 1 (expressing the least tolerance of homosexuality) to $R$ (expressing the most tolerance of homosexuality), and $r$ takes on all values greater than 1 and less than or equal to $R$.]
+
+This expected probability, $\eta_{ktqr}$, is in turn estimated as follows:
+
+\begin{equation}
+\eta_{ktqr} = \textrm{logit}^{-1}(\frac{\bar{\theta'}_{kt} - (\beta_{qr} + \delta_{kq})}{\sqrt{\alpha_{q}^2 + (1.7*\sigma_{kt})^2}}) \label{eq:dcpo}
+\end{equation}
+
+In this equation, $\beta_{qr}$ represents the difficulty of response $r$ to question $q$, that is, the degree of tolerance the response expresses.  The $\delta_{kq}$ term represents country-specific item bias: the extent to which all responses to a particular question $q$ may be more (or less) difficult in a given country $k$ due to translation issues, cultural differences in response styles, or other idiosyncrasies that render the same survey item not equivalent across countries.^[
+Estimating $\delta_{kq}$ requires repeated administrations of question $q$ in country $k$, so
+when responses to question $q$ are observed in country $k$ in only a single year, the DCPO model sets $\delta_{kq}$ to zero by assumption, increasing the error of the model by any country-item bias that is present.
+Questions that are asked repeatedly over time in only a single country pose no risk of country-specific item bias, so $\delta_{kq}$ in such cases are also set to zero.]
+The dispersion of question $q$, its noisiness in relation to our latent variable, is $\alpha_{q}$. The mean and standard deviation of the unbounded latent trait of tolerance of homosexuality are $\bar{\theta'}_{kt}$ and $\sigma_{kt}$, respectively.
+
+Random-walk priors are used to account for the dynamics in $\bar{\theta'}_{kt}$ and $\sigma_{kt}$, and weakly informative priors are placed on the other parameters.^[
+The dispersion parameters $\alpha_{q}$ are drawn from standard half-normal prior distributions, that is, the positive half of N(0, 1).
+The first difficulty parameters for each question, $\beta_{q1}$, are drawn from standard normal prior distributions, and the differences between $\beta$s for each $r$ for the same question $q$ are drawn from standard half-normal prior distributions.
+The item-bias parameters $\delta_{kq}$ receive normally-distributed hierarchical priors with mean 0 and standard deviations drawn from standard half-normal prior distributions.
+The initial value of the mean unbounded latent trait for each country, $\bar{\theta'}_{k1}$, is assigned a standard normal prior, as are the transition variances $\sigma_{\bar{\theta'}}^2$ and $\sigma_{\sigma}^2$; the initial value of the standard deviation of the unbounded latent trait for each country, $\sigma_{k1}$, is drawn from a standard lognormal prior distribution.
+The overall dispersion, $\phi$, receives a somewhat more informative prior drawn from a gamma(4, 0.1) distribution that yields values that are well scaled for that parameter.]
+The dispersion parameters $\alpha_q$ are constrained to be positive and all survey responses are coded with high values indicating more tolerance to fix direction.
+The difficulty $\beta$ of "not so bad" (on a four-point scale ranging from "very bad" through "fairly bad" and "not so bad" to "not at all bad") of reactions to "a sexual relationship between two adults of the same sex" is set to 1 to identify location, and for each question $q$ the difficulties for increasing response categories $r$ are constrained to be increasing.
+The sum of $\delta_{kq}$ across all countries $k$ is set to zero for each question $q$:
+
+\begin{equation}
+\sum_{k = 1}^K \delta_{kq} = 0
+\end{equation}
+
+Finally, the logistic function is used to transform $\bar{\theta'}_{kt}$ to the unit interval and so give the bounded mean of latent tolerance of homosexuality, $\bar{\theta}_{kt}$, which is our parameter of interest here [see @Solt2020c, 3-8].
+
