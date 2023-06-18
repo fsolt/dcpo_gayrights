@@ -318,26 +318,26 @@ set.seed(324)
 Public attitudes toward homosexuality have been changing toward greater tolerance in many countries over the past several decades, and these often-rapid shifts have attracted sustained interest from researchers.
 The resulting scholarship has been hampered, however, by the limited available data on these trends in public opinion.
 Mirroring the coverage of the survey projects on which they were based, these works have either investigated the causes or consequences of dynamics in public opinion over time in only one country or region [see, e.g., @Abou-Chadi2019; @Dotti-Sani2022], on the one hand, or differences in public opinion across a broad cross-regional sample of countries but in just a small number of years, on the other [see, e.g., @Ayoub2017; @Adamczyk2017].
-Indeed, given the severe contraint of data availability on this topic, it is not at all surprising that there are also important contributions, even recently, that have been limited in _both_ space _and_ time [see, e.g., @Lax2009; @Zhou2020; @Winkler2021; @Paradela-Lopez2023].
+Indeed, given the severe contraint of data availability on this topic, it is not at all surprising that there are also important contributions, even recently, that are limited in _both_ space _and_ time [see, e.g., @Lax2009; @Zhou2020; @Winkler2021; @Paradela-Lopez2023].
 The paucity of comparable data that has shaped this literature undermines our confidence in our understanding not only because the data are scant in general but also because they are biased geographically.
 Naturally, the narrower the evidentiary base upon which conclusions are built, the more susceptible these conclusions will be to collapse [see @King2021, 23].
 However, this is especially true where, as here, what suitable data exist are geographically concentrated.
-There is much more data, and hence research, on public opinion regarding homosexuality in the countries of Europe and North America than elsewhere [@Adamczyk2019, 406]; this geographic bias makes scope conditions difficult to discern and so potentially leaves even theories that find empirical support less generally applicable than perhaps often assumed [see @Wilson2022, 1037].
+There is much more data and hence research on public opinion regarding homosexuality in the countries of Europe and North America than elsewhere [@Adamczyk2019, 410]; this geographic bias makes scope conditions difficult to discern and so potentially leaves even theories that find empirical support less generally applicable than perhaps often assumed [see @Wilson2022, 1037].
 
 This article presents the Tolerance of Homosexuality (TOL-H) dataset.
 The TOL-H dataset combines a comprehensive collection of responses to national and cross-national surveys with recent developments in latent-variable modeling of public opinion to provide estimates of public attitudes toward homosexuality that are comparable across countries and over time.
 These latent-variable estimates perform well in validation tests: they are very strongly correlated with single survey items tapping views of homosexuality, and they also relate strongly to other concepts thought causally connected to public opinion on homosexuality.
 The TOL-H dataset provides a much firmer basis for testing the implications of theories by providing many more observations across a wider scope of countries and time than previously available sources.
 We demonstrate its potential in this regard by replicating the foundational but recently questioned finding of @Andersen2008 that more income inequality yields less tolerance.
-The TOL-H data will, we expect, become an invaluable source for broadly cross-national and longitudinal research on the sources and consequences of tolerance of homosexuality.
+We anticipate that the TOL-H data will become a crucial source for cross-regional, cross-national, and longitudinal research that improves our understanding of the sources and consequences of tolerance of homosexuality.
 
 
-# Reviewing Existing Research on Attitudes Toward Homosexuality
+# Existing Research on Attitudes Toward Homosexuality
 
-Changes in attitudes over time and determinants of opinion shifts are key questions in public opinion studies.
-To assess these questions, it is important to have longitudinal data.
-United States is one of a few data rich countries in this regard, having been asked LGBTQ-related issue questions dated back more than 50 years (e.g., General Social Survey (GSS) in 1973).
-Based upon data availability, many initial studies have examined United States to understand what shapes the attitudes toward homosexuality.
+How attitudes have changed over time, what are the determinants of these opinion shifts, and what are their impacts are key questions in studies of public opinion.
+Longitudinal data is critical to answering these questions.
+United States is one of few countries rich in longitudinal data, with LGBTQ-related questions having been asked in the General Social Survey (GSS) over a period of more than 50 years starting in 1973.
+This many initial studies have examined United States to understand what shapes the attitudes toward homosexuality.
 
 For example, @lee2019changing evaluated changes of attitudes toward same-sex marriage between 2008 and 2016 by using three waves of national online panel survey.
 Thy found that increase in level of education and interpersonal contact with LGBTQ+ community as well as decrease in religiosity increase the support for same-sex marriage.
@@ -499,7 +499,7 @@ In all, we identified `r n_items` items that were asked in no fewer than five co
 The complete list of survey items is included in Appendix A.]
 Together, these items were asked in `r n_countries` different countries in at least three time points over the `r n_years` years `r year_range`, yielding a total of `r n_cyi` country-year-item observations.
 Observations for every year in each country surveyed would total `r total_cy`, and a complete set of country-year-items would include `r {n_countries * n_years * n_items} %>% scales::comma()` observations.
-Viewed from this complete-data perspective, the available source data can be seen to be very, very sparse.
+Viewed from this complete-data perspective, the sparsity of the available source data is readily evident.
 On the other hand, we do have in the source data `r n_cy` country-years for which we have at least _some_ information about the extent of tolerance of homosexuality in the population, that is, very nearly `r round(covered_share_of_spanned)`% of the `r spanned_cy` country-years spanned by the data we collected.
 Still, the many different survey items employed render these data incomparable and so difficult to use together.
 
@@ -655,7 +655,7 @@ The available public opinion data on this topic are very sparse as well as incom
 
 The upper left panel of Figure\nobreakspace{}\ref{item_country_plots} shows the dozen countries with the highest count of country-year-item observations.
 The United States, with `r us_obs` observations, is far and away the best represented country in the source data, followed by `r others`.
-As @Adamczyk2019 [, 406] notes, more data has been collected in North America and Europe than in the rest of the world.
+As the review in @Adamczyk2019 [, 410] notes, more data has been collected in North America and Europe than in the rest of the world.
 At the other end of the spectrum, `r n_data_poorest` countries---`r data_poorest`---have only the minimum two observations required to be included in the source dataset at all.
 The upper right panel shows the twelve countries with the most years observed; this group is similar, but with `r adding` joining the list and `r dropping` dropping off.
 The bottom panel counts the countries observed in each year and reveals just how few relevant survey items were asked before 1990.
@@ -673,7 +673,7 @@ The same thing is true across questions.
 For example, strongly agreeing with the statement "homosexual couples should be able to adopt children" likely expresses even more tolerance than strongly agreeing that same-sex relationships should be recognized by the law.
 Second, the DCPO model accounts for each question's _dispersion_, its noisiness with regard to our latent trait.
 A lower dispersion indicates that changes in responses to the question are more faithfully translated to changes in the underlying tolerance of homosexuality.
-These two parameters, difficulty and dispersion, generate comparable estimates of the latent variable from source data questions that are not directly comparable.
+These two parameters, difficulty and dispersion, together generate comparable estimates of the latent variable from source data questions that are not directly comparable.
 
 The sparsity in the source data---the interruptions in the time series of each country caused by unobserved country-years, and the fact that even many observed country-years have only one or few observed items---is addressed by the DCPO model using local-level dynamic linear models, also known as random-walk priors.
 This means that, for each country, each year's value of tolerance is modeled as the previous year's estimate plus a random shock.
@@ -947,12 +947,12 @@ internal_tscs_plot + internal_cs_plot + internal_ts_plot  +
 ```
 
 Before these estimates can be used, however, they must be validated: the mere fact that we can generate estimates for tolerance of homosexuality does not automatically mean that they are suitable for analysis.
-Just as with any other new measure, validation tests of cross-national latent variables are crucially important [see, e.g., @Hu2023].
+As is the case with any other new measure, validation tests of cross-national latent variables are crucially important [see, e.g., @Hu2023].
 Figure\nobreakspace{}\ref{internal_val} and Figure\nobreakspace{}\ref{ext_val1} provide evidence of this measure's validity with tests of convergent validation and construct validation.
 Convergent validation refers to tests of whether a measure is empirically associated with alternative indicators of the same concept [@Adcock2001, 540].
 In Figure\nobreakspace{}\ref{internal_val}, the TOL-H scores are compared to responses to individual source-data survey items that were used to generate them; this provides an 'internal' convergent validation test [see, e.g., @Caughey2019, 689; @Solt2020c, 10].
 The left panel is a scatterplot of country-years in which the TOL-H scores are plotted against the percentage of respondents who gave an accepting response to the most commonly asked item in the source data: whether homosexuality can always be justified, scored ten, never be justified, scored zero, or something in between.
-For this plot, responses six or greater are considered as indicating that whether respondents consider homosexuality justified more often than not.
+For this plot, responses six or greater are considered as indicating that respondents consider homosexuality justified more often than not.
 The middle panel shows responses to the question with the most data-rich cross-section, "And what about sexual relations between two adults of the same sex, is it always wrong, almost always wrong, wrong only sometimes, or not wrong at all?" in the International Social Survey Program's 2008 module on Religion, plotting our latent variable of tolerance against the percentage who responded "wrong only sometimes" or "not at all." Finally, in the right panel, the U.S.
 General Social Survey's series on this same item---the longest of any item in any single country in the source data---was used to evaluate how well the TOL-H scores capture change over time.
 The correlations, estimated taking into account the uncertainty in the measures, are very strong in all three cases.
@@ -1132,9 +1132,10 @@ The right panel of Figure\nobreakspace{}\ref{ext_val1} plots the TOL-H score of 
 In each of these three cases, the relationship is in the expected direction and strong to very strong.
 The evidence of convergent validation in Figure\nobreakspace{}\ref{ext_val1}, together with the evidence of construct validation in Figure\nobreakspace{}\ref{internal_val}, demonstrates the validity of the TOL-H scores as measures of the public's tolerance of homosexuality.
 
+
 # Testing Theories on the Tolerance of Homosexuality: Revisiting 'Economic Inequality and Intolerance'
 
-As an example of the utility of the TOL-H data, we revisit Andersen and Fetner's [-@Andersen2008] foundational work on economic inequality and intolerance.
+To illustrate the utility of the TOL-H data, we revisit Andersen and Fetner's [-@Andersen2008] foundational work on economic inequality and intolerance.
 The piece argues that postmaterialist theory [see, e.g., @Inglehart2005] implies that greater inequality should be expected to yield greater intolerance of homosexuality: if economic prosperity is what provides societies with the security needed to leave such traditional biases behind, then when a society's prosperity (and security) is not broadly shared, more tolerant attitudes will not be broadly shared either.^[
 An alternate, possibly complementary, theory would be that greater inequality gives wealthier individuals both greater means and enhanced motive to promote religiosity among their fellow citizens [see, e.g., @Solt2011a; @Solt2014b], and more religiosity in turn works to decrease tolerance [see, e.g., @Adamczyk2009]. We leave distinguishing between these two theories to future research.]
 Supporting this view, its analysis found that more economic inequality leads to more intolerance of homosexuality.
@@ -1144,7 +1145,7 @@ Indeed, one recent work finds no support at all for the hypothesized relationshi
 One difference between these two works, @Andersen2008 and @Zhang2019, that is potentially important to their diverging conclusions is the sample employed.
 Both works draw on World Values Survey data, but the group of countries each examines differs in size and in kind.
 Noting the particular importance to democracies of tolerance of social and political difference, @Andersen2008 examined only democratic countries.
-Its analyses included 35 countries, observed in just one to four years each, for a total of 63 country-years, that is, a mean of 1.8 years observed per country.
+The article's analyses included 35 countries, observed in just one to four years each, for a total of 63 country-years, that is, a mean of 1.8 years observed per country.
 The sample analyzed in @Zhang2019, on the other hand, incorporated a wider range of cases including non-democracies.
 This broader scope---along with the additional WVS survey waves conducted in the time between the two pieces' writing---yielded 88 countries and 214 country-year observations for an increased mean number of years observed of 2.4 per country.
 So although the different conclusion reached in @Zhang2019 [, 517] may, as the piece suggests, reflect the larger sample of countries that study included, it may have also resulted from the inclusion of non-democratic countries, revealing a scope condition to the theory presented in @Andersen2008.
@@ -1380,7 +1381,7 @@ The data are drawn from the Standardized World Income Inequality Database [@Solt
 
 We also include the country-year- and country-level control variables included in the analysis in @Andersen2008.
 Data on GDP per capita (in thousands of constant 2015 U.S. dollars) are provided by the World Bank's World Development Indicators [@World-Bank2023].
-A series of dichotomous country-level variables identify a country's religious heritage---countries are coded as having alternately a Catholic, Orthodox, Eastern, or Islamic heritage, with those with a Protestant heritage treated as the reference category---and countries with a Communist history are also identified with such a variable [see @Inglehart2005].
+A series of dichotomous country-level variables identify each country's religious heritage---countries are coded as having alternately a Catholic, Orthodox, Eastern, or Islamic heritage, with those with a Protestant heritage treated as the reference category---and countries with a Communist history are also identified with such a variable [see @Inglehart2005].
 Finally, although its presence does not impact the conclusions drawn below, we add a dichotomously-coded variable for the presence of marriage equality, which takes on a value one in country-years where same-sex marriage was legal and zero otherwise (at the time of publication of @Andersen2008, only five countries had legalized same-sex marriage, and the data analyzed in that piece ended before any of those policy adoptions).
 
 @Shor2007 shows that the best way to analyze such pooled time series is by using a Bayesian multilevel model that includes varying intercepts for each country and for each year.
@@ -1453,7 +1454,35 @@ Greater income inequality is associated with less tolerance of homosexuality, bo
 Looking at the 'historical,' long-run effect of income inequality, we see that in the democratic sample, a two-standard deviation increase in a country's mean inequality is associated with `r get_coef("gini_mean", type = "std_coef") %>% str_remove("-")` points less tolerance (95% credible interval: `r get_coef("gini_mean", type = "ci")` points), while across all countries this estimated difference was `r get_coef("gini_mean", results_df = coef_data_all)` points.
 In the short run, a two-standard-deviation year-to-year change was found to decrease tolerance `r get_coef("gini_diff", type = "std_coef") %>% str_remove("-")` points (95% c.i.:`r get_coef("gini_diff", type = "ci")`) among democracies.
 If anything, the estimated decline in tolerance was even larger when all countries are considered: `r get_coef("gini_diff", results_df = coef_data_all) %>% str_remove("-")` points.
-Having much more data provides strong evidence that income inequality decreases tolerance of homosexuality and that democracies are not particularly sensitive to this effect.
+Having much more data provides strong evidence that income inequality decreases tolerance of homosexuality in public opinion and that democracies are not particularly sensitive to this effect.
+
+<!-- Consistent with previous research, these results also support the postmaterialist argument that economic development, measured as GDP per capita, leads to greater tolerance of homosexuality; estimates of both short-run and long-run effects are positive and credibly different from zero (although only at the 90% level for the latter in the sample of rich democracies). -->
+<!-- Adopting a law recognizing same-sex marriages is estimated to immediately increase tolerance by `r get_coef("gm_diff", results_df = coef_data)` in the OECD democracies and `r get_coef("gm_diff", results_df = coef_data_all)` across all countries. -->
+<!-- Not surprisingly, the results also show that countries that recognized marriage equality earlier---that is, countries with higher means on the marriage equality variable---are more tolerant; this finding reflects not only the longer-term influence of policy on tolerance but also the reciprocal effect of tolerance on policy adoption. -->
+
+<!-- The performance of the religious-heritage variables, which measure differences in tolerance in comparison to historically Protestant countries, is more mixed. -->
+<!-- The evidence is weakest that countries with a Confucian or Buddhist ("Eastern") religious heritage are distinctly different; in neither the OECD democracies nor the broader sample do even the 80% credible intervals exclude zero. -->
+<!-- Across all countries, public opinion in those that are historically Catholic is estimated to be more tolerant by `r get_coef("catholic", results_df = coef_data_all, width = .9)` TOL-H points, but across only the democracies of the OECD, this estimate is very nearly zero. -->
+<!-- Countries with an Orthodox heritage are found to be less tolerant of homosexuality, again compared to those with a Protestant heritage, by `r get_coef("orthodox", results_df = coef_data_all)` points across all countries and, with less confidence, by `r get_coef("orthodox", results_df = coef_data, width = .8)` across rich democracies. -->
+<!-- Public opinion in historically Islamic countries is estimated to be `r get_coef("orthodox", results_df = coef_data_all)` points less tolerant than in historically Protestant countries.^[ -->
+<!-- There are no Islamic-heritage countries among the OECD democracies as Turkey is considered a competitive authoritarian regime, and even were it included, the Islamic variable would be colinear with its country intercept in our multilevel model.] -->
+
+
+# Conclusion
+
+The TOL-H dataset, by combining a comprehensive collection of the available survey data with recent advances in latent variable modeling, provides a new window on public opinion toward homosexuality across space and time.
+Until now, scholars interested in how and why public opinion towards homosexuality has shifted in recent decades and the ramifications of these shifts have struggled with the limited availability of data.
+Surveys with relevant items are sparse, not asked in all countries every year; incomparable, not asking the same questions; and, compounding these two issues, geographically concentrated.
+As a result, research on the topic has been limited, at best, to longitudinal studies of single countries and regions that may not generalize elsewhere or to cross-sections and small panels that offer little leverage against conflating differences across countries with changes over time.
+Our understanding has consequently suffered.
+The TOL-H dataset offers a means of overcoming these problems and gaining a better grasp of the causes and consequences of the extent of tolerance of homosexuality in publics around the world.
+
+Researchers can access the TOL-H data in two ways.
+For those interested in using the TOL-H estimates in statistical analyses, the entire dataset may be downloaded from the Harvard Dataverse.
+And quick comparisons are facilitated by a user-friendly web application on the TOL-H website that plots tolerance over time for up to four countries.
+Updates to the dataset will be released as new survey data on tolerance of homosexuality are made available.
+Current and future versions of the TOL-H should enable a wave of new research on what factors lead a public to hold a greater tolerance of homosexuality and how a more tolerant public influences other social and political phenomena. 
+
 
 \pagebreak
 
