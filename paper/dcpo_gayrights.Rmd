@@ -103,6 +103,9 @@ knitr::opts_chunk$set(
 # If `DCPOtools` is not yet installed:
 # remotes::install_github("fsolt/DCPOtools")
 
+# If `ggmagnify` is not yet installed:
+# remotes::install_github("hughjonesd/ggmagnify")
+
 if (!require(pacman)) install.packages("pacman")
 library(pacman)
 # load all the packages you will use below 
@@ -113,8 +116,10 @@ p_load(
   here,
   countrycode,
   patchwork,
+  ggmagnify,
   ggthemes,
   ggdist,
+  RColorBrewer,
   imputeTS,
   rsdmx,
   osfr,
@@ -332,12 +337,249 @@ We demonstrate its potential in this regard by replicating the foundational but 
 We anticipate that the TOL-H data will become a crucial source for cross-regional, cross-national, and longitudinal research that improves our understanding of the sources and consequences of tolerance of homosexuality.
 
 
-# Existing Research on Attitudes Toward Homosexuality
+# Existing Data and Research on Attitudes Toward Homosexuality
 
-How attitudes have changed over time, what are the determinants of these opinion shifts, and what are their impacts are key questions in studies of public opinion.
-Longitudinal data is critical to answering these questions.
-United States is one of few countries rich in longitudinal data, with LGBTQ-related questions having been asked in the General Social Survey (GSS) over a period of more than 50 years starting in 1973.
-This many initial studies have examined United States to understand what shapes the attitudes toward homosexuality.
+```{r proj-kt-plot, fig.cap="Countries and Mean Years Observed in Survey Datasets \\label{proj_kt_plot}", fig.height=5, fig.width=7, fig.pos='h', cache=FALSE}
+dcpo_input_raw <- read_csv(here::here("data", "dcpo_input_raw.csv"),
+                                  col_types = "cdcddcd")
+
+proj_kt <- dcpo_input_raw %>% 
+  filter(r == 1) %>% 
+  select(country, year, survey, item) %>% 
+  mutate(proj = str_remove_all(survey, "\\d+") %>% 
+           str_remove_all("_[^,]+") %>% 
+           str_replace_all("\\b([^,]+), \\1", "\\1") %>% 
+           str_replace_all("\\b([^,]+), \\1", "\\1")) %>% 
+  separate(proj, into = paste0("proj", 1:5), fill = "right") %>% 
+  pivot_longer(cols = starts_with("proj"), values_to = "project") %>% 
+  filter(!is.na(project) & !project == "") %>% 
+  select(country, year, project, item) %>% 
+  distinct() %>% 
+  group_by(project, item) %>% 
+  mutate(cy = n_distinct(country, year)) %>% 
+  group_by(project) %>% 
+  arrange(-cy) %>% 
+  filter(cy == max(cy)) %>% 
+  summarize(cy = n_distinct(country, year),
+            k = n_distinct(country),
+            t = cy/k) %>% 
+  group_by(k, t) %>% 
+  mutate(to_jitter = n() > 1) %>% 
+  ungroup() %>% 
+  mutate(proj_name = toupper(project) %>% 
+           str_replace("USGSS", "U.S. GSS") %>% 
+           str_replace("USPEW", "Pew Politics") %>% 
+           str_replace("PEWREL", "Pew Religion") %>% 
+           str_replace("^PEW$", "Pew Global") %>% 
+           str_replace("AMB", "AmB") %>% 
+           str_replace("PGSS", "Polish GSS"))
+
+proj_kt_plot <- ggplot(proj_kt, aes(y = t, x = k)) +
+  geom_point(data = proj_kt %>% filter(!to_jitter),
+             alpha = .3) +
+  geom_point(data = proj_kt %>% filter(to_jitter),
+             alpha = .3,
+             position = position_jitter(width = .25, height = .25)) +
+  ggrepel::geom_text_repel(data = subset(proj_kt, cy > 100 | t > 8 | k > 45),
+                            aes(label = proj_name),
+                            nudge_x = 5) +
+  theme_bw() +
+  labs(x = "Countries Observed",
+       y = "Mean Years Observed Per Country Observed",
+       title = "Survey Projects with Questions on\nTolerance of Homosexuality")
+
+proj_kt_plot
+```
+
+Figure\nobreakspace{}\ref{kt_plots} illustrates the trade-off between the breadth of country coverage and the number of years available for each country.
+The left panel plots, for each survey project in the TOL-H source data described below, the number of countries for which data on attitudes toward homosexuality are available against the mean number of years these data are available per country.
+Some survey projects ask more than one question on the topic, but here, only the most frequently asked single question on the topic is shown.
+The 'L' shape is readily evident.
+Many surveys ask questions about tolerance of homosexuality in only a few different country-year contexts.
+Some though, such as the U.S. General Social Survey and the British Social Attitudes project, have fielded such questions repeatedly over many years in a single country, although even these efforts fall short of complete time series.
+Others, including the World Values Survey and the Pew Global Attitudes project, provide information about many countries across one or a few years.
+The European Social Survey, which surveyed respondents in 39 countries over as many as ten years (mean: 6.6 years) over two decades, provides the most over-time data for the most countries, followed by the AmericasBarometer (34 countries, mean years: 5.4).
+No single survey combines broad, cross-regional country coverage with longitudinal time-series data.
+
+```{r scrape_poh, eval=FALSE}
+search_gs <- function (search_terms,
+                       start = 0, 
+                       pages = 10) {
+  query <- search_terms %>% 
+    str_replace_all('"', "%22") %>% 
+    str_replace_all("\\s+", "+")
+  site <- getOption("scholar_site")
+  starts <- seq(0, 10*(pages-1), length.out = pages)
+  url_template <- paste0(site, "/scholar?hl=en&q=%s&start=%d")
+  
+  data <- map(starts,
+              \(start) {
+                url <- sprintf(url_template, query, start)
+                page <- get_scholar_resp(url)
+                if (is.null(page)) 
+                  return(NA)
+                page <- page %>% 
+                  read_html()
+                titles <- page %>%
+                  html_nodes(".gs_rt") %>% 
+                  html_text()
+                hits <- page %>% 
+                  html_nodes("a:nth-child(3)") %>% 
+                  html_text() %>% 
+                  str_subset("Cited by") %>% 
+                  str_extract("[\\d,]+")
+                links <- page %>%
+                  html_nodes(".gs_rt") %>%
+                  html_nodes("a") %>%
+                  html_attr("href")
+                info <- page %>%
+                  html_nodes(".gs_a") %>%
+                  html_text()
+                years <- info %>% 
+                  str_extract("\\d+")
+                authors <- info %>% 
+                  str_extract("^[^-]*") %>% 
+                  str_trim()
+                journals <- info %>% 
+                  str_extract("(?<=-\\s).*(?=,)")
+                data0 <- tibble(author = authors,
+                                year = years,
+                                title = titles,
+                                journal = journals,
+                                hits = hits,
+                                link = links)
+                Sys.sleep(2 + abs(rnorm()))
+                return(data0)
+              }) %>% 
+    list_rbind()
+  
+  return(data)
+}
+
+poh <- search_gs('"public opinion" homosexuality')
+
+write_csv(poh, "data/poh_articles.csv")
+
+# Use poh$link to inspect first 50 research articles and manually record k (number of countries) and t (number of years) for each; save as "data/poh_articles1.csv"
+```
+
+```{r poh-plot, fig.cap="Countries and Mean Years Observed in Research\\label{poh_plot}", fig.height=5, fig.width=7, fig.pos='h', cache=FALSE}
+
+dcpo_input_raw <- read_csv(here::here("data", "dcpo_input_raw.csv"),
+                                  col_types = "cdcddcd")
+
+proj_kt <- dcpo_input_raw %>% 
+  filter(r == 1) %>% 
+  select(country, year, survey, item) %>% 
+  mutate(proj = str_remove_all(survey, "\\d+") %>% 
+           str_remove_all("_[^,]+") %>% 
+           str_replace_all("\\b([^,]+), \\1", "\\1") %>% 
+           str_replace_all("\\b([^,]+), \\1", "\\1")) %>% 
+  separate(proj, into = paste0("proj", 1:5), fill = "right") %>% 
+  pivot_longer(cols = starts_with("proj"), values_to = "project") %>% 
+  filter(!is.na(project) & !project == "") %>% 
+  select(country, year, project, item) %>% 
+  distinct() %>% 
+  group_by(project, item) %>% 
+  mutate(cy = n_distinct(country, year)) %>% 
+  group_by(project) %>% 
+  arrange(-cy) %>% 
+  filter(cy == max(cy)) %>% 
+  summarize(cy = n_distinct(country, year),
+            k = n_distinct(country),
+            t = cy/k) %>% 
+  group_by(k, t) %>% 
+  mutate(to_jitter = n() > 1) %>% 
+  ungroup() %>% 
+  mutate(proj_name = toupper(project) %>% 
+           str_replace("USGSS", "U.S. GSS") %>% 
+           str_replace("USPEW", "Pew Politics") %>% 
+           str_replace("PEWREL", "Pew Religion") %>% 
+           str_replace("^PEW$", "Pew Global") %>% 
+           str_replace("AMB", "AmB") %>% 
+           str_replace("PGSS", "Polish GSS"))
+
+proj_kt_plot <- ggplot(proj_kt, aes(y = t, x = k)) +
+  geom_point(data = proj_kt %>% filter(!to_jitter),
+             alpha = .3) +
+  geom_point(data = proj_kt %>% filter(to_jitter),
+             alpha = .3,
+             position = position_jitter(width = .25, height = .25)) +
+  ggrepel::geom_text_repel(data = subset(proj_kt, cy > 100 | t > 8 | k > 45),
+                            aes(label = proj_name),
+                            nudge_x = 5) +
+  theme_bw() +
+  labs(x = "Countries Observed",
+       y = "Mean Years Observed Per Country Observed",
+       title = "Survey Projects with Questions on\nTolerance of Homosexuality")
+
+
+poh <- read_csv(here("data", "poh_articles1.csv"),
+                col_types = "cdccdcdd") %>% 
+  filter(!is.na(t)) %>% 
+  group_by(k, t) %>% 
+  mutate(to_jitter = n() > 1)
+
+my_palette <- colorRampPalette(brewer.pal(11, "Spectral"))
+color_scale <- scale_color_gradientn(colors = my_palette(max(poh$year) -
+                                                           min(poh$year) + 1),
+                                     limits = c(min(poh$year),
+                                                max(poh$year)),
+                                     name="Publication\nYear")
+fill_scale <- scale_fill_gradientn(colours = my_palette(max(poh$year) -
+                                                          min(poh$year) + 1),
+                                   limits = c(min(poh$year),
+                                              max(poh$year)),
+                                     name="Publication\nYear")
+
+set.seed(324)
+poh_plot <- ggplot(poh, aes(y = t,
+                            x = k,
+                            color = year,
+                            fill = year,
+                            size = hits)) +
+  geom_point(data = poh %>% filter(!to_jitter),
+             alpha = .8) +
+  geom_point(data = poh %>% filter(to_jitter),
+             alpha = .8,
+             position = position_jitter(width = .25, height = .25)) +
+  color_scale +
+  fill_scale +
+  theme_bw() +
+  geom_magnify(from = c(xmin = 0, xmax = 5, ymin = 0, ymax = 4),
+            to = c(xmin = 15, xmax = 45, ymin = 10, ymax = 40),
+            axes = "xy") +
+  theme(legend.justification = c(.99,.99), 
+        legend.position = c(.98,.98),
+        legend.box.background = element_rect(color = "grey")) +
+  scale_size(guide = "none") +
+  labs(x = "Countries Observed",
+       y = NULL,
+       title = "Published Articles on\nPublic Opinion and Homosexuality")
+
+proj_kt_plot + poh_plot + plot_annotation(caption = str_wrap("Notes: The left panel plots the number of countries and mean years observed for each for the most frequently asked single question in each survey project.  The right panel plots the total number of countries and mean years observed for all questions examined in the first 50 published articles returned by the Google Scholar search '\"public opinion\" homosexuality' executed on June 17, 2023; the size of each point is proportional to the publication's citation count.", width = 114))
+```
+
+
+
+The right panel shows how the available data have influenced scholarship on the topic.
+We searched Google Scholar using the terms '"public opinion" homosexuality' and recorded the first fifty research articles in the results; these articles had publication dates as early as 1974 and as late as 2020 (median: 2008) and were cited from 5 to 1150 times (median: 79.5).
+We then examined these articles to find the number of countries and years investigated in each.
+As the zoomed portion of the plot highlights, many of these articles might be described as using single-case or small-n research designs.
+Just over a fourth consider only a single year in a single country; together with works that study one country in just two years they comprise two-fifths of our sample.
+
+Among the works in this sample that investigate more contexts, the data employed tend to be longitudinal or cross-national, but only very rarely both.
+More than a fifth of these articles examine ten or more years of data within a single country.
+@Clemens2014, for example, tracks changes in British attitudes in 13 different survey projects conducted in 42 different years; @Yang1997 similarly reports trends in public opinion drawing on many surveys conducted in 26 different years in the United States.
+Works considering data from more than five countries encompass just less than a fifth of this sample.
+One recent piece, @Hildebrandt2019, draws on the fifth and sixth waves of the WVS to create a single cross-section of 73 countries and argues that modernization leads to more tolerance and in turn, in democracies, more rights recognized; the influential @Adamczyk2009 similarly employs a single cross-section of the WVS, in its case the fourth wave, to examine how individuals' religiosity and their country's religious heritage shape their attitudes about homosexuality.
+The two articles examining the most country-years in this sample are both investigations of how policy feeds back into public opinion: @Redman2018, which uses the second through sixth WVS waves to provide a total of 203 country-years in 70 countries (mean observed years per country: 2.9) and @Hooge2009, which employs the first five waves of the ESS, a total of 123 country-years across 29 countries (mean observed years per country: 4.2).
+Within this sample, none of the articles including five or more countries are able to examine public opinion in more than five years in any of those countries.
+
+That these L-shaped distributions should limit our confidence in our conclusions is readily evident.
+The single-country studies that make up the vertical part of the L, even those over many years, leave questions regarding the generalizability of their findings to other parts of the world.
+The cross-national analyses on the horizontal, with just one or few time points to leverage, often raise concerns that differences across countries are being conflated with over-time causal processes [see, e.g., @Jackman1985, 173-174].
+
 
 For example, @lee2019changing evaluated changes of attitudes toward same-sex marriage between 2008 and 2016 by using three waves of national online panel survey.
 Thy found that increase in level of education and interpersonal contact with LGBTQ+ community as well as decrease in religiosity increase the support for same-sex marriage.
