@@ -117,19 +117,14 @@ p_load(
   countrycode,
   patchwork,
   ggmagnify,
-  ggthemes,
   ggdist,
   RColorBrewer,
   imputeTS,
-  rsdmx,
   osfr,
   tabulizer,
   brms,
   tidybayes,
-  readxl,
-  repmis,
   rvest,
-  vroom,
   modelsummary,
   kableExtra
 ) 
@@ -331,7 +326,7 @@ This is especially true where, as here, what suitable data exist are geographica
 There is much more data and hence research on public opinion regarding homosexuality in the countries of Europe and North America than elsewhere [@Adamczyk2019, 410]; this geographic bias makes scope conditions difficult to discern and so potentially leaves even theories that find empirical support less generally applicable than perhaps often assumed [see @Wilson2022, 1037].
 
 To address these issues, this article presents the Tolerance of Homosexuality (TOL-H) dataset.
-The TOL-H dataset combines a comprehensive collection of responses to national and cross-national surveys with recent developments in latent-variable modeling of public opinion to provide estimates of public attitudes toward homosexuality that are comparable across countries and over time.
+The TOL-H dataset combines a comprehensive collection of responses to national and cross-national surveys with recent developments in latent-variable modeling of public opinion to provide estimates of public attitudes toward homosexuality that are comparable across many countries and over many years.
 These latent-variable estimates perform well in validation tests: they are very strongly correlated with single survey items tapping views of homosexuality, and they also relate strongly to other concepts thought causally connected to public opinion on homosexuality.
 The TOL-H dataset provides a much firmer basis for testing the implications of theories by providing many more observations across a wider scope of countries and time than previously available sources.
 We demonstrate its potential in this regard by replicating the foundational but recently questioned finding of @Andersen2008 that more income inequality yields less tolerance.
@@ -339,6 +334,16 @@ We anticipate that the TOL-H data will become a crucial source for cross-regiona
 
 
 # Existing Data and Research on Attitudes Toward Homosexuality
+
+Figure\nobreakspace{}\ref{proj_kt_plot} illustrates the trade-off between the breadth of country coverage and the number of years available for each country.
+The left panel plots, for each survey project in the TOL-H source data described below, the number of countries for which data on attitudes toward homosexuality are available against the mean number of years these data are available per country.
+Some survey projects ask more than one question on the topic, but here, only the most frequently asked single question on the topic is shown.
+An 'L' shape is readily evident.
+Many surveys ask questions about tolerance of homosexuality in only a few different country-year contexts.
+Some though, such as the U.S. General Social Survey and the British Social Attitudes project, have fielded such questions repeatedly over many years in a single country, although even these efforts fall short of complete time series.
+Others, including the World Values Survey and the Pew Global Attitudes project, provide information about many countries across one or a few years.
+The European Social Survey, which surveyed respondents in 39 countries in as many as ten years (mean: 6.6 years) over two decades, provides the most over-time data for the most countries, followed by the AmericasBarometer (34 countries, mean years: 5.4).
+No single survey combines broad, cross-regional country coverage with longitudinal time-series data.
 
 ```{r proj-kt-plot, fig.cap="Countries and Mean Years Observed in Survey Datasets \\label{proj_kt_plot}", fig.height=4, fig.pos='h', cache=FALSE}
 dcpo_input_raw <- read_csv(here::here("data", "dcpo_input_raw.csv"),
@@ -385,22 +390,13 @@ proj_kt_plot <- ggplot(proj_kt, aes(y = t, x = k)) +
                             aes(label = proj_name),
                             nudge_x = 5) +
   theme_bw() +
+  scale_x_continuous(breaks=seq(0, 100, 25)) +
   labs(x = "Countries Observed",
        y = "Mean Years Observed Per Country Observed",
        title = "Survey Projects with Questions on\nTolerance of Homosexuality")
 
 proj_kt_plot + plot_annotation(caption = str_wrap("Notes: The number of countries and mean years observed are plotted only for the most frequently asked single question on attitudes toward homosexuality in each survey project.", width = 114))
 ```
-
-Figure\nobreakspace{}\ref{proj_kt_plot} illustrates the trade-off between the breadth of country coverage and the number of years available for each country.
-The left panel plots, for each survey project in the TOL-H source data described below, the number of countries for which data on attitudes toward homosexuality are available against the mean number of years these data are available per country.
-Some survey projects ask more than one question on the topic, but here, only the most frequently asked single question on the topic is shown.
-The 'L' shape is readily evident.
-Many surveys ask questions about tolerance of homosexuality in only a few different country-year contexts.
-Some though, such as the U.S. General Social Survey and the British Social Attitudes project, have fielded such questions repeatedly over many years in a single country, although even these efforts fall short of complete time series.
-Others, including the World Values Survey and the Pew Global Attitudes project, provide information about many countries across one or a few years.
-The European Social Survey, which surveyed respondents in 39 countries over as many as ten years (mean: 6.6 years) over two decades, provides the most over-time data for the most countries, followed by the AmericasBarometer (34 countries, mean years: 5.4).
-No single survey combines broad, cross-regional country coverage with longitudinal time-series data.
 
 ```{r poh-plot, fig.cap="Countries and Mean Years Observed in Prominent Research\\label{poh_plot}", fig.height=5.5, fig.width=7.5, fig.pos='h', cache=FALSE}
 
@@ -413,7 +409,7 @@ cited <- tribble(~citation, ~text_x, ~text_y,
                  "Redman 2018", 65.5, 2.9,
                  "Hooghe and Meeusen 2013", 37.6, 4.24)
 
-poh <- readxl::read_excel(here("data-raw", "wos_poh1.xls")) %>% 
+poh <- read_csv(here("data-raw", "wos_poh.csv")) %>% 
   janitor::clean_names() %>% 
   mutate(year = publication_year,
          hits = times_cited_all_databases,
@@ -429,10 +425,15 @@ poh <- readxl::read_excel(here("data-raw", "wos_poh1.xls")) %>%
            ifelse(. == "Andersen and Fetner 2008" &
                     !str_detect(source_title, "AMERICAN"),
                   "Andersen and Fetner 2008a",
+                  .) %>% 
+           ifelse(. == "Lax and Phillips 2009" &
+                    !str_detect(source_title, "JOURNAL"),
+                  "Lax and Phillips 2009a",
                   .),
          cy = k*t) %>% 
   group_by(k, t) %>% 
   mutate(to_jitter = n() > 1) %>% 
+  ungroup() %>% 
   left_join(cited, by = "citation")
 
 my_palette <- colorRampPalette(brewer.pal(11, "Spectral"))
@@ -480,103 +481,36 @@ poh_plot <- ggplot(poh, aes(x = k,
        y = "Mean Years Observed Per Country Observed",
        title = "Prominent Articles on\nPublic Opinion and Homosexuality")
 
-poh_plot + plot_annotation(caption = str_wrap("Notes: Citation counts as reported by the Web of Science on June 21, 2023.  See Appendix A for details on the contruction of this sample of prominent articles.", width = 114))
+poh_plot + plot_annotation(caption = str_wrap("Notes: Citation counts as reported by the Web of Science on June 21, 2023.  See the online appendix for details on the contruction of this sample of prominent articles.", width = 114))
 ```
 
 
 Figure\nobreakspace{}\ref{poh_plot} shows how the available data have influenced scholarship on the topic.
-Using the Web of Science and Google Scholar, we assembled a sample of prominent published articles on public opinion toward homosexuality (see Appendix A for details).
-These articles had publication dates as early as `r summary(poh$year)[[1]]` and as late as `r summary(poh$year)[[6]]` (median: `r summary(poh$year)[[3]]`) and had Web of Science citation counts from `r summary(poh$hits)[[1]]` to ``r summary(poh$hits)[[6]]` times (median: `r summary(poh$hits)[[3]]`).
+Using the Web of Science and Google Scholar, we assembled a sample of prominent published articles on public opinion toward homosexuality (see the online appendix for details).
+These articles had publication dates as early as `r summary(poh$year)[[1]]` and as late as `r summary(poh$year)[[6]]` (median: `r summary(poh$year)[[3]]`) and were cited in the Web of Science from `r summary(poh$hits)[[1]]` to `r summary(poh$hits)[[6]]` times (median: `r summary(poh$hits)[[3]]`).
 We then examined these articles to find the number of countries and years investigated in each.
-As the zoomed portion of the plot highlights, many of these articles might be described as using case-study or small-n research designs.
+As the zoomed portion of the plot emphasizes, many of these articles might be described as using case-study or small-_n_ research designs.
 Just over a third consider only a single year in a single country; together with works that study one country in just two years they comprise nearly half of our sample.
 
-Among the works in this sample that investigate more contexts, the data employed tend to be longitudinal or cross-national, but only very rarely both.
+Among the works that investigate more contexts, the data employed tend to be longitudinal or cross-national, but only very rarely both.
 Roughly a fifth of these articles examine ten or more years of data within a single country.
-@Clements2014, for example, tracks changes in British attitudes in 13 different survey projects conducted in 42 different years; @Yang1997 similarly reports trends in public opinion drawing on many surveys conducted in 26 different years in the United States.
-Works considering data from more than five countries encompass less than a sixth of these articles.
+@Clements2014, for example, tracks changes in British attitudes in 13 different survey projects conducted in 42 different years; @Yang1997 similarly reports trends in public opinion in the United States drawing on many surveys conducted in 26 different years.
+Research considering data from more than five countries encompass less than a sixth of these articles.
 One recent piece, @Hildebrandt2019, draws on the fifth and sixth waves of the WVS to create a single cross-section of 73 countries and argues that modernization leads to more tolerance and in turn, in democracies, more rights recognized; the influential @Adamczyk2009 similarly employs a single cross-section of the WVS, in its case the fourth wave, to examine how individuals' religiosity and their countries' religious heritages shape their attitudes about homosexuality.
 @Reynolds2013 looks at the most countries of any of these prominent works, 81, combining WVS and Pew Global Attitudes data to obtain 146 observed country-years (mean observed years per country: 1.8) with which to evaluate how attitudes influence policy.
-The article examining the most country-years of public opinion in this sample is @Redman2018, an investigation of policy feedback on public opinion that uses the second through sixth WVS waves to provide a total of 203 country-years in 70 countries, that is, a number of mean observed years per country of 2.9.
+The article examining the most country-years of public opinion in this sample is @Redman2018, an investigation of policy feedback on public opinion that uses the second through sixth WVS waves to provide a total of 203 country-years in 70 countries, that is, 2.9 observed years per country on average.
 @Hooghe2013, which also studies policy feedback, is the cross-national study with the most longitudinal data in the sample: it employs the first five waves of the ESS to provide a total of 123 country-years across 29 countries for a mean of 4.2 observed years per country.
-Within this sample of prominent works, none of the articles including five or more countries are able to examine public opinion in more than five years in any of the countries included in their analyses.
+Within this sample of prominent works, none of the articles including five or more countries is able to examine public opinion in more than five years in any of the countries included in their analyses.
 
-That these L-shaped distributions in the available datasets and the resulting analyses should limit our confidence in our conclusions is readily evident.
+That these L-shaped distributions in the available datasets and the resulting analyses should limit our confidence in our conclusions should be readily evident.
 The single-country studies that make up the vertical part of the L, even those over many years, leave questions regarding the generalizability of their findings to other parts of the world [see, e.g., @King2021, 210].
 The cross-national analyses on the horizontal, with just one or a few time points to leverage, on the other hand, often raise concerns that differences across countries are being conflated with over-time causal processes [see, e.g., @Jackman1985, 173-174].
+That a disproportionate share of research on public opinion regarding homosexuality---and indeed more of the available surveys on which this research is based---focuses on Europe and North America [see @Adamczyk2019, 410] only compounds these issues.
+As @Wilson2022 [, 1037] points out, such geographic bias makes the scope conditions of even cross-national studies difficult to discern.
 
+A dataset that falls to the upper right of Figure\nobreakspace{}\ref{proj_kt_plot} would address these issues and allow researchers to reach conclusions that are more robust.
+In the next section, we describe the national and cross-national surveys and the latent-variable model we use to this end, along with the resulting TOL-H dataset.
 
-For example, @lee2019changing evaluated changes of attitudes toward same-sex marriage between 2008 and 2016 by using three waves of national online panel survey.
-Thy found that increase in level of education and interpersonal contact with LGBTQ+ community as well as decrease in religiosity increase the support for same-sex marriage.
-@daniels2019evolution also examined the same rights but using data from the Pew Research Center and the National Opinion Research Center with temporal range between 1998 and 2014.
-This study found that ideology, partisanship, personnel connection, religion, and generation have impacts on forming attitudes toward homosexuality.
-Looking at different LGBTQ+ rights (namely, conversion therapy and denials of service based on religious beliefs), @flores2020public illustrated that some of individual features---such as age, race, party affiliation, education level, and interpersonal contact---could be occasionally inconsistent with previous findings.
-
-More recent studies opinion towards homosexuality in different countries such as Chile [@Paradela-Lopez2023], Japan [@naka2022gendered], South Korea [@rich2020proximity], and Taiwan [@cheng2016changing].
-Overall, these studies echo with the previous studies especially from US, which emphasizes the importance of socioeconomic features in forming tolerance toward homosexuality; these studies, however, also presented contextual differences between Western and non-Western countries in terms of opinion toward homosexuality.
-
-Collectively, studies focused on single country over time contribute our understanding in attitudes toward homosexuality in two ways.
-First, they enable us to understand the over time changes in attitudes.
-Second, studies illustrate individual-level features that shape opinions toward homosexuality.
-That said, single-country-focused studies are less interested in country-level factors.
-
-In comparison to single-country studies, a relatively small portion of studies examine cross-national over time.
-These studies have used regional (e.g., Eurobarometer, European Values Study, Latinobarometer) or global surveys (e.g., International Social Survey Programme, Pew Global Attitudes Project, or World Values Survey) as primary data sources and are more engaged with finding country-level characteristics that shape opinions toward homosexuality.
-Both poll data and studies have found that public opinion have been changed toward more liberal direction across the world [@corrales2017understanding; @hadler2012influence], although some conservative shifts have been found [@strand2011kill].
-In addition, previous studies have illustrated that features such as economic development [@Hooghe2013], historical legacy [@asal2013original], political context [@Zhang2019], and religious context [@van2013disapproval] have shape opinion toward homosexuality.
-<!-- ^[ -->
-<!-- We would like to note that studies on attitudes toward homosexuality also have examined individual-level features. -->
-<!--     Previous studies have found that individual contexts---such as age [@finke2008cross], education [@kozloski2010homosexual; @lambert2006college], gender [@dodge2016attitudes; @rye2010self], direct or indirect linkage [@becker2012determinants; @brewer2007value; @lee2019changing], and religion [@hooghe2013same; @sherkat2010race]---have an impact on shaping attitudes. -->
-<!--     However, these are not actively discussed in the main text because the current study's focus is at the country-level with comparative perspectives. -->
-<!-- ] -->
-
-The issue, however, is that some of the previous findings conflict with each other.
-<!-- ^[ -->
-<!-- Conflicting conclusions are also found from the studies that focused on individual-level factors. -->
-
-<!-- Less intense but still important discrepancies are found with different country-level factors. -->
-<!-- For instance, many of previous studies have highlighted the importance of religion as an important feature that shapes attitudes toward homosexuality both at the individual level [@adamczyk2017cross; @adamczyk2016place; @finke2008cross; @sherkat2010race; @van2013disapproval] and the country level [@adamczyk2017cross; @asal2013original; @finke2008cross]. -->
-<!-- Specifically, studies have shown that a country's dominant religion or overall level of religiosity can have important impacts [@adamczyk2009shaping; @finke2008cross; @van2013disapproval]. -->
-<!-- Some studies, however, have noticed the declining role of the religion [see @lee2019changing] and the importance of considering cultural differences (e.g., impact of cultural taboos or cultural orientation) with religious impact [@adamczyk2009shaping]. -->
-<!-- ] -->
-For example, many cross-national studies as well as a few single-country studies have examined the postmaterialist thesis that more developed societies will have higher levels of social tolerance [@inglehart1990culture; @inglehart2000modernization].
-Using the same data source (WVS) with differences in spatial and temporal coverage, @Andersen2008 and @Zhang2019 reach different conclusions.
-Focusing on 35 democracies between 1990 and 2002, @Andersen2008 found that national economic context is important factor of shaping public opinion toward homosexuality.
-Increasing both geographical and temporal coverage (88 countries between 1981 and 2014), however, @Zhang2019 showed that economic development is not as substantial as previous studies found.
-Moreover, they found that economic inequality does not affect attitudes on homosexuality.
-
-On top of conflicting findings, two limitations further stand out from previous studies.
-First, from our knowledge, there is no comprehensive cross-national longitudinal data available to researchers.
-As discussed earlier, a few countries are rich on single country over time data, but most countries do not have that benefits.
-Obtaining cross-country over time data is much harder, and therefore, many cross-country studies have examined a handful of countries with a small time span.
-More recent studies take the advantage of survey data across the world [e.g., @Zhang2019], although these are exceptional cases.
-
-In addition, most of available cross-national survey data have a regional focus.
-This leads to researchers focusing more on data-rich regions such as North America and Europe.
-This is concerning because it will only grants a partial picture of attitudes toward homosexuality.
-For example, the phases of tolerance toward homosexuality and developing legal rights of same sex couples vary across countries as well as regions such as Asian vs. Western European countries or even Eastern and Central European countries vs. Western European countries [@vstulhofer2009determinants].
-With regionally focused data, it is difficult to see broader change in attitudes cross-nationally.
-In other words, limitations in data, in terms of both temporal and spatial scope, hampers comprehensive understanding of attitudes toward homosexuality.
-
-Second, it is difficult to properly address the impact of phrases used in the survey.
-Even when researchers acknowledge the limitations of relying on one data source (e.g, WVS) for cross-national studies, it is difficult or even potentially erroneous to simply utilize different survey data in one study.
-Studies and polls have used different terms---such as gay, lesbian, same-sex, or homosexuality---to indicate LGBTQ-related issues [@Adamczyk2019].
-Putting aside whether the public can distinguish the terms, certain phrases---namely gay and homosexuality---are more exposed to and used by the public than the others.
-Given that question wording can have an impact on the responses [@clifford2021increasing; @zaller1992nature], not dealing with question difficulty that stems from wordings is concerning.
-@smith2018gay, for instance, examined the wording impact between "homosexual" and "gay and lesbian".
-The study found that the survey participants respond differently about their attitudes toward "homosexual rights" and "gay and lesbian rights" based on the group identity and social attitude.
-Other studies also echo the impacts of phrasing on public support [@hill2005development; @husser2016gay; @lewis2017degrees].
-Therefore, dealing with question wordings is another hurdle that needs to be properly addressed.
-
-Acknowledging disagreements of previous studies' findings and limitations in terms of data, this paper aims to introduce TOL-H data for those who are interested in attitudes toward homosexuality.
-We expect to achieve two goals.
-First, TOL-H data will facilitate more cross-national studies in this field.
-TOL-H is a cross-national overtime data from available public opinion survey data from various countries across the world; therefore, it opens more opportunity to explore questions that couldn't be answered with a single country data or a longitudinal data with a few countries.
-Using the IRT adds additional merits because it helps deal with the usage of different terms across surveys.
-Second, attitudes toward homosexuality are multifaceted.
-Like other issue areas, LGBTQ-related issues are composed of different topics such as individual comfortability/tolerance [@monto2014discomfort], employment [@becker2014employment], marriage [@baunach2012changing], and parenting [@webb2014heterosexual]; these are primary issues that have been asked by pollsters.
-Previous studies, however, mostly examined only one dimension.
-Using our TOL-H data, researchers can easily access to different LGBTQ-related issues at one venue that covers a wide range of temporal and geographical scopes.
 
 ```{r dcpo_input_raw, eval=FALSE, include=FALSE}
 # set eval to TRUE to run; running time is <5 minutes
@@ -660,14 +594,14 @@ covered_share_of_spanned <- {back_to_numeric(n_cy)/back_to_numeric(spanned_cy) *
 
 # Estimating Tolerance of Homosexuality Across Space and Time
 
-To generate estimates of publics' tolerance of homosexuality that are comparable across countries and over time, we first assemble a comprehensive collection of survey questions on the topic.
-Surveys have often included questions about homosexuality over the past half-century, but these data are sparse, unavailable for many countries and years, and incomparable, generated by many different survey items.
+To generate estimates of tolerance of homosexuality cross-nationally and longitudinally that are comparable across space and over time, we first assemble a comprehensive collection of survey questions on the topic.
+The relevant surveys are sparse, providing no relevant data for many countries and years, and incomparable, employing many different survey items, but collectively they have often asked questions about homosexuality over the past half-century.
 In all, we identified `r n_items` items that were asked in no fewer than five country-years in countries surveyed at least three times; these items were drawn from `r n_surveys` different national and cross-national survey datasets.^[
-The complete list of survey items is included in Appendix A.]
+The complete list of survey items is included in the online appendix.]
 Together, these items were asked in `r n_countries` different countries in at least three time points over the `r n_years` years `r year_range`, yielding a total of `r n_cyi` country-year-item observations.
 Observations for every year in each country surveyed would total `r total_cy`, and a complete set of country-year-items would include `r {n_countries * n_years * n_items} %>% scales::comma()` observations.
 Viewed from this complete-data perspective, the sparsity of the available source data is readily evident.
-On the other hand, we do have in the source data `r n_cy` country-years for which we have at least _some_ information about the extent of tolerance of homosexuality in the population, that is, very nearly `r round(covered_share_of_spanned)`% of the `r spanned_cy` country-years spanned by the data we collected.
+On the other hand, we do have in the source data `r n_cy` country-years for which there is at least _some_ information about the extent of tolerance of homosexuality in the population, that is, very nearly `r round(covered_share_of_spanned)`% of the `r spanned_cy` country-years spanned by the data we collected.
 Still, the many different survey items employed render these data incomparable and so difficult to use together.
 
 ```{r itemcountry, fig.cap="Countries and Years with the Most Observations in the Source Data \\label{item_country_plots}", fig.height=3.5, fig.pos='h', cache=FALSE}
@@ -823,21 +757,21 @@ The available public opinion data on this topic are very sparse as well as incom
 The upper left panel of Figure\nobreakspace{}\ref{item_country_plots} shows the dozen countries with the highest count of country-year-item observations.
 The United States, with `r us_obs` observations, is far and away the best represented country in the source data, followed by `r others`.
 As the review in @Adamczyk2019 [, 410] notes, more data has been collected in North America and Europe than in the rest of the world.
-At the other end of the spectrum, `r n_data_poorest` countries---`r data_poorest`---have only the minimum two observations required to be included in the source dataset at all.
+At the other end of the spectrum, `r n_data_poorest` countries---`r data_poorest`---have only the minimum three observations required to be included in the source dataset at all.
 The upper right panel shows the twelve countries with the most years observed; this group is similar, but with `r adding` joining the list and `r dropping` dropping off.
 The bottom panel counts the countries observed in each year and reveals just how few relevant survey items were asked before 1990.
 Country coverage reached its peak in `r y_peak_year`, when surveys in `r y_peak_nn` countries included items on homosexuality.
 
 Latent variable models of public opinion drawing on cross-national survey data have attracted considerable attention in recent years [see @Claassen2019; @Caughey2019; @McGann2019; @Kolczynska2020].
 To estimate public gender egalitarianism across countries and over time, we draw on the latest of these methods that is appropriate for data that is both sparse and incomparable, the Dynamic Comparative Public Opinion (DCPO) model [@Solt2020c].
-In brief, the DCPO model is a population-level two-parameter ordinal logistic item response theory (IRT) model with country-specific item-bias terms; for a detailed description, see online Appendix B and @Solt2020c [, 3-8].
-Here, we focus on how it deals with the principal issues raised by the survey data described above: incomparability and sparsity.
+In brief, the DCPO model is a population-level two-parameter ordinal logistic item response theory (IRT) model with country-specific item-bias terms; for a detailed description, see the online appendix and @Solt2020c [, 3-8].
+Here, we focus on how it deals with the principal issues raised by the survey data described above, incomparability and sparsity.
 
 The DCPO model accounts for the incomparability of different survey questions with two parameters.
-First, it incorporates the _difficulty_ of each question's responses, that is, the amount of tolerance of homosexuality is indicated by a given response. 
+First, it incorporates the _difficulty_ of each question's responses, that is, the amount of tolerance of homosexuality that is indicated by a given response. 
 That each response evinces more or less of our latent trait is most easily seen with regard to the ordinal responses to the same question: to strongly agree with the statement "the law should recognise same-sex relationships," evinces more tolerance than responding "agree," which is more tolerant than "neither agree nor disagree," which shows more tolerance than "disagree," and in turn "strongly disagree."
 The same thing is true across questions.
-For example, strongly agreeing with the statement "homosexual couples should be able to adopt children" likely expresses even more tolerance than strongly agreeing that same-sex relationships should be recognized by the law.
+For example, strongly agreeing with the statement "homosexual couples should be able to adopt children" likely expresses more tolerance than merely responding that same-sex relationships should be not be criminalized.
 Second, the DCPO model accounts for each question's _dispersion_, its noisiness with regard to our latent trait.
 A lower dispersion indicates that changes in responses to the question are more faithfully translated to changes in the underlying tolerance of homosexuality.
 These two parameters, difficulty and dispersion, together generate comparable estimates of the latent variable from source data questions that are not directly comparable.
@@ -944,6 +878,8 @@ res_c <- theta_summary %>%
   pull(country) %>% 
   unique() %>% 
   length()
+
+res_y <- theta_summary %>% count(country) %>% pull(n)
 ```
 
 ```{r csplot, fig.cap="TOL-H Scores, Most Recent Available Year \\label{cs_mry}", fig.height=10, fig.width=8}
@@ -1000,8 +936,9 @@ bottom5 <- p1_data %>%
 We estimated the DCPO model on the source data using the `DCPO` and `cmdstanr` packages for R [@Solt2020a; @Gabry2022], running four chains for 2,000 iterations each and discarding the first half as warmup.
 All $\hat{R}$ diagnostics were below 1.02, which indicates that the model converged.
 
-Despite the potential for divergences between responses to questions on the morality of homosexuality and those on what civil rights are properly accorded homosexuals, as @Adamczyk2019 [, 407] anticipated, "respondents across a range of different countries do not draw major distinctions between these two dimensions": the dispersion parameters indicate that all of the survey items load well on the single latent variable of tolerance for homosexuality (see Table A1 in Appendix A).
+Despite the potential for divergences between responses to questions on the morality of homosexuality and those on what civil rights are properly accorded homosexuals, as @Adamczyk2019 [, 407] anticipated, "respondents across a range of different countries do not draw major distinctions between these two dimensions": the dispersion parameters indicate that all of the survey items load well on the single latent variable of tolerance for homosexuality (see Table A2 in the online appendix).
 The result is estimates for each of the `r res_cy` country-years spanned by the source data of mean tolerance of homosexuality, which together comprise the TOL-H dataset.
+With data on `r res_c` countries for `r min(res_y)` to `r max(res_y)` years---mean of `r mean(res_y) %>% sprintf("%.1f", .)` years---the TOL-H dataset is literally off the charts, that is, it is beyond the bounds of Figure\nobreakspace{}\ref{proj_kt_plot}.
 
 Figure\nobreakspace{}\ref{cs_mry} displays the most recent available TOL-H score for each of the `r res_c` countries and territories in the dataset.
 Iceland, the Netherlands, Belgium, and the Scandinavian countries are the places where the public is most accepting of homosexuality.
@@ -1686,37 +1623,35 @@ Appendices
 
 To generate a sample of published articles on public opinion and homosexuality, we combined results from two searches, the first on the Web of Science and the second on Google Scholar.
 Web of Science topic searches return articles in which the search terms appear in the title or abstract.
-We executed the following search: 'TS=("public opinion" AND (homosexual* OR gay OR LGB*))'.
-The fifty most cited research articles returned, excluding those without an empirical component, were retained for our sample.
-Google Scholar, according to its about page (https://scholar.google.com/intl/en/scholar/about.html) "aims to rank documents the way researchers do, weighing the full text of each document, where it was published, who it was written by, as well as how often and how recently it has been cited in other scholarly literature."
-We searched '"public opinion" homosexuality' and identified the first fifty research articles returned.
-To ensure comparability of citation counts, we collected the Web of Science records for this second group of articles.
-Then we added the records for these Google Scholar results to our Web of Science sample and dropped duplicates.
-Each of the articles was then consulted to identify the number of countries and mean years observed per country.
-The results are listed below.
+We executed the following search: `TS=("public opinion" AND (homosexual* OR gay OR LGB*))`.
+The fifty most cited empirical research articles returned were retained for our sample.
+Google Scholar, [according to its about page] (https://scholar.google.com/intl/en/scholar/about.html) "aims to rank documents the way researchers do, weighing the full text of each document, where it was published, who it was written by, as well as how often and how recently it has been cited in other scholarly literature."
+We searched `"public opinion" homosexuality` and identified the first fifty research articles returned.
+To ensure comparability of citation counts, we collected the Web of Science records for this second group of articles (Google Scholar, because it includes citations in books, white papers, working papers, some journals not in the Web of Science collection, and other sources, tends to report higher---and sometimes _much_ higher---numbers of citations for the same article).
+Then we added the Web of Science records for the Google Scholar results to our original Web of Science sample and dropped all duplicates, yielding a total of `r nrow(poh)` different articles.
+Each of the articles was then consulted to identify its number of countries and mean years observed per country.
+This information is listed in Table A1 below.
 
-\noindent Table A1: Indicators Used in the Tolerance of Homosexuality Latent Variable Model
+\pagebreak
+\noindent Table A1: Prominent Research Articles on Public Opinion Toward Homosexuality
 ```{r articles_table}
-# items_summary %>% 
-#   transmute(`Survey\nItem\nCode` = item,
-#             `Country-Years` = as.character(n_cy),
-#             `Question Text` = str_replace(question_text, "([^(]*)\\(.*", "\\1"),
-#             `Response Categories` = response_categories,
-#             `Dispersion` = dispersion,
-#             `Difficulties`= difficulties,
-#             `Survey Dataset Codes` = all_surveys) %>% 
-#   modelsummary::datasummary_df(output = "kableExtra",
-#                                longtable = TRUE) %>% 
-#   kableExtra::column_spec(1, width = "7em") %>%
-#   kableExtra::column_spec(2, width = "4em") %>%
-#   kableExtra::column_spec(3, width = "13em") %>%
-#   kableExtra::column_spec(4, width = "16em") %>%
-#   kableExtra::column_spec(5, width = "4em") %>%
-#   kableExtra::column_spec(c(6, 7), width = "8em") %>% 
-#   kableExtra::kable_styling(font_size = 7) %>%
-#   kableExtra::kable_styling(latex_options = c("repeat_header")) %>%
-#   kableExtra::kable_styling(latex_options = "striped")
+poh %>% 
+  arrange(-hits) %>% 
+  transmute(Article = citation,
+            `Countries Observed` = as.character(k),
+            `Mean Years Observed per Country` = as.character(round(t, 1)),
+            `Country-Years Observed` = as.character(round(cy)) %>%
+              str_trim(),
+            `WoS Citations` = as.character(hits)) %>% 
+  modelsummary::datasummary_df(output = "kableExtra",
+                               longtable = TRUE) %>%
+  kableExtra::column_spec(1, width = "14em") %>%
+  kableExtra::column_spec(c(2, 3, 4, 5), width = "6em") %>%
+  kableExtra::kable_styling(font_size = 10) %>%
+  kableExtra::kable_styling(latex_options = c("repeat_header")) %>%
+  kableExtra::kable_styling(latex_options = "striped")
 ```
+
 
 # Appendix B: Survey Items Used to Estimate Tolerance of Homosexuality
 
