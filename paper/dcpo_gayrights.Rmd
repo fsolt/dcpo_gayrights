@@ -970,7 +970,7 @@ The latest scores for `r bottom5` indicate there is very little tolerance in tho
 
 ```{r tsplots, fig.cap="Tolerance Over Time Within Selected Countries \\label{ts}", fig.height=3.5}
 countries <- c("Netherlands", "Sweden", "Ireland", "United States",
-               "Argentina", "Mexico", "Taiwan", "Poland", 
+               "Argentina", "Czechia", "South Korea", "Poland", 
                "China", "Ukraine", "Indonesia", "Russia", 
                "Nigeria", "Jamaica", "Armenia", "Uganda")
 
@@ -1001,7 +1001,7 @@ ggplot(data = c_res, aes(x = year, y = mean)) +
 Figure\nobreakspace{}\ref{ts} displays how TOL-H scores have changed over time in sixteen countries.
 It further underscores what is already evident in Figure\nobreakspace{}\ref{cs_mry}: the cross-regional scope of the TOL-H dataset allows comparison of countries too often neglected in political science analyses [see @Wilson2022].
 The figure also shows that while public opinion toward homosexuality has grown rapidly more tolerant in some countries, such as Sweden and the United States, attitudes have changed much more gradually over time in others, like Poland and China.
-Tolerance has advanced and retreated somewhat as in Taiwan and more completely as in Russia.
+Tolerance has advanced and retreated somewhat as in Czechia and more completely as in Russia.
 And in countries such as Nigeria and Uganda, the extent of tolerance of homosexuality in the public has been steadily scant.
 The breadth of these differences stand as a challenge to our explanations for the causes and consequences of public tolerance of homosexuality.
 
@@ -1181,7 +1181,7 @@ ext_libdem_dat <- vdemdata::vdem %>%
   filter(!is.na(prop))
 ```
 
-```{r extval1, fig.cap="Construct Validation: Correlations Between TOL-H Scores and tolerance of Homosexuality Survey Items \\label{ext_val1}", fig.height=4, fig.width=7.5}
+```{r extval1, fig.cap="Construct Validation: Correlations Between TOL-H Scores and Tolerance of Homosexuality Survey Items \\label{ext_val1}", fig.height=4, fig.width=7.5}
 ext_issp_tradroles_plot <- validation_plot(ext_issp_tradroles_dat,
                                     lab_x = .1,
                                     lab_y = 95) +
@@ -1260,7 +1260,7 @@ This relationship is very strong.
 A third oft-theorized relationship is that liberal democracies promote generally more tolerant attitudes that lead to greater tolerance of homosexuality [see, e.g., @Adamczyk2017].
 The right panel of Figure\nobreakspace{}\ref{ext_val1} plots the TOL-H score of the most recent available year for each country against the V-Dem Liberal Democracy Index for that country-year.
 Here, too, the relationship is in the expected direction and strong.
-The evidence of convergent validation in Figure\nobreakspace{}\ref{ext_val1}, together with the evidence of construct validation in Figure\nobreakspace{}\ref{internal_val}, demonstrates the validity of the TOL-H scores as measures of the public's tolerance of homosexuality.
+The evidence of construct validation in Figure\nobreakspace{}\ref{ext_val1}, together with the evidence of convergent validation in Figure\nobreakspace{}\ref{internal_val}, demonstrates the validity of the TOL-H scores as measures of the public's tolerance of homosexuality.
 
 
 # Testing Theories on the Tolerance of Homosexuality: Revisiting 'Economic Inequality and Intolerance'
