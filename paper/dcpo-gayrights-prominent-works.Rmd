@@ -1,0 +1,13 @@
+---
+output: pdf_document
+bibliography: dcpo-gayrights-prominent-works.bib
+nocite: '@*'
+---
+
+```{=tex}
+\pagenumbering{arabic}
+\setcounter{page}{4}
+\renewcommand*{\thepage}{A\arabic{page}}
+```
+
+# Prominent Works
