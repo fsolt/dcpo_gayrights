@@ -42,6 +42,7 @@ header-includes:
       - \usepackage{threeparttable}
       - \usepackage{wrapfig}
       - \usepackage{fullpage}
+      - \usepackage{setspace}
       - \usepackage{lscape} #\usepackage{lscape} better for printing, page displayed vertically, content in landscape mode, \usepackage{pdflscape} better for screen, page displayed horizontally, content in landscape mode
       - \newcommand{\blandscape}{\begin{landscape}}
       - \newcommand{\elandscape}{\end{landscape}}
@@ -60,7 +61,7 @@ header-includes:
 
 \pagenumbering{gobble}
 
-# Authors {.unnumbered}
+# Authors {.unlisted .unnumbered}
 
 -   Byung-Deuk Woo, ORCID: <https://orcid.org/0000-0001-6902-7576>, Postdoctoral Researcher, Institute of Social Data Science, Pohang University of Science and Technology, [byungdeukwoo\@gmail.com](mailto:byungdeukwoo@gmail.com){.email}
 -   Hyein Ko, ORCID: <https://orcid.org/0000-0002-9497-9656>, Doctoral Candidate, Department of Political Science, University of Iowa, [hyein-ko\@uiowa.edu](mailto:hyein-ko@uiowa.edu){.email}
@@ -352,7 +353,7 @@ We demonstrate its potential in this regard by replicating the foundational but 
 We anticipate that the TOL-H data will become a crucial source for cross-regional, cross-national, and longitudinal research that improves our understanding of the sources and consequences of tolerance of homosexuality.
 
 
-# Existing Data and Research on Attitudes Toward Homosexuality
+# Existing Data and Research on Attitudes Toward Homosexuality {.unlisted .unnumbered}
 
 The TOL-H dataset aims to address a shortcoming in the available datasets on public opinion toward homosexuality: researchers have been forced to choose between studying tolerance in many countries _or_ over many years, but not both.
 Figure\nobreakspace{}\ref{proj_kt_plot} illustrates the trade-off between the breadth of country coverage and the number of years available for each country.
@@ -615,7 +616,7 @@ covered_share_of_spanned <- {back_to_numeric(n_cy)/back_to_numeric(spanned_cy) *
 ```
 
 
-# Estimating Tolerance of Homosexuality Across Space and Time
+# Estimating Tolerance of Homosexuality Across Space and Time {.unlisted .unnumbered}
 
 To generate estimates of tolerance of homosexuality cross-nationally and longitudinally that are comparable across space and over time, we first assemble a comprehensive collection of survey questions on the topic.
 The relevant surveys are sparse, providing no relevant data for many countries and years, and incomparable, employing many different survey items, but collectively they have often asked questions about homosexuality over the past half-century.
@@ -1006,7 +1007,7 @@ And in countries such as Nigeria and Uganda, the extent of tolerance of homosexu
 The breadth of these differences stand as a challenge to our explanations for the causes and consequences of public tolerance of homosexuality.
 
 
-# Validating the Tolerance of Homosexuality Scores
+# Validating the Tolerance of Homosexuality Scores {.unlisted .unnumbered}
 
 ```{r internal_val_dat, include=FALSE}
 internal_tscs_dat <- dcpo_input_raw1 %>% 
@@ -1263,7 +1264,7 @@ Here, too, the relationship is in the expected direction and strong.
 The evidence of construct validation in Figure\nobreakspace{}\ref{ext_val1}, together with the evidence of convergent validation in Figure\nobreakspace{}\ref{internal_val}, demonstrates the validity of the TOL-H scores as measures of the public's tolerance of homosexuality.
 
 
-# Testing Theories on the Tolerance of Homosexuality: Revisiting 'Economic Inequality and Intolerance'
+# Testing Theories on the Tolerance of Homosexuality: Revisiting 'Economic Inequality and Intolerance' {.unlisted .unnumbered}
 
 To illustrate the utility of the TOL-H data, we revisit Andersen and Fetner's [-@Andersen2008] foundational work on economic inequality and intolerance.
 That article argues that postmaterialist theory [see, e.g., @Inglehart2005] implies that greater inequality should be expected to yield greater intolerance of homosexuality: if economic prosperity is what provides societies with the security needed to leave such traditional biases behind, then when a society's prosperity (and security) is not broadly shared, more tolerant attitudes will not be broadly shared either.^[
@@ -1598,7 +1599,7 @@ Having much more data provides strong evidence that income inequality decreases 
 <!-- There are no Islamic-heritage countries among the OECD democracies as Turkey is considered a competitive authoritarian regime, and even were it included, the Islamic variable would be colinear with its country intercept in our multilevel model.] -->
 
 
-# Conclusion
+# Conclusion {.unlisted .unnumbered}
 
 The TOL-H dataset, by combining a comprehensive collection of the available survey data with recent advances in latent variable modeling, provides a new window on public opinion toward homosexuality across space and time.
 Until now, scholars interested in how and why public opinion towards homosexuality has shifted in recent decades and the ramifications of these shifts have struggled with the limited availability of data.
@@ -1616,7 +1617,7 @@ Current and future versions of the TOL-H should enable a wave of new research on
 
 \pagebreak
 
-# References {.unnumbered}
+# References {.unlisted .unnumbered}
 
 ::: {#refs-text}
 :::
@@ -1644,6 +1645,9 @@ Current and future versions of the TOL-H should enable a wave of new research on
 Appendices
 \end{Large}
 \end{center}
+
+\tableofcontents
+\newpage
 ```
 # Appendix A: Sample of Published Articles on Public Opinion and Homosexuality
 
