@@ -21,7 +21,7 @@ citation_package: natbib
 citeproc: false
 fontsize: 12pt
 indent: true
-linestretch: 1.5 # double spacing using linestretch 1.5
+linestretch: 1.655 # double spacing
 bibliography:
   text: dcpo-gayrights.bib
   app: dcpo-gayrights-app.bib
@@ -1268,6 +1268,7 @@ The evidence of construct validation in Figure\nobreakspace{}\ref{ext_val1}, tog
 
 To illustrate the utility of the TOL-H data, we revisit Andersen and Fetner's [-@Andersen2008] foundational work on economic inequality and intolerance.
 That article argues that postmaterialist theory [see, e.g., @Inglehart2005] implies that greater inequality should be expected to yield greater intolerance of homosexuality: if economic prosperity is what provides societies with the security needed to leave such traditional biases behind, then when a society's prosperity (and security) is not broadly shared, more tolerant attitudes will not be broadly shared either.^[
+\doublespacing
 An alternate, possibly complementary, theory would be that greater inequality gives wealthier individuals both greater means and enhanced motive to promote religiosity among their fellow citizens [see, e.g., @Solt2011a; @Solt2014b], and more religiosity in turn works to decrease tolerance [see, e.g., @Adamczyk2009]. We leave distinguishing between these two theories to future research.]
 Supporting this view, its analysis found that more economic inequality leads to more intolerance of homosexuality.
 Despite the article's influence, it was flagged in a recent review of the literature as a study for which "more research is needed to replicate and confirm [its] findings" [@Adamczyk2019, 415].
