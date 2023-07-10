@@ -81,11 +81,11 @@ header-includes:
 ```
 ```{=tex}
 \begin{abstract}
-Tolerance of homosexuality has increased in many countries over recent decades, but the resulting scholarship has been hindered by the limited available data on these trends in public opinion. To overcome this problem, we present the Tolerance of Homosexuality (TOL-H) dataset, which combines a comprehensive collection of survey data with a latent-variable model to provide annual time-series estimates of public attitudes toward homosexuality across 119 countries and over as many as 49 years that are comparable across space and time. We show these data perform well in validation tests and demonstrate their potential by replicating an influential but recently questioned finding that more income inequality yields less tolerance of homosexuality. We anticipate that the TOL-H data will become a crucial source for cross-regional, cross-national, and longitudinal research that improves our understanding of the sources and consequences of tolerance of homosexuality.
+Tolerance of homosexuality has increased in many countries over recent decades, but the resulting scholarship has been hindered by the limited available data on these trends in public opinion. To overcome this problem, we present the Tolerance of Homosexuality (TOL-H) dataset, which combines a comprehensive collection of survey data with a latent-variable model to provide annual time-series estimates of public attitudes toward homosexuality across 119 countries and over as many as 49 years that are comparable across space and time. We show these data perform well in validation tests and demonstrate their potential by replicating the influential but recently questioned finding of Andersen and Fetner (2008) that more income inequality yields less tolerance of homosexuality. We anticipate that the TOL-H data will become a crucial source for cross-regional, cross-national, and longitudinal research that improves our understanding of the sources and consequences of tolerance of homosexuality.
 \end{abstract}
 ```
 
-Abstract wordcount: 146 words
+Abstract wordcount: 151 words
 
 Manuscript wordcount: 6781 words
 \pagebreak
@@ -114,7 +114,8 @@ knitr::opts_chunk$set(
 # and see https://mc-stan.org/cmdstanr/articles/cmdstanr.html
 
 # If `ggmagnify` is not yet installed:
-# remotes::install_github("hughjonesd/ggmagnify")
+# install.packages("ggmagnify", repos = c("https://hughjonesd.r-universe.dev", 
+#                 "https://cloud.r-project.org"))
 
 # If `tabulizer` is not yet installed:
 # remotes::install_github("ropensci/tabulizer")
@@ -496,7 +497,8 @@ poh_plot <- ggplot(poh, aes(x = k,
   theme_bw() +
   geom_magnify(from = c(xmin = 0, xmax = 5, ymin = 0, ymax = 5),
             to = c(xmin = 15, xmax = 44, ymin = 10, ymax = 39),
-            axes = "xy") +
+            axes = "xy",
+            data = poh) +
   theme(legend.justification = c(.99,.99), 
         legend.position = c(.98,.98),
         legend.box.background = element_rect(color = "grey",
