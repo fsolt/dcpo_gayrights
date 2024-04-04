@@ -506,7 +506,7 @@ poh_plot <- ggplot(poh, aes(x = k,
   scale_size(name = "Citations") +
   labs(x = "Countries Observed",
        y = "Mean Years Observed Per Country Observed",
-       title = "Prominent Articles on\nPublic Opinion and Homosexuality")
+       title = "Prominent Articles on\nPublic Opinion on Gay Rights")
 
 poh_plot + plot_annotation(caption = str_wrap("Notes: Citation counts as reported by the Web of Science on June 21, 2023.  See the online appendix for details on the contruction of this sample of prominent articles.", width = 114))
 ```
