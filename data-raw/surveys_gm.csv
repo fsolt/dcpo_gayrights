@@ -76,543 +76,148 @@ of a man and a woman?","1 Strongly favour 951 1152.8 43.0%
 aes2019,marry4a,e4,c(4:1),Do you personally favor or oppose same sex couples being given the same rights to marry as couples consisting of a man and a woman?,1 strongly favor / 2 favor / 3 oppose / 4 strongly oppose,1,
 afrob6,neigh5,q89c,c(1:5),"For each of the following types of people, please tell me whether you would like having people from this group as neighbors, dislike it, or not care: Homosexuals",1 strongly dislike / 2 somewhat dislike / 3 would not care / 4 somewhat like / 5 strongly like,1,
 allbus,approve4,ca13,c(1:4),A sexual relationship between two adults of the same sex,1 Very bad 2 Fairly bad 3 Not so bad 4 Definitely not bad,1,
-amb_antigua2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_argentina2010,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_argentina2012,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_argentina2014,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_argentina2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_argentina2018,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
+amb_antigua2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_argentina2010,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_argentina2012,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_argentina2014,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_argentina2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_argentina2018,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
 amb_argentina2018,marry10,d6,c(1:10),How strongly do you approve or disapprove of same-sex couples having the right to marry? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
-amb_bolivia2010,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_bolivia2012,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_bolivia2014,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_bolivia2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_bolivia2018,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_brazil2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_brazil2018,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_canada2012,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_canada2014,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_canada2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_chile2010,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_chile2012,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_chile2014,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_chile2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_chile2018,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_colombia2009,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_colombia2011,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_colombia2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_colombia2018,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
+amb_bolivia2010,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_bolivia2012,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_bolivia2014,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_bolivia2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_bolivia2018,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_brazil2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_brazil2018,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_canada2012,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_canada2014,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_canada2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_chile2010,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_chile2012,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_chile2014,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_chile2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_chile2018,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_colombia2009,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_colombia2011,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_colombia2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_colombia2018,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
 amb_combo,marry10,d6,c(1:10),How strongly do you approve or disapprove of same-sex couples having the right to marry? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
 amb_combo,neigh2,dis35a,"c(1, 0)",Homosexuals. Would you mind having them as neighbors? , 0 Do not have a problem with having them as neighbors / 1 Do not want them as neighbors,1,
-amb_combo,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_costarica2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_costarica2018,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_dominica2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_ecuador2014,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_ecuador2018,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
+amb_combo,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_costarica2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_costarica2018,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_dominica2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_ecuador2014,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_ecuador2018,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
 amb_ecuador2018,marry10,d6,c(1:10),How strongly do you approve or disapprove of same-sex couples having the right to marry? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
-amb_grenada2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_guyana2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_panama2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_panama2018,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
+amb_grenada2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_guyana2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_panama2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_panama2018,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
 amb_panama2018,marry10,d6,c(1:10),How strongly do you approve or disapprove of same-sex couples having the right to marry? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
-amb_stkittsnevis2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_stlucia2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_stvincent2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_suriname2010,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_suriname2012,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_trinidad2010,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_trinidad2012,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_uruguay2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_uruguay2018,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
+amb_stkittsnevis2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_stlucia2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_stvincent2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_suriname2010,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_suriname2012,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_trinidad2010,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_trinidad2012,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_uruguay2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_uruguay2018,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
 amb_uruguay2018,marry10,d6,c(1:10),How strongly do you approve or disapprove of same-sex couples having the right to marry? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
-amb_us2010,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
+amb_us2010,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
 amb_us2010,marry10,d6,c(1:10),How strongly do you approve or disapprove of same-sex couples having the right to marry? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
-amb_us2012,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_us2014,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_us2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_us2018,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_venezuela2010,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_venezuela2012,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_venezuela2014,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
-amb_venezuela2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?","1 Strongly Disapprove
-2
-3
-4
-5
-6
-7
-8
-9
-10 Strongly Approve",1,
+amb_us2012,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_us2014,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_us2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_us2018,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_venezuela2010,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_venezuela2012,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_venezuela2014,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_venezuela2016,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_argentina2023,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_argentina2023,marry10,d6,c(1:10),How strongly do you approve or disapprove of same-sex couples having the right to marry? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_argentina2023,rights10,d5newa,c(1:10),"How strongly do you approve or disapprove of people from sexual minorities, such as gay, lesbian, bisexual, etc., having the same rights as the majority of Canadians? ",1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_argentina2023,adopt10,d7a,c(1:10),How strongly do you approve or disapprove of sexual minority couples having the right to adopt children? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_bahamas2023,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_bahamas2023,marry10,d6,c(1:10),How strongly do you approve or disapprove of same-sex couples having the right to marry? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_bahamas2023,rights10,d5newa,c(1:10),"How strongly do you approve or disapprove of people from sexual minorities, such as gay, lesbian, bisexual, etc., having the same rights as the majority of Canadians? ",1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_belize2023,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_belize2023,run10,d5n,c(1:10),"And now, changing the topic and thinking of gay people, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,1,
+amb_belize2023,marry10,d6,c(1:10),How strongly do you approve or disapprove of same-sex couples having the right to marry? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_belize2023,adopt10,d7a,c(1:10),How strongly do you approve or disapprove of sexual minority couples having the right to adopt children? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_bolivia2023,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_bolivia2023,rights10,d5newa,c(1:10),"How strongly do you approve or disapprove of people from sexual minorities, such as gay, lesbian, bisexual, etc., having the same rights as the majority of Canadians? ",1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_bolivia2023,marry10,d6,c(1:10),How strongly do you approve or disapprove of same-sex couples having the right to marry? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_belize2023,adopt10,d7a,c(1:10),How strongly do you approve or disapprove of sexual minority couples having the right to adopt children? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_brazil2023,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_brazil2023,marry10,d6,c(1:10),How strongly do you approve or disapprove of same-sex couples having the right to marry? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_brazil2023,rights10,d5newa,c(1:10),"How strongly do you approve or disapprove of people from sexual minorities, such as gay, lesbian, bisexual, etc., having the same rights as the majority of Canadians? ",1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_brazil2023,adopt10,d7a,c(1:10),How strongly do you approve or disapprove of sexual minority couples having the right to adopt children? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_canada2023,marry10,d6,c(1:10),How strongly do you approve or disapprove of same-sex couples having the right to marry? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_canada2023,rights10,d5newa,c(1:10),"How strongly do you approve or disapprove of people from sexual minorities, such as gay, lesbian, bisexual, etc., having the same rights as the majority of Canadians? ",1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_chile2023,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_chile2023,marry10,d6,c(1:10),How strongly do you approve or disapprove of same-sex couples having the right to marry? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_chile2023,rights10,d5newa,c(1:10),"How strongly do you approve or disapprove of people from sexual minorities, such as gay, lesbian, bisexual, etc., having the same rights as the majority of Canadians? ",1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_chile2023,adopt10,d7a,c(1:10),How strongly do you approve or disapprove of sexual minority couples having the right to adopt children? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_colombia2023,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_colombia2023,marry10,d6,c(1:10),How strongly do you approve or disapprove of same-sex couples having the right to marry? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_costarica2023,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_costarica2023,marry10,d6,c(1:10),How strongly do you approve or disapprove of same-sex couples having the right to marry? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_costarica2023,rights10,d5newa,c(1:10),"How strongly do you approve or disapprove of people from sexual minorities, such as gay, lesbian, bisexual, etc., having the same rights as the majority of Canadians? ",1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_costarica2023,adopt10,d7a,c(1:10),How strongly do you approve or disapprove of sexual minority couples having the right to adopt children? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_dominicanrepublic2023,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_dominicanrepublic2023,marry10,d6,c(1:10),How strongly do you approve or disapprove of same-sex couples having the right to marry? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_dominicanrepublic2023,rights10,d5newa,c(1:10),"How strongly do you approve or disapprove of people from sexual minorities, such as gay, lesbian, bisexual, etc., having the same rights as the majority of Canadians? ",1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_dominicanrepublic2023,adopt10,d7a,c(1:10),How strongly do you approve or disapprove of sexual minority couples having the right to adopt children? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_ecuador2023,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_ecuador2023,marry10,d6,c(1:10),How strongly do you approve or disapprove of same-sex couples having the right to marry? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_ecuador2023,rights10,d5newa,c(1:10),"How strongly do you approve or disapprove of people from sexual minorities, such as gay, lesbian, bisexual, etc., having the same rights as the majority of Canadians? ",1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_elsalvador2023,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_elsalvador2023,marry10,d6,c(1:10),How strongly do you approve or disapprove of same-sex couples having the right to marry? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_elsalvador2023,rights10,d5newa,c(1:10),"How strongly do you approve or disapprove of people from sexual minorities, such as gay, lesbian, bisexual, etc., having the same rights as the majority of Canadians? ",1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_elsalvador2023,adopt10,d7a,c(1:10),How strongly do you approve or disapprove of sexual minority couples having the right to adopt children? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_grenada2023,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_grenada2023,marry10,d6,c(1:10),How strongly do you approve or disapprove of same-sex couples having the right to marry? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_grenada2023,rights10,d5newa,c(1:10),"How strongly do you approve or disapprove of people from sexual minorities, such as gay, lesbian, bisexual, etc., having the same rights as the majority of Canadians? ",1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_guatemala2023,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_guatemala2023,marry10,d6,c(1:10),How strongly do you approve or disapprove of same-sex couples having the right to marry? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_guatemala2023,rights10,d5newa,c(1:10),"How strongly do you approve or disapprove of people from sexual minorities, such as gay, lesbian, bisexual, etc., having the same rights as the majority of Canadians? ",1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_guatemala2023,adopt10,d7a,c(1:10),How strongly do you approve or disapprove of sexual minority couples having the right to adopt children? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_honduras2023,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_honduras2023,marry10,d6,c(1:10),How strongly do you approve or disapprove of same-sex couples having the right to marry? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_jamaica2023,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_jamaica2023,marry10,d6,c(1:10),How strongly do you approve or disapprove of same-sex couples having the right to marry? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_jamaica2023,rights10,d5newa,c(1:10),"How strongly do you approve or disapprove of people from sexual minorities, such as gay, lesbian, bisexual, etc., having the same rights as the majority of Canadians? ",1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_mexico2023,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_mexico2023,marry10,d6,c(1:10),How strongly do you approve or disapprove of same-sex couples having the right to marry? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_mexico2023,rights10,d5newa,c(1:10),"How strongly do you approve or disapprove of people from sexual minorities, such as gay, lesbian, bisexual, etc., having the same rights as the majority of Canadians? ",1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_mexico2023,adopt10,d7a,c(1:10),How strongly do you approve or disapprove of sexual minority couples having the right to adopt children? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_nicaragua2023,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_nicaragua2023,marry10,d6,c(1:10),How strongly do you approve or disapprove of same-sex couples having the right to marry? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_panama2023,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_panama2023,marry10,d6,c(1:10),How strongly do you approve or disapprove of same-sex couples having the right to marry? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_panama2023,rights10,d5newa,c(1:10),"How strongly do you approve or disapprove of people from sexual minorities, such as gay, lesbian, bisexual, etc., having the same rights as the majority of Canadians? ",1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_panama2023,adopt10,d7a,c(1:10),How strongly do you approve or disapprove of sexual minority couples having the right to adopt children? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_paraguay2023,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_paraguay2023,marry10,d6,c(1:10),How strongly do you approve or disapprove of same-sex couples having the right to marry? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_peru2023,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_peru2023,marry10,d6,c(1:10),How strongly do you approve or disapprove of same-sex couples having the right to marry? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_peru2023,rights10,d5newa,c(1:10),"How strongly do you approve or disapprove of people from sexual minorities, such as gay, lesbian, bisexual, etc., having the same rights as the majority of Canadians? ",1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_peru2023,adopt10,d7a,c(1:10),How strongly do you approve or disapprove of sexual minority couples having the right to adopt children? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_suriname2023,marry10,d6,c(1:10),How strongly do you approve or disapprove of same-sex couples having the right to marry? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_suriname2023,rights10,d5newa,c(1:10),"How strongly do you approve or disapprove of people from sexual minorities, such as gay, lesbian, bisexual, etc., having the same rights as the majority of Canadians? ",1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_trinidad2023,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_trinidad2023,marry10,d6,c(1:10),How strongly do you approve or disapprove of same-sex couples having the right to marry? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_trinidad2023,rights10,d5newa,c(1:10),"How strongly do you approve or disapprove of people from sexual minorities, such as gay, lesbian, bisexual, etc., having the same rights as the majority of Canadians? ",1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_uruguay2023,run10,d5,c(1:10),"And now, changing the topic and thinking of homosexuals, how strongly do you approve or disapprove of such people being permitted to run for public office?",1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_uruguay2023,marry10,d6,c(1:10),How strongly do you approve or disapprove of same-sex couples having the right to marry? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_uruguay2023,rights10,d5newa,c(1:10),"How strongly do you approve or disapprove of people from sexual minorities, such as gay, lesbian, bisexual, etc., having the same rights as the majority of Canadians? ",1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_uruguay2023,adopt10,d7a,c(1:10),How strongly do you approve or disapprove of sexual minority couples having the right to adopt children? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_us2023,marry10,d6,c(1:10),How strongly do you approve or disapprove of same-sex couples having the right to marry? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_us2023,rights10,d5newa,c(1:10),"How strongly do you approve or disapprove of people from sexual minorities, such as gay, lesbian, bisexual, etc., having the same rights as the majority of Canadians? ",1 Strongly disapprove / 23456789 / 10 Strongly approve,,
+amb_us2023,adopt10,d7a,c(1:10),How strongly do you approve or disapprove of sexual minority couples having the right to adopt children? ,1 Strongly disapprove / 23456789 / 10 Strongly approve,,
 anes_combo,adopt2,vcf0878,"c(5, 1)","Do you think gay or lesbian couples, in other words, homosexual couples, should be legally permitted to adopt children?",1 Yes / 5 No,1,
 anes2020,adopt2,v201415,"c(2, 1)",Do you think gay or lesbian couples should be legally permitted to adopt children?,1 Yes / 2 No,1,
 angus_reid199301,marry2,a10,"c(2, 1)",Do you think homosexual couples who wish to marry should or should not qualify for legal recognition of the marriage?,1 should 2 should not,1,
@@ -673,6 +278,7 @@ bsa2017,approve5,homosex,c(1:5),What about sexual relations between two adults o
 bsa2018,approve4,sexhomo,c(1:4),"And what about sexual relations between two adults of the same sex, is it wrong?",1 Always wrong 2 Almost always wrong 3 Wrong Only Sometimes 4 Not Wrong at All,,
 bsa2018,approve5,homosex,c(1:5),What about sexual relations between two adults of the same sex?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
 bsa2019,approve5,homosex,c(1:5),What about sexual relations between two adults of the same sex?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
+bsa2021,approve5,homosex,c(1:5),What about sexual relations between two adults of the same sex?,1 Always wrong 2 Mostly wrong  3 Sometimes wrong 4 Rarely wrong  5  Not wrong at all,,
 canadianes2004,marry3a,ces04_cps_i1_3,"c(3,8,1)","Do you favour or oppose same-sex marriage, or do you have no opinion on this? ",1 favor / 3 oppose / 8 no opinion,1,
 canadianes2004,marry4d,ces04_pes_g12_3,"c(7,5,3,1)",Gays and lesbians should be allowed to get married,1 strongly agree / 3 somewhat agree / 5 somewhat disagree / 7 strongly disagree,1,
 canadianes2006,marry3a,ces06_cps_i9,"c(3,8,1)","Do you favour or oppose same-sex marriage, or do you have no opinion on this? ",1 favor / 3 oppose / 8 no opinion,1,
@@ -745,6 +351,8 @@ eb39,adopt2,v639,"c(2, 1)","Do you think that homosexual couples should, or shou
 eb39,civil2,v638,"c(2, 1)","Do you think that homosexual couples should, or should not, have the right to Live together, without being married, but with the same advantages as married couples",Should 1 Should not 2,1,
 eb39,marry2,v637,"c(2, 1)","Do you think that homosexual couples should, or should not, have the right to: Marry each other",Should 1 Should not 2,1,
 eb561,pension4,v397,c(4:1),Couples of the same sex should be entitled to a widow's/widower's pension as if they had lived with a partner of the opposite sex,1 strongly agree / 2 agree / 3 disagree / 4 strongly disagree,1,
+eb57,job5,v329,c(1:5), Do you think that it is right or wrong to refuse a job or a training to an applicant because he or she is: A homosexual (a gay or a lesbian person),1 Always wrong / 2 Mostly wrong / 3 Sometimes wrong / 4 Rarely wrong / 5 Not wrong at all,,
+eb57,promote5,v343,c(1:5), Do you think that it is right or wrong to refuse a promotion to a person because he or she is: A homosexual (a gay or a lesbian person),1 Always wrong / 2 Mostly wrong / 3 Sometimes wrong / 4 Rarely wrong / 5 Not wrong at all,,
 eb661,adopt4,v325,c(4:1),"For each of the following propositions, tell me if you Adoption of children should be authorised for homosexual couples throughout Europe",Totally agree 1 totally disagree 4,1,
 eb661,marry4e,v324,c(4:1),"For each of the following propositions, tell me if you Homosexual marriages should be allowed throughout Europe?",Totally agree 1 totally disagree 4,1,
 eb691,hioff10,v129,c(1:10),"Using a scale from 1 to 10, please tell me how you would feel about having a person from each of the following groups in the highest elected political position in (OUR COUNTRY). '1' means that you would feel """"not at all comfortable"""" and '10' that you would feel """"totally comfortable"""": A gay, lesbian or bisexual person",1 Not at all comfortable / 23456789 / 10 Totally comfortable,1,
@@ -755,6 +363,8 @@ eb834,approve4a,qc16_2,c(4:1),To what extent do you agree or disagree with each 
 eb834,hioff10,qc4_2,c(1:10),"Using a scale from 1 to 10, please tell me how you would feel about having a person from each of the following groups in the highest elected political position in (OUR COUNTRY). '1' means that you would feel """"not at all comfortable"""" and '10' that you would feel """"totally comfortable"""": A gay, lesbian or bisexual person",Very uncomfortable 1  Totally comfortable 10 Indifferent (SPONT.) 11,1,
 eb834,marry4e,qc16_3,c(4:1),To what extent do you agree or disagree with each of the following statements? Same sex marriages should be allowed throughout Europe,Totally agree 1 totally disagree 4,1,
 eb834,rights4,qc16_1,c(4:1),"To what extent do you agree or disagree with each of the following statements? Gay, lesbian and bisexual people should have the same rights as heterosexual people",Totally agree 1 totally disagree 4,1,
+eb834,child10,qc14_10,c(1:10),"Regardless of whether you have children or not, please tell me, using a scale from 1 to 10, how comfortable you would feel if one of your children was in a love relationship with a person from each of the following groups: A person of the same sex",1 Totally uncomfortable / 23456789 / 10 Totally comfortable,,
+eb914,child10,qc13_10,c(1:10),"Regardless of whether you have children or not, please tell me, using a scale from 1 to 10, how comfortable you would feel if one of your children was in a love relationship with a person from each of the following groups: A person of the same sex",1 Totally uncomfortable / 23456789 / 10 Totally comfortable,,
 eb914,approve4a,qc15_2,c(4:1),To what extent do you agree or disagree with each of the following statements?There is nothing wrong in a sexual relationship between two persons of the same sex,Totally agree 1 totally disagree 4,1,
 eb914,hioff10,qc6_2,c(1:10),"Using a scale from 1 to 10, please tell me how you would feel about having a person from each of the following groups in the highest elected political position in (OUR COUNTRY). '1' means that you would feel """"not at all comfortable"""" and '10' that you would feel """"totally comfortable"""": A gay, lesbian or bisexual person",Very uncomfortable 1  Totally comfortable 10 Indifferent (SPONT.) 11,1,
 eb914,marry4e,qc15_3,c(4:1),To what extent do you agree or disagree with each of the following statements? Same sex marriages should be allowed throughout Europe,Totally agree 1 totally disagree 4,1,
@@ -904,6 +514,7 @@ lb2009,just10,p63wvsst,c(1:10),"Please tell me for each of the following stateme
 lb2009,neigh2,p64st_a,"c(1, 0)",could you select any that you would not like to have as neighbors?,1 mentioned / 0 not mentioned,1,
 lb2010,marry4a,p14n_g,c(4:1),"Do you strongly agree, agree, disagree or strongly disagree with each of the following statements? Homosexual marriage",1 strongly agree / 2 agree / 3 disagree / 4 strongly disagree,,
 lb2015,marry4a,p69st_c,c(4:1),"Do you strongly agree, agree, disagree or strongly disagree with each of the following statements? Homosexual marriage",1 strongly agree / 2 agree / 3 disagree / 4 strongly disagree,,
+lb2023,parent4,p37wvscs_h,c(4:1),Homosexual couples are equally good parents as other couples,1 strongly agree / 2 agree / 3 disagree / 4 strongly disagree,,
 lits_wave2,neigh2,q333h,"c(1, 0)",people you do not want to have as neighbors? Homosexuals,1 mentioned / 0 not mentioned,,
 lits_wave3,neigh2,q429h,"c(1, 0)",people you do not want to have as neighbors? Homosexuals,1 mentioned / 0 not mentioned,,
 nbcwsj199906,marry4a,q22i,c(4:1),Do you strongly favor favor oppose or strongly oppose allowing gays and lesbians to marry legally?,1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1,
