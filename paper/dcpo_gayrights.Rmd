@@ -9,8 +9,8 @@ output:
     pandoc_args: --lua-filter=multibib.lua
     
 title: |
-  | Measuring Tolerance of Homosexuality in the
-  | Mass Public Across Countries and Over Time
+  | Public Support for Gay Rights
+  | Across Countries and Over Time
 
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 editor_options: 
@@ -81,13 +81,13 @@ header-includes:
 ```
 ```{=tex}
 \begin{abstract}
-Tolerance of homosexuality has increased in many countries over recent decades, but the resulting scholarship has been hindered by the limited available data on these trends in public opinion. To overcome this problem, we present the Tolerance of Homosexuality (TOL-H) dataset, which combines a comprehensive collection of survey data with a latent-variable model to provide annual time-series estimates of public attitudes toward homosexuality across 119 countries and over as many as 49 years that are comparable across space and time. We show these data perform well in validation tests and demonstrate their potential by replicating the influential but recently questioned finding of Andersen and Fetner (2008) that more income inequality yields less tolerance of homosexuality. We anticipate that the TOL-H data will become a crucial source for cross-regional, cross-national, and longitudinal research that improves our understanding of the sources and consequences of tolerance of homosexuality.
+Support for gay rights has increased in the publics of many countries over recent decades, but the scholarship on the topic has been hindered by the limited available data on these trends in public opinion. To overcome this problem, we present the Support for Gay Rights (SGR) dataset, which combines a comprehensive collection of survey data with a latent-variable model to provide annual time-series estimates of public support for gay rights across 119 countries and over as many as 50 years that are comparable across space and time.  These data perform well in validation tests. We anticipate that the SGR data will become a crucial source for cross-regional, cross-national, and longitudinal research that improves our understanding of the sources and consequences of public support for gay rights.
 \end{abstract}
 ```
 
-Abstract wordcount: 151 words
+Abstract wordcount: XXXXX words
 
-Manuscript wordcount: 6781 words
+Manuscript wordcount: XXXXX words
 \pagebreak
 
 ```{r setup, include=FALSE}
@@ -337,31 +337,31 @@ by2sd <- function(var) {
 set.seed(324)
 ```
 
-Public attitudes toward homosexuality have been changing toward greater tolerance in many countries over the past several decades, and these often-rapid shifts have attracted sustained interest from researchers.
+Public attitudes toward gay rights have been changing toward greater support in many countries over the past several decades, and these often-rapid shifts have attracted sustained interest from researchers.
 The resulting scholarship has been hampered, however, by the limited available data on these trends in public opinion.
 Mirroring the coverage of the survey projects on which they were based, these works have either investigated the causes or consequences of dynamics in public opinion over time in only one country or region [see, e.g., @Abou-Chadi2019; @Dotti-Sani2022], on the one hand, or differences in public opinion across a broad cross-regional sample of countries but in just a small number of years, on the other [see, e.g., @Ayoub2017; @Adamczyk2017].
 Indeed, given the severe contraint of data availability on this topic, it is not at all surprising that there are also important contributions, even recently, that are limited in _both_ space _and_ time [see, e.g., @Zhou2020; @Winkler2021; @Paradela-Lopez2023].
 The paucity of comparable data that has shaped this literature undermines our confidence in our understanding not only because the data are scant in general but also because they are biased geographically.
 Naturally, the narrower the evidentiary base upon which conclusions are built, the more susceptible these conclusions will be to collapse [see @King2021, 23].
 This is especially true where, as here, what suitable data exist are geographically concentrated.
-There is much more data and hence research on public opinion regarding homosexuality in the countries of Europe and North America than elsewhere [@Adamczyk2019, 410]; this geographic bias makes scope conditions difficult to discern and so potentially leaves even theories that find empirical support less generally applicable than perhaps often assumed [see @Wilson2022, 1037].
+There is much more data and hence research on public opinion regarding gay rights in the countries of Europe and North America than elsewhere [@Adamczyk2019, 410]; this geographic bias makes scope conditions difficult to discern and so potentially leaves even theories that find empirical support less generally applicable than perhaps often assumed [see @Wilson2022, 1037].
 
-To address these issues, this article presents the Tolerance of Homosexuality (TOL-H) dataset.
-The TOL-H dataset combines a comprehensive collection of responses to national and cross-national surveys with recent developments in latent-variable modeling of public opinion to provide estimates of public attitudes toward homosexuality that are comparable across many countries and over many years.
-These latent-variable estimates perform well in validation tests: they are very strongly correlated with single survey items tapping views of homosexuality, and they also relate strongly to other concepts thought causally connected to public opinion on homosexuality.
-The TOL-H dataset provides a much firmer basis for testing the implications of theories by providing many more observations across a wider scope of countries and time than previously available sources.
+To address these issues, this article presents the Support for Gay Rights (SGR) dataset.
+The SGR dataset combines a comprehensive collection of responses to national and cross-national surveys with recent developments in latent-variable modeling of public opinion to provide estimates of public attitudes toward gay rights that are comparable across many countries and over many years.
+These latent-variable estimates perform well in validation tests: they are very strongly correlated with single survey items tapping views on gay rights, and they also relate strongly to other concepts thought causally connected to public opinion on gay rights.
+The SGR dataset provides a much firmer basis for testing the implications of theories by providing many more observations across a wider scope of countries and time than previously available sources.
 We demonstrate its potential in this regard by replicating the foundational but recently questioned finding of @Andersen2008 that more income inequality yields less tolerance.
-We anticipate that the TOL-H data will become a crucial source for cross-regional, cross-national, and longitudinal research that improves our understanding of the sources and consequences of tolerance of homosexuality.
+We anticipate that the SGR data will become a crucial source for cross-regional, cross-national, and longitudinal research that improves our understanding of the sources and consequences of tolerance of homosexuality.
 
 
-# Existing Data and Research on Attitudes Toward Homosexuality {.unlisted .unnumbered}
+# Existing Data and Research on Attitudes Toward Gay Rights {.unlisted .unnumbered}
 
-The TOL-H dataset aims to address a shortcoming in the available datasets on public opinion toward homosexuality: researchers have been forced to choose between studying tolerance in many countries _or_ over many years, but not both.
+The SGR dataset aims to address a shortcoming in the available datasets on public opinion toward homosexuality: researchers have been forced to choose between studying tolerance in many countries _or_ over many years, but not both.
 Figure\nobreakspace{}\ref{proj_kt_plot} illustrates the trade-off between the breadth of country coverage and the number of years available for each country.
-It plots, for each survey project in the TOL-H source data described below, the number of countries for which data on attitudes toward homosexuality are available against the mean number of years these data are available per country.
+It plots, for each survey project in the SGR source data described below, the number of countries for which data on attitudes toward homosexuality are available against the mean number of years these data are available per country.
 Some survey projects ask more than one question on the topic, but here, only the most frequently asked single question on the topic is shown.
 An 'L' shape is readily evident.
-Many surveys, clustered in the lower left at the bend in the L, ask questions about tolerance of homosexuality in only a few different country-year contexts.
+Many surveys, clustered in the lower left at the bend in the L, ask questions about support for gay rights in only a few different country-year contexts.
 Some though, such as the U.S. General Social Survey and the British Social Attitudes project in the top left, have fielded such questions repeatedly over many years in a single country, although even these efforts fall short of complete time series.
 Others, including the World Values Survey and the Pew Global Attitudes project along the bottom and towards the right, provide information about many countries across one or a few years.
 The European Social Survey, which surveyed respondents in 39 countries in as many as ten years (mean: 6.6 years) over two decades, provides the most over-time data for the most countries, followed by the AmericasBarometer (34 countries, mean years: 5.4).
@@ -415,7 +415,7 @@ proj_kt_plot <- ggplot(proj_kt, aes(y = t, x = k)) +
   scale_x_continuous(breaks=seq(0, 100, 25)) +
   labs(x = "Countries Observed",
        y = "Mean Years Observed Per Country Observed",
-       title = "Survey Projects with Questions on\nTolerance of Homosexuality")
+       title = "Survey Projects with Questions on\nsupport for gay rights")
 
 proj_kt_plot + plot_annotation(caption = str_wrap("Notes: The number of countries and mean years observed are plotted only for the most frequently asked single question on attitudes toward homosexuality in each survey project.", width = 114))
 ```
@@ -513,7 +513,7 @@ poh_plot + plot_annotation(caption = str_wrap("Notes: Citation counts as reporte
 
 
 Figure\nobreakspace{}\ref{poh_plot} shows how the available data have influenced scholarship on the topic.
-Using the Web of Science and Google Scholar, we assembled a sample of prominent published articles on public opinion toward homosexuality (see the online appendix for details).
+Using the Web of Science and Google Scholar, we assembled a sample of prominent published articles on public opinion toward gay rights (see the online appendix for details).
 These articles had publication dates as early as `r summary(poh$year)[[1]]` and as late as `r summary(poh$year)[[6]]` (median: `r summary(poh$year)[[3]]`) and were cited in the Web of Science from `r summary(poh$hits)[[1]]` to `r summary(poh$hits)[[6]]` times (median: `r summary(poh$hits)[[3]]`).
 We then examined these articles to find the number of countries and years investigated in each.
 As the zoomed portion of the plot emphasizes, many of these articles might be described as using case-study or small-_n_ research designs.
@@ -523,7 +523,7 @@ Among the works that investigate more contexts, the data employed tend to be lon
 Roughly a fifth of these articles examine ten or more years of data within a single country.
 @Clements2014, for example, tracks changes in British attitudes in 13 different survey projects conducted in 42 different years; @Yang1997 similarly reports trends in public opinion in the United States drawing on many surveys conducted in 26 different years.
 Research considering data from more than five countries encompass less than a sixth of these articles.
-One recent piece, @Hildebrandt2019, draws on the fifth and sixth waves of the WVS to create a single cross-section of 73 countries and argues that modernization leads to more tolerance and in turn, in democracies, more rights recognized; the influential work by @Adamczyk2009 similarly employs a single cross-section of the WVS, in its case the fourth wave, to examine how individuals' religiosity and their countries' religious heritages shape their attitudes about homosexuality.
+One recent piece, @Hildebrandt2019, draws on the fifth and sixth waves of the WVS to create a single cross-section of 73 countries and argues that modernization leads to more tolerance and in turn, in democracies, more gay rights recognized; the influential work by @Adamczyk2009 similarly employs a single cross-section of the WVS, in its case the fourth wave, to examine how individuals' religiosity and their countries' religious heritages shape their attitudes toward gay rights.
 @Reynolds2013 looks at the most countries of any of these prominent works, 81, combining WVS and Pew Global Attitudes data to obtain 146 observed country-years (mean observed years per country: 1.8) with which to evaluate how attitudes influence policy.
 The article examining the most country-years of public opinion in this sample is @Redman2018, an investigation of policy feedback on public opinion that uses the second through sixth WVS waves to provide a total of 203 country-years in 70 countries, that is, 2.9 observed years per country on average.
 @Hooghe2013, which also studies policy feedback, is the cross-national study with the most longitudinal data in the sample: it employs the first five waves of the ESS to provide a total of 123 country-years across 29 countries for a mean of 4.2 observed years per country.
@@ -532,11 +532,11 @@ Within this sample of prominent works, none of the articles including five or mo
 That these L-shaped distributions in the available datasets and the resulting analyses should limit our confidence in our conclusions should be readily evident.
 The single-country studies that make up the vertical part of the L, even those over many years, leave questions regarding the generalizability of their findings to other parts of the world [see, e.g., @King2021, 210].
 The cross-national analyses on the horizontal, with just one or at most a handful of time points to leverage, on the other hand, often raise concerns that differences across countries are being conflated with over-time causal processes [see, e.g., @Jackman1985, 173-174].
-That a disproportionate share of research on public opinion regarding homosexuality and of the available surveys on which this research is based focuses on Europe and North America [see @Adamczyk2019, 410] only compounds these issues.
+That a disproportionate share of research on public opinion regarding gay rights and of the available surveys on which this research is based focuses on Europe and North America [see @Adamczyk2019, 410] only compounds these issues.
 As @Wilson2022 [, 1037] points out, such geographic bias makes the scope conditions of even cross-national studies difficult to discern.
 
 A dataset that falls to the upper right of Figure\nobreakspace{}\ref{proj_kt_plot} would address these issues and allow researchers to reach conclusions that are more robust.
-In the next section, we describe the national and cross-national surveys and the latent-variable model we use to this end, along with the resulting TOL-H dataset.
+In the next section, we describe the national and cross-national surveys and the latent-variable model we use to this end, along with the resulting SGR dataset.
 
 ```{r dcpo_input_raw, eval=FALSE, include=FALSE}
 # set eval to TRUE to run; running time is <5 minutes
@@ -618,16 +618,16 @@ covered_share_of_spanned <- {back_to_numeric(n_cy)/back_to_numeric(spanned_cy) *
 ```
 
 
-# Estimating Tolerance of Homosexuality Across Space and Time {.unlisted .unnumbered}
+# Estimating Support for Gay Rights Across Space and Time {.unlisted .unnumbered}
 
-To generate estimates of tolerance of homosexuality cross-nationally and longitudinally that are comparable across space and over time, we first assemble a comprehensive collection of survey questions on the topic.
-The relevant surveys are sparse, providing no relevant data for many countries and years, and incomparable, employing many different survey items, but collectively they have often asked questions about homosexuality over the past half-century.
+To generate estimates of support for gay rights cross-nationally and longitudinally that are comparable across space and over time, we first assemble a comprehensive collection of survey questions on the topic.
+The relevant surveys are sparse, providing no relevant data for many countries and years, and incomparable, employing many different survey items, but collectively they have often asked questions about gay and lesbian rights over the past half-century.
 In all, we identified `r n_items` items that were asked in no fewer than five country-years in countries surveyed at least three times; these items were drawn from `r n_surveys` different national and cross-national survey datasets.^[
 The complete list of survey items is included in the online appendix.]
 Together, these items were asked in `r n_countries` different countries in at least three time points over the `r n_years` years `r year_range`, yielding a total of `r n_cyi` country-year-item observations.
 Observations for every year in each country surveyed would total `r total_cy`, and a complete set of country-year-items would include `r {n_countries * n_years * n_items} %>% scales::comma()` observations.
 Viewed from this complete-data perspective, the sparsity of the available source data is readily evident.
-On the other hand, we do have in the source data `r n_cy` country-years for which there is at least _some_ information about the extent of tolerance of homosexuality in the population, that is, very nearly `r round(covered_share_of_spanned)`% of the `r spanned_cy` country-years spanned by the data we collected.
+On the other hand, we do have in the source data `r n_cy` country-years for which there is at least _some_ information about the extent of support for gay rights in the population, that is, very nearly `r round(covered_share_of_spanned)`% of the `r spanned_cy` country-years spanned by the data we collected.
 Still, the many different survey items employed render these data incomparable and so difficult to use together.
 
 ```{r itemcountry, fig.cap="Countries and Years with the Most Observations in the Source Data \\label{item_country_plots}", fig.height=3.5, fig.pos='h', cache=FALSE}
@@ -787,7 +787,7 @@ Again we see how, as the review in @Adamczyk2019 [, 410] notes, more data has be
 At the other end of the spectrum, `r n_data_poorest` countries---`r data_poorest`---have only the minimum three observations required to be included in the source dataset at all.
 The upper right panel shows the twelve countries with the most years observed; this group is similar, but with `r adding` joining the list and `r dropping` dropping off.
 The bottom panel counts the countries observed in each year and reveals just how few relevant survey items were asked before 1990.
-Country coverage reached its peak in `r y_peak_year`, when surveys in `r y_peak_nn` countries included items on homosexuality.
+Country coverage reached its peak in `r y_peak_year`, when surveys in `r y_peak_nn` countries included items on gay and lesbian rights.
 
 Latent variable models of public opinion drawing on cross-national survey data have attracted considerable attention in recent years [see @Claassen2019; @Caughey2019; @McGann2019; @Kolczynska2020].
 To estimate public gender egalitarianism across countries and over time, we draw on the latest of these methods that is appropriate for data that is both sparse and incomparable, the Dynamic Comparative Public Opinion (DCPO) model [@Solt2020c].
@@ -795,17 +795,17 @@ In brief, the DCPO model is a population-level two-parameter ordinal logistic it
 Here, we focus on how it deals with the principal issues raised by the survey data described above, incomparability and sparsity.
 
 The DCPO model accounts for the incomparability of different survey questions with two parameters.
-First, it incorporates the _difficulty_ of each question's responses, that is, the amount of tolerance of homosexuality that is indicated by a given response. 
+First, it incorporates the _difficulty_ of each question's responses, that is, the amount of support for gay rights that is indicated by a given response. 
 That each response evinces more or less of our latent trait is most easily seen with regard to the ordinal responses to the same question: to strongly agree with the statement "the law should recognise same-sex relationships," evinces more tolerance than responding "agree," which is more tolerant than "neither agree nor disagree," which shows more tolerance than "disagree," and in turn "strongly disagree."
 The same thing is true across questions.
 For example, strongly agreeing with the statement "homosexual couples should be able to adopt children" likely expresses more tolerance than merely responding that same-sex relationships should be not be criminalized.
 Second, the DCPO model accounts for each question's _dispersion_, its noisiness with regard to our latent trait.
-A lower dispersion indicates that changes in responses to the question are more faithfully translated to changes in the underlying tolerance of homosexuality.
+A lower dispersion indicates that changes in responses to the question are more faithfully translated to changes in the underlying support for gay rights.
 These two parameters, difficulty and dispersion, together generate comparable estimates of the latent variable from source data questions that are not directly comparable.
 
 The sparsity in the source data---the interruptions in the time series of each country caused by unobserved country-years, and the fact that even many observed country-years have only one or few observed items---is addressed by the DCPO model using local-level dynamic linear models, also known as random-walk priors.
 This means that, for each country, each year's value of tolerance is modeled as the previous year's estimate plus a random shock.
-These dynamic models smooth the estimates of tolerance of homosexuality over time and allow estimation even in years for which little or no survey data is available, albeit at the expense of greater measurement uncertainty.
+These dynamic models smooth the estimates of support for gay rights over time and allow estimation even in years for which little or no survey data is available, albeit at the expense of greater measurement uncertainty.
 
 ```{r dcpo_input}
 dcpo_input <- DCPOtools::format_dcpo(dcpo_input_raw1,
@@ -909,7 +909,7 @@ res_c <- theta_summary %>%
 res_y <- theta_summary %>% count(country) %>% pull(n)
 ```
 
-```{r csplot, fig.cap="TOL-H Scores, Most Recent Available Year \\label{cs_mry}", fig.height=10, fig.width=8}
+```{r csplot, fig.cap="SGR Scores, Most Recent Available Year \\label{cs_mry}", fig.height=10, fig.width=8}
 n_panes <- 2
 axis_text_size <- 10
 
@@ -963,13 +963,13 @@ bottom5 <- p1_data %>%
 We estimated the DCPO model on the source data using the `DCPO` and `cmdstanr` packages for R [@Solt2020a; @Gabry2022], running four chains for 2,000 iterations each and discarding the first half as warmup.
 All $\hat{R}$ diagnostics were below 1.02, which indicates that the model converged.
 
-Despite the potential for divergences between responses to questions on the morality of homosexuality and those on what civil rights are properly accorded homosexuals, as @Adamczyk2019 [, 407] anticipated, "respondents across a range of different countries do not draw major distinctions between these two dimensions": the dispersion parameters indicate that all of the survey items load well on the single latent variable of tolerance for homosexuality (see Table A2 in the online appendix).
-The result is estimates for each of the `r res_cy` country-years spanned by the source data of mean tolerance of homosexuality, which together comprise the TOL-H dataset.
-With data on `r res_c` countries for `r min(res_y)` to `r max(res_y)` years---a mean of `r mean(res_y) %>% sprintf("%.1f", .)` years---the TOL-H dataset is literally off the charts: it falls beyond the bounds of Figure\nobreakspace{}\ref{proj_kt_plot}.
+Despite the potential for divergences between responses to questions on the _morality_ of homosexuality and those that more directly concern what rights are properly accorded gays and lesbians, as @Adamczyk2019 [, 407] anticipated, "respondents across a range of different countries do not draw major distinctions between these two dimensions": the dispersion parameters indicate that all of the survey items load well on the single latent variable of support for gay rights (see Table A2 in the online appendix).
+The result is estimates for each of the `r res_cy` country-years spanned by the source data of mean support for gay rights, which together comprise the SGR dataset.
+With data on `r res_c` countries for `r min(res_y)` to `r max(res_y)` years---a mean of `r mean(res_y) %>% sprintf("%.1f", .)` years---the SGR dataset is literally off the charts: it falls beyond the bounds of Figure\nobreakspace{}\ref{proj_kt_plot}.
 
-Figure\nobreakspace{}\ref{cs_mry} displays the most recent available TOL-H score for each of the `r res_c` countries and territories in the dataset.
-Iceland, the Netherlands, Belgium, and the Scandinavian countries are the places where the public is most accepting of homosexuality.
-The latest scores for `r bottom5` indicate there is very little tolerance in those countries.
+Figure\nobreakspace{}\ref{cs_mry} displays the most recent available SGR score for each of the `r res_c` countries and territories in the dataset.
+Iceland, the Netherlands, Belgium, and the Scandinavian countries are the places where the public is most supportive of gay rights.
+The latest scores for `r bottom5` indicate there is very little support in those countries.
 
 ```{r tsplots, fig.cap="Tolerance Over Time Within Selected Countries \\label{ts}", fig.height=3.5}
 countries <- c("Netherlands", "Sweden", "Ireland", "United States",
@@ -989,7 +989,7 @@ ggplot(data = c_res, aes(x = year, y = mean)) +
   theme_bw() +
   theme(legend.position = "none") +
   coord_cartesian(xlim = c(1985, 2020), ylim = c(0, 1)) +
-  labs(x = NULL, y = "TOL-H Scores") +
+  labs(x = NULL, y = "SGR Scores") +
   geom_ribbon(data = c_res, aes(ymin = q10, ymax = q90, linetype=NA), alpha = .25) +
   geom_line(data = c_res) +
   facet_wrap(~as_factor(country), nrow = 2) +
@@ -998,18 +998,18 @@ ggplot(data = c_res, aes(x = year, y = mean)) +
                                     vjust = .45,
                                     hjust = .95),
         strip.background = element_rect(fill = "white", colour = "white")) +
-  plot_annotation(caption = "Note: Countries are ordered by their TOL-H scores in their most recent\navailable year; gray shading represents 80% credible intervals.")
+  plot_annotation(caption = "Note: Countries are ordered by their SGR scores in their most recent\navailable year; gray shading represents 80% credible intervals.")
 ```
 
-Figure\nobreakspace{}\ref{ts} displays how TOL-H scores have changed over time in sixteen countries.
-It further underscores what is already evident in Figure\nobreakspace{}\ref{cs_mry}: the cross-regional scope of the TOL-H dataset allows comparison of countries too often neglected in political science analyses [see @Wilson2022].
-The figure also shows that while public opinion toward homosexuality has grown rapidly more tolerant in some countries, such as Sweden and the United States, attitudes have changed much more gradually over time in others, like Poland and China.
-Tolerance has advanced and retreated somewhat as in Czechia and more completely as in Russia.
-And in countries such as Nigeria and Uganda, the extent of tolerance of homosexuality in the public has been steadily scant.
-The breadth of these differences stand as a challenge to our explanations for the causes and consequences of public tolerance of homosexuality.
+Figure\nobreakspace{}\ref{ts} displays how SGR scores have changed over time in sixteen countries.
+It further underscores what is already evident in Figure\nobreakspace{}\ref{cs_mry}: the cross-regional scope of the SGR dataset allows comparison of countries too often neglected in political science analyses [see @Wilson2022].
+The figure also shows that while public opinion toward gay and lesbian rights has grown rapidly more supportive in some countries, such as Sweden and the United States, attitudes have changed much more gradually over time in others, like Poland and China.
+Support has advanced and retreated somewhat as in Czechia and more completely as in Russia.
+And in countries such as Nigeria and Uganda, the extent of support for gay rights in the public has been steadily scant.
+The breadth of these differences stand as a challenge to our explanations for the causes and consequences of public support for gay rights.
 
 
-# Validating the Tolerance of Homosexuality Scores {.unlisted .unnumbered}
+# Validating the Support for Gay Rights Scores {.unlisted .unnumbered}
 
 ```{r internal_val_dat, include=FALSE}
 internal_tscs_dat <- dcpo_input_raw1 %>% 
@@ -1028,7 +1028,7 @@ internal_ts_dat <- dcpo_input_raw1 %>%
          neg = FALSE)
 ```
 
-```{r internalval, fig.height=4, fig.width=7.5, fig.cap = "Convergent Validation: Correlations Between TOL-H Scores and Individual Source-Data Survey Items \\label{internal_val}"}
+```{r internalval, fig.height=4, fig.width=7.5, fig.cap = "Convergent Validation: Correlations Between SGR Scores and Individual Source-Data Survey Items \\label{internal_val}"}
 internal_tscs_plot <- validation_plot(internal_tscs_dat,
                                 lab_x = .1,
                                 lab_y = 95) +
@@ -1039,7 +1039,7 @@ internal_tscs_plot <- validation_plot(internal_tscs_dat,
         plot.title = element_text(hjust = 0.5, size = 9),
         strip.background = element_blank()) +
   coord_cartesian(xlim = c(0,1), ylim = c(0,100)) +
-  labs(x = "TOL-H Score",
+  labs(x = "SGR Score",
        y = "% Responding Homosexuality Can Be Justified\nMore Often Than Not (6+ on 1-10 Scale)")
 
 internal_cs_plot <- validation_plot(internal_cs_dat,
@@ -1053,7 +1053,7 @@ internal_cs_plot <- validation_plot(internal_cs_dat,
         # strip.text.x = element_text(size=5),
         strip.background = element_blank()) +
   coord_cartesian(xlim = c(0,1), ylim = c(0,100)) +
-  labs(x = "TOL-H Score",
+  labs(x = "SGR Score",
        y = "% Considering Same-Sex Sexual Relations\nWrong Only Sometimes or Not at All")
 
 internal_ts_plot <- validation_plot(internal_ts_dat,
@@ -1071,21 +1071,21 @@ internal_ts_plot <- validation_plot(internal_ts_dat,
   annotate("text", x = 2016, y = .49, size = 2,
            label = 'U.S. GSS') + # approve4
   annotate("text", x = 2020, y = .84, size = 2,
-           label = "TOL-H Score")
+           label = "SGR Score")
 
 internal_tscs_plot + internal_cs_plot + internal_ts_plot  +
   patchwork::plot_annotation(caption = "Note: Gray whiskers and shading represent 80% credible intervals.")
 ```
 
-Before these estimates can be used, however, they must be validated: the mere fact that we can generate estimates for tolerance of homosexuality does not automatically mean that they are suitable for analysis.
+Before these estimates can be used, however, they must be validated: the mere fact that we can generate estimates for support for gay rights does not automatically mean that they are suitable for analysis.
 As is the case with any other new measure, validation tests of cross-national latent variables are crucially important [see, e.g., @Hu2023].
 Figure\nobreakspace{}\ref{internal_val} and Figure\nobreakspace{}\ref{ext_val1} provide evidence of this measure's validity with tests of convergent validation and construct validation.
 Convergent validation refers to tests of whether a measure is empirically associated with alternative indicators of the same concept [@Adcock2001, 540].
-In Figure\nobreakspace{}\ref{internal_val}, the TOL-H scores are compared to responses to individual source-data survey items that were used to generate them; this provides an 'internal' convergent validation test [see, e.g., @Caughey2019, 689; @Solt2020c, 10].
-The left panel is a scatterplot of country-years in which the TOL-H scores are plotted against the percentage of respondents who gave an accepting response to the most commonly asked item in the source data: whether homosexuality can always be justified, scored ten, never be justified, scored zero, or something in between.
+In Figure\nobreakspace{}\ref{internal_val}, the SGR scores are compared to responses to individual source-data survey items that were used to generate them; this provides an 'internal' convergent validation test [see, e.g., @Caughey2019, 689; @Solt2020c, 10].
+The left panel is a scatterplot of country-years in which the SGR scores are plotted against the percentage of respondents who gave an accepting response to the most commonly asked item in the source data: whether homosexuality can always be justified, scored ten, never be justified, scored zero, or something in between.
 For this plot, responses of six or greater are considered as indicating that respondents consider homosexuality justified more often than not.
 The middle panel shows responses to the question with the most data-rich cross-section, "And what about sexual relations between two adults of the same sex, is it always wrong, almost always wrong, wrong only sometimes, or not wrong at all?" in the International Social Survey Program's 2008 module on Religion, plotting our latent variable of tolerance against the percentage who responded "wrong only sometimes" or "not at all." Finally, in the right panel, the U.S.
-General Social Survey's series on this same item---the longest of any item in any single country in the source data---was used to evaluate how well the TOL-H scores capture change over time.
+General Social Survey's series on this same item---the longest of any item in any single country in the source data---was used to evaluate how well the SGR scores capture change over time.
 The correlations, estimated taking into account the uncertainty in the measures, are very strong in all three cases.
 
 ```{r ext_val1_dat, include=FALSE}
@@ -1184,7 +1184,7 @@ ext_libdem_dat <- vdemdata::vdem %>%
   filter(!is.na(prop))
 ```
 
-```{r extval1, fig.cap="Construct Validation: Correlations Between TOL-H Scores and Tolerance of Homosexuality Survey Items \\label{ext_val1}", fig.height=4, fig.width=7.5}
+```{r extval1, fig.cap="Construct Validation: Correlations Between SGR Scores and Support for Gay Rights Survey Items \\label{ext_val1}", fig.height=4, fig.width=7.5}
 ext_issp_tradroles_plot <- validation_plot(ext_issp_tradroles_dat,
                                     lab_x = .1,
                                     lab_y = 95) +
@@ -1195,7 +1195,7 @@ ext_issp_tradroles_plot <- validation_plot(ext_issp_tradroles_dat,
         plot.title = element_text(hjust = 0.5, size = 9),
         strip.background = element_blank()) +
   coord_cartesian(xlim = c(0,1), ylim = c(0,100)) +
-  labs(x = "TOL-H Score",
+  labs(x = "SGR Score",
        y = "% Agreeing 'A husband's job is to earn money;\na wife's job is to look after the home and family'")
 
 ext_gm_laws_plot <- ggplot(gm_laws_dat, aes(x = equality,
@@ -1223,7 +1223,7 @@ ext_gm_laws_plot <- ggplot(gm_laws_dat, aes(x = equality,
   coord_cartesian(ylim = c(0, 1)) +
   scale_fill_grey(start = .65, end = .45) +
   labs(x = "",
-       y = "TOL-H Score, Most Recent Available Year") +
+       y = "SGR Score, Most Recent Available Year") +
   geom_label(data = gm_laws_cor, aes(x = equality,
                                      y = .95,
                                      label = r),
@@ -1241,7 +1241,7 @@ ext_libdem_plot <- validation_plot(ext_libdem_dat,
         plot.title = element_text(hjust = 0.5, size = 9),
         strip.background = element_blank()) +
   coord_cartesian(xlim = c(0,1), ylim = c(0,100)) +
-  labs(x = "TOL-H Score,\nMost Recent Available Year",
+  labs(x = "SGR Score,\nMost Recent Available Year",
        y = "Liberal Democracy Index")
 
 ext_issp_tradroles_plot + ext_gm_laws_plot + ext_libdem_plot +
@@ -1251,371 +1251,35 @@ ext_issp_tradroles_plot + ext_gm_laws_plot + ext_libdem_plot +
 Figure\nobreakspace{}\ref{ext_val1} moves on, then, to construct validation.
 Construct validation refers to demonstrating, for some *other* concept believed causally related to the concept a measure seeks to represent, that the measure being tested is empirically associated with measures of that other concept [@Adcock2001, 542].
 More traditional attitudes toward gender roles are often argued to yield more intolerance of homosexuals [see, e.g., @Brown2008].
-The left panel compares traditional gender attitudes, measured as the percentage of those agreeing or strongly agreeing with the statement, "A husband's job is to earn money; a wife's job is to look after the home and family," in eight ISSP surveys (Family and Changing Gender Roles in 1988, 1994, 2002, and 2012; and Religion in 1991, 1998, 2008, and 2018), with the TOL-H scores.
-Consistent with theory, there is a clear, strong negative relationship between these two measures: when and where publics hold more traditional views of gender roles, they tend also to be less tolerant of homosexuality.
+The left panel compares traditional gender attitudes, measured as the percentage of those agreeing or strongly agreeing with the statement, "A husband's job is to earn money; a wife's job is to look after the home and family," in eight ISSP surveys (Family and Changing Gender Roles in 1988, 1994, 2002, and 2012; and Religion in 1991, 1998, 2008, and 2018), with the SGR scores.
+Consistent with theory, there is a clear, strong negative relationship between these two measures: when and where publics hold more traditional views of gender roles, they tend also to be less supportive of gay rights.
 
-As a result of policy responsiveness, that is, the influence of public opinion on policy [see, e.g., @Lax2009], and policy feedback, the influence of policy on public opinion [see, e.g., @Abou-Chadi2019; @Earle2021], public tolerance of homosexuality is expected to be closely related to policies recognizing same-sex relationships.
-The figure's center panel presents violin plots of the distribution of TOL-H scores in the most recent available year across three groups of countries: those that currently have no or minimal legal recognition of same-sex relationships, those that recognize civil unions, and those with marriage equality.
+As a result of policy responsiveness, that is, the influence of public opinion on policy [see, e.g., @Lax2009], and policy feedback, the influence of policy on public opinion [see, e.g., @Abou-Chadi2019; @Earle2021], public support for gay rights is expected to be closely related to policies that recognize same-sex relationships.
+The figure's center panel presents violin plots of the distribution of SGR scores in the most recent available year across three groups of countries: those that currently have no or minimal legal recognition of same-sex relationships, those that recognize civil unions, and those with marriage equality.
 The gray-shaded 'violins' depict mirrored kernal density plots of the observations in each group; their areas are proportional to the number of observations.
 The violins are inset with box-and-whisker plots showing the 25th percentile, median, and 75th percentile as horizontal lines in a box; the dashed vertical whiskers then extend to the farthest observation within 1.5 times the interquartile range, that is, the height of the box; and all observations beyond that distance are shown individually as white circles [see @Tukey1977].
 This relationship is very strong.
 
-A third oft-theorized relationship is that liberal democracies promote generally more tolerant attitudes that lead to greater tolerance of homosexuality [see, e.g., @Adamczyk2017].
-The right panel of Figure\nobreakspace{}\ref{ext_val1} plots the TOL-H score of the most recent available year for each country against the V-Dem Liberal Democracy Index for that country-year.
+A third oft-theorized relationship is that liberal democracies promote generally more tolerant attitudes that lead to greater support for gay rights [see, e.g., @Adamczyk2017].
+The right panel of Figure\nobreakspace{}\ref{ext_val1} plots the SGR score of the most recent available year for each country against the V-Dem Liberal Democracy Index for that country-year.
 Here, too, the relationship is in the expected direction and strong.
-The evidence of construct validation in Figure\nobreakspace{}\ref{ext_val1}, together with the evidence of convergent validation in Figure\nobreakspace{}\ref{internal_val}, demonstrates the validity of the TOL-H scores as measures of the public's tolerance of homosexuality.
-
-
-# Testing Theories on the Tolerance of Homosexuality: Revisiting 'Economic Inequality and Intolerance' {.unlisted .unnumbered}
-
-To illustrate the utility of the TOL-H data, we revisit Andersen and Fetner's [-@Andersen2008] foundational work on economic inequality and intolerance.
-That article argues that postmaterialist theory [see, e.g., @Inglehart2005] implies that greater inequality should be expected to yield greater intolerance of homosexuality: if economic prosperity is what provides societies with the security needed to leave such traditional biases behind, then when a society's prosperity (and security) is not broadly shared, more tolerant attitudes will not be broadly shared either.^[
-\doublespacing
-An alternate, possibly complementary, theory would be that greater inequality gives wealthier individuals both greater means and enhanced motive to promote religiosity among their fellow citizens [see, e.g., @Solt2011a; @Solt2014b], and more religiosity in turn works to decrease tolerance [see, e.g., @Adamczyk2009]. We leave distinguishing between these two theories to future research.]
-Supporting this view, its analysis found that more economic inequality leads to more intolerance of homosexuality.
-Despite the article's influence, it was flagged in a recent review of the literature as a study for which "more research is needed to replicate and confirm [its] findings" [@Adamczyk2019, 415].
-Indeed, one recent work finds no support at all for the hypothesized relationship between inequality and tolerance of homosexuality [@Zhang2019, 515].
-
-One difference between these two works, @Andersen2008 and @Zhang2019, that is potentially important to their diverging conclusions is the sample employed.
-Both works draw on World Values Survey data, but the group of countries each examines differs in size and in kind.
-Noting the particular importance to democracies of tolerance of social and political difference, @Andersen2008 examined only democratic countries.
-The article's analyses included 35 countries, observed in just one to four years each, for a total of 63 country-years, that is, a mean of 1.8 years observed per country.
-The sample analyzed in @Zhang2019, on the other hand, incorporated a wider range of cases including non-democracies.
-This broader scope---along with the additional WVS survey waves conducted in the time between the two pieces' writing---yielded 88 countries and 214 country-year observations for an increased mean number of years observed of 2.4 per country.
-So although the different conclusion reached in @Zhang2019 [, 517] may, as the piece suggests, reflect the larger sample of countries that study included, it may have also resulted from the inclusion of non-democratic countries, revealing a scope condition to the theory presented in @Andersen2008.
-
-```{r data_combo}
-if (!file.exists(here::here("data", "data_combo.rda"))) {
-  wdi <- WDI::WDI(indicator = "NY.GDP.PCAP.KD") %>% 
-    transmute(country = countrycode(iso3c, 
-                                    "iso3c",
-                                    "country.name",
-                                    warn = FALSE),
-              year,
-              gdppc = NY.GDP.PCAP.KD) %>% 
-    filter(!is.na(country) & !is.na(gdppc))
-  
-  if (!file.exists(here("data-raw",
-                        "swiid9_4",
-                        "swiid9_4_summary.csv"))) {
-    download.file("https://dataverse.harvard.edu/api/access/datafile/6716676", "data-raw/swiid9_4.zip")
-    unzip(here("data-raw", "swiid9_4.zip"), exdir = here("data-raw"))
-    file.remove("data-raw", "swiid9_4.zip")
-  }
-  
-  swiid_summary <- read_csv(here("data-raw",
-                                 "swiid9_4",
-                                 "swiid9_4_summary.csv"),
-                            col_types = "cddddddddd") %>% 
-    mutate(country = countrycode::countrycode(country,
-                                              "country.name",
-                                              "country.name",
-                                              warn = FALSE)) %>% 
-    select(country, year, gini_disp, gini_disp_se)
-  
-  gm_laws <- "https://en.wikipedia.org/wiki/Same-sex_marriage" %>% 
-    read_html() %>% 
-    html_table() %>% 
-    nth(7) %>% 
-    separate_longer_delim(X2, ")") %>% 
-    mutate(place = str_replace(X2, " \\(.*", "") %>% 
-             str_trim(side = "both") %>% 
-             str_replace(" \\[.*", "")) %>% 
-    filter(!str_detect(place,
-                       "(New (Mexi|Bruns|Jers))|Indian|Distr|County|State of")) %>% 
-    mutate(country = if_else(place == "Guerrero", # last Mexican state to recognize
-                             "Mexico",
-                             countrycode(place,
-                                         "country.name",
-                                         "country.name",
-                                         warn = FALSE))) %>% 
-    filter(!is.na(country)) %>% 
-    transmute(year = X1,
-              country,
-              gm = 1)
-  
-  culture <- read_csv(file = here("data-raw", "culture.csv"),
-                      col_types = "cdddddd") %>% 
-    bind_rows(tibble(country = "Côte d’Ivoire",
-                     catholic = 0,
-                     eastern = 0,
-                     orthodox = 0,
-                     protestant = 0,
-                     islamic = 1,
-                     ex_com = 0))
-  
-  data_combo <- theta_summary %>% 
-    left_join(wdi,
-              by = c("country", "year")) %>% 
-    left_join(swiid_summary,
-              by = c("country", "year")) %>% 
-    left_join(culture,
-              by = "country") %>% 
-    drop_na(mean:gini_disp_se) %>% 
-    left_join(gm_laws,
-              by = c("country", "year")) %>% 
-    group_by(country) %>% 
-    fill(gm) %>% 
-    mutate(gm = if_else(is.na(gm), 0, gm), 
-           gm_mean = mean(gm),
-           gm_diff = gm - gm_mean,
-           gini_mean = mean(gini_disp),
-           gini_mean_se = sqrt(sum(gini_disp_se^2))/
-             length(gini_disp),
-           gini_diff = (gini_disp - gini_mean),
-           gini_diff_se = sqrt(gini_disp_se^2 + gini_mean_se^2)/2,
-           gdppc_mean = mean(gdppc/1000),
-           gdppc_diff = gdppc/1000 - gdppc_mean
-    ) %>% 
-    ungroup()
-  
-  save(data_combo, 
-       file = here::here("data", "data_combo.rda"))
-} else {
-  load(file = here::here("data", "data_combo.rda"))
-}
-```
-
-```{r m1_results, include=FALSE}
-if (!file.exists(here::here("data", "m1_results.rda"))) {
-  oecd_democracies <- rvest::session("https://en.wikipedia.org/wiki/OECD") %>% 
-    rvest::html_table() %>%
-    nth(6) %>%
-    mutate(country = countrycode::countrycode(Country,
-                                              "country.name",
-                                              "country.name")) %>% 
-    pull(country) %>% 
-    setdiff(c("Turkey", "Hungary"))
-
-  m1 <- brm(formula = bf(mean*100 | mi(sd*100) ~ 
-                           me(gini_mean, gini_mean_se) +
-                           me(gini_diff, gini_diff_se) +
-                           gdppc_mean + gdppc_diff +
-                           gm_mean + gm_diff +
-                           catholic +
-                           orthodox +
-                           eastern +
-                           ex_com +
-                           (1 | country) + (1 | year)),  
-            data = data_combo %>% 
-              filter(country %in% oecd_democracies),
-            backend = "cmdstanr",
-            warmup = 500, 
-            iter = 1000, 
-            chains = 4, 
-            cores = 4,
-            seed = 324)
-
-    named_vars <- tribble(~var_name, ~`.variable`, ~order,
-                        "Income Inequality, Mean", "bsp_megini_meangini_mean_se", 1,
-                        "Income Inequality, Difference",
-                                                  "bsp_megini_diffgini_diff_se", 2,
-                        "GDPpc, Mean", "b_gdppc_mean", 3,
-                        "GDPpc, Difference", "b_gdppc_diff", 4, 
-                        "Marriage Equality, Mean", "b_gm_mean", 5,
-                        "Marriage Equality, Difference", "b_gm_diff", 6, 
-                        "Catholic", "b_catholic", 7,
-                        "Orthodox", "b_orthodox", 8,
-                        "Eastern", "b_eastern", 9,
-                        "Islamic", "b_islamic", 10,
-                        "Ex-Communist", "b_ex_com", 11)
-      
-  doubled_sd <- m1$data %>% 
-    select(-`mean * 100`, -mean, -sd,
-           -country, -year, -ends_with("_se")) %>% 
-    summarize(across(everything(), by2sd)) %>% 
-    pivot_longer(everything()) %>% 
-    transmute(`.variable` = case_when(name == "gini_mean" ~ 
-                                        "bsp_megini_meangini_mean_se",
-                                      name == "gini_diff" ~
-                                        "bsp_megini_diffgini_diff_se",
-                                      TRUE ~ paste0("b_", name)),
-              sd2 = if_else(`.variable` == "b_gm_diff", 1, value)) %>% 
-    left_join(named_vars, by = join_by(`.variable`))
-  
-  coef_data0 <- m1 %>% 
-    tidybayes::gather_draws(`bs?p?_.*`, regex = TRUE) %>% 
-    filter(!`.variable`=="b_Intercept") %>% 
-    left_join(doubled_sd, by = join_by(.variable)) %>% 
-    arrange(order)
-  
-  cy_summary <- m1$data %>%
-    count(country) %>%
-    pull(n) %>%
-    summary()
-  
-  save(oecd_democracies, doubled_sd, coef_data0, cy_summary, 
-       file = here::here("data", "m1_results.rda"))
-} else {
-  load(file = here::here("data", "m1_results.rda"))
-}
-```
-
-```{r m2_results}
-if (!file.exists(here::here("data", "m2_results.rda"))) {
-  m2 <- brm(formula = bf(mean*100 | mi(sd*100) ~ 
-                           me(gini_mean, gini_mean_se) +
-                           me(gini_diff, gini_diff_se) +
-                           gdppc_mean + gdppc_diff +
-                           gm_mean + gm_diff +
-                           catholic +
-                           orthodox +
-                           eastern +
-                           islamic +
-                           ex_com +
-                           (1 | country) + (1 | year)),  
-            data = data_combo,
-            backend = "cmdstanr",
-            warmup = 500, 
-            iter = 1000, 
-            chains = 4, 
-            cores = 4,
-            seed = 324)
-  
-  doubled_sd_all <- m2$data %>% 
-    select(-`mean * 100`, -mean, -sd,
-           -country, -year, -ends_with("_se")) %>% 
-    summarize(across(everything(), by2sd)) %>% 
-    pivot_longer(everything()) %>% 
-    transmute(`.variable` = case_when(name == "gini_mean" ~ 
-                                        "bsp_megini_meangini_mean_se",
-                                      name == "gini_diff" ~
-                                        "bsp_megini_diffgini_diff_se",
-                                      TRUE ~ paste0("b_", name)),
-              sd2 = if_else(`.variable` == "b_gm_diff", 1, value)) %>% 
-    left_join(named_vars, by = join_by(`.variable`)) %>% 
-    arrange(order)
-  
-  coef_data0_all <- m2 %>% 
-    tidybayes::gather_draws(`bs?p?_.*`, regex = TRUE) %>% 
-    filter(!`.variable`=="b_Intercept") %>% 
-    left_join(doubled_sd_all, by = join_by(.variable))
-  
-  cy_summary_all <- m2$data %>%
-    count(country) %>%
-    pull(n) %>%
-    summary()
-  
-  save(doubled_sd_all, coef_data0_all, cy_summary_all,
-       file = here::here("data", "m2_results.rda"))
-} else {
-  load(file = here::here("data", "m2_results.rda"))
-}  
-```
-
-The TOL-H data allow us to revisit the @Andersen2008 hypothesis with many, many more observations of economic inequality and tolerance from a broader sample of countries than either of these two previous works and also to assess whether tolerance in the advanced democratic countries is distinctively sensitive to income inequality.
-Our sample of democracies includes the 36 democratic countries of the OECD, each observed in 21 (Costa Rica) to 49 (the United States) consecutive years (mean: `r cy_summary %>% nth(4) %>% round(1)` years, median: `r cy_summary %>% nth(3)` years), a total of `r data_combo %>% filter(country %in% oecd_democracies) %>% nrow()` country-year observations.
-The broader sample of all countries includes `r data_combo %>% distinct(country) %>% nrow()` countries, observed in `r cy_summary_all %>% first()` to `r cy_summary_all %>% last()` consecutive years each, for a total of `r data_combo %>% nrow()` country-year observations.
-That is, the TOL-H dataset provides a number of country-year observations for our sample of democracies that is some `r {data_combo %>% filter(country %in% oecd_democracies) %>% nrow()/63} %>% round()` times greater than that considered in @Andersen2008, and it gives us a number of country-years in our sample of all countries that is about `r {data_combo %>% nrow()/214} %>% round()` times greater than that in the sample employed in @Zhang2019.
-This much larger evidentiary base provides us with a much firmer basis for drawing conclusions regarding both the theory and its potential scope conditions [see, e.g., @King2021, 23].
-
-The independent variable, economic inequality, is measured using the Gini index of disposable income inequality.
-The Gini index ranges from 0, indicating perfect equality in the distribution, in this case, of income after taxes and government transfers, to 100, indicating a perfectly unequal distribution in which a single household receives all such income.
-The data are drawn from the Standardized World Income Inequality Database [@Solt2020].
-
-We also include the country-year-level and country-level control variables included in the analysis in @Andersen2008.
-Data on GDP per capita (in thousands of constant 2015 U.S. dollars) are provided by the World Bank's World Development Indicators [@World-Bank2023].
-A series of dichotomous country-level variables identify each country's religious heritage---countries are coded as having alternately a Catholic, Orthodox, Eastern, or Islamic heritage, with those with a Protestant heritage treated as the reference category---and countries with a Communist history are also identified with such a variable [see @Inglehart2005].
-Finally, although its presence does not impact the conclusions drawn below, we add a dichotomously-coded variable for the presence of marriage equality, which takes on a value one in country-years where same-sex marriage was legal and zero otherwise (at the time of publication of @Andersen2008, only five countries had legalized same-sex marriage, and the data analyzed in that piece ended before any of those policy adoptions).
-
-@Shor2007 shows that the best way to analyze such pooled time series is by using a Bayesian multilevel model that includes varying intercepts for each country and for each year.
-Varying intercepts for each country account for heteroskedasticity across space due to, e.g., omitted variable bias, while permitting the inclusion of time-invariant predictors such as religious heritage and communist past.
-Varying intercepts for each year take into account 'time shocks' that operate on all countries simultaneously [@Shor2007, 171-172].
-We further employ the 'within-between random effects' specification, meaning each of the time-varying predictors is decomposed into its time-invariant country mean and the time-varying difference between each country-year value and this country mean.
-The time-varying difference variables capture the short-term effects of the predictors, while the time-invariant country-mean variables reflect their---often different---long-run, "historical" effects [@Bell2015, 137].
-This specification has been shown superior for addressing omitted variable bias and endogeneity to fixed effects and other commonly used specifications for time-series cross-sectional data like these [see @Bell2015].
-The measurement uncertainty in the data for both tolerance of homosexuality and income inequality was incorporated into the analysis as well [see @Tai2022].
-The model was estimated using the `brms` R package [@Burkner2017].
-
-```{r resplot, fig.cap="Predicting Tolerance of Homosexuality \\label{model}", fig.height=6, fig.width=7.5}
-ordered <- doubled_sd_all %>%
-  pull(var_name) %>% 
-  rev()
-
-coef_data <- coef_data0 %>% 
-  mutate(std_coef = round(.value * sd2, 1),
-         term = factor(var_name, levels = ordered)) %>%
-  ggdist::median_qi(std_coef, .width = c(.8, .9, .95)) %>%
-  mutate(ci = paste0(round(.lower, 1), " to ", round(.upper, 1))) %>%
-  left_join(doubled_sd, ., by = join_by(.variable))
-
-coef_data_all <- coef_data0_all %>% 
-  mutate(std_coef = round(.value * sd2, 1),
-         term = factor(var_name, levels = ordered)) %>%
-  ggdist::median_qi(std_coef, .width = c(.8, .9, .95)) %>%
-  mutate(ci = paste0(round(.lower, 1), " to ", round(.upper, 1))) %>%
-  left_join(doubled_sd_all, ., by = join_by(.variable))
-
-coef_data0 %>% 
-  mutate(sample = "oecd") %>% 
-  bind_rows(coef_data0_all %>% mutate(sample = "all")) %>% 
-  mutate(std_coef = round(.value * sd2, 1),
-         term = factor(var_name, levels = ordered)) %>% 
-  ggplot(aes(y = term,
-             x = std_coef,
-             fill = sample,
-             color = sample)) +
-  stat_halfeye(.width = c(.8, .9, .95),
-               alpha = .3,
-               point_alpha = 1) +
-  geom_vline(xintercept = 0, linetype = "dashed") +
-  theme_light() +
-  scale_fill_manual(name = NULL,
-                    values = c("red2", "blue"), 
-                    breaks = c("all", "oecd"),
-                    labels = c("All Countries", 
-                               "OECD Democracies")) +
-  scale_color_manual(name = NULL, 
-                     values = c("red4", "navy"), 
-                     breaks = c("all", "oecd"),
-                     labels = c("All Countries", 
-                               "OECD Democracies")) +
-  labs(fill = NULL, 
-       color = NULL) +
-  theme(legend.justification=c(1,0),
-        legend.position=c(.99, .01),
-        legend.background = element_blank(),
-        legend.box.background = element_rect(color = "grey80")) +
-  guides(color = guide_legend(reverse = TRUE),
-         fill = guide_legend(reverse = TRUE)) +
-  xlab(NULL) +
-  ylab(NULL) +
-  plot_annotation(caption = "Notes: Dots indicate posterior means; whiskers, from thickest to thinnest, describe 80%,\n90%, and 95% credible intervals; shading depicts the posterior probability density function.")
-```
-
-The results are presented in Figure\nobreakspace{}\ref{model}.
-Greater income inequality is associated with less tolerance of homosexuality, both in the long run and in the short term, in both samples of countries.
-Looking at the 'historical,' long-run effect of income inequality, we see that in the democratic sample, a two-standard deviation increase in a country's mean inequality is associated with `r get_coef("gini_mean", type = "std_coef") %>% str_remove("-")` points less tolerance (95% credible interval: `r get_coef("gini_mean", type = "ci")` points), while across all countries this estimated difference was `r get_coef("gini_mean", results_df = coef_data_all)` points.
-In the short run, a two-standard-deviation year-to-year change was found to decrease tolerance `r get_coef("gini_diff", type = "std_coef") %>% str_remove("-")` points (95% c.i.:`r get_coef("gini_diff", type = "ci")`) among democracies.
-If anything, the estimated decline in tolerance was even larger when all countries are considered: `r get_coef("gini_diff", results_df = coef_data_all) %>% str_remove("-")` points.
-Having much more data provides strong evidence that income inequality decreases tolerance of homosexuality in public opinion and that democracies are not particularly sensitive to this effect.
-
-<!-- Consistent with previous research, these results also support the postmaterialist argument that economic development, measured as GDP per capita, leads to greater tolerance of homosexuality; estimates of both short-run and long-run effects are positive and credibly different from zero (although only at the 90% level for the latter in the sample of rich democracies). -->
-<!-- Adopting a law recognizing same-sex marriages is estimated to immediately increase tolerance by `r get_coef("gm_diff", results_df = coef_data)` in the OECD democracies and `r get_coef("gm_diff", results_df = coef_data_all)` across all countries. -->
-<!-- Not surprisingly, the results also show that countries that recognized marriage equality earlier---that is, countries with higher means on the marriage equality variable---are more tolerant; this finding reflects not only the longer-term influence of policy on tolerance but also the reciprocal effect of tolerance on policy adoption. -->
-
-<!-- The performance of the religious-heritage variables, which measure differences in tolerance in comparison to historically Protestant countries, is more mixed. -->
-<!-- The evidence is weakest that countries with a Confucian or Buddhist ("Eastern") religious heritage are distinctly different; in neither the OECD democracies nor the broader sample do even the 80% credible intervals exclude zero. -->
-<!-- Across all countries, public opinion in those that are historically Catholic is estimated to be more tolerant by `r get_coef("catholic", results_df = coef_data_all, width = .9)` TOL-H points, but across only the democracies of the OECD, this estimate is very nearly zero. -->
-<!-- Countries with an Orthodox heritage are found to be less tolerant of homosexuality, again compared to those with a Protestant heritage, by `r get_coef("orthodox", results_df = coef_data_all)` points across all countries and, with less confidence, by `r get_coef("orthodox", results_df = coef_data, width = .8)` across rich democracies. -->
-<!-- Public opinion in historically Islamic countries is estimated to be `r get_coef("orthodox", results_df = coef_data_all)` points less tolerant than in historically Protestant countries.^[ -->
-<!-- There are no Islamic-heritage countries among the OECD democracies as Turkey is considered a competitive authoritarian regime, and even were it included, the Islamic variable would be colinear with its country intercept in our multilevel model.] -->
+The evidence of construct validation in Figure\nobreakspace{}\ref{ext_val1}, together with the evidence of convergent validation in Figure\nobreakspace{}\ref{internal_val}, demonstrates the validity of the SGR scores as measures of the public's support for gay rights.
 
 
 # Conclusion {.unlisted .unnumbered}
 
-The TOL-H dataset, by combining a comprehensive collection of the available survey data with recent advances in latent variable modeling, provides a new window on public opinion toward homosexuality across space and time.
-Until now, scholars interested in how and why public opinion towards homosexuality has shifted in recent decades and the ramifications of these shifts have struggled with the limited availability of data.
+The SGR dataset, by combining a comprehensive collection of the available survey data with recent advances in latent variable modeling, provides a new window on public opinion toward gay rights across space and time.
+Until now, scholars interested in how and why public opinion towards gay rights has shifted in recent decades and the ramifications of these shifts have struggled with the limited availability of data.
 Surveys with relevant items are sparse, not asked in all countries every year; incomparable, not asking the same questions; and, compounding these two issues, geographically concentrated.
 As a result, research on the topic has been limited, at best, to longitudinal studies of single countries and regions that may not generalize elsewhere or to cross-sections and small panels that offer little leverage against conflating differences across countries with changes over time.
 Our understanding has consequently suffered.
-The TOL-H dataset offers a means of overcoming these problems and gaining a better grasp of the causes and consequences of the extent of tolerance of homosexuality in publics around the world.
+The SGR dataset offers a means of overcoming these problems and gaining a better grasp of the causes and consequences of the extent of support for gay rights in publics around the world.
 
-Researchers can access the TOL-H data in two ways.
-For those interested in using the TOL-H estimates in statistical analyses, the entire dataset may be downloaded from the Harvard Dataverse.
-And quick comparisons are facilitated by a user-friendly web application on the TOL-H website that plots tolerance over time for up to four countries.
-Updates to the dataset will be released as new survey data on tolerance of homosexuality are made available.
-Current and future versions of the TOL-H should enable a wave of new research on what factors lead a public to hold a greater tolerance of homosexuality and how a more tolerant public influences other social and political phenomena. 
+Researchers can access the SGR data in two ways.
+For those interested in using the SGR estimates in statistical analyses, the entire dataset may be downloaded from the Harvard Dataverse.
+And quick comparisons are facilitated by a user-friendly web application on the SGR website that plots support over time for up to four countries.
+Updates to the dataset will be released as new survey data on support for gay rights are made available.
+Current and future versions of the SGR should enable a wave of new research on what factors lead a public to hold greater support for gay rights and how more supportive public views influence other social and political phenomena. 
 
 
 \pagebreak
@@ -1688,7 +1352,7 @@ poh %>%
 
 \pagebreak
 
-# Appendix B: Survey Items Used to Estimate Tolerance of Homosexuality
+# Appendix B: Survey Items Used to Estimate Support for Gay Rights
 ```{=tex}
 \setcounter{page}{8}
 ```
@@ -1706,7 +1370,7 @@ In country-years with fewer observed items, the estimates rely more heavily on t
 
 \pagebreak
 
-\noindent Table A2: Indicators Used in the Tolerance of Homosexuality Latent Variable Model
+\noindent Table A2: Indicators Used in the Support for Gay Rights Latent Variable Model
 ```{r appendix_results, eval=FALSE}
 # set eval to TRUE to run
 alpha_results <- DCPOtools::summarize_dcpo_results(dcpo_input,
