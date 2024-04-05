@@ -557,6 +557,7 @@ pewrel2015_ee,accept2,q64,"c(2, 1)",And which one of these comes closer to your 
 pewrel2015_ee,approve3,q71h,"c(2, 3, 1)","Is homosexual behavior morally acceptable, morally wrong, or is it not a moral issue?",1 morally acceptable / 2 morally wrong / 3 not a moral issue,1,
 pewrel2016_us,approve3,moralissuecf2_w20,"c(2, 3, 1)","Is homosexual behavior morally acceptable, morally wrong, or is it not a moral issue?",1 morally acceptable / 2 morally wrong / 3 not a moral issue,1,
 pewrel2017_we,marry4a,q5,c(4:1),Do you strongly favor favor oppose or strongly oppose allowing gays and lesbians to marry legally?,1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1,
+pewrel2022_sea,marry4a,qlegal,c(4:1),Do you strongly favor favor oppose or strongly oppose allowing gays and lesbians to marry legally?,1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1,
 pgss,approve4,q106,c(1:4),"And what about sexual relations between two adults of the same sex, is it?",1 always wrong / 2 almost always wrong / 3 wrong only sometimes / 4 not wrong at all,1,
 poc_ca2002,marry4d,q306_02,c(4:1),Gays and lesbians should be allowed to get married,1 strongly agree / 2 agree / 3 disagree / 4 strongly disagree,,
 poc_ca2003,marry4d,q4a,c(4:1),Gays and lesbians should be allowed to get married,1 strongly agree / 2 agree / 3 disagree / 4 strongly disagree,,
