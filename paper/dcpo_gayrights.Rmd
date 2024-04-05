@@ -818,7 +818,8 @@ save(dcpo_input, file = here::here("data", "dcpo_input.rda"))
 # set eval to TRUE to run
 iter <- 2000
  
-dcpo <- cmdstan_model("~/Documents/Projects/DCPO/inst/stan/dcpo.stan")
+dcpo <- paste0(.libPaths(), "/DCPO/stan/dcpo.stan")[1] |> 
+  cmdstan_model()
 
 dcpo_output <- dcpo$sample(
    data = dcpo_input[1:13], 
