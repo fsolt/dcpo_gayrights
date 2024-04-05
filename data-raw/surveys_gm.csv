@@ -1,68 +1,19 @@
 survey,item,variable,values,question_text,response_categories,agreed,notes
 abcwapo198105,legal2,q45,"c(2, 1)",Do you think homosexual relations between consenting adults should or should not be legal,1 should be legal / 2 should not be legal,1,
-abcwapo199406,legal2,q051,"c(2, 1)","On another issue in the news, do you think homosexual relations between consenting adults should or should not be legal?","1 Should be legal
-2 Should not be legal   8 DK/No opinion 9 NA/Refused",1,
-abcwapo199406,marry2,q055,"c(2, 1)",Do you think homosexuals should or should not have equal rights to marry one another?,"1 Should have equal rights to marry
-2 Should not have equal rights to marry 8 DK/No opinion 9 NA/Refused",1,
-abcwapo199608,civil2,q30m,"c(2, 1)",".Allowing homosexual couples to have the same benefits as married heterosexual couples, such as health benefits inheritance rights and Social Security survivor benefits","1 Support 2 Oppose
-8 DK/No opinion 9 NA/Refused",1,
-abcwapo200401,marry2,q24,"c(2, 1)",Do you think it should be legal or illegal for homosexual couples to get married?,"1 Legal
-2 Illegal
-8 DK/No opinion",1,
-abcwapo200403,marry4b,q36,c(4:1),Do you think it should be LEGAL or ILLEGAL for homosexual couples to get married?,"1 Legal, STRONGLY
-2 Legal, SOMEWHAT
-3 Illegal, SOMEWHAT
-4 Illegal, STRONGLY
-8 DK/No opinion
-9 NA/Refused",1,
-abcwapo200508,marry2,q45,"c(2, 1)","Do you think it should be LEGAL or ILLEGAL for gay and lesbian couples to
-get married?","1 Legal
-2 Illegal
-8 DK/No opinion",1,
-abcwapo200711,civil2,q31,"c(2, 1)","Do you think homosexual couples should or should not be allowed to form legally recognized civil unions, giving them the legal rights of married ouples in areas such as health insurance, inheritance and pension coverage?","1 Should
-2 Should not
-8 DK/No opinion",1,
-abcwapo200905,marry4b,q38b,c(4:1),"On another subject, do you think it should be LEGAL or ILLEGAL for gay and lesbian couples to get married?","1 Legal, STRONGLY
-2 Legal, SOMEWHAT
-3 Illegal, SOMEWHAT
-4 Illegal, STRONGLY
-8 DK/No opinion
-9 NA/Refused",1,
-abcwapo201002,marry4b,q29,c(4:1),"Do you think it should be LEGAL or ILLEGAL for gay and lesbian couples to get
-married?","1 Legal, STRONGLY
-2 Legal, SOMEWHAT
-3 Illegal, SOMEWHAT
-4 Illegal, STRONGLY
-8 DK/No opinion
-9 NA/Refused",1,
-abcwapo201103,marry4b,q29,c(4:1),"On another subject, do you think it should be LEGAL or ILLEGAL for gay and lesbian couples to get married?","1 Legal, STRONGLY
-2 Legal, SOMEWHAT
-3 Illegal, SOMEWHAT
-4 Illegal, STRONGLY
-8 DK/No opinion
-9 NA/Refused",1,
-abcwapo201107,marry4b,q33,c(4:1),"On another subject, do you think it should be LEGAL or ILLEGAL for gay and lesbian couples to get married?","1 Legal, STRONGLY
-2 Legal, SOMEWHAT
-3 Illegal, SOMEWHAT
-4 Illegal, STRONGLY
-8 DK/No opinion
-9 NA/Refused",1,
-abcwapo201203,marry4b,q40,c(4:1),Do you think it should be LEGAL or ILLEGAL for gay and lesbian couples to get married?,"1 Legal, STRONGLY
-2 Legal, SOMEWHAT
-3 Illegal, SOMEWHAT
-4 Illegal, STRONGLY
-8 DK/No opinion
-9 NA/Refused",1,
-abcwapo201303,marry4b,q29,c(4:1),Do you think it should be LEGAL or ILLEGAL for gay and lesbian couples to get married?,"1 Legal, STRONGLY
-2 Legal, SOMEWHAT
-3 Illegal, SOMEWHAT
-4 Illegal, STRONGLY
-8 DK/No opinion
-9 NA/Refused",1,
-abcwapo201402,adopt2,q17,"c(2, 1)",Do you favor or oppose allowing gay or lesbian couples to adopt a child?,"1 Favor
-2 Oppose
-8 DK/No opinion
-9 NA/Refused",1,
+abcwapo199406,legal2,q051,"c(2, 1)","On another issue in the news, do you think homosexual relations between consenting adults should or should not be legal?",1 Should be legal / 2 Should not be legal,1,
+abcwapo199406,marry2,q055,"c(2, 1)",Do you think homosexuals should or should not have equal rights to marry one another?,1 Should have equal rights to marry / 2 Should not have equal rights to marry,1,
+abcwapo199608,civil2,q30m,"c(2, 1)",".Allowing homosexual couples to have the same benefits as married heterosexual couples, such as health benefits inheritance rights and Social Security survivor benefits",1 Support / 2 Oppose,1,
+abcwapo200401,marry2,q24,"c(2, 1)",Do you think it should be legal or illegal for homosexual couples to get married?,1 Legal / 2 Illegal,1,
+abcwapo200403,marry4b,q36,c(4:1),Do you think it should be LEGAL or ILLEGAL for homosexual couples to get married?,"1 Legal, STRONGLY /2 Legal, SOMEWHAT / 3 Illegal, SOMEWHAT / 4 Illegal, STRONGLY",1,
+abcwapo200508,marry2,q45,"c(2, 1)",Do you think it should be LEGAL or ILLEGAL for gay and lesbian couples to get married?,1 Legal / 2 Illegal,1,
+abcwapo200711,civil2,q31,"c(2, 1)","Do you think homosexual couples should or should not be allowed to form legally recognized civil unions, giving them the legal rights of married ouples in areas such as health insurance, inheritance and pension coverage?",1 Should / 2 Should not,1,
+abcwapo200905,marry4b,q38b,c(4:1),"On another subject, do you think it should be LEGAL or ILLEGAL for gay and lesbian couples to get married?","1 Legal, STRONGLY /2 Legal, SOMEWHAT / 3 Illegal, SOMEWHAT / 4 Illegal, STRONGLY",1,
+abcwapo201002,marry4b,q29,c(4:1),Do you think it should be LEGAL or ILLEGAL for gay and lesbian couples to get married?,"1 Legal, STRONGLY /2 Legal, SOMEWHAT / 3 Illegal, SOMEWHAT / 4 Illegal, STRONGLY",1,
+abcwapo201103,marry4b,q29,c(4:1),"On another subject, do you think it should be LEGAL or ILLEGAL for gay and lesbian couples to get married?","1 Legal, STRONGLY /2 Legal, SOMEWHAT / 3 Illegal, SOMEWHAT / 4 Illegal, STRONGLY",1,
+abcwapo201107,marry4b,q33,c(4:1),"On another subject, do you think it should be LEGAL or ILLEGAL for gay and lesbian couples to get married?","1 Legal, STRONGLY /2 Legal, SOMEWHAT / 3 Illegal, SOMEWHAT / 4 Illegal, STRONGLY",1,
+abcwapo201203,marry4b,q40,c(4:1),Do you think it should be LEGAL or ILLEGAL for gay and lesbian couples to get married?,"1 Legal, STRONGLY /2 Legal, SOMEWHAT / 3 Illegal, SOMEWHAT / 4 Illegal, STRONGLY",1,
+abcwapo201303,marry4b,q29,c(4:1),Do you think it should be LEGAL or ILLEGAL for gay and lesbian couples to get married?,"1 Legal, STRONGLY /2 Legal, SOMEWHAT / 3 Illegal, SOMEWHAT / 4 Illegal, STRONGLY",1,
+abcwapo201402,adopt2,q17,"c(2, 1)",Do you favor or oppose allowing gay or lesbian couples to adopt a child?,1 Favor / 2 Oppose,1,
 abcwapo201402,marry4a,q15,c(4:1),"Overall, do you support or oppose allowing gays and lesbians to marry legally?", 1 Support strongly 2 Support somewhat 3 Oppose somewhat 4 Oppose strongly,1,
 aes1987,legal2,q49,"c(2, 1)",Do you think that homosexual acts between consenting adults should be legal or should they be prohibited by law?,1 Legal 2 Prohibited,1,
 aes2007,marry2,e4,"c(2, 1)","Do you think marriages between same-sex couples should or should not be recognised by the law as valid, with the same rights as traditional marriages?",1 Should be recognised by law 2 Should not be recognised by law,1,
@@ -549,6 +500,7 @@ pew2014_india,approve3,q84d,"c(2, 3, 1)","Is homosexual behavior morally accepta
 pew2017,marry4a,favgaymarriage,c(4:1),Do you strongly favor favor oppose or strongly oppose allowing gays and lesbians to marry legally?,1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1,
 pew2017_mpwe,adopt2,q32a,"c(2, 1)",Gays and lesbians should be able to adopt children OR gays and lesbians should not be able to adopt children?,1 gays and lesbians should be able to adopt children / 2 gays and lesbians should not be able to adopt children,,
 pew2019,accept2,homosexuality,"c(2, 1)",And which one of these comes closer to your opinion?,1 homosexuality is a way of life that should be accepted by society / 2 homosexuality is a way of life that should not be accepted by society,1,
+pew2022,accept2,homosexuality,"c(2, 1)",And which one of these comes closer to your opinion?,1 homosexuality is a way of life that should be accepted by society / 2 homosexuality is a way of life that should not be accepted by society,,
 pewrel2009_afr,approve3,q85i,"c(2, 3, 1)","Is homosexual behavior morally acceptable, morally wrong, or is it not a moral issue?",1 morally acceptable / 2 morally wrong / 3 not a moral issue,1,
 pewrel2014_latam,approve3,q69h,"c(2, 3, 1)","Is homosexual behavior morally acceptable, morally wrong, or is it not a moral issue?",1 morally acceptable / 2 morally wrong / 3 not a moral issue,1,
 pewrel2014_latam,marry4a,q15,c(4:1),Do you strongly favor favor oppose or strongly oppose allowing gays and lesbians to marry legally?,1 strongly favor / 2 favor / 3 oppose / 4 strongly oppse,1,
@@ -597,8 +549,7 @@ psra2008,marry2,q8b,"c(2, 1)",Do you think there should or should not be legally
 ptvs2008,adopt4a,par_g20_11,c(1:4),Homosexual couples should be able to adopt children,1 completely disagree / 2 do not agree / 3 agree / 4 completely agree,1,
 ptvs2008,marry5a,ccs_g21_4,c(5:1),Same-sex marriages should be prohibited by law,"1 completely disagree / 2 do not agree / 3 neither agree, nor disagree / 4 agree / 5 completely agree",1,
 ptvs2012,adopt4a,h.24.11,c(1:4),Homosexual couples should be able to adopt children,1 completely disagree / 2 do not agree / 3 agree / 4 completely agree,1,
-ptvs2012,marry5a,h.25.2,c(5:1),"Same-sex marriages should be prohibited
-by law","1 completely disagree / 2 do not agree / 3 neither agree, nor disagree / 4 agree / 5 completely agree",1,
+ptvs2012,marry5a,h.25.2,c(5:1),Same-sex marriages should be prohibited by law,"1 completely disagree / 2 do not agree / 3 neither agree, nor disagree / 4 agree / 5 completely agree",1,
 ptvs2016,adopt5a,par_h23_11,c(1:5),Homosexual couples should be able to adopt children,1 completely disagree / 2 do not agree / 3 agree / 4 completely agree,1,
 ptvs2016,marry5a,ccs_c2d,c(5:1),Same-sex marriages should be prohibited by law,"1 completely disagree / 2 do not agree / 3 neither agree, nor disagree / 4 agree / 5 completely agree",1,
 ress2014,free5,freehms,c(5:1),Gay men and lesbians should be free to live their own life as they wish,1 agree strongly / 2 agree / 3 neither agree nor disagree / 4 disagree / 5 disagree strongly,1,
