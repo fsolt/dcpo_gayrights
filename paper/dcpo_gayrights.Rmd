@@ -350,15 +350,15 @@ To address these issues, this article presents the Support for Gay Rights (SGR) 
 The SGR dataset combines a comprehensive collection of responses to national and cross-national surveys with recent developments in latent-variable modeling of public opinion to provide estimates of public attitudes toward gay rights that are comparable across many countries and over many years.
 These latent-variable estimates perform well in validation tests: they are very strongly correlated with single survey items tapping views on gay rights, and they also relate strongly to other concepts thought causally connected to public opinion on gay rights.
 The SGR dataset provides a much firmer basis for testing the implications of theories by providing many more observations across a wider scope of countries and time than previously available sources.
-We demonstrate its potential in this regard by replicating the foundational but recently questioned finding of @Andersen2008 that more income inequality yields less tolerance.
-We anticipate that the SGR data will become a crucial source for cross-regional, cross-national, and longitudinal research that improves our understanding of the sources and consequences of tolerance of homosexuality.
+We demonstrate its potential in this regard by replicating the foundational but recently questioned finding of @Andersen2008 that more income inequality yields less support.
+We anticipate that the SGR data will become a crucial source for cross-regional, cross-national, and longitudinal research that improves our understanding of the sources and consequences of support for gay rights.
 
 
 # Existing Data and Research on Attitudes Toward Gay Rights {.unlisted .unnumbered}
 
-The SGR dataset aims to address a shortcoming in the available datasets on public opinion toward homosexuality: researchers have been forced to choose between studying tolerance in many countries _or_ over many years, but not both.
+The SGR dataset aims to address a shortcoming in the available datasets on public opinion regarding gay and lesbian rights: researchers have been forced to choose between studying support in many countries _or_ over many years, but not both.
 Figure\nobreakspace{}\ref{proj_kt_plot} illustrates the trade-off between the breadth of country coverage and the number of years available for each country.
-It plots, for each survey project in the SGR source data described below, the number of countries for which data on attitudes toward homosexuality are available against the mean number of years these data are available per country.
+It plots, for each survey project in the SGR source data described below, the number of countries for which data on attitudes toward gay rights are available against the mean number of years these data are available per country.
 Some survey projects ask more than one question on the topic, but here, only the most frequently asked single question on the topic is shown.
 An 'L' shape is readily evident.
 Many surveys, clustered in the lower left at the bend in the L, ask questions about support for gay rights in only a few different country-year contexts.
@@ -523,7 +523,7 @@ Among the works that investigate more contexts, the data employed tend to be lon
 Roughly a fifth of these articles examine ten or more years of data within a single country.
 @Clements2014, for example, tracks changes in British attitudes in 13 different survey projects conducted in 42 different years; @Yang1997 similarly reports trends in public opinion in the United States drawing on many surveys conducted in 26 different years.
 Research considering data from more than five countries encompass less than a sixth of these articles.
-One recent piece, @Hildebrandt2019, draws on the fifth and sixth waves of the WVS to create a single cross-section of 73 countries and argues that modernization leads to more tolerance and in turn, in democracies, more gay rights recognized; the influential work by @Adamczyk2009 similarly employs a single cross-section of the WVS, in its case the fourth wave, to examine how individuals' religiosity and their countries' religious heritages shape their attitudes toward gay rights.
+One recent piece, @Hildebrandt2019, draws on the fifth and sixth waves of the WVS to create a single cross-section of 73 countries and argues that modernization leads to more tolerance and in turn, in democracies, more support for gay rights; the influential work by @Adamczyk2009 similarly employs a single cross-section of the WVS, in its case the fourth wave, to examine how individuals' religiosity and their countries' religious heritages shape their attitudes toward gay rights.
 @Reynolds2013 looks at the most countries of any of these prominent works, 81, combining WVS and Pew Global Attitudes data to obtain 146 observed country-years (mean observed years per country: 1.8) with which to evaluate how attitudes influence policy.
 The article examining the most country-years of public opinion in this sample is @Redman2018, an investigation of policy feedback on public opinion that uses the second through sixth WVS waves to provide a total of 203 country-years in 70 countries, that is, 2.9 observed years per country on average.
 @Hooghe2013, which also studies policy feedback, is the cross-national study with the most longitudinal data in the sample: it employs the first five waves of the ESS to provide a total of 123 country-years across 29 countries for a mean of 4.2 observed years per country.
@@ -787,24 +787,24 @@ Again we see how, as the review in @Adamczyk2019 [, 410] notes, more data has be
 At the other end of the spectrum, `r n_data_poorest` countries---`r data_poorest`---have only the minimum three observations required to be included in the source dataset at all.
 The upper right panel shows the twelve countries with the most years observed; this group is similar, but with `r adding` joining the list and `r dropping` dropping off.
 The bottom panel counts the countries observed in each year and reveals just how few relevant survey items were asked before 1990.
-Country coverage reached its peak in `r y_peak_year`, when surveys in `r y_peak_nn` countries included items on gay and lesbian rights.
+Country coverage reached its peak in `r y_peak_year`, when surveys in `r y_peak_nn` countries included items on the rights of gays and lesbians.
 
 Latent variable models of public opinion drawing on cross-national survey data have attracted considerable attention in recent years [see @Claassen2019; @Caughey2019; @McGann2019; @Kolczynska2020].
-To estimate public gender egalitarianism across countries and over time, we draw on the latest of these methods that is appropriate for data that is both sparse and incomparable, the Dynamic Comparative Public Opinion (DCPO) model [@Solt2020c].
+To estimate support for gay rights across countries and over time, we draw on the latest of these methods that is appropriate for data that is both sparse and incomparable, the Dynamic Comparative Public Opinion (DCPO) model [@Solt2020c].
 In brief, the DCPO model is a population-level two-parameter ordinal logistic item response theory (IRT) model with country-specific item-bias terms; for a detailed description, see the online appendix and @Solt2020c [, 3-8].
 Here, we focus on how it deals with the principal issues raised by the survey data described above, incomparability and sparsity.
 
 The DCPO model accounts for the incomparability of different survey questions with two parameters.
 First, it incorporates the _difficulty_ of each question's responses, that is, the amount of support for gay rights that is indicated by a given response. 
-That each response evinces more or less of our latent trait is most easily seen with regard to the ordinal responses to the same question: to strongly agree with the statement "the law should recognise same-sex relationships," evinces more tolerance than responding "agree," which is more tolerant than "neither agree nor disagree," which shows more tolerance than "disagree," and in turn "strongly disagree."
+That each response evinces more or less of our latent trait is most easily seen with regard to the ordinal responses to the same question: to strongly agree with the statement "the law should recognise same-sex relationships," evinces more support than responding "agree," which is more tolerant than "neither agree nor disagree," which shows more support than "disagree," and in turn "strongly disagree."
 The same thing is true across questions.
-For example, strongly agreeing with the statement "homosexual couples should be able to adopt children" likely expresses more tolerance than merely responding that same-sex relationships should be not be criminalized.
+For example, strongly agreeing with the statement "homosexual couples should be able to adopt children" likely expresses more support than merely responding that same-sex relationships should be not be criminalized.
 Second, the DCPO model accounts for each question's _dispersion_, its noisiness with regard to our latent trait.
 A lower dispersion indicates that changes in responses to the question are more faithfully translated to changes in the underlying support for gay rights.
 These two parameters, difficulty and dispersion, together generate comparable estimates of the latent variable from source data questions that are not directly comparable.
 
 The sparsity in the source data---the interruptions in the time series of each country caused by unobserved country-years, and the fact that even many observed country-years have only one or few observed items---is addressed by the DCPO model using local-level dynamic linear models, also known as random-walk priors.
-This means that, for each country, each year's value of tolerance is modeled as the previous year's estimate plus a random shock.
+This means that, for each country, each year's value of support is modeled as the previous year's estimate plus a random shock.
 These dynamic models smooth the estimates of support for gay rights over time and allow estimation even in years for which little or no survey data is available, albeit at the expense of greater measurement uncertainty.
 
 ```{r dcpo_input}
@@ -971,7 +971,7 @@ Figure\nobreakspace{}\ref{cs_mry} displays the most recent available SGR score f
 Iceland, the Netherlands, Belgium, and the Scandinavian countries are the places where the public is most supportive of gay rights.
 The latest scores for `r bottom5` indicate there is very little support in those countries.
 
-```{r tsplots, fig.cap="Tolerance Over Time Within Selected Countries \\label{ts}", fig.height=3.5}
+```{r tsplots, fig.cap="Support Over Time Within Selected Countries \\label{ts}", fig.height=3.5}
 countries <- c("Netherlands", "Sweden", "Ireland", "United States",
                "Argentina", "Czechia", "South Korea", "Poland", 
                "China", "Ukraine", "Indonesia", "Russia", 
@@ -1084,7 +1084,7 @@ Convergent validation refers to tests of whether a measure is empirically associ
 In Figure\nobreakspace{}\ref{internal_val}, the SGR scores are compared to responses to individual source-data survey items that were used to generate them; this provides an 'internal' convergent validation test [see, e.g., @Caughey2019, 689; @Solt2020c, 10].
 The left panel is a scatterplot of country-years in which the SGR scores are plotted against the percentage of respondents who gave an accepting response to the most commonly asked item in the source data: whether homosexuality can always be justified, scored ten, never be justified, scored zero, or something in between.
 For this plot, responses of six or greater are considered as indicating that respondents consider homosexuality justified more often than not.
-The middle panel shows responses to the question with the most data-rich cross-section, "And what about sexual relations between two adults of the same sex, is it always wrong, almost always wrong, wrong only sometimes, or not wrong at all?" in the International Social Survey Program's 2008 module on Religion, plotting our latent variable of tolerance against the percentage who responded "wrong only sometimes" or "not at all." Finally, in the right panel, the U.S.
+The middle panel shows responses to the question with the most data-rich cross-section, "And what about sexual relations between two adults of the same sex, is it always wrong, almost always wrong, wrong only sometimes, or not wrong at all?" in the International Social Survey Program's 2008 module on Religion, plotting our latent variable of support against the percentage who responded "wrong only sometimes" or "not at all." Finally, in the right panel, the U.S.
 General Social Survey's series on this same item---the longest of any item in any single country in the source data---was used to evaluate how well the SGR scores capture change over time.
 The correlations, estimated taking into account the uncertainty in the measures, are very strong in all three cases.
 
@@ -1250,7 +1250,7 @@ ext_issp_tradroles_plot + ext_gm_laws_plot + ext_libdem_plot +
 
 Figure\nobreakspace{}\ref{ext_val1} moves on, then, to construct validation.
 Construct validation refers to demonstrating, for some *other* concept believed causally related to the concept a measure seeks to represent, that the measure being tested is empirically associated with measures of that other concept [@Adcock2001, 542].
-More traditional attitudes toward gender roles are often argued to yield more intolerance of homosexuals [see, e.g., @Brown2008].
+More traditional attitudes toward gender roles are often argued to yield less support for gay rights [see, e.g., @Brown2008].
 The left panel compares traditional gender attitudes, measured as the percentage of those agreeing or strongly agreeing with the statement, "A husband's job is to earn money; a wife's job is to look after the home and family," in eight ISSP surveys (Family and Changing Gender Roles in 1988, 1994, 2002, and 2012; and Religion in 1991, 1998, 2008, and 2018), with the SGR scores.
 Consistent with theory, there is a clear, strong negative relationship between these two measures: when and where publics hold more traditional views of gender roles, they tend also to be less supportive of gay rights.
 
@@ -1365,7 +1365,7 @@ Survey dataset codes correspond to those used in the `DCPOtools` R package [@Sol
 
 Together, the survey items in the source data were asked in `r n_countries` different countries in at least two time points over `r n_years` years, `r year_range`, yielding a total of `r n_cyi` country-year-item observations.
 The number of items observed in the source data for each country-year is plotted in Figure\nobreakspace{}\ref{obs_by_cy} below.
-The estimates of tolerance in country-years with more observed items are more precise.
+The estimates of support in country-years with more observed items are more precise.
 In country-years with fewer observed items, the estimates rely more heavily on the random-walk prior and are therefore more uncertain, and when there are no observed items, the estimates rely *entirely* on the random-walk prior and so uncertainty increases still further.
 
 \pagebreak
@@ -1488,13 +1488,13 @@ dcpo_input_raw1 %>%
 # Appendix C: The DCPO Model
 
 Research on latent variable models of public opinion based on cross-national survey data has enjoyed explosive growth in recent years [see @Claassen2019; @Caughey2019; @McGann2019; @Kolczynska2020].
-To estimate tolerance of homosexuality across countries and over time, we draw on the latest of these methods that is appropriate for data that is not only incomparable but also sparse, the Dynamic Comparative Public Opinion (DCPO) model presented in @Solt2020c.^[
+To estimate support for gay rights across countries and over time, we draw on the latest of these methods that is appropriate for data that is not only incomparable but also sparse, the Dynamic Comparative Public Opinion (DCPO) model presented in @Solt2020c.^[
 @Solt2020c demonstrates that the DCPO model provides a better fit to survey data than the models put forward by @Claassen2019 or @Caughey2019.
-The @McGann2019 model depends on dense survey data unlike the sparse data on public gender egalitarianism described in the preceding section.
+The @McGann2019 model depends on dense survey data unlike the sparse data on support for gay rights described in the preceding section.
 @Kolczynska2020 is the very most recent of the five works and builds on each of the others, but the MRP approach developed in that piece is suitable not only when the available survey data are dense but also when ancillary data on population characteristics are available, so it is similarly inappropriate to this application.]
 The DCPO model is a population-level two-parameter ordinal logistic item response theory (IRT) model with country-specific item-bias terms.
 
-DCPO models the total number of survey responses expressing at least as much tolerance of homosexuality as response category $r$ to each question $q$ in country $k$ at time $t$, $y_{ktqr}$, out of the total number of respondents surveyed, $n_{ktqr}$, using the beta-binomial distribution:
+DCPO models the total number of survey responses expressing at least as much support for gay rights as response category $r$ to each question $q$ in country $k$ at time $t$, $y_{ktqr}$, out of the total number of respondents surveyed, $n_{ktqr}$, using the beta-binomial distribution:
 
 \begin{equation}
 a_{ktqr} = \phi\eta_{ktqr} \label{eq:bb_a}
@@ -1507,7 +1507,7 @@ y_{ktqr} \sim \textrm{BetaBinomial}(n_{ktqr}, a_{ktqr}, b_{ktqr}) \label{eq:beta
 \end{equation}
 
 where $\phi$ represents an overall dispersion parameter to account for additional sources of survey error beyond sampling error and $\eta_{ktqr}$ is the expected probability that a random person in country $k$ at time $t$ answers question $q$ with a response at least as positive as response $r$.^[
-The ordinal responses to question $q$ are coded to range from 1 (expressing the least tolerance of homosexuality) to $R$ (expressing the most tolerance of homosexuality), and $r$ takes on all values greater than 1 and less than or equal to $R$.]
+The ordinal responses to question $q$ are coded to range from 1 (expressing the least support for gay rights) to $R$ (expressing the most support for gay rights), and $r$ takes on all values greater than 1 and less than or equal to $R$.]
 
 This expected probability, $\eta_{ktqr}$, is in turn estimated as follows:
 
@@ -1515,11 +1515,11 @@ This expected probability, $\eta_{ktqr}$, is in turn estimated as follows:
 \eta_{ktqr} = \textrm{logit}^{-1}(\frac{\bar{\theta'}_{kt} - (\beta_{qr} + \delta_{kq})}{\sqrt{\alpha_{q}^2 + (1.7*\sigma_{kt})^2}}) \label{eq:dcpo}
 \end{equation}
 
-In this equation, $\beta_{qr}$ represents the difficulty of response $r$ to question $q$, that is, the degree of tolerance the response expresses.  The $\delta_{kq}$ term represents country-specific item bias: the extent to which all responses to a particular question $q$ may be more (or less) difficult in a given country $k$ due to translation issues, cultural differences in response styles, or other idiosyncrasies that render the same survey item not equivalent across countries.^[
+In this equation, $\beta_{qr}$ represents the difficulty of response $r$ to question $q$, that is, the degree of support the response expresses.  The $\delta_{kq}$ term represents country-specific item bias: the extent to which all responses to a particular question $q$ may be more (or less) difficult in a given country $k$ due to translation issues, cultural differences in response styles, or other idiosyncrasies that render the same survey item not equivalent across countries.^[
 Estimating $\delta_{kq}$ requires repeated administrations of question $q$ in country $k$, so
 when responses to question $q$ are observed in country $k$ in only a single year, the DCPO model sets $\delta_{kq}$ to zero by assumption, increasing the error of the model by any country-item bias that is present.
 Questions that are asked repeatedly over time in only a single country pose no risk of country-specific item bias, so $\delta_{kq}$ in such cases are also set to zero.]
-The dispersion of question $q$, its noisiness in relation to our latent variable, is $\alpha_{q}$. The mean and standard deviation of the unbounded latent trait of tolerance of homosexuality are $\bar{\theta'}_{kt}$ and $\sigma_{kt}$, respectively.
+The dispersion of question $q$, its noisiness in relation to our latent variable, is $\alpha_{q}$. The mean and standard deviation of the unbounded latent trait of support for gay rights are $\bar{\theta'}_{kt}$ and $\sigma_{kt}$, respectively.
 
 Random-walk priors are used to account for the dynamics in $\bar{\theta'}_{kt}$ and $\sigma_{kt}$, and weakly informative priors are placed on the other parameters.^[
 The dispersion parameters $\alpha_{q}$ are drawn from standard half-normal prior distributions, that is, the positive half of N(0, 1).
@@ -1527,7 +1527,7 @@ The first difficulty parameters for each question, $\beta_{q1}$, are drawn from 
 The item-bias parameters $\delta_{kq}$ receive normally-distributed hierarchical priors with mean 0 and standard deviations drawn from standard half-normal prior distributions.
 The initial value of the mean unbounded latent trait for each country, $\bar{\theta'}_{k1}$, is assigned a standard normal prior, as are the transition variances $\sigma_{\bar{\theta'}}^2$ and $\sigma_{\sigma}^2$; the initial value of the standard deviation of the unbounded latent trait for each country, $\sigma_{k1}$, is drawn from a standard lognormal prior distribution.
 The overall dispersion, $\phi$, receives a somewhat more informative prior drawn from a gamma(4, 0.1) distribution that yields values that are well scaled for that parameter.]
-The dispersion parameters $\alpha_q$ are constrained to be positive and all survey responses are coded with high values indicating more tolerance to fix direction.
+The dispersion parameters $\alpha_q$ are constrained to be positive and all survey responses are coded with high values indicating more support to fix direction.
 The difficulty $\beta$ of "not so bad" (on a four-point scale ranging from "very bad" through "fairly bad" and "not so bad" to "not at all bad") of reactions to "a sexual relationship between two adults of the same sex" is set to 1 to identify location, and for each question $q$ the difficulties for increasing response categories $r$ are constrained to be increasing.
 The sum of $\delta_{kq}$ across all countries $k$ is set to zero for each question $q$:
 
@@ -1535,7 +1535,7 @@ The sum of $\delta_{kq}$ across all countries $k$ is set to zero for each questi
 \sum_{k = 1}^K \delta_{kq} = 0
 \end{equation}
 
-Finally, the logistic function is used to transform $\bar{\theta'}_{kt}$ to the unit interval and so give the bounded mean of latent tolerance of homosexuality, $\bar{\theta}_{kt}$, which is our parameter of interest here [see @Solt2020c, 3-8].
+Finally, the logistic function is used to transform $\bar{\theta'}_{kt}$ to the unit interval and so give the bounded mean of latent support for gay rights, $\bar{\theta}_{kt}$, which is our parameter of interest here [see @Solt2020c, 3-8].
 
 \pagebreak
 # Appendix References {.unnumbered}
