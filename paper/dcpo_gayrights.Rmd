@@ -784,10 +784,10 @@ The available public opinion data on this topic are very sparse as well as incom
 The upper left panel of Figure\nobreakspace{}\ref{item_country_plots} shows the dozen countries with the highest count of country-year-item observations.
 The United States, with `r us_obs` observations, is far and away the best represented country in the source data, followed by `r others`.
 Again we see how, as the review in @Adamczyk2019 [, 410] notes, more data has been collected in North America and Europe than in the rest of the world.
-At the other end of the spectrum, `r n_data_poorest` countries---`r data_poorest`---have only the minimum three observations required to be included in the source dataset at all.
+At the other end of the spectrum, `r n_data_poorest` country---`r data_poorest`---has only the minimum three observations required to be included in the source dataset at all.
 The upper right panel shows the twelve countries with the most years observed; this group is similar, but with `r adding` joining the list and `r dropping` dropping off.
 The bottom panel counts the countries observed in each year and reveals just how few relevant survey items were asked before 1990.
-Country coverage reached its peak in `r y_peak_year`, when surveys in `r y_peak_nn` countries included items on the rights of gays and lesbians.
+Country coverage reached its peak in `r y_peak_year`, when surveys in `r y_peak_nn` countries included items on attitudes toward the rights of gays and lesbians.
 
 Latent variable models of public opinion drawing on cross-national survey data have attracted considerable attention in recent years [see @Claassen2019; @Caughey2019; @McGann2019; @Kolczynska2020].
 To estimate support for gay rights across countries and over time, we draw on the latest of these methods that is appropriate for data that is both sparse and incomparable, the Dynamic Comparative Public Opinion (DCPO) model [@Solt2020c].
