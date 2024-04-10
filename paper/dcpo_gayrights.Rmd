@@ -81,13 +81,13 @@ header-includes:
 ```
 ```{=tex}
 \begin{abstract}
-Support for gay rights has increased in the publics of many countries over recent decades, but the scholarship on the topic has been hindered by the limited available data on these trends in public opinion. To overcome this problem, we present the Support for Gay Rights (SGR) dataset, which combines a comprehensive collection of survey data with a latent-variable model to provide annual time-series estimates of public support for gay rights across 119 countries and over as many as 50 years that are comparable across space and time.  These data perform well in validation tests. We anticipate that the SGR data will become a crucial source for cross-regional, cross-national, and longitudinal research that improves our understanding of the sources and consequences of public support for gay rights.
+Support for gay rights has increased in the publics of many countries over recent decades, but the scholarship on the topic has been hindered by the limited available data on these trends in public opinion. To overcome this problem, we present the Support for Gay Rights (SGR) dataset, which combines a comprehensive collection of survey data with a latent-variable model to provide annual time-series estimates of public support for gay rights across 118 countries and over as many as 51 years that are comparable across space and time. We show these data perform well in validation tests and demonstrate their potential by replicating the influential but recently questioned finding of Andersen and Fetner (2008) that more income inequality yields less tolerant and supportive attitudes toward gay people. We anticipate that the SGR data will become a crucial source for cross-regional, cross-national, and longitudinal research that improves our understanding of the sources and consequences of public support for gay rights.
 \end{abstract}
 ```
 
-Abstract wordcount: XXXXX words
+Abstract wordcount: 163 words
 
-Manuscript wordcount: XXXXX words
+Manuscript wordcount: XXXX words
 \pagebreak
 
 ```{r setup, include=FALSE}
@@ -415,7 +415,7 @@ proj_kt_plot <- ggplot(proj_kt, aes(y = t, x = k)) +
   scale_x_continuous(breaks=seq(0, 100, 25)) +
   labs(x = "Countries Observed",
        y = "Mean Years Observed Per Country Observed",
-       title = "Survey Projects with Questions on\nsupport for gay rights")
+       title = "Survey Projects with Questions on\nSupport for Gay Rights")
 
 proj_kt_plot + plot_annotation(caption = str_wrap("Notes: The number of countries and mean years observed are plotted only for the most frequently asked single question on attitudes toward homosexuality in each survey project.", width = 114))
 ```
@@ -855,7 +855,7 @@ dcpo_output$save_output_files(dir = results_path,
 ```{r dcpo_results, cache=FALSE, eval=FALSE}
 # set eval to TRUE to run
 if (!exists("results_path")) {
-  latest <- "202305282047"
+  latest <- "20240408090820.1753"
   results_path <- here::here("data", "2000", latest)
   
   # Define OSF_PAT in .Renviron: https://docs.ropensci.org/osfr/articles/auth
@@ -964,7 +964,7 @@ bottom5 <- p1_data %>%
 We estimated the DCPO model on the source data using the `DCPO` and `cmdstanr` packages for R [@Solt2020a; @Gabry2022], running four chains for 2,000 iterations each and discarding the first half as warmup.
 All $\hat{R}$ diagnostics were below 1.02, which indicates that the model converged.
 
-Despite the potential for divergences between responses to questions on the _morality_ of homosexuality and those that more directly concern what rights are properly accorded gays and lesbians, as @Adamczyk2019 [, 407] anticipated, "respondents across a range of different countries do not draw major distinctions between these two dimensions": the dispersion parameters indicate that all of the survey items load well on the single latent variable of support for gay rights (see Table A2 in the online appendix).
+Despite the potential for divergences between responses to questions on the _morality_ of homosexuality and those that more directly concern what rights are properly accorded lesbian and gay people, as @Adamczyk2019 [, 407] anticipated, "respondents across a range of different countries do not draw major distinctions between these two dimensions": the dispersion parameters indicate that all of the survey items load well on the single latent variable of support for gay rights (see Table A2 in the online appendix).
 The result is estimates for each of the `r res_cy` country-years spanned by the source data of mean support for gay rights, which together comprise the SGR dataset.
 With data on `r res_c` countries for `r min(res_y)` to `r max(res_y)` years---a mean of `r mean(res_y) %>% sprintf("%.1f", .)` years---the SGR dataset is literally off the charts: it falls beyond the bounds of Figure\nobreakspace{}\ref{proj_kt_plot}.
 
@@ -1265,6 +1265,342 @@ A third oft-theorized relationship is that liberal democracies promote generally
 The right panel of Figure\nobreakspace{}\ref{ext_val1} plots the SGR score of the most recent available year for each country against the V-Dem Liberal Democracy Index for that country-year.
 Here, too, the relationship is in the expected direction and strong.
 The evidence of construct validation in Figure\nobreakspace{}\ref{ext_val1}, together with the evidence of convergent validation in Figure\nobreakspace{}\ref{internal_val}, demonstrates the validity of the SGR scores as measures of the public's support for gay rights.
+
+# Testing Theories of Support for Gay Rights: Revisiting 'Economic Inequality and Intolerance' {.unlisted .unnumbered}
+
+To illustrate the utility of the SGR data, we revisit Andersen and Fetner's [-@Andersen2008] foundational work on economic inequality and intolerance.
+That article argues that postmaterialist theory [see, e.g., @Inglehart2005] implies that greater inequality should be expected to yield less tolerant and supportive attitudes toward gay rights: if economic prosperity is what provides societies with the security needed to leave such traditional biases behind, then when a society's prosperity (and security) is not broadly shared, more tolerant and supportive attitudes will not be broadly shared either.^[
+\doublespacing An alternate, possibly complementary, theory would be that greater inequality gives wealthier individuals both greater means and enhanced motive to promote religiosity among their fellow citizens [see, e.g., @Solt2011a; @Solt2014b], and more religiosity in turn works to decrease support [see, e.g., @Adamczyk2009]. We leave distinguishing between these two theories to future research.]
+Supporting this view, its analysis found that more economic inequality leads to less positive attitudes toward gay and lesbian people, as measured by the ten-point World Values Survey item on the justifiability of homosexuality mentioned above.
+Despite the article's influence, it was flagged in a recent review of the literature as a study for which "more research is needed to replicate and confirm [its] findings" [@Adamczyk2019, 415].
+Indeed, one recent work finds no support at all for the hypothesized relationship between inequality and attitudes toward homosexuality [@Zhang2019, 515].
+
+One difference between these two works, @Andersen2008 and @Zhang2019, that is potentially important to their diverging conclusions is the sample employed.
+Both works draw on World Values Survey data, but the group of countries each examines differs in size and in kind.
+Noting the particular importance to democracies of tolerance of social and political difference, @Andersen2008 examined only democratic countries.
+The article's analyses included 35 countries, observed in just one to four years each, for a total of 63 country-years, that is, a mean of 1.8 years observed per country.
+The sample analyzed in @Zhang2019, on the other hand, incorporated a wider range of cases including non-democracies.
+This broader scope---along with the additional WVS survey waves conducted in the time between the two pieces' writing---yielded 88 countries and 214 country-year observations for an increased mean number of years observed of 2.4 per country.
+So although the different conclusion reached in @Zhang2019 [, 517] may, as the piece suggests, reflect the larger sample of countries that study included, it may have also resulted from the inclusion of non-democratic countries, revealing a scope condition to the theory presented in @Andersen2008.
+
+```{r data_combo}
+if (!file.exists(here::here("data", "data_combo.rda"))) {
+  wdi <- WDI::WDI(indicator = "NY.GDP.PCAP.KD") %>% 
+    transmute(country = countrycode(iso3c, 
+                                    "iso3c",
+                                    "country.name",
+                                    warn = FALSE),
+              year,
+              gdppc = NY.GDP.PCAP.KD) %>% 
+    filter(!is.na(country) & !is.na(gdppc))
+  
+  if (!file.exists(here("data-raw",
+                        "swiid9_6",
+                        "swiid9_6_summary.csv"))) {
+    download.file("https://dataverse.harvard.edu/api/access/datafile/7878619", "data-raw/swiid9_6.zip")
+    unzip(here("data-raw", "swiid9_6.zip"), exdir = here("data-raw"))
+    file.remove(here("data-raw", "swiid9_6.zip"))
+  }
+  
+  swiid_summary <- read_csv(here("data-raw",
+                                 "swiid9_6",
+                                 "swiid9_6_summary.csv"),
+                            col_types = "cddddddddd") %>% 
+    mutate(country = countrycode::countrycode(country,
+                                              "country.name",
+                                              "country.name",
+                                              warn = FALSE)) %>% 
+    select(country, year, gini_disp, gini_disp_se)
+  
+  gm_laws <- "https://en.wikipedia.org/wiki/Same-sex_marriage" %>% 
+    read_html() %>% 
+    html_table() %>% 
+    nth(7) %>% 
+    separate_longer_delim(X2, ")") %>% 
+    mutate(place = str_replace(X2, " \\(.*", "") %>% 
+             str_trim(side = "both") %>% 
+             str_replace(" \\[.*", "")) %>% 
+    filter(!str_detect(place,
+                       "(New (Mexi|Bruns|Jers))|Indian|Distr|County|State of")) %>% 
+    mutate(country = if_else(place == "Guerrero", # last Mexican state to recognize
+                             "Mexico",
+                             countrycode(place,
+                                         "country.name",
+                                         "country.name",
+                                         warn = FALSE))) %>% 
+    filter(!is.na(country)) %>% 
+    transmute(year = X1,
+              country,
+              gm = 1)
+  
+  culture <- read_csv(file = here("data-raw", "culture.csv"),
+                      col_types = "cdddddd") %>% 
+    bind_rows(tibble(country = "Côte d’Ivoire",
+                     catholic = 0,
+                     eastern = 0,
+                     orthodox = 0,
+                     protestant = 0,
+                     islamic = 1,
+                     ex_com = 0))
+  
+  data_combo <- theta_summary %>% 
+    left_join(wdi,
+              by = c("country", "year")) %>% 
+    left_join(swiid_summary,
+              by = c("country", "year")) %>% 
+    left_join(culture,
+              by = "country") %>% 
+    drop_na(mean:gini_disp_se) %>% 
+    left_join(gm_laws,
+              by = c("country", "year")) %>% 
+    group_by(country) %>% 
+    fill(gm) %>% 
+    mutate(gm = if_else(is.na(gm), 0, gm), 
+           gm_mean = mean(gm),
+           gm_diff = gm - gm_mean,
+           gini_mean = mean(gini_disp),
+           gini_mean_se = sqrt(sum(gini_disp_se^2))/
+             length(gini_disp),
+           gini_diff = (gini_disp - gini_mean),
+           gini_diff_se = sqrt(gini_disp_se^2 + gini_mean_se^2)/2,
+           gdppc_mean = mean(gdppc/1000),
+           gdppc_diff = gdppc/1000 - gdppc_mean
+    ) %>% 
+    ungroup()
+  
+  save(data_combo, 
+       file = here::here("data", "data_combo.rda"))
+} else {
+  load(file = here::here("data", "data_combo.rda"))
+}
+```
+
+```{r m1_results, include=FALSE}
+if (!file.exists(here::here("data", "m1_results.rda"))) {
+  oecd_democracies <- rvest::session("https://en.wikipedia.org/wiki/OECD") %>% 
+    rvest::html_table() %>%
+    nth(6) %>%
+    mutate(country = countrycode::countrycode(Country,
+                                              "country.name",
+                                              "country.name")) %>% 
+    pull(country) %>% 
+    setdiff(c("Turkey", "Hungary"))
+
+  m1 <- brm(formula = bf(mean*100 | mi(sd*100) ~ 
+                           me(gini_mean, gini_mean_se) +
+                           me(gini_diff, gini_diff_se) +
+                           gdppc_mean + gdppc_diff +
+                           gm_mean + gm_diff +
+                           catholic +
+                           orthodox +
+                           eastern +
+                           ex_com +
+                           (1 | country) + (1 | year)),  
+            data = data_combo %>% 
+              filter(country %in% oecd_democracies),
+            backend = "cmdstanr",
+            warmup = 500, 
+            iter = 1000, 
+            chains = 4, 
+            cores = 4,
+            seed = 324)
+
+    named_vars <- tribble(~var_name, ~`.variable`, ~order,
+                        "Income Inequality, Mean", "bsp_megini_meangini_mean_se", 1,
+                        "Income Inequality, Difference",
+                                                  "bsp_megini_diffgini_diff_se", 2,
+                        "GDPpc, Mean", "b_gdppc_mean", 3,
+                        "GDPpc, Difference", "b_gdppc_diff", 4, 
+                        "Marriage Equality, Mean", "b_gm_mean", 5,
+                        "Marriage Equality, Difference", "b_gm_diff", 6, 
+                        "Catholic", "b_catholic", 7,
+                        "Orthodox", "b_orthodox", 8,
+                        "Eastern", "b_eastern", 9,
+                        "Islamic", "b_islamic", 10,
+                        "Ex-Communist", "b_ex_com", 11)
+      
+  doubled_sd <- m1$data %>% 
+    select(-`mean * 100`, -mean, -sd,
+           -country, -year, -ends_with("_se")) %>% 
+    summarize(across(everything(), by2sd)) %>% 
+    pivot_longer(everything()) %>% 
+    transmute(`.variable` = case_when(name == "gini_mean" ~ 
+                                        "bsp_megini_meangini_mean_se",
+                                      name == "gini_diff" ~
+                                        "bsp_megini_diffgini_diff_se",
+                                      TRUE ~ paste0("b_", name)),
+              sd2 = if_else(`.variable` == "b_gm_diff", 1, value)) %>% 
+    left_join(named_vars, by = join_by(`.variable`))
+  
+  coef_data0 <- m1 %>% 
+    tidybayes::gather_draws(`bs?p?_.*`, regex = TRUE) %>% 
+    filter(!`.variable`=="b_Intercept") %>% 
+    left_join(doubled_sd, by = join_by(.variable)) %>% 
+    arrange(order)
+  
+  cy_summary <- m1$data %>%
+    count(country) %>%
+    pull(n) %>%
+    summary()
+  
+  save(oecd_democracies, doubled_sd, coef_data0, cy_summary, 
+       file = here::here("data", "m1_results.rda"))
+} else {
+  load(file = here::here("data", "m1_results.rda"))
+}
+```
+
+```{r m2_results}
+if (!file.exists(here::here("data", "m2_results.rda"))) {
+  m2 <- brm(formula = bf(mean*100 | mi(sd*100) ~ 
+                           me(gini_mean, gini_mean_se) +
+                           me(gini_diff, gini_diff_se) +
+                           gdppc_mean + gdppc_diff +
+                           gm_mean + gm_diff +
+                           catholic +
+                           orthodox +
+                           eastern +
+                           islamic +
+                           ex_com +
+                           (1 | country) + (1 | year)),  
+            data = data_combo,
+            backend = "cmdstanr",
+            warmup = 500, 
+            iter = 1000, 
+            chains = 4, 
+            cores = 4,
+            seed = 324)
+  
+  doubled_sd_all <- m2$data %>% 
+    select(-`mean * 100`, -mean, -sd,
+           -country, -year, -ends_with("_se")) %>% 
+    summarize(across(everything(), by2sd)) %>% 
+    pivot_longer(everything()) %>% 
+    transmute(`.variable` = case_when(name == "gini_mean" ~ 
+                                        "bsp_megini_meangini_mean_se",
+                                      name == "gini_diff" ~
+                                        "bsp_megini_diffgini_diff_se",
+                                      TRUE ~ paste0("b_", name)),
+              sd2 = if_else(`.variable` == "b_gm_diff", 1, value)) %>% 
+    left_join(named_vars, by = join_by(`.variable`)) %>% 
+    arrange(order)
+  
+  coef_data0_all <- m2 %>% 
+    tidybayes::gather_draws(`bs?p?_.*`, regex = TRUE) %>% 
+    filter(!`.variable`=="b_Intercept") %>% 
+    left_join(doubled_sd_all, by = join_by(.variable))
+  
+  cy_summary_all <- m2$data %>%
+    count(country) %>%
+    pull(n) %>%
+    summary()
+  
+  save(doubled_sd_all, coef_data0_all, cy_summary_all,
+       file = here::here("data", "m2_results.rda"))
+} else {
+  load(file = here::here("data", "m2_results.rda"))
+}  
+```
+
+The SGR data allow us to revisit the @Andersen2008 hypothesis with many, many more observations of economic inequality and attitudes toward gay people from a broader sample of countries than either of these two previous works and also to assess whether the patterns in these views in the advanced democratic countries are distinctively sensitive to income inequality.
+Our sample of democracies includes the 36 democratic countries of the OECD, each observed in 23 (Iceland) to 49 (the United States) consecutive years (mean: `r cy_summary %>% nth(4) %>% round(1)` years, median: `r cy_summary %>% nth(3)` years), a total of `r data_combo %>% filter(country %in% oecd_democracies) %>% nrow()` country-year observations.
+The broader sample of all countries includes `r data_combo %>% distinct(country) %>% nrow()` countries, observed in `r cy_summary_all %>% first()` to `r cy_summary_all %>% last()` consecutive years each, for a total of `r data_combo %>% nrow()` country-year observations.
+That is, the SGR dataset provides a number of country-year observations for our sample of democracies that is some `r {data_combo %>% filter(country %in% oecd_democracies) %>% nrow()/63} %>% round()` times greater than that considered in @Andersen2008, and it gives us a number of country-years in our sample of all countries that is about `r {data_combo %>% nrow()/214} %>% round()` times greater than that in the sample employed in @Zhang2019.
+This much larger evidentiary base provides us with a much firmer basis for drawing conclusions regarding both the theory and its potential scope conditions [see, e.g., @King2021, 23].
+
+The independent variable, economic inequality, is measured using the Gini index of disposable income inequality.
+The Gini index ranges from 0, indicating perfect equality in the distribution, in this case, of income after taxes and government transfers, to 100, indicating a perfectly unequal distribution in which a single household receives all such income.
+The data are drawn from the Standardized World Income Inequality Database [@Solt2020].
+
+We also include the country-year-level and country-level control variables included in the analysis in @Andersen2008.
+Data on GDP per capita (in thousands of constant 2015 U.S. dollars) are provided by the World Bank's World Development Indicators [@World-Bank2023].
+A series of dichotomous country-level variables identify each country's religious heritage---countries are coded as having alternately a Catholic, Orthodox, Eastern, or Islamic heritage, with those with a Protestant heritage treated as the reference category---and countries with a Communist history are also identified with such a variable [see @Inglehart2005].
+Finally, although its presence does not impact the conclusions drawn below, we add a dichotomously-coded variable for the presence of marriage equality, which takes on a value one in country-years where same-sex marriage was legal and zero otherwise (at the time of publication of @Andersen2008, only five countries had legalized same-sex marriage, and the data analyzed in that piece ended before any of those policy adoptions).
+
+@Shor2007 shows that the best way to analyze such pooled time series is by using a Bayesian multilevel model that includes varying intercepts for each country and for each year.
+Varying intercepts for each country account for heteroskedasticity across space due to, e.g., omitted variable bias, while permitting the inclusion of time-invariant predictors such as religious heritage and communist past.
+Varying intercepts for each year take into account 'time shocks' that operate on all countries simultaneously [@Shor2007, 171-172].
+We further employ the 'within-between random effects' specification, meaning each of the time-varying predictors is decomposed into its time-invariant country mean and the time-varying difference between each country-year value and this country mean.
+The time-varying difference variables capture the short-term effects of the predictors, while the time-invariant country-mean variables reflect their---often different---long-run, "historical" effects [@Bell2015, 137].
+This specification has been shown superior for addressing omitted variable bias and endogeneity to fixed effects and other commonly used specifications for time-series cross-sectional data like these [see @Bell2015].
+The measurement uncertainty in the data for both attitudes toward gay and lesbian people and income inequality was incorporated into the analysis as well [see @Tai2022].
+The model was estimated using the `brms` R package [@Burkner2017].
+
+```{r resplot, fig.cap="Predicting Support for Gay Rights \\label{model}", fig.height=6, fig.width=7.5}
+ordered <- doubled_sd_all %>%
+    pull(var_name) %>% 
+    rev()
+
+coef_data <- coef_data0 %>% 
+    mutate(std_coef = round(.value * sd2, 1),
+           term = factor(var_name, levels = ordered)) %>%
+    ggdist::median_qi(std_coef, .width = c(.8, .9, .95)) %>%
+    mutate(ci = paste0(round(.lower, 1), " to ", round(.upper, 1))) %>%
+    left_join(doubled_sd, ., by = join_by(.variable))
+
+coef_data_all <- coef_data0_all %>% 
+    mutate(std_coef = round(.value * sd2, 1),
+           term = factor(var_name, levels = ordered)) %>%
+    ggdist::median_qi(std_coef, .width = c(.8, .9, .95)) %>%
+    mutate(ci = paste0(round(.lower, 1), " to ", round(.upper, 1))) %>%
+    left_join(doubled_sd_all, ., by = join_by(.variable))
+
+coef_data0 %>% 
+    mutate(sample = "oecd") %>% 
+    bind_rows(coef_data0_all %>% mutate(sample = "all")) %>% 
+    mutate(std_coef = round(.value * sd2, 1),
+           term = factor(var_name, levels = ordered)) %>% 
+    ggplot(aes(y = term,
+               x = std_coef,
+               fill = sample,
+               color = sample)) +
+    stat_halfeye(.width = c(.8, .9, .95),
+                 alpha = .3,
+                 point_alpha = 1) +
+    geom_vline(xintercept = 0, linetype = "dashed") +
+    theme_light() +
+    scale_fill_manual(name = NULL,
+                      values = c("red2", "blue"), 
+                      breaks = c("all", "oecd"),
+                      labels = c("All Countries", 
+                                 "OECD Democracies")) +
+    scale_color_manual(name = NULL, 
+                       values = c("red4", "navy"), 
+                       breaks = c("all", "oecd"),
+                       labels = c("All Countries", 
+                                  "OECD Democracies")) +
+    labs(fill = NULL, 
+         color = NULL) +
+    theme(legend.justification=c(1,0),
+          legend.position=c(.99, .01),
+          legend.background = element_blank(),
+          legend.box.background = element_rect(color = "grey80")) +
+    guides(color = guide_legend(reverse = TRUE),
+           fill = guide_legend(reverse = TRUE)) +
+    scale_x_continuous(limits=c(-50, 30)) +
+    xlab(NULL) +
+    ylab(NULL) +
+    plot_annotation(caption = "Notes: Dots indicate posterior means; whiskers, from thickest to thinnest, describe 80%,\n90%, and 95% credible intervals; shading depicts the posterior probability density function.")
+```
+
+The results are presented in Figure\nobreakspace{}\ref{model}.
+Greater income inequality is associated with less support for gay rights, both in the long run and in the short term, in both samples of countries.
+Looking at the 'historical,' long-run effect of income inequality, we see that in the democratic sample, a two-standard deviation increase in a country's mean inequality is associated with `r get_coef("gini_mean", type = "std_coef") %>% str_remove("-")` points less support (95% credible interval: `r get_coef("gini_mean", type = "ci")` points), while across all countries this estimated difference was `r get_coef("gini_mean", results_df = coef_data_all)` points.
+In the short run, a two-standard-deviation year-to-year change was found to decrease support `r get_coef("gini_diff", type = "std_coef") %>% str_remove("-")` points (95% c.i.:`r get_coef("gini_diff", type = "ci")`) among democracies.
+If anything, the estimated short-run decline was even larger when all countries are considered: `r get_coef("gini_diff", results_df = coef_data_all) %>% str_remove("-")` points.
+Having much more data on attitudes toward gay rights provides strong evidence that income inequality decreases supportive public opinion toward gay and lesbian people and that democracies are not particularly sensitive to this effect.
+
+<!-- Consistent with previous research, these results also support the postmaterialist argument that economic development, measured as GDP per capita, leads to greater tolerance of homosexuality; estimates of both short-run and long-run effects are positive and credibly different from zero (although only at the 90% level for the latter in the sample of rich democracies). -->
+<!-- Adopting a law recognizing same-sex marriages is estimated to immediately increase tolerance by `r get_coef("gm_diff", results_df = coef_data)` in the OECD democracies and `r get_coef("gm_diff", results_df = coef_data_all)` across all countries. -->
+<!-- Not surprisingly, the results also show that countries that recognized marriage equality earlier---that is, countries with higher means on the marriage equality variable---are more tolerant; this finding reflects not only the longer-term influence of policy on tolerance but also the reciprocal effect of tolerance on policy adoption. -->
+
+<!-- The performance of the religious-heritage variables, which measure differences in tolerance in comparison to historically Protestant countries, is more mixed. -->
+<!-- The evidence is weakest that countries with a Confucian or Buddhist ("Eastern") religious heritage are distinctly different; in neither the OECD democracies nor the broader sample do even the 80% credible intervals exclude zero. -->
+<!-- Across all countries, public opinion in those that are historically Catholic is estimated to be more tolerant by `r get_coef("catholic", results_df = coef_data_all, width = .9)` TOL-H points, but across only the democracies of the OECD, this estimate is very nearly zero. -->
+<!-- Countries with an Orthodox heritage are found to be less tolerant of homosexuality, again compared to those with a Protestant heritage, by `r get_coef("orthodox", results_df = coef_data_all)` points across all countries and, with less confidence, by `r get_coef("orthodox", results_df = coef_data, width = .8)` across rich democracies. -->
+<!-- Public opinion in historically Islamic countries is estimated to be `r get_coef("orthodox", results_df = coef_data_all)` points less tolerant than in historically Protestant countries.^[ -->
+<!-- There are no Islamic-heritage countries among the OECD democracies as Turkey is considered a competitive authoritarian regime, and even were it included, the Islamic variable would be colinear with its country intercept in our multilevel model.] -->
+
 
 
 # Conclusion {.unlisted .unnumbered}
