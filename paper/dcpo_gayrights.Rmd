@@ -87,7 +87,7 @@ header-includes:
 
 Abstract wordcount: 167 words
 
-Manuscript wordcount: 7021 words (including references)
+Manuscript wordcount: 7018 words (including references)
 \pagebreak
 
 ```{r setup, include=FALSE}
