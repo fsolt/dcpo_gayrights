@@ -87,7 +87,7 @@ header-includes:
 
 Abstract wordcount: 167 words
 
-Manuscript wordcount: 7020 words (including references)
+Manuscript wordcount: 7021 words (including references)
 \pagebreak
 
 ```{r setup, include=FALSE}
@@ -1309,7 +1309,7 @@ The gray-shaded 'violins' depict mirrored kernal density plots of the observatio
 The violins are inset with box-and-whisker plots showing the 25th percentile, median, and 75th percentile as horizontal lines in a box; the dashed vertical whiskers then extend to the farthest observation within 1.5 times the interquartile range, that is, the height of the box; and all observations beyond that distance are shown individually as white circles [see @Tukey1977].
 This relationship is very strong.
 
-A third oft-theorized relationship is that liberal democracies promote generally more tolerant attitudes that lead to greater support for gay rights [see, e.g., @Adamczyk2017].
+A third often theorized relationship is that liberal democracies promote generally more tolerant attitudes that lead to greater support for gay rights [see, e.g., @Adamczyk2017].
 The right panel of Figure\nobreakspace{}\ref{ext_val1} plots the SGR score of the most recent available year for each country against the V-Dem Liberal Democracy Index for that country-year.
 Here, too, the relationship is in the expected direction and strong.
 The evidence of construct validation in Figure\nobreakspace{}\ref{ext_val1}, together with the evidence of convergent validation in Figure\nobreakspace{}\ref{internal_val}, demonstrates the validity of the SGR scores as measures of the public's support for gay rights.
