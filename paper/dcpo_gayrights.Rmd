@@ -362,9 +362,9 @@ It plots, for each survey project in the SGR source data described below, the nu
 Some survey projects ask more than one question on the topic, but here, only the most frequently asked single question on the topic is shown.
 An 'L' shape is readily evident.
 Many surveys, clustered in the lower left at the bend in the L, ask questions about support for gay rights in only a few different country-year contexts.
-Some though, such as the U.S. General Social Survey and the British Social Attitudes project in the top left, have fielded such questions repeatedly over many years in a single country, although even these efforts fall short of complete time series.
-Others, including the World Values Survey and the Pew Global Attitudes project along the bottom and towards the right, provide information about many countries across one or a few years.
-The European Social Survey, which surveyed respondents in 39 countries in as many as ten years (mean: 6.6 years) over two decades, provides the most over-time data for the most countries, followed by the AmericasBarometer (34 countries, mean years: 5.4).
+Some though, such as the U.S. General Social Survey (GSS) and the British Social Attitudes (BSA) project in the top left, have fielded such questions repeatedly over many years in a single country, although even these efforts fall short of complete time series.
+Others, including the World Values Survey (WVS) and the Pew Global Attitudes project along the bottom and towards the right, provide information about many countries across one or a few years.
+The European Social Survey (ESS), which surveyed respondents in 39 countries in as many as ten years (mean: 6.6 years) over two decades, provides the most over-time data for the most countries, followed by the AmericasBarometer (AmB; 34 countries, mean years: 5.4).
 No single survey combines broad, cross-regional country coverage with longitudinal time-series data.
 
 ```{r proj-kt-plot, fig.cap="Countries and Mean Years Observed in Survey Datasets \\label{proj_kt_plot}", fig.height=4, fig.pos='h', cache=FALSE}
@@ -432,83 +432,127 @@ cited <- tribble(~citation, ~text_x, ~text_y,
                  "Hooghe and Meeusen 2013", 37.6, 4.24)
 
 poh <- read_csv(here("data-raw", "wos_poh.csv")) %>% 
-  janitor::clean_names() %>% 
-  mutate(year = publication_year,
-         hits = times_cited_all_databases,
-         last_names = str_remove_all(authors, ", [A-Z]{1,3}") %>% 
-           str_to_title() %>% 
-           str_replace_all(";", ",") %>% 
-           {ifelse(str_count(., ",") > 1,
-                   str_replace(., ",.*", " et al."),
-                   .)} %>% 
-           str_replace(", ([A-Z][a-z]+)$", ", and \\1") %>% 
-           str_replace("^([A-Z][a-z]+(?:-[A-Z][a-z]+)?), and ([A-Z][a-z]+)$", "\\1 and \\2"),
-         citation = paste(last_names, year) %>% 
-           ifelse(. == "Andersen and Fetner 2008" &
-                    !str_detect(source_title, "AMERICAN"),
-                  "Andersen and Fetner 2008a",
-                  .) %>% 
-           ifelse(. == "Lax and Phillips 2009" &
-                    !str_detect(source_title, "JOURNAL"),
-                  "Lax and Phillips 2009a",
-                  .) %>% 
-           ifelse(. == "Brewer 2003" &
-                    !str_detect(source_title, "OPINION"),
-                  "Brewer 2003a",
-                  .),
-         cy = k*t) %>% 
-  group_by(k, t) %>% 
-  mutate(to_jitter = n() > 1) %>% 
-  ungroup() %>% 
-  left_join(cited, by = "citation")
+    janitor::clean_names() %>% 
+    mutate(year = publication_year,
+           hits = times_cited_all_databases,
+           last_names = str_remove_all(authors, ", [A-Z]{1,3}") %>% 
+               str_to_title() %>% 
+               str_replace_all(";", ",") %>% 
+               {ifelse(str_count(., ",") > 1,
+                       str_replace(., ",.*", " et al."),
+                       .)} %>% 
+               str_replace(", ([A-Z][a-z]+)$", ", and \\1") %>% 
+               str_replace("^([A-Z][a-z]+(?:-[A-Z][a-z]+)?), and ([A-Z][a-z]+)$", "\\1 and \\2"),
+           citation = paste(last_names, year) %>% 
+               ifelse(. == "Andersen and Fetner 2008" &
+                          !str_detect(source_title, "AMERICAN"),
+                      "Andersen and Fetner 2008a",
+                      .) %>% 
+               ifelse(. == "Lax and Phillips 2009" &
+                          !str_detect(source_title, "JOURNAL"),
+                      "Lax and Phillips 2009a",
+                      .) %>% 
+               ifelse(. == "Brewer 2003" &
+                          !str_detect(source_title, "OPINION"),
+                      "Brewer 2003a",
+                      .),
+           cy = k*t) %>% 
+    group_by(k, t) %>% 
+    mutate(to_jitter = n() > 1) %>% 
+    ungroup() %>% 
+    left_join(cited, by = "citation")
 
 my_palette <- colorRampPalette(brewer.pal(11, "Spectral"))
 color_scale <- scale_color_gradientn(colors = my_palette(max(poh$year) -
-                                                           min(poh$year) + 1),
+                                                             min(poh$year) + 1),
                                      limits = c(min(poh$year),
                                                 max(poh$year)),
                                      name="Publication\nYear")
 fill_scale <- scale_fill_gradientn(colours = my_palette(max(poh$year) -
-                                                          min(poh$year) + 1),
+                                                            min(poh$year) + 1),
                                    limits = c(min(poh$year),
                                               max(poh$year)),
-                                     name="Publication\nYear")
+                                   name="Publication\nYear")
 
 set.seed(324)
 poh_plot <- ggplot(poh, aes(x = k,
                             y = t,
                             color = year,
                             fill = year)) +
-  geom_point(aes(size = hits),
-             data = poh %>% filter(!to_jitter),
-             alpha = .75) +
-  geom_point(aes(size = hits),
-             data = poh %>% filter(to_jitter),
-             alpha = .75,
-             position = position_jitter(width = .25, height = .25)) +
-  geom_text(aes(label = citation,
-                x = text_x,
-                y = text_y,
-                size = 35),
-            data = poh %>% filter(!is.na(text_x)),
-            color = "grey20") +
-  color_scale +
-  fill_scale +
-  theme_bw() +
-  geom_magnify(from = c(xmin = 0, xmax = 5, ymin = 0, ymax = 5),
-            to = c(xmin = 15, xmax = 44, ymin = 10, ymax = 39),
-            axes = "xy",
-            data = poh) +
-  theme(legend.justification = c(.99,.99), 
-        legend.position = c(.98,.98),
-        legend.box.background = element_rect(color = "grey",
-                                             fill="white")) +
-  scale_size(name = "Citations") +
-  labs(x = "Countries Observed",
-       y = "Mean Years Observed Per Country Observed",
-       title = "Prominent Articles on\nPublic Opinion on Gay Rights")
+    geom_point(aes(size = hits),
+               data = poh %>% filter(!to_jitter),
+               alpha = .75) +
+    geom_point(aes(size = hits),
+               data = poh %>% filter(to_jitter),
+               alpha = .75,
+               position = position_jitter(width = .25, height = .25)) +
+    geom_text(aes(label = citation,
+                  x = text_x,
+                  y = text_y,
+                  size = 35),
+              data = poh %>% filter(!is.na(text_x)),
+              color = "grey20") +
+    color_scale +
+    fill_scale +
+    theme_bw() +
+    # geom_magnify(from = c(xmin = 0, xmax = 5, ymin = 0, ymax = 5),
+    #           to = c(xmin = 15, xmax = 44, ymin = 10, ymax = 39),
+    #           axes = "xy",
+    #           data = poh) +
+    theme(legend.justification = c(.99,.99), 
+          legend.position = c(.98,.98),
+          legend.box.background = element_rect(color = "grey",
+                                               fill="white")) +
+    scale_size(name = "Citations") +
+    labs(x = "Countries Observed",
+         y = "Mean Years Observed Per Country Observed",
+         title = "Prominent Articles on\nPublic Opinion on Gay Rights") +
+    annotate(geom = "rect", 
+             xmin = 0, xmax = 5, 
+             ymin = 0, ymax = 5,
+            color = "black", 
+            fill = NA,
+            linewidth = .25 ) +
+    geom_segment(aes(x = 0, y = 5, xend = 13, yend = 41),
+                 linetype = "dashed",
+                 linewidth = .25) +
+    geom_segment(aes(x = 5, y = 0, xend = 45, yend = 9),
+                 linetype = "dashed",
+                 linewidth = .25)
 
-poh_plot + plot_annotation(caption = str_wrap("Notes: Citation counts as reported by the Web of Science on June 21, 2023.  See the online appendix for details on the contruction of this sample of prominent articles.", width = 114))
+set.seed(324)
+zoom_plot <- ggplot(poh, aes(x = k,
+                            y = t,
+                            color = year,
+                            fill = year)) +
+    geom_point(aes(size = hits),
+               data = poh %>% filter(!to_jitter),
+               alpha = .75) +
+    geom_point(aes(size = hits),
+               data = poh %>% filter(to_jitter),
+               alpha = .75,
+               position = position_jitter(width = .25, height = .25)) +
+    geom_text(aes(label = citation,
+                  x = text_x,
+                  y = text_y,
+                  size = 35),
+              data = poh %>% filter(!is.na(text_x)),
+              color = "grey20") +
+    color_scale +
+    fill_scale +
+    theme_bw() +
+    theme(legend.position = "none",
+          plot.background = element_rect(colour = "black",
+                                         fill = "white",
+                                         linewidth =.5)) +
+    coord_cartesian(xlim = c(0, 5), ylim = c(0, 5)) +
+    labs(x = NULL,
+         y = NULL)
+
+poh_plot + 
+    inset_element(zoom_plot, 15/80, 10/40, 44/80, 37/40) +
+    plot_annotation(caption = str_wrap("Notes: Citation counts as reported by the Web of Science on June 21, 2023.  See the online appendix for details on the contruction of this sample of prominent articles.", 
+                                       width = 114))
 ```
 
 
@@ -781,7 +825,7 @@ n_data_poorest <- {data_poorest %>%
 ```
 
 Consider the most frequently asked item in the data we collected, which asks respondents whether they think homosexuality "can always be justified, never be justified, or something in between," using a ten-point scale.
-Employed by the Asia Barometer, the European Values Survey, the Latinobarómetro, and the World Values Survey, this question was asked in a total of `r just10_cy` different country-years.
+Employed by the Asia Barometer, the European Values Survey, the Latinobarómetro, and the WVS, this question was asked in a total of `r just10_cy` different country-years.
 Even this question, the _most common_ survey item asked, constitutes only `r {just10_cy*100/(spanned_cy %>% str_replace(",", "") %>% as.numeric())} %>% round()`% of the country-years spanned by our data.
 The available public opinion data on this topic are very sparse as well as incomparable.
 
@@ -1275,12 +1319,12 @@ The evidence of construct validation in Figure\nobreakspace{}\ref{ext_val1}, tog
 To illustrate the utility of the SGR data, we revisit Andersen and Fetner's [-@Andersen2008] foundational work on economic inequality and intolerance.
 That article argues that postmaterialist theory [see, e.g., @Inglehart2005] implies that greater inequality should be expected to yield less tolerant and supportive attitudes toward gay rights: if economic prosperity is what provides societies with the security needed to leave traditional biases behind, then when a society's prosperity (and security) is not broadly shared, more tolerant and supportive attitudes will not be broadly shared either.^[
 \doublespacing An alternate, possibly complementary, theory would be that greater inequality gives wealthier individuals both greater means and enhanced motive to promote religiosity among their fellow citizens [see, e.g., @Solt2011a; @Solt2014b], and more religiosity in turn works to decrease support [see, e.g., @Adamczyk2009]. We leave distinguishing between these two theories to future research.]
-Supporting this view, its analysis found that more economic inequality leads to less positive attitudes toward gay and lesbian people, as measured by the ten-point World Values Survey item on the justifiability of homosexuality mentioned above.
+Supporting this view, its analysis found that more economic inequality leads to less positive attitudes toward gay and lesbian people, as measured by the ten-point WVS item on the justifiability of homosexuality mentioned above.
 Despite the article's influence, it was flagged in a recent review of the literature as a study for which "more research is needed to replicate and confirm [its] findings" [@Adamczyk2019, 415].
 Indeed, one recent work finds no support at all for the hypothesized relationship between inequality and attitudes toward gay people [@Zhang2019, 515].
 
 One difference between these two works, @Andersen2008 and @Zhang2019, that is potentially important to their diverging conclusions is the sample employed.
-Both works draw on World Values Survey data, but the group of countries each examines differs in size and in kind.
+Both works draw on WVS data, but the group of countries each examines differs in size and in kind.
 Noting the particular importance to democracies of tolerance of social and political difference, @Andersen2008 examined only democratic countries.
 The article's analyses included 35 countries, observed in just one to four years each, for a total of 63 country-years, that is, a mean of 1.8 years observed per country.
 The sample analyzed in @Zhang2019, on the other hand, incorporated a wider range of cases including non-democracies.
