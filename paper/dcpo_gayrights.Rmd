@@ -87,7 +87,7 @@ header-includes:
 
 Abstract wordcount: 167 words
 
-Manuscript wordcount: 7018 words (including references)
+Manuscript wordcount: 7019 words (including references)
 \pagebreak
 
 ```{r setup, include=FALSE}
@@ -1634,7 +1634,7 @@ coef_data0 %>%
 The results are presented in Figure\nobreakspace{}\ref{model}.
 Greater income inequality is associated with less support for gay rights, both in the long run and in the short term, in both samples of countries.
 Looking at the 'historical,' long-run effect of income inequality, we see that in the democratic sample, a two-standard deviation increase in a country's mean inequality is associated with `r get_coef("gini_mean", type = "std_coef") %>% str_remove("-")` points less support (95% credible interval: `r get_coef("gini_mean", type = "ci")` points), while across all countries this estimated difference was `r get_coef("gini_mean", results_df = coef_data_all)` points.
-In the short run, a two-standard-deviation year-to-year change was found to decrease support `r get_coef("gini_diff", type = "std_coef") %>% str_remove("-")` points (95% c.i.:`r get_coef("gini_diff", type = "ci")`) among democracies.
+In the short run, a two-standard-deviation year-to-year change was found to decrease support by `r get_coef("gini_diff", type = "std_coef") %>% str_remove("-")` point (95% c.i.:`r get_coef("gini_diff", type = "ci")`) among democracies.
 If anything, the estimated short-run decline was even larger when all countries are considered: `r get_coef("gini_diff", results_df = coef_data_all) %>% str_remove("-")` points.
 Having much more data on attitudes toward gay rights provides strong evidence that income inequality decreases supportive public opinion toward gay and lesbian people and that democracies are not particularly sensitive to this effect.
 
