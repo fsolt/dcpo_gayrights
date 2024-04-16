@@ -69,6 +69,9 @@ header-includes:
 -   Yue Hu, ORCID: <https://orcid.org/0000-0002-2829-3971>, Associate Professor, Department of Political Science, Tsinghua University, [yuehu\@tsinghua.edu.cn](mailto:yuehu@tsinghua.edu.cn){.email}
 -   Frederick Solt, ORCID: <https://orcid.org/0000-0002-3154-6132>, Associate Professor, Department of Political Science, University of Iowa, [frederick-solt\@uiowa.edu](mailto:frederick-solt@uiowa.edu){.email}
 
+# Data Availability Statement {.unlisted .unnumbered}
+Replication data is available on the Harvard Dataverse [link tbd], and the work's complete revision history is available at https://github.com/fsolt/dcpo_gayrights.  The SGR dataset [will be] available online at https://dcpo.org/data/sge.
+
 \pagebreak
 
 ```{=tex}
