@@ -1,0 +1,66 @@
+---
+format:
+  pdf:
+    number-sections: false
+
+bibliography: 
+tables: true # enable longtable and booktabs
+fontsize: 12pt
+indent: true
+geometry: margin=1in
+linestretch: 1.5 # double spacing using linestretch 1.5
+colorlinks: true
+
+execute:
+  echo: false
+  message: false
+  warning: false
+  dpi: 300
+    
+title: |
+  | Public Support for Gay Rights
+  | Across Countries and Over Time
+subtitle: |
+  Memo to Editor and Reviewers
+---
+
+We first want to thank the Editor and the reviewers for their helpful comments and suggestions.
+We revised our original manuscript according to comments from both Reviewer 1 and Reviewer 2.
+Below we summarize our revisions and explanations on how we reflect the valuable comments in our revised manuscript:
+
+- **Meaningful explanations rather than the statistical formula.** 
+    Reviewer 1 recommends us to provide more meaningful explanations rather than just the statistical formula. 
+    We fully agree with the importance of the explanations.
+    In the current version of our manuscript,
+
+- **Defining the purpose of the manuscript.**
+    Revewer 2 points that our manuscript should define the purpose of paper. 
+    Given that clarifying the main purpose is a crucial part of a manuscript, we revise our manuscript in order to emphasize the purpose of this paper.
+    In the revised manuscript,
+
+- **Clarifying our focus on “support for gay rights” rather than others.**
+    Reviewer 2 mentioned that, "Why are gays rights used and not another concept?".
+    We again fully agree with the importance of providing explanations on the reasons why we focus on gay's rights rather than other concepts. 
+
+    According to the valuable comment, we revise our manuscript by 
+    
+- **Detailed explanation on how we select indicators used in the Support for Gay Rights Latent Variable Model.**
+    Reviewer 2 also gives us an advice that it might be better for us to provide detailed explanations on the selection of indicators used in our Latent Variable Model.
+    We cannot agree more given that the indicators are the core part of constructing our model and index.
+    Thus, we revise our manuscript to clearly deliver the information on the indicators.
+
+    In the revised mansucrtip,
+
+- **Differences of our dataset compared to GAI and Limitations of our dataset.**
+    Reviewer 2 also recommends that we shoud differentiate our dataset from already existing dataset such as GAI.
+    Moreover, the reviewer suggests that explanations on potential limitations of our dataset should be provided.
+    We are definitely on the line with the comments.
+
+    We revised our manuscript by
+
+We are appreciated for all comments and advice from both reviewers.
+We believe that our revised manuscript is now much nuanced compared to the previous version.
+Again, we thank for the valuable and warmful comments and the opportunity to revise our manuscript.
+
+
+# Reference {-}
