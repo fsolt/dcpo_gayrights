@@ -1,0 +1,1931 @@
+---
+output: 
+  bookdown::pdf_document2:
+    fig_caption: yes
+    keep_tex: yes
+    toc: no
+    number_sections: no
+    latex_engine: xelatex
+    pandoc_args: --lua-filter=multibib.lua
+    
+title: |
+  | Public Support for Gay Rights
+  | Across Countries and Over Time
+
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+editor_options: 
+  markdown: 
+    wrap: sentence
+tables: true # enable longtable and booktabs
+citation_package: natbib
+citeproc: false
+fontsize: 12pt
+indent: true
+linestretch: 1.655 # double spacing
+bibliography:
+  text: dcpo-gayrights.bib
+  app: dcpo-gayrights-app.bib
+biblio-style: apsr
+citecolor: black
+linkcolor: black
+endnote: no
+header-includes:
+      - \usepackage{array}
+      - \usepackage{caption}
+      - \usepackage{graphicx}
+      - \usepackage{siunitx}
+      - \usepackage{colortbl}
+      - \usepackage{multirow}
+      - \usepackage{hhline}
+      - \usepackage{calc}
+      - \usepackage{tabularx}
+      - \usepackage{threeparttable}
+      - \usepackage{wrapfig}
+      - \usepackage{fullpage}
+      - \usepackage{setspace}
+      - \usepackage{lscape} #\usepackage{lscape} better for printing, page displayed vertically, content in landscape mode, \usepackage{pdflscape} better for screen, page displayed horizontally, content in landscape mode
+      - \newcommand{\blandscape}{\begin{landscape}}
+      - \newcommand{\elandscape}{\end{landscape}}
+      - \usepackage{titlesec}
+      - \titleformat*{\section}{\normalsize\bfseries}
+      - \titleformat*{\subsection}{\normalsize\itshape}
+      - \usepackage{titling} #use \maketitle repeatedly  
+      - \renewcommand{\topfraction}{.85} # Adjust LaTeX placement rules per 
+      - \renewcommand{\bottomfraction}{.7} # https://bookdown.org/yihui/rmarkdown-cookbook/figure-placement.html
+      - \renewcommand{\textfraction}{.15}
+      - \renewcommand{\floatpagefraction}{.66}
+      - \setcounter{topnumber}{3}
+      - \setcounter{bottomnumber}{3}
+      - \setcounter{totalnumber}{4}
+---
+
+\pagenumbering{gobble}
+
+# Authors {.unlisted .unnumbered}
+
+-   Byung-Deuk Woo, ORCID: <https://orcid.org/0000-0001-6902-7576>, Assistant Professor, Department of Political Science and International Studies, Incheon National University, [byungdeukwoo\@inu.ac.kr](mailto:byungdeukwoo@inu.ac.kr){.email}
+-   Hyein Ko, ORCID: <https://orcid.org/0000-0002-9497-9656>, Postdoctoral Fellow, Department of Political Science, University of Illinois at Urbana-Champaign, [hyeink\@illinois.edu](mailto:hyeink@illinois.edu){.email}
+-   Yuehong Cassandra Tai, ORCID: <https://orcid.org/0000-0001-7303-7443>, Postdoctoral Fellow, Center for Social Data Analytics, Pennsylvania State University, [yhcasstai\@psu.edu](mailto:yhcasstai@psu.edu){.email}
+-   Yue Hu, ORCID: <https://orcid.org/0000-0002-2829-3971>, Associate Professor, Department of Political Science, Tsinghua University, [yuehu\@tsinghua.edu.cn](mailto:yuehu@tsinghua.edu.cn){.email}
+-   Frederick Solt, ORCID: <https://orcid.org/0000-0002-3154-6132>, Associate Professor, Department of Political Science, University of Iowa, [frederick-solt\@uiowa.edu](mailto:frederick-solt@uiowa.edu){.email}
+
+# Data Availability Statement {.unlisted .unnumbered}
+Replication data is available on the Harvard Dataverse [link tbd], and the work's complete revision history is available at https://github.com/fsolt/dcpo_gayrights.  The SGR dataset [will be] available online at https://dcpo.org/data/sge.
+
+\pagebreak
+
+```{=tex}
+\renewcommand{\baselinestretch}{1}
+\selectfont
+\maketitle
+\renewcommand{\baselinestretch}{1.5}
+\selectfont
+\pagenumbering{arabic}
+```
+```{=tex}
+\begin{abstract}
+\emph{Objective}. Support for gay rights has increased in the publics of many countries over recent decades, but the scholarship on the topic has been hindered by the limited available data on these trends in public opinion. \emph{Method}. To overcome this problem, we present the Support for Gay Rights (SGR) dataset, which combines a comprehensive collection of survey data with a latent-variable model to provide annual time-series estimates of public support for gay rights across 118 countries and over as many as 51 years that are comparable across space and time. \emph{Results}. We show these data perform well in validation tests and demonstrate their potential by replicating the influential but recently questioned finding of Andersen and Fetner (2008) that more income inequality yields less tolerant and supportive attitudes toward gay people. \emph{Conclusion}. We anticipate that the SGR data will become a crucial source for cross-regional, cross-national, and longitudinal research that improves our understanding of the sources and consequences of public support for gay rights.
+\end{abstract}
+```
+
+Abstract wordcount: 167 words
+
+Manuscript wordcount: 7019 words (including references)
+\pagebreak
+
+```{r setup, include=FALSE}
+options(tinytex.verbose = TRUE)
+
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE,
+  cache = TRUE,
+  dpi = 600,
+  fig.width = 7,
+  fig.height = 4,
+  plot = function(x, options)  {
+    hook_plot_tex(x, options)
+  }
+)
+
+# If `DCPOtools` is not yet installed:
+# remotes::install_github("fsolt/DCPOtools")
+
+# If `cmdstanr` is not yet installed:
+# install.packages("cmdstanr", repos = c("https://mc-stan.org/r-packages/", getOption("repos")))
+# and see https://mc-stan.org/cmdstanr/articles/cmdstanr.html
+
+# If `ggmagnify` is not yet installed:
+# install.packages("ggmagnify", repos = c("https://hughjonesd.r-universe.dev", 
+#                 "https://cloud.r-project.org"))
+
+# If `tabulizer` is not yet installed:
+# remotes::install_github("ropensci/tabulizer")
+
+# If `vdemdata` is not yet installed:
+# remotes::install_github("vdeminstitute/vdemdata")
+
+if (!require(pacman)) install.packages("pacman")
+library(pacman)
+# load all the packages you will use below 
+p_load(
+  DCPOtools,
+  cmdstanr,
+  tidyverse,
+  here,
+  countrycode,
+  patchwork,
+  ggthemes,
+  ggmagnify,
+  ggdist,
+  RColorBrewer,
+  imputeTS,
+  osfr,
+  brms,
+  tabulizer,
+  tidybayes,
+  repmis,
+  rsdmx,
+  rvest,
+  vdemdata,
+  modelsummary,
+  kableExtra
+) 
+```
+
+```{r define_funs}
+# define functions
+validation_plot <- function(v_data_raw,
+                            lab_x = .38, lab_y = 92,
+                            theta_summary, theta_results,
+                            survey = TRUE) {
+    
+    # defaults per https://stackoverflow.com/a/49167744/2620381
+    if ("theta_summary" %in% ls(envir = .GlobalEnv) & missing(theta_summary))
+        theta_summary <- get("theta_summary", envir = .GlobalEnv)
+    if ("theta_results" %in% ls(envir = .GlobalEnv) & missing(theta_results))
+        theta_results <- get("theta_results", envir = .GlobalEnv)
+
+    median_val <- Vectorize(function(x) median(1:x),
+                            vectorize.args = "x")
+    if (survey) {    
+      v_vars <- v_data_raw %>% 
+        select(item0 = item) %>% 
+        unique() %>% 
+        mutate(v_val = str_extract(item0, "\\d+") %>% 
+                 as.numeric() %>% 
+                 median_val(.) %>%
+                 `+`(.6) %>% 
+                 round())
+    
+      validation_summarized <- v_data_raw %>% 
+        DCPOtools::format_dcpo(scale_q = v_vars$item0[[1]], # these arguments are required
+                               scale_cp = 1) %>% # but they don't matter
+        pluck("data") %>% 
+        mutate(item0 = str_remove(item, " \\d or higher"),
+               title = factor(v_data_raw %>%
+                                pull(title) %>%
+                                first()), 
+                              levels = v_data_raw %>%
+                                pull(title) %>%
+                                unique(),
+               neg = v_data_raw %>% 
+                 pull(neg) %>% 
+                 first) %>% 
+        right_join(v_vars, by = "item0") %>%
+        arrange(title) %>% 
+        filter(str_detect(item, paste(v_val, "or higher"))) %>%
+        mutate(iso2c = countrycode::countrycode(country,
+                                                origin = "country.name",
+                                                destination = "iso2c",
+                                                warn = FALSE),
+               prop = if_else(neg, 1-y_r/n_r, y_r/n_r),
+               se = sqrt((prop*(1-prop))/n),
+               prop_90 = prop + qnorm(.9)*se,
+               prop_10 = prop - qnorm(.9)*se) %>%
+        inner_join(theta_summary %>% select(-kk, -tt), by = c("country", "year"))
+    } else {
+      validation_summarized <- v_data_raw %>% 
+        mutate(iso2c = countrycode::countrycode(country,
+                                                origin = "country.name",
+                                                destination = "iso2c",
+                                                warn = FALSE),
+               prop = prop,
+               se = se,
+               prop_90 = prop + qnorm(.9)*se,
+               prop_10 = prop - qnorm(.9)*se) %>%
+        inner_join(theta_summary %>% select(-kk, -tt), by = c("country", "year"))
+    }
+    
+    validation_cor <- theta_results %>%
+      inner_join(validation_summarized %>%
+                   select(country, year, title, prop, se),
+                 by = c("country", "year")) %>% 
+      rowwise() %>% 
+      mutate(sim = rnorm(1, mean = prop, sd = se)) %>% 
+      ungroup() %>% 
+      select(title, theta, sim, draw) %>% 
+      nest(data = c(theta, sim)) %>% 
+      mutate(r = lapply(data, function(df) cor(df)[2,1]) %>% 
+               unlist()) %>%
+      select(-data) %>% 
+      group_by(title) %>% 
+      summarize(r = paste("R =", sprintf("%.2f", round(mean(r), 2))))
+
+    if ({validation_summarized %>%
+        pull(country) %>%
+        unique() %>% 
+        length()} > 1) {
+      val_plot <- validation_summarized %>%
+        ggplot(aes(x = mean,
+                   y = prop * 100)) +
+        geom_segment(aes(x = q10, xend = q90,
+                         y = prop * 100, yend = prop * 100),
+                     na.rm = TRUE,
+                     alpha = .2) +
+        geom_segment(aes(x = mean, xend = mean,
+                         y = prop_90 * 100, yend = prop_10 * 100),
+                     na.rm = TRUE,
+                     alpha = .2) +
+        geom_smooth(method = 'lm', formula = 'y ~ x', se = FALSE) +
+        facet_wrap(~ title, ncol = 4) +
+        geom_label(data = validation_cor, aes(x = lab_x,
+                                              y = lab_y,
+                                              label = r),
+                   size = 2)
+    } else {
+      val_plot <- validation_summarized %>%
+        ggplot(aes(x = year,
+                   y = mean)) +
+        geom_line() +
+        geom_ribbon(aes(ymin = q10,
+                        ymax = q90,
+                        linetype = NA),
+                    alpha = .2) +
+        geom_point(aes(y = prop),
+                   fill = "black",
+                   shape = 21,
+                   size = .5,
+                   na.rm = TRUE) +
+        geom_path(aes(y = prop),
+                  linetype = 3,
+                  na.rm = TRUE,
+                  alpha = .7) +
+        geom_segment(aes(x = year, xend = year,
+                         y = prop_90, yend = prop_10),
+                     na.rm = TRUE,
+                     alpha = .2) +
+        facet_wrap(~ title, ncol = 4) +
+        geom_label(data = validation_cor, aes(x = lab_x,
+                                              y = lab_y,
+                                              label = r),
+                   size = 2)
+    }
+    
+    return(val_plot)
+}
+
+covered_share_of_spanned <- function(dcpo_input_raw) {
+  n_cy <- dcpo_input_raw %>%
+    distinct(country, year) %>% 
+    nrow()
+  
+  spanned_cy <- dcpo_input_raw %>% 
+    group_by(country) %>% 
+    summarize(years = max(year) - min(year) + 1) %>% 
+    summarize(n = sum(years)) %>% 
+    pull(n)
+  
+  {(n_cy/spanned_cy) * 100}
+}
+
+get_coef <- function(iv, results_df = coef_data, type = "both", width = .95) {
+  result_var <- results_df %>% 
+    filter(.width == width) %>% 
+    pull(.variable) %>% 
+    str_subset(iv)
+  
+  if (!type=="both") {
+    res <- results_df %>% 
+      filter(.variable == result_var & .width == width) %>% 
+      pull({{type}})
+  } else {
+    sc <- results_df %>% 
+      filter(.variable == result_var & .width == width) %>% 
+      pull(std_coef)
+    
+    ci <- results_df %>% 
+      filter(.variable == result_var & .width == width) %>% 
+      pull(ci)
+    
+    res <- paste0(sc, " (95% c.i.: ", ci, ")")
+  }
+  
+  return(res)
+}
+
+by2sd <- function(var) {
+  dich <- stats::na.omit(unique(var)) %>% 
+    sort() %>% 
+    identical(c(0, 1))
+  if (dich) 
+    sd <- 1
+  else 
+    sd <- 2 * stats::sd(var, na.rm = TRUE)
+  
+  return(sd)
+}
+
+set.seed(324)
+```
+
+Public attitudes toward gay rights have been changing toward greater support in many countries over the past several decades, and these often-rapid shifts have attracted sustained interest from researchers.
+The resulting scholarship has been hampered, however, by the limited available data on these trends in public opinion.
+Mirroring the coverage of the survey projects on which they were based, these works have either investigated the causes or consequences of dynamics in public opinion over time in only one country or region [see, e.g., @Abou-Chadi2019; @Dotti-Sani2022], on the one hand, or differences in public opinion across a broad cross-regional sample of countries but in just a small number of years, on the other [see, e.g., @Ayoub2017; @Adamczyk2017].
+Indeed, given the severe contraint of data availability on this topic, it is not at all surprising that there are also important contributions, even recently, that are limited in _both_ space _and_ time [see, e.g., @Zhou2020; @Winkler2021; @Paradela-Lopez2023].
+The paucity of comparable data that has shaped this literature undermines our confidence in our understanding not only because the data are scant in general but also because they are biased geographically.
+Naturally, the narrower the evidentiary base upon which conclusions are built, the more susceptible these conclusions will be to collapse [see @King2021, 23].
+This is especially true where, as here, what suitable data exist are geographically concentrated.
+There is much more data and hence research on public opinion regarding gay rights in the countries of Europe and North America than elsewhere [@Adamczyk2019, 410]; this geographic bias makes scope conditions difficult to discern and so potentially leaves even theories that find empirical support less generally applicable than perhaps often assumed [see @Wilson2022, 1037].
+
+To address these issues, this article presents the Support for Gay Rights (SGR) dataset.
+The SGR dataset combines a comprehensive collection of responses to national and cross-national surveys with recent developments in latent-variable modeling of public opinion to provide estimates of public attitudes toward gay rights that are comparable across many countries and over many years.
+These latent-variable estimates perform well in validation tests: they are very strongly correlated with single survey items tapping views on gay rights, and they also relate strongly to other concepts thought causally connected to public opinion on gay rights.
+The SGR dataset provides a much firmer basis for testing the implications of theories by providing many more observations across a wider scope of countries and time than previously available sources.
+We demonstrate its potential in this regard by replicating the foundational but recently questioned finding of @Andersen2008 that more income inequality yields less support.
+We anticipate that the SGR data will become a crucial source for cross-regional, cross-national, and longitudinal research that improves our understanding of the sources and consequences of support for gay rights.
+
+
+# Existing Data and Research on Attitudes Toward Gay Rights {.unlisted .unnumbered}
+
+The SGR dataset aims to address a shortcoming in the available datasets on public opinion regarding gay and lesbian rights: researchers have been forced to choose between studying support in many countries _or_ over many years, but not both.
+Figure\nobreakspace{}\ref{proj_kt_plot} illustrates the trade-off between the breadth of country coverage and the number of years available for each country.
+It plots, for each survey project in the SGR source data described below, the number of countries for which data on attitudes toward gay rights are available against the mean number of years these data are available per country.
+Some survey projects ask more than one question on the topic, but here, only the most frequently asked single question on the topic is shown.
+An 'L' shape is readily evident.
+Many surveys, clustered in the lower left at the bend in the L, ask questions about support for gay rights in only a few different country-year contexts.
+Some though, such as the U.S. General Social Survey (GSS) and the British Social Attitudes (BSA) project in the top left, have fielded such questions repeatedly over many years in a single country, although even these efforts fall short of complete time series.
+Others, including the World Values Survey (WVS) and the Pew Global Attitudes project along the bottom and towards the right, provide information about many countries across one or a few years.
+The European Social Survey (ESS), which surveyed respondents in 39 countries in as many as ten years (mean: 6.6 years) over two decades, provides the most over-time data for the most countries, followed by the AmericasBarometer (AmB; 34 countries, mean years: 5.4).
+No single survey combines broad, cross-regional country coverage with longitudinal time-series data.
+
+```{r proj-kt-plot, fig.cap="Countries and Mean Years Observed in Survey Datasets \\label{proj_kt_plot}", fig.height=4, fig.pos='h', cache=FALSE}
+dcpo_input_raw <- read_csv(here::here("data", "dcpo_input_raw.csv"),
+                                  col_types = "cdcddcd")
+
+proj_kt <- dcpo_input_raw %>% 
+  filter(r == 1) %>% 
+  select(country, year, survey, item) %>% 
+  mutate(proj = str_remove_all(survey, "\\d+") %>% 
+           str_remove_all("_[^,]+") %>% 
+           str_replace_all("\\b([^,]+), \\1", "\\1") %>% 
+           str_replace_all("\\b([^,]+), \\1", "\\1")) %>% 
+  separate(proj, into = paste0("proj", 1:5), fill = "right") %>% 
+  pivot_longer(cols = starts_with("proj"), values_to = "project") %>% 
+  filter(!is.na(project) & !project == "") %>% 
+  select(country, year, project, item) %>% 
+  distinct() %>% 
+  group_by(project, item) %>% 
+  mutate(cy = n_distinct(country, year)) %>% 
+  group_by(project) %>% 
+  arrange(-cy) %>% 
+  filter(cy == max(cy)) %>% 
+  summarize(cy = n_distinct(country, year),
+            k = n_distinct(country),
+            t = cy/k) %>% 
+  group_by(k, t) %>% 
+  mutate(to_jitter = n() > 1) %>% 
+  ungroup() %>% 
+  mutate(proj_name = toupper(project) %>% 
+           str_replace("USGSS", "U.S. GSS") %>% 
+           str_replace("USPEW", "Pew Politics") %>% 
+           str_replace("PEWREL", "Pew Religion") %>% 
+           str_replace("^PEW$", "Pew Global") %>% 
+           str_replace("AMB", "AmB") %>% 
+           str_replace("PGSS", "Polish GSS"))
+
+proj_kt_plot <- ggplot(proj_kt, aes(y = t, x = k)) +
+  geom_point(data = proj_kt %>% filter(!to_jitter),
+             alpha = .3) +
+  geom_point(data = proj_kt %>% filter(to_jitter),
+             alpha = .3,
+             position = position_jitter(width = .25, height = .25)) +
+  ggrepel::geom_text_repel(data = subset(proj_kt, cy > 100 | t > 8 | k > 45),
+                            aes(label = proj_name),
+                            nudge_x = 5) +
+  theme_bw() +
+  scale_x_continuous(breaks=seq(0, 100, 25)) +
+  labs(x = "Countries Observed",
+       y = "Mean Years Observed Per Country Observed",
+       title = "Survey Projects with Questions on\nSupport for Gay Rights")
+
+proj_kt_plot + plot_annotation(caption = str_wrap("Notes: The number of countries and mean years observed are plotted only for the most frequently asked single question on attitudes toward homosexuality in each survey project.", width = 114))
+```
+
+```{r poh-plot, fig.cap="Countries and Mean Years Observed in Prominent Research\\label{poh_plot}", fig.height=5.5, fig.width=7.5, fig.pos='h', cache=FALSE}
+
+cited <- tribble(~citation, ~text_x, ~text_y,
+                 "Clements and Field 2014", 8.8, 42,
+                 "Yang 1997", 4.7, 26,
+                 "Hildebrandt et al. 2019", 72, 0,
+                 "Adamczyk and Pitt 2009", 40, -.5,
+                 "Reynolds 2013", 80.7, 2.9,
+                 "Redman 2018", 65.5, 2.9,
+                 "Hooghe and Meeusen 2013", 37.6, 4.24)
+
+poh <- read_csv(here("data-raw", "wos_poh.csv")) %>% 
+    janitor::clean_names() %>% 
+    mutate(year = publication_year,
+           hits = times_cited_all_databases,
+           last_names = str_remove_all(authors, ", [A-Z]{1,3}") %>% 
+               str_to_title() %>% 
+               str_replace_all(";", ",") %>% 
+               {ifelse(str_count(., ",") > 1,
+                       str_replace(., ",.*", " et al."),
+                       .)} %>% 
+               str_replace(", ([A-Z][a-z]+)$", ", and \\1") %>% 
+               str_replace("^([A-Z][a-z]+(?:-[A-Z][a-z]+)?), and ([A-Z][a-z]+)$", "\\1 and \\2"),
+           citation = paste(last_names, year) %>% 
+               ifelse(. == "Andersen and Fetner 2008" &
+                          !str_detect(source_title, "AMERICAN"),
+                      "Andersen and Fetner 2008a",
+                      .) %>% 
+               ifelse(. == "Lax and Phillips 2009" &
+                          !str_detect(source_title, "JOURNAL"),
+                      "Lax and Phillips 2009a",
+                      .) %>% 
+               ifelse(. == "Brewer 2003" &
+                          !str_detect(source_title, "OPINION"),
+                      "Brewer 2003a",
+                      .),
+           cy = k*t) %>% 
+    group_by(k, t) %>% 
+    mutate(to_jitter = n() > 1) %>% 
+    ungroup() %>% 
+    left_join(cited, by = "citation")
+
+my_palette <- colorRampPalette(brewer.pal(11, "Spectral"))
+color_scale <- scale_color_gradientn(colors = my_palette(max(poh$year) -
+                                                             min(poh$year) + 1),
+                                     limits = c(min(poh$year),
+                                                max(poh$year)),
+                                     name="Publication\nYear")
+fill_scale <- scale_fill_gradientn(colours = my_palette(max(poh$year) -
+                                                            min(poh$year) + 1),
+                                   limits = c(min(poh$year),
+                                              max(poh$year)),
+                                   name="Publication\nYear")
+
+set.seed(324)
+poh_plot <- ggplot(poh, aes(x = k,
+                            y = t,
+                            color = year,
+                            fill = year)) +
+    geom_point(aes(size = hits),
+               data = poh %>% filter(!to_jitter),
+               alpha = .75) +
+    geom_point(aes(size = hits),
+               data = poh %>% filter(to_jitter),
+               alpha = .75,
+               position = position_jitter(width = .25, height = .25)) +
+    geom_text(aes(label = citation,
+                  x = text_x,
+                  y = text_y,
+                  size = 35),
+              data = poh %>% filter(!is.na(text_x)),
+              color = "grey20") +
+    color_scale +
+    fill_scale +
+    theme_bw() +
+    # geom_magnify(from = c(xmin = 0, xmax = 5, ymin = 0, ymax = 5),
+    #           to = c(xmin = 15, xmax = 44, ymin = 10, ymax = 39),
+    #           axes = "xy",
+    #           data = poh) +
+    theme(legend.justification = c(.99,.99), 
+          legend.position = c(.98,.98),
+          legend.box.background = element_rect(color = "grey",
+                                               fill="white")) +
+    scale_size(name = "Citations") +
+    labs(x = "Countries Observed",
+         y = "Mean Years Observed Per Country Observed",
+         title = "Prominent Articles on\nPublic Opinion on Gay Rights") +
+    annotate(geom = "rect", 
+             xmin = 0, xmax = 5, 
+             ymin = 0, ymax = 5,
+            color = "black", 
+            fill = NA,
+            linewidth = .25 ) +
+    geom_segment(aes(x = 0, y = 5, xend = 13, yend = 41),
+                 linetype = "dashed",
+                 linewidth = .25) +
+    geom_segment(aes(x = 5, y = 0, xend = 45, yend = 9),
+                 linetype = "dashed",
+                 linewidth = .25)
+
+set.seed(324)
+zoom_plot <- ggplot(poh, aes(x = k,
+                            y = t,
+                            color = year,
+                            fill = year)) +
+    geom_point(aes(size = hits),
+               data = poh %>% filter(!to_jitter),
+               alpha = .75) +
+    geom_point(aes(size = hits),
+               data = poh %>% filter(to_jitter),
+               alpha = .75,
+               position = position_jitter(width = .25, height = .25)) +
+    geom_text(aes(label = citation,
+                  x = text_x,
+                  y = text_y,
+                  size = 35),
+              data = poh %>% filter(!is.na(text_x)),
+              color = "grey20") +
+    color_scale +
+    fill_scale +
+    theme_bw() +
+    theme(legend.position = "none",
+          plot.background = element_rect(colour = "black",
+                                         fill = "white",
+                                         linewidth =.5)) +
+    coord_cartesian(xlim = c(0, 5), ylim = c(0, 5)) +
+    labs(x = NULL,
+         y = NULL)
+
+poh_plot + 
+    inset_element(zoom_plot, 15/80, 10/40, 44/80, 37/40) +
+    plot_annotation(caption = str_wrap("Notes: Citation counts as reported by the Web of Science on June 21, 2023.  See the online appendix for details on the contruction of this sample of prominent articles.", 
+                                       width = 114))
+```
+
+
+Figure\nobreakspace{}\ref{poh_plot} shows how the available data have influenced scholarship on the topic.
+Using the Web of Science and Google Scholar, we assembled a sample of prominent published articles on public opinion toward gay rights (see the online appendix for details).
+These articles had publication dates as early as `r summary(poh$year)[[1]]` and as late as `r summary(poh$year)[[6]]` (median: `r summary(poh$year)[[3]]`) and were cited in the Web of Science from `r summary(poh$hits)[[1]]` to `r summary(poh$hits)[[6]]` times (median: `r summary(poh$hits)[[3]]`).
+We then examined these articles to find the number of countries and years investigated in each.
+As the zoomed portion of the plot emphasizes, many of these articles might be described as using case-study or small-_n_ research designs.
+Just over a third consider only a single year in a single country; together with works that study one country in just two years they comprise nearly half of our sample.
+
+Among the works that investigate more contexts, the data employed tend to be longitudinal or cross-national, but only very rarely both.
+Roughly a fifth of these articles examine ten or more years of data within a single country.
+@Clements2014, for example, tracks changes in British attitudes in 13 different survey projects conducted in 42 different years; @Yang1997 similarly reports trends in public opinion in the United States drawing on many surveys conducted in 26 different years.
+Research considering data from more than five countries encompass less than a sixth of these articles.
+One recent piece, @Hildebrandt2019, draws on the fifth and sixth waves of the WVS to create a single cross-section of 73 countries and argues that modernization leads to more tolerance and in turn, in democracies, more support for gay rights; the influential work by @Adamczyk2009 similarly employs a single cross-section of the WVS, in its case the fourth wave, to examine how individuals' religiosity and their countries' religious heritages shape their attitudes toward gay rights.
+@Reynolds2013 looks at the most countries of any of these prominent works, 81, combining WVS and Pew Global Attitudes data to obtain 146 observed country-years (mean observed years per country: 1.8) with which to evaluate how attitudes influence policy.
+The article examining the most country-years of public opinion in this sample is @Redman2018, an investigation of policy feedback on public opinion that uses the second through sixth WVS waves to provide a total of 203 country-years in 70 countries, that is, 2.9 observed years per country on average.
+@Hooghe2013, which also studies policy feedback, is the cross-national study with the most longitudinal data in the sample: it employs the first five waves of the ESS to provide a total of 123 country-years across 29 countries for a mean of 4.2 observed years per country.
+Within this sample of prominent works, none of the articles including five or more countries is able to examine public opinion in more than five years in any of the countries included in their analyses.
+
+That these L-shaped distributions in the available datasets and the resulting analyses should limit our confidence in our conclusions should be readily evident.
+The single-country studies that make up the vertical part of the L, even those over many years, leave questions regarding the generalizability of their findings to other parts of the world [see, e.g., @King2021, 210].
+The cross-national analyses on the horizontal, with just one or at most a handful of time points to leverage, on the other hand, often raise concerns that differences across countries are being conflated with over-time causal processes [see, e.g., @Jackman1985, 173-174].
+That a disproportionate share of research on public opinion regarding gay rights and of the available surveys on which this research is based focuses on Europe and North America [see @Adamczyk2019, 410] only compounds these issues.
+As @Wilson2022 [, 1037] points out, such geographic bias makes the scope conditions of even cross-national studies difficult to discern.
+
+A dataset that falls to the upper right of Figure\nobreakspace{}\ref{proj_kt_plot} would address these issues and allow researchers to reach conclusions that are more robust.
+In the next section, we describe the national and cross-national surveys and the latent-variable model we use to this end, along with the resulting SGR dataset.^[\doublespacing
+One antecedent effort to generate latent-variable estimates of public attitudes toward the LGBTQ community is Global Acceptance Index (GAI; @Flores2021).
+The estimates we describe below have several modeling advantages over the GAI: they make use of a model that better fits ordinal survey data [see @Solt2020], they avoid conflating attitudes regarding sexual orientation with those of gender identity [see @Worthen2013], and in many countries they draw on surveys conducted over longer time spans.
+Further, the GAI data do not include a measure of the estimates' uncertainty, which is crucial to include when working with latent variable estimates [see @Tai2024].
+Most importantly for the purposes of our goal of providing data to allow researchers to examine many countries over many years, as @Barrientos2022 [, 199] has already pointed out, the GAI estimates are only available for a single cross-section, making analysis of change over time impossible.]
+
+```{r dcpo_input_raw, eval=FALSE, include=FALSE}
+# set eval to TRUE to run; running time is <5 minutes
+surveys_gm <- read_csv(here::here("data-raw", "surveys_gm.csv"),
+                        col_types = "cccc")
+
+dcpo_input_raw <- DCPOtools::dcpo_setup(vars = surveys_gm,
+                                        datapath = here::here("..",
+                                                              "data", "dcpo_surveys"),
+                                        file = here::here("data",
+                                                          "dcpo_input_raw.csv"))
+```
+
+```{r gm_summary_stats}
+surveys_gm <- read_csv(here::here("data-raw", "surveys_gm.csv"),
+                        col_types = "cccc")
+
+dcpo_input_raw <- read_csv(here::here("data", "dcpo_input_raw.csv"),
+                                  col_types = "cdcddcd")
+
+process_dcpo_input_raw <- function(dcpo_input_raw_df) {
+  dcpo_input_raw_df %>% 
+  with_min_yrs(3) %>% 
+  with_min_cy(5) %>% 
+  group_by(country) %>% 
+  mutate(cc_rank = n()) %>% 
+  ungroup() %>% 
+  arrange(-cc_rank)
+} 
+
+dcpo_input_raw1 <- process_dcpo_input_raw(dcpo_input_raw)
+
+n_surveys <- surveys_gm %>%
+  distinct(survey) %>% 
+  nrow()
+
+n_items <- dcpo_input_raw1 %>%
+  distinct(item) %>% 
+  nrow()
+
+n_countries <- dcpo_input_raw1 %>%
+  distinct(country) %>% 
+  nrow()
+
+n_cy <- dcpo_input_raw1 %>%
+  distinct(country, year) %>% 
+  nrow() %>% 
+  scales::comma()
+
+n_years <- as.integer(summary(dcpo_input_raw1$year)[6]-summary(dcpo_input_raw1$year)[1] + 1)
+
+spanned_cy <- dcpo_input_raw1 %>% 
+  group_by(country) %>% 
+  summarize(years = max(year) - min(year) + 1) %>% 
+  summarize(n = sum(years)) %>% 
+  pull(n) %>% 
+  scales::comma()
+
+total_cy <- {n_countries * n_years} %>% 
+  scales::comma()
+
+year_range <- paste("from",
+                    summary(dcpo_input_raw1$year)[1],
+                    "to",
+                    summary(dcpo_input_raw1$year)[6])
+
+n_cyi <- dcpo_input_raw1 %>% 
+  distinct(country, year, item) %>% 
+  nrow() %>% 
+  scales::comma()
+
+back_to_numeric <- function(string_number) {
+  string_number %>% 
+    str_replace(",", "") %>% 
+    as.numeric()
+}
+
+covered_share_of_spanned <- {back_to_numeric(n_cy)/back_to_numeric(spanned_cy) * 100}
+```
+
+
+# Estimating Support for Gay Rights Across Space and Time {.unlisted .unnumbered}
+
+To generate estimates of support for gay rights cross-nationally and longitudinally that are comparable across space and over time, we first assemble a comprehensive collection of survey questions on the topic.
+The relevant surveys are sparse, providing no relevant data for many countries and years, and incomparable, employing many different survey items, but collectively they have often asked questions about gay and lesbian rights over the past half-century.
+In all, we identified `r n_items` items that were asked in no fewer than five country-years in countries surveyed at least three times; these items were drawn from `r n_surveys` different national and cross-national survey datasets.^[
+The complete list of survey items is included in the online appendix.]
+Together, these items were asked in `r n_countries` different countries in at least three time points over the `r n_years` years `r year_range`, yielding a total of `r n_cyi` country-year-item observations.
+Observations for every year in each country surveyed would total `r total_cy`, and a complete set of country-year-items would include `r {n_countries * n_years * n_items} %>% scales::comma()` observations.
+Viewed from this complete-data perspective, the sparsity of the available source data is readily evident.
+On the other hand, we do have in the source data `r n_cy` country-years for which there is at least _some_ information about the extent of support for gay rights in the population, that is, very nearly `r round(covered_share_of_spanned)`% of the `r spanned_cy` country-years spanned by the data we collected.
+Still, the many different survey items employed render these data incomparable and so difficult to use together.
+
+```{r itemcountry, fig.cap="Countries and Years with the Most Observations in the Source Data \\label{item_country_plots}", fig.height=3.5, fig.pos='h', cache=FALSE}
+items_plot <- dcpo_input_raw1 %>%
+  distinct(country, year, item) %>%
+  count(item) %>%
+  arrange(desc(n)) %>% 
+  head(12) %>% 
+  ggplot(aes(forcats::fct_reorder(item, n, .desc = TRUE), n)) +
+  geom_bar(stat = "identity") +
+  theme_bw() +
+  theme(axis.title.x = element_blank(),
+        axis.text.x  = element_text(angle = 90, vjust = .45, hjust = .95),
+        axis.title.y = element_text(size = 9),
+        plot.title = element_text(hjust = 0.5, size = 11)) +
+  ylab("Country-Years\nObserved") +
+  ggtitle("Items")
+
+just10_cy <- dcpo_input_raw1 %>% filter(item == "just10") %>% distinct(country, year) %>% nrow()
+
+just10_surveys <- dcpo_input_raw1 %>% filter(item == "just10") %>% distinct(survey) %>% pull(survey)
+
+countries_plot <- dcpo_input_raw1 %>%
+  mutate(country = if_else(stringr::str_detect(country, "United"),
+                           stringr::str_replace(country, "((.).*) ((.).*)", "\\2.\\4."),
+                           country)) %>% 
+  distinct(country, year, item) %>% 
+  count(country) %>%
+  arrange(desc(n)) %>% 
+  head(12) %>% 
+  ggplot(aes(forcats::fct_reorder(country, n, .desc = TRUE), n)) +
+  geom_bar(stat = "identity") +
+  theme_bw() +
+  theme(axis.title.x = element_blank(),
+        axis.text.x  = element_text(angle = 90, vjust = .45, hjust = .95),
+        axis.title.y = element_text(size = 9),
+        plot.title = element_text(hjust = 0.5, size = 11)) +
+  ylab("Year-Items\nObserved") +
+  ggtitle("Countries")
+
+cby_plot <- dcpo_input_raw1 %>%
+  mutate(country = if_else(stringr::str_detect(country, "United"),
+                           stringr::str_replace(country, "((.).*) ((.).*)", "\\2.\\4."),
+                           country),
+         country = stringr::str_replace(country, "South", "S.")) %>% 
+  distinct(country, year) %>%
+  count(country) %>% 
+  arrange(desc(n)) %>% 
+  head(12) %>% 
+  ggplot(aes(forcats::fct_reorder(country, n, .desc = TRUE), n)) +
+  geom_bar(stat = "identity") +
+  theme_bw() +
+  theme(axis.title.x = element_blank(),
+        axis.text.x  = element_text(angle = 90, vjust = .45, hjust = .95),
+        axis.title.y = element_text(size = 9),
+        plot.title = element_text(hjust = 0.5, size = 11)) +
+  ylab("Years\nObserved") +
+  ggtitle("Countries")
+
+
+ybc_plot <- dcpo_input_raw1 %>%
+  distinct(country, year) %>%
+  count(year, name = "nn") %>%
+  ggplot(aes(year, nn)) +
+  geom_bar(stat = "identity") +
+  theme_bw() +
+  theme(axis.title.x = element_blank(),
+        # axis.text.x  = element_text(angle = 90, vjust = .45, hjust = .95),
+        axis.title.y = element_text(size = 9),
+        plot.title = element_text(hjust = 0.5, size = 11)) +
+  ylab("Countries\nObserved") +
+  ggtitle("Years")
+
+us_obs <- dcpo_input_raw1 %>% 
+  distinct(country, year, item) %>%
+  count(country) %>%
+  filter(country == "United States") %>%
+  pull(n)
+
+others <- dcpo_input_raw1 %>%
+  distinct(country, year, item) %>%
+  count(country) %>%
+  arrange(desc(n)) %>%
+  slice(2:5) %>%
+  pull(country) %>% 
+  paste(collapse = ", ") %>% 
+  str_replace(", (\\w+)$", ", and \\1") %>% 
+  str_replace("United", "the United")
+
+countries_cp <- dcpo_input_raw1 %>%
+  mutate(country = if_else(stringr::str_detect(country, "United"),
+                           stringr::str_replace(country, "((.).*) ((.).*)", "\\2.\\4."),
+                           country),
+         country = stringr::str_replace(country, "South", "S.")) %>% 
+  distinct(country, year, item) %>%
+  count(country) %>% 
+  arrange(desc(n)) %>% 
+  head(12) %>% 
+  pull(country)
+
+countries_cbyp <- dcpo_input_raw1 %>%
+  mutate(country = if_else(stringr::str_detect(country, "United"),
+                           stringr::str_replace(country, "((.).*) ((.).*)", "\\2.\\4."),
+                           country),
+         country = stringr::str_replace(country, "South", "S.")) %>% 
+  distinct(country, year) %>%
+  count(country) %>% 
+  arrange(desc(n)) %>% 
+  head(12) %>% 
+  pull(country)
+
+adding <- setdiff(countries_cbyp, countries_cp) %>% 
+  knitr::combine_words()
+
+dropping <- setdiff(countries_cp, countries_cbyp) %>% 
+  knitr::combine_words()
+
+y_peak_year <- dcpo_input_raw1 %>%
+  distinct(country, year) %>%
+  count(year, name = "nn") %>% 
+  filter(nn == max(nn)) %>% 
+  pull(year)
+
+y_peak_nn <- dcpo_input_raw1 %>%
+  distinct(country, year) %>%
+  count(year, name = "nn") %>% 
+  filter(nn == max(nn)) %>% 
+  pull(nn)
+
+data_poorest <- dcpo_input_raw1 %>%
+  distinct(country, year, item) %>%
+  count(country) %>%
+  arrange(n) %>%
+  filter(n == 3) %>%
+  pull(country) %>% 
+  knitr::combine_words()
+
+wordify_numeral <- function(x) setNames(c("one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", " seventeen", "eighteen", "nineteen"), 1:19)[x]
+
+n_data_poorest <- {data_poorest %>%
+    str_split(",") %>% 
+    first()} %>% 
+  length() %>% 
+  wordify_numeral()
+
+(countries_plot + cby_plot) / (ybc_plot)
+```
+
+Consider the most frequently asked item in the data we collected, which asks respondents whether they think homosexuality "can always be justified, never be justified, or something in between," using a ten-point scale.
+Employed by the Asia Barometer, the European Values Survey, the Latinobarómetro, and the WVS, this question was asked in a total of `r just10_cy` different country-years.
+Even this question, the _most common_ survey item asked, constitutes only `r {just10_cy*100/(spanned_cy %>% str_replace(",", "") %>% as.numeric())} %>% round()`% of the country-years spanned by our data.
+The available public opinion data on this topic are very sparse as well as incomparable.
+
+The upper left panel of Figure\nobreakspace{}\ref{item_country_plots} shows the dozen countries with the highest count of country-year-item observations.
+The United States, with `r us_obs` observations, is far and away the best represented country in the source data, followed by `r others`.
+Again we see how, as the review in @Adamczyk2019 [, 410] notes, more data has been collected in North America and Europe than in the rest of the world.
+At the other end of the spectrum, `r n_data_poorest` country---`r data_poorest`---has only the minimum three observations required to be included in the source dataset at all.
+The upper right panel shows the twelve countries with the most years observed; this group is similar, but with `r adding` joining the list and `r dropping` dropping off.
+The bottom panel counts the countries observed in each year and reveals just how few relevant survey items were asked before 1990.
+Country coverage reached its peak in `r y_peak_year`, when surveys in `r y_peak_nn` countries included items on attitudes toward the rights of gays and lesbians.
+
+Latent variable models of public opinion drawing on cross-national survey data have attracted considerable attention in recent years [see @Claassen2019; @Caughey2019; @McGann2019; @Kolczynska2020].
+To estimate support for gay rights across countries and over time, we draw on the latest of these methods that is appropriate for data that is both sparse and incomparable, the Dynamic Comparative Public Opinion (DCPO) model [@Solt2020c].
+In brief, the DCPO model is a population-level two-parameter ordinal logistic item response theory (IRT) model with country-specific item-bias terms; for a detailed description, see the online appendix and @Solt2020c [, 3-8].
+Here, we focus on how it deals with the principal issues raised by the survey data described above, incomparability and sparsity.
+
+The DCPO model accounts for the incomparability of different survey questions with two parameters.
+First, it incorporates the _difficulty_ of each question's responses, that is, the amount of support for gay rights that is indicated by a given response. 
+That each response evinces more or less of our latent trait is most easily seen with regard to the ordinal responses to the same question: to strongly agree with the statement "the law should recognise same-sex relationships," evinces more support than responding "agree," which is more tolerant than "neither agree nor disagree," which shows more support than "disagree," and in turn "strongly disagree."
+The same thing is true across questions.
+For example, strongly agreeing with the statement "homosexual couples should be able to adopt children" likely expresses more support than merely responding that same-sex relationships should be not be criminalized.
+Second, the DCPO model accounts for each question's _dispersion_, its noisiness with regard to our latent trait.
+A lower dispersion indicates that changes in responses to the question are more faithfully translated to changes in the underlying support for gay rights.
+These two parameters, difficulty and dispersion, together generate comparable estimates of the latent variable from source data questions that are not directly comparable.
+
+The sparsity in the source data---the interruptions in the time series of each country caused by unobserved country-years, and the fact that even many observed country-years have only one or few observed items---is addressed by the DCPO model using local-level dynamic linear models, also known as random-walk priors.
+This means that, for each country, each year's value of support is modeled as the previous year's estimate plus a random shock.
+These dynamic models smooth the estimates of support for gay rights over time and allow estimation even in years for which little or no survey data is available, albeit at the expense of greater measurement uncertainty.
+
+```{r dcpo_input}
+dcpo_input <- DCPOtools::format_dcpo(dcpo_input_raw1,
+                                     scale_q = "approve4",
+                                     scale_cp = 2)
+save(dcpo_input, file = here::here("data", "dcpo_input.rda"))
+```
+
+```{r dcpo, eval=FALSE, include=FALSE, results=FALSE}
+# set eval to TRUE to run
+iter <- 2000
+ 
+dcpo <- paste0(.libPaths(), "/DCPO/stan/dcpo.stan")[1] |> 
+  cmdstan_model()
+
+dcpo_output <- dcpo$sample(
+   data = dcpo_input[1:13], 
+   max_treedepth = 14,
+   adapt_delta = 0.99,
+   step_size = 0.005,
+   seed = 324, 
+   chains = 4, 
+   parallel_chains = 4,
+   iter_warmup = iter/2,
+   iter_sampling = iter/2,
+   refresh = iter/50
+ )
+
+results_path <- here::here(file.path("data", 
+                                     iter, 
+                                  {str_replace_all(Sys.time(),
+                                                      "[- :]",
+                                                   "") %>%
+                                         str_replace("\\d{2}$",
+                                                     "")}))
+
+dir.create(results_path, 
+           showWarnings = FALSE, 
+           recursive = TRUE)
+
+dcpo_output$save_data_file(dir = results_path,
+                           random = FALSE)
+dcpo_output$save_output_files(dir = results_path,
+                              random = FALSE)
+```
+
+```{r dcpo_results, cache=FALSE, eval=FALSE}
+# set eval to TRUE to run
+if (!exists("results_path")) {
+  latest <- "20240408090820.1753"
+  results_path <- here::here("data", "2000", latest)
+  
+  # Define OSF_PAT in .Renviron: https://docs.ropensci.org/osfr/articles/auth
+  if (!file.exists(file.path(results_path, paste0("dcpo-", latest, "-1.csv")))) {
+    dir.create(results_path, showWarnings = FALSE, recursive = TRUE)
+    osf_retrieve_node("XXXXX") %>% 
+      osf_ls_files() %>% 
+      filter(name == latest) %>% 
+      osf_download(path = here::here("data", "2000"))
+  }
+  
+  dcpo_output <- as_cmdstan_fit(here::here(results_path,
+                                         list.files(results_path, pattern = "csv$")))
+}
+```
+
+```{r dcpo_summary, eval=FALSE}
+load(file = here::here("data", "dcpo_input.rda"))
+theta_summary <- DCPOtools::summarize_dcpo_results(dcpo_input,
+                                                   dcpo_output,
+                                                   "theta")
+
+save(theta_summary, file = here::here("data",
+                                      "theta_summary.rda"))
+```
+
+```{r theta_results, eval=FALSE}
+# set eval to TRUE to run
+theta_results <- extract_dcpo_results(dcpo_input,
+                                      dcpo_output,
+                                      par = "theta")
+
+save(theta_results, file = here::here("data",
+                                      "theta_results.rda"))
+```
+
+```{r load_results}
+load(here::here("data",
+                "theta_summary.rda"))
+
+load(here::here("data",
+                "theta_results.rda"))
+
+res_cy <- nrow(theta_summary) %>% 
+  scales::comma()
+
+res_c <- theta_summary %>% 
+  pull(country) %>% 
+  unique() %>% 
+  length()
+
+res_y <- theta_summary %>% count(country) %>% pull(n)
+```
+
+```{r csplot, fig.cap="SGR Scores, Most Recent Available Year \\label{cs_mry}", fig.height=10, fig.width=8}
+n_panes <- 2
+axis_text_size <- 10
+
+p1_data <- theta_summary %>%
+  group_by(country) %>%
+  top_n(1, year) %>%
+  ungroup() %>%
+  arrange(mean) %>%
+  transmute(country_year = paste0(country, " (", year, ")") %>% 
+              str_replace("’", "'"),
+            estimate = mean,
+            conf.high = q90,
+            conf.low = q10,
+            pane = n_panes - (ntile(mean, n_panes) - 1),
+            ranked = as.factor(ceiling(row_number())))
+
+p_theta <- ggplot(p1_data,
+                  aes(x = estimate, y = ranked)) +
+  geom_segment(aes(x = conf.low, xend = conf.high,
+                   y = ranked, yend = ranked),
+               na.rm = TRUE,
+               alpha = .4) +
+  geom_point(fill = "black", shape = 21, size = .5, na.rm = TRUE) +
+  theme_bw() + theme(legend.position="none",
+                     axis.text.x  = element_text(size = axis_text_size,
+                                                 angle = 90,
+                                                 vjust = .45,
+                                                 hjust = .95),
+                     axis.text.y  = element_text(size = axis_text_size),
+                     axis.title = element_blank(),
+                     strip.background = element_blank(), 
+                     strip.text = element_blank(),
+                     panel.grid.major = element_line(linewidth = .3),
+                     panel.grid.minor = element_line(linewidth = .15)) +
+  scale_y_discrete(breaks = p1_data$ranked, labels=p1_data$country_year) +
+  coord_cartesian(xlim=c(0, 1)) +
+  facet_wrap(vars(pane), scales = "free", nrow = 1)
+
+
+p_theta +
+  plot_annotation(caption = "Note: Gray whiskers represent 80% credible intervals.")
+
+bottom5 <- p1_data %>% 
+  arrange(ranked) %>% 
+  slice(1:5) %>% 
+  pull(country_year) %>% 
+  str_replace(" \\(.*", "") %>% 
+  knitr::combine_words()
+```
+
+We estimated the DCPO model on the source data using the `DCPO` and `cmdstanr` packages for R [@Solt2020a; @Gabry2022], running four chains for 2,000 iterations each and discarding the first half as warmup.
+All $\hat{R}$ diagnostics were below 1.02, which indicates that the model converged.
+
+Despite the potential for divergences between responses to questions on the _morality_ of homosexuality and those that more directly concern what rights are properly accorded lesbian and gay people, as @Adamczyk2019 [, 407] anticipated, "respondents across a range of different countries do not draw major distinctions between these two dimensions": the dispersion parameters indicate that all of the survey items load well on the single latent variable of support for gay rights (see Table A2 in the online appendix).
+The result is estimates for each of the `r res_cy` country-years spanned by the source data of mean support for gay rights, which together comprise the SGR dataset.
+With data on `r res_c` countries for `r min(res_y)` to `r max(res_y)` years---a mean of `r mean(res_y) %>% sprintf("%.1f", .)` years---the SGR dataset is literally off the charts: it falls beyond the bounds of Figure\nobreakspace{}\ref{proj_kt_plot}.
+
+Figure\nobreakspace{}\ref{cs_mry} displays the most recent available SGR score for each of the `r res_c` countries and territories in the dataset.
+Iceland, the Netherlands, Belgium, and the Scandinavian countries are the places where the public is most supportive of gay rights.
+The latest scores for `r bottom5` indicate there is very little support in those countries.
+
+```{r tsplots, fig.cap="Support Over Time Within Selected Countries \\label{ts}", fig.height=3.5}
+countries <- c("Netherlands", "Sweden", "Ireland", "United States",
+               "Argentina", "Czechia", "South Korea", "Poland", 
+               "China", "Ukraine", "Indonesia", "Russia", 
+               "Nigeria", "Jamaica", "Armenia", "Uganda")
+
+countries2 <- countries %>% 
+  str_replace("United States", "U.S.")
+
+c_res <- theta_summary %>% 
+  filter(country %in% countries) %>%
+  mutate(country = factor(str_replace(country, "United States", "U.S.") %>% 
+           factor(levels = countries2)))
+
+ggplot(data = c_res, aes(x = year, y = mean)) +
+  theme_bw() +
+  theme(legend.position = "none") +
+  coord_cartesian(xlim = c(1985, 2020), ylim = c(0, 1)) +
+  labs(x = NULL, y = "SGR Scores") +
+  geom_ribbon(data = c_res, aes(ymin = q10, ymax = q90, linetype=NA), alpha = .25) +
+  geom_line(data = c_res) +
+  facet_wrap(~as_factor(country), nrow = 2) +
+  theme(axis.text.x  = element_text(size=7,
+                                    angle = 90,
+                                    vjust = .45,
+                                    hjust = .95),
+        strip.background = element_rect(fill = "white", colour = "white")) +
+  plot_annotation(caption = "Note: Countries are ordered by their SGR scores in their most recent\navailable year; gray shading represents 80% credible intervals.")
+```
+
+Figure\nobreakspace{}\ref{ts} displays how SGR scores have changed over time in sixteen countries.
+It further underscores what is already evident in Figure\nobreakspace{}\ref{cs_mry}: the cross-regional scope of the SGR dataset allows comparison of countries too often neglected in political science analyses [see @Wilson2022].
+The figure also shows that while public opinion toward gay and lesbian rights has grown rapidly more supportive in some countries, such as Sweden and the United States, attitudes have changed much more gradually over time in others, like Poland and China.
+Support has advanced and retreated somewhat as in Czechia and more completely as in Russia.
+And in countries such as Nigeria and Uganda, the extent of support for gay rights in the public has been steadily scant.
+The breadth of these differences stand as a challenge to our explanations for the causes and consequences of public support for gay rights.
+
+
+# Validating the Support for Gay Rights Scores {.unlisted .unnumbered}
+
+```{r internal_val_dat, include=FALSE}
+internal_tscs_dat <- dcpo_input_raw1 %>% 
+  filter(item == "just10") %>%  
+  mutate(title = "All Country-Years",
+         neg = FALSE)
+
+internal_cs_dat <- dcpo_input_raw1 %>% 
+  filter(survey == "issp2008") %>%  
+  mutate(title = "ISSP 2008: Religion III",
+         neg = FALSE)
+
+internal_ts_dat <- dcpo_input_raw1 %>% 
+  filter(survey == "usgss" & item == "approve4") %>%  
+  mutate(title = "United States",
+         neg = FALSE)
+```
+
+```{r internalval, fig.height=4, fig.width=7.5, fig.cap = "Convergent Validation: Correlations Between SGR Scores and Individual Source-Data Survey Items \\label{internal_val}"}
+internal_tscs_plot <- validation_plot(internal_tscs_dat,
+                                lab_x = .1,
+                                lab_y = 95) +
+  theme_bw() +
+  theme(legend.position="none",
+        axis.text  = element_text(size=8),
+        axis.title = element_text(size=9),
+        plot.title = element_text(hjust = 0.5, size = 9),
+        strip.background = element_blank()) +
+  coord_cartesian(xlim = c(0,1), ylim = c(0,100)) +
+  labs(x = "SGR Score",
+       y = "% Responding Homosexuality Can Be Justified\nMore Often Than Not (6+ on 1-10 Scale)")
+
+internal_cs_plot <- validation_plot(internal_cs_dat,
+                                lab_x = .1,
+                                lab_y = 95) +
+  theme_bw() +
+  theme(legend.position="none",
+        axis.text  = element_text(size=8),
+        axis.title = element_text(size=9),
+        plot.title = element_text(hjust = 0.5, size = 9),
+        # strip.text.x = element_text(size=5),
+        strip.background = element_blank()) +
+  coord_cartesian(xlim = c(0,1), ylim = c(0,100)) +
+  labs(x = "SGR Score",
+       y = "% Considering Same-Sex Sexual Relations\nWrong Only Sometimes or Not at All")
+
+internal_ts_plot <- validation_plot(internal_ts_dat,
+                                    lab_x = 1977,
+                                    lab_y = .95) +
+  theme_bw() +
+  theme(legend.position="none",
+        axis.text  = element_text(size=8),
+        axis.title = element_text(size=9),
+        plot.title = element_text(hjust = 0.5, size = 9),
+        strip.background = element_blank()) +
+  coord_cartesian(ylim = c(0,1)) +
+  labs(x = "Year",
+       y = "Score") +
+  annotate("text", x = 2016, y = .49, size = 2,
+           label = 'U.S. GSS') + # approve4
+  annotate("text", x = 2020, y = .84, size = 2,
+           label = "SGR Score")
+
+internal_tscs_plot + internal_cs_plot + internal_ts_plot  +
+  patchwork::plot_annotation(caption = "Note: Gray whiskers and shading represent 80% credible intervals.")
+```
+
+Before these estimates can be used, however, they must be validated: the mere fact that we can generate estimates for support for gay rights does not automatically mean that they are suitable for analysis.
+As is the case with any other new measure, validation tests of cross-national latent variables are crucially important [see, e.g., @Hu2023].
+Figure\nobreakspace{}\ref{internal_val} and Figure\nobreakspace{}\ref{ext_val1} provide evidence of this measure's validity with tests of convergent validation and construct validation.
+Convergent validation refers to tests of whether a measure is empirically associated with alternative indicators of the same concept [@Adcock2001, 540].
+In Figure\nobreakspace{}\ref{internal_val}, the SGR scores are compared to responses to individual source-data survey items that were used to generate them; this provides an 'internal' convergent validation test [see, e.g., @Caughey2019, 689; @Solt2020c, 10].
+The left panel is a scatterplot of country-years in which the SGR scores are plotted against the percentage of respondents who gave an accepting response to the most commonly asked item in the source data: whether homosexuality can always be justified, scored ten, never be justified, scored zero, or something in between.
+For this plot, responses of six or greater are considered as indicating that respondents consider homosexuality justified more often than not.
+The middle panel shows responses to the question with the most data-rich cross-section, "And what about sexual relations between two adults of the same sex, is it always wrong, almost always wrong, wrong only sometimes, or not wrong at all?" in the International Social Survey Program's 2008 module on Religion, plotting our latent variable of support against the percentage who responded "wrong only sometimes" or "not at all." Finally, in the right panel, the U.S.
+General Social Survey's series on this same item---the longest of any item in any single country in the source data---was used to evaluate how well the SGR scores capture change over time.
+The correlations, estimated taking into account the uncertainty in the measures, are very strong in all three cases.
+
+```{r ext_val1_dat, include=FALSE}
+ext_dat1 <- read_csv(here("data-raw",
+                         "surveys_extval.csv"),
+                     col_types = "cccccc")
+
+ext_issp_tradroles_dat <- ext_dat1 %>%
+  filter(str_detect(survey, "issp")) %>%
+  DCPOtools::dcpo_setup(datapath = here("..",
+                                        "data",
+                                        "dcpo_surveys")) %>%  
+  mutate(title = "ISSP, 8 Surveys",
+         neg = FALSE)
+
+gm_laws0 <- "https://en.wikipedia.org/wiki/Same-sex_marriage" %>% 
+  read_html() %>% 
+  html_table() %>% 
+  first() %>% 
+  select(X1)
+
+gm_laws_dat <- gm_laws0 %>% 
+  filter(str_detect(X1, "^Marriage")) %>% 
+  mutate(X1 = str_replace_all(X1, "(Costa|New|South|United) ", "\\1") %>% 
+           str_replace_all("\\d", "")) %>% 
+  separate_rows(X1, sep="\\s+") %>% 
+  mutate(country = str_replace(X1, "SouthAfrica", "South Africa") %>%
+           countrycode::countrycode(
+             "country.name", 
+             "country.name",
+             warn = FALSE),
+         gm = 1) %>% 
+  filter(!is.na(country)) %>% 
+  select(country, gm) %>%
+  bind_rows(tibble(country = c("Puerto Rico", "Northern Ireland"), gm = 1)) %>% 
+  bind_rows(gm_laws0 %>% 
+              filter(str_detect(X1, "^Civil")) %>% 
+              mutate(X1 = str_replace_all(X1, "(Czech|San|Cayman) ", "\\1") %>% 
+                       str_replace_all("\\d|[*]", "")) %>% 
+              separate_rows(X1, sep="\\s+") %>% 
+              filter(!str_detect(X1, ":|•")) %>% 
+              mutate(country = countrycode::countrycode(X1,
+                                                        "country.name", 
+                                                        "country.name",
+                                                        warn = FALSE),
+                     civ = 1) %>% 
+              filter(!is.na(country)) %>% 
+              select(country, civ)) %>% 
+  distinct(country, .keep_all = TRUE) %>% # only most recent law
+  right_join(theta_summary %>%
+               group_by(country) %>%
+               top_n(1, year) %>%
+               ungroup() %>% 
+               select(country, year, mean),
+               by = "country") %>% 
+  mutate(equality = case_when(!is.na(gm) ~ "marriage\nequality",
+                              !is.na(civ) ~ "civil\nunions",
+                              TRUE ~ "minimal/\nnone") %>% 
+           factor(levels = c("minimal/\nnone",
+                             "civil\nunions",
+                             "marriage\nequality")),
+         title = "Legal Recognition of\nSame-Sex Couples")
+
+gm_laws_cor <- theta_results %>%
+      inner_join(gm_laws_dat %>%
+                   transmute(country,
+                             year,
+                             equality = as.numeric(equality)),
+                 by = c("country", "year")) %>% 
+      select(theta, equality, draw) %>% 
+      nest(data = c(theta, equality)) %>% 
+      mutate(r = lapply(data, function(df) cor(df)[2,1]) %>% 
+               unlist()) %>%
+      select(-data) %>% 
+      summarize(r = paste("R =", sprintf("%.2f", round(mean(r), 2)))) %>% 
+  mutate(equality = "minimal/\nnone" %>% 
+           factor(levels = c("minimal/\nnone", "civil\nunions", "marriage\nequality")),
+         title = "Legal Recognition of\nSame-Sex Couples")
+
+ext_libdem_dat <- vdemdata::vdem %>%
+  transmute(country = countrycode::countrycode(country_name,
+                                            "country.name",
+                                            "country.name"),
+            year = year, 
+            prop = v2x_libdem,
+            se = v2x_libdem_sd, 
+            title = "V-Dem",
+            neg = FALSE) %>% 
+  distinct(country, year, .keep_all = TRUE) %>% 
+  right_join(theta_summary %>%
+                 group_by(country) %>%
+                 top_n(1, year) %>%
+                 ungroup() %>% 
+               select(country, year),
+               by = c("country", "year")) %>% 
+  filter(!is.na(prop))
+```
+
+```{r extval1, fig.cap="Construct Validation: Correlations Between SGR Scores and Support for Gay Rights Survey Items \\label{ext_val1}", fig.height=4, fig.width=7.5}
+ext_issp_tradroles_plot <- validation_plot(ext_issp_tradroles_dat,
+                                    lab_x = .1,
+                                    lab_y = 95) +
+  theme_bw() +
+  theme(legend.position="none",
+        axis.text  = element_text(size=8),
+        axis.title = element_text(size=9),
+        plot.title = element_text(hjust = 0.5, size = 9),
+        strip.background = element_blank()) +
+  coord_cartesian(xlim = c(0,1), ylim = c(0,100)) +
+  labs(x = "SGR Score",
+       y = "% Agreeing 'A husband's job is to earn money;\na wife's job is to look after the home and family'")
+
+ext_gm_laws_plot <- ggplot(gm_laws_dat, aes(x = equality,
+                                        y = mean)) +
+  geom_violin(trim = TRUE, 
+              scale = "count",
+              aes(fill = equality)) +
+  geom_boxplot(width = 0.05, 
+               outlier.shape = 21,
+               outlier.fill = "white",
+               fill = "white",
+               linetype = "dashed") + 
+  geom_boxplot(width = 0.05, 
+               outlier.shape = 21,
+               outlier.fill = "white",
+               fill = "white",
+               aes(xmin = after_stat(lower), 
+                   xmax = after_stat(upper))) +
+  theme_bw() +
+  theme(legend.position = "none",
+        axis.text  = element_text(size = 10),
+        axis.title = element_text(size = 11),
+        plot.title = element_text(hjust = 0.3, size = 9),
+        strip.background = element_blank()) +
+  coord_cartesian(ylim = c(0, 1)) +
+  scale_fill_grey(start = .65, end = .45) +
+  labs(x = "",
+       y = "SGR Score, Most Recent Available Year") +
+  geom_label(data = gm_laws_cor, aes(x = equality,
+                                     y = .95,
+                                     label = r),
+             size = 2) +
+  facet_wrap(~ title, ncol = 4)
+
+ext_libdem_plot <- validation_plot(ext_libdem_dat,
+                                   lab_x = .1,
+                                   lab_y = 95,
+                                   survey = FALSE) + 
+  theme_bw() +
+  theme(legend.position="none",
+        axis.text  = element_text(size=8),
+        axis.title = element_text(size=9),
+        plot.title = element_text(hjust = 0.5, size = 9),
+        strip.background = element_blank()) +
+  coord_cartesian(xlim = c(0,1), ylim = c(0,100)) +
+  labs(x = "SGR Score,\nMost Recent Available Year",
+       y = "Liberal Democracy Index")
+
+ext_issp_tradroles_plot + ext_gm_laws_plot + ext_libdem_plot +
+  plot_annotation(caption = "Note: Gray whiskers represent 80% credible intervals.")
+```
+
+Figure\nobreakspace{}\ref{ext_val1} moves on, then, to construct validation.
+Construct validation refers to demonstrating, for some *other* concept believed causally related to the concept a measure seeks to represent, that the measure being tested is empirically associated with measures of that other concept [@Adcock2001, 542].
+More traditional attitudes toward gender roles are often argued to yield less support for gay rights [see, e.g., @Brown2008].
+The left panel compares traditional gender attitudes, measured as the percentage of those agreeing or strongly agreeing with the statement, "A husband's job is to earn money; a wife's job is to look after the home and family," in eight ISSP surveys (Family and Changing Gender Roles in 1988, 1994, 2002, and 2012; and Religion in 1991, 1998, 2008, and 2018), with the SGR scores.
+Consistent with theory, there is a clear, strong negative relationship between these two measures: when and where publics hold more traditional views of gender roles, they tend also to be less supportive of gay rights.
+
+As a result of policy responsiveness, that is, the influence of public opinion on policy [see, e.g., @Lax2009], and policy feedback, the influence of policy on public opinion [see, e.g., @Abou-Chadi2019; @Earle2021], public support for gay rights is expected to be closely related to policies that recognize same-sex relationships.
+The figure's center panel presents violin plots of the distribution of SGR scores in the most recent available year across three groups of countries: those that currently have no or minimal legal recognition of same-sex relationships, those that recognize civil unions, and those with marriage equality.
+The gray-shaded 'violins' depict mirrored kernal density plots of the observations in each group; their areas are proportional to the number of observations.
+The violins are inset with box-and-whisker plots showing the 25th percentile, median, and 75th percentile as horizontal lines in a box; the dashed vertical whiskers then extend to the farthest observation within 1.5 times the interquartile range, that is, the height of the box; and all observations beyond that distance are shown individually as white circles [see @Tukey1977].
+This relationship is very strong.
+
+A third often theorized relationship is that liberal democracies promote generally more tolerant attitudes that lead to greater support for gay rights [see, e.g., @Adamczyk2017].
+The right panel of Figure\nobreakspace{}\ref{ext_val1} plots the SGR score of the most recent available year for each country against the V-Dem Liberal Democracy Index for that country-year.
+Here, too, the relationship is in the expected direction and strong.
+The evidence of construct validation in Figure\nobreakspace{}\ref{ext_val1}, together with the evidence of convergent validation in Figure\nobreakspace{}\ref{internal_val}, demonstrates the validity of the SGR scores as measures of the public's support for gay rights.
+
+# Testing Theories of Support for Gay Rights: Revisiting 'Economic Inequality and Intolerance' {.unlisted .unnumbered}
+
+To illustrate the utility of the SGR data, we revisit Andersen and Fetner's [-@Andersen2008] foundational work on economic inequality and intolerance.
+That article argues that postmaterialist theory [see, e.g., @Inglehart2005] implies that greater inequality should be expected to yield less tolerant and supportive attitudes toward gay rights: if economic prosperity is what provides societies with the security needed to leave traditional biases behind, then when a society's prosperity (and security) is not broadly shared, more tolerant and supportive attitudes will not be broadly shared either.^[
+\doublespacing An alternate, possibly complementary, theory would be that greater inequality gives wealthier individuals both greater means and enhanced motive to promote religiosity among their fellow citizens [see, e.g., @Solt2011a; @Solt2014b], and more religiosity in turn works to decrease support [see, e.g., @Adamczyk2009]. We leave distinguishing between these two theories to future research.]
+Supporting this view, its analysis found that more economic inequality leads to less positive attitudes toward gay and lesbian people, as measured by the ten-point WVS item on the justifiability of homosexuality mentioned above.
+Despite the article's influence, it was flagged in a recent review of the literature as a study for which "more research is needed to replicate and confirm [its] findings" [@Adamczyk2019, 415].
+Indeed, one recent work finds no support at all for the hypothesized relationship between inequality and attitudes toward gay people [@Zhang2019, 515].
+
+One difference between these two works, @Andersen2008 and @Zhang2019, that is potentially important to their diverging conclusions is the sample employed.
+Both works draw on WVS data, but the group of countries each examines differs in size and in kind.
+Noting the particular importance to democracies of tolerance of social and political difference, @Andersen2008 examined only democratic countries.
+The article's analyses included 35 countries, observed in just one to four years each, for a total of 63 country-years, that is, a mean of 1.8 years observed per country.
+The sample analyzed in @Zhang2019, on the other hand, incorporated a wider range of cases including non-democracies.
+This broader scope---along with the additional WVS survey waves conducted in the time between the two pieces' writing---yielded 88 countries and 214 country-year observations for an increased mean number of years observed of 2.4 per country.
+So although the different conclusion reached in @Zhang2019 [, 517] may, as the piece suggests, reflect the larger sample of countries that study included, it may have also resulted from the inclusion of non-democratic countries, revealing a scope condition to the theory presented in @Andersen2008.
+
+```{r data_combo}
+if (!file.exists(here::here("data", "data_combo.rda"))) {
+  wdi <- WDI::WDI(indicator = "NY.GDP.PCAP.KD") %>% 
+    transmute(country = countrycode(iso3c, 
+                                    "iso3c",
+                                    "country.name",
+                                    warn = FALSE),
+              year,
+              gdppc = NY.GDP.PCAP.KD) %>% 
+    filter(!is.na(country) & !is.na(gdppc))
+  
+  if (!file.exists(here("data-raw",
+                        "swiid9_6",
+                        "swiid9_6_summary.csv"))) {
+    download.file("https://dataverse.harvard.edu/api/access/datafile/7878619", "data-raw/swiid9_6.zip")
+    unzip(here("data-raw", "swiid9_6.zip"), exdir = here("data-raw"))
+    file.remove(here("data-raw", "swiid9_6.zip"))
+  }
+  
+  swiid_summary <- read_csv(here("data-raw",
+                                 "swiid9_6",
+                                 "swiid9_6_summary.csv"),
+                            col_types = "cddddddddd") %>% 
+    mutate(country = countrycode::countrycode(country,
+                                              "country.name",
+                                              "country.name",
+                                              warn = FALSE)) %>% 
+    select(country, year, gini_disp, gini_disp_se)
+  
+  gm_laws <- "https://en.wikipedia.org/wiki/Same-sex_marriage" %>% 
+    read_html() %>% 
+    html_table() %>% 
+    nth(7) %>% 
+    separate_longer_delim(X2, ")") %>% 
+    mutate(place = str_replace(X2, " \\(.*", "") %>% 
+             str_trim(side = "both") %>% 
+             str_replace(" \\[.*", "")) %>% 
+    filter(!str_detect(place,
+                       "(New (Mexi|Bruns|Jers))|Indian|Distr|County|State of")) %>% 
+    mutate(country = if_else(place == "Guerrero", # last Mexican state to recognize
+                             "Mexico",
+                             countrycode(place,
+                                         "country.name",
+                                         "country.name",
+                                         warn = FALSE))) %>% 
+    filter(!is.na(country)) %>% 
+    transmute(year = X1,
+              country,
+              gm = 1)
+  
+  culture <- read_csv(file = here("data-raw", "culture.csv"),
+                      col_types = "cdddddd") %>% 
+    bind_rows(tibble(country = "Côte d’Ivoire",
+                     catholic = 0,
+                     eastern = 0,
+                     orthodox = 0,
+                     protestant = 0,
+                     islamic = 1,
+                     ex_com = 0))
+  
+  data_combo <- theta_summary %>% 
+    left_join(wdi,
+              by = c("country", "year")) %>% 
+    left_join(swiid_summary,
+              by = c("country", "year")) %>% 
+    left_join(culture,
+              by = "country") %>% 
+    drop_na(mean:gini_disp_se) %>% 
+    left_join(gm_laws,
+              by = c("country", "year")) %>% 
+    group_by(country) %>% 
+    fill(gm) %>% 
+    mutate(gm = if_else(is.na(gm), 0, gm), 
+           gm_mean = mean(gm),
+           gm_diff = gm - gm_mean,
+           gini_mean = mean(gini_disp),
+           gini_mean_se = sqrt(sum(gini_disp_se^2))/
+             length(gini_disp),
+           gini_diff = (gini_disp - gini_mean),
+           gini_diff_se = sqrt(gini_disp_se^2 + gini_mean_se^2)/2,
+           gdppc_mean = mean(gdppc/1000),
+           gdppc_diff = gdppc/1000 - gdppc_mean
+    ) %>% 
+    ungroup()
+  
+  save(data_combo, 
+       file = here::here("data", "data_combo.rda"))
+} else {
+  load(file = here::here("data", "data_combo.rda"))
+}
+```
+
+```{r m1_results, include=FALSE}
+if (!file.exists(here::here("data", "m1_results.rda"))) {
+  oecd_democracies <- rvest::session("https://en.wikipedia.org/wiki/OECD") %>% 
+    rvest::html_table() %>%
+    nth(6) %>%
+    mutate(country = countrycode::countrycode(Country,
+                                              "country.name",
+                                              "country.name")) %>% 
+    pull(country) %>% 
+    setdiff(c("Turkey", "Hungary"))
+
+  m1 <- brm(formula = bf(mean*100 | mi(sd*100) ~ 
+                           me(gini_mean, gini_mean_se) +
+                           me(gini_diff, gini_diff_se) +
+                           gdppc_mean + gdppc_diff +
+                           gm_mean + gm_diff +
+                           catholic +
+                           orthodox +
+                           eastern +
+                           ex_com +
+                           (1 | country) + (1 | year)),  
+            data = data_combo %>% 
+              filter(country %in% oecd_democracies),
+            backend = "cmdstanr",
+            warmup = 500, 
+            iter = 1000, 
+            chains = 4, 
+            cores = 4,
+            seed = 324)
+
+    named_vars <- tribble(~var_name, ~`.variable`, ~order,
+                        "Income Inequality, Mean", "bsp_megini_meangini_mean_se", 1,
+                        "Income Inequality, Difference",
+                                                  "bsp_megini_diffgini_diff_se", 2,
+                        "GDPpc, Mean", "b_gdppc_mean", 3,
+                        "GDPpc, Difference", "b_gdppc_diff", 4, 
+                        "Marriage Equality, Mean", "b_gm_mean", 5,
+                        "Marriage Equality, Difference", "b_gm_diff", 6, 
+                        "Catholic", "b_catholic", 7,
+                        "Orthodox", "b_orthodox", 8,
+                        "Eastern", "b_eastern", 9,
+                        "Islamic", "b_islamic", 10,
+                        "Ex-Communist", "b_ex_com", 11)
+      
+  doubled_sd <- m1$data %>% 
+    select(-`mean * 100`, -mean, -sd,
+           -country, -year, -ends_with("_se")) %>% 
+    summarize(across(everything(), by2sd)) %>% 
+    pivot_longer(everything()) %>% 
+    transmute(`.variable` = case_when(name == "gini_mean" ~ 
+                                        "bsp_megini_meangini_mean_se",
+                                      name == "gini_diff" ~
+                                        "bsp_megini_diffgini_diff_se",
+                                      TRUE ~ paste0("b_", name)),
+              sd2 = if_else(`.variable` == "b_gm_diff", 1, value)) %>% 
+    left_join(named_vars, by = join_by(`.variable`))
+  
+  coef_data0 <- m1 %>% 
+    tidybayes::gather_draws(`bs?p?_.*`, regex = TRUE) %>% 
+    filter(!`.variable`=="b_Intercept") %>% 
+    left_join(doubled_sd, by = join_by(.variable)) %>% 
+    arrange(order)
+  
+  cy_summary <- m1$data %>%
+    count(country) %>%
+    pull(n) %>%
+    summary()
+  
+  save(oecd_democracies, doubled_sd, coef_data0, cy_summary, 
+       file = here::here("data", "m1_results.rda"))
+} else {
+  load(file = here::here("data", "m1_results.rda"))
+}
+```
+
+```{r m2_results}
+if (!file.exists(here::here("data", "m2_results.rda"))) {
+  m2 <- brm(formula = bf(mean*100 | mi(sd*100) ~ 
+                           me(gini_mean, gini_mean_se) +
+                           me(gini_diff, gini_diff_se) +
+                           gdppc_mean + gdppc_diff +
+                           gm_mean + gm_diff +
+                           catholic +
+                           orthodox +
+                           eastern +
+                           islamic +
+                           ex_com +
+                           (1 | country) + (1 | year)),  
+            data = data_combo,
+            backend = "cmdstanr",
+            warmup = 500, 
+            iter = 1000, 
+            chains = 4, 
+            cores = 4,
+            seed = 324)
+  
+  doubled_sd_all <- m2$data %>% 
+    select(-`mean * 100`, -mean, -sd,
+           -country, -year, -ends_with("_se")) %>% 
+    summarize(across(everything(), by2sd)) %>% 
+    pivot_longer(everything()) %>% 
+    transmute(`.variable` = case_when(name == "gini_mean" ~ 
+                                        "bsp_megini_meangini_mean_se",
+                                      name == "gini_diff" ~
+                                        "bsp_megini_diffgini_diff_se",
+                                      TRUE ~ paste0("b_", name)),
+              sd2 = if_else(`.variable` == "b_gm_diff", 1, value)) %>% 
+    left_join(named_vars, by = join_by(`.variable`)) %>% 
+    arrange(order)
+  
+  coef_data0_all <- m2 %>% 
+    tidybayes::gather_draws(`bs?p?_.*`, regex = TRUE) %>% 
+    filter(!`.variable`=="b_Intercept") %>% 
+    left_join(doubled_sd_all, by = join_by(.variable))
+  
+  cy_summary_all <- m2$data %>%
+    count(country) %>%
+    pull(n) %>%
+    summary()
+  
+  save(doubled_sd_all, coef_data0_all, cy_summary_all,
+       file = here::here("data", "m2_results.rda"))
+} else {
+  load(file = here::here("data", "m2_results.rda"))
+}  
+```
+
+The SGR data allow us to revisit the @Andersen2008 hypothesis with many, many more observations of economic inequality and attitudes toward gay people from a broader sample of countries than either of these two previous works and also to assess whether the patterns in these views in the advanced democratic countries are distinctively sensitive to income inequality.
+Our sample of democracies includes the 36 democratic countries of the OECD, each observed in 23 (Iceland) to 49 (the United States) consecutive years (mean: `r cy_summary %>% nth(4) %>% round(1)` years, median: `r cy_summary %>% nth(3)` years), a total of `r data_combo %>% filter(country %in% oecd_democracies) %>% nrow()` country-year observations.
+The broader sample of all countries includes `r data_combo %>% distinct(country) %>% nrow()` countries, observed in `r cy_summary_all %>% first()` to `r cy_summary_all %>% last()` consecutive years each, for a total of `r data_combo %>% nrow()` country-year observations.
+That is, the SGR dataset provides a number of country-year observations for our sample of democracies that is some `r {data_combo %>% filter(country %in% oecd_democracies) %>% nrow()/63} %>% round()` times greater than that considered in @Andersen2008, and it gives us a number of country-years in our sample of all countries that is about `r {data_combo %>% nrow()/214} %>% round()` times greater than that in the sample employed in @Zhang2019.
+This much larger evidentiary base provides us with a much firmer basis for drawing conclusions regarding both the theory and its potential scope conditions [see, e.g., @King2021, 23].
+
+The independent variable, economic inequality, is measured using the Gini index of disposable income inequality.
+The Gini index ranges from 0, indicating perfect equality in the distribution, in this case, of income after taxes and government transfers, to 100, indicating a perfectly unequal distribution in which a single household receives all such income.
+The data are drawn from the Standardized World Income Inequality Database [@Solt2020].
+
+We also include the country-year-level and country-level control variables included in the analysis in @Andersen2008.
+Data on GDP per capita (in thousands of constant 2015 U.S. dollars) are provided by the World Bank's World Development Indicators [@World-Bank2023].
+A series of dichotomous country-level variables identify each country's religious heritage---countries are coded as having alternately a Catholic, Orthodox, Eastern, or Islamic heritage, with those with a Protestant heritage treated as the reference category---and countries with a Communist history are also identified with such a variable [see @Inglehart2005].
+Finally, although its presence does not impact the conclusions drawn below, we add a dichotomously-coded variable for the presence of marriage equality, which takes on a value one in country-years where same-sex marriage was legal and zero otherwise (at the time of publication of @Andersen2008, only five countries had legalized same-sex marriage, and the data analyzed in that piece ended before any of those policy adoptions).
+
+@Shor2007 shows that the best way to analyze such pooled time series is by using a Bayesian multilevel model that includes varying intercepts for each country and for each year.
+Varying intercepts for each country account for heteroskedasticity across space due to, e.g., omitted variable bias, while permitting the inclusion of time-invariant predictors such as religious heritage and communist past.
+Varying intercepts for each year take into account 'time shocks' that operate on all countries simultaneously [@Shor2007, 171-172].
+We further employ the 'within-between random effects' specification, meaning each of the time-varying predictors is decomposed into its time-invariant country mean and the time-varying difference between each country-year value and this country mean.
+The time-varying difference variables capture the short-term effects of the predictors, while the time-invariant country-mean variables reflect their---often different---long-run, "historical" effects [@Bell2015, 137].
+This specification has been shown superior for addressing omitted variable bias and endogeneity to fixed effects and other commonly used specifications for time-series cross-sectional data like these [see @Bell2015].
+The measurement uncertainty in the data for both attitudes toward gay and lesbian people and income inequality was incorporated into the analysis as well [see @Tai2024].
+The model was estimated using the `brms` R package [@Burkner2017].
+
+```{r resplot, fig.cap="Predicting Support for Gay Rights \\label{model}", fig.height=6, fig.width=7.5}
+ordered <- doubled_sd_all %>%
+    pull(var_name) %>% 
+    rev()
+
+coef_data <- coef_data0 %>% 
+    mutate(std_coef = round(.value * sd2, 1),
+           term = factor(var_name, levels = ordered)) %>%
+    ggdist::median_qi(std_coef, .width = c(.8, .9, .95)) %>%
+    mutate(ci = paste0(round(.lower, 1), " to ", round(.upper, 1))) %>%
+    left_join(doubled_sd, ., by = join_by(.variable))
+
+coef_data_all <- coef_data0_all %>% 
+    mutate(std_coef = round(.value * sd2, 1),
+           term = factor(var_name, levels = ordered)) %>%
+    ggdist::median_qi(std_coef, .width = c(.8, .9, .95)) %>%
+    mutate(ci = paste0(round(.lower, 1), " to ", round(.upper, 1))) %>%
+    left_join(doubled_sd_all, ., by = join_by(.variable))
+
+coef_data0 %>% 
+    mutate(sample = "oecd") %>% 
+    bind_rows(coef_data0_all %>% mutate(sample = "all")) %>% 
+    mutate(std_coef = round(.value * sd2, 1),
+           term = factor(var_name, levels = ordered)) %>% 
+    ggplot(aes(y = term,
+               x = std_coef,
+               fill = sample,
+               color = sample)) +
+    stat_halfeye(.width = c(.8, .9, .95),
+                 alpha = .3,
+                 point_alpha = 1) +
+    geom_vline(xintercept = 0, linetype = "dashed") +
+    theme_light() +
+    scale_fill_manual(name = NULL,
+                      values = c("red2", "blue"), 
+                      breaks = c("all", "oecd"),
+                      labels = c("All Countries", 
+                                 "OECD Democracies")) +
+    scale_color_manual(name = NULL, 
+                       values = c("red4", "navy"), 
+                       breaks = c("all", "oecd"),
+                       labels = c("All Countries", 
+                                  "OECD Democracies")) +
+    labs(fill = NULL, 
+         color = NULL) +
+    theme(legend.justification=c(1,0),
+          legend.position=c(.99, .01),
+          legend.background = element_blank(),
+          legend.box.background = element_rect(color = "grey80")) +
+    guides(color = guide_legend(reverse = TRUE),
+           fill = guide_legend(reverse = TRUE)) +
+    scale_x_continuous(limits=c(-50, 30)) +
+    xlab(NULL) +
+    ylab(NULL) +
+    plot_annotation(caption = "Notes: Dots indicate posterior means; whiskers, from thickest to thinnest, describe 80%,\n90%, and 95% credible intervals; shading depicts the posterior probability density function.")
+```
+
+The results are presented in Figure\nobreakspace{}\ref{model}.
+Greater income inequality is associated with less support for gay rights, both in the long run and in the short term, in both samples of countries.
+Looking at the 'historical,' long-run effect of income inequality, we see that in the democratic sample, a two-standard deviation increase in a country's mean inequality is associated with `r get_coef("gini_mean", type = "std_coef") %>% str_remove("-")` points less support (95% credible interval: `r get_coef("gini_mean", type = "ci")` points), while across all countries this estimated difference was `r get_coef("gini_mean", results_df = coef_data_all)` points.
+In the short run, a two-standard-deviation year-to-year change was found to decrease support by `r get_coef("gini_diff", type = "std_coef") %>% str_remove("-")` point (95% c.i.:`r get_coef("gini_diff", type = "ci")`) among democracies.
+If anything, the estimated short-run decline was even larger when all countries are considered: `r get_coef("gini_diff", results_df = coef_data_all) %>% str_remove("-")` points.
+Having much more data on attitudes toward gay rights provides strong evidence that income inequality decreases supportive public opinion toward gay and lesbian people and that democracies are not particularly sensitive to this effect.
+
+<!-- Consistent with previous research, these results also support the postmaterialist argument that economic development, measured as GDP per capita, leads to greater tolerance of homosexuality; estimates of both short-run and long-run effects are positive and credibly different from zero (although only at the 90% level for the latter in the sample of rich democracies). -->
+<!-- Adopting a law recognizing same-sex marriages is estimated to immediately increase tolerance by `r get_coef("gm_diff", results_df = coef_data)` in the OECD democracies and `r get_coef("gm_diff", results_df = coef_data_all)` across all countries. -->
+<!-- Not surprisingly, the results also show that countries that recognized marriage equality earlier---that is, countries with higher means on the marriage equality variable---are more tolerant; this finding reflects not only the longer-term influence of policy on tolerance but also the reciprocal effect of tolerance on policy adoption. -->
+
+<!-- The performance of the religious-heritage variables, which measure differences in tolerance in comparison to historically Protestant countries, is more mixed. -->
+<!-- The evidence is weakest that countries with a Confucian or Buddhist ("Eastern") religious heritage are distinctly different; in neither the OECD democracies nor the broader sample do even the 80% credible intervals exclude zero. -->
+<!-- Across all countries, public opinion in those that are historically Catholic is estimated to be more tolerant by `r get_coef("catholic", results_df = coef_data_all, width = .9)` TOL-H points, but across only the democracies of the OECD, this estimate is very nearly zero. -->
+<!-- Countries with an Orthodox heritage are found to be less tolerant of homosexuality, again compared to those with a Protestant heritage, by `r get_coef("orthodox", results_df = coef_data_all)` points across all countries and, with less confidence, by `r get_coef("orthodox", results_df = coef_data, width = .8)` across rich democracies. -->
+<!-- Public opinion in historically Islamic countries is estimated to be `r get_coef("orthodox", results_df = coef_data_all)` points less tolerant than in historically Protestant countries.^[ -->
+<!-- There are no Islamic-heritage countries among the OECD democracies as Turkey is considered a competitive authoritarian regime, and even were it included, the Islamic variable would be colinear with its country intercept in our multilevel model.] -->
+
+
+
+# Conclusion {.unlisted .unnumbered}
+
+The SGR dataset, by combining a comprehensive collection of the available survey data with recent advances in latent variable modeling, provides a new window on public opinion toward gay rights across space and time.
+Until now, scholars interested in how and why public opinion towards gay rights has shifted in recent decades and the ramifications of these shifts have struggled with the limited availability of data.
+Surveys with relevant items are sparse, not asked in all countries every year; incomparable, not asking the same questions; and, compounding these two issues, geographically concentrated.
+As a result, research on the topic has been limited, at best, to longitudinal studies of single countries and regions that may not generalize elsewhere or to cross-sections and small panels that offer little leverage against conflating differences across countries with changes over time.
+Our understanding has consequently suffered.
+The SGR dataset offers a means of overcoming these problems and gaining a better grasp of the causes and consequences of the extent of support for gay rights in publics around the world.
+
+Researchers can access the SGR data in two ways.
+For those interested in using the SGR estimates in statistical analyses, the entire dataset may be downloaded from the Harvard Dataverse.
+And quick comparisons are facilitated by a user-friendly web application on the SGR website that plots support over time for up to four countries.
+Updates to the dataset will be released as new survey data on support for gay rights are made available.
+Current and future versions of the SGR should enable a wave of new research on what factors lead a public to hold greater support for gay rights and how more supportive public views influence other social and political phenomena. 
+
+
+\pagebreak
+
+# References {.unlisted .unnumbered}
+
+::: {#refs-text}
+:::
+
+\pagebreak
+
+```{=tex}
+\renewcommand{\baselinestretch}{1}
+\selectfont
+\maketitle
+\selectfont
+```
+```{=tex}
+\pagenumbering{arabic}
+\renewcommand*{\thepage}{A\arabic{page}}
+```
+```{=tex}
+\setcounter{figure}{0}
+\renewcommand*{\thefigure}{A\arabic{figure}}
+```
+```{=tex}
+\vspace{-.5in}
+\begin{center}
+\begin{Large}
+Appendices
+\end{Large}
+\end{center}
+
+\tableofcontents
+\newpage
+```
+# Appendix A: Sample of Published Articles on Public Opinion and Attitudes Toward Gay Rights
+
+To generate a sample of published articles on public opinion and support for gay rights, we combined results from two searches, the first on the Web of Science and the second on Google Scholar.
+Web of Science topic searches return articles in which the search terms appear in the title or abstract.
+We executed the following search: `TS=("public opinion" AND (homosexual* OR gay OR LGB*))`.
+The fifty most cited empirical research articles returned were retained for our sample.
+Google Scholar, [according to its about page](https://scholar.google.com/intl/en/scholar/about.html), "aims to rank documents the way researchers do, weighing the full text of each document, where it was published, who it was written by, as well as how often and how recently it has been cited in other scholarly literature."
+We searched `"public opinion" homosexuality` and identified the first fifty research articles returned.
+To ensure comparability of citation counts, we collected the Web of Science records for this second group of articles (Google Scholar, because it includes citations in books, white papers, working papers, some journals not in the Web of Science collection, and other sources, tends to report higher---and sometimes _much_ higher---numbers of citations for the same article).
+Then we added the Web of Science records for the Google Scholar results to our original Web of Science sample and dropped all duplicates, yielding a total of `r nrow(poh)` different articles.
+Each of the articles was then consulted to identify its number of countries and mean years observed per country.
+This information is listed in Table A1 below.
+
+\pagebreak
+\noindent Table A1: Prominent Research Articles on Public Opinion Toward Homosexuality
+```{r articles_table}
+poh %>% 
+  arrange(-hits) %>% 
+  transmute(Article = citation,
+            `Countries Observed` = as.character(k),
+            `Mean Years Observed per Country` = as.character(round(t, 1)),
+            `Country-Years Observed` = as.character(round(cy)) %>%
+              str_trim(),
+            `WoS Citations` = as.character(hits)) %>% 
+  modelsummary::datasummary_df(output = "kableExtra",
+                               longtable = TRUE) %>%
+  kableExtra::column_spec(1, width = "14em") %>%
+  kableExtra::column_spec(c(2, 3, 4, 5), width = "6em") %>%
+  kableExtra::kable_styling(font_size = 10) %>%
+  kableExtra::kable_styling(latex_options = c("repeat_header")) %>%
+  kableExtra::kable_styling(latex_options = "striped")
+```
+
+
+\pagebreak
+
+# Appendix B: Survey Items Used to Estimate Support for Gay Rights
+```{=tex}
+\setcounter{page}{8}
+```
+National and cross-national surveys have often included questions tapping attitudes toward homosexuality over the past half century, but the resulting data are both sparse, that is, unavailable for many countries and years, and incomparable, generated by many different survey items.
+In all, I identified `r n_items` such survey items that were asked in no fewer than five country-years in countries surveyed at least three times; these items were drawn from `r n_surveys` different survey datasets.
+These items are listed in the table below, along with the dispersion ($\alpha$) and difficulty ($\beta$) scores estimated for each from the DCPO model.
+Lower values of dispersion indicate questions that better identify publics with a higher level of trust from those with lower.
+Items have one less difficulty score than the number of response categories.
+Survey dataset codes correspond to those used in the `DCPOtools` R package [@Solt2019b]; they appear in decreasing order of country-years contributed.
+
+Together, the survey items in the source data were asked in `r n_countries` different countries in at least two time points over `r n_years` years, `r year_range`, yielding a total of `r n_cyi` country-year-item observations.
+The number of items observed in the source data for each country-year is plotted in Figure\nobreakspace{}\ref{obs_by_cy} below.
+The estimates of support in country-years with more observed items are more precise.
+In country-years with fewer observed items, the estimates rely more heavily on the random-walk prior and are therefore more uncertain, and when there are no observed items, the estimates rely *entirely* on the random-walk prior and so uncertainty increases still further.
+
+\pagebreak
+
+\noindent Table A2: Indicators Used in the Support for Gay Rights Latent Variable Model
+```{r appendix_results, eval=FALSE}
+# set eval to TRUE to run
+alpha_results <- DCPOtools::summarize_dcpo_results(dcpo_input,
+                                        dcpo_output,
+                                        pars = "alpha") %>% 
+  transmute(item = question,
+            dispersion = mean)
+
+beta_results <- DCPOtools::summarize_dcpo_results(dcpo_input,
+                                       dcpo_output,
+                                       "beta") %>% 
+  group_by(question) %>% 
+  summarize(difficulties0 = paste0(sprintf("%.2f", round(mean, 2)),
+                                   collapse = ", ")) %>% 
+  mutate(item = question,
+         cp = if_else(str_detect(item, "threestate"),
+                      2, 
+                      as.numeric(str_extract(item, "\\d+")) - 1),
+         term = str_glue("(( ?-?[0-9].[0-9][0-9]?,?){{{cp}}})"),
+         difficulties = str_extract(difficulties0, 
+                                    term) %>%
+           str_replace(",$", "") %>% 
+           str_trim()) %>% 
+  transmute(item, difficulties)
+
+save(alpha_results,
+     file = here::here("data",
+                       "alpha_results.rda"))
+
+save(beta_results,
+     file = here::here("data",
+                       "beta_results.rda"))
+
+```
+
+
+```{r dcpo_items}
+load(here::here("data",
+                "alpha_results.rda"))
+
+load(here::here("data",
+                "beta_results.rda"))
+
+items_summary <- dcpo_input_raw1 %>%
+  dplyr::select(country, year, item, survey) %>%
+  separate_rows(survey, sep=",\\s+") %>% 
+  distinct() %>%
+  group_by(item) %>% 
+  mutate(survey = str_extract(survey, "^[a-z]*"),
+         all_surveys = paste0(unique(survey), collapse = ", ")) %>% 
+  ungroup() %>% 
+  distinct(country, year, item, .keep_all = TRUE) %>% 
+  group_by(item) %>% 
+  mutate(n_cy = n()) %>% 
+  ungroup() %>%
+  distinct(item, n_cy, all_surveys) %>% 
+  left_join(surveys_gm %>%
+              select(item, question_text, response_categories) %>%
+              distinct(item, .keep_all = TRUE),
+            by = "item") %>% 
+  left_join(alpha_results, by = "item") %>% 
+  left_join(beta_results, by = "item") %>% 
+  arrange(-n_cy)
+```
+
+```{r dcpo_items_table}
+items_summary %>% 
+  transmute(`Survey\nItem\nCode` = item,
+            `Country-Years` = as.character(n_cy),
+            `Question Text` = str_replace(question_text, "([^(]*)\\(.*", "\\1"),
+            `Response Categories` = response_categories,
+            `Dispersion` = dispersion,
+            `Difficulties`= difficulties,
+            `Survey Dataset Codes` = all_surveys) %>% 
+  modelsummary::datasummary_df(output = "kableExtra",
+                               longtable = TRUE) %>% 
+  kableExtra::column_spec(1, width = "7em") %>%
+  kableExtra::column_spec(2, width = "4em") %>%
+  kableExtra::column_spec(3, width = "13em") %>%
+  kableExtra::column_spec(4, width = "16em") %>%
+  kableExtra::column_spec(5, width = "4em") %>%
+  kableExtra::column_spec(c(6, 7), width = "8em") %>% 
+  kableExtra::kable_styling(font_size = 7) %>%
+  kableExtra::kable_styling(latex_options = c("repeat_header")) %>%
+  kableExtra::kable_styling(latex_options = "striped")
+```
+
+```{r obs, fig.height = 9, fig.width = 6.5, fig.cap = "Source Data Observations by Country and Year \\label{obs_by_cy}"}
+dcpo_input_raw1 %>% 
+  mutate(country = str_replace(country, "’", "'")) %>% 
+  distinct(country, year, item, cc_rank) %>% 
+  group_by(country, year) %>% 
+  summarize(n = n(),
+            cc_rank = mean(cc_rank)) %>% 
+  ungroup() %>% 
+  distinct() %>% 
+  ggplot(aes(x = year, 
+             y = forcats::fct_reorder(country, cc_rank),
+             fill = n)) + 
+  geom_tile() +
+  scale_fill_viridis_b(option = "B",
+                       direction = -1,
+                       show.limits = TRUE,
+                       n.breaks = 7,
+                       name = "Observations") +
+  labs(x = NULL, y = NULL) +
+  scale_x_continuous(breaks=seq(1972, 2024, 4)) +
+  scale_y_discrete(position = "right") +
+  theme(legend.justification=c(0, 0), 
+        legend.position=c(0.01, 0.01),
+        axis.text.y  = element_text(size = 7)) 
+```
+
+\pagebreak
+# Appendix C: The DCPO Model
+
+Research on latent variable models of public opinion based on cross-national survey data has enjoyed explosive growth in recent years [see @Claassen2019; @Caughey2019; @McGann2019; @Kolczynska2020].
+To estimate support for gay rights across countries and over time, we draw on the latest of these methods that is appropriate for data that is not only incomparable but also sparse, the Dynamic Comparative Public Opinion (DCPO) model presented in @Solt2020c.^[
+@Solt2020c demonstrates that the DCPO model provides a better fit to survey data than the models put forward by @Claassen2019 or @Caughey2019.
+The @McGann2019 model depends on dense survey data unlike the sparse data on support for gay rights described in the preceding section.
+@Kolczynska2020 is the very most recent of the five works and builds on each of the others, but the MRP approach developed in that piece is suitable not only when the available survey data are dense but also when ancillary data on population characteristics are available, so it is similarly inappropriate to this application.]
+The DCPO model is a population-level two-parameter ordinal logistic item response theory (IRT) model with country-specific item-bias terms.
+
+DCPO models the total number of survey responses expressing at least as much support for gay rights as response category $r$ to each question $q$ in country $k$ at time $t$, $y_{ktqr}$, out of the total number of respondents surveyed, $n_{ktqr}$, using the beta-binomial distribution:
+
+\begin{equation}
+a_{ktqr} = \phi\eta_{ktqr} \label{eq:bb_a}
+\end{equation}
+\begin{equation}
+b_{ktqr} = \phi(1 - \eta_{ktqr}) \label{eq:bb_b}
+\end{equation}
+\begin{equation}
+y_{ktqr} \sim \textrm{BetaBinomial}(n_{ktqr}, a_{ktqr}, b_{ktqr}) \label{eq:betabinomial}
+\end{equation}
+
+where $\phi$ represents an overall dispersion parameter to account for additional sources of survey error beyond sampling error and $\eta_{ktqr}$ is the expected probability that a random person in country $k$ at time $t$ answers question $q$ with a response at least as positive as response $r$.^[
+The ordinal responses to question $q$ are coded to range from 1 (expressing the least support for gay rights) to $R$ (expressing the most support for gay rights), and $r$ takes on all values greater than 1 and less than or equal to $R$.]
+
+This expected probability, $\eta_{ktqr}$, is in turn estimated as follows:
+
+\begin{equation}
+\eta_{ktqr} = \textrm{logit}^{-1}(\frac{\bar{\theta'}_{kt} - (\beta_{qr} + \delta_{kq})}{\sqrt{\alpha_{q}^2 + (1.7*\sigma_{kt})^2}}) \label{eq:dcpo}
+\end{equation}
+
+In this equation, $\beta_{qr}$ represents the difficulty of response $r$ to question $q$, that is, the degree of support the response expresses.  The $\delta_{kq}$ term represents country-specific item bias: the extent to which all responses to a particular question $q$ may be more (or less) difficult in a given country $k$ due to translation issues, cultural differences in response styles, or other idiosyncrasies that render the same survey item not equivalent across countries.^[
+Estimating $\delta_{kq}$ requires repeated administrations of question $q$ in country $k$, so
+when responses to question $q$ are observed in country $k$ in only a single year, the DCPO model sets $\delta_{kq}$ to zero by assumption, increasing the error of the model by any country-item bias that is present.
+Questions that are asked repeatedly over time in only a single country pose no risk of country-specific item bias, so $\delta_{kq}$ in such cases are also set to zero.]
+The dispersion of question $q$, its noisiness in relation to our latent variable, is $\alpha_{q}$. The mean and standard deviation of the unbounded latent trait of support for gay rights are $\bar{\theta'}_{kt}$ and $\sigma_{kt}$, respectively.
+
+Random-walk priors are used to account for the dynamics in $\bar{\theta'}_{kt}$ and $\sigma_{kt}$, and weakly informative priors are placed on the other parameters.^[
+The dispersion parameters $\alpha_{q}$ are drawn from standard half-normal prior distributions, that is, the positive half of N(0, 1).
+The first difficulty parameters for each question, $\beta_{q1}$, are drawn from standard normal prior distributions, and the differences between $\beta$s for each $r$ for the same question $q$ are drawn from standard half-normal prior distributions.
+The item-bias parameters $\delta_{kq}$ receive normally-distributed hierarchical priors with mean 0 and standard deviations drawn from standard half-normal prior distributions.
+The initial value of the mean unbounded latent trait for each country, $\bar{\theta'}_{k1}$, is assigned a standard normal prior, as are the transition variances $\sigma_{\bar{\theta'}}^2$ and $\sigma_{\sigma}^2$; the initial value of the standard deviation of the unbounded latent trait for each country, $\sigma_{k1}$, is drawn from a standard lognormal prior distribution.
+The overall dispersion, $\phi$, receives a somewhat more informative prior drawn from a gamma(4, 0.1) distribution that yields values that are well scaled for that parameter.]
+The dispersion parameters $\alpha_q$ are constrained to be positive and all survey responses are coded with high values indicating more support to fix direction.
+The difficulty $\beta$ of "not so bad" (on a four-point scale ranging from "very bad" through "fairly bad" and "not so bad" to "not at all bad") of reactions to "a sexual relationship between two adults of the same sex" is set to 1 to identify location, and for each question $q$ the difficulties for increasing response categories $r$ are constrained to be increasing.
+The sum of $\delta_{kq}$ across all countries $k$ is set to zero for each question $q$:
+
+\begin{equation}
+\sum_{k = 1}^K \delta_{kq} = 0
+\end{equation}
+
+Finally, the logistic function is used to transform $\bar{\theta'}_{kt}$ to the unit interval and so give the bounded mean of latent support for gay rights, $\bar{\theta}_{kt}$, which is our parameter of interest here [see @Solt2020c, 3-8].
+
+\pagebreak
+# Appendix References {.unnumbered}
+::: {#refs-app}
+:::
