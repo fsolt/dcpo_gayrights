@@ -36,7 +36,11 @@ Below we summarize our revisions and explanations on how we reflect the valuable
 - **Defining the purpose of the manuscript.**
     Revewer 2 points that our manuscript should define the purpose of paper. 
     Given that clarifying the main purpose is a crucial part of a manuscript, we revise our manuscript in order to emphasize the purpose of this paper.
-    In the revised manuscript,
+
+    In the revised manuscript, we clarify that our article aims to overcome limitations of previous studies on public opinion for gay rights by introducing the SGR dataset and to facilitate studies on public opinion about gay rights. 
+    The explanation is made in the very first paragraph. 
+    Moreover, we modify some sentences throughout the manuscript in order to re-emphasize the purpose our paper. 
+    For instance, we reiterate this article tries to overcome previous limitations concerning data about public opinion in the concluding section.
 
 - **Clarifying our focus on “support for gay rights” rather than others.**
     Reviewer 2 mentioned that, "Why are gays rights used and not another concept?".
@@ -56,7 +60,9 @@ Below we summarize our revisions and explanations on how we reflect the valuable
     Moreover, the reviewer suggests that explanations on potential limitations of our dataset should be provided.
     We are definitely on the line with the comments.
 
-    We revised our manuscript by
+    We revised our manuscript by mentioning the potential limitations of our dataset. 
+    We note that the coverage of our SGR dataset depends on the availability of the source of survey data. 
+    Furthermore, we point that researchers should pay attention to the uncertainty in the SGR dataset and should take it into account.
 
 We are appreciated for all comments and advice from both reviewers.
 We believe that our revised manuscript is now much nuanced compared to the previous version.
