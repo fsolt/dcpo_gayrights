@@ -344,6 +344,7 @@ Public attitudes toward gay rights have been changing toward greater support in 
 The resulting scholarship has been hampered, however, by the limited available data on these trends in public opinion.
 Mirroring the coverage of the survey projects on which they were based, these works have either investigated the causes or consequences of dynamics in public opinion over time in only one country or region [see, e.g., @Abou-Chadi2019; @Dotti-Sani2022], on the one hand, or differences in public opinion across a broad cross-regional sample of countries but in just a small number of years, on the other [see, e.g., @Ayoub2017; @Adamczyk2017].
 Indeed, given the severe contraint of data availability on this topic, it is not at all surprising that there are also important contributions, even recently, that are limited in _both_ space _and_ time [see, e.g., @Zhou2020; @Winkler2021; @Paradela-Lopez2023].
+This article aims to overcome such limitations and to facilitate studies on public opinion toward gay rights by introducing the Support for Gay Rights (SGR) dataset.
 The paucity of comparable data that has shaped this literature undermines our confidence in our understanding not only because the data are scant in general but also because they are biased geographically.
 Naturally, the narrower the evidentiary base upon which conclusions are built, the more susceptible these conclusions will be to collapse [see @King2021, 23].
 This is especially true where, as here, what suitable data exist are geographically concentrated.
@@ -353,7 +354,7 @@ To address these issues, this article presents the Support for Gay Rights (SGR) 
 The SGR dataset combines a comprehensive collection of responses to national and cross-national surveys with recent developments in latent-variable modeling of public opinion to provide estimates of public attitudes toward gay rights that are comparable across many countries and over many years.
 These latent-variable estimates perform well in validation tests: they are very strongly correlated with single survey items tapping views on gay rights, and they also relate strongly to other concepts thought causally connected to public opinion on gay rights.
 The SGR dataset provides a much firmer basis for testing the implications of theories by providing many more observations across a wider scope of countries and time than previously available sources.
-We demonstrate its potential in this regard by replicating the foundational but recently questioned finding of @Andersen2008 that more income inequality yields less support.
+With our explanation on the process of constructing SGR dataset, we demonstrate its potential in this regard by replicating the foundational but recently questioned finding of @Andersen2008 that more income inequality yields less support.
 We anticipate that the SGR data will become a crucial source for cross-regional, cross-national, and longitudinal research that improves our understanding of the sources and consequences of support for gay rights.
 
 
@@ -1656,6 +1657,7 @@ Having much more data on attitudes toward gay rights provides strong evidence th
 
 # Conclusion {.unlisted .unnumbered}
 
+This article tries to overcome previous limitations concerning data about public opinion toward gay rights by presenting the SGR dataset. 
 The SGR dataset, by combining a comprehensive collection of the available survey data with recent advances in latent variable modeling, provides a new window on public opinion toward gay rights across space and time.
 Until now, scholars interested in how and why public opinion towards gay rights has shifted in recent decades and the ramifications of these shifts have struggled with the limited availability of data.
 Surveys with relevant items are sparse, not asked in all countries every year; incomparable, not asking the same questions; and, compounding these two issues, geographically concentrated.
@@ -1664,6 +1666,10 @@ Our understanding has consequently suffered.
 The SGR dataset offers a means of overcoming these problems and gaining a better grasp of the causes and consequences of the extent of support for gay rights in publics around the world.
 
 Researchers can access the SGR data in two ways.
+It does not mean that the SGR dataset is flawless.
+Even though the SGR dataset improves data availability with a wide coverage regarding both year and number of countries, the data coverage of each country slightly differs according to the source of survey data.
+In addition, researchers attempting to use the SGR data should note that there are quantified uncertainties in the estimates.
+Thus, it is essential to incorporate the uncertainty into account.
 For those interested in using the SGR estimates in statistical analyses, the entire dataset may be downloaded from the Harvard Dataverse.
 And quick comparisons are facilitated by a user-friendly web application on the SGR website that plots support over time for up to four countries.
 Updates to the dataset will be released as new survey data on support for gay rights are made available.
