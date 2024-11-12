@@ -586,7 +586,7 @@ As @Wilson2022 [, 1037] points out, such geographic bias makes the scope conditi
 A dataset that falls to the upper right of Figure\nobreakspace{}\ref{proj_kt_plot} would address these issues and allow researchers to reach conclusions that are more robust.
 In the next section, we describe the national and cross-national surveys and the latent-variable model we use to this end, along with the resulting SGR dataset.^[\doublespacing
 One antecedent effort to generate latent-variable estimates of public attitudes toward the LGBTQ community is Global Acceptance Index (GAI; @Flores2021).
-The estimates we describe below have several modeling advantages over the GAI: they make use of a model that better fits ordinal survey data [see @Solt2020], they avoid conflating attitudes regarding sexual orientation with those of gender identity [see @Worthen2013], and in many countries they draw on surveys conducted over longer time spans.
+The estimates we describe below have several modeling advantages over the GAI: they make use of a model that better fits ordinal survey data [see @Solt2020c], they avoid conflating attitudes regarding sexual orientation with those of gender identity [see @Worthen2013], and in many countries they draw on surveys conducted over longer time spans.
 Further, the GAI data do not include a measure of the estimates' uncertainty, which is crucial to include when working with latent variable estimates [see @Tai2024].
 Most importantly for the purposes of our goal of providing data to allow researchers to examine many countries over many years, as @Barrientos2022 [, 199] has already pointed out, the GAI estimates are only available for a single cross-section, making analysis of change over time impossible.]
 
