@@ -28,10 +28,13 @@ We first want to thank the Editor and the reviewers for their helpful comments a
 We revised our original manuscript according to comments from both Reviewer 1 and Reviewer 2.
 Below we summarize our revisions and explanations on how we reflect the valuable comments in our revised manuscript:
 
-- **Meaningful explanations rather than the statistical formula.** 
+- **Further Explanations on Figure 4.** 
     Reviewer 1 recommends us to provide more meaningful explanations rather than just the statistical formula. 
     We fully agree with the importance of the explanations.
-    In the current version of our manuscript,
+
+    In the current version of our manuscript, we include further explanation about the reasons why some countries which do not recognize same-sex marriage such as Japan and India rank higher than other countries including Taiwan legalizing same-sex marriage. 
+    It is because the SGR index is to measure public opinion toward gay rights rather than the existence of laws for same-sex marriage. 
+    In other words, the aggregated public opinion index toward gay rights might differ from the law itself.
 
 - **Defining the purpose of the manuscript.**
     Revewer 2 points that our manuscript should define the purpose of paper. 
@@ -39,7 +42,7 @@ Below we summarize our revisions and explanations on how we reflect the valuable
 
     In the revised manuscript, we clarify that our article aims to overcome limitations of previous studies on public opinion for gay rights by introducing the SGR dataset and to facilitate studies on public opinion about gay rights. 
     The explanation is made in the very first paragraph. 
-    Moreover, we modify some sentences throughout the manuscript in order to re-emphasize the purpose our paper. 
+    Moreover, we modify some sentences throughout the manuscript in order to re-emphasize the purpose of our paper. 
     For instance, we reiterate this article tries to overcome previous limitations concerning data about public opinion in the concluding section.
 
 - **Clarifying our focus on “support for gay rights” rather than others.**
@@ -49,24 +52,29 @@ Below we summarize our revisions and explanations on how we reflect the valuable
     According to the valuable comment, we revise our manuscript by 
     
 - **Detailed explanation on how we select indicators used in the Support for Gay Rights Latent Variable Model.**
-    Reviewer 2 also gives us an advice that it might be better for us to provide detailed explanations on the selection of indicators used in our Latent Variable Model.
+    Reviewer 2 also gives us advice that it might be better for us to provide detailed explanations on the selection of indicators used in our Latent Variable Model.
     We cannot agree more given that the indicators are the core part of constructing our model and index.
-    Thus, we revise our manuscript to clearly deliver the information on the indicators.
+    Thus, we revised our manuscript to clearly deliver the information on the indicators.
 
-    In the revised mansucrtip,
+    In the revised manuscript,
 
 - **Differences of our dataset compared to GAI and Limitations of our dataset.**
-    Reviewer 2 also recommends that we shoud differentiate our dataset from already existing dataset such as GAI.
+    Reviewer 2 also recommends that we should differentiate our dataset from already existing dataset such as GAI.
     Moreover, the reviewer suggests that explanations on potential limitations of our dataset should be provided.
     We are definitely on the line with the comments.
 
-    We revised our manuscript by mentioning the potential limitations of our dataset. 
-    We note that the coverage of our SGR dataset depends on the availability of the source of survey data. 
-    Furthermore, we point that researchers should pay attention to the uncertainty in the SGR dataset and should take it into account.
+    First, we moved explanation concerning GAI and its limitations to the main text. 
+    As explained in the revised manuscript, the GAI estimates are only available for a single cross-section, making analysis of change over time impossible. 
+    Thus, even though the GAI is also based on the latent-variable estimation, it does not provide opportunities for scholars to examine the changes in the public attitude toward gay rights. 
+    The SGR dataset overcomes this limitation by providing estimates of support for gay rights both cross-nationally and longitudinally.
 
-We are appreciated for all comments and advice from both reviewers.
-We believe that our revised manuscript is now much nuanced compared to the previous version.
-Again, we thank for the valuable and warmful comments and the opportunity to revise our manuscript.
+    We also revised our manuscript by mentioning the potential limitations of our dataset. 
+    We note that the coverage of our SGR dataset depends on the availability of the source of survey data. 
+    Furthermore, we point out that researchers should pay attention to the uncertainty in the SGR dataset and should take it into account.
+
+We appreciate for all comments and advice from both reviewers.
+We believe that our revised manuscript is now much more nuanced compared to the previous version.
+Again, we thank the reviewers for the valuable and warmful comments and the opportunity to revise our manuscript.
 
 
 # Reference {-}
