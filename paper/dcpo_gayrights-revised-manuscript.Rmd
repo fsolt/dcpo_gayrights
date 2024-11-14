@@ -675,7 +675,11 @@ covered_share_of_spanned <- {back_to_numeric(n_cy)/back_to_numeric(spanned_cy) *
 
 To generate estimates of support for gay rights cross-nationally and longitudinally that are comparable across space and over time, we first assemble a comprehensive collection of survey questions on the topic.
 Specifically, we collected four groups of questions: questions about public approval and acceptance of homosexuals and homosexuality, questions exploring public support for the legalization of same-sex marriage, questions regarding public opinion on the rights of gay, lesbian, and bisexual individuals, including equal rights to heterosexual individuals, and questions about attitudes for homosexual individuals’ social and political roles, for instance, running for public office.
-The exact questions and their detailed wordings are provided in the online appendix. 
+We employed a cross-referencing process to ensure consistency in question selection.
+After one author initially selected and coded the relevant questions, the other author reviewed them to confirm agreement on their inclusion in the raw data. 
+In cases where there were differing opinions, the authors discussed the discrepancies as a group and updated the question selection accordingly.
+Ultimately, we incorporated only those questions for which consensus was reached after discussion.
+The exact questions and their detailed wordings are provided in the online appendix.
 
 The relevant surveys are sparse, providing no relevant data for many countries and years, and incomparable, employing many different survey items, but collectively they have often asked questions about gay and lesbian rights over the past half-century.
 In all, we identified `r n_items` items that were asked in no fewer than five country-years in countries surveyed at least three times; these items were drawn from `r n_surveys` different national and cross-national survey datasets.^[
