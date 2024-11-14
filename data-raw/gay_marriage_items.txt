@@ -1,138 +1,4 @@
-*justified 
-	just10
-		X WVS			f118
-		X WVS6			V203
-		X EVS			f118
-		X AsiaBarometer		
-		X Latinobarómetro
-
-	just3
-		Please tell me for each of the following statements whether you think it can always be justified, sometimes be justified, or never be justified.
-		X pewrel2006_10nat
-
-*don't like as neighbors
-	neigh2
-		X WVS			a124_09
-		X WVS6			V40
-		X EVS			a124_09
-		CE_post_1990		v87
-		X AmB			dis35a
-
-	neigh10	
-		X EB691-08
-
-*adopt; raise children
-	adopt5
-		X EVS			d026_01
-	adopt4 (throughout Europe)
-		X EB661-06		v325
-	adopt2 
-		X EB39-93		v639
-		X BSA2012		GayAdopt
-	ff5
-		X ISSP Family 2012	V19
-	mm5
-		X ISSP Family 2012	V20
-	ff2
-		BSA2007			FGayAdopt
-	mm2
-		BSA2007			MGayAdopt2
-
-*homosexual couples - as good parents as other couples
-	parent5
-		evs2017	 		v82
-		wvs7            q36
-
-
-*sex between two adults of same sex wrong
-	approve4
-		X ISSP Religion 1991	v11
-		X ISSP Family 1994	v48
-		X ISSP Religion 1998	v9
-		X ISSP Religion 2008	v9
-		X ISSP Religion 2018	v4
-		X ISSP Religion 2018ext	v4
-		X ISSP Religion 2018tn	v4
-		X ISSP Religion 2018ve	v4
-		X Japan GSS 2000-2003	Q4HOMSEA
-		X Poland GSS 1992-2010	HOMOSEX
-		X US GSS 1972-2010	HOMOSEX
-		X German GSS 90, 00, 02	v528
-		Australia NSSS 84,87, X 93	HOMOSEX
-		X EB83_4 2015		QC16_2
-		isshr2006		
-	
-	approve5
-		X British Soc Attitudes	HOMOSEX
-		BHPS 98,00,02,04,06,08	_OPFAMR (HJLNPR)
-		BEPS 92,94,95,96,97	gaysexXX [survey in wide format]
-				
-*morally acceptable
-Next, I’m going to read some behaviors.  For each, please tell me whether you personally believe that it is morally acceptable, morally wrong, or is it not a moral issue? Homosexual behavior
-	approve3
-		cmlic1980val		iv29
-		X pewrel2009_afr	Q85I
-		X pewrel2014_latam	Q69h
-		X pewrel2015_ee		Q71h
-		X pewrel2016_us		moralissuecf2_w20
-		
-
-
-*people just like others
-	accept5
-		X EB21-84		v128
-	accept4
-		X CEE			v233
-
-*And which one of these comes closer to your opinion, number 1 or number 2? \
-1 Number 1 – Homosexuality is a way of life that should be accepted by society
-2 Number 2 – Homosexuality is a way of life that should not be accepted by society
-	accept2
-		X pew2002			q40
-		X pew2007			q50
-		X pew2011			q18
-		X pew2013			q27
-	
-		X uspew
-
-		X pewrel2015_ee			q64
-
-	accept4a
-	uspew1999_typo	accept4a	q38u	c(4:1)	c(5, 9)
-	uspew2000_typo	accept4a	q42u	c(4:1)	c(5, 9)
-	uspew2003_06nii	accept4a	q6h	c(4:1)	c(5, 9)
-	uspew2004_typo	accept4a	q20u	c(4:1)	c(5, 9)
-	uspew2011_typo	accept4a	q37u	c(4:1)	c(5, 9)
-	uspew2014_rls	accept4a	qb2a	c(4:1)	c(5, 9)
-
-*Do you feel that homosexuality should be considered as an accepted alternative lifestyle or not?
-
-	accept2a
-		gallup
-		
-*Do you feel that homosexuality should be considered as an acceptable alternative life-style or not?
-	accept2a
-		gallup1982_06
-
-
-*gays and lesbians s/b free to live life as they wish
-	free5
-		X ESS1-5		freehms
-		X ESS6			freehms
-
-*public office
-	run10
-		X AmB			d5
-	highest10 
-		X EB691-08
-		X EB712-09
-		X EB774-12
-		X EB834-15
-
-	And do you approve or disapprove of homosexuals holding responsible positions in public life? 4pt
-		AES 1998		g16
-
-*marriage
+*I-Marriage
 	marry4e (throughout Europe)
 		X EB66.1-06		v324
 		X EB83.4-15		qc16_2
@@ -162,6 +28,140 @@ Next, I’m going to read some behaviors.  For each, please tell me whether you 
 		X Americasbarometer	d6
 	marry3/marry7
 		ANES Panel 2008-2009	W11N13
+		
+		
+*II- acceptable/approval/ 
+*morally acceptable
+Next, I’m going to read some behaviors.  For each, please tell me whether you personally believe that it is morally acceptable, morally wrong, or is it not a moral issue? Homosexual behavior
+	approve3
+		cmlic1980val		iv29
+		X pewrel2009_afr	Q85I
+		X pewrel2014_latam	Q69h
+		X pewrel2015_ee		Q71h
+		X pewrel2016_us		moralissuecf2_w20
+		
+*sex between two adults of same sex wrong
+	approve4
+		X ISSP Religion 1991	v11
+		X ISSP Family 1994	v48
+		X ISSP Religion 1998	v9
+		X ISSP Religion 2008	v9
+		X ISSP Religion 2018	v4
+		X ISSP Religion 2018ext	v4
+		X ISSP Religion 2018tn	v4
+		X ISSP Religion 2018ve	v4
+		X Japan GSS 2000-2003	Q4HOMSEA
+		X Poland GSS 1992-2010	HOMOSEX
+		X US GSS 1972-2010	HOMOSEX
+		X German GSS 90, 00, 02	v528
+		Australia NSSS 84,87, X 93	HOMOSEX
+		X EB83_4 2015		QC16_2
+		isshr2006		
+	
+	approve5
+		X British Soc Attitudes	HOMOSEX
+		BHPS 98,00,02,04,06,08	_OPFAMR (HJLNPR)
+		BEPS 92,94,95,96,97	gaysexXX [survey in wide format]
+				
+
+*And which one of these comes closer to your opinion, number 1 or number 2? \
+1 Number 1 – Homosexuality is a way of life that should be accepted by society
+2 Number 2 – Homosexuality is a way of life that should not be accepted by society
+	accept2
+		X pew2002			q40
+		X pew2007			q50
+		X pew2011			q18
+		X pew2013			q27
+	
+		X uspew
+
+		X pewrel2015_ee			q64
+
+	accept4a
+	uspew1999_typo	accept4a	q38u	c(4:1)	c(5, 9)
+	uspew2000_typo	accept4a	q42u	c(4:1)	c(5, 9)
+	uspew2003_06nii	accept4a	q6h	c(4:1)	c(5, 9)
+	uspew2004_typo	accept4a	q20u	c(4:1)	c(5, 9)
+	uspew2011_typo	accept4a	q37u	c(4:1)	c(5, 9)
+	uspew2014_rls	accept4a	qb2a	c(4:1)	c(5, 9)
+
+*Do you feel that homosexuality should be considered as an accepted alternative lifestyle or not?
+	accept2a
+		gallup
+		
+*Do you feel that homosexuality should be considered as an acceptable alternative life-style or not?
+	accept2a
+		gallup1982_06
+		
+*justified 
+	just10
+		X WVS			f118
+		X WVS6			V203
+		X EVS			f118
+		X AsiaBarometer		
+		X Latinobarómetro
+
+	just3
+		Please tell me for each of the following statements whether you think it can always be justified, sometimes be justified, or never be justified.
+		X pewrel2006_10nat
+
+*don't like as neighbors
+	neigh2
+		X WVS			a124_09
+		X WVS6			V40
+		X EVS			a124_09
+		CE_post_1990		v87
+		X AmB			dis35a
+
+	neigh10	
+		X EB691-08
+		
+*people just like others
+	accept5
+		X EB21-84		v128
+	accept4
+		X CEE			v233
+		
+*gays and lesbians s/b free to live life as they wish
+	free5
+		X ESS1-5		freehms
+		X ESS6			freehms
+
+*III social roles
+*adopt; raise children
+	adopt5
+		X EVS			d026_01
+	adopt4 (throughout Europe)
+		X EB661-06		v325
+	adopt2 
+		X EB39-93		v639
+		X BSA2012		GayAdopt
+	ff5
+		X ISSP Family 2012	V19
+	mm5
+		X ISSP Family 2012	V20
+	ff2
+		BSA2007			FGayAdopt
+	mm2
+		BSA2007			MGayAdopt2
+
+*homosexual couples - as good parents as other couples
+	parent5
+		evs2017	 		v82
+		wvs7            q36
+
+
+*public office
+	run10
+		X AmB			d5
+	highest10 
+		X EB691-08
+		X EB712-09
+		X EB774-12
+		X EB834-15
+
+	And do you approve or disapprove of homosexuals holding responsible positions in public life? 4pt
+		AES 1998		g16
 
 *civil union
 	civil2
