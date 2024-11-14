@@ -30,7 +30,7 @@ We first want to thank the Editor and the reviewers for their helpful comments a
 
     In the current version of our manuscript, we include further explanation about the reasons why some countries which do not recognize same-sex marriage such as Japan and India rank higher than other countries including Taiwan legalizing same-sex marriage. It is because the SGR index is to measure public opinion toward gay rights rather than the existence of laws for same-sex marriage. In other words, the aggregated public opinion index toward gay rights might differ from the law itself.
 
--   **Defining the purpose of the manuscript.** Revewer 2 points that our manuscript should define the purpose of paper. Given that clarifying the main purpose is a crucial part of a manuscript, we revise our manuscript in order to emphasize the purpose of this paper.
+-   **Defining the purpose of the manuscript.** Reviewer 2 points that our manuscript should define the purpose of paper. Given that clarifying the main purpose is a crucial part of a manuscript, we revise our manuscript in order to emphasize the purpose of this paper.
 
     In the revised manuscript, we clarify that our article aims to overcome limitations of previous studies on public opinion for gay rights by introducing the SGR dataset and to facilitate studies on public opinion about gay rights. The explanation is made in the very first paragraph. Moreover, we modify some sentences throughout the manuscript in order to re-emphasize the purpose of our paper. For instance, we reiterate this article tries to overcome previous limitations concerning data about public opinion in the concluding section.
 
