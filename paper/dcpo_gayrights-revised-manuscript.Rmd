@@ -674,7 +674,7 @@ covered_share_of_spanned <- {back_to_numeric(n_cy)/back_to_numeric(spanned_cy) *
 # Estimating Support for Gay Rights Across Space and Time {.unlisted .unnumbered}
 
 To generate estimates of support for gay rights cross-nationally and longitudinally that are comparable across space and over time, we first assemble a comprehensive collection of survey questions on the topic.
-Specifically, we collected four groups of questions: questions about public approval and acceptance of homosexuals and homosexuality, questions exploring public support for the legalization of same-sex marriage, questions regarding public opinion on the rights of gay, lesbian, and bisexual individuals, including equal rights to heterosexual individuals, and questions about attitudes for homosexual individuals’ social and political roles, for instance, running for public office.
+Specifically, we collected four groups of questions that can capture the public latent attitude toward gay rights: questions about public approval and acceptance of homosexuals and homosexuality, questions exploring public support for the legalization of same-sex marriage, questions regarding public opinion on the rights of gay, lesbian, and bisexual individuals, including equal rights to heterosexual individuals, and questions about attitudes for homosexual individuals’ social and political roles, for instance, running for public office.
 We employed a cross-referencing process to ensure consistency in question selection.
 After one author initially selected and coded the relevant questions, the other author reviewed them to confirm agreement on their inclusion in the raw data. 
 In cases where there were differing opinions, the authors discussed the discrepancies as a group and updated the question selection accordingly.
@@ -862,6 +862,12 @@ For example, strongly agreeing with the statement "homosexual couples should be 
 Second, the DCPO model accounts for each question's _dispersion_, its noisiness with regard to our latent trait.
 A lower dispersion indicates that changes in responses to the question are more faithfully translated to changes in the underlying support for gay rights.
 These two parameters, difficulty and dispersion, together generate comparable estimates of the latent variable from source data questions that are not directly comparable.
+
+In practice, once we identified the survey items and their question scales, we used DCPOtools [@Solt2019] to automatically calculate the number of responses in each country-year expressing support for gay rights at or above a response category higher than the least supportive option.
+This number is modeled on the expected probability that a random individual in a specific country-year gives a response at least as supportive as the given category for a question.
+This expected probability, in turn, is modeled by the public's latent support for gay rights, the difficulty of the question, and the dispersion in responses.
+Ultimately, this approach allowed us to estimate the public’s latent attitude of support for gay rights.
+More detailed technique explanation can be found on online appendix C. 
 
 The sparsity in the source data---the interruptions in the time series of each country caused by unobserved country-years, and the fact that even many observed country-years have only one or few observed items---is addressed by the DCPO model using local-level dynamic linear models, also known as random-walk priors.
 This means that, for each country, each year's value of support is modeled as the previous year's estimate plus a random shock.
