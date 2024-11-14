@@ -88,9 +88,9 @@ Replication data is available on the Harvard Dataverse [link tbd], and the work'
 \end{abstract}
 ```
 
-Abstract wordcount: 167 words
+Abstract wordcount: 153 words
 
-Manuscript wordcount: 7019 words (including references)
+Manuscript wordcount: 7495 words (including references)
 \pagebreak
 
 ```{r setup, include=FALSE}
@@ -585,8 +585,7 @@ As @Wilson2022 [, 1037] points out, such geographic bias makes the scope conditi
 
 A dataset that falls to the upper right of Figure\nobreakspace{}\ref{proj_kt_plot} would address these issues and allow researchers to reach conclusions that are more robust.
 In the next section, we describe the national and cross-national surveys and the latent-variable model we use to this end, along with the resulting SGR dataset.
-Of course, there has been an effort to employ latent-variable estimates recently.
-One antecedent effort to generate latent-variable estimates of public attitudes toward the LGBTQ community is Global Acceptance Index (GAI; @Flores2021).
+But first we note that there has been a previous effort to use latent-variable modeling to meet this need, the Global Acceptance Index (GAI; @Flores2021) which estimates public attitudes toward the LGBTQ community.
 The estimates we describe below have several modeling advantages over the GAI: they make use of a model that better fits ordinal survey data [see @Solt2020c], they avoid conflating attitudes regarding sexual orientation with those of gender identity [see @Worthen2013], and in many countries they draw on surveys conducted over longer time spans.
 Further, the GAI data do not include a measure of the estimates' uncertainty, which is crucial to include when working with latent variable estimates [see @Tai2024].
 Most importantly for the purposes of our goal of providing data to allow researchers to examine many countries over many years, as @Barrientos2022 [, 199] has already pointed out, the GAI estimates are only available for a single cross-section, making analysis of change over time impossible.
@@ -674,11 +673,10 @@ covered_share_of_spanned <- {back_to_numeric(n_cy)/back_to_numeric(spanned_cy) *
 # Estimating Support for Gay Rights Across Space and Time {.unlisted .unnumbered}
 
 To generate estimates of support for gay rights cross-nationally and longitudinally that are comparable across space and over time, we first assemble a comprehensive collection of survey questions on the topic.
-Specifically, we collected four groups of questions that can capture the public latent attitude toward gay rights: questions about public approval and acceptance of homosexuals and homosexuality, questions exploring public support for the legalization of same-sex marriage, questions regarding public opinion on the rights of gay, lesbian, and bisexual individuals, including equal rights to heterosexual individuals, and questions about attitudes for homosexual individuals’ social and political roles, for instance, running for public office.
+Specifically, we collected four groups of questions that can capture the public latent attitude toward gay rights: questions about public approval and acceptance of homosexuals and homosexuality; questions exploring public support for the legalization of same-sex marriage; questions regarding public opinion on the rights of gay, lesbian, and bisexual individuals, including equal rights to heterosexual individuals; and questions about attitudes for homosexual individuals’ social and political roles, for instance, running for public office.
 We employed a cross-referencing process to ensure consistency in question selection.
-After one author initially selected and coded the relevant questions, the other author reviewed them to confirm agreement on their inclusion in the raw data. 
-In cases where there were differing opinions, the authors discussed the discrepancies as a group and updated the question selection accordingly.
-Ultimately, we incorporated only those questions for which consensus was reached after discussion.
+After one author initially selected and coded the relevant questions, another author reviewed them to confirm both accuracy and agreement on their inclusion in the raw data [for the importance of employing this double-entry method to avoid mistakes, see @Hu2022]. 
+In cases where opinions differed, all authors discussed the discrepancies as a group and updated the question selection accordingly, ultimately incorporating only those questions for which consensus was reached.
 The exact questions and their detailed wordings are provided in the online appendix.
 
 The relevant surveys are sparse, providing no relevant data for many countries and years, and incomparable, employing many different survey items, but collectively they have often asked questions about gay and lesbian rights over the past half-century.
@@ -863,11 +861,11 @@ Second, the DCPO model accounts for each question's _dispersion_, its noisiness 
 A lower dispersion indicates that changes in responses to the question are more faithfully translated to changes in the underlying support for gay rights.
 These two parameters, difficulty and dispersion, together generate comparable estimates of the latent variable from source data questions that are not directly comparable.
 
-In practice, once we identified the survey items and their question scales, we used DCPOtools [@Solt2019] to automatically calculate the number of responses in each country-year expressing support for gay rights at or above a response category higher than the least supportive option.
-This number is modeled on the expected probability that a random individual in a specific country-year gives a response at least as supportive as the given category for a question.
+In practice, once we identified the survey items and their question scales, we used the `DCPOtools` R package [@Solt2019] to automatically calculate the number of responses in each country-year expressing support for gay rights at or above a response category higher than the least supportive option.
+This number is modeled as the expected probability that a random individual in a specific country-year gives a response at least as supportive as the given category for a question.
 This expected probability, in turn, is modeled by the public's latent support for gay rights, the difficulty of the question, and the dispersion in responses.
-Ultimately, this approach allowed us to estimate the public’s latent attitude of support for gay rights.
-More detailed technique explanation can be found on online appendix C. 
+Ultimately, this approach allowed us to estimate the public’s latent support for gay rights.
+A more detailed explanation of this technique can be found in online appendix C. 
 
 The sparsity in the source data---the interruptions in the time series of each country caused by unobserved country-years, and the fact that even many observed country-years have only one or few observed items---is addressed by the DCPO model using local-level dynamic linear models, also known as random-walk priors.
 This means that, for each country, each year's value of support is modeled as the previous year's estimate plus a random shock.
@@ -1673,7 +1671,6 @@ Having much more data on attitudes toward gay rights provides strong evidence th
 
 # Conclusion {.unlisted .unnumbered}
 
-This article tries to overcome previous limitations concerning data about public opinion toward gay rights by presenting the SGR dataset. 
 The SGR dataset, by combining a comprehensive collection of the available survey data with recent advances in latent variable modeling, provides a new window on public opinion toward gay rights across space and time.
 Until now, scholars interested in how and why public opinion towards gay rights has shifted in recent decades and the ramifications of these shifts have struggled with the limited availability of data.
 Surveys with relevant items are sparse, not asked in all countries every year; incomparable, not asking the same questions; and, compounding these two issues, geographically concentrated.
