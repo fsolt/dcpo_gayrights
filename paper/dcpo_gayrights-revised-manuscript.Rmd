@@ -84,11 +84,11 @@ Replication data is available on the Harvard Dataverse [link tbd], and the work'
 ```
 ```{=tex}
 \begin{abstract}
-\emph{Objective}. Support for gay rights has increased in the publics of many countries over recent decades, but the scholarship on the topic has been hindered by the limited available data on these trends in public opinion. \emph{Method}. To overcome this problem, we present the Support for Gay Rights (SGR) dataset, which combines a comprehensive collection of survey data with a latent-variable model to provide annual time-series estimates of public support for gay rights across 118 countries and over as many as 51 years that are comparable across space and time. \emph{Results}. We show these data perform well in validation tests and demonstrate their potential by replicating the influential but recently questioned finding of Andersen and Fetner (2008) that more income inequality yields less tolerant and supportive attitudes toward gay people. \emph{Conclusion}. We anticipate that the SGR data will become a crucial source for cross-regional, cross-national, and longitudinal research that improves our understanding of the sources and consequences of public support for gay rights.
+\emph{Objective}. Support for gay rights has increased in the publics of many countries over recent decades, but the scholarship on the topic has been hindered by the limited available data on these trends in public opinion. The goal of the Support for Gay Rights (SGR) dataset is to overcome this problem. \emph{Method}. The SGR dataset is constructed by combining a comprehensive collection of survey data with a latent-variable model to provide annual time-series estimates of public support for gay rights across 118 countries and over as many as 51 years that are comparable across space and time. \emph{Results}. We show these data perform well in validation tests and demonstrate their potential by replicating the influential but recently questioned finding of Andersen and Fetner (2008) that more income inequality yields less tolerant and supportive attitudes toward gay people. \emph{Conclusion}. We anticipate that the SGR data will become a crucial source for cross-national, cross-regional, and longitudinal research that improves our understanding of the sources and consequences of public support for gay rights.
 \end{abstract}
 ```
 
-Abstract wordcount: 153 words
+Abstract wordcount: 174 words
 
 Manuscript wordcount: 7495 words (including references)
 \pagebreak
@@ -344,23 +344,27 @@ Public attitudes toward gay rights have been changing toward greater support in 
 The resulting scholarship has been hampered, however, by the limited available data on these trends in public opinion.
 Mirroring the coverage of the survey projects on which they were based, these works have either investigated the causes or consequences of dynamics in public opinion over time in only one country or region [see, e.g., @Abou-Chadi2019; @Dotti-Sani2022], on the one hand, or differences in public opinion across a broad cross-regional sample of countries but in just a small number of years, on the other [see, e.g., @Ayoub2017; @Adamczyk2017].
 Indeed, given the severe contraint of data availability on this topic, it is not at all surprising that there are also important contributions, even recently, that are limited in _both_ space _and_ time [see, e.g., @Zhou2020; @Winkler2021; @Paradela-Lopez2023].
-This article aims to overcome such limitations and to facilitate studies on public opinion toward gay rights by introducing the Support for Gay Rights (SGR) dataset.
 The paucity of comparable data that has shaped this literature undermines our confidence in our understanding not only because the data are scant in general but also because they are biased geographically.
 Naturally, the narrower the evidentiary base upon which conclusions are built, the more susceptible these conclusions will be to collapse [see @King2021, 23].
 This is especially true where, as here, what suitable data exist are geographically concentrated.
 There is much more data and hence research on public opinion regarding gay rights in the countries of Europe and North America than elsewhere [@Adamczyk2019, 410]; this geographic bias makes scope conditions difficult to discern and so potentially leaves even theories that find empirical support less generally applicable than perhaps often assumed [see @Wilson2022, 1037].
 
-To address these issues, this article presents the Support for Gay Rights (SGR) dataset.
+To address these issues, we constructed the Support for Gay Rights (SGR) dataset.
 The SGR dataset combines a comprehensive collection of responses to national and cross-national surveys with recent developments in latent-variable modeling of public opinion to provide estimates of public attitudes toward gay rights that are comparable across many countries and over many years.
 These latent-variable estimates perform well in validation tests: they are very strongly correlated with single survey items tapping views on gay rights, and they also relate strongly to other concepts thought causally connected to public opinion on gay rights.
 The SGR dataset provides a much firmer basis for testing the implications of theories by providing many more observations across a wider scope of countries and time than previously available sources.
 Along with our explanation of the process of constructing the SGR dataset, we demonstrate its potential in this regard by replicating the foundational but recently questioned finding of @Andersen2008 that more income inequality yields less support for gay rights.
-We anticipate that the SGR data will become a crucial source for cross-regional, cross-national, and longitudinal research that improves our understanding of the sources and consequences of support for gay rights.
+We anticipate that the SGR data will become a crucial source for cross-regional, cross-national, and longitudinal research that improves our understanding of the sources and consequences of support for gay rights.^[\doublespacing
+Although broader and more inclusive concepts such as 'LGBTQ+' have become more commonly used in recent years, the SGR dataset as its name suggests measures only attitudes regarding sexual orientation rather than also those regarding gender identity.
+First, from a theoretical perspective, @Worthen2013 argues prejudicial attitudes should be expected to vary by the target of prejudice and that attitudes toward, for example, gay people and transsexual individuals likely have different sources.
+Second, on a more practical perspective, even if a more inclusive concept were theoretically justifiable, the available survey data includes very few observations on attitudes toward transsexual people relative to questions on "gay," "lesbian," and "homosexual" individuals or "same-sex" couples.
+In light of this severe imbalance, including the former would do little to influence the resulting estimates, regardless of whether they reflect the same latent variable as the latter.
+Our focus on attitudes toward gay rights therefore maintains alignment with the available original survey questions and avoids misleading users as to their breadth.]
 
 
 # Existing Data and Research on Attitudes Toward Gay Rights {.unlisted .unnumbered}
 
-The SGR dataset aims to address a shortcoming in the available datasets on public opinion regarding gay and lesbian rights: researchers have been forced to choose between studying support in many countries _or_ over many years, but not both.
+The SGR dataset aims to address a shortcoming in the available datasets on public opinion regarding the rights of gays and lesbians: researchers have been forced to choose between studying support in many countries _or_ over many years, but not both.
 Figure\nobreakspace{}\ref{proj_kt_plot} illustrates the trade-off between the breadth of country coverage and the number of years available for each country.
 It plots, for each survey project in the SGR source data described below, the number of countries for which data on attitudes toward gay rights are available against the mean number of years these data are available per country.
 Some survey projects ask more than one question on the topic, but here only the most frequently asked single question on the topic is shown.
@@ -585,7 +589,7 @@ As @Wilson2022 [, 1037] points out, such geographic bias makes the scope conditi
 
 A dataset that falls to the upper right of Figure\nobreakspace{}\ref{proj_kt_plot} would address these issues and allow researchers to reach conclusions that are more robust.
 In the next section, we describe the national and cross-national surveys and the latent-variable model we use to this end, along with the resulting SGR dataset.
-But first we note that there has been a previous effort to use latent-variable modeling to meet this need, the Global Acceptance Index (GAI; @Flores2021) which estimates public attitudes toward the LGBTQ community.
+But first we note that there has been a previous effort to use latent-variable modeling to meet this need, the Global Acceptance Index [GAI; @Flores2021] which estimates public attitudes toward the LGBTQ community.
 The estimates we describe below have several modeling advantages over the GAI: they make use of a model that better fits ordinal survey data [see @Solt2020c], they avoid conflating attitudes regarding sexual orientation with those of gender identity [see @Worthen2013], and in many countries they draw on surveys conducted over longer time spans.
 Further, the GAI data do not include a measure of the estimates' uncertainty, which is crucial to include when working with latent variable estimates [see @Tai2024].
 Most importantly for the purposes of our goal of providing data to allow researchers to examine many countries over many years, as @Barrientos2022 [, 199] has already pointed out, the GAI estimates are only available for a single cross-section, making analysis of change over time impossible.
@@ -672,16 +676,15 @@ covered_share_of_spanned <- {back_to_numeric(n_cy)/back_to_numeric(spanned_cy) *
 
 # Estimating Support for Gay Rights Across Space and Time {.unlisted .unnumbered}
 
-To generate estimates of support for gay rights cross-nationally and longitudinally that are comparable across space and over time, we first assemble a comprehensive collection of survey questions on the topic.
-Specifically, we collected four groups of questions that can capture the public latent attitude toward gay rights: questions about public approval and acceptance of homosexuals and homosexuality; questions exploring public support for the legalization of same-sex marriage; questions regarding public opinion on the rights of gay, lesbian, and bisexual individuals, including equal rights to heterosexual individuals; and questions about attitudes for homosexual individuals’ social and political roles, for instance, running for public office.
-We employed a cross-referencing process to ensure consistency in question selection.
+To generate estimates of support for gay rights cross-nationally and longitudinally that are comparable across space and over time, we first assembled a comprehensive collection of survey questions on the topic.
+Specifically, we collected four groups of questions that can capture publics' latent attitudes toward gay rights: questions about public approval and acceptance of homosexuals and homosexuality; questions exploring public support for the legalization of same-sex marriage; questions regarding public opinion on the rights of gay, lesbian, and bisexual individuals, including rights equal to those of heterosexual individuals; and questions about attitudes for homosexual individuals’ social and political roles, for instance, running for public office.
+We employed a double-entry process to ensure consistency in question selection.
 After one author initially selected and coded the relevant questions, another author reviewed them to confirm both accuracy and agreement on their inclusion in the raw data [for the importance of employing this double-entry method to avoid mistakes, see @Hu2022]. 
 In cases where opinions differed, all authors discussed the discrepancies as a group and updated the question selection accordingly, ultimately incorporating only those questions for which consensus was reached.
-The exact questions and their detailed wordings are provided in the online appendix.
+The complete list of survey items is included in the online appendix.
 
 The relevant surveys are sparse, providing no relevant data for many countries and years, and incomparable, employing many different survey items, but collectively they have often asked questions about gay and lesbian rights over the past half-century.
-In all, we identified `r n_items` items that were asked in no fewer than five country-years in countries surveyed at least three times; these items were drawn from `r n_surveys` different national and cross-national survey datasets.^[
-The complete list of survey items is included in the online appendix.]
+In all, we identified `r n_items` items that were asked in no fewer than five country-years in countries surveyed at least three times; these items were drawn from `r n_surveys` different national and cross-national survey datasets.
 Together, these items were asked in `r n_countries` different countries in at least three time points over the `r n_years` years `r year_range`, yielding a total of `r n_cyi` country-year-item observations.
 Observations for every year in each country surveyed would total `r total_cy`, and a complete set of country-year-items would include `r {n_countries * n_years * n_items} %>% scales::comma()` observations.
 Viewed from this complete-data perspective, the sparsity of the available source data is readily evident.
