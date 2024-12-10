@@ -88,9 +88,6 @@ Replication data is available on the Harvard Dataverse [link tbd], and the work'
 \end{abstract}
 ```
 
-Abstract wordcount: 174 words
-
-Manuscript wordcount: 7495 words (including references)
 \pagebreak
 
 ```{r setup, include=FALSE}
